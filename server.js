@@ -55,8 +55,8 @@ app.get('/', (req, res) => {
         <title>AI Growth Engine OS - Dashboard</title>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body class="bg-slate-900 text-white min-h-screen p-8 font-sans">
-        <div class="max-w-7xl mx-auto space-y-6">
+    <body class="bg-slate-900 text-white min-h-screen p-4 md:p-8 font-sans">
+        <div class="w-full mx-auto space-y-6">
             <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500">
                 🚀 AI Growth Engine OS
             </h1>
@@ -117,6 +117,7 @@ app.get('/', (req, res) => {
                     <h2 class="text-xl font-semibold mb-4 text-orange-400">🕵️ Sales & Outreach</h2>
                     
                     <div class="space-y-4">
+                        ${!data.sales ? '<p class="text-xs text-slate-500 italic">Sales strategy pending for this run...</p>' : `
                         <div>
                             <h3 class="text-[10px] font-bold text-slate-500 uppercase mb-2">Target Personas</h3>
                             <div class="flex flex-wrap gap-2">
@@ -132,6 +133,7 @@ app.get('/', (req, res) => {
                                 ${data.sales.outreach_emails[0].body}
                             </div>
                         </div>
+                        `}
                     </div>
                 </div>
 
@@ -162,12 +164,12 @@ app.get('/', (req, res) => {
                                     <th class="pb-3 text-right">Captured At</th>
                                 </tr>
                             </thead>
-                            <tbody class="text-sm divide-y divide-slate-700/50">
-                                ${leads.length === 0 ? '<tr><td colspan="3" class="py-10 text-center text-slate-600 italic">No leads captured yet. Keep the engine running!</td></tr>' : leads.map(l => `
-                                    <tr>
-                                        <td class="py-4 text-emerald-100 font-medium">${l.email}</td>
+                            <tbody>
+                                ${leads.length === 0 ? '<tr><td colspan="3" class="py-10 text-center text-slate-700 italic">No leads yet.</td></tr>' : leads.map(l => `
+                                    <tr class="border-b border-slate-800 last:border-0">
+                                        <td class="py-4 font-medium text-white">${l.email}</td>
                                         <td class="py-4 text-slate-400">${l.topic}</td>
-                                        <td class="py-4 text-right text-slate-500 text-xs">${new Date(l.timestamp).toLocaleString()}</td>
+                                        <td class="py-4 text-right text-slate-600">${new Date(l.timestamp).toLocaleDateString()}</td>
                                     </tr>
                                 `).join('')}
                             </tbody>

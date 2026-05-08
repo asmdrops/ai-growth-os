@@ -211,10 +211,11 @@ class AIGrowthEngine {
             
             Requirements:
             1. Use valid HTML5 and Tailwind CSS.
-            2. Modern premium dark-mode aesthetic.
-            3. Include a Hero section WITH THE HERO IMAGE provided.
-            4. Include Features and a Waitlist form.
-            5. Return ONLY raw HTML.
+            2. ULTRA-RESPONSIVE: The layout MUST auto-resize and look perfect on all screens (Phone, Laptop, 4K Monitors). Use fluid containers and flexible grids.
+            3. Modern premium dark-mode aesthetic.
+            4. Include a Hero section WITH THE HERO IMAGE provided.
+            5. Include Features and a Waitlist form.
+            6. Return ONLY raw HTML.
         `;
 
         const response = await ai.models.generateContent({
@@ -365,16 +366,20 @@ class AIGrowthEngine {
 async function startOS() {
     const os = new AIGrowthEngine();
     const manualTopic = process.argv[2]; // Check for manual topic
+    const isCloudAction = process.env.GITHUB_ACTIONS === 'true'; // Detect GitHub Actions
+    
     const intervalHours = parseFloat(process.env.LOOP_INTERVAL_HOURS) || 6;
     const intervalMs = intervalHours * 60 * 60 * 1000;
 
-    if (manualTopic) {
-        console.log(`🎯 Running one-time manual override for: ${manualTopic}`);
+    // Run once and exit if manual or cloud
+    if (manualTopic || isCloudAction) {
+        if (manualTopic) console.log(`🎯 Running one-time manual override for: ${manualTopic}`);
+        if (isCloudAction) console.log(`☁️ Running autonomous cloud cycle...`);
         await os.run(manualTopic);
         process.exit(0);
     }
 
-    console.log(`🕒 OS Loop active. Running every ${intervalHours} hours.`);
+    console.log(`🕒 OS Loop active locally. Running every ${intervalHours} hours.`);
     
     while (true) {
         await os.run();
