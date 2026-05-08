@@ -48,9 +48,23 @@ app.get('/', (req, res) => {
                     
                     <div class="mt-6 pt-6 border-t border-slate-700">
                         <h2 class="text-xl font-semibold mb-4 text-yellow-400">🧠 AI Evaluation</h2>
-                        <div class="flex items-center space-x-2 mb-2">
-                            <span class="text-3xl font-bold">${data.score.potential}/10</span>
-                            <span class="text-sm text-slate-400 uppercase tracking-wide">Money Potential</span>
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div class="bg-slate-700/50 p-3 rounded text-center">
+                                <span class="block text-2xl font-bold">${data.score.potential}/10</span>
+                                <span class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Overall Score</span>
+                            </div>
+                            <div class="bg-slate-700/50 p-3 rounded text-center">
+                                <span class="block text-2xl font-bold text-emerald-400">${data.score.commercial_intent}/10</span>
+                                <span class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Intent</span>
+                            </div>
+                            <div class="bg-slate-700/50 p-3 rounded text-center">
+                                <span class="block text-2xl font-bold text-orange-400">${data.score.competition_score}/10</span>
+                                <span class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Competition</span>
+                            </div>
+                            <div class="bg-slate-700/50 p-3 rounded text-center">
+                                <span class="block text-2xl font-bold text-purple-400">${data.score.productizability}/10</span>
+                                <span class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Productability</span>
+                            </div>
                         </div>
                         <p class="text-slate-300 text-sm italic mb-4">"${data.score.reason}"</p>
                         <div class="bg-indigo-900/50 p-3 rounded-lg border border-indigo-500/30">
