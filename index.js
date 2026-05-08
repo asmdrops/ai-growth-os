@@ -26,7 +26,7 @@ class AIGrowthEngine {
             // 2. Score Money Potential
             const score = await this.scoreMoneyPotential(trend);
             
-            if (score.potential > 7) {
+            if (score.potential >= 5) {
                 console.log(`✅ Trend "${trend.title}" passed threshold. Potential Score: ${score.potential}/10`);
                 console.log(`💡 Reason: ${score.reason}`);
                 
@@ -38,6 +38,15 @@ class AIGrowthEngine {
                 
                 // 5. Deploy & Post (Mocked deployment logic for now)
                 await this.postContent(content, pagePath);
+                
+                // Save to database
+                const runData = {
+                    trend,
+                    score,
+                    content,
+                    timestamp: new Date().toISOString()
+                };
+                fs.writeFileSync(path.join(__dirname, 'output', 'data.json'), JSON.stringify(runData, null, 2));
                 
                 // 6. Learn from Performance
                 await this.learnFromPerformance(trend);
