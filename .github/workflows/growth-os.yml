@@ -1,0 +1,40 @@
+name: AI Growth Engine OS Cloud Loop
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # Every 6 hours
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  run-os-cycle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Growth OS Cycle
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ secrets.GITHUB_USERNAME }}
+          GITHUB_REPO: ${{ secrets.GITHUB_REPO }}
+          LOOP_INTERVAL_HOURS: 6
+        run: node index.js
+
+      - name: Commit & Push Learning Data
+        run: |
+          git config --global user.name "AI Growth OS Bot"
+          git config --global user.email "bot@ai-growth-os.com"
+          git add output/data.json output/leads.json performance.json
+          git commit -m "📈 Auto-Learning Update [Cloud Run]" || echo "No changes to commit"
+          git push origin main
