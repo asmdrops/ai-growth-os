@@ -9,7 +9,18 @@ const port = 3000;
 app.use(express.json());
 app.use(cors());
 
-// Lead capture API
+// Auth Middleware
+const authMiddleware = (req, res, next) => {
+    const authCode = process.env.DASHBOARD_AUTH_CODE;
+    if (!authCode) return next(); // No code set, skip auth
+    
+    if (req.query.code === authCode || req.headers['x-auth-code'] === authCode) {
+        return next();
+    }
+    res.status(401).send('🔒 Unauthorized. Please provide your personal access code.');
+};
+
+// Lead capture API (Public)
 app.post('/api/leads', (req, res) => {
     const { email, topic } = req.body;
     if (!email) return res.status(400).send('Email is required');
@@ -30,7 +41,7 @@ app.post('/api/leads', (req, res) => {
 // Serve the generated landing pages directly
 app.use('/preview', express.static(path.join(__dirname, 'output')));
 
-app.get('/', (req, res) => {
+app.get('/', authMiddleware, (req, res) => {
     let data = null;
     let leads = [];
     try {
