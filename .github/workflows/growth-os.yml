@@ -38,6 +38,9 @@ jobs:
         run: |
           git config --global user.name "AI Growth OS Bot"
           git config --global user.email "bot@ai-growth-os.com"
-          git add output/data.json output/leads.json performance.json
+          # Stage files only if they exist
+          git add performance.json || true
+          git add output/data.json || true
+          git add output/leads.json || true
           git commit -m "📈 Auto-Learning Update [Cloud Run]" || echo "No changes to commit"
           git push origin main
