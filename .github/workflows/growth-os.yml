@@ -15,6 +15,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -39,4 +40,4 @@ jobs:
           git config --global user.email "bot@ai-growth-os.com"
           git add output/data.json output/leads.json performance.json
           git commit -m "📈 Auto-Learning Update [Cloud Run]" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.GH_TOKEN_OS }}@github.com/asmdrops/ai-growth-os.git main
+          git push origin main
