@@ -6,18 +6,41 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
+app.use(express.json());
 app.use(cors());
+
+// Lead capture API
+app.post('/api/leads', (req, res) => {
+    const { email, topic } = req.body;
+    if (!email) return res.status(400).send('Email is required');
+    
+    const leadsPath = path.join(__dirname, 'output', 'leads.json');
+    let leads = [];
+    try {
+        if (fs.existsSync(leadsPath)) {
+            leads = JSON.parse(fs.readFileSync(leadsPath, 'utf8'));
+        }
+    } catch (e) {}
+    
+    leads.push({ email, topic, timestamp: new Date().toISOString() });
+    fs.writeFileSync(leadsPath, JSON.stringify(leads, null, 2));
+    res.status(200).json({ success: true });
+});
+
 // Serve the generated landing pages directly
 app.use('/preview', express.static(path.join(__dirname, 'output')));
 
 app.get('/', (req, res) => {
     let data = null;
+    let leads = [];
     try {
         const raw = fs.readFileSync(path.join(__dirname, 'output', 'data.json'));
         data = JSON.parse(raw);
-    } catch (e) {
-        // No data yet
-    }
+        
+        if (fs.existsSync(path.join(__dirname, 'output', 'leads.json'))) {
+            leads = JSON.parse(fs.readFileSync(path.join(__dirname, 'output', 'leads.json')));
+        }
+    } catch (e) {}
 
     if (!data) {
         return res.send('<h2>No cycles have completed yet. Run <pre>node index.js</pre> first.</h2>');
@@ -33,67 +56,123 @@ app.get('/', (req, res) => {
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body class="bg-slate-900 text-white min-h-screen p-8 font-sans">
-        <div class="max-w-6xl mx-auto space-y-6">
+        <div class="max-w-7xl mx-auto space-y-6">
             <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500">
                 🚀 AI Growth Engine OS
             </h1>
-            <p class="text-slate-400">Last updated: ${new Date(data.timestamp).toLocaleString()}</p>
+            <p class="text-slate-400">System Status: Active | Last run: ${new Date(data.timestamp).toLocaleString()}</p>
             
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
                 <!-- Trend Panel -->
                 <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700">
-                    <h2 class="text-xl font-semibold mb-4 text-blue-400">🔍 Trend Detected</h2>
-                    <p class="font-medium text-lg">${data.trend.title}</p>
-                    <a href="${data.trend.link}" target="_blank" class="text-sm text-indigo-400 hover:underline mt-2 inline-block">Source Link &rarr;</a>
+                    <h2 class="text-xl font-semibold mb-4 text-blue-400">🔍 Trend Discovery</h2>
+                    <div class="mb-4">
+                        <span class="text-[10px] bg-indigo-500/20 text-indigo-400 px-2 py-1 rounded border border-indigo-500/30 font-bold uppercase">${data.trend.source}</span>
+                    </div>
+                    <p class="font-medium text-lg leading-snug">${data.trend.title}</p>
+                    <a href="${data.trend.link}" target="_blank" class="text-xs text-slate-500 hover:text-indigo-400 mt-2 inline-block">View Source &rarr;</a>
                     
                     <div class="mt-6 pt-6 border-t border-slate-700">
                         <h2 class="text-xl font-semibold mb-4 text-yellow-400">🧠 AI Evaluation</h2>
-                        <div class="grid grid-cols-2 gap-4 mb-4">
-                            <div class="bg-slate-700/50 p-3 rounded text-center">
-                                <span class="block text-2xl font-bold">${data.score.potential}/10</span>
-                                <span class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Overall Score</span>
+                        <div class="grid grid-cols-2 gap-3 mb-4 text-center">
+                            <div class="bg-slate-700/30 p-2 rounded border border-slate-700">
+                                <span class="block text-xl font-bold">${data.score.potential}/10</span>
+                                <span class="text-[8px] text-slate-400 uppercase font-bold">Potential</span>
                             </div>
-                            <div class="bg-slate-700/50 p-3 rounded text-center">
-                                <span class="block text-2xl font-bold text-emerald-400">${data.score.commercial_intent}/10</span>
-                                <span class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Intent</span>
-                            </div>
-                            <div class="bg-slate-700/50 p-3 rounded text-center">
-                                <span class="block text-2xl font-bold text-orange-400">${data.score.competition_score}/10</span>
-                                <span class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Competition</span>
-                            </div>
-                            <div class="bg-slate-700/50 p-3 rounded text-center">
-                                <span class="block text-2xl font-bold text-purple-400">${data.score.productizability}/10</span>
-                                <span class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Productability</span>
+                            <div class="bg-slate-700/30 p-2 rounded border border-slate-700">
+                                <span class="block text-xl font-bold text-emerald-400">${data.score.commercial_intent}/10</span>
+                                <span class="text-[8px] text-slate-400 uppercase font-bold">Intent</span>
                             </div>
                         </div>
-                        <p class="text-slate-300 text-sm italic mb-4">"${data.score.reason}"</p>
-                        <div class="bg-indigo-900/50 p-3 rounded-lg border border-indigo-500/30">
-                            <span class="block text-xs text-indigo-300 uppercase font-bold mb-1">Monetization Idea:</span>
-                            <span class="text-indigo-100">${data.score.monetization_idea}</span>
+                        <p class="text-slate-400 text-xs italic line-clamp-4 mb-4">"${data.score.reason}"</p>
+                        <div class="bg-indigo-900/40 p-3 rounded-lg border border-indigo-500/30">
+                            <span class="block text-[10px] text-indigo-300 uppercase font-bold mb-1">Target Niche:</span>
+                            <span class="text-sm text-indigo-100 font-medium">${data.score.monetization_idea}</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Content Panel -->
                 <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700">
-                    <h2 class="text-xl font-semibold mb-4 text-emerald-400">📝 Generated Content</h2>
+                    <h2 class="text-xl font-semibold mb-4 text-emerald-400">📝 Viral Content</h2>
                     
-                    <h3 class="font-bold text-slate-300 mb-2">🐦 Twitter Thread</h3>
-                    <div class="space-y-3 mb-6">
-                        ${data.content.twitter.map(t => `<div class="bg-slate-700/50 p-3 rounded border border-slate-600 text-sm">${t}</div>`).join('')}
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-[10px] font-bold text-slate-500 uppercase mb-2">Twitter Strategy</h3>
+                            <div class="bg-slate-900/50 p-3 rounded border border-slate-700 text-xs text-slate-300">
+                                ${data.content.twitter[0]}
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-[10px] font-bold text-slate-500 uppercase mb-2">LinkedIn Authority</h3>
+                            <div class="bg-slate-900/50 p-3 rounded border border-slate-700 text-xs text-slate-300 h-48 overflow-y-auto">
+                                ${data.content.linkedin}
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                    <h3 class="font-bold text-slate-300 mb-2">💼 LinkedIn Post</h3>
-                    <div class="bg-slate-700/50 p-3 rounded border border-slate-600 text-sm whitespace-pre-wrap">${data.content.linkedin}</div>
+                <!-- Sales Panel -->
+                <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700">
+                    <h2 class="text-xl font-semibold mb-4 text-orange-400">🕵️ Sales & Outreach</h2>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-[10px] font-bold text-slate-500 uppercase mb-2">Target Personas</h3>
+                            <div class="flex flex-wrap gap-2">
+                                ${data.sales.target_personas.map(p => `<span class="bg-orange-500/10 text-orange-400 text-[10px] px-2 py-1 rounded border border-orange-500/20">${p}</span>`).join('')}
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-[10px] font-bold text-slate-500 uppercase mb-2">Outreach Strategy</h3>
+                            <p class="text-xs text-slate-400 italic mb-2">${data.sales.search_strategy}</p>
+                            <div class="bg-slate-900/50 p-3 rounded border border-slate-700 text-xs text-slate-300 h-40 overflow-y-auto">
+                                <span class="text-orange-300 font-bold block mb-1">Email Draft:</span>
+                                <strong>Sub: ${data.sales.outreach_emails[0].subject}</strong><br><br>
+                                ${data.sales.outreach_emails[0].body}
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Preview Panel -->
                 <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700 lg:col-span-1 h-[600px] flex flex-col">
                     <div class="flex justify-between items-center mb-4">
-                        <h2 class="text-xl font-semibold text-pink-400">🏗️ Landing Page</h2>
-                        <a href="/preview/index.html" target="_blank" class="text-xs bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded text-white transition">Open Fullscreen</a>
+                        <h2 class="text-xl font-semibold text-pink-400">🏗️ Generated Site</h2>
+                        <a href="${data.liveUrl || '/preview/index.html'}" target="_blank" class="text-xs bg-indigo-600 hover:bg-indigo-500 px-3 py-1 rounded text-white font-bold transition flex items-center">
+                            Live URL &nbsp; 🔗
+                        </a>
                     </div>
-                    <iframe src="/preview/index.html" class="flex-1 w-full bg-white rounded border-2 border-slate-600" title="Landing Page Preview"></iframe>
+                    <iframe src="/preview/index.html" class="flex-1 w-full bg-white rounded-lg border-4 border-slate-700" title="Landing Page Preview"></iframe>
+                </div>
+
+                <!-- Leads Panel -->
+                <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700 lg:col-span-4">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-semibold text-emerald-400">👥 Captured Leads</h2>
+                        <span class="bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-xs font-bold border border-emerald-500/30">${leads.length} Subscribers</span>
+                    </div>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead class="text-slate-500 uppercase text-[10px] font-bold border-b border-slate-700">
+                                <tr>
+                                    <th class="pb-3">Email Address</th>
+                                    <th class="pb-3">Niche/Topic</th>
+                                    <th class="pb-3 text-right">Captured At</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm divide-y divide-slate-700/50">
+                                ${leads.length === 0 ? '<tr><td colspan="3" class="py-10 text-center text-slate-600 italic">No leads captured yet. Keep the engine running!</td></tr>' : leads.map(l => `
+                                    <tr>
+                                        <td class="py-4 text-emerald-100 font-medium">${l.email}</td>
+                                        <td class="py-4 text-slate-400">${l.topic}</td>
+                                        <td class="py-4 text-right text-slate-500 text-xs">${new Date(l.timestamp).toLocaleString()}</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
