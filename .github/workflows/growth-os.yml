@@ -8,6 +8,8 @@ on:
 jobs:
   run-os-cycle:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Explicitly allow pushing back to the repo
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -37,4 +39,4 @@ jobs:
           git config --global user.email "bot@ai-growth-os.com"
           git add output/data.json output/leads.json performance.json
           git commit -m "📈 Auto-Learning Update [Cloud Run]" || echo "No changes to commit"
-          git push origin main
+          git push https://x-access-token:${{ secrets.GH_TOKEN_OS }}@github.com/asmdrops/ai-growth-os.git main
