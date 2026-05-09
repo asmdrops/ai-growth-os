@@ -3,211 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Generational Wealth Bridge | A Guide for Millennials & Boomer Parents</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>ClipMaster AI - Dominate Streaming Discovery Feeds</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAM1BMVEX///8AAADNzc3X19fR0dHPz8/Ly8vKysrJycjHx8fDw8O7u7u3t7erq6uioqKdnZ2ZmZkYlY8yAAAAAXRSTlMAQObYZgAAAI5JREFUeNptjkkOwDAIQ/0P/q+tC01pA7qR+rQk7DkFfR4B95Jd2b07Yk5s4AxgwI4D1g7LgY3rUAYYcM50wA8m2y91s0bI6Xn5669zL5wP8d248V3U/U+X9r2g1wF5i8b/T2o9wL8R+1/qN/u8gL8R+1/qN/u8AL8R+1/qN/u8AT8R+1/qN/u8AG8R+1/qN/u8AB8R+1/qN/u8A/8B/gI8fK/mQ0YnIAAAAAElFTkSuQmCC">
     <style>
-        /* Custom styles for dark mode and premium feel */
+        /* Custom styles for dark mode and gradients */
         body {
             font-family: 'Inter', sans-serif;
         }
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
+        .hero-section {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Optional: adds a parallax-like effect */
+            position: relative;
+            z-index: 0;
         }
-        .text-gradient {
-            background-image: linear-gradient(to right, #6366f1, #a855f7); /* Indigo to Purple */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(17, 24, 39, 0.7), rgba(0, 0, 0, 0.9)); /* Dark overlay */
+            z-index: -1;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #a78bfa, #8b5cf6, #c084fc); /* Purple/Indigo gradient */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            color: transparent; /* Fallback for browsers that don't support text-fill-color */
+            text-fill-color: transparent;
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #8b5cf6, #c084fc);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #c084fc, #8b5cf6);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(126, 34, 206, 0.4);
+        }
+        .feature-card {
+            backdrop-filter: blur(10px);
+            background-color: rgba(31, 41, 55, 0.6); /* Slightly transparent dark background */
+            border: 1px solid rgba(75, 85, 99, 0.4);
+        }
+        /* Specific styles for countdown display */
+        .countdown-segment {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 70px; /* Fixed width for segments */
+            height: 70px;
+            background-color: rgba(55, 65, 81, 0.7); /* Darker background for segments */
+            border-radius: 8px;
+            margin: 0 5px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #d1d5db; /* Light gray for numbers */
+        }
+        .countdown-segment span {
+            font-size: 0.75rem;
+            font-weight: normal;
+            color: #9ca3af; /* Lighter gray for labels */
+        }
+        @media (min-width: 640px) {
+            .countdown-segment {
+                width: 80px;
+                height: 80px;
+                font-size: 2.5rem;
+            }
+            .countdown-segment span {
+                font-size: 0.875rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .countdown-segment {
+                width: 90px;
+                height: 90px;
+                font-size: 3rem;
+            }
+            .countdown-segment span {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-200 antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased overflow-x-hidden">
 
     <!-- Hero Section -->
-    <section class="hero-background relative h-screen flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay -->
-        <div class="relative z-10 text-center max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4 text-white">
-                <span class="text-gradient">Bridge the Generational Wealth Gap.</span> Together.
+    <header class="hero-section min-h-screen flex items-center justify-center p-4 md:p-8 relative">
+        <div class="container mx-auto text-center z-10">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 mt-12 md:mt-0">
+                <span class="gradient-text">Unleash Your Content</span> <br class="hidden sm:inline"> on the Next Gen <br> Streaming Feeds
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl mb-8 text-gray-300 font-light">
-                Inspired by urgent conversations highlighted in <strong class="font-semibold text-white">The New York Times</strong>,
-                <span class="font-semibold text-purple-400">'The Generational Wealth Bridge'</span> is your definitive guide for
-                <span class="font-semibold text-indigo-400">Millennials & Boomer Parents</span>
-                to openly discuss, plan, and preserve your family's financial future.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                **Prime Video, Netflix, Disney+ are adding TikTok-like 'Clips' feeds!** Automate short-form vertical video generation & optimization from your long-form content with AI.
             </p>
-            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
-                🚀 Join the Early Access Waitlist
+            <a href="#waitlist" class="btn-primary inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full shadow-lg text-white hover:shadow-xl transition-all duration-300 ease-in-out text-lg sm:text-xl md:text-2xl">
+                🚀 Get Early Access Now!
             </a>
+        </div>
+    </header>
+
+    <!-- Problem/Opportunity Section -->
+    <section class="py-16 md:py-24 bg-gray-900 relative">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-100 mb-12">
+                The New Frontier of Content Discovery is Here.
+            </h2>
+            <div class="max-w-4xl mx-auto">
+                <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
+                    Streaming giants like <span class="text-purple-400 font-semibold">Netflix, Disney+, and now Prime Video</span> are rapidly rolling out short-form, vertical "Clips" feeds to keep viewers engaged and help them discover new content. This is a massive opportunity to reach new audiences and drive deeper engagement.
+                </p>
+                <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+                    But manually creating, optimizing, and scheduling hundreds of these clips from your extensive content library is a monumental, time-consuming task. It drains resources and requires specialized knowledge for each platform's nuances.
+                </p>
+                <p class="text-lg md:text-xl text-purple-300 font-semibold mt-8">
+                    Don't get left behind – automate your strategy.
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-24 bg-gray-900">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 text-white">
-                What You'll Discover in <span class="text-gradient">The Generational Wealth Bridge</span>
+    <section class="py-16 md:py-24 bg-gray-800 text-gray-100 relative">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-16">
+                Unlock <span class="gradient-text">Peak Discovery & Engagement</span>
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
 
                 <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-5xl mb-4 text-indigo-400">🗣️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Effective Communication Strategies</h3>
-                    <p class="text-gray-400">Master the art of sensitive financial discussions between generations, fostering understanding and collaboration instead of conflict.</p>
+                <div class="feature-card p-6 md:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out">
+                    <div class="text-purple-400 mb-4 text-4xl">✨</div>
+                    <h3 class="text-2xl font-semibold mb-3">AI-Powered Clip Generation</h3>
+                    <p class="text-gray-300">Our advanced AI automatically identifies the most engaging moments in your long-form content and transforms them into compelling short-form vertical video clips, ready for streaming feeds.</p>
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-5xl mb-4 text-purple-400">📝</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Practical Inheritance Templates</h3>
-                    <p class="text-gray-400">Gain access to easy-to-use templates and guides for structuring inheritance discussions and documentation, ensuring clarity and fairness.</p>
+                <div class="feature-card p-6 md:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out">
+                    <div class="text-purple-400 mb-4 text-4xl">🎯</div>
+                    <h3 class="text-2xl font-semibold mb-3">Discovery Feed Optimization</h3>
+                    <p class="text-gray-300">Each clip is tailored to best practices for specific streaming discovery feeds (Prime Video Clips, Netflix Shorts), ensuring maximum visibility and viewer retention.</p>
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-emerald-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-5xl mb-4 text-emerald-400">💰</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Navigating Gift Tax Implications</h3>
-                    <p class="text-gray-400">Understand the complexities of gift taxes, annual exclusions, and strategies to minimize tax liabilities while supporting family members.</p>
+                <div class="feature-card p-6 md:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out">
+                    <div class="text-purple-400 mb-4 text-4xl">🏷️</div>
+                    <h3 class="text-2xl font-semibold mb-3">Smart Metadata Tagging</h3>
+                    <p class="text-gray-300">AI-driven metadata generation optimizes titles, descriptions, and tags for each clip, ensuring it's easily discoverable and perfectly aligned with platform algorithms.</p>
                 </div>
 
                 <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-yellow-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-5xl mb-4 text-yellow-400">🛡️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Setting Family Financial Boundaries</h3>
-                    <p class="text-gray-400">Learn how to establish healthy financial boundaries, manage expectations, and protect both parental assets and millennial independence.</p>
+                <div class="feature-card p-6 md:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out">
+                    <div class="text-purple-400 mb-4 text-4xl">🗓️</div>
+                    <h3 class="text-2xl font-semibold mb-3">Integrated Scheduling</h3>
+                    <p class="text-gray-300">Plan and schedule your clip releases directly within the platform. Distribute across multiple streaming services with ease, maintaining a consistent content flow.</p>
                 </div>
 
                 <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-rose-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-5xl mb-4 text-rose-400">🤝</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Private Community Forum</h3>
-                    <p class="text-gray-400">Connect with other families on a similar journey. Share insights, ask questions, and receive ongoing support in a secure, moderated environment.</p>
+                <div class="feature-card p-6 md:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out">
+                    <div class="text-purple-400 mb-4 text-4xl">📈</div>
+                    <h3 class="text-2xl font-semibold mb-3">Performance Dashboard</h3>
+                    <p class="text-gray-300">Track clip performance, engagement metrics, and content discovery rates across all integrated streaming platforms from a single, intuitive dashboard.</p>
                 </div>
 
-                <!-- Feature 6 (Premium Tiers) -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-sky-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-5xl mb-4 text-sky-400">💎</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Premium Support & Consultations</h3>
-                    <p class="text-gray-400">Upgrade for live Q&A sessions with experts and personalized one-on-one consultation opportunities to address your unique family situation.</p>
+                <!-- Feature 6 -->
+                <div class="feature-card p-6 md:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out">
+                    <div class="text-purple-400 mb-4 text-4xl">🔗</div>
+                    <h3 class="text-2xl font-semibold mb-3">Seamless Workflow Integration</h3>
+                    <p class="text-gray-300">Connect with your existing content management systems and workflows. ClipMaster AI fits perfectly into your production pipeline, enhancing rather than disrupting.</p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-24 bg-gradient-to-br from-gray-900 to-gray-800">
-        <div class="max-w-3xl mx-auto px-4 text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 text-white">
-                Secure Your Future. <span class="text-gradient">Join the Waitlist!</span>
+    <!-- Waitlist / CTA Section -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gray-900 text-gray-100 relative">
+        <div class="container mx-auto px-4 text-center max-w-3xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-100 mb-8">
+                <span class="gradient-text">Don't Miss Out!</span> Join Our Exclusive Waitlist.
             </h2>
-            <p class="text-lg sm:text-xl mb-8 text-gray-300">
-                Be among the first to gain access to The Generational Wealth Bridge program.
-                Limited spots for early bird pricing and exclusive bonuses!
+            <p class="text-lg md:text-xl text-gray-300 mb-10">
+                The streaming landscape is evolving rapidly. Secure your spot to be among the first content creators and studios to leverage ClipMaster AI and dominate the new discovery feeds.
             </p>
 
-            <!-- Countdown Timer -->
-            <div class="bg-gray-800 border border-purple-600 p-6 rounded-lg shadow-xl mb-10">
-                <p class="text-xl sm:text-2xl font-semibold text-purple-400 mb-4">Early Bird Offer Ends In:</p>
-                <div id="countdown" class="flex justify-center space-x-4 text-white">
-                    <div>
-                        <span class="block text-4xl sm:text-5xl font-bold" id="days">00</span>
-                        <span class="block text-sm sm:text-base text-gray-400">Days</span>
+            <!-- Limited Time Countdown -->
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-800 p-6 md:p-8 rounded-xl shadow-xl mb-12 transform hover:scale-105 transition-transform duration-300">
+                <p class="text-2xl md:text-3xl font-bold mb-4 text-white">LIMITED TIME OFFER!</p>
+                <p class="text-lg md:text-xl text-purple-200 mb-6">Founding members get lifetime discounts and priority support.</p>
+                <div id="countdown" class="flex justify-center items-center space-x-2 md:space-x-4">
+                    <div class="countdown-segment">
+                        <span id="days">00</span>
+                        <span>Days</span>
                     </div>
-                    <div class="text-4xl sm:text-5xl font-bold">:</div>
-                    <div>
-                        <span class="block text-4xl sm:text-5xl font-bold" id="hours">00</span>
-                        <span class="block text-sm sm:text-base text-gray-400">Hours</span>
+                    <div class="countdown-segment">
+                        <span id="hours">00</span>
+                        <span>Hours</span>
                     </div>
-                    <div class="text-4xl sm:text-5xl font-bold">:</div>
-                    <div>
-                        <span class="block text-4xl sm:text-5xl font-bold" id="minutes">00</span>
-                        <span class="block text-sm sm:text-base text-gray-400">Minutes</span>
+                    <div class="countdown-segment">
+                        <span id="minutes">00</span>
+                        <span>Minutes</span>
                     </div>
-                    <div class="text-4xl sm:text-5xl font-bold">:</div>
-                    <div>
-                        <span class="block text-4xl sm:text-5xl font-bold" id="seconds">00</span>
-                        <span class="block text-sm sm:text-base text-gray-400">Seconds</span>
+                    <div class="countdown-segment">
+                        <span id="seconds">00</span>
+                        <span>Seconds</span>
                     </div>
                 </div>
             </div>
 
-            <form class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700">
+            <!-- Waitlist Form -->
+            <form class="bg-gray-800 p-6 md:p-10 rounded-xl shadow-2xl border border-gray-700">
                 <div class="mb-6 text-left">
                     <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Jane Doe"
-                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700 transition duration-200"
-                           required>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700" placeholder="Your Name" required>
+                </div>
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Work Email:</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700" placeholder="your@company.com" required>
                 </div>
                 <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address:</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com"
-                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700 transition duration-200"
-                           required>
+                    <label for="company" class="block text-gray-300 text-sm font-bold mb-2">Company Name:</label>
+                    <input type="text" id="company" name="company" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700" placeholder="Your Studio / Company" required>
                 </div>
-                <button type="submit"
-                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-full text-xl transition duration-300 transform hover:scale-105 shadow-lg">
-                    ✅ Get Notified & Claim Early Access
+                <button type="submit" class="btn-primary w-full py-3 px-6 text-xl rounded-full font-bold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
+                    Join the Waitlist Now
                 </button>
             </form>
-            <p class="mt-8 text-gray-500 text-sm">
-                We respect your privacy. Your email will only be used for updates regarding 'The Generational Wealth Bridge'.
-            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 px-4 text-center text-gray-500 text-sm">
-        <div class="max-w-6xl mx-auto">
-            <p>&copy; 2023 The Generational Wealth Bridge. All rights reserved.</p>
-            <p class="mt-2">
-                <a href="#" class="hover:text-white transition duration-200">Privacy Policy</a> |
-                <a href="#" class="hover:text-white transition duration-200">Terms of Service</a>
-            </p>
+    <footer class="bg-gray-900 py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-gray-500">
+            <p>&copy; 2023 ClipMaster AI. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-purple-400 transition-colors duration-200">Privacy Policy</a>
+                <span class="text-gray-700">|</span>
+                <a href="#" class="hover:text-purple-400 transition-colors duration-200">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
+    <!-- Countdown Script -->
     <script>
-        // Countdown Timer Logic
-        const countdownElement = document.getElementById('countdown');
-        const daysElement = document.getElementById('days');
-        const hoursElement = document.getElementById('hours');
-        const minutesElement = document.getElementById('minutes');
-        const secondsElement = document.getElementById('seconds');
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the date we're counting down to (e.g., 30 days from now)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 30); // Set 30 days from now for demo
 
-        // Set the date we're counting down to (e.g., 14 days from now for early bird)
-        const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 14); // 14 days from today
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate.getTime() - now;
 
-        const updateCountdown = () => {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<div class='text-red-400 text-2xl font-bold'>OFFER EXPIRED!</div>";
+                    return;
+                }
 
-            if (distance < 0) {
-                clearInterval(countdownInterval);
-                countdownElement.innerHTML = '<p class="text-xl text-red-400 font-bold">Offer Expired!</p>';
-                return;
-            }
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            daysElement.textContent = String(days).padStart(2, '0');
-            hoursElement.textContent = String(hours).padStart(2, '0');
-            minutesElement.textContent = String(minutes).padStart(2, '0');
-            secondsElement.textContent = String(seconds).padStart(2, '0');
-        };
-
-        const countdownInterval = setInterval(updateCountdown, 1000);
-        updateCountdown(); // Call immediately to avoid initial flicker
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+            }, 1000);
+        });
     </script>
 </body>
 </html>
