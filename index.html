@@ -1,213 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ultimate iPad USB-C Power Kit for Professionals</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Cricut Crafter's Toolkit - Unlock Your Creative Potential</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom scrollbar for a premium dark-mode look */
-        ::-webkit-scrollbar {
-            width: 8px;
-            background-color: #1a202c; /* bg-gray-900 */
+        body {
+            font-family: 'Poppins', sans-serif;
         }
-        ::-webkit-scrollbar-thumb {
-            background-color: #4a5568; /* bg-gray-700 */
-            border-radius: 4px;
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-        ::-webkit-scrollbar-track {
-            background-color: #1a202c; /* bg-gray-900 */
+        /* Custom scrollbar for dark mode */
+        body::-webkit-scrollbar {
+            width: 12px;
         }
-        /* Ensure HTML and body take full height for hero section */
-        html, body {
-            height: 100%;
+        body::-webkit-scrollbar-track {
+            background: #2d3748; /* bg-gray-700 */
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #4a5568; /* bg-gray-600 */
+            border-radius: 20px;
+            border: 3px solid #2d3748;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased overflow-x-hidden min-h-screen flex flex-col">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative h-screen flex items-center justify-center text-center overflow-hidden flex-shrink-0">
-        <div class="absolute inset-0">
-            <img src="https://source.unsplash.com/1600x900/?A,tech" alt="iPad USB-C Professional Setup" class="w-full h-full object-cover object-center">
-            <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
-        </div>
+    <section class="hero-background relative min-h-screen flex items-center justify-center p-4 md:p-8">
+        <!-- Darker overlay for text readability -->
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent"></div>
+        <div class="absolute inset-0 bg-gray-900/60"></div>
 
-        <div class="relative z-10 p-4 sm:p-6 lg:p-8 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-blue-400 drop-shadow-lg animate-fade-in-down">
-                Unlock Your iPad's Full Professional Potential
+        <div class="relative z-10 text-center max-w-5xl mx-auto py-12 md:py-20 lg:py-24">
+            <span class="bg-purple-600 text-white text-xs md:text-sm font-bold px-4 py-2 rounded-full uppercase tracking-wide mb-5 inline-block shadow-lg">🚀 Launching Soon!</span>
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg">
+                Unlock Your Cricut's True Potential <br> & Reignite Your Creative Spark! ✨
             </h1>
-            <p class="text-xl sm:text-2xl lg:text-3xl font-light mb-8 text-gray-200 drop-shadow-md animate-fade-in-up">
-                Stop guessing. Get the essential gadgets, optimized workflows, and exclusive insights to transform your iPad into a portable powerhouse.
+            <p class="text-lg sm:text-xl text-gray-200 mb-10 max-w-3xl mx-auto drop-shadow-md">
+                The ultimate monthly subscription for Cricut enthusiasts seeking exclusive designs, advanced tutorials, and a vibrant crafter community.
             </p>
 
-            <!-- Limited Time Countdown (Strategy Adjustment) -->
-            <div class="bg-gradient-to-r from-blue-600 to-purple-600 p-6 rounded-lg shadow-2xl mb-10 mx-auto max-w-md animate-pulse">
-                <p class="text-lg font-semibold uppercase mb-3 text-white">Early Bird Access Ends In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 text-white">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="text-3xl sm:text-4xl lg:text-5xl font-bold">00</span>
-                        <span class="text-xs sm:text-sm uppercase">Days</span>
+            <!-- Limited Time Countdown -->
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-700 p-6 sm:p-8 rounded-xl shadow-2xl mb-12 border border-purple-500">
+                <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">Limited-Time Founders' Access Starts In:</h3>
+                <div id="countdown" class="flex flex-wrap justify-center gap-4 text-white">
+                    <div class="p-3 sm:p-4 bg-purple-800 rounded-lg flex flex-col items-center min-w-[70px] sm:min-w-[90px]">
+                        <span class="text-3xl sm:text-5xl font-extrabold" id="days">00</span>
+                        <span class="text-xs sm:text-sm uppercase tracking-wider">Days</span>
                     </div>
-                    <span class="text-3xl sm:text-4xl lg:text-5xl font-bold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="text-3xl sm:text-4xl lg:text-5xl font-bold">00</span>
-                        <span class="text-xs sm:text-sm uppercase">Hours</span>
+                    <div class="p-3 sm:p-4 bg-purple-800 rounded-lg flex flex-col items-center min-w-[70px] sm:min-w-[90px]">
+                        <span class="text-3xl sm:text-5xl font-extrabold" id="hours">00</span>
+                        <span class="text-xs sm:text-sm uppercase tracking-wider">Hours</span>
                     </div>
-                    <span class="text-3xl sm:text-4xl lg:text-5xl font-bold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="text-3xl sm:text-4xl lg:text-5xl font-bold">00</span>
-                        <span class="text-xs sm:text-sm uppercase">Minutes</span>
+                    <div class="p-3 sm:p-4 bg-purple-800 rounded-lg flex flex-col items-center min-w-[70px] sm:min-w-[90px]">
+                        <span class="text-3xl sm:text-5xl font-extrabold" id="minutes">00</span>
+                        <span class="text-xs sm:text-sm uppercase tracking-wider">Minutes</span>
                     </div>
-                    <span class="text-3xl sm:text-4xl lg:text-5xl font-bold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="text-3xl sm:text-4xl lg:text-5xl font-bold">00</span>
-                        <span class="text-xs sm:text-sm uppercase">Seconds</span>
+                    <div class="p-3 sm:p-4 bg-purple-800 rounded-lg flex flex-col items-center min-w-[70px] sm:min-w-[90px]">
+                        <span class="text-3xl sm:text-5xl font-extrabold" id="seconds">00</span>
+                        <span class="text-xs sm:text-sm uppercase tracking-wider">Seconds</span>
                     </div>
                 </div>
             </div>
 
-            <a href="#waitlist" class="inline-block bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                Secure Your Spot Now!
+            <a href="#waitlist" class="inline-block bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg uppercase tracking-wide shadow-xl transform hover:scale-105 transition-all duration-300">
+                Join the Exclusive Waitlist Now! 🎁
             </a>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-800 text-gray-100 flex-grow">
-        <div class="container mx-auto px-4 md:px-8 max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-blue-400">
-                What You'll Discover Inside 'The Ultimate iPad USB-C Power Kit'
-            </h2>
-
+    <section class="py-16 bg-gray-900 border-t border-b border-gray-800">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-12 text-white">What You'll Get Inside the Toolkit ✂️</h2>
+            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Feature 1: Curated Gadget Recommendations -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col items-center text-center">
-                    <svg class="w-12 h-12 text-teal-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1.25-3M15 10V5a2 2 0 00-2-2H9a2 2 0 00-2 2v5m3 4h.01M12 9h.01M12 12h.01M12 15h.01M12 18h.01M12 21h.01"></path></svg>
-                    <h3 class="text-xl font-semibold mb-3">Curated Gadget Recommendations</h3>
-                    <p class="text-gray-300">
-                        Forget endless searching. We've rigorously tested and selected the top USB-C hubs, external drives, monitors, and accessories proven to boost iPad productivity.
-                    </p>
+                <!-- Feature 1: Exclusive Design Bundles -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl mb-4 text-purple-400">🎨</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Exclusive Design Bundles</h3>
+                    <p class="text-gray-300">Unlock a fresh collection of trending SVG/PNG designs every month, crafted by top designers, ready for your Cricut machine. Never run out of ideas again!</p>
+                </div>
+                
+                <!-- Feature 2: Advanced Video Tutorials -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl mb-4 text-green-400">🎬</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Advanced Video Tutorials</h3>
+                    <p class="text-gray-300">Elevate your skills with step-by-step video guides for complex projects. From intricate layering to advanced material handling, we've got you covered.</p>
                 </div>
 
-                <!-- Feature 2: Optimized Professional Workflows -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col items-center text-center">
-                    <svg class="w-12 h-12 text-teal-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9a2 2 0 00-2-2h-7a2 2 0 00-2 2v10a2 2 0 002 2zM9 3H5a2 2 0 00-2 2v4m8 3l-3-3m0 0l-3 3m3-3v8"></path></svg>
-                    <h3 class="text-xl font-semibold mb-3">Optimized Professional Workflows</h3>
-                    <p class="text-gray-300">
-                        Learn how to seamlessly integrate your iPad into your professional routine for video editing, design, coding, content creation, and more.
-                    </p>
+                <!-- Feature 3: Members-Only Forum -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl mb-4 text-blue-400">💬</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Members-Only Forum</h3>
+                    <p class="text-gray-300">Connect with fellow crafters, share your creations, request custom designs, and get expert troubleshooting help directly from our community and team.</p>
+                </div>
+                
+                <!-- Feature 4: Endless Creative Inspiration -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl mb-4 text-yellow-400">💡</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Endless Creative Inspiration</h3>
+                    <p class="text-gray-300">Stay ahead of crafting trends and spark new ideas with our curated content, challenges, and member spotlights. Your next masterpiece awaits!</p>
                 </div>
 
-                <!-- Feature 3: Maximize Battery & Efficiency -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col items-center text-center">
-                    <svg class="w-12 h-12 text-teal-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    <h3 class="text-xl font-semibold mb-3">Maximize Battery & Efficiency</h3>
-                    <p class="text-gray-300">
-                        Discover power delivery best practices, charging hacks, and setup configurations that keep your iPad running longer and more efficiently.
-                    </p>
+                <!-- Feature 5: Skill Development & Mastery -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl mb-4 text-red-400">🏆</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Skill Development & Mastery</h3>
+                    <p class="text-gray-300">Progress from beginner to Cricut master. Our structured tutorials and resource library help you continuously refine your crafting techniques and expand your repertoire.</p>
                 </div>
 
-                <!-- Feature 4: Regular Updates & Exclusive Content -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col items-center text-center">
-                    <svg class="w-12 h-12 text-teal-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.747 0-3.332.477-4.5 1.253"></path></svg>
-                    <h3 class="text-xl font-semibold mb-3">Regular Updates & Exclusive Content</h3>
-                    <p class="text-gray-300">
-                        Opt for the optional subscription to receive monthly updates, new gadget reviews, and negotiated discount codes on top-tier products.
-                    </p>
+                <!-- Feature 6: Bonus Member Perks -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl mb-4 text-pink-400">🎁</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Bonus Member Perks</h3>
+                    <p class="text-gray-300">Enjoy exclusive discounts on crafting supplies, early access to new product launches, and special collaborations with industry leaders.</p>
                 </div>
-
-                <!-- Feature 5: Vetted & Tested Recommendations -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col items-center text-center">
-                    <svg class="w-12 h-12 text-teal-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.007 12.007 0 002.928 12c0 3.072 1.838 5.765 4.585 7.068a11.942 11.942 0 014.488 1.547 12.007 12.007 0 001.996.118A12.007 12.007 0 0021.072 12c0-3.072-1.838-5.765-4.585-7.068z"></path></svg>
-                    <h3 class="text-xl font-semibold mb-3">Vetted & Tested Recommendations</h3>
-                    <p class="text-gray-300">
-                        Our recommendations come with thorough explanations and direct affiliate links, ensuring you invest in gear that genuinely performs.
-                    </p>
-                </div>
-
-                <!-- Feature 6: Future-Proof Your Setup -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col items-center text-center">
-                    <svg class="w-12 h-12 text-teal-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V3m0 9v3m0 0v3m0 0h3m-3 0H9m1.206-8.354l-1.995 1.197M11.922 9.659l-2.005-.004m4.878 4.878l.004-.005M19.951 12.354l-1.197 1.995M18.001 12h-3.877"></path></svg>
-                    <h3 class="text-xl font-semibold mb-3">Future-Proof Your Setup</h3>
-                    <p class="text-gray-300">
-                        Stay ahead of the curve with insights into upcoming trends and technologies, ensuring your iPad setup remains cutting-edge.
-                    </p>
-                </div>
-
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gray-900 text-gray-100 flex-shrink-0">
-        <div class="container mx-auto px-4 md:px-8 max-w-2xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-blue-400">
-                Don't Miss Out! Join the Waitlist for Early Access
-            </h2>
+    <section id="waitlist" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">Don't Miss Out! Join Our Exclusive Waitlist Today!</h2>
             <p class="text-lg text-gray-300 mb-8">
-                Be among the first to get 'The Ultimate iPad USB-C Power Kit' and receive exclusive launch discounts.
+                Be among the first to get access to the Cricut Crafter's Toolkit and claim your special founders' launch discount and bonus designs! This limited-time offer won't last.
             </p>
 
-            <form class="flex flex-col gap-4 max-w-md mx-auto bg-gray-800 p-8 rounded-lg shadow-2xl border border-gray-700">
-                <input
-                    type="text"
-                    placeholder="Your Full Name"
-                    class="p-3 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 text-gray-100 placeholder-gray-400"
-                    required
-                >
-                <input
-                    type="email"
-                    placeholder="Your Email Address"
-                    class="p-3 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 text-gray-100 placeholder-gray-400"
-                    required
-                >
-                <label class="flex items-center text-gray-400 text-sm cursor-pointer">
-                    <input type="checkbox" class="form-checkbox h-4 w-4 text-teal-500 bg-gray-700 border-gray-600 rounded mr-2" checked>
-                    Yes, sign me up for monthly updates and exclusive discount codes (optional subscription).
-                </label>
-                <button
-                    type="submit"
-                    class="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-bold py-3 px-6 rounded-md text-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
-                >
-                    Secure My Early Access
+            <form class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700 space-y-6">
+                <div>
+                    <label for="name" class="sr-only">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required
+                           class="w-full p-4 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50 transition-all duration-200 placeholder-gray-400 text-base sm:text-lg">
+                </div>
+                <div>
+                    <label for="email" class="sr-only">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
+                           class="w-full p-4 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50 transition-all duration-200 placeholder-gray-400 text-base sm:text-lg">
+                </div>
+                <button type="submit"
+                        class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-4 px-6 rounded-lg text-xl uppercase tracking-wide shadow-lg transform hover:scale-105 transition-all duration-300">
+                    Sign Me Up! 🎉
                 </button>
-                <p class="text-sm text-gray-500 mt-2">We respect your privacy. No spam, ever.</p>
+                <p class="text-sm text-gray-400 mt-4">
+                    We respect your privacy. Your email will only be used for launch updates and exclusive offers.
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-8 text-center text-gray-400 text-sm flex-shrink-0">
+    <footer class="py-8 bg-gray-950 text-gray-400 text-center text-sm border-t border-gray-800">
         <div class="container mx-auto px-4">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">
-                <a href="#" class="hover:text-gray-200 transition-colors duration-200">Privacy Policy</a> |
-                <a href="#" class="hover:text-gray-200 transition-colors duration-200">Terms of Service</a>
-            </p>
+            <p>&copy; 2023 Cricut Crafter's Toolkit. All rights reserved.</p>
+            <p class="mt-2">Crafted with passion for creativity. 💖</p>
         </div>
     </footer>
 
-    <!-- Countdown Timer Script -->
+    <!-- Countdown Script -->
     <script>
-        function setupCountdown(targetDateTimestamp) {
-            const countdownElement = document.getElementById('countdown');
-            if (!countdownElement) return;
+        function setupCountdown() {
+            // Set the target date for the countdown (e.g., 30 days from now)
+            const launchDate = new Date();
+            launchDate.setDate(launchDate.getDate() + 30); // Sets launch for 30 days from today
+            // Alternatively, set a specific fixed date:
+            // const launchDate = new Date("Dec 25, 2024 09:00:00").getTime();
 
-            const daysSpan = document.getElementById('days');
-            const hoursSpan = document.getElementById('hours');
-            const minutesSpan = document.getElementById('minutes');
-            const secondsSpan = document.getElementById('seconds');
+            const countdownElement = document.getElementById("countdown");
+            if (!countdownElement) return; // Exit if countdown element is not found
 
-            function updateCountdown() {
+            const countdownInterval = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = targetDateTimestamp - now;
+                const distance = launchDate.getTime() - now;
 
                 if (distance < 0) {
                     clearInterval(countdownInterval);
-                    countdownElement.innerHTML = '<p class="text-xl font-bold">Early Bird Access Has Ended!</p>';
+                    countdownElement.innerHTML = "<p class='text-xl font-bold text-yellow-300'>✨ We've Launched! Explore the Toolkit Now! ✨</p>";
+                    // Optionally, redirect or show a different CTA
+                    // window.location.href = "/launch-page";
                     return;
                 }
 
@@ -216,23 +196,16 @@
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                daysSpan.innerText = String(days).padStart(2, '0');
-                hoursSpan.innerText = String(hours).padStart(2, '0');
-                minutesSpan.innerText = String(minutes).padStart(2, '0');
-                secondsSpan.innerText = String(seconds).padStart(2, '0');
-            }
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-            const countdownInterval = setInterval(updateCountdown, 1000);
-            updateCountdown(); // Initial call to display immediately
+            }, 1000);
         }
 
-        // Call the setup function when the DOM is loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            // Set target date for 7 days from when the page is loaded to ensure it's always active for a new visitor.
-            const now = new Date();
-            const targetDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 days from now
-            setupCountdown(targetDate.getTime());
-        });
+        document.addEventListener('DOMContentLoaded', setupCountdown);
     </script>
+
 </body>
 </html>
