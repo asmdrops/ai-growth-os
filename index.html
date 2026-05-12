@@ -3,201 +3,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ultimate Nitro & Game Pass Navigator - Maximize Your Perks & Play Smart</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Defend Against AI Zero-Days | SentinelAI Threat Defense</title>
+    <meta name="description" content="A Predictive AI-Threat Defense Platform for large enterprises and critical infrastructure. Stop AI-generated zero-day exploits in real-time.">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Favicon - Simple SVG for immediate rendering -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2310B981' d='M12 2L1 21h22L12 2zm0 8l4 6H8l4-6z'/%3E%3C/svg%3E">
     <style>
-        /* Custom styles for dark overlay and subtle gradients */
-        .hero-gradient-overlay {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.9) 100%);
+        /* Custom scrollbar for premium feel */
+        ::-webkit-scrollbar {
+            width: 10px;
         }
-        .bg-hero-image {
+        ::-webkit-scrollbar-track {
+            background: #111827; /* Dark background */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #10B981; /* Green accent */
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #059669; /* Darker green on hover */
+        }
+
+        /* Hero section specific styles for background image and overlay */
+        .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+        }
+
+        /* Custom animation for urgency (pulse-slow) */
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 3s infinite ease-in-out;
         }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
-    <!-- Hero Section -->
-    <header class="relative bg-hero-image min-h-screen flex items-center justify-center text-center py-16 px-4">
-        <div class="absolute inset-0 hero-gradient-overlay"></div>
-        <div class="relative z-10 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-yellow-400 drop-shadow-lg">
-                Your Discord Nitro & Game Pass Just Got a Massive Upgrade!
-            </h1>
-            <p class="text-xl sm:text-2xl md:text-3xl font-light mb-8 text-gray-200">
-                Unlock Hidden Gems, Save Time, and Transform Your Gaming Perks into Smart Play.
-            </p>
-            <p class="text-lg sm:text-xl mb-12 max-w-3xl mx-auto text-gray-300">
-                With Discord Nitro now including Game Pass, the library is vast. Stop feeling overwhelmed by choice and start playing smarter with <strong>The Ultimate Nitro & Game Pass Navigator</strong> – your entertainment productivity tool.
-            </p>
-
-            <!-- Limited Time Countdown -->
-            <div class="bg-gradient-to-r from-purple-600 to-indigo-700 p-6 rounded-lg shadow-xl mb-12 transform hover:scale-105 transition-transform duration-300">
-                <h2 class="text-3xl font-bold text-white mb-4">Limited Early Access Offer Ends In:</h2>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-white">
-                    <div class="flex flex-col items-center">
-                        <span class="text-5xl font-extrabold" id="days">00</span>
-                        <span class="text-sm uppercase tracking-wide">Days</span>
-                    </div>
-                    <span class="text-5xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-5xl font-extrabold" id="hours">00</span>
-                        <span class="text-sm uppercase tracking-wide">Hours</span>
-                    </div>
-                    <span class="text-5xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-5xl font-extrabold" id="minutes">00</span>
-                        <span class="text-sm uppercase tracking-wide">Minutes</span>
-                    </div>
-                    <span class="text-5xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-5xl font-extrabold" id="seconds">00</span>
-                        <span class="text-sm uppercase tracking-wide">Seconds</span>
-                    </div>
-                </div>
-            </div>
-
-            <a href="#waitlist-form" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-4 px-10 rounded-full text-xl uppercase tracking-wide shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
-                Join the Exclusive Waitlist Now! 🚀
+    <!-- Navbar -->
+    <header class="bg-gray-800 bg-opacity-70 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 py-4">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.275a1.125 1.125 0 011.263 1.263C20.323 7.375 20.01 10.015 19 12c-1.217 2.5-2.91 4.766-4.996 6.309C12.917 19.86 10.04 21 7 21a9 9 0 01-9-9C-2.583 6.64 0.322 3.86 5 3.015"></path></svg>
+                <span class="text-2xl font-bold text-white tracking-tight">SentinelAI</span>
             </a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#features" class="text-gray-300 hover:text-green-400 transition duration-300">Features</a>
+                <a href="#waitlist" class="text-gray-300 hover:text-green-400 transition duration-300">Waitlist</a>
+            </nav>
         </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero-background relative min-h-screen flex items-center justify-center text-center">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-32 z-10">
+            <p class="text-green-400 text-lg sm:text-xl font-semibold mb-4 uppercase tracking-wider">The Future of Cybersecurity is Proactive</p>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                SentinelAI: Stop <span class="text-green-400">AI-Powered Zero-Days</span> Before They Start.
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Leveraging advanced machine learning, SentinelAI identifies patterns indicative of AI-generated zero-day exploits in real-time, offering unparalleled defense for large enterprises and critical infrastructure.
+            </p>
+            <div class="bg-red-700 bg-opacity-80 rounded-lg p-4 mb-8 max-w-2xl mx-auto border-l-4 border-red-400 shadow-lg animate-pulse-slow">
+                <p class="text-white text-md sm:text-lg font-medium">
+                    <span class="font-bold">URGENT:</span> As reported by <a href="https://www.theverge.com/2023/10/26/23933516/google-ai-zero-day-hack-cybersecurity" target="_blank" rel="noopener noreferrer" class="underline hover:text-green-300">The Verge</a>, AI is already developing zero-day hacks. Don't wait for the next attack.
+                </p>
+            </div>
+            <a href="#waitlist" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out inline-block">
+                Join the Exclusive Waitlist Now
+            </a>
+            <p class="text-sm text-gray-400 mt-4">Limited spots available for early access.</p>
+        </div>
+    </section>
+
     <!-- Features Section -->
-    <section id="features" class="py-20 px-4 bg-gray-900">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl sm:text-5xl font-extrabold text-center mb-16 text-white leading-tight">
-                Transform Your Gaming & Content Creation Experience
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+    <section id="features" class="py-16 sm:py-24 lg:py-32 bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-12">How SentinelAI Secures Your Future</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
 
-                <!-- Feature 1: Curated Game Recommendations -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
-                    <div class="text-5xl mb-6 text-green-400">🎮</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Curated Game Recommendations</h3>
-                    <ul class="space-y-3 text-gray-300 text-lg">
-                        <li>✅ Discover hidden gems perfectly suited for your tastes.</li>
-                        <li>✅ Get personalized suggestions that cut through the noise.</li>
-                        <li>✅ Stop scrolling endlessly and start playing amazing games.</li>
-                        <li>✅ Enjoy games you'd never find on your own!</li>
-                    </ul>
+                <!-- Feature 1: Proactive AI Vulnerability Scanning -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <div class="flex items-center justify-center w-16 h-16 bg-green-600 rounded-full mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1l-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-4 text-center">Proactive AI Vulnerability Scanning</h3>
+                    <p class="text-gray-300 text-center text-base sm:text-lg">
+                        Our AI-driven scanners constantly probe your systems, simulating sophisticated AI-generated attack vectors to identify zero-day vulnerabilities before they become threats.
+                    </p>
                 </div>
 
-                <!-- Feature 2: Efficient Library Navigation -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
-                    <div class="text-5xl mb-6 text-blue-400">🧭</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Efficient Library Navigation</h3>
-                    <ul class="space-y-3 text-gray-300 text-lg">
-                        <li>⏱️ Save hours with smart strategies to explore the vast Game Pass library.</li>
-                        <li>🔍 Instantly pinpoint games based on genre, style, and playtime.</li>
-                        <li>🚀 Turn your gaming perk into a true time-saving 'productivity tool'.</li>
-                        <li>🎯 Focus on playing, not searching.</li>
-                    </ul>
+                <!-- Feature 2: Real-time AI Threat Intelligence -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <div class="flex items-center justify-center w-16 h-16 bg-green-600 rounded-full mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-4 text-center">Real-time AI Threat Intelligence</h3>
+                    <p class="text-gray-300 text-center text-base sm:text-lg">
+                        Access cutting-edge threat intelligence feeds, powered by our global network of AI analysis, delivering insights into emerging AI-driven attack methodologies and indicators of compromise.
+                    </p>
                 </div>
 
-                <!-- Feature 3: Content Creator Growth Tips -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
-                    <div class="text-5xl mb-6 text-purple-400">📈</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Content Creator Growth Tips</h3>
-                    <ul class="space-y-3 text-gray-300 text-lg">
-                        <li>🗣️ Leverage Game Pass & Nitro to engage and grow your community.</li>
-                        <li>💡 Discover niche games perfect for unique content creation.</li>
-                        <li>🔗 Strategize collaborations and cross-promotion opportunities.</li>
-                        <li>💰 Maximize your monetization potential.</li>
-                    </ul>
+                <!-- Feature 3: Automated Incident Response -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <div class="flex items-center justify-center w-16 h-16 bg-green-600 rounded-full mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 2v-6m2 9H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-4 text-center">Automated Incident Response</h3>
+                    <p class="text-gray-300 text-center text-base sm:text-lg">
+                        Deploy AI-powered playbooks that automatically detect, analyze, and neutralize AI-generated threats, minimizing breach impact and response times across your infrastructure.
+                    </p>
+                </div>
+
+                <!-- Feature 4: Machine Learning Anomaly Detection -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <div class="flex items-center justify-center w-16 h-16 bg-green-600 rounded-full mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V3m0 9v3m0 8h.01M12 4.582V2.885m0 16.23h.01M5.071 9.293L3.657 7.879m14.286 5.657l1.414 1.414M4 17h.01M19 17h.01M6.414 20.914L4.929 19.429m14.286-5.657l-1.414 1.414M18.343 7.879l1.414-1.414"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-4 text-center">Machine Learning Anomaly Detection</h3>
+                    <p class="text-gray-300 text-center text-base sm:text-lg">
+                        Our core ML engine constantly learns and adapts, identifying subtle anomalies and emergent attack patterns that evade traditional security solutions, specifically targeting AI-evolved threats.
+                    </p>
+                </div>
+
+                <!-- Feature 5: Tailored for Critical Infrastructure -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <div class="flex items-center justify-center w-16 h-16 bg-green-600 rounded-full mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-4 text-center">Tailored for Critical Infrastructure</h3>
+                    <p class="text-gray-300 text-center text-base sm:text-lg">
+                        Built from the ground up to meet the stringent security demands of large enterprises and critical infrastructure, ensuring resilience against the most advanced cyber threats.
+                    </p>
+                </div>
+
+                <!-- Feature 6: Seamless Integration & Deployment -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <div class="flex items-center justify-center w-16 h-16 bg-green-600 rounded-full mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1.5M9 3l2 2 4-4m5 8h-4.586a1 1 0 01-.707-.293l-5.414-5.414a1 1 0 01-.293-.707V5a2 2 0 00-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2v-1.5"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-4 text-center">Seamless Integration & Deployment</h3>
+                    <p class="text-gray-300 text-center text-base sm:text-lg">
+                        Designed for easy integration into existing security ecosystems, offering flexible deployment options that scale with your organizational needs, from cloud to on-premise.
+                    </p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-20 px-4 bg-gradient-to-br from-gray-800 to-gray-900">
-        <div class="container mx-auto max-w-2xl text-center">
-            <h2 class="text-4xl sm:text-5xl font-extrabold text-white mb-6">
-                Ready to Play Smarter & Create Better?
-            </h2>
-            <p class="text-xl text-gray-300 mb-10">
-                Join the exclusive waitlist for "The Ultimate Nitro & Game Pass Navigator" and be among the first to get access, plus receive special early-bird bonuses!
+    <!-- Waitlist Section with Countdown -->
+    <section id="waitlist" class="py-16 sm:py-24 lg:py-32 bg-gray-800 text-center">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Secure Your Position Against Future AI Threats</h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                Join the SentinelAI waitlist today to get early access to our platform and be among the first to experience true predictive AI threat defense.
             </p>
-            <form action="#" method="POST" class="bg-gray-800 p-8 rounded-lg shadow-2xl border border-gray-700">
-                <div class="mb-6">
-                    <label for="name" class="block text-left text-lg font-medium text-gray-200 mb-2">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="w-full p-4 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-lg" required>
+
+            <div class="bg-gradient-to-br from-gray-700 to-gray-900 p-8 rounded-xl shadow-2xl border border-green-700 transform hover:scale-105 transition-all duration-500">
+                <p class="text-green-400 text-lg sm:text-xl font-bold mb-4 uppercase tracking-wide">Limited Time Offer</p>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-6">Waitlist Closes In:</h3>
+                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 lg:space-x-6 mb-8 flex-wrap">
+                    <div class="bg-gray-900 p-3 sm:p-4 rounded-lg shadow-inner flex flex-col items-center my-2">
+                        <span id="days" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-green-400">00</span>
+                        <span class="text-gray-400 text-xs sm:text-base uppercase mt-1">Days</span>
+                    </div>
+                    <div class="text-white text-4xl sm:text-5xl lg:text-6xl font-extrabold my-2">:</div>
+                    <div class="bg-gray-900 p-3 sm:p-4 rounded-lg shadow-inner flex flex-col items-center my-2">
+                        <span id="hours" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-green-400">00</span>
+                        <span class="text-gray-400 text-xs sm:text-base uppercase mt-1">Hours</span>
+                    </div>
+                    <div class="text-white text-4xl sm:text-5xl lg:text-6xl font-extrabold my-2">:</div>
+                    <div class="bg-gray-900 p-3 sm:p-4 rounded-lg shadow-inner flex flex-col items-center my-2">
+                        <span id="minutes" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-green-400">00</span>
+                        <span class="text-gray-400 text-xs sm:text-base uppercase mt-1">Minutes</span>
+                    </div>
+                    <div class="text-white text-4xl sm:text-5xl lg:text-6xl font-extrabold my-2">:</div>
+                    <div class="bg-gray-900 p-3 sm:p-4 rounded-lg shadow-inner flex flex-col items-center my-2">
+                        <span id="seconds" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-green-400">00</span>
+                        <span class="text-gray-400 text-xs sm:text-base uppercase mt-1">Seconds</span>
+                    </div>
                 </div>
-                <div class="mb-8">
-                    <label for="email" class="block text-left text-lg font-medium text-gray-200 mb-2">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="w-full p-4 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-lg" required>
-                </div>
-                <button type="submit"
-                        class="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-4 rounded-full text-xl uppercase tracking-wide shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
-                    Secure My Spot & Get Early Access! 🎉
-                </button>
-                <p class="text-sm text-gray-400 mt-4"><em>No spam, just exclusive updates and early access.</em></p>
-            </form>
+
+                <form class="space-y-6">
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Enter your work email" required
+                               class="w-full p-4 rounded-lg bg-gray-900 text-white border border-gray-700 focus:border-green-500 focus:ring focus:ring-green-500 focus:ring-opacity-50 transition duration-300 text-lg">
+                    </div>
+                    <button type="submit"
+                            class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-lg text-xl shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                        Get Early Access to SentinelAI
+                    </button>
+                    <p class="text-xs text-gray-400 mt-4">
+                        We respect your privacy. Your information will not be shared.
+                    </p>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm px-4">
-        <p>&copy; 2023 The Ultimate Nitro & Game Pass Navigator. All rights reserved.</p>
+    <footer class="bg-gray-900 py-8 border-t border-gray-800 text-center">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-gray-500 text-sm">
+                &copy; 2023 SentinelAI. All rights reserved. Built for enterprises and critical infrastructure.
+            </p>
+            <div class="mt-4 space-x-4 text-sm">
+                <a href="#" class="text-gray-500 hover:text-green-400 transition duration-300">Privacy Policy</a>
+                <a href="#" class="text-gray-500 hover:text-green-400 transition duration-300">Terms of Service</a>
+            </div>
+        </div>
     </footer>
 
-    <!-- Countdown Script -->
+    <!-- Countdown JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const countdownElements = {
-                days: document.getElementById('days'),
-                hours: document.getElementById('hours'),
-                minutes: document.getElementById('minutes'),
-                seconds: document.getElementById('seconds')
-            };
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now for demo purposes
 
-            // Set the target date for the countdown (e.g., 7 days from now)
-            const now = new Date();
-            const targetDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 days from now
+            // Update the count down every 1 second
+            const x = setInterval(function() {
 
-            function updateCountdown() {
-                const currentTime = new Date().getTime();
-                const timeLeft = targetDate - currentTime;
+                // Get today's date and time
+                const now = new Date().getTime();
 
-                if (timeLeft <= 0) {
-                    countdownElements.days.textContent = '00';
-                    countdownElements.hours.textContent = '00';
-                    countdownElements.minutes.textContent = '00';
-                    countdownElements.seconds.textContent = '00';
-                    // Optional: Hide countdown or change CTA if offer expires
-                    const countdownContainer = document.getElementById('countdown').parentNode;
-                    countdownContainer.innerHTML = '<span class="text-2xl font-bold text-white">Offer Expired! Sign up for general updates.</span>';
-                    // You might also want to change the CTA button here
-                    const ctaButton = document.querySelector('a[href="#waitlist-form"]');
-                    if (ctaButton) {
-                        ctaButton.textContent = 'Join the General Waitlist! 📧';
+                // Find the distance between now and the count down date
+                const distance = countDownDate.getTime() - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the element with id="countdown"
+                const daysEl = document.getElementById("days");
+                const hoursEl = document.getElementById("hours");
+                const minutesEl = document.getElementById("minutes");
+                const secondsEl = document.getElementById("seconds");
+
+                if (daysEl) daysEl.innerHTML = String(days).padStart(2, '0');
+                if (hoursEl) hoursEl.innerHTML = String(hours).padStart(2, '0');
+                if (minutesEl) minutesEl.innerHTML = String(minutes).padStart(2, '0');
+                if (secondsEl) secondsEl.innerHTML = String(seconds).padStart(2, '0');
+
+                // If the count down is finished, write some text and disable the form
+                if (distance < 0) {
+                    clearInterval(x);
+                    const countdownDiv = document.getElementById("countdown");
+                    if (countdownDiv) {
+                        countdownDiv.innerHTML = "<span class='text-red-500 text-2xl sm:text-3xl font-bold'>Waitlist Closed!</span>";
+                        countdownDiv.classList.remove('flex-wrap'); // Clean up flex-wrap if it's there
+                        countdownDiv.classList.add('justify-center'); // Ensure it's centered if content changes
                     }
-                    return;
+                    const submitButton = document.querySelector("#waitlist form button");
+                    if (submitButton) {
+                        submitButton.disabled = true;
+                        submitButton.classList.add('opacity-50', 'cursor-not-allowed');
+                        submitButton.classList.remove('hover:bg-green-700', 'hover:scale-105');
+                        submitButton.textContent = "Waitlist is now closed.";
+                    }
+                    const emailInput = document.querySelector("#waitlist form input[type='email']");
+                    if (emailInput) {
+                        emailInput.disabled = true;
+                        emailInput.placeholder = "Waitlist has closed.";
+                    }
                 }
-
-                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-                countdownElements.days.textContent = String(days).padStart(2, '0');
-                countdownElements.hours.textContent = String(hours).padStart(2, '0');
-                countdownElements.minutes.textContent = String(minutes).padStart(2, '0');
-                countdownElements.seconds.textContent = String(seconds).padStart(2, '0');
-            }
-
-            // Update the countdown every second
-            setInterval(updateCountdown, 1000);
-            updateCountdown(); // Initial call to display immediately
+            }, 1000);
         });
     </script>
-
 </body>
 </html>
