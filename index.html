@@ -1,112 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EdgeSecure AI: Private MLOps for the Distributed Edge</title>
+    <title>Prioritize & Remediate Security Flaws with AI | [Your Product Name]</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Optional: Add Google Font for a modern look if desired, e.g., Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366F1'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z'/%3E%3C/svg%3E" type="image/svg+xml">
     <style>
         body {
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            background-color: #0d0c1e; /* Darker custom background */
-            color: #e2e8f0; /* Light text for dark mode */
+            font-family: 'Inter', sans-serif;
+            background-color: #0F172A; /* Slate 900 */
+            color: #E2E8F0; /* Slate 200 */
         }
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+        .hero-section {
+            background-image: url('https://source.unsplash.com/1600x900/?AI-Powered,tech');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             position: relative;
-            background-attachment: fixed; /* Parallax effect */
+            isolation: isolate; /* Ensures z-index context for overlay */
         }
         .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for readability */
+            content: "";
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            inset: 0;
+            background-color: rgba(15, 23, 42, 0.85); /* Darker overlay for text readability */
+            z-index: -1; /* Place behind content but above background-image */
         }
-        .gradient-text {
-            background: linear-gradient(to right, #6366f1, #a855f7); /* Indigo to Purple */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        /* Custom scrollbar for dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        .btn-primary {
-            background: linear-gradient(to right, #6366f1, #a855f7); /* Indigo to Purple */
-            transition: all 0.3s ease;
+        ::-webkit-scrollbar-track {
+            background: #1E293B; /* Slate 800 */
         }
-        .btn-primary:hover {
-            background: linear-gradient(to right, #4f46e5, #9333ea);
-            transform: translateY(-2px) scale(1.02);
-            box-shadow: 0 10px 20px rgba(100, 50, 200, 0.4);
+        ::-webkit-scrollbar-thumb {
+            background: #4F46E5; /* Indigo 600 */
+            border-radius: 10px;
         }
-        .input-focus:focus {
-            border-color: #a855f7;
-            box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.5); /* Purple shadow */
-        }
-        /* Limited Time Badge Animation */
-        .limited-time-badge {
-            animation: pulse-grow 2s infinite ease-in-out;
-        }
-        @keyframes pulse-grow {
-            0% { transform: scale(1); opacity: 0.8; }
-            50% { transform: scale(1.05); opacity: 1; }
-            100% { transform: scale(1); opacity: 0.8; }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6366F1; /* Indigo 500 */
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-200">
-
-    <!-- Navbar (Minimal for a landing page) -->
-    <header class="py-4 px-6 fixed top-0 left-0 w-full z-50 bg-gray-900 bg-opacity-80 backdrop-filter backdrop-blur-sm shadow-lg">
-        <div class="container mx-auto flex justify-between items-center max-w-7xl">
-            <a href="#" class="text-3xl font-extrabold gradient-text">
-                EdgeSecure AI
-            </a>
-            <nav>
-                <a href="#features" class="text-gray-300 hover:text-white px-4 py-2 rounded transition duration-200">Features</a>
-                <a href="#waitlist" class="text-gray-300 hover:text-white px-4 py-2 rounded transition duration-200">Waitlist</a>
-            </nav>
-        </div>
-    </header>
+<body class="dark bg-gray-900 text-gray-50 antialiased overflow-x-hidden">
 
     <!-- Hero Section -->
-    <section class="hero-background min-h-screen flex items-center justify-center text-center relative overflow-hidden pt-20 pb-12">
+    <section class="hero-section min-h-screen flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
         <div class="hero-overlay"></div>
-        <div class="container mx-auto px-4 z-10 py-20 max-w-7xl">
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight text-white drop-shadow-lg animate-fade-in-up">
-                <span class="gradient-text">Securely Deploy AI</span> <br class="hidden sm:inline"> to the Distributed Edge.
-            </h1>
-            <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-10 max-w-4xl mx-auto drop-shadow-md animate-fade-in delay-200">
-                Unlock the full potential of AI on edge devices with <span class="font-semibold text-purple-300">unmatched data privacy, regulatory compliance, and real-time MLOps</span>.
+        <div class="relative z-10 text-center max-w-5xl mx-auto space-y-6 sm:space-y-8">
+            <p class="text-indigo-400 text-base sm:text-lg font-semibold tracking-wide uppercase">
+                CYBERSECURITY TREND ALERT: Axios
             </p>
-            <div class="inline-block relative animate-fade-in delay-400">
-                <a href="#waitlist" class="btn-primary text-white font-bold py-3 px-8 md:py-4 md:px-10 rounded-full text-lg md:text-xl shadow-lg">
-                    Join the Early Access Waitlist
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white drop-shadow-md">
+                <span class="text-indigo-400">7x More Flaws?</span> Your Mid-Market Security <br class="hidden md:block"> Just Got an AI Upgrade.
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                Stop drowning in the ever-growing wave of vulnerabilities. Our AI-Powered platform integrates with your existing security, prioritizes critical flaws, and delivers actionable remediation workflows—specifically designed for mid-market companies.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-7 sm:py-4 sm:px-8 rounded-xl shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg sm:text-xl w-full sm:w-auto text-center">
+                    Join the Exclusive Waitlist!
                 </a>
-                <span class="absolute -top-3 -right-3 bg-red-600 text-white text-xs md:text-sm font-bold px-3 py-1 rounded-full transform rotate-6 limited-time-badge shadow-md">
-                    Limited Time!
-                </span>
+                <div class="bg-indigo-900/50 border border-indigo-700 text-white py-3 px-6 rounded-xl shadow-md text-sm sm:text-base flex items-center space-x-2 w-full sm:w-auto justify-center">
+                    <svg class="w-5 h-5 sm:w-6 sm:h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span id="countdown" class="font-mono tracking-wide">Limited-Time Offer Ends In: Loading...</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Problem/Solution Section -->
-    <section class="py-16 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 text-center max-w-6xl">
-            <h2 class="text-3xl md:text-5xl font-extrabold mb-16 text-white leading-tight">
-                Tackling the Toughest <span class="gradient-text">Edge AI Challenges</span>
+    <!-- Features Section -->
+    <section class="py-16 sm:py-20 bg-gray-900 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
+                Why <span class="text-indigo-400">VulnShield AI</span> is Your Essential Security Partner
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1">
-                    <svg class="w-12 h-12 mx-auto mb-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Security & Privacy Gaps</h3>
-                    <p class="text-gray-400">Traditional MLOps falls short on protecting sensitive AI models and data across fragmented edge environments. Don't compromise security for performance.</p>
+            <p class="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+                Leverage advanced AI to cut through the noise, focus on what matters most, and secure your business without needing an enterprise-level security team.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: AI-Powered Prioritization -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center justify-center w-16 h-16 bg-indigo-600 rounded-full mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.12 2-2.5 2S4 20.105 4 19s1.12-2 2.5-2 2.5 1.105 2.5 2zm12-3c0 1.105-1.12 2-2.5 2s-2.5-1.105-2.5-2 1.12-2 2.5-2 2.5 1.105 2.5 2zM9 10l12-3"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Smart Vulnerability Prioritization</h3>
+                    <p class="text-gray-300">
+                        Our advanced AI sifts through the thousands of new flaws (like the "7x more" reported by major firms), highlighting critical risks and reducing noise so your team can focus on what truly matters.
+                    </p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1">
-                    <svg class="w-12 h-12 mx-auto mb-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Compliance Complexity</h3>
-                    <p class="text-gray-400">Meeting stringent regulatory standards (GDPR, HIPAA, CCPA) for AI deployments on thousands of remote devices is a compliance nightmare.</p>
+
+                <!-- Feature 2: Seamless Integration -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center justify-center w-16 h-16 bg-indigo-600 rounded-full mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3m0 0l3-3m-3 3v8m0-13a9 9 0 110 18 9 9 0 010-18z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Integrate with Your Existing Stack</h3>
+                    <p class="text-gray-300">
+                        No rip and replace needed. Easily connect with your SIEMs, vulnerability scanners, and other security tools to centralize data and gain a unified view.
+                    </p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-teal-500 transition-all duration-300 transform hover:-translate-y-1">
-                    <svg class="w-12 h-12 mx-auto mb-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.42
+
+                <!-- Feature 3: Actionable Remediation -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center justify-center w-16 h-16 bg-indigo-600 rounded-full mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-
