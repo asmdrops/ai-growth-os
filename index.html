@@ -1,249 +1,197 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Android 17 Gemini Productivity Hub - Early Access</title>
-    <!-- Tailwind CSS CDN -->
+    <title>The Ultimate Cross-Platform Productivity Playbook - Seamless Android & iPhone Integration</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Optional: Favicon for a better user experience -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for premium dark mode and ultra-responsiveness */
         body {
-            font-family: 'Inter', sans-serif; /* A modern, clean sans-serif font */
-            background-color: #0d1117; /* Deep dark background */
-            color: #c9d1d9; /* Light grey for readability */
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        /* Hero background image */
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?The,tech');
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Parallax effect for depth */
         }
-        /* Gradient overlay for hero section text readability */
         .gradient-overlay {
-            background: linear-gradient(to top, rgba(13, 17, 23, 0.95), rgba(13, 17, 23, 0.4), rgba(13, 17, 23, 0.95));
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.6) 50%, rgba(15, 23, 42, 0.95));
         }
-        /* Countdown timer circles styling */
-        .countdown-circle {
-            background: rgba(45, 52, 54, 0.7); /* Darker transparent background */
-            border: 1px solid rgba(70, 78, 86, 0.5); /* Subtle border */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+        /* Custom scrollbar for a premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        /* Keyframe animations for subtle entry effects */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+        ::-webkit-scrollbar-track {
+            background: #1e293b; /* slate-800 */
         }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        ::-webkit-scrollbar-thumb {
+            background: #4f46e5; /* indigo-600 */
+            border-radius: 4px;
         }
-        @keyframes bounceIn {
-            0%, 20%, 40%, 60%, 80%, 100% {
-                transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-            }
-            0% { opacity: 0; transform: scale3d(.3, .3, .3); }
-            20% { transform: scale3d(1.1, 1.1, 1.1); }
-            40% { transform: scale3d(.9, .9, .9); }
-            60% { opacity: 1; transform: scale3d(1.03, 1.03, 1.03); }
-            80% { transform: scale3d(.97, .97, .97); }
-            100% { opacity: 1; transform: scale3d(1, 1, 1); }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6366f1; /* indigo-500 */
         }
-        .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
-        .animate-fade-in-up { animation: fadeInUp 1s ease-out forwards 0.3s; }
-        .animate-bounce-in { animation: bounceIn 1s ease-out forwards 0.6s; }
-        /* Fluid Typography (ensures titles scale perfectly on all screen sizes) */
-        h1 { font-size: clamp(2.5rem, 8vw, 5rem); } /* H1: Min 2.5rem, max 5rem, scales with viewport */
-        h2 { font-size: clamp(2rem, 6vw, 3.5rem); } /* H2: Min 2rem, max 3.5rem, scales with viewport */
-        h3 { font-size: clamp(1.5rem, 4vw, 2.5rem); } /* H3: Min 1.5rem, max 2.5rem, scales with viewport */
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased leading-normal tracking-tight">
+<body class="bg-slate-950 text-slate-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative min-h-screen flex items-center justify-center text-center overflow-hidden hero-background">
+    <section class="hero-bg relative h-screen flex items-center justify-center text-center p-4">
         <div class="absolute inset-0 gradient-overlay"></div>
-        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-6 leading-tight text-white drop-shadow-lg animate-fade-in-down" style="animation-delay: 0.1s;">
-                Unlock Android 17's True Potential with Gemini AI
+        <div class="relative z-10 max-w-4xl mx-auto space-y-8">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight">
+                Unlock <span class="text-indigo-400">Seamless Productivity</span><br>Bridge the Android & iPhone Divide
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl mb-10 font-light text-gray-300 max-w-2xl mx-auto animate-fade-in-up" style="animation-delay: 0.4s;">
-                Go Beyond Native Google with Hyper-Personalized Efficiency & Gemini-Powered 'Vibe-Coded' Widgets.
+            <p class="text-lg sm:text-xl md:text-2xl text-slate-300 font-medium max-w-3xl mx-auto">
+                Tired of device friction? Discover the definitive playbook that unites your digital life, leveraging Google's latest innovations for effortless cross-platform harmony.
             </p>
-
-            <!-- Limited Time Countdown (Crucial for conversion!) -->
-            <div class="flex flex-col items-center justify-center mb-10 space-y-4">
-                <p class="text-xl sm:text-2xl font-semibold text-yellow-400 animate-pulse">
-                    🚀 Early Access Closes In:
+            
+            <!-- Countdown Timer & Limited Time Offer -->
+            <div class="bg-indigo-700 bg-opacity-70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-indigo-600 animate-pulse-slow">
+                <p class="text-xl sm:text-2xl font-bold text-white mb-3">
+                    🚀 Special Launch Offer Ends In:
                 </p>
-                <div id="countdown" class="flex space-x-3 sm:space-x-6 text-white text-3xl sm:text-5xl font-bold">
-                    <div class="countdown-circle w-20 h-20 sm:w-28 sm:h-28 flex flex-col items-center justify-center rounded-full">
-                        <span id="days">00</span>
-                        <span class="text-xs sm:text-sm font-medium mt-1 text-gray-300">Days</span>
-                    </div>
-                    <div class="countdown-circle w-20 h-20 sm:w-28 sm:h-28 flex flex-col items-center justify-center rounded-full">
-                        <span id="hours">00</span>
-                        <span class="text-xs sm:text-sm font-medium mt-1 text-gray-300">Hours</span>
-                    </div>
-                    <div class="countdown-circle w-20 h-20 sm:w-28 sm:h-28 flex flex-col items-center justify-center rounded-full">
-                        <span id="minutes">00</span>
-                        <span class="text-xs sm:text-sm font-medium mt-1 text-gray-300">Minutes</span>
-                    </div>
-                    <div class="countdown-circle w-20 h-20 sm:w-28 sm:h-28 flex flex-col items-center justify-center rounded-full">
-                        <span id="seconds">00</span>
-                        <span class="text-xs sm:text-sm font-medium mt-1 text-gray-300">Seconds</span>
-                    </div>
+                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-6 text-white text-3xl sm:text-5xl font-extrabold">
+                    <div><span id="days">00</span><p class="text-sm sm:text-base font-normal text-indigo-200 mt-1">Days</p></div>
+                    <span>:</span>
+                    <div><span id="hours">00</span><p class="text-sm sm:text-base font-normal text-indigo-200 mt-1">Hours</p></div>
+                    <span>:</span>
+                    <div><span id="minutes">00</span><p class="text-sm sm:text-base font-normal text-indigo-200 mt-1">Minutes</p></div>
+                    <span>:</span>
+                    <div><span id="seconds">00</span><p class="text-sm sm:text-base font-normal text-indigo-200 mt-1">Seconds</p></div>
                 </div>
             </div>
 
-            <a href="#waitlist" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-extrabold py-4 px-10 rounded-full text-lg sm:text-xl transform hover:scale-105 transition-all duration-300 ease-in-out shadow-lg animate-bounce-in" style="animation-delay: 0.7s;">
-                Secure Your Spot on the Waitlist
+            <a href="#early-access-form" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 sm:py-4 px-8 sm:px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl ring-2 ring-indigo-400 ring-offset-2 ring-offset-slate-900">
+                Secure Your Early Access & Launch Discount!
             </a>
-            <p class="text-sm text-gray-400 mt-4">Limited Early Access Spots Available!</p>
+            <p class="text-sm sm:text-base text-slate-400 mt-4">Limited spots available at this exclusive price.</p>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section class="py-20 bg-gray-900 text-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-center text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-16 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600">
-                Revolutionize Your Productivity with Intelligent Automation
+    <section class="py-16 sm:py-20 bg-slate-900 px-4">
+        <div class="container mx-auto max-w-screen-xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+                What You'll Master in This <span class="text-indigo-400">Playbook</span>
             </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-
-                <!-- Feature 1: AI-Driven Smart Schedules -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center border border-gray-700">
-                    <div class="text-5xl text-indigo-400 mb-6">
-                        <span>&#128172;</span> <!-- Speech Bubble / AI icon -->
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-white">AI-Driven Smart Schedules</h3>
-                    <p class="text-gray-400">Gemini intelligently optimizes your day, integrating tasks, meetings, and breaks for peak efficiency. No more scheduling conflicts.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-700 transform hover:-translate-y-2 transition duration-300">
+                    <div class="text-indigo-500 text-5xl mb-4">🔗</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-white">Master Google's New Sharing</h3>
+                    <p class="text-slate-300">Dive deep into Google's latest innovations for effortless file transfer between Android & iPhone. Understand every nuance.</p>
                 </div>
-
-                <!-- Feature 2: Predictive Task Management -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center border border-gray-700">
-                    <div class="text-5xl text-emerald-400 mb-6">
-                        <span>&#128200;</span> <!-- Chart / Growth icon -->
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-white">Predictive Task Management</h3>
-                    <p class="text-gray-400">Our AI learns your habits, anticipating needs and proactively suggesting tasks to keep you ahead, before you even realize it.</p>
+                <!-- Feature 2 -->
+                <div class="bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-700 transform hover:-translate-y-2 transition duration-300">
+                    <div class="text-indigo-500 text-5xl mb-4">⚖️</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-white">Smart Method Comparisons</h3>
+                    <p class="text-slate-300">Get unbiased comparisons of cloud, direct, and third-party apps. Choose the best method for any data type and scenario.</p>
                 </div>
-
-                <!-- Feature 3: Proactive Notification Optimization -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center border border-gray-700">
-                    <div class="text-5xl text-purple-400 mb-6">
-                        <span>&#128226;</span> <!-- Bell / Notification icon -->
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-white">Proactive Notification Optimization</h3>
-                    <p class="text-gray-400">Silence the noise. Gemini prioritizes essential alerts and intelligently bundles less critical notifications based on your context.</p>
+                <!-- Feature 3 -->
+                <div class="bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-700 transform hover:-translate-y-2 transition duration-300">
+                    <div class="text-indigo-500 text-5xl mb-4">⚡</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-white">Optimize Data Transfer Workflows</h3>
+                    <p class="text-slate-300">Streamline your photo, video, document, and contact transfers. Learn powerful workflows to save time and prevent data loss.</p>
                 </div>
-
-                <!-- Feature 4: Gemini-Powered Custom Widgets -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center border border-gray-700">
-                    <div class="text-5xl text-rose-400 mb-6">
-                        <span>&#128187;</span> <!-- Computer / Customization icon -->
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-white">Gemini-Powered Custom Widgets</h3>
-                    <p class="text-gray-400">Express yourself! 'Vibe-code' truly unique widgets with Gemini's assistance, crafting an Android experience tailored to your exact style and needs.</p>
+                <!-- Feature 4 -->
+                <div class="bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-700 transform hover:-translate-y-2 transition duration-300">
+                    <div class="text-indigo-500 text-5xl mb-4">🛠️</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-white">Troubleshooting Common Issues</h3>
+                    <p class="text-slate-300">From connection drops to file format woes, discover quick fixes and proactive strategies to avoid cross-platform headaches.</p>
                 </div>
-
+                <!-- Feature 5 -->
+                <div class="bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-700 transform hover:-translate-y-2 transition duration-300">
+                    <div class="text-indigo-500 text-5xl mb-4">🤝</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-white">Complementary App Recommendations</h3>
+                    <p class="text-slate-300">Unlock a curated list of apps and tools that perfectly bridge the Android-iPhone gap for notes, calendars, tasks, and more.</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-700 transform hover:-translate-y-2 transition duration-300">
+                    <div class="text-indigo-500 text-5xl mb-4">📈</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-white">Future-Proof Your Setup</h3>
+                    <p class="text-slate-300">Stay ahead of the curve with strategies to adapt to evolving tech and ensure your cross-platform setup remains seamless.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-20 bg-gray-800 text-gray-100 relative overflow-hidden">
-        <!-- Subtle background texture and gradient for premium feel -->
-        <div class="absolute inset-0 z-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.6\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E');"></div>
-        <div class="absolute inset-0 z-0 bg-gradient-to-br from-indigo-900 via-transparent to-purple-900 opacity-20"></div>
-
-        <div class="relative z-10 max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-gray-900/70 p-10 rounded-xl shadow-2xl backdrop-blur-sm border border-gray-700">
-            <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 leading-tight text-white">
-                Be Among the First to Experience True Android 17 Power
+    <!-- Early Access / Waitlist Form Section -->
+    <section id="early-access-form" class="py-16 sm:py-20 bg-slate-950 px-4">
+        <div class="container mx-auto max-w-screen-md text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8">
+                Don't Miss Out! <span class="text-indigo-400">Secure Your Access Now.</span>
             </h2>
-            <p class="text-lg text-gray-300 mb-8">
-                Join our exclusive waitlist for early access to the Android 17 Gemini Productivity Hub.
-                Limited spots available to ensure a premium rollout experience.
+            <p class="text-lg sm:text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
+                This limited-time offer gives you immediate access to 'The Ultimate Cross-Platform Productivity Playbook' at a special launch discount.
             </p>
 
-            <form class="space-y-6">
-                <div>
-                    <label for="name" class="sr-only">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required
-                           class="w-full px-5 py-3 border border-gray-700 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors duration-200 shadow-md">
-                </div>
-                <div>
-                    <label for="email" class="sr-only">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
-                           class="w-full px-5 py-3 border border-gray-700 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors duration-200 shadow-md">
-                </div>
-                <button type="submit"
-                        class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-extrabold py-3 px-8 rounded-lg text-lg transform hover:scale-105 transition-all duration-300 ease-in-out shadow-xl">
-                    Join Early Access Waitlist
-                </button>
-            </form>
-            <p class="text-sm text-gray-500 mt-6">We respect your privacy. No spam, ever.</p>
+            <div class="bg-slate-800 p-8 sm:p-10 rounded-xl shadow-2xl border border-slate-700 mx-auto max-w-xl">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-left text-sm font-medium text-slate-300 mb-2">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe"
+                               class="w-full px-5 py-3 rounded-lg bg-slate-700 text-white border border-slate-600 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 outline-none placeholder-slate-400"
+                               required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-left text-sm font-medium text-slate-300 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                               class="w-full px-5 py-3 rounded-lg bg-slate-700 text-white border border-slate-600 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 outline-none placeholder-slate-400"
+                               required>
+                    </div>
+                    <button type="submit"
+                            class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-xl ring-2 ring-indigo-400 ring-offset-2 ring-offset-slate-900">
+                        Get Instant Access & Exclusive Bonus
+                    </button>
+                </form>
+                <p class="text-xs text-slate-400 mt-6">
+                    Your data is safe with us. We respect your privacy and will never share your information.
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 text-center text-gray-500 text-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p>&copy; 2024 Android 17 Gemini Productivity Hub. All rights reserved.</p>
-            <p class="mt-2">Leveraging Android 17 Gemini Intelligence for a smarter you.</p>
+    <footer class="bg-slate-900 py-8 px-4 text-center text-slate-400 text-sm">
+        <div class="container mx-auto max-w-screen-xl">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Countdown Timer JavaScript -->
     <script>
-        // Set the target date for the countdown.
-        // For demonstration, let's set it 7 days from when the user views the page.
-        const countdownTargetDate = new Date();
-        countdownTargetDate.setDate(countdownTargetDate.getDate() + 7); // 7 days from now
+        // Countdown Timer Logic
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 7); // Set countdown for 7 days from now
 
-        const countdownInterval = setInterval(function() {
+        const countdownFunction = setInterval(function() {
             const now = new Date().getTime();
-            const distance = countdownTargetDate - now;
+            const distance = countdownDate.getTime() - now;
 
-            // Calculate days, hours, minutes, seconds
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Display the result in the respective elements, padding with '0'
-            const getElement = (id) => document.getElementById(id);
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-            if (getElement("days")) getElement("days").innerHTML = String(days).padStart(2, '0');
-            if (getElement("hours")) getElement("hours").innerHTML = String(hours).padStart(2, '0');
-            if (getElement("minutes")) getElement("minutes").innerHTML = String(minutes).padStart(2, '0');
-            if (getElement("seconds")) getElement("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-            // If the countdown is over
             if (distance < 0) {
-                clearInterval(countdownInterval);
-                if (getElement("countdown")) {
-                    getElement("countdown").innerHTML = "<span class='text-red-500 text-2xl sm:text-4xl'>ACCESS CLOSED!</span>";
-                }
-                const pulseElement = document.querySelector(".animate-pulse");
-                if (pulseElement) {
-                    pulseElement.innerHTML = "Early Access Ended!";
-                    pulseElement.classList.remove("animate-pulse"); // Stop the pulse effect
-                }
-                // Optionally disable the waitlist button here
-                const waitlistButton = document.querySelector("#waitlist button[type='submit']");
-                if(waitlistButton) {
-                    waitlistButton.disabled = true;
-                    waitlistButton.textContent = "Waitlist Closed";
-                    waitlistButton.classList.add("opacity-50", "cursor-not-allowed");
-                    waitlistButton.classList.remove("hover:scale-105");
-                }
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = "Offer Expired!";
+                document.querySelector('.animate-pulse-slow').classList.remove('animate-pulse-slow'); // Stop animation
+                document.querySelector('.bg-indigo-700').classList.add('bg-gray-700', 'bg-opacity-70'); // Grey out
+                document.querySelector('.bg-indigo-700').classList.remove('bg-indigo-700');
+                document.querySelector('a[href="#early-access-form"]').textContent = "Get Full Price Access"; // Update CTA
             }
-        }, 1000); // Update every 1 second
+        }, 1000);
     </script>
 </body>
 </html>
