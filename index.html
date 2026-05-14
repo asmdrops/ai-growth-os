@@ -3,193 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ultimate Cross-Platform Productivity Playbook - Seamless Android & iPhone Integration</title>
+    <title>Prioritize Smarter: AI-Powered Exploitability Prioritization</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
     <style>
+        /* Custom styles for gradients or specific overlays if needed */
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.8) 100%);
+        }
+        /* Hide scrollbar for aesthetic, but allow scrolling */
         body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
         }
-        .hero-bg {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
+        body::-webkit-scrollbar {
+            display: none;  /* Chrome, Safari, Opera */
         }
-        .gradient-overlay {
-            background: linear-gradient(to top, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.6) 50%, rgba(15, 23, 42, 0.95));
+        /* Pulse animation for the headline, subtle effect */
+        @keyframes pulse-subtle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.95; }
         }
-        /* Custom scrollbar for a premium feel */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #1e293b; /* slate-800 */
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #4f46e5; /* indigo-600 */
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #6366f1; /* indigo-500 */
+        .animate-pulse-subtle {
+            animation: pulse-subtle 3s infinite ease-in-out;
         }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased">
+<body class="bg-gray-900 text-white font-sans antialiased">
 
     <!-- Hero Section -->
-    <section class="hero-bg relative h-screen flex items-center justify-center text-center p-4">
-        <div class="absolute inset-0 gradient-overlay"></div>
-        <div class="relative z-10 max-w-4xl mx-auto space-y-8">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight">
-                Unlock <span class="text-indigo-400">Seamless Productivity</span><br>Bridge the Android & iPhone Divide
+    <header class="relative bg-cover bg-center h-screen flex items-center justify-center p-4" style="background-image: url('https://source.unsplash.com/1600x900/?An,tech');">
+        <div class="absolute inset-0 bg-black opacity-70 hero-overlay"></div> <!-- Dark overlay -->
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 animate-pulse-subtle">
+                Cut Through the Noise: <br class="sm:hidden">Prioritize Real Threats, Not Just Flaws.
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-slate-300 font-medium max-w-3xl mx-auto">
-                Tired of device friction? Discover the definitive playbook that unites your digital life, leveraging Google's latest innovations for effortless cross-platform harmony.
+            <p class="text-xl sm:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                New AI models reveal <span class="text-red-400 font-bold">7x more flaws</span>. Don't drown in alerts. Our AI-powered platform predicts real-world exploitability and business impact, giving your team a laser focus on what truly matters.
             </p>
-            
-            <!-- Countdown Timer & Limited Time Offer -->
-            <div class="bg-indigo-700 bg-opacity-70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-indigo-600 animate-pulse-slow">
-                <p class="text-xl sm:text-2xl font-bold text-white mb-3">
-                    🚀 Special Launch Offer Ends In:
-                </p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-6 text-white text-3xl sm:text-5xl font-extrabold">
-                    <div><span id="days">00</span><p class="text-sm sm:text-base font-normal text-indigo-200 mt-1">Days</p></div>
-                    <span>:</span>
-                    <div><span id="hours">00</span><p class="text-sm sm:text-base font-normal text-indigo-200 mt-1">Hours</p></div>
-                    <span>:</span>
-                    <div><span id="minutes">00</span><p class="text-sm sm:text-base font-normal text-indigo-200 mt-1">Minutes</p></div>
-                    <span>:</span>
-                    <div><span id="seconds">00</span><p class="text-sm sm:text-base font-normal text-indigo-200 mt-1">Seconds</p></div>
+            <a href="#waitlist" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Join the Exclusive Waitlist Now!
+            </a>
+
+            <!-- Limited Time Countdown -->
+            <div class="mt-12 bg-gray-800 bg-opacity-70 border border-purple-500 rounded-lg p-6 max-w-md mx-auto shadow-xl">
+                <p class="text-purple-300 text-lg font-semibold mb-4">Early Access Application Closes In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-3xl sm:text-4xl font-bold text-white">
+                    <div class="flex flex-col items-center">
+                        <span id="days" class="text-purple-400">00</span>
+                        <span class="text-sm text-gray-400 font-normal">Days</span>
+                    </div>
+                    <span class="text-purple-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours" class="text-purple-400">00</span>
+                        <span class="text-sm text-gray-400 font-normal">Hours</span>
+                    </div>
+                    <span class="text-purple-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes" class="text-purple-400">00</span>
+                        <span class="text-sm text-gray-400 font-normal">Minutes</span>
+                    </div>
+                    <span class="text-purple-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds" class="text-purple-400">00</span>
+                        <span class="text-sm text-gray-400 font-normal">Seconds</span>
+                    </div>
                 </div>
             </div>
-
-            <a href="#early-access-form" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 sm:py-4 px-8 sm:px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl ring-2 ring-indigo-400 ring-offset-2 ring-offset-slate-900">
-                Secure Your Early Access & Launch Discount!
-            </a>
-            <p class="text-sm sm:text-base text-slate-400 mt-4">Limited spots available at this exclusive price.</p>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-20 bg-slate-900 px-4">
-        <div class="container mx-auto max-w-screen-xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 text-white">
-                What You'll Master in This <span class="text-indigo-400">Playbook</span>
+    <section id="features" class="py-20 sm:py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-16 leading-tight">
+                Unlock <span class="text-purple-400">Unmatched</span> Vulnerability Intelligence
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-700 transform hover:-translate-y-2 transition duration-300">
-                    <div class="text-indigo-500 text-5xl mb-4">🔗</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Master Google's New Sharing</h3>
-                    <p class="text-slate-300">Dive deep into Google's latest innovations for effortless file transfer between Android & iPhone. Understand every nuance.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Feature 1: AI-Powered Exploitability Prediction -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-purple-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-purple-400 text-5xl mb-6">⚙️</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">AI-Powered Exploitability Prediction</h3>
+                    <p class="text-gray-300">
+                        Go beyond CVSS scores. Our advanced ML algorithms predict the real-world exploitability of every flaw, including those emerging from new AI vulnerability discovery tools. Focus on what attackers can *actually* leverage.
+                    </p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-700 transform hover:-translate-y-2 transition duration-300">
-                    <div class="text-indigo-500 text-5xl mb-4">⚖️</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Smart Method Comparisons</h3>
-                    <p class="text-slate-300">Get unbiased comparisons of cloud, direct, and third-party apps. Choose the best method for any data type and scenario.</p>
+
+                <!-- Feature 2: Contextual Business Impact -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-purple-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-purple-400 text-5xl mb-6">📊</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Contextual Business Impact</h3>
+                    <p class="text-gray-300">
+                        Understand the true risk. We analyze vulnerabilities within your unique business context, assessing potential impact on critical assets, data, and operations to deliver truly actionable insights.
+                    </p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-700 transform hover:-translate-y-2 transition duration-300">
-                    <div class="text-indigo-500 text-5xl mb-4">⚡</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Optimize Data Transfer Workflows</h3>
-                    <p class="text-slate-300">Streamline your photo, video, document, and contact transfers. Learn powerful workflows to save time and prevent data loss.</p>
+
+                <!-- Feature 3: Seamless Workflow Integration -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-purple-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-purple-400 text-5xl mb-6">🔗</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Seamless Workflow Integration</h3>
+                    <p class="text-gray-300">
+                        Effortlessly integrate with your existing SIEMs, ticketing systems (Jira, ServiceNow), and security tools. Our platform augments your workflow, it doesn't replace it.
+                    </p>
                 </div>
-                <!-- Feature 4 -->
-                <div class="bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-700 transform hover:-translate-y-2 transition duration-300">
-                    <div class="text-indigo-500 text-5xl mb-4">🛠️</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Troubleshooting Common Issues</h3>
-                    <p class="text-slate-300">From connection drops to file format woes, discover quick fixes and proactive strategies to avoid cross-platform headaches.</p>
+
+                <!-- Feature 4: Comprehensive Data Ingestion -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-purple-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-purple-400 text-5xl mb-6">📡</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Comprehensive Data Ingestion</h3>
+                    <p class="text-gray-300">
+                        Ingest vulnerability data from all sources – scanners, bug bounties, threat intelligence, and even the "7x more flaws" being uncovered by cutting-edge AI models.
+                    </p>
                 </div>
-                <!-- Feature 5 -->
-                <div class="bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-700 transform hover:-translate-y-2 transition duration-300">
-                    <div class="text-indigo-500 text-5xl mb-4">🤝</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Complementary App Recommendations</h3>
-                    <p class="text-slate-300">Unlock a curated list of apps and tools that perfectly bridge the Android-iPhone gap for notes, calendars, tasks, and more.</p>
+
+                <!-- Feature 5: Prioritized Actionable Lists -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-purple-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-purple-400 text-5xl mb-6">🎯</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Prioritized Actionable Lists</h3>
+                    <p class="text-gray-300">
+                        Receive a clear, ranked list of vulnerabilities that demand immediate attention. Eliminate noise, reduce alert fatigue, and empower your security team to act with confidence.
+                    </p>
                 </div>
-                <!-- Feature 6 -->
-                <div class="bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-700 transform hover:-translate-y-2 transition duration-300">
-                    <div class="text-indigo-500 text-5xl mb-4">📈</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Future-Proof Your Setup</h3>
-                    <p class="text-slate-300">Stay ahead of the curve with strategies to adapt to evolving tech and ensure your cross-platform setup remains seamless.</p>
+
+                <!-- Feature 6: Proactive Threat Resilience -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-purple-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-purple-400 text-5xl mb-6">🛡️</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Proactive Threat Resilience</h3>
+                    <p class="text-gray-300">
+                        Move from reactive patching to proactive resilience. Understand your risk posture dynamically and stay ahead of emerging threats with predictive intelligence.
+                    </p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Early Access / Waitlist Form Section -->
-    <section id="early-access-form" class="py-16 sm:py-20 bg-slate-950 px-4">
-        <div class="container mx-auto max-w-screen-md text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8">
-                Don't Miss Out! <span class="text-indigo-400">Secure Your Access Now.</span>
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-20 sm:py-24 bg-gray-800 border-t border-gray-700">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-8 leading-tight">
+                Ready to Stop Drowning in <span class="text-red-400">Vulnerability Noise</span>?
             </h2>
-            <p class="text-lg sm:text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
-                This limited-time offer gives you immediate access to 'The Ultimate Cross-Platform Productivity Playbook' at a special launch discount.
+            <p class="text-xl text-gray-300 mb-10">
+                Join our exclusive waitlist for early access to the platform that transforms your vulnerability management from overwhelming to actionable. Limited spots available!
             </p>
 
-            <div class="bg-slate-800 p-8 sm:p-10 rounded-xl shadow-2xl border border-slate-700 mx-auto max-w-xl">
-                <form class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-left text-sm font-medium text-slate-300 mb-2">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe"
-                               class="w-full px-5 py-3 rounded-lg bg-slate-700 text-white border border-slate-600 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 outline-none placeholder-slate-400"
-                               required>
-                    </div>
-                    <div>
-                        <label for="email" class="block text-left text-sm font-medium text-slate-300 mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                               class="w-full px-5 py-3 rounded-lg bg-slate-700 text-white border border-slate-600 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 outline-none placeholder-slate-400"
-                               required>
-                    </div>
-                    <button type="submit"
-                            class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-xl ring-2 ring-indigo-400 ring-offset-2 ring-offset-slate-900">
-                        Get Instant Access & Exclusive Bonus
-                    </button>
-                </form>
-                <p class="text-xs text-slate-400 mt-6">
-                    Your data is safe with us. We respect your privacy and will never share your information.
-                </p>
-            </div>
+            <form class="bg-gray-900 p-8 rounded-lg shadow-2xl border border-gray-700">
+                <div class="mb-6">
+                    <label for="name" class="block text-left text-gray-300 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700 transition duration-200 ease-in-out" required>
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-left text-gray-300 text-sm font-bold mb-2">Work Email</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@yourcompany.com"
+                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700 transition duration-200 ease-in-out" required>
+                </div>
+                <div class="mb-8">
+                    <label for="company" class="block text-left text-gray-300 text-sm font-bold mb-2">Company Name</label>
+                    <input type="text" id="company" name="company" placeholder="Acme Corp"
+                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700 transition duration-200 ease-in-out" required>
+                </div>
+                <button type="submit"
+                        class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 w-full sm:w-auto shadow-lg">
+                    Secure Your Spot!
+                </button>
+            </form>
+            <p class="text-sm text-gray-500 mt-6">
+                We respect your privacy. Your data will only be used for waitlist updates.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 py-8 px-4 text-center text-slate-400 text-sm">
-        <div class="container mx-auto max-w-screen-xl">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+    <footer class="bg-gray-900 py-10 border-t border-gray-800 text-center text-gray-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p>&copy; 2024 Exploitability AI. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Countdown Script -->
     <script>
-        // Countdown Timer Logic
+        // Set the date for the countdown (e.g., 7 days from now)
         const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 7); // Set countdown for 7 days from now
+        countdownDate.setDate(countdownDate.getDate() + 7); // Sets the countdown to expire in 7 days
 
-        const countdownFunction = setInterval(function() {
+        const x = setInterval(function() {
             const now = new Date().getTime();
-            const distance = countdownDate.getTime() - now;
+            const distance = countdownDate - now;
 
+            // Calculate times for days, hours, minutes and seconds
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+            // Display the result in the respective elements
             document.getElementById("days").innerHTML = String(days).padStart(2, '0');
             document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
             document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
             document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
+            // If the countdown is over, write some text
             if (distance < 0) {
-                clearInterval(countdownFunction);
-                document.getElementById("countdown").innerHTML = "Offer Expired!";
-                document.querySelector('.animate-pulse-slow').classList.remove('animate-pulse-slow'); // Stop animation
-                document.querySelector('.bg-indigo-700').classList.add('bg-gray-700', 'bg-opacity-70'); // Grey out
-                document.querySelector('.bg-indigo-700').classList.remove('bg-indigo-700');
-                document.querySelector('a[href="#early-access-form"]').textContent = "Get Full Price Access"; // Update CTA
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "<p class='text-red-500'>Early Access Closed!</p>";
+                document.querySelector('a[href="#waitlist"]').style.display = 'none'; // Hide CTA
+                document.querySelector('#waitlist form button').disabled = true; // Disable form button
+                document.querySelector('#waitlist form button').textContent = 'Applications Closed';
+                document.querySelector('#waitlist form button').classList.remove('bg-purple-600', 'hover:bg-purple-700');
+                document.querySelector('#waitlist form button').classList.add('bg-gray-500', 'cursor-not-allowed');
             }
         }, 1000);
     </script>
