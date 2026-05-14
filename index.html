@@ -3,228 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Agent-Led Customer Support | Boost Efficiency & Reduce Costs</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>EdgeSecure AI: Private MLOps for the Distributed Edge</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for dark mode and premium feel */
         body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            background-color: #0d0c1e; /* Darker custom background */
+            color: #e2e8f0; /* Light text for dark mode */
         }
-        .gradient-overlay {
-            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            background-attachment: fixed; /* Parallax effect */
         }
-        .countdown-timer {
-            font-variant-numeric: tabular-nums;
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for readability */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #6366f1, #a855f7); /* Indigo to Purple */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn-primary {
+            background: linear-gradient(to right, #6366f1, #a855f7); /* Indigo to Purple */
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(to right, #4f46e5, #9333ea);
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(100, 50, 200, 0.4);
+        }
+        .input-focus:focus {
+            border-color: #a855f7;
+            box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.5); /* Purple shadow */
+        }
+        /* Limited Time Badge Animation */
+        .limited-time-badge {
+            animation: pulse-grow 2s infinite ease-in-out;
+        }
+        @keyframes pulse-grow {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.8; }
         }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased">
+<body class="bg-gray-900 text-gray-200">
 
-    <!-- Hero Section -->
-    <header class="relative bg-cover bg-center h-screen flex items-center justify-center p-4" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-        <div class="absolute inset-0 gradient-overlay"></div>
-        <div class="relative z-10 max-w-4xl mx-auto text-center">
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-indigo-600 drop-shadow-lg">
-                Automate & Elevate Your Customer Support with AI Agents
-            </h1>
-            <p class="text-xl md:text-2xl text-slate-300 mb-8 max-w-2xl mx-auto">
-                Implement 'Plug-and-Play' AI Customer Support Agents tailored for your industry, achieving an immediate impact: <span class="font-bold text-teal-400">30% reduction in support tickets</span> and <span class="font-bold text-teal-400">2x faster issue resolution</span>.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="#waitlist-form" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
-                    Join the Waitlist Today! 🚀
-                </a>
-                <a href="#features" class="bg-transparent border border-white hover:border-indigo-400 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
-                    Learn More &darr;
-                </a>
-            </div>
-
-            <!-- Limited Time Countdown -->
-            <div class="mt-12 p-4 bg-slate-800 bg-opacity-80 rounded-xl shadow-2xl border border-indigo-700 max-w-md mx-auto">
-                <p class="text-lg font-semibold text-yellow-400 mb-2">LIMITED TIME EARLY ADOPTER OFFER!</p>
-                <div class="flex justify-center items-center space-x-4 text-3xl md:text-4xl font-bold text-indigo-300 countdown-timer">
-                    <div class="flex flex-col items-center">
-                        <span id="countdown-days">00</span>
-                        <span class="text-xs text-slate-400">Days</span>
-                    </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="countdown-hours">00</span>
-                        <span class="text-xs text-slate-400">Hours</span>
-                    </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="countdown-minutes">00</span>
-                        <span class="text-xs text-slate-400">Mins</span>
-                    </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="countdown-seconds">00</span>
-                        <span class="text-xs text-slate-400">Secs</span>
-                    </div>
-                </div>
-            </div>
+    <!-- Navbar (Minimal for a landing page) -->
+    <header class="py-4 px-6 fixed top-0 left-0 w-full z-50 bg-gray-900 bg-opacity-80 backdrop-filter backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto flex justify-between items-center max-w-7xl">
+            <a href="#" class="text-3xl font-extrabold gradient-text">
+                EdgeSecure AI
+            </a>
+            <nav>
+                <a href="#features" class="text-gray-300 hover:text-white px-4 py-2 rounded transition duration-200">Features</a>
+                <a href="#waitlist" class="text-gray-300 hover:text-white px-4 py-2 rounded transition duration-200">Waitlist</a>
+            </nav>
         </div>
     </header>
 
-    <main>
-        <!-- Features Section -->
-        <section id="features" class="py-20 bg-slate-900">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-cyan-500">
-                    Unlock Unprecedented Efficiency
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <!-- Feature 1 -->
-                    <div class="bg-slate-800 p-8 rounded-xl shadow-xl border border-slate-700 transform hover:scale-105 transition duration-300">
-                        <div class="text-indigo-400 text-5xl mb-6 text-center">⚙️</div>
-                        <h3 class="text-2xl font-bold text-white mb-4 text-center">Seamless 'Plug-and-Play' Integration</h3>
-                        <p class="text-slate-300 text-lg text-center">
-                            Our AI agents integrate effortlessly with your existing CRM, helpdesk, and communication tools. Go live in minutes, not months, and start seeing results instantly. 🔌
-                        </p>
-                    </div>
-                    <!-- Feature 2 -->
-                    <div class="bg-slate-800 p-8 rounded-xl shadow-xl border border-slate-700 transform hover:scale-105 transition duration-300">
-                        <div class="text-green-400 text-5xl mb-6 text-center">🧠</div>
-                        <h3 class="text-2xl font-bold text-white mb-4 text-center">Industry-Specific Expertise, Out-of-the-Box</h3>
-                        <p class="text-slate-300 text-lg text-center">
-                            Trained on vast datasets from e-commerce, B2B SaaS, healthcare, and more. Our agents understand your unique customer queries from day one, like a seasoned expert. 🧑‍💻
-                        </p>
-                    </div>
-                    <!-- Feature 3 -->
-                    <div class="bg-slate-800 p-8 rounded-xl shadow-xl border border-slate-700 transform hover:scale-105 transition duration-300">
-                        <div class="text-red-400 text-5xl mb-6 text-center">📊</div>
-                        <h3 class="text-2xl font-bold text-white mb-4 text-center">Robust Analytics & Continuous Improvement</h3>
-                        <p class="text-slate-300 text-lg text-center">
-                            Gain deep insights into agent performance, customer sentiment, and unresolved issues. Our AI learns and adapts, ensuring continuous optimization and better outcomes. 📈
-                        </p>
-                    </div>
-                    <!-- Feature 4 -->
-                    <div class="bg-slate-800 p-8 rounded-xl shadow-xl border border-slate-700 transform hover:scale-105 transition duration-300">
-                        <div class="text-yellow-400 text-5xl mb-6 text-center">💰</div>
-                        <h3 class="text-2xl font-bold text-white mb-4 text-center">Significant Cost Reduction</h3>
-                        <p class="text-slate-300 text-lg text-center">
-                            Drastically cut operational costs by automating routine inquiries and empowering human agents to focus on complex, high-value tasks. Maximize your ROI. 💸
-                        </p>
-                    </div>
-                    <!-- Feature 5 -->
-                    <div class="bg-slate-800 p-8 rounded-xl shadow-xl border border-slate-700 transform hover:scale-105 transition duration-300">
-                        <div class="text-purple-400 text-5xl mb-6 text-center">⚡</div>
-                        <h3 class="text-2xl font-bold text-white mb-4 text-center">24/7 Instant Support</h3>
-                        <p class="text-slate-300 text-lg text-center">
-                            Provide round-the-clock, immediate assistance to your customers, no matter the time zone. Boost customer satisfaction and reduce wait times to zero. ⏱️
-                        </p>
-                    </div>
-                    <!-- Feature 6 -->
-                    <div class="bg-slate-800 p-8 rounded-xl shadow-xl border border-slate-700 transform hover:scale-105 transition duration-300">
-                        <div class="text-pink-400 text-5xl mb-6 text-center">🔒</div>
-                        <h3 class="text-2xl font-bold text-white mb-4 text-center">Secure & Compliant</h3>
-                        <p class="text-slate-300 text-lg text-center">
-                            Built with enterprise-grade security and data privacy in mind, ensuring your customer data is protected and compliant with industry regulations.🛡️
-                        </p>
-                    </div>
+    <!-- Hero Section -->
+    <section class="hero-background min-h-screen flex items-center justify-center text-center relative overflow-hidden pt-20 pb-12">
+        <div class="hero-overlay"></div>
+        <div class="container mx-auto px-4 z-10 py-20 max-w-7xl">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight text-white drop-shadow-lg animate-fade-in-up">
+                <span class="gradient-text">Securely Deploy AI</span> <br class="hidden sm:inline"> to the Distributed Edge.
+            </h1>
+            <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-10 max-w-4xl mx-auto drop-shadow-md animate-fade-in delay-200">
+                Unlock the full potential of AI on edge devices with <span class="font-semibold text-purple-300">unmatched data privacy, regulatory compliance, and real-time MLOps</span>.
+            </p>
+            <div class="inline-block relative animate-fade-in delay-400">
+                <a href="#waitlist" class="btn-primary text-white font-bold py-3 px-8 md:py-4 md:px-10 rounded-full text-lg md:text-xl shadow-lg">
+                    Join the Early Access Waitlist
+                </a>
+                <span class="absolute -top-3 -right-3 bg-red-600 text-white text-xs md:text-sm font-bold px-3 py-1 rounded-full transform rotate-6 limited-time-badge shadow-md">
+                    Limited Time!
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Solution Section -->
+    <section class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 text-center max-w-6xl">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-16 text-white leading-tight">
+                Tackling the Toughest <span class="gradient-text">Edge AI Challenges</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <svg class="w-12 h-12 mx-auto mb-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Security & Privacy Gaps</h3>
+                    <p class="text-gray-400">Traditional MLOps falls short on protecting sensitive AI models and data across fragmented edge environments. Don't compromise security for performance.</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Waitlist Form Section -->
-        <section id="waitlist-form" class="py-20 bg-slate-950">
-            <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-fuchsia-500">
-                    Ready to Revolutionize Your Support?
-                </h2>
-                <p class="text-xl text-slate-300 text-center mb-8">
-                    Join our exclusive waitlist for early access and special launch offers. Don't miss out on transforming your customer experience!
-                </p>
-                <form id="waitlist-form" class="bg-slate-800 p-8 rounded-xl shadow-2xl border border-indigo-700">
-                    <div class="mb-6">
-                        <label for="email-input" class="block text-slate-300 text-lg font-medium mb-2">Your Business Email:</label>
-                        <input
-                            type="email"
-                            id="email-input"
-                            name="email"
-                            required
-                            placeholder="your.email@yourcompany.com"
-                            class="w-full px-5 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition duration-200 text-lg"
-                        />
-                    </div>
-                    <button
-                        type="submit"
-                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 text-xl"
-                    >
-                        Secure My Spot! ✨
-                    </button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-slate-900 py-10 text-center text-slate-400 text-sm">
-        <p>&copy; 2023 AI Agent Pro. All rights reserved. | Empowering Businesses with Intelligent Automation</p>
-    </footer>
-
-    <!-- Countdown Timer Script (for display only, logic for timer would be in JS) -->
-    <script>
-        function updateCountdown() {
-            const endDate = new Date();
-            endDate.setDate(endDate.getDate() + 10); // Example: 10 days from now
-
-            const now = new Date().getTime();
-            const distance = endDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("countdown-days").innerText = String(days).padStart(2, '0');
-            document.getElementById("countdown-hours").innerText = String(hours).padStart(2, '0');
-            document.getElementById("countdown-minutes").innerText = String(minutes).padStart(2, '0');
-            document.getElementById("countdown-seconds").innerText = String(seconds).padStart(2, '0');
-
-            if (distance < 0) {
-                clearInterval(countdownInterval);
-                document.getElementById("countdown-days").innerText = "00";
-                document.getElementById("countdown-hours").innerText = "00";
-                document.getElementById("countdown-minutes").innerText = "00";
-                document.getElementById("countdown-seconds").innerText = "00";
-                // Potentially update message to "Offer Expired"
-            }
-        }
-
-        const countdownInterval = setInterval(updateCountdown, 1000);
-        updateCountdown(); // Initial call to set the countdown immediately
-    </script>
-
-    <!-- Lead Capture Script (Exact script provided in requirements) -->
-    <script>
-        document.getElementById('waitlist-form')?.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          const email = document.getElementById('email-input').value;
-          const btn = e.target.querySelector('button');
-          const originalText = btn.innerText;
-          btn.innerText = 'Joining...';
-          try {
-            const res = await fetch('http://localhost:3000/api/leads', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ email, topic: 'AI-Agent-Led Customer Support' })
-            });
-            if (res.ok) {
-              btn.innerText = 'Joined! 🚀';
-              btn.style.background = '#10b981'; /* Tailwind green-500 */
-              document.getElementById('email-input').value = '';
-            } else {
-              throw new Error();
-            }
-          } catch (err) {
-            btn.innerText = 'Error - Try Again';
-            setTimeout(() => btn.innerText = originalText, 2000);
-          }
-        });
-    </script>
-</body>
-</html>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <svg class="w-12 h-12 mx-auto mb-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Compliance Complexity</h3>
+                    <p class="text-gray-400">Meeting stringent regulatory standards (GDPR, HIPAA, CCPA) for AI deployments on thousands of remote devices is a compliance nightmare.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-teal-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <svg class="w-12 h-12 mx-auto mb-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.42
