@@ -3,212 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gemini X.0 Workflow Automation Masterclass</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Gemini Spark AI Agents - Marketing Automation Powerhouse</title>
+    <meta name="description" content="Unlock unparalleled marketing automation with Gemini Spark-powered AI agents. Generate SEO content, manage social media, and personalize emails with Google's next-gen AI. Join the waitlist for early access!">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Optional: Add a simple favicon (using an SVG for minimal external requests) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23FBBF24' d='M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 17.93V14h-2v5.93A8 8 0 0112 20a8 8 0 01-1-1.07zm-7.61-4.32a8 8 0 010-7.22l1.63 1.63a6 6 0 000 3.96L5.39 15.61zm11.22 0l-1.63-1.63a6 6 0 000-3.96l1.63-1.63a8 8 0 010 7.22zM12 4.07V10h2V4.07A8 8 0 0012 4a8 8 0 00-1 .07z'/%3E%3C/svg%3E" type="image/svg+xml">
     <style>
-        /* Custom styles for the hero section background and overlay */
-        .hero-background {
+        /* Custom styles for dark mode aesthetic and gradients */
+        body {
+            font-family: 'Inter', sans-serif; /* Fallback to system sans-serif if Inter is not linked */
+        }
+        .hero-section {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            /* Ensure the image fills the container without distortion */
-            background-attachment: fixed; /* Optional: for parallax-like effect */
+            position: relative;
+            min-height: 100vh; /* Ensure hero fills viewport on smaller screens too */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .dark-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for optimal text readability */
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for strong text readability */
+        }
+        /* Gradient for buttons/highlights */
+        .btn-gradient {
+            background-image: linear-gradient(to right, #F97316, #FBBF24); /* Orange-500 to Amber-400 */
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .btn-gradient:hover {
+            background-image: linear-gradient(to left, #F97316, #FBBF24);
+            box-shadow: 0 0 25px rgba(251, 191, 36, 0.7); /* Stronger glow on hover */
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, #F97316, #FBBF24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text; /* Standard property */
+            color: transparent; /* Fallback for non-webkit */
+        }
+        /* Keyframe for subtle pulse animation for the countdown */
+        @keyframes pulse-slight {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+            }
+            50% {
+                transform: scale(1.015);
+                box-shadow: 0 0 35px rgba(251, 191, 36, 0.8);
+            }
+        }
+        .animate-pulse-slight {
+            animation: pulse-slight 3s infinite ease-in-out;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-background relative min-h-screen flex items-center justify-center p-4">
-        <div class="dark-overlay absolute inset-0"></div>
-        <div class="relative z-10 text-center max-w-5xl mx-auto">
-            <p class="text-indigo-400 text-base md:text-lg font-semibold mb-4 tracking-wide uppercase">Exclusive Launch Offer – Limited Time</p>
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight text-white mb-6">
-                Master Gemini X.0: <br class="hidden md:inline">Unlock Next-Gen Workflow Automation
-            </h1>
-            <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-                Be among the first to leverage the *brand new* Gemini model for unparalleled efficiency in content creation, data analysis, and customer service. Secure your limited-time discount now!
+    <header class="hero-section text-center">
+        <div class="hero-overlay absolute inset-0 w-full h-full"></div>
+        <div class="container mx-auto px-4 relative z-10 py-16 md:py-24 lg:py-32">
+            <p class="text-amber-400 text-base md:text-lg font-semibold mb-4 tracking-wide uppercase">
+                🚀 Google's Gemini Spark is Here!
             </p>
-
-            <!-- Countdown Timer -->
-            <div class="bg-gradient-to-r from-indigo-700 to-purple-800 p-6 rounded-lg shadow-2xl mb-10 mx-auto max-w-lg border-2 border-indigo-500">
-                <p class="text-xl md:text-2xl font-bold mb-4 text-white">Limited-Time Discount Ends In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-5 text-white">
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-5xl font-extrabold" id="days">00</span>
-                        <span class="text-xs sm:text-base uppercase tracking-wider">Days</span>
-                    </div>
-                    <span class="text-3xl sm:text-5xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-5xl font-extrabold" id="hours">00</span>
-                        <span class="text-xs sm:text-base uppercase tracking-wider">Hours</span>
-                    </div>
-                    <span class="text-3xl sm:text-5xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-5xl font-extrabold" id="minutes">00</span>
-                        <span class="text-xs sm:text-base uppercase tracking-wider">Minutes</span>
-                    </div>
-                    <span class="text-3xl sm:text-5xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-5xl font-extrabold" id="seconds">00</span>
-                        <span class="text-xs sm:text-base uppercase tracking-wider">Seconds</span>
-                    </div>
-                </div>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 max-w-5xl mx-auto">
+                <span class="text-gradient">Automate Marketing. Supercharge Growth.</span> <br class="hidden sm:inline"> with Gemini Spark AI Agents.
+            </h1>
+            <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Deploy and customize intelligent AI agents to generate SEO-optimized content, launch real-time social campaigns, and personalize email sequences – effortlessly.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
+                <a href="#waitlist" class="btn-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300 ease-in-out text-lg md:text-xl">
+                    ⚡ Join the Exclusive Waitlist
+                </a>
+                <a href="#features" class="text-white bg-gray-700 hover:bg-gray-600 border border-gray-600 hover:border-amber-400 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out text-lg md:text-xl">
+                    Discover Features
+                </a>
             </div>
 
-            <a href="#enroll" class="inline-block bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 transition duration-300 ease-in-out text-white font-bold py-4 px-10 rounded-full text-lg md:text-xl shadow-lg transform hover:scale-105 active:scale-95">
-                Secure Your Discount & Enroll Now!
-            </a>
+            <!-- Limited Time Countdown -->
+            <div class="bg-gray-800 bg-opacity-80 rounded-xl p-6 md:p-8 max-w-2xl mx-auto shadow-2xl border border-amber-500 animate-pulse-slight">
+                <p class="text-amber-400 text-lg md:text-xl font-bold mb-4">✨ Limited Early Access Opportunity!</p>
+                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 md:space-x-6 lg:space-x-8">
+                    <div class="flex flex-col items-center">
+                        <span class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white" id="days">00</span>
+                        <span class="text-gray-400 text-xs sm:text-sm md:text-base">Days</span>
+                    </div>
+                    <span class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-amber-500">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white" id="hours">00</span>
+                        <span class="text-gray-400 text-xs sm:text-sm md:text-base">Hours</span>
+                    </div>
+                    <span class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-amber-500">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white" id="minutes">00</span>
+                        <span class="text-gray-400 text-xs sm:text-sm md:text-base">Minutes</span>
+                    </div>
+                    <span class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-amber-500">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white" id="seconds">00</span>
+                        <span class="text-gray-400 text-xs sm:text-sm md:text-base">Seconds</span>
+                    </div>
+                </div>
+                <p class="text-gray-400 text-sm md:text-base mt-4">Sign up before this window closes to secure your spot and exclusive launch benefits!</p>
+            </div>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 bg-gray-900 text-gray-100">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-white mb-12">What You'll Achieve with Gemini X.0</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section id="features" class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-6 text-white">
+                How Gemini Spark Transforms Your Marketing <br class="hidden sm:inline"> Operations
+            </h2>
+            <p class="text-lg md:text-xl text-gray-400 text-center mb-12 max-w-3xl mx-auto">
+                Leverage the power of Google's new Gemini Spark agents to automate, optimize, and personalize your marketing efforts like never before.
+            </p>
 
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-indigo-400 text-4xl mb-4">💡</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Next-Gen Content Creation</h3>
-                    <p class="text-gray-300">Automate blog posts, social media updates, email sequences, and even long-form articles with Gemini X.0's advanced capabilities. Speed up your content pipeline like never before.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Feature 1: SEO-Optimized Content -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-amber-500 transform hover:-translate-y-2 transition duration-300 ease-in-out">
+                    <div class="text-5xl text-amber-400 mb-4">✍️</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Instant SEO Content Generation</h3>
+                    <p class="text-gray-300">
+                        Deploy agents to research keywords, analyze competitor content, and generate full-length, SEO-optimized blog posts, articles, and product descriptions in minutes.
+                    </p>
+                </div>
+                
+                <!-- Feature 2: Real-time Social Media Campaigns -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-amber-500 transform hover:-translate-y-2 transition duration-300 ease-in-out">
+                    <div class="text-5xl text-amber-400 mb-4">📈</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Dynamic Social Media Campaigns</h3>
+                    <p class="text-gray-300">
+                        Our agents monitor real-time trends, draft engaging social media posts, design compelling visuals, and schedule campaigns across all platforms for maximum impact.
+                    </p>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-indigo-400 text-4xl mb-4">📊</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Intelligent Data Analysis</h3>
-                    <p class="text-gray-300">Transform raw data into actionable insights. Use Gemini X.0 to summarize complex reports, identify trends, and automate data-driven decision-making processes.</p>
+                <!-- Feature 3: Personalized Email Sequences -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-amber-500 transform hover:-translate-y-2 transition duration-300 ease-in-out">
+                    <div class="text-5xl text-amber-400 mb-4">✉️</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Hyper-Personalized Email Marketing</h3>
+                    <p class="text-gray-300">
+                        Craft segmented email sequences that adapt to user behavior and preferences. From welcome flows to re-engagement campaigns, drive conversions with tailored messages.
+                    </p>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-indigo-400 text-4xl mb-4">💬</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Automated Customer Service</h3>
-                    <p class="text-gray-300">Enhance customer support with AI-powered chatbots, automated response generation, and personalized communication. Deliver superior service around the clock.</p>
+                <!-- Feature 4: Ad Copy Optimization -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-amber-500 transform hover:-translate-y-2 transition duration-300 ease-in-out">
+                    <div class="text-5xl text-amber-400 mb-4">🎯</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Intelligent Ad Copy & Creatives</h3>
+                    <p class="text-gray-300">
+                        Generate high-performing ad copy for Google Ads, Facebook Ads, and more. Agents continuously A/B test and optimize for the best ROI across all channels.
+                    </p>
                 </div>
 
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-indigo-400 text-4xl mb-4">⚙️</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Expert-Led Video Modules</h3>
-                    <p class="text-gray-300">Gain step-by-step insights from industry experts. Our comprehensive video lessons break down complex concepts into easy-to-understand, actionable steps.</p>
+                <!-- Feature 5: Customer Journey Mapping -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-amber-500 transform hover:-translate-y-2 transition duration-300 ease-in-out">
+                    <div class="text-5xl text-amber-400 mb-4">🗺️</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Automated Customer Journey Mapping</h3>
+                    <p class="text-gray-300">
+                        Let agents analyze user data to map out optimal customer journeys, identify key touchpoints, and suggest automated interventions to guide users seamlessly.
+                    </p>
                 </div>
 
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-indigo-400 text-4xl mb-4">📝</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Ready-to-Use Templates</h3>
-                    <p class="text-gray-300">Save countless hours with our downloadable, pre-built workflow templates, prompts, and scripts. Customize them to fit your specific business needs instantly.</p>
+                <!-- Feature 6: Performance Analytics & Reporting -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-amber-500 transform hover:-translate-y-2 transition duration-300 ease-in-out">
+                    <div class="text-5xl text-amber-400 mb-4">📊</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Advanced Performance Analytics</h3>
+                    <p class="text-gray-300">
+                        Get automated insights and actionable reports on campaign performance, agent efficiency, and emerging market trends, enabling data-driven decisions faster.
+                    </p>
                 </div>
-
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-indigo-400 text-4xl mb-4">🚀</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Actionable Implementation Guides</h3>
-                    <p class="text-gray-300">Move beyond theory. Our practical guides ensure you can immediately implement what you learn, seeing tangible results in your business workflows.</p>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Enrollment Form Section -->
-    <section id="enroll" class="py-16 md:py-24 bg-gray-800 text-gray-100">
-        <div class="container mx-auto px-4 max-w-2xl">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-white mb-8">
-                Don't Miss Out! Secure Your Limited-Time Discount
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 max-w-lg md:max-w-2xl">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-6 text-white">
+                Ready to Spark Your Marketing Potential? ✨
             </h2>
-            <p class="text-lg text-gray-300 text-center mb-10">
-                The Gemini X.0 Masterclass is your gateway to unprecedented business automation. Enroll now to lock in your exclusive launch discount and elevate your productivity!
+            <p class="text-lg md:text-xl text-gray-400 text-center mb-12">
+                Join our exclusive waitlist for early access to Gemini Spark AI Agents and transform your marketing workflows with unparalleled intelligence.
             </p>
 
-            <form class="bg-gray-900 p-8 md:p-12 rounded-lg shadow-2xl border border-indigo-700">
+            <form action="#" method="POST" class="bg-gray-900 p-8 md:p-10 rounded-xl shadow-2xl border border-amber-500/50">
                 <div class="mb-6">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-800 placeholder-gray-500" placeholder="John Doe" required>
+                    <label for="name" class="block text-gray-300 text-lg font-semibold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 text-white text-lg transition duration-200"
+                           required>
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-300 text-lg font-semibold mb-2">Work Email</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@yourcompany.com"
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 text-white text-lg transition duration-200"
+                           required>
                 </div>
                 <div class="mb-8">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-800 placeholder-gray-500" placeholder="john.doe@example.com" required>
+                    <label for="company" class="block text-gray-300 text-lg font-semibold mb-2">Company (Optional)</label>
+                    <input type="text" id="company" name="company" placeholder="Your Company Inc."
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 text-white text-lg transition duration-200">
                 </div>
-                <div class="text-center">
-                    <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 transition duration-300 ease-in-out text-white font-bold py-4 px-12 rounded-full text-xl md:text-2xl shadow-lg transform hover:scale-105 active:scale-95 w-full">
-                        Secure My Spot & Discount Now!
-                    </button>
-                </div>
+                <button type="submit" class="btn-gradient w-full text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300 ease-in-out text-xl">
+                    Get Early Access Now! 🚀
+                </button>
+                <p class="text-center text-gray-500 text-sm mt-6">
+                    We respect your privacy. No spam, just valuable updates on Gemini Spark's launch.
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm border-t border-gray-700">
-        <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+    <footer class="bg-gray-900 py-10 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-gray-500 text-sm md:text-base">
+            <p>&copy; 2023 Gemini Spark. All rights reserved. Powered by cutting-edge AI.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-amber-400 transition-colors duration-200">Privacy Policy</a>
+                <a href="#" class="hover:text-amber-400 transition-colors duration-200">Terms of Service</a>
+            </div>
+        </div>
     </footer>
 
     <!-- JavaScript for Countdown Timer -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 7 days from now for demonstration)
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the date we're counting down to (e.g., 7 days from now)
             const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Sets the end date to 7 days from page load
+            countDownDate.setDate(countDownDate.getDate() + 7); // 7 days from today
 
-            // Update the countdown every 1 second
             const x = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = countDownDate - now;
+                const distance = countDownDate.getTime() - now;
 
-                // Calculate time units
+                if (distance < 0) {
+                    clearInterval(x);
+                    const countdownDiv = document.getElementById("countdown");
+                    if (countdownDiv) {
+                        countdownDiv.innerHTML = "<p class='text-amber-400 text-xl md:text-2xl font-bold'>🚨 Early Access Window Closed!</p>";
+                        countdownDiv.closest('.animate-pulse-slight').classList.remove('animate-pulse-slight'); // Stop pulse
+                    }
+                    // Optionally disable the waitlist form here
+                    const waitlistButton = document.querySelector('#waitlist button[type="submit"]');
+                    if (waitlistButton) {
+                        waitlistButton.textContent = 'Waitlist Closed';
+                        waitlistButton.disabled = true;
+                        waitlistButton.classList.add('bg-gray-600', 'hover:bg-gray-600', 'cursor-not-allowed');
+                        waitlistButton.classList.remove('btn-gradient');
+                    }
+                    return;
+                }
+
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Display the result
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                const getElementById = (id) => document.getElementById(id);
 
-                // If the countdown is over, display a message and disable forms
-                if (distance < 0) {
-                    clearInterval(x);
-                    const countdownDiv = document.getElementById("countdown");
-                    if (countdownDiv) {
-                        countdownDiv.innerHTML = "<span class='text-red-500 text-xl md:text-3xl font-bold'>OFFER EXPIRED!</span>";
-                        countdownDiv.classList.add('flex', 'justify-center', 'items-center', 'py-4'); // Re-center and add padding
-                        countdownDiv.parentElement.classList.remove('bg-gradient-to-r', 'from-indigo-700', 'to-purple-800'); // Remove gradient
-                        countdownDiv.parentElement.classList.add('bg-gray-700'); // Set a neutral background
-                    }
-
-                    // Disable main CTA button
-                    const heroEnrollButton = document.querySelector('header a[href="#enroll"]');
-                    if (heroEnrollButton) {
-                        heroEnrollButton.classList.add('opacity-50', 'cursor-not-allowed');
-                        heroEnrollButton.removeAttribute('href'); // Remove link functionality
-                        heroEnrollButton.textContent = 'Offer Expired';
-                    }
-
-                    // Disable form submission button
-                    const formSubmitButton = document.querySelector('#enroll button[type="submit"]');
-                    if (formSubmitButton) {
-                        formSubmitButton.classList.add('opacity-50', 'cursor-not-allowed');
-                        formSubmitButton.setAttribute('disabled', 'true');
-                        formSubmitButton.textContent = 'Offer Expired';
-                    }
-
-                    // Optionally disable input fields in the form
-                    document.querySelectorAll('#enroll form input').forEach(input => {
-                        input.setAttribute('disabled', 'true');
-                        input.classList.add('opacity-75', 'cursor-not-allowed');
-                    });
-                }
+                if (getElementById("days")) getElementById("days").innerHTML = String(days).padStart(2, '0');
+                if (getElementById("hours")) getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                if (getElementById("minutes")) getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                if (getElementById("seconds")) getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
             }, 1000);
         });
     </script>
