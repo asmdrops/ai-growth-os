@@ -3,189 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iOS 26.5 Security & Optimization Masterclass - Priority Access</title>
+    <title>The Forever Kindle Blueprint - Extend Your Device's Life & Save!</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for the hero background image with overlay */
+        /* Custom styles for the hero background and overlay, and premium button/text gradients */
         .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-image: url('https://source.unsplash.com/1600x900/?The,tech');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             position: relative;
         }
         .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+        }
+        /* Gradient button and text for premium feel */
+        .btn-gradient {
+            background-image: linear-gradient(to right, #6366f1, #8b5cf6); /* Indigo to Purple */
+        }
+        .btn-gradient:hover {
+            background-image: linear-gradient(to right, #4f46e5, #7c3aed); /* Darker on hover */
+        }
+        .countdown-number {
+            font-variant-numeric: tabular-nums; /* Ensures consistent width for numbers */
         }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-background min-h-screen flex items-center justify-center text-center py-16 px-4 relative">
-        <div class="hero-overlay"></div>
-        <div class="relative z-10 max-w-4xl mx-auto">
-            <p class="text-blue-400 text-lg uppercase tracking-widest mb-4">Limited-Time Offer – Secure Your Mastery!</p>
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 animate-pulse">
-                Unlock Unrivaled iOS 26.5 Security & Performance
+    <header class="hero-background min-h-screen flex items-center justify-center relative">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="container mx-auto px-4 py-16 text-center relative z-10">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-600">
+                Resurrect Your Old Kindle: The 'Forever Kindle' Blueprint
             </h1>
-            <p class="text-xl md:text-2xl text-gray-300 mb-8">
-                Don't leave your digital life exposed. Discover "Why You Shouldn't Leave iOS 26.5 Settings on Default."
-                Gain the Masterclass that transforms your iPhone into a fortress of privacy, battery efficiency, and peak performance.
+            <p class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium mb-10 text-gray-200 max-w-4xl mx-auto">
+                As Amazon sunsets support, discover how to safely jailbreak, install custom firmware, access <span class="text-indigo-400">FREE book libraries</span>, and extend your device's life indefinitely.
             </p>
 
-            <!-- Limited Time Countdown Timer -->
-            <div class="bg-gradient-to-r from-blue-700 to-purple-700 p-6 rounded-lg shadow-2xl mb-12 transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                <h3 class="text-2xl md:text-3xl font-bold mb-4">Offer Ends In:</h3>
-                <div id="countdown" class="flex justify-center space-x-4 md:space-x-8 text-white font-mono text-3xl md:text-5xl">
-                    <div><span id="days" class="block">00</span> <span class="text-sm md:text-lg">Days</span></div>
-                    <div><span id="hours" class="block">00</span> <span class="text-sm md:text-lg">Hours</span></div>
-                    <div><span id="minutes" class="block">00</span> <span class="text-sm md:text-lg">Minutes</span></div>
-                    <div><span id="seconds" class="block">00</span> <span class="text-sm md:text-lg">Seconds</span></div>
+            <!-- Limited Time Countdown Offer -->
+            <div class="mb-10 p-6 bg-gray-800 bg-opacity-90 rounded-xl shadow-2xl max-w-xl mx-auto border-2 border-indigo-500">
+                <p class="text-lg sm:text-xl font-semibold mb-4 text-indigo-300">
+                    <span class="inline-block bg-red-600 text-white text-xs px-2 py-1 rounded-full uppercase mr-2 animate-pulse">Limited Time Launch Offer!</span>
+                    Don't miss out on preserving your reading experience.
+                </p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-white font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+                    <!-- These spans will be populated by JavaScript for a live countdown. -->
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-number" data-days>00</span>
+                        <span class="text-sm sm:text-base text-gray-400 font-normal">Days</span>
+                    </div>
+                    <span class="text-indigo-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-number" data-hours>00</span>
+                        <span class="text-sm sm:text-base text-gray-400 font-normal">Hours</span>
+                    </div>
+                    <span class="text-indigo-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-number" data-minutes>00</span>
+                        <span class="text-sm sm:text-base text-gray-400 font-normal">Minutes</span>
+                    </div>
+                    <span class="text-indigo-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-number" data-seconds>00</span>
+                        <span class="text-sm sm:text-base text-gray-400 font-normal">Seconds</span>
+                    </div>
                 </div>
+                <!--
+                    NOTE: A functional countdown requires JavaScript.
+                    Example JS (to be included in a <script> tag or separate file):
+                    const countdownElement = document.getElementById('countdown');
+                    const targetDate = new Date();
+                    targetDate.setDate(targetDate.getDate() + 7); // Set countdown for 7 days from now
+
+                    function updateCountdown() {
+                        const now = new Date().getTime();
+                        const distance = targetDate.getTime() - now;
+
+                        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                        if (distance < 0) {
+                            countdownElement.innerHTML = '<span class="text-red-500">OFFER EXPIRED!</span>';
+                            clearInterval(interval);
+                            return;
+                        }
+
+                        countdownElement.querySelector('[data-days]').innerText = String(days).padStart(2, '0');
+                        countdownElement.querySelector('[data-hours]').innerText = String(hours).padStart(2, '0');
+                        countdownElement.querySelector('[data-minutes]').innerText = String(minutes).padStart(2, '0');
+                        countdownElement.querySelector('[data-seconds]').innerText = String(seconds).padStart(2, '0');
+                    }
+                    updateCountdown();
+                    const interval = setInterval(updateCountdown, 1000);
+                -->
             </div>
 
-            <a href="#masterclass-enroll" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-lg md:text-xl shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out uppercase tracking-wider">
-                Enroll Now & Get Instant Access!
+            <a href="#waitlist-form" class="btn-gradient inline-block px-12 py-5 rounded-full text-xl sm:text-2xl font-bold text-white shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-300 focus:ring-opacity-75">
+                YES! I Want My Forever Kindle!
             </a>
+            <p class="mt-4 text-sm text-gray-400">Secure your copy now and save your Kindle from obsolescence.</p>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section class="py-20 px-4 bg-gray-900">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-16 text-blue-400">What You'll Master in the iOS 26.5 Masterclass</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <section class="py-16 sm:py-20 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 text-gray-50">
+                What You'll Achieve with the 'Forever Kindle' Blueprint
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12 max-w-6xl mx-auto">
+
                 <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700 transform hover:-translate-y-2">
-                    <div class="text-blue-500 text-4xl mb-6">🔒</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Bulletproof Privacy Settings</h3>
-                    <p class="text-gray-300">Dive into detailed step-by-step instructions to lock down your personal data, prevent tracking, and reclaim your digital anonymity.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-5xl mb-4 text-center">📚</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-50 text-center">Access Free Book Libraries</h3>
+                    <p class="text-gray-300 text-lg">
+                        Unlock a world of literature. Connect your Kindle to vast online repositories like Project Gutenberg or Calibre for endless reading material without purchasing new e-books.
+                    </p>
                 </div>
-                
+
                 <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700 transform hover:-translate-y-2">
-                    <div class="text-green-500 text-4xl mb-6">🔋</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Optimize Battery Life & Performance</h3>
-                    <p class="text-gray-300">Unlock exclusive video tutorials for critical settings adjustments that dramatically extend your battery life and boost your iPhone's speed.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-5xl mb-4 text-center">🔧</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-50 text-center">Install Custom Firmware (KOReader)</h3>
+                    <p class="text-gray-300 text-lg">
+                        Go beyond Amazon's limitations. Install KOReader for unparalleled PDF reflow, advanced customization, dictionary support, and support for more file formats.
+                    </p>
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700 transform hover:-translate-y-2">
-                    <div class="text-yellow-500 text-4xl mb-6">✅</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Actionable Optimization Checklist</h3>
-                    <p class="text-gray-300">Get your downloadable, easy-to-follow checklist to ensure you've maximized every aspect of your iOS 26.5 device for peak efficiency.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-5xl mb-4 text-center">✅</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-50 text-center">Step-by-Step, Safety-First Guide</h3>
+                    <p class="text-gray-300 text-lg">
+                        Our comprehensive PDF and video tutorials ensure a smooth, risk-free process. Learn to safely jailbreak various older Kindle models with clear, easy-to-follow instructions.
+                    </p>
                 </div>
 
                 <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700 transform hover:-translate-y-2">
-                    <div class="text-purple-500 text-4xl mb-6">✉️</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">RCS Messaging Security Deep Dive</h3>
-                    <p class="text-gray-300">A dedicated module on securely configuring and fully utilizing the new end-to-end encrypted RCS messaging capabilities.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-5xl mb-4 text-center">💰</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-50 text-center">Significant Cost Savings</h3>
+                    <p class="text-gray-300 text-lg">
+                        Avoid buying a new Kindle! Give your existing device a new lease on life, saving hundreds of dollars while enjoying enhanced functionality and freedom.
+                    </p>
                 </div>
 
                 <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700 transform hover:-translate-y-2">
-                    <div class="text-red-500 text-4xl mb-6">🛡️</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Avoid Common Pitfalls</h3>
-                    <p class="text-gray-300">Learn why default settings are dangerous and how to proactively protect yourself from common vulnerabilities and data leaks.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-5xl mb-4 text-center">⚡</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-50 text-center">Maximize Device Lifespan</h3>
+                    <p class="text-gray-300 text-lg">
+                        Keep your beloved e-reader functional and relevant for years to come. Combat planned obsolescence and enjoy your Kindle indefinitely with ongoing support and updates.
+                    </p>
                 </div>
 
                 <!-- Feature 6 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700 transform hover:-translate-y-2">
-                    <div class="text-blue-500 text-4xl mb-6">🚀</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Future-Proof Your iOS Experience</h3>
-                    <p class="text-gray-300">Stay ahead with expert guidance that ensures your iPhone remains optimized and secure against future threats and updates.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-5xl mb-4 text-center">🔍</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-50 text-center">Troubleshoot & Optimize</h3>
+                    <p class="text-gray-300 text-lg">
+                        Comprehensive sections dedicated to common issues, advanced tips, and optimization techniques ensure your jailbroken Kindle runs flawlessly.
+                    </p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / Enrollment Form Section -->
-    <section id="masterclass-enroll" class="py-20 px-4 bg-gray-800">
-        <div class="container mx-auto max-w-2xl text-center">
-            <h2 class="text-3xl md:text-5xl font-extrabold mb-10 text-blue-400">Secure Your iOS 26.5 Mastery Now</h2>
-            <p class="text-xl text-gray-300 mb-8">
-                This premium Masterclass is your definitive guide to an uncompromised iOS experience. Don't miss out on the limited-time offer.
-                Enroll today and transform your iPhone.
+    <!-- Waitlist Form Section -->
+    <section id="waitlist-form" class="py-16 sm:py-20 md:py-24 bg-gray-800 border-t border-gray-700">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-6 text-gray-50">
+                Secure Your Spot for the Launch Offer!
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 text-center mb-10 max-w-prose mx-auto">
+                The 'Forever Kindle' Blueprint is launching soon with a special, limited-time discount. Join the waitlist to get exclusive early access, notifications, and claim your special price before it's gone!
             </p>
 
-            <form class="bg-gray-900 p-8 rounded-lg shadow-2xl border border-gray-700">
+            <form action="#" method="POST" class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-indigo-600">
                 <div class="mb-6">
-                    <label for="name" class="block text-gray-200 text-lg font-semibold mb-2 text-left">Your Name:</label>
+                    <label for="name" class="block text-gray-300 text-lg font-medium mb-2">Your Name</label>
                     <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="w-full px-5 py-3 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white text-lg"
+                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg"
                            required>
                 </div>
-                <div class="mb-8">
-                    <label for="email" class="block text-gray-200 text-lg font-semibold mb-2 text-left">Your Email:</label>
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-300 text-lg font-medium mb-2">Your Email</label>
                     <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="w-full px-5 py-3 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white text-lg"
+                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg"
                            required>
                 </div>
-                <button type="submit"
-                        class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out uppercase tracking-wider">
-                    Enroll Now & Get Instant Access!
+                <button type="submit" class="btn-gradient w-full px-8 py-4 rounded-full text-xl font-bold text-white shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-300 focus:ring-opacity-75">
+                    Join the Exclusive Waitlist!
                 </button>
-                <p class="text-gray-400 text-sm mt-4">We respect your privacy. No spam, ever.</p>
+                <p class="text-center text-sm text-gray-400 mt-6">
+                    We respect your privacy. Unsubscribe anytime.
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 px-4 text-center text-gray-500 text-sm border-t border-gray-700">
-        <p>&copy; 2024 iOS 26.5 Masterclass. All rights reserved.</p>
-        <div class="mt-4 space-x-4">
-            <a href="#" class="hover:text-gray-300 transition-colors duration-200">Privacy Policy</a>
-            <a href="#" class="hover:text-gray-300 transition-colors duration-200">Terms of Service</a>
+    <footer class="bg-gray-900 py-10 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-gray-400 text-sm">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="text-indigo-400 hover:underline">Privacy Policy</a> |
+                <a href="#" class="text-indigo-400 hover:underline">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
-    <!-- Countdown Timer Script -->
-    <script>
-        function setupCountdown() {
-            // Set the date we're counting down to (e.g., 7 days from now)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // 7 days from now
-
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
-
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<div class='text-red-500 text-xl md:text-3xl font-bold'>OFFER EXPIRED!</div>";
-                    // Optionally disable the form or change the CTA
-                    const ctaButton = document.querySelector('.hero-background a');
-                    if(ctaButton) ctaButton.remove(); // Remove CTA if offer expires
-                    const formButton = document.querySelector('#masterclass-enroll button');
-                    if(formButton) {
-                        formButton.textContent = 'Offer Expired - Check Back Soon!';
-                        formButton.disabled = true;
-                        formButton.classList.remove('from-blue-600', 'to-purple-600', 'hover:from-blue-700', 'hover:to-purple-700', 'hover:scale-105');
-                        formButton.classList.add('bg-gray-600', 'cursor-not-allowed', 'transform-none');
-                    }
-                    return;
-                }
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-            }, 1000);
-        }
-
-        document.addEventListener('DOMContentLoaded', setupCountdown);
-    </script>
 </body>
 </html>
