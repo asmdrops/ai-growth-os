@@ -3,226 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gemini Productivity Power-User Guide | Master Your Android Flagship</title>
+    <title>Kindle Lifesaver Kit: Extend, Jailbreak, & Get Free Books!</title>
     <!-- Tailwind CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom CSS for modern premium dark-mode aesthetic */
+        /* Custom styles for dark mode and hero overlay */
         body {
-            @apply bg-gray-900 text-gray-100 font-sans;
+            @apply bg-gray-900 text-gray-100;
         }
-        /* Hero background image */
-        .hero-bg {
+        .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Provides a subtle parallax scroll effect */
+            background-repeat: no-repeat;
+            position: relative;
         }
-        /* Primary button styling */
-        .btn-primary {
-            @apply bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105;
-        }
-        /* Form input styling */
-        .form-input {
-            @apply w-full p-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-100 placeholder-gray-400;
-        }
-        /* Section heading styling */
-        .section-heading {
-            @apply text-4xl sm:text-5xl font-extrabold text-white mb-8 text-center;
-        }
-        /* Countdown item styling */
-        .countdown-item {
-            @apply flex flex-col items-center justify-center p-4 bg-gray-800 rounded-lg shadow-xl;
-        }
-        .countdown-number {
-            @apply text-5xl sm:text-6xl font-extrabold text-blue-400;
-        }
-        .countdown-label {
-            @apply text-sm sm:text-base text-gray-400 uppercase tracking-wider;
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for text readability */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
-<body>
+<body class="font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="relative hero-bg h-screen flex items-center justify-center overflow-hidden p-4">
-        <!-- Overlay for better text readability -->
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-
-        <div class="relative z-10 text-center max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white mb-6">
-                Unlock Gemini's Full Power: <br class="sm:hidden">
-                <span class="text-blue-400">Exclusively for Android Flagship Owners</span> 🚀
+    <section class="hero-background min-h-screen flex items-center justify-center p-4">
+        <div class="hero-overlay"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto space-y-8 py-20 px-6 sm:px-8 lg:px-12">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white drop-shadow-lg">
+                Your Old Kindle Isn't Dead Yet! 📚 Revive It, Liberate It, Love It.
             </h1>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-                Transform your premium Android device into the ultimate Gemini-powered productivity machine with our <span class="font-bold">Power-User Guide</span>. Learn advanced prompts, exclusive tips, and device optimization secrets.
+            <p class="text-lg sm:text-xl text-gray-200 mt-4 max-w-3xl mx-auto">
+                Amazon's ending support doesn't mean the end of your reading journey. Discover the <strong class="text-yellow-400">Kindle Lifesaver Kit</strong> – your ultimate guide to extend your device's life, safely jailbreak, and unlock a universe of free books.
             </p>
 
-            <!-- Limited Time Offer & Countdown -->
-            <div class="bg-gradient-to-r from-blue-700 to-indigo-600 p-6 sm:p-8 rounded-xl shadow-2xl mb-12 transform hover:scale-105 transition duration-300 ease-in-out">
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-                    🔥 Limited Time Introductory Offer! 🔥
-                </h2>
-                <p class="text-lg text-gray-200 mb-6">
-                    Enroll now to secure your access at an exclusive early-bird price. Offer ends in:
-                </p>
-                <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 justify-center">
-                    <div class="countdown-item">
-                        <span id="days" class="countdown-number">00</span>
-                        <span class="countdown-label">Days</span>
+            <!-- Limited Time Countdown Timer -->
+            <div class="bg-gradient-to-r from-red-600 to-red-800 text-white p-6 rounded-lg shadow-xl inline-block mt-8 animate-pulse">
+                <p class="text-sm uppercase tracking-wide font-semibold mb-2">Limited Time Offer Ends In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-3xl sm:text-4xl font-bold">
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-value">05</span>
+                        <span class="text-sm font-normal">Days</span>
                     </div>
-                    <div class="countdown-item">
-                        <span id="hours" class="countdown-number">00</span>
-                        <span class="countdown-label">Hours</span>
+                    <span class="countdown-separator">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-value">12</span>
+                        <span class="text-sm font-normal">Hours</span>
                     </div>
-                    <div class="countdown-item">
-                        <span id="minutes" class="countdown-number">00</span>
-                        <span class="countdown-label">Minutes</span>
+                    <span class="countdown-separator">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-value">34</span>
+                        <span class="text-sm font-normal">Mins</span>
                     </div>
-                    <div class="countdown-item">
-                        <span id="seconds" class="countdown-number">00</span>
-                        <span class="countdown-label">Seconds</span>
+                    <span class="countdown-separator">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-value">56</span>
+                        <span class="text-sm font-normal">Secs</span>
                     </div>
                 </div>
-                <button class="btn-primary mt-10" onclick="document.getElementById('waitlist-form-section').scrollIntoView({ behavior: 'smooth' });">
-                    Secure Your Spot & Get Early Access!
-                </button>
+                <p class="text-xs text-center mt-3 text-gray-200 italic">
+                    (Note: Dynamic countdown requires JavaScript. Values shown are placeholders.)
+                </p>
             </div>
+            
+            <a href="#get-access" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-4 px-10 rounded-full text-xl sm:text-2xl uppercase transition duration-300 ease-in-out transform hover:scale-105 shadow-lg mt-10">
+                🚀 Get Your Kindle Lifesaver Kit Now!
+            </a>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-24 bg-gray-950">
-        <div class="container mx-auto px-4">
-            <h2 class="section-heading text-blue-400">What You'll Master Inside 🧠</h2>
-            <p class="text-lg text-gray-300 mb-12 text-center max-w-3xl mx-auto">
-                Leverage the groundbreaking power of Gemini AI, available exclusively on top-tier Android devices. This guide reveals how to truly integrate it into your workflow.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <section class="py-16 sm:py-20 bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-white mb-12">
+                What You'll Unlock With The Kindle Lifesaver Kit 🔑
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl flex flex-col transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-4xl mb-4 text-blue-400">✨</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Advanced Gemini Prompt Engineering</h3>
-                    <p class="text-gray-300 flex-grow">
-                        Go beyond basic commands. Learn expert prompt engineering techniques to make Gemini understand and execute complex tasks with unparalleled precision and creativity.
+                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="text-4xl">❤️</span>
+                        <h3 class="text-xl font-bold text-white">Extend Your Kindle's Life</h3>
+                    </div>
+                    <p class="text-gray-300">
+                        Don't let Amazon's planned obsolescence dictate your reading. Learn proven techniques to keep your beloved e-reader functioning optimally for years to come.
                     </p>
                 </div>
-
                 <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl flex flex-col transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-4xl mb-4 text-green-400">🧠</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Gemini as Your Productivity OS</h3>
-                    <p class="text-gray-300 flex-grow">
-                        Discover how to integrate Gemini seamlessly into your daily workflow, turning your Android flagship into a true AI-powered productivity hub, not just a phone.
+                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="text-4xl">🔒</span>
+                        <h3 class="text-xl font-bold text-white">Safely Jailbreak & Customize</h3>
+                    </div>
+                    <p class="text-gray-300">
+                        Our step-by-step guide ensures a secure, risk-free jailbreaking process. Gain full control and unlock customization options you never knew existed!
                     </p>
                 </div>
-
                 <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl flex flex-col transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-4xl mb-4 text-orange-400">📱</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Device Optimization Secrets</h3>
-                    <p class="text-gray-300 flex-grow">
-                        Uncover the specific settings and configurations to get the absolute best performance from Gemini on your Android flagship device. Includes a comparative analysis of top devices.
+                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="text-4xl">📖</span>
+                        <h3 class="text-xl font-bold text-white">Access a Universe of Free Books</h3>
+                    </div>
+                    <p class="text-gray-300">
+                        Tired of limited Amazon selections? Discover legitimate ways to load thousands of free eBooks directly onto your Kindle, bypassing vendor lock-in.
                     </p>
                 </div>
-
                 <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl flex flex-col transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-4xl mb-4 text-purple-400">💡</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Exclusive Tips & Hidden Features</h3>
-                    <p class="text-gray-300 flex-grow">
-                        Gain access to insider tips and tricks that even Google hasn't widely publicized, giving you a distinct advantage in leveraging Gemini's full potential.
+                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="text-4xl">🚀</span>
+                        <h3 class="text-xl font-bold text-white">Boost Performance & Battery</h3>
+                    </div>
+                    <p class="text-gray-300">
+                        Learn expert tips to optimize your Kindle's software, leading to snappier performance and significantly extended battery life.
                     </p>
                 </div>
-
                 <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl flex flex-col transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-4xl mb-4 text-red-400">📈</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Future-Proof Your Workflow</h3>
-                    <p class="text-gray-300 flex-grow">
-                        Stay ahead of the curve. Understand the future trajectory of AI on mobile and how to continuously adapt your productivity strategies to remain at the forefront.
+                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="text-4xl">🛡️</span>
+                        <h3 class="text-xl font-bold text-white">Comprehensive Troubleshooting</h3>
+                    </div>
+                    <p class="text-gray-300">
+                        From frozen screens to connectivity issues, our kit provides solutions to common Kindle problems, keeping your device smooth.
                     </p>
                 </div>
-
-                <!-- Feature 6 (Placeholder for E-book/Video Course specifics) -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl flex flex-col transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-4xl mb-4 text-yellow-400">📚</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">E-book & Video Course Formats</h3>
-                    <p class="text-gray-300 flex-grow">
-                        Choose your preferred learning style! Available as a comprehensive e-book for quick reference or an in-depth video course with practical demonstrations.
+                <!-- Feature 6 -->
+                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span class="text-4xl">💸</span>
+                        <h3 class="text-xl font-bold text-white">Save Money, Read More</h3>
+                    </div>
+                    <p class="text-gray-300">
+                        Avoid buying new devices or expensive eBooks. Our guide empowers you to save money while expanding your reading options exponentially.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist/Pre-order Form Section -->
-    <section id="waitlist-form-section" class="py-16 sm:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 max-w-2xl">
-            <h2 class="section-heading text-white">Don't Miss Out on This Exclusive Guide! ⏳</h2>
-            <p class="text-lg text-gray-300 mb-10 text-center">
-                The Gemini Productivity Power-User Guide is launching soon with a <span class="font-bold text-blue-400">limited-time introductory price</span>. Enter your details below to get notified instantly and claim your exclusive early-bird discount!
+    <!-- Call to Action / Get Access Form -->
+    <section id="get-access" class="py-16 sm:py-20 bg-gray-900">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-gray-800 p-8 sm:p-12 rounded-lg shadow-2xl border border-yellow-500">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">
+                🔥 Don't Miss Out! Claim Your Limited-Time Discount!
+            </h2>
+            <p class="text-lg text-gray-300 mb-8">
+                Your old Kindle has more life left than you think. Get immediate access to the "Kindle Lifesaver Kit" and start transforming your reading experience today.
             </p>
-
-            <form class="bg-gray-800 p-8 rounded-lg shadow-2xl border border-gray-700">
-                <div class="mb-6">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name</label>
-                    <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label for="email" class="sr-only">Email address</label>
+                    <input type="email" name="email" id="email" autocomplete="email" required class="block w-full px-5 py-3 border border-gray-600 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 sm:text-lg" placeholder="Enter your email to get instant access">
                 </div>
-                <div class="mb-6">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com" required>
+                <div>
+                    <button type="submit" class="w-full flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-gray-900 bg-yellow-500 hover:bg-yellow-600 transition duration-300 ease-in-out transform hover:scale-105 md:py-4 md:text-lg md:px-10">
+                        ⚡ Get Instant Access & Discount!
+                    </button>
                 </div>
-                <button type="submit" class="btn-primary w-full">
-                    🚀 Get Early Access & Discount!
-                </button>
-                <p class="text-xs text-gray-500 mt-4 text-center">
-                    We value your privacy. Your information will not be shared.
+                <p class="text-sm text-gray-400 mt-4">
+                    By clicking "Get Instant Access", you agree to our terms and privacy policy.
                 </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm border-t border-gray-800">
-        <p>&copy; 2023 Digital Education Authority. All rights reserved. | <a href="#" class="text-blue-500 hover:underline">Privacy Policy</a></p>
+    <footer class="bg-gray-950 py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2 text-sm">Kindle is a trademark of Amazon.com, Inc. This product is not affiliated with or endorsed by Amazon.</p>
+        </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer (Conceptual - actual implementation depends on server-side or a fixed date) -->
-    <script>
-        // This is a client-side conceptual script for demonstration.
-        // For a production landing page, the launchDate might be fetched from a server
-        // or set dynamically to ensure accuracy and prevent client-side manipulation.
-
-        const launchDate = new Date('December 31, 2024 23:59:59').getTime(); // Set your target launch date and time here!
-
-        const updateCountdown = () => {
-            const now = new Date().getTime();
-            const distance = launchDate - now;
-
-            if (distance < 0) {
-                clearInterval(interval);
-                document.getElementById('countdown').innerHTML = "<span class='text-xl sm:text-2xl font-bold text-red-500'>Offer Ended! The Guide is now available!</span>";
-                // Optionally, redirect to purchase page or update CTA here
-                document.querySelector('.btn-primary.mt-10').innerText = 'Get the Guide Now!';
-                document.querySelector('.btn-primary.mt-10').onclick = () => alert('Redirect to purchase page!'); // Replace with actual redirect
-                return;
-            }
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById('days').innerText = String(days).padStart(2, '0');
-            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
-            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
-            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
-        };
-
-        updateCountdown(); // Initial call to display immediately
-        const interval = setInterval(updateCountdown, 1000); // Update every second
-    </script>
 </body>
 </html>
