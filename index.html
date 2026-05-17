@@ -3,183 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kindle Lifesaver Kit: Extend, Jailbreak, & Get Free Books!</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Google 5GB Survival Guide - Unlock Your Digital Freedom</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for dark mode and hero overlay */
         body {
-            @apply bg-gray-900 text-gray-100;
+            font-family: 'Inter', sans-serif;
         }
         .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            position: relative;
-        }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for text readability */
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
         }
     </style>
 </head>
-<body class="font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <section class="hero-background min-h-screen flex items-center justify-center p-4">
-        <div class="hero-overlay"></div>
-        <div class="relative z-10 text-center max-w-4xl mx-auto space-y-8 py-20 px-6 sm:px-8 lg:px-12">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white drop-shadow-lg">
-                Your Old Kindle Isn't Dead Yet! 📚 Revive It, Liberate It, Love It.
+    <section class="hero-background relative min-h-screen flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto space-y-6">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">
+                Reclaim Your Digital Freedom: The Google 5GB Survival Guide
             </h1>
-            <p class="text-lg sm:text-xl text-gray-200 mt-4 max-w-3xl mx-auto">
-                Amazon's ending support doesn't mean the end of your reading journey. Discover the <strong class="text-yellow-400">Kindle Lifesaver Kit</strong> – your ultimate guide to extend your device's life, safely jailbreak, and unlock a universe of free books.
+            <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
+                <span class="font-semibold text-orange-400">The 5GB storage limit is here.</span> Don't let Google dictate your digital life. Our premium guide empowers you to optimize, migrate, and secure your data – *without* linking your phone number.
             </p>
+            <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#waitlist" class="bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105">
+                    Secure Your Future – Join the Waitlist!
+                </a>
+            </div>
 
-            <!-- Limited Time Countdown Timer -->
-            <div class="bg-gradient-to-r from-red-600 to-red-800 text-white p-6 rounded-lg shadow-xl inline-block mt-8 animate-pulse">
-                <p class="text-sm uppercase tracking-wide font-semibold mb-2">Limited Time Offer Ends In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-3xl sm:text-4xl font-bold">
-                    <div class="flex flex-col items-center">
-                        <span class="countdown-value">05</span>
-                        <span class="text-sm font-normal">Days</span>
+            <!-- Limited Time Countdown -->
+            <div class="mt-10 bg-gray-800 bg-opacity-70 backdrop-blur-sm p-6 rounded-lg shadow-xl inline-block max-w-sm sm:max-w-md mx-auto">
+                <p class="text-lg text-red-400 font-semibold mb-3 animate-pulse">Special Pre-Order Discount Ends In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4">
+                    <div class="bg-gray-900 text-white text-3xl font-bold p-3 rounded-lg min-w-[70px]">
+                        <span id="days">XX</span>
+                        <span class="block text-xs font-normal text-gray-400">Days</span>
                     </div>
-                    <span class="countdown-separator">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="countdown-value">12</span>
-                        <span class="text-sm font-normal">Hours</span>
+                    <div class="bg-gray-900 text-white text-3xl font-bold p-3 rounded-lg min-w-[70px]">
+                        <span id="hours">YY</span>
+                        <span class="block text-xs font-normal text-gray-400">Hours</span>
                     </div>
-                    <span class="countdown-separator">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="countdown-value">34</span>
-                        <span class="text-sm font-normal">Mins</span>
+                    <div class="bg-gray-900 text-white text-3xl font-bold p-3 rounded-lg min-w-[70px]">
+                        <span id="minutes">ZZ</span>
+                        <span class="block text-xs font-normal text-gray-400">Mins</span>
                     </div>
-                    <span class="countdown-separator">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="countdown-value">56</span>
-                        <span class="text-sm font-normal">Secs</span>
+                    <div class="bg-gray-900 text-white text-3xl font-bold p-3 rounded-lg min-w-[70px]">
+                        <span id="seconds">WW</span>
+                        <span class="block text-xs font-normal text-gray-400">Secs</span>
                     </div>
                 </div>
-                <p class="text-xs text-center mt-3 text-gray-200 italic">
-                    (Note: Dynamic countdown requires JavaScript. Values shown are placeholders.)
-                </p>
+                <p class="mt-4 text-sm text-gray-400">Pricing will increase after the launch countdown.</p>
+                <!-- Note: JavaScript is required to make this countdown dynamic. The placeholders (XX, YY, ZZ, WW) are for display purposes and would be updated by your JS implementation to show real-time values. -->
             </div>
-            
-            <a href="#get-access" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-4 px-10 rounded-full text-xl sm:text-2xl uppercase transition duration-300 ease-in-out transform hover:scale-105 shadow-lg mt-10">
-                🚀 Get Your Kindle Lifesaver Kit Now!
-            </a>
+        </div>
+    </section>
+
+    <!-- Problem & Trend Section -->
+    <section class="py-16 bg-gray-900 px-4">
+        <div class="container mx-auto max-w-3xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                The New Reality: What the 5GB Limit Means for YOU.
+            </h2>
+            <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                You've seen the headlines – <span class="font-semibold text-red-500">"What a 5GB storage limit means for your new Google account - Android Authority."</span> This isn't just a rumor; it's a critical shift. For years, Google's generous storage policies led to digital complacency. Now, new accounts face a stark 5GB limit, and existing users are next.
+            </p>
+            <p class="text-lg text-gray-300 leading-relaxed">
+                This isn't just about losing space; it's about losing control, compromising privacy, and facing unexpected data deletion. Are you prepared to navigate this new landscape without sacrificing your valuable data or personal privacy?
+            </p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-20 bg-gray-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-white mb-12">
-                What You'll Unlock With The Kindle Lifesaver Kit 🔑
+    <section class="py-16 bg-gray-800 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">
+                What You'll Master Inside the Survival Guide
             </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out">
-                    <div class="flex items-center space-x-4 mb-4">
-                        <span class="text-4xl">❤️</span>
-                        <h3 class="text-xl font-bold text-white">Extend Your Kindle's Life</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-purple-700 transform hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4 text-purple-400">🚀</span>
+                        <h3 class="text-xl font-semibold text-white">Optimize Your Existing Google Storage</h3>
                     </div>
-                    <p class="text-gray-300">
-                        Don't let Amazon's planned obsolescence dictate your reading. Learn proven techniques to keep your beloved e-reader functioning optimally for years to come.
-                    </p>
+                    <p class="text-gray-300">Uncover hidden storage hogs, delete duplicates with surgical precision, and implement smart archiving strategies to free up precious GBs you didn't even know you had.</p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out">
-                    <div class="flex items-center space-x-4 mb-4">
-                        <span class="text-4xl">🔒</span>
-                        <h3 class="text-xl font-bold text-white">Safely Jailbreak & Customize</h3>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-indigo-700 transform hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4 text-indigo-400">🔒</span>
+                        <h3 class="text-xl font-semibold text-white">Curated List of Privacy-Focused Cloud Alternatives</h3>
                     </div>
-                    <p class="text-gray-300">
-                        Our step-by-step guide ensures a secure, risk-free jailbreaking process. Gain full control and unlock customization options you never knew existed!
-                    </p>
+                    <p class="text-gray-300">Ditch the data giants. Explore a hand-picked selection of secure, ethical, and performant cloud storage providers that prioritize *your* privacy, not their profits.</p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out">
-                    <div class="flex items-center space-x-4 mb-4">
-                        <span class="text-4xl">📖</span>
-                        <h3 class="text-xl font-bold text-white">Access a Universe of Free Books</h3>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-blue-700 transform hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4 text-blue-400">➡️</span>
+                        <h3 class="text-xl font-semibold text-white">Step-by-Step Migration Tutorials</h3>
                     </div>
-                    <p class="text-gray-300">
-                        Tired of limited Amazon selections? Discover legitimate ways to load thousands of free eBooks directly onto your Kindle, bypassing vendor lock-in.
-                    </p>
+                    <p class="text-gray-300">No tech headaches here. Our clear, concise guides walk you through every step of seamlessly migrating your most important files to your chosen alternatives, without data loss.</p>
                 </div>
-                <!-- Feature 4 -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out">
-                    <div class="flex items-center space-x-4 mb-4">
-                        <span class="text-4xl">🚀</span>
-                        <h3 class="text-xl font-bold text-white">Boost Performance & Battery</h3>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-green-700 transform hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4 text-green-400">🛡️</span>
+                        <h3 class="text-xl font-semibold text-white">Advanced Data Management & Privacy Hacks</h3>
                     </div>
-                    <p class="text-gray-300">
-                        Learn expert tips to optimize your Kindle's software, leading to snappier performance and significantly extended battery life.
-                    </p>
+                    <p class="text-gray-300">Discover insider methods to manage your data across platforms, implement robust backup strategies, and – critically – avoid linking a phone number for increased storage, preserving your anonymity.</p>
                 </div>
-                <!-- Feature 5 -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out">
-                    <div class="flex items-center space-x-4 mb-4">
-                        <span class="text-4xl">🛡️</span>
-                        <h3 class="text-xl font-bold text-white">Comprehensive Troubleshooting</h3>
-                    </div>
-                    <p class="text-gray-300">
-                        From frozen screens to connectivity issues, our kit provides solutions to common Kindle problems, keeping your device smooth.
-                    </p>
-                </div>
-                <!-- Feature 6 -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out">
-                    <div class="flex items-center space-x-4 mb-4">
-                        <span class="text-4xl">💸</span>
-                        <h3 class="text-xl font-bold text-white">Save Money, Read More</h3>
-                    </div>
-                    <p class="text-gray-300">
-                        Avoid buying new devices or expensive eBooks. Our guide empowers you to save money while expanding your reading options exponentially.
-                    </p>
-                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <a href="#waitlist" class="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-gray-900 font-bold py-3 px-8 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105 text-lg">
+                    Don't Wait Until It's Too Late – Get the Guide!
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action / Get Access Form -->
-    <section id="get-access" class="py-16 sm:py-20 bg-gray-900">
-        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-gray-800 p-8 sm:p-12 rounded-lg shadow-2xl border border-yellow-500">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">
-                🔥 Don't Miss Out! Claim Your Limited-Time Discount!
+    <!-- Waitlist / Call to Action Form Section -->
+    <section id="waitlist" class="py-16 bg-gray-900 px-4">
+        <div class="container mx-auto max-w-xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                Be The First To Access The Google 5GB Survival Guide
             </h2>
             <p class="text-lg text-gray-300 mb-8">
-                Your old Kindle has more life left than you think. Get immediate access to the "Kindle Lifesaver Kit" and start transforming your reading experience today.
+                The future of your digital storage is uncertain. Join our exclusive waitlist for the premium 'Google 5GB Survival Guide' and gain early access, special launch discounts, and expert insights straight to your inbox.
             </p>
-            <form action="#" method="POST" class="space-y-6">
+            <form class="space-y-6 bg-gray-800 p-8 rounded-lg shadow-2xl border border-purple-600">
                 <div>
-                    <label for="email" class="sr-only">Email address</label>
-                    <input type="email" name="email" id="email" autocomplete="email" required class="block w-full px-5 py-3 border border-gray-600 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 sm:text-lg" placeholder="Enter your email to get instant access">
+                    <label for="name" class="sr-only">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" class="w-full p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-300" required>
                 </div>
                 <div>
-                    <button type="submit" class="w-full flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-gray-900 bg-yellow-500 hover:bg-yellow-600 transition duration-300 ease-in-out transform hover:scale-105 md:py-4 md:text-lg md:px-10">
-                        ⚡ Get Instant Access & Discount!
-                    </button>
+                    <label for="email" class="sr-only">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Best Email Address" class="w-full p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-300" required>
                 </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-bold py-4 px-6 rounded-md text-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+                    Join The Exclusive Waitlist Now!
+                </button>
                 <p class="text-sm text-gray-400 mt-4">
-                    By clicking "Get Instant Access", you agree to our terms and privacy policy.
+                    We value your privacy. Your information will never be shared or sold.
                 </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2 text-sm">Kindle is a trademark of Amazon.com, Inc. This product is not affiliated with or endorsed by Amazon.</p>
+    <footer class="bg-gray-800 py-8 px-4 mt-16">
+        <div class="container mx-auto text-center text-gray-400 text-sm">
+            <p>&copy; <span id="current-year"></span> Digital Education Authority. All rights reserved.</p>
+            <div class="mt-2 space-x-4">
+                <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
+    <!-- Small script for current year and countdown placeholder JS (commented out as per raw HTML requirement) -->
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // --- COUNTDOWN TIMER PLACEHOLDER JS ---
+        // To make the countdown dynamic, you would implement JavaScript here.
+        // Example:
+        // const countdownDate = new Date("December 31, 2024 23:59:59").getTime(); // Set your target date
+        // const updateCountdown = setInterval(function() {
+        //     const now = new Date().getTime();
+        //     const distance = countdownDate - now;
+        //
+        //     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        //     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        //     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        //     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        //
+        //     document.getElementById("days").innerHTML = days;
+        //     document.getElementById("hours").innerHTML = hours;
+        //     document.getElementById("minutes").innerHTML = minutes;
+        //     document.getElementById("seconds").innerHTML = seconds;
+        //
+        //     if (distance < 0) {
+        //         clearInterval(updateCountdown);
+        //         document.getElementById("countdown").innerHTML = "<p class='text-red-500 font-bold'>OFFER EXPIRED!</p>";
+        //     }
+        // }, 1000);
+        // --- END COUNTDOWN TIMER PLACEHOLDER JS ---
+    </script>
 </body>
 </html>
