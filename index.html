@@ -1,196 +1,252 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google 5GB Survival Guide - Unlock Your Digital Freedom</title>
+    <title>LinkedIn Authenticity Accelerator: Master AI-Assisted Content</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
-        .hero-background {
+        .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            background-attachment: fixed; /* Optional: for parallax-like effect */
+        }
+        /* Custom scroll-behavior for smooth transitions to sections */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased overflow-x-hidden">
 
     <!-- Hero Section -->
-    <section class="hero-background relative min-h-screen flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-        <div class="relative z-10 text-center max-w-4xl mx-auto space-y-6">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">
-                Reclaim Your Digital Freedom: The Google 5GB Survival Guide
-            </h1>
-            <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
-                <span class="font-semibold text-orange-400">The 5GB storage limit is here.</span> Don't let Google dictate your digital life. Our premium guide empowers you to optimize, migrate, and secure your data – *without* linking your phone number.
+    <header class="relative hero-bg min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8">
+        <!-- Background Overlay for Readability -->
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto text-center py-16 sm:py-24 lg:py-32">
+            <p class="text-blue-400 font-semibold mb-3 text-lg sm:text-xl md:text-2xl">
+                🚨 Market Trend Alert: LinkedIn Doesn't Want Your AI Slop Anymore.
             </p>
-            <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="#waitlist" class="bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105">
-                    Secure Your Future – Join the Waitlist!
-                </a>
-            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white px-2">
+                <span class="block bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500 pb-2">LinkedIn Authenticity Accelerator:</span>
+                Master AI-Assisted Content That Engages, Not Alienates.
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto px-2">
+                Discover advanced strategies to harness AI for genuine authority, bypass 'slop' detection, and build a truly influential presence on LinkedIn.
+            </p>
 
-            <!-- Limited Time Countdown -->
-            <div class="mt-10 bg-gray-800 bg-opacity-70 backdrop-blur-sm p-6 rounded-lg shadow-xl inline-block max-w-sm sm:max-w-md mx-auto">
-                <p class="text-lg text-red-400 font-semibold mb-3 animate-pulse">Special Pre-Order Discount Ends In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4">
-                    <div class="bg-gray-900 text-white text-3xl font-bold p-3 rounded-lg min-w-[70px]">
-                        <span id="days">XX</span>
-                        <span class="block text-xs font-normal text-gray-400">Days</span>
+            <!-- Limited Time Offer & Countdown -->
+            <div class="bg-gradient-to-r from-blue-600 to-indigo-700 p-6 rounded-lg shadow-xl mb-10 mx-auto max-w-md w-11/12 sm:w-full">
+                <p class="text-white text-xl sm:text-2xl font-bold mb-3">Early Bird Access Closes In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4">
+                    <div class="text-center">
+                        <span class="block text-3xl sm:text-4xl lg:text-5xl font-bold text-white" id="days">00</span>
+                        <span class="block text-xs sm:text-sm text-blue-200">Days</span>
                     </div>
-                    <div class="bg-gray-900 text-white text-3xl font-bold p-3 rounded-lg min-w-[70px]">
-                        <span id="hours">YY</span>
-                        <span class="block text-xs font-normal text-gray-400">Hours</span>
+                    <span class="text-3xl sm:text-4xl lg:text-5xl text-white">:</span>
+                    <div class="text-center">
+                        <span class="block text-3xl sm:text-4xl lg:text-5xl font-bold text-white" id="hours">00</span>
+                        <span class="block text-xs sm:text-sm text-blue-200">Hours</span>
                     </div>
-                    <div class="bg-gray-900 text-white text-3xl font-bold p-3 rounded-lg min-w-[70px]">
-                        <span id="minutes">ZZ</span>
-                        <span class="block text-xs font-normal text-gray-400">Mins</span>
+                    <span class="text-3xl sm:text-4xl lg:text-5xl text-white">:</span>
+                    <div class="text-center">
+                        <span class="block text-3xl sm:text-4xl lg:text-5xl font-bold text-white" id="minutes">00</span>
+                        <span class="block text-xs sm:text-sm text-blue-200">Minutes</span>
                     </div>
-                    <div class="bg-gray-900 text-white text-3xl font-bold p-3 rounded-lg min-w-[70px]">
-                        <span id="seconds">WW</span>
-                        <span class="block text-xs font-normal text-gray-400">Secs</span>
+                    <span class="text-3xl sm:text-4xl lg:text-5xl text-white">:</span>
+                    <div class="text-center">
+                        <span class="block text-3xl sm:text-4xl lg:text-5xl font-bold text-white" id="seconds">00</span>
+                        <span class="block text-xs sm:text-sm text-blue-200">Seconds</span>
                     </div>
                 </div>
-                <p class="mt-4 text-sm text-gray-400">Pricing will increase after the launch countdown.</p>
-                <!-- Note: JavaScript is required to make this countdown dynamic. The placeholders (XX, YY, ZZ, WW) are for display purposes and would be updated by your JS implementation to show real-time values. -->
             </div>
-        </div>
-    </section>
 
-    <!-- Problem & Trend Section -->
-    <section class="py-16 bg-gray-900 px-4">
-        <div class="container mx-auto max-w-3xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-                The New Reality: What the 5GB Limit Means for YOU.
-            </h2>
-            <p class="text-lg text-gray-300 leading-relaxed mb-4">
-                You've seen the headlines – <span class="font-semibold text-red-500">"What a 5GB storage limit means for your new Google account - Android Authority."</span> This isn't just a rumor; it's a critical shift. For years, Google's generous storage policies led to digital complacency. Now, new accounts face a stark 5GB limit, and existing users are next.
-            </p>
-            <p class="text-lg text-gray-300 leading-relaxed">
-                This isn't just about losing space; it's about losing control, compromising privacy, and facing unexpected data deletion. Are you prepared to navigate this new landscape without sacrificing your valuable data or personal privacy?
-            </p>
+            <a href="#waitlist-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:-translate-y-1 shadow-lg">
+                Secure Your Spot on the Waitlist!
+            </a>
+            <p class="mt-4 text-sm text-gray-400">Limited spots for foundational members at an exclusive rate.</p>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section class="py-16 bg-gray-800 px-4">
-        <div class="container mx-auto max-w-5xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">
-                What You'll Master Inside the Survival Guide
+    <section id="features" class="py-16 sm:py-24 bg-gray-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 text-white">
+                What You'll Master in the <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500">Accelerator</span>
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-purple-700 transform hover:scale-105 transition-transform duration-300">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4 text-purple-400">🚀</span>
-                        <h3 class="text-xl font-semibold text-white">Optimize Your Existing Google Storage</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:scale-105">
+                    <div class="text-blue-400 mb-4 flex-shrink-0">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
                     </div>
-                    <p class="text-gray-300">Uncover hidden storage hogs, delete duplicates with surgical precision, and implement smart archiving strategies to free up precious GBs you didn't even know you had.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">Advanced Prompt Engineering</h3>
+                    <p class="text-gray-300">Unlock the secrets to crafting prompts that generate high-quality, nuanced content tailored for LinkedIn's discerning audience, avoiding generic "slop."</p>
                 </div>
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-indigo-700 transform hover:scale-105 transition-transform duration-300">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4 text-indigo-400">🔒</span>
-                        <h3 class="text-xl font-semibold text-white">Curated List of Privacy-Focused Cloud Alternatives</h3>
+
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:scale-105">
+                    <div class="text-blue-400 mb-4 flex-shrink-0">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                        </svg>
                     </div>
-                    <p class="text-gray-300">Ditch the data giants. Explore a hand-picked selection of secure, ethical, and performant cloud storage providers that prioritize *your* privacy, not their profits.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">Human-Touch Editing Mastery</h3>
+                    <p class="text-gray-300">Learn proprietary techniques to inject authentic voice and personal insights into AI-generated drafts, making every post unmistakably YOU.</p>
                 </div>
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-blue-700 transform hover:scale-105 transition-transform duration-300">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4 text-blue-400">➡️</span>
-                        <h3 class="text-xl font-semibold text-white">Step-by-Step Migration Tutorials</h3>
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:scale-105">
+                    <div class="text-blue-400 mb-4 flex-shrink-0">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.279A7.495 7.495 0 0112 18c-2.486 0-4.721-.861-6.559-2.279m0 0A7.962 7.962 0 015 12c0-3.239 1.492-6.104 3.841-8" />
+                        </svg>
                     </div>
-                    <p class="text-gray-300">No tech headaches here. Our clear, concise guides walk you through every step of seamlessly migrating your most important files to your chosen alternatives, without data loss.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">Slop-Bypassing Content Frameworks</h3>
+                    <p class="text-gray-300">Access exclusive frameworks engineered to create content that LinkedIn's algorithms *love*, designed to evade AI detection and stand out.</p>
                 </div>
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-green-700 transform hover:scale-105 transition-transform duration-300">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4 text-green-400">🛡️</span>
-                        <h3 class="text-xl font-semibold text-white">Advanced Data Management & Privacy Hacks</h3>
+
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:scale-105">
+                    <div class="text-blue-400 mb-4 flex-shrink-0">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H2m20-2h-2m-9.172-12.914L11 15.586V20M2 20h2L7 15.586 10.828 12a4 4 0 011.172-1.217M4 12V8a4 4 0 014-4h.828c.324 0 .638.077.923.218" />
+                        </svg>
                     </div>
-                    <p class="text-gray-300">Discover insider methods to manage your data across platforms, implement robust backup strategies, and – critically – avoid linking a phone number for increased storage, preserving your anonymity.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">Genuine Authority Building</h3>
+                    <p class="text-gray-300">Implement proven strategies to consistently deliver high-value content that positions you as a thought leader, fostering trust and a loyal audience.</p>
                 </div>
-            </div>
-            <div class="mt-12 text-center">
-                <a href="#waitlist" class="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-gray-900 font-bold py-3 px-8 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105 text-lg">
-                    Don't Wait Until It's Too Late – Get the Guide!
-                </a>
+
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:scale-105">
+                    <div class="text-blue-400 mb-4 flex-shrink-0">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8 0 004 12c0 1.537.564 2.966 1.572 4.038m-1.789 7.032A7.954 7.954 0 014 20.957V15H17.582m0 0a8.001 0 003.536-6h-.582" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Regular & Cutting-Edge Updates</h3>
+                    <p class="text-gray-300">Stay ahead of LinkedIn's evolving algorithms and AI capabilities with continuous course updates, ensuring your strategies are always effective.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:scale-105">
+                    <div class="text-blue-400 mb-4 flex-shrink-0">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14m-1.414-1.414A2 2 0 015.121 10.707L4 10V8c0-1.1.9-2 2-2h10a2 2 0 012 2v2M6 8a2 2 0 012-2h7a2 2 0 012 2v2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Exclusive Community Support</h3>
+                    <p class="text-gray-300">Connect with fellow high-achievers, share insights, get feedback, and collaborate in a private community dedicated to LinkedIn mastery.</p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / Call to Action Form Section -->
-    <section id="waitlist" class="py-16 bg-gray-900 px-4">
-        <div class="container mx-auto max-w-xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Be The First To Access The Google 5GB Survival Guide
+    <!-- Waitlist Form Section -->
+    <section id="waitlist-form" class="py-16 sm:py-24 bg-gray-900">
+        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">
+                Ready to Transform Your LinkedIn Presence?
             </h2>
             <p class="text-lg text-gray-300 mb-8">
-                The future of your digital storage is uncertain. Join our exclusive waitlist for the premium 'Google 5GB Survival Guide' and gain early access, special launch discounts, and expert insights straight to your inbox.
+                Join the exclusive waitlist for the <span class="font-bold text-blue-400">LinkedIn Authenticity Accelerator</span> and be among the first to gain access. Limited spots available for early adopters with exclusive benefits.
             </p>
-            <form class="space-y-6 bg-gray-800 p-8 rounded-lg shadow-2xl border border-purple-600">
-                <div>
-                    <label for="name" class="sr-only">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" class="w-full p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-300" required>
+            <form action="#" method="POST" class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required
+                           class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-400 transition duration-200">
                 </div>
-                <div>
-                    <label for="email" class="sr-only">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Best Email Address" class="w-full p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-300" required>
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required
+                           class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-400 transition duration-200">
                 </div>
-                <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-bold py-4 px-6 rounded-md text-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
-                    Join The Exclusive Waitlist Now!
+                <div class="mb-8 text-left">
+                    <label for="challenge" class="block text-sm font-medium text-gray-300 mb-2">What's your biggest LinkedIn content challenge?</label>
+                    <textarea id="challenge" name="challenge" rows="4" placeholder="e.g., Generating engaging ideas, avoiding sounding robotic, reaching the right audience..."
+                              class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-400 resize-y transition duration-200"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-full text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 shadow-lg">
+                    Join the Waitlist & Get Notified!
                 </button>
-                <p class="text-sm text-gray-400 mt-4">
-                    We value your privacy. Your information will never be shared or sold.
-                </p>
+                <p class="mt-4 text-sm text-gray-400">We respect your privacy. Your data will not be shared.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-8 px-4 mt-16">
-        <div class="container mx-auto text-center text-gray-400 text-sm">
-            <p>&copy; <span id="current-year"></span> Digital Education Authority. All rights reserved.</p>
-            <div class="mt-2 space-x-4">
-                <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
-            </div>
-        </div>
+    <footer class="bg-gray-950 py-8 text-center text-gray-400 text-sm">
+        <p>&copy; 2023 LinkedIn Authenticity Accelerator. All rights reserved.</p>
+        <p class="mt-2">Developed by <span class="font-bold text-blue-400">Digital Education Authority</span></p>
     </footer>
 
-    <!-- Small script for current year and countdown placeholder JS (commented out as per raw HTML requirement) -->
+    <!-- Countdown Script -->
     <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.addEventListener('DOMContentLoaded', function() {
+            function setupCountdown(targetDate) {
+                const countdownElement = document.getElementById('countdown');
+                const daysSpan = document.getElementById('days');
+                const hoursSpan = document.getElementById('hours');
+                const minutesSpan = document.getElementById('minutes');
+                const secondsSpan = document.getElementById('seconds');
 
-        // --- COUNTDOWN TIMER PLACEHOLDER JS ---
-        // To make the countdown dynamic, you would implement JavaScript here.
-        // Example:
-        // const countdownDate = new Date("December 31, 2024 23:59:59").getTime(); // Set your target date
-        // const updateCountdown = setInterval(function() {
-        //     const now = new Date().getTime();
-        //     const distance = countdownDate - now;
-        //
-        //     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        //     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        //     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        //     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        //
-        //     document.getElementById("days").innerHTML = days;
-        //     document.getElementById("hours").innerHTML = hours;
-        //     document.getElementById("minutes").innerHTML = minutes;
-        //     document.getElementById("seconds").innerHTML = seconds;
-        //
-        //     if (distance < 0) {
-        //         clearInterval(updateCountdown);
-        //         document.getElementById("countdown").innerHTML = "<p class='text-red-500 font-bold'>OFFER EXPIRED!</p>";
-        //     }
-        // }, 1000);
-        // --- END COUNTDOWN TIMER PLACEHOLDER JS ---
+                // Validate if all elements exist before proceeding
+                if (!countdownElement || !daysSpan || !hoursSpan || !minutesSpan || !secondsSpan) {
+                    console.error("One or more countdown elements not found. Countdown will not function.");
+                    return;
+                }
+
+                const updateCountdown = () => {
+                    const now = new Date().getTime();
+                    const distance = targetDate - now;
+
+                    if (distance < 0) {
+                        countdownElement.innerHTML = "<span class='text-xl sm:text-2xl font-bold text-white'>Sale Ended!</span>";
+                        clearInterval(interval);
+                        return;
+                    }
+
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    daysSpan.innerText = String(days).padStart(2, '0');
+                    hoursSpan.innerText = String(hours).padStart(2, '0');
+                    minutesSpan.innerText = String(minutes).padStart(2, '0');
+                    secondsSpan.innerText = String(seconds).padStart(2, '0');
+                };
+
+                // Set a target date 7 days from now for demonstration purposes.
+                // In a real application, this date would typically be dynamically loaded from a server.
+                const defaultTargetDate = new Date();
+                defaultTargetDate.setDate(defaultTargetDate.getDate() + 7); // 7 days from now
+                const finalTargetDate = targetDate || defaultTargetDate.getTime();
+
+                updateCountdown(); // Initial call to display immediately
+                const interval = setInterval(updateCountdown, 1000); // Update every second
+            }
+
+            // Call the countdown setup function. You can pass a specific future date like:
+            // setupCountdown(new Date('2024-12-31T23:59:59').getTime());
+            // Or let it default to 7 days from the current time:
+            setupCountdown();
+        });
     </script>
+
 </body>
 </html>
