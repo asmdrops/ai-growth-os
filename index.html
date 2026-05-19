@@ -1,186 +1,135 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PodAIze: AI Podcast Growth & Distribution Platform</title>
+    <title>Google I/O 2026 Executive Briefing & Implementation Toolkit - Limited Time Offer</title>
+    <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom scrollbar for dark mode */
-        body::-webkit-scrollbar {
-            width: 8px;
+        /* Custom styles for the hero background image with cover and centering */
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-        body::-webkit-scrollbar-track {
-            background: #1a202c; /* bg-gray-900 */
-        }
-        body::-webkit-scrollbar-thumb {
-            background-color: #4a5568; /* gray-600 */
-            border-radius: 4px;
-            border: 2px solid #1a202c;
-        }
-        body::-webkit-scrollbar-thumb:hover {
-            background-color: #636b77; /* gray-500 */
-        }
-        /* Custom gradient for text clips */
-        .text-gradient-hero {
-            background-image: linear-gradient(to right, #a78bfa, #f472b6, #ef4444);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .text-gradient-features {
-            background-image: linear-gradient(to right, #60a5fa, #a78bfa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .text-gradient-waitlist {
-            background-image: linear-gradient(to right, #f472b6, #fb923c);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        /* Optional: Smooth scroll for anchors, enhances user experience */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased overflow-x-hidden">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center bg-cover bg-center overflow-hidden" style="background-image: url('https://source.unsplash.com/1600x900/?An,tech');">
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-        <div class="relative z-10 text-center px-4 md:px-8 lg:px-16 max-w-5xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 text-gradient-hero">
-                Automate & Amplify Your AI Podcast Growth
+    <header class="hero-bg min-h-screen flex items-center justify-center relative">
+        <!-- Dark overlay for text readability -->
+        <div class="absolute inset-0 bg-black bg-opacity-70"></div> 
+        
+        <div class="relative z-10 text-center max-w-5xl mx-auto px-6 py-16 sm:py-20 md:py-24">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                Google I/O 2026 Executive Briefing <br class="hidden md:inline"> & Implementation Toolkit
             </h1>
-            <p class="text-lg md:text-xl lg:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-                Turn your AI-generated audio from Alexa+, ChatGPT, and other tools into a high-growth podcast with automated marketing, distribution, and analytics.
+            <p class="text-lg sm:text-xl md:text-2xl mb-10 text-gray-200 max-w-3xl mx-auto drop-shadow-md">
+                Unlock the future of tech. Get deep dives into Android 17 and Gemini AI, analyze market implications, and implement actionable strategies for rapid product development.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-                <a href="#waitlist" class="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg">
-                    Join Early Access Waitlist
-                </a>
-                <a href="#features" class="bg-transparent border-2 border-purple-500 text-purple-200 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105 text-lg">
-                    Discover Features
-                </a>
-            </div>
 
             <!-- Limited Time Countdown -->
-            <div class="mt-12 bg-gray-800 bg-opacity-75 p-6 md:p-8 rounded-lg shadow-xl inline-block border border-purple-700">
-                <h3 class="text-xl md:text-2xl font-semibold text-purple-300 mb-4">
-                    Early Access Opportunity Closes In:
-                </h3>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 text-3xl md:text-5xl font-mono text-white">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="w-12 sm:w-16 text-center">00</span>
-                        <span class="text-xs md:text-sm text-gray-400">Days</span>
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-700 p-6 sm:p-8 rounded-2xl shadow-2xl mb-12 transform hover:scale-105 transition-transform duration-300 border border-purple-600">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-white">LIMITED TIME OFFER!</h2>
+                <p class="text-md sm:text-lg mb-4 text-gray-200">
+                    This exclusive toolkit is available for a short period. Secure your access now before it's gone!
+                </p>
+                <div id="countdown" class="flex justify-center items-center flex-wrap gap-4 text-white">
+                    <div class="bg-gray-800 p-4 rounded-xl shadow-md flex flex-col items-center min-w-[90px] sm:min-w-[110px]">
+                        <span id="countdown-days" class="text-4xl sm:text-5xl font-extrabold">00</span>
+                        <span class="text-sm sm:text-base mt-1 text-gray-300">Days</span>
                     </div>
-                    <span class="text-purple-400 text-3xl md:text-5xl">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="w-12 sm:w-16 text-center">00</span>
-                        <span class="text-xs md:text-sm text-gray-400">Hours</span>
+                    <div class="text-4xl sm:text-5xl font-extrabold hidden sm:block">:</div>
+                    <div class="bg-gray-800 p-4 rounded-xl shadow-md flex flex-col items-center min-w-[90px] sm:min-w-[110px]">
+                        <span id="countdown-hours" class="text-4xl sm:text-5xl font-extrabold">00</span>
+                        <span class="text-sm sm:text-base mt-1 text-gray-300">Hours</span>
                     </div>
-                    <span class="text-purple-400 text-3xl md:text-5xl">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="w-12 sm:w-16 text-center">00</span>
-                        <span class="text-xs md:text-sm text-gray-400">Minutes</span>
+                    <div class="text-4xl sm:text-5xl font-extrabold hidden sm:block">:</div>
+                    <div class="bg-gray-800 p-4 rounded-xl shadow-md flex flex-col items-center min-w-[90px] sm:min-w-[110px]">
+                        <span id="countdown-minutes" class="text-4xl sm:text-5xl font-extrabold">00</span>
+                        <span class="text-sm sm:text-base mt-1 text-gray-300">Mins</span>
                     </div>
-                    <span class="text-purple-400 text-3xl md:text-5xl">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="w-12 sm:w-16 text-center">00</span>
-                        <span class="text-xs md:text-sm text-gray-400">Seconds</span>
+                    <div class="text-4xl sm:text-5xl font-extrabold hidden sm:block">:</div>
+                    <div class="bg-gray-800 p-4 rounded-xl shadow-md flex flex-col items-center min-w-[90px] sm:min-w-[110px]">
+                        <span id="countdown-seconds" class="text-4xl sm:text-5xl font-extrabold">00</span>
+                        <span class="text-sm sm:text-base mt-1 text-gray-300">Secs</span>
                     </div>
                 </div>
+                <p class="text-sm mt-4 text-gray-400">
+                    <!-- Note: This countdown display requires JavaScript for dynamic functionality. Showing placeholder values. -->
+                </p>
             </div>
+
+            <a href="#waitlist-form" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-10 rounded-full text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg animate-pulse">
+                Join the Exclusive Waitlist Now!
+            </a>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 bg-gray-900 text-gray-100 relative overflow-hidden">
-        <div class="absolute inset-0 z-0 opacity-10">
-            <svg class="h-full w-full" fill="none" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <defs>
-                    <pattern id="pattern-zigzag" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse" patternTransform="scale(0.5)">
-                        <path d="M-10 10 L10 10 L0 0 L-10 10 L0 20 L10 10 L-10 10" stroke="rgba(109,40,217,0.3)" stroke-width="0.5" fill="none"/>
-                    </pattern>
-                </defs>
-                <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-zigzag)"/>
-            </svg>
-        </div>
-        <div class="container mx-auto px-4 relative z-10">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-12 text-gradient-features">
-                Unleash Growth with Intelligent Automation
-            </h2>
-            <p class="text-lg md:text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto">
-                PodAIze empowers your AI-generated podcasts with a comprehensive suite of tools designed for maximum reach and engagement.
-            </p>
+    <section id="features" class="py-16 sm:py-20 bg-gray-900">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 text-white">What You'll Gain with This Premium Toolkit</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-
-                <!-- Feature 1: AI Audio Integration -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700 hover:border-purple-600 flex flex-col items-start">
-                    <div class="text-5xl text-purple-400 mb-4">✨</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Effortless AI Audio Ingestion</h3>
-                    <p class="text-gray-300 flex-grow">
-                        Simply upload or connect your AI-generated podcast audio from tools like Alexa+, ChatGPT, or other AI creation platforms. We take it from there.
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-purple-500/30 transition-shadow duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-5xl mb-6 text-purple-400">🚀</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Android 17 Deep Dives</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Unpack every significant feature, API change, and developer opportunity within Android 17. Stay ahead of the curve with expert analysis.
                     </p>
                 </div>
 
-                <!-- Feature 2: SEO Show Notes -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700 hover:border-green-600 flex flex-col items-start">
-                    <div class="text-5xl text-green-400 mb-4">✍️</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">SEO-Optimized Show Notes</h3>
-                    <p class="text-gray-300 flex-grow">
-                        Automatically generate rich, keyword-optimized show notes that enhance discoverability on Apple Podcasts, Spotify, and major search engines.
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-indigo-500/30 transition-shadow duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-5xl mb-6 text-indigo-400">🧠</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Gemini AI Masterclass</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Master the latest advancements in Gemini AI. Understand its implications for your products and integrate cutting-edge intelligence seamlessly.
                     </p>
                 </div>
 
-                <!-- Feature 3: Engaging Twitter Threads -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700 hover:border-blue-600 flex flex-col items-start">
-                    <div class="text-5xl text-blue-400 mb-4">🐦</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Viral, Emoji-Rich Twitter Threads</h3>
-                    <p class="text-gray-300 flex-grow">
-                        Generate engaging, emoji-laden Twitter threads from your episode highlights. Designed to maximize clicks and <strong>grow your audience 3X faster!</strong>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-green-500/30 transition-shadow duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-5xl mb-6 text-green-400">📈</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Market Implications Analysis</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Receive a comprehensive analysis of how I/O announcements will shift market trends and consumer expectations. Pinpoint new opportunities.
                     </p>
                 </div>
 
-                <!-- Feature 4: Market Trends LinkedIn Posts -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700 hover:border-indigo-600 flex flex-col items-start">
-                    <div class="text-5xl text-indigo-400 mb-4">📈</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Market Trends LinkedIn Posts</h3>
-                    <p class="text-gray-300 flex-grow">
-                        Craft professional LinkedIn posts that focus on key market trends and industry insights from your podcast, establishing your thought leadership.
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-red-500/30 transition-shadow duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-5xl mb-6 text-red-400">🛠️</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Actionable Integration Strategies</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Get step-by-step guides and strategic frameworks for flawlessly integrating new features into your existing and future product lines.
                     </p>
                 </div>
 
-                <!-- Feature 5: Short Video Snippets -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700 hover:border-yellow-600 flex flex-col items-start">
-                    <div class="text-5xl text-yellow-400 mb-4">🎥</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Dynamic Video Snippets</h3>
-                    <p class="text-gray-300 flex-grow">
-                        Automatically create compelling short video clips with dynamic captions and visuals, perfectly formatted for TikTok, Instagram Reels, and YouTube Shorts.
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-yellow-500/30 transition-shadow duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-5xl mb-6 text-yellow-400">💡</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Product Development Roadmaps</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Access templates and best practices to swiftly adapt your product development roadmap, leveraging I/O 2026's most impactful innovations.
                     </p>
                 </div>
 
-                <!-- Feature 6: Smart Distribution & Analytics -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700 hover:border-red-600 flex flex-col items-start">
-                    <div class="text-5xl text-red-400 mb-4">📊</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Smart Distribution & Analytics</h3>
-                    <p class="text-gray-300 flex-grow">
-                        Receive AI-driven distribution suggestions and gain deep insights into your podcast's performance with integrated, intuitive analytics dashboards.
-                    </p>
-                </div>
-
-                <!-- Feature 7: Transcript Fine-Tuning -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700 hover:border-orange-600 flex flex-col items-start">
-                    <div class="text-5xl text-orange-400 mb-4">⚙️</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">AI Transcript Fine-Tuning</h3>
-                    <p class="text-gray-300 flex-grow">
-                        Ensure impeccable accuracy and desired tone for your AI-generated transcripts with our advanced editing and fine-tuning tools.
-                    </p>
-                </div>
-
-                <!-- Feature 8: Cross-Promotion -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700 hover:border-cyan-600 flex flex-col items-start">
-                    <div class="text-5xl text-cyan-400 mb-4">🔗</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Effortless Cross-Platform Promotion</h3>
-                    <p class="text-gray-300 flex-grow">
-                        Amplify your podcast's reach by seamlessly cross-promoting episodes and content across various podcasting platforms and social media channels.
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-blue-500/30 transition-shadow duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-5xl mb-6 text-blue-400">🔮</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Future-Proof Your Business</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Equip your executive team and developers with the strategic insights needed to make informed decisions and maintain a dominant competitive edge for years.
                     </p>
                 </div>
 
@@ -189,86 +138,42 @@
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gray-800 text-gray-100 relative overflow-hidden">
-        <div class="absolute inset-0 z-0 opacity-5">
-            <svg class="h-full w-full" fill="none" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <defs>
-                    <pattern id="pattern-dots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
-                        <circle cx="2" cy="2" r="1" fill="rgba(109,40,217,0.3)"/>
-                    </pattern>
-                </defs>
-                <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-dots)"/>
-            </svg>
-        </div>
-        <div class="container mx-auto px-4 relative z-10 max-w-2xl">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-8 text-gradient-waitlist">
-                Secure Your Spot: Join the PodAIze Waitlist
-            </h2>
-            <p class="text-lg md:text-xl text-gray-300 text-center mb-10">
-                Don't miss out on transforming your AI podcasting workflow. Get exclusive early access and special launch offers!
+    <section id="waitlist-form" class="py-16 sm:py-20 bg-gray-800">
+        <div class="container mx-auto px-6 text-center max-w-2xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-10 text-white">Secure Your Advantage: Join the Exclusive Waitlist</h2>
+            <p class="text-md sm:text-xl text-gray-300 mb-8">
+                Be among the first to receive this essential 'Google I/O 2026 Executive Briefing & Implementation Toolkit'. Get early access, special launch pricing, and critical updates.
             </p>
-
-            <form class="bg-gray-900 p-8 md:p-12 rounded-xl shadow-2xl border border-gray-700">
+            <form action="#" method="POST" class="bg-gray-900 p-8 sm:p-10 rounded-xl shadow-2xl border border-gray-700">
                 <div class="mb-6">
-                    <label for="name" class="block text-gray-300 text-sm md:text-base font-bold mb-2">
-                        Your Full Name
-                    </label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" class="shadow appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-800 placeholder-gray-500 text-base" required>
+                    <label for="name" class="block text-left text-sm font-medium text-gray-400 mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="w-full p-3 sm:p-4 rounded-lg bg-gray-700 border border-gray-600 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-white placeholder-gray-400 text-lg transition duration-200" required>
                 </div>
                 <div class="mb-8">
-                    <label for="email" class="block text-gray-300 text-sm md:text-base font-bold mb-2">
-                        Your Best Email Address
-                    </label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="shadow appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-800 placeholder-gray-500 text-base" required>
+                    <label for="email" class="block text-left text-sm font-medium text-gray-400 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                           class="w-full p-3 sm:p-4 rounded-lg bg-gray-700 border border-gray-600 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-white placeholder-gray-400 text-lg transition duration-200" required>
                 </div>
-                <div class="flex items-center justify-center">
-                    <button type="submit" class="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-3 px-10 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg">
-                        Join the Waitlist
-                    </button>
-                </div>
+                <button type="submit"
+                        class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-lg text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                    Join Waitlist & Get Early Bird Access
+                </button>
+                <p class="text-xs text-gray-500 mt-6">
+                    We value your privacy. Your information will remain confidential and will not be shared with third parties.
+                </p>
             </form>
-            <p class="text-center text-gray-500 text-sm mt-6">
-                We respect your privacy. Your information will not be shared or spammed.
-            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm">
-        <div class="container mx-auto px-4">
-            &copy; 2023 PodAIze. All rights reserved. | Empowering AI Podcasters Worldwide.
-        </div>
+    <footer class="bg-gray-900 py-10 text-center text-gray-500 text-sm border-t border-gray-800">
+        <p>&copy; 2026 Digital Education Authority. All rights reserved.</p>
+        <p class="mt-2">
+            <a href="#" class="hover:text-white transition-colors duration-200 px-2">Privacy Policy</a> |
+            <a href="#" class="hover:text-white transition-colors duration-200 px-2">Terms of Service</a>
+        </p>
     </footer>
 
-    <!-- Countdown Timer Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the target date for the countdown (e.g., 30 days from now for early access)
-            const today = new Date();
-            const countDownDate = new Date(today.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 days from now
-
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
-
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<span class='text-red-500 font-bold text-xl'>ACCESS CLOSED!</span>";
-                    return;
-                }
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-            }, 1000);
-        });
-    </script>
 </body>
 </html>
