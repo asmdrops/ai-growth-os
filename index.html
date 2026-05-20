@@ -3,259 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sentinel AI - Content Provenance Platform</title>
-    <meta name="description" content="Verify the origin and integrity of multi-modal content with Sentinel AI. Essential for digital authenticity and trust in a rapidly evolving market.">
+    <title>Vibe Code to App Store: Mastering Google AI Studio for Android</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+        }
+        body::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
         }
         .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?Develop,tech');
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
         }
-        /* Custom styling for dark mode */
-        body {
-            background-color: #0d1117; /* Darkest background */
-            color: #e6edf3; /* Lightest text */
+        .hero-overlay {
+            background: linear-gradient(to top, rgba(17, 24, 39, 0.95), rgba(17, 24, 39, 0.7) 30%, transparent 100%);
+            /* Dark gradient overlay for text readability, from bottom-up */
         }
-        .btn-primary {
-            background-color: #4CAF50; /* A vibrant green for primary actions */
-            color: white;
-            transition: background-color 0.3s ease;
-        }
-        .btn-primary:hover {
-            background-color: #45a049;
-        }
-        .card-bg {
-            background-color: #161b22; /* Slightly lighter dark for cards */
-            border-color: #30363d;
-        }
-        input, textarea {
-            background-color: #0d1117;
-            border-color: #30363d;
-            color: #e6edf3;
-        }
-        input:focus, textarea:focus {
-            border-color: #4CAF50;
-            outline: none;
-            box-shadow: 0 0 0 1px #4CAF50;
+        @media (min-width: 1024px) {
+            .hero-overlay {
+                background: linear-gradient(to right, rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 0.7) 50%, transparent 100%);
+                /* On larger screens, gradient from left to right for better left-aligned text contrast */
+            }
         }
     </style>
 </head>
-<body class="antialiased bg-gray-900 text-gray-100">
+<body class="bg-gray-900 text-white antialiased">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden hero-background">
-        <!-- Overlay for readability -->
-        <div class="absolute inset-0 bg-black bg-opacity-75 z-10"></div>
-        
-        <div class="relative z-20 p-4 md:p-8 lg:p-12 max-w-6xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-                Elevate Digital Trust. Verify Every Pixel, Word, & Sound.
+    <header class="hero-background relative min-h-screen flex items-center justify-center p-4">
+        <div class="hero-overlay absolute inset-0 z-0"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto text-center lg:text-left py-16 px-4 md:px-8 lg:px-12">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
+                Unleash Your Inner 'Vibe Coder':<br class="hidden sm:inline"> Mastering AI App Creation with Google AI Studio for Android
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto">
-                Introducing <strong class="text-white">Sentinel AI</strong>, the essential platform for navigating evolving digital authenticity.
-                In an era demanding <em class="italic text-green-300">"safer, more transparent AI ecosystems"</em> (OpenAI), we provide the definitive solution for multi-modal content provenance.
+            <p class="text-xl sm:text-2xl lg:text-3xl font-light text-gray-200 mb-10 max-w-3xl mx-auto lg:mx-0">
+                From Idea to App Store: The definitive course & template bundle to leverage Google's new AI Studio for Android, no complex coding required.
             </p>
-            
-            <a href="#waitlist" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                Secure Your Enterprise's Content Integrity
-            </a>
 
             <!-- Limited Time Offer Countdown -->
-            <div class="mt-8 bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-sm p-4 rounded-lg shadow-xl inline-block max-w-sm mx-auto">
-                <p class="text-lg md:text-xl font-semibold text-orange-400 mb-2">
-                    Exclusive Onboarding Offer Ends Soon!
-                </p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 text-3xl md:text-4xl lg:text-5xl font-extrabold text-white">
-                    <div class="flex flex-col items-center">
-                        <span id="days">00</span>
-                        <span class="text-xs md:text-sm font-medium text-gray-400 mt-1">Days</span>
-                    </div>
-                    <span class="text-gray-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours">00</span>
-                        <span class="text-xs md:text-sm font-medium text-gray-400 mt-1">Hours</span>
-                    </div>
-                    <span class="text-gray-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes">00</span>
-                        <span class="text-xs md:text-sm font-medium text-gray-400 mt-1">Minutes</span>
-                    </div>
-                    <span class="text-gray-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds">00</span>
-                        <span class="text-xs md:text-sm font-medium text-gray-400 mt-1">Seconds</span>
-                    </div>
+            <div class="bg-gradient-to-r from-purple-600 to-indigo-700 p-6 rounded-xl shadow-2xl mb-12 transform hover:scale-105 transition-transform duration-300 ease-in-out max-w-xl mx-auto lg:mx-0">
+                <p class="text-sm uppercase tracking-wider text-purple-100 font-semibold mb-3">Limited Time Launch Offer!</p>
+                <div id="countdown" class="flex justify-center lg:justify-start space-x-4 text-white font-bold text-3xl sm:text-4xl lg:text-5xl">
+                    <div><span id="days">00</span><p class="text-sm font-normal text-purple-200">Days</p></div>
+                    <div><span id="hours">00</span><p class="text-sm font-normal text-purple-200">Hours</p></div>
+                    <div><span id="minutes">00</span><p class="text-sm font-normal text-purple-200">Minutes</p></div>
+                    <div><span id="seconds">00</span><p class="text-sm font-normal text-purple-200">Seconds</p></div>
                 </div>
-                <p class="text-sm md:text-base text-gray-300 mt-3">
-                    Limited to the first <strong class="text-green-400">100 enterprise clients</strong>. Don't miss out!
-                </p>
+                <p class="text-sm mt-3 text-purple-200">Exclusive waitlist bonuses disappear soon!</p>
+            </div>
+
+            <a href="#waitlist-form" class="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">
+                Join the Waitlist & Secure Your Early Access!
+            </a>
+            <p class="mt-4 text-gray-400 text-sm">Be among the first 500 to get an exclusive template pack!</p>
+        </div>
+    </header>
+
+    <!-- Market Opportunity / Why Now Section -->
+    <section class="py-20 px-4 bg-gray-900 border-b border-gray-800">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-500">
+                ⚡ The Android AI Revolution is Here. Are You Ready?
+            </h2>
+            <p class="text-lg text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+                Google's launch of Android AI Studio isn't just a new tool; it's a paradigm shift. This is your chance to lead the next wave of app innovation, crafting intelligent, user-centric experiences that stand out in the App Store – all without needing a decade of complex coding.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl text-yellow-400 mr-3">🚀</span>
+                        <h3 class="text-xl font-semibold text-white">Massive Untapped Potential</h3>
+                    </div>
+                    <p class="text-gray-300">Be an early adopter in the rapidly expanding market for AI-powered Android applications. First movers win big.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl text-blue-400 mr-3">💡</span>
+                        <h3 class="text-xl font-semibold text-white">Innovation Accessible to All</h3>
+                    </div>
+                    <p class="text-gray-300">Google AI Studio democratizes app development. Our course shows you how to harness its power, regardless of your background.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl text-pink-400 mr-3">💰</span>
+                        <h3 class="text-xl font-semibold text-white">Monetization Opportunities</h3>
+                    </div>
+                    <p class="text-gray-300">Learn strategies to turn your AI-driven app ideas into real revenue streams and build a sustainable online business.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 bg-gray-900 text-gray-100">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-                Unparalleled Content Provenance & Trust
+    <section class="py-20 px-4 bg-gray-800">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-sky-500">
+                What You'll Master in "Vibe Code to App Store"
             </h2>
-            <p class="text-md md:text-xl mb-16 max-w-3xl mx-auto text-gray-300">
-                Sentinel AI equips your business with a comprehensive suite of tools to combat misinformation and establish unwavering trust in your digital content.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-                <!-- Feature 1 -->
-                <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-700 hover:border-green-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-green-400 text-5xl mb-4">
-                        <!-- Icon: Eye -->
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-left">
+                
+                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700 flex flex-col justify-between transform hover:translate-y-[-5px] transition-transform duration-300">
+                    <div>
+                        <span class="text-5xl block mb-4">✨</span>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Advanced Vibe Coding Mastery</h3>
+                        <ul class="list-none space-y-3 text-gray-300">
+                            <li>🎯 Craft powerful prompts that generate intelligent app logic.</li>
+                            <li>🔍 Discover hidden techniques for precise AI output control.</li>
+                            <li>🔄 Iterate & refine your "vibe" for optimal performance.</li>
+                        </ul>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Multi-Modal Verification</h3>
-                    <p class="text-gray-300">Verify the origin and integrity of text, image, audio, and video content with a single, powerful platform.</p>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-700 hover:border-green-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-green-400 text-5xl mb-4">
-                        <!-- Icon: AI/Brain -->
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700 flex flex-col justify-between transform hover:translate-y-[-5px] transition-transform duration-300">
+                    <div>
+                        <span class="text-5xl block mb-4">🎨</span>
+                        <h3 class="text-2xl font-semibold text-white mb-4">AI-Powered UI/UX Design</h3>
+                        <ul class="list-none space-y-3 text-gray-300">
+                            <li>📱 Best practices for seamless user experiences in AI apps.</li>
+                            <li>🧠 Intuitive design principles for AI-generated interfaces.</li>
+                            <li>📊 Tools & tricks to optimize for Android's diverse ecosystem.</li>
+                        </ul>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Advanced AI Detection</h3>
-                    <p class="text-gray-300">Leverage cutting-edge AI to identify deepfakes, manipulated media, and AI-generated content with high accuracy.</p>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-700 hover:border-green-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-green-400 text-5xl mb-4">
-                        <!-- Icon: Watermark/Stamp -->
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700 flex flex-col justify-between transform hover:translate-y-[-5px] transition-transform duration-300">
+                    <div>
+                        <span class="text-5xl block mb-4">📦</span>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Ready-to-Use App Template Library</h3>
+                        <ul class="list-none space-y-3 text-gray-300">
+                            <li>🛠️ Instant access to practical, customizable app templates.</li>
+                            <li>📝 Simple utilities, content viewers, and more to kickstart.</li>
+                            <li>📈 Scale & adapt templates to your unique app ideas.</li>
+                        </ul>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Digital Watermark Analysis</h3>
-                    <p class="text-gray-300">Analyze and verify embedded digital watermarks to confirm content origin and authenticity at a glance.</p>
                 </div>
 
-                <!-- Feature 4 -->
-                <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-700 hover:border-green-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-green-400 text-5xl mb-4">
-                        <!-- Icon: API -->
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h6M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700 flex flex-col justify-between transform hover:translate-y-[-5px] transition-transform duration-300">
+                    <div>
+                        <span class="text-5xl block mb-4">🚀</span>
+                        <h3 class="text-2xl font-semibold text-white mb-4">End-to-End App Publishing</h3>
+                        <ul class="list-none space-y-3 text-gray-300">
+                            <li>✅ Navigate the Google Play Store submission process with ease.</li>
+                            <li>🛡️ Understand vital policies and avoid common pitfalls.</li>
+                            <li>📈 Optimize your app listing for maximum visibility & downloads.</li>
+                        </ul>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Seamless API Integration</h3>
-                    <p class="text-gray-300">Integrate provenance checks directly into your existing content management systems (CMS) and workflows.</p>
                 </div>
 
-                <!-- Feature 5 -->
-                <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-700 hover:border-green-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-green-400 text-5xl mb-4">
-                        <!-- Icon: Dashboard -->
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-4-4m5-9L1 14V4a2 2 0 012-2h10a2 2 0 012 2v10zm-6 2h6m-5-4h4m1-4h3m-6 4v4"></path></svg>
+                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700 flex flex-col justify-between transform hover:translate-y-[-5px] transition-transform duration-300">
+                    <div>
+                        <span class="text-5xl block mb-4">💸</span>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Proven Monetization Strategies</h3>
+                        <ul class="list-none space-y-3 text-gray-300">
+                            <li>📈 Implement effective in-app purchases and subscription models.</li>
+                            <li>🤝 Master ad integration without compromising user experience.</li>
+                            <li>💡 Discover diverse revenue streams for long-term app success.</li>
+                        </ul>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Intuitive Dashboard</h3>
-                    <p class="text-gray-300">Perform manual checks, monitor real-time analytics, and generate compliance reports from a user-friendly interface.</p>
                 </div>
 
-                <!-- Feature 6 -->
-                <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-700 hover:border-green-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-green-400 text-5xl mb-4">
-                        <!-- Icon: Shield -->
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.007 12.007 0 002.928 12c.008 3.737 1.77 7.232 4.673 9.387.51.385 1.187.622 1.952.622h6.894c.765 0 1.442-.237 1.952-.622 2.903-2.155 4.665-5.65 4.673-9.387a12.007 12.007 0 00-.47-5.988z"></path></svg>
+                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700 flex flex-col justify-between transform hover:translate-y-[-5px] transition-transform duration-300">
+                    <div>
+                        <span class="text-5xl block mb-4">🌐</span>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Community & Support</h3>
+                        <ul class="list-none space-y-3 text-gray-300">
+                            <li>🗣️ Connect with fellow innovative AI app creators.</li>
+                            <li>❓ Get your questions answered by expert instructors.</li>
+                            <li>⬆️ Stay updated with the latest Google AI Studio developments.</li>
+                        </ul>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Enterprise-Grade Security</h3>
-                    <p class="text-gray-300">Protect your sensitive data and content with robust security protocols and compliance standards.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gray-800 text-gray-100">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-500">
-                Secure Your Content's Future
+    <section id="waitlist-form" class="py-20 px-4 bg-gray-900 border-t border-gray-800">
+        <div class="max-w-xl mx-auto bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl border border-gray-700 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
+                Don't Miss Out! Join the Exclusive Waitlist!
             </h2>
-            <p class="text-lg md:text-xl mb-12 max-w-2xl mx-auto text-gray-300">
-                Join the waitlist for Sentinel AI. Be among the <strong class="text-green-400">first 100 enterprise clients</strong>
-                to gain early access and unlock our exclusive onboarding offer. This limited-time opportunity
-                ensures your business leads the charge in digital authenticity and trust.
+            <p class="text-lg text-gray-300 mb-8">
+                Secure your spot for early bird pricing and unlock special bonuses including an extra AI app template pack!
             </p>
 
-            <div class="max-w-xl mx-auto p-6 md:p-8 card-bg rounded-xl shadow-2xl border border-gray-700">
-                <form class="space-y-6">
-                    <div>
-                        <label for="companyName" class="block text-left text-sm font-medium text-gray-300 mb-2">Company Name</label>
-                        <input type="text" id="companyName" name="companyName" placeholder="Your Company, Inc." required
-                               class="w-full p-3 rounded-lg border border-gray-600 focus:ring-green-500 focus:border-green-500 transition duration-200">
-                    </div>
-                    <div>
-                        <label for="contactEmail" class="block text-left text-sm font-medium text-gray-300 mb-2">Contact Email</label>
-                        <input type="email" id="contactEmail" name="contactEmail" placeholder="your.email@example.com" required
-                               class="w-full p-3 rounded-lg border border-gray-600 focus:ring-green-500 focus:border-green-500 transition duration-200">
-                    </div>
-                    <div>
-                        <label for="industry" class="block text-left text-sm font-medium text-gray-300 mb-2">Industry (Optional)</label>
-                        <input type="text" id="industry" name="industry" placeholder="e.g., Media, Finance, E-commerce"
-                               class="w-full p-3 rounded-lg border border-gray-600 focus:ring-green-500 focus:border-green-500 transition duration-200">
-                    </div>
-                    <button type="submit" class="w-full btn-primary font-bold py-3 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
-                        Join the Waitlist & Secure Offer
-                    </button>
-                </form>
-            </div>
-            <p class="text-sm mt-8 text-gray-400">
-                We respect your privacy. Your information will be used solely for Sentinel AI updates and early access notifications.
+            <form class="space-y-6">
+                <div>
+                    <label for="name" class="sr-only">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name (Optional)" class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-400 text-lg">
+                </div>
+                <div>
+                    <label for="email" class="sr-only">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-400 text-lg">
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-4 rounded-full text-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
+                    Get Early Access Now!
+                </button>
+            </form>
+            <p class="mt-6 text-gray-400 text-sm">
+                We respect your privacy. Your information will not be shared.
             </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 bg-gray-900 text-gray-400 text-center text-sm">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2023 Sentinel AI. All rights reserved.</p>
-            <p class="mt-2">Building a Safer, More Transparent AI Ecosystem.</p>
+    <footer class="bg-gray-900 py-10 px-4 border-t border-gray-800 text-center text-gray-500 text-sm">
+        <div class="max-w-6xl mx-auto">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a>
+                <a href="#" class="hover:text-white transition-colors duration-200">Contact Us</a>
+            </div>
         </div>
     </footer>
 
+    <!-- Countdown Timer JavaScript -->
     <script>
-        // Countdown functionality
-        const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 14); // Set for 14 days from now for demonstration
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the target date for the countdown. For a real launch, replace with a fixed date.
+            // Example: const countDownDate = new Date("Dec 25, 2023 00:00:00").getTime();
+            
+            // For demonstration, set to 7 days from when the page loads.
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now
+            const targetTime = countDownDate.getTime();
 
-        const countdownElement = document.getElementById('countdown');
-        const daysSpan = document.getElementById('days');
-        const hoursSpan = document.getElementById('hours');
-        const minutesSpan = document.getElementById('minutes');
-        const secondsSpan = document.getElementById('seconds');
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = targetTime - now;
 
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                // Display the result in the elements
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-            daysSpan.innerHTML = String(days).padStart(2, '0');
-            hoursSpan.innerHTML = String(hours).padStart(2, '0');
-            minutesSpan.innerHTML = String(minutes).padStart(2, '0');
-            secondsSpan.innerHTML = String(seconds).padStart(2, '0');
-
-            if (distance < 0) {
-                clearInterval(countdownInterval);
-                countdownElement.innerHTML = '<span class="text-orange-500">OFFER EXPIRED!</span>';
-            }
-        }
-
-        const countdownInterval = setInterval(updateCountdown, 1000);
-        updateCountdown(); // Initial call to display immediately
+                // If the countdown is over, write some text 
+                if (distance < 0) {
+                    clearInterval(x);
+                    const countdownContainer = document.getElementById("countdown");
+                    countdownContainer.innerHTML = "<p class='text-white text-center text-xl font-bold'>Offer Expired!</p>";
+                    countdownContainer.parentNode.classList.add('opacity-50', 'pointer-events-none'); // Dim and disable click on expired offer box
+                    document.querySelector('a[href="#waitlist-form"]').style.display = 'none'; // Hide CTA
+                    document.querySelector('p.mt-4.text-gray-400.text-sm').style.display = 'none'; // Hide bonus text
+                }
+            }, 1000);
+        });
     </script>
 </body>
 </html>
