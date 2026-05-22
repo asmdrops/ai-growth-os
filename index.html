@@ -3,247 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vibe Code to App Store: Mastering Google AI Studio for Android</title>
+    <title>AI Control Hub: Smart AI Usage Manager</title>
+    <meta name="description" content="Integrate, optimize, and control all your AI APIs (Gemini, ChatGPT, Claude) with AI Control Hub. Avoid limits, save costs, and switch seamlessly.">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
+        /* Custom styles for dark mode and responsiveness */
         body {
-            font-family: 'Inter', sans-serif;
-            -ms-overflow-style: none; /* IE and Edge */
-            scrollbar-width: none; /* Firefox */
+            font-family: 'Inter', sans-serif; /* A common modern sans-serif font */
         }
-        body::-webkit-scrollbar {
-            display: none; /* Chrome, Safari, Opera */
+        .gradient-text {
+            background: linear-gradient(90deg, #9333ea, #db2777);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        .hero-background {
+        .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            position: relative;
         }
-        .hero-overlay {
-            background: linear-gradient(to top, rgba(17, 24, 39, 0.95), rgba(17, 24, 39, 0.7) 30%, transparent 100%);
-            /* Dark gradient overlay for text readability, from bottom-up */
+        .countdown-digit {
+            @apply text-5xl font-extrabold text-purple-400; /* Tailwind classes for digits */
         }
-        @media (min-width: 1024px) {
-            .hero-overlay {
-                background: linear-gradient(to right, rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 0.7) 50%, transparent 100%);
-                /* On larger screens, gradient from left to right for better left-aligned text contrast */
-            }
+        .countdown-label {
+            @apply text-sm uppercase tracking-wider text-gray-400; /* Tailwind classes for labels */
         }
     </style>
 </head>
 <body class="bg-gray-900 text-white antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-background relative min-h-screen flex items-center justify-center p-4">
-        <div class="hero-overlay absolute inset-0 z-0"></div>
+    <header class="hero-bg relative min-h-screen flex items-center justify-center p-4">
+        <!-- Overlay for dark tint -->
+        <div class="absolute inset-0 bg-black opacity-70 z-10"></div>
 
-        <div class="relative z-10 max-w-7xl mx-auto text-center lg:text-left py-16 px-4 md:px-8 lg:px-12">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
-                Unleash Your Inner 'Vibe Coder':<br class="hidden sm:inline"> Mastering AI App Creation with Google AI Studio for Android
-            </h1>
-            <p class="text-xl sm:text-2xl lg:text-3xl font-light text-gray-200 mb-10 max-w-3xl mx-auto lg:mx-0">
-                From Idea to App Store: The definitive course & template bundle to leverage Google's new AI Studio for Android, no complex coding required.
+        <div class="relative z-20 text-center max-w-4xl mx-auto py-16">
+            <p class="text-purple-400 text-lg md:text-xl font-semibold mb-3">
+                <span class="inline-block px-3 py-1 bg-purple-900 bg-opacity-50 rounded-full text-sm">🔥 Trend Alert: Gemini's New Limits Frustrate Users!</span>
             </p>
-
-            <!-- Limited Time Offer Countdown -->
-            <div class="bg-gradient-to-r from-purple-600 to-indigo-700 p-6 rounded-xl shadow-2xl mb-12 transform hover:scale-105 transition-transform duration-300 ease-in-out max-w-xl mx-auto lg:mx-0">
-                <p class="text-sm uppercase tracking-wider text-purple-100 font-semibold mb-3">Limited Time Launch Offer!</p>
-                <div id="countdown" class="flex justify-center lg:justify-start space-x-4 text-white font-bold text-3xl sm:text-4xl lg:text-5xl">
-                    <div><span id="days">00</span><p class="text-sm font-normal text-purple-200">Days</p></div>
-                    <div><span id="hours">00</span><p class="text-sm font-normal text-purple-200">Hours</p></div>
-                    <div><span id="minutes">00</span><p class="text-sm font-normal text-purple-200">Minutes</p></div>
-                    <div><span id="seconds">00</span><p class="text-sm font-normal text-purple-200">Seconds</p></div>
-                </div>
-                <p class="text-sm mt-3 text-purple-200">Exclusive waitlist bonuses disappear soon!</p>
-            </div>
-
-            <a href="#waitlist-form" class="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">
-                Join the Waitlist & Secure Your Early Access!
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up">
+                Stop Letting AI Limits <span class="gradient-text">Limit Your Potential.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto">
+                Introducing <strong class="text-purple-300">AI Control Hub</strong>: Your smart manager for Gemini, ChatGPT, Claude, and more. Optimize costs, bypass usage limits, and unlock seamless AI integration.
+            </p>
+            <a href="#waitlist" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                🚀 Join the Early Access Waitlist!
             </a>
-            <p class="mt-4 text-gray-400 text-sm">Be among the first 500 to get an exclusive template pack!</p>
+            <p class="mt-4 text-gray-400 text-sm">Limited Spots Available – Don't Miss Out!</p>
         </div>
     </header>
 
-    <!-- Market Opportunity / Why Now Section -->
-    <section class="py-20 px-4 bg-gray-900 border-b border-gray-800">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-500">
-                ⚡ The Android AI Revolution is Here. Are You Ready?
-            </h2>
-            <p class="text-lg text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-                Google's launch of Android AI Studio isn't just a new tool; it's a paradigm shift. This is your chance to lead the next wave of app innovation, crafting intelligent, user-centric experiences that stand out in the App Store – all without needing a decade of complex coding.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
-                    <div class="flex items-center mb-4">
-                        <span class="text-3xl text-yellow-400 mr-3">🚀</span>
-                        <h3 class="text-xl font-semibold text-white">Massive Untapped Potential</h3>
-                    </div>
-                    <p class="text-gray-300">Be an early adopter in the rapidly expanding market for AI-powered Android applications. First movers win big.</p>
-                </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
-                    <div class="flex items-center mb-4">
-                        <span class="text-3xl text-blue-400 mr-3">💡</span>
-                        <h3 class="text-xl font-semibold text-white">Innovation Accessible to All</h3>
-                    </div>
-                    <p class="text-gray-300">Google AI Studio democratizes app development. Our course shows you how to harness its power, regardless of your background.</p>
-                </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
-                    <div class="flex items-center mb-4">
-                        <span class="text-3xl text-pink-400 mr-3">💰</span>
-                        <h3 class="text-xl font-semibold text-white">Monetization Opportunities</h3>
-                    </div>
-                    <p class="text-gray-300">Learn strategies to turn your AI-driven app ideas into real revenue streams and build a sustainable online business.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Features Section -->
-    <section class="py-20 px-4 bg-gray-800">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-sky-500">
-                What You'll Master in "Vibe Code to App Store"
+    <section class="py-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-12">
+                Reclaim Control. <span class="gradient-text">Boost Productivity.</span>
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-left">
-                
-                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700 flex flex-col justify-between transform hover:translate-y-[-5px] transition-transform duration-300">
-                    <div>
-                        <span class="text-5xl block mb-4">✨</span>
-                        <h3 class="text-2xl font-semibold text-white mb-4">Advanced Vibe Coding Mastery</h3>
-                        <ul class="list-none space-y-3 text-gray-300">
-                            <li>🎯 Craft powerful prompts that generate intelligent app logic.</li>
-                            <li>🔍 Discover hidden techniques for precise AI output control.</li>
-                            <li>🔄 Iterate & refine your "vibe" for optimal performance.</li>
-                        </ul>
-                    </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1 group">
+                    <div class="text-purple-400 mb-4 text-5xl">⚙️</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Universal AI Integration</h3>
+                    <p class="text-gray-300 leading-relaxed">Connect all your favorite AI APIs – Gemini, ChatGPT, Claude, and more – into one powerful, unified dashboard. No more tab-switching or juggling multiple accounts.</p>
                 </div>
 
-                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700 flex flex-col justify-between transform hover:translate-y-[-5px] transition-transform duration-300">
-                    <div>
-                        <span class="text-5xl block mb-4">🎨</span>
-                        <h3 class="text-2xl font-semibold text-white mb-4">AI-Powered UI/UX Design</h3>
-                        <ul class="list-none space-y-3 text-gray-300">
-                            <li>📱 Best practices for seamless user experiences in AI apps.</li>
-                            <li>🧠 Intuitive design principles for AI-generated interfaces.</li>
-                            <li>📊 Tools & tricks to optimize for Android's diverse ecosystem.</li>
-                        </ul>
-                    </div>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1 group">
+                    <div class="text-purple-400 mb-4 text-5xl">💰</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Intelligent Cost Optimization</h3>
+                    <p class="text-gray-300 leading-relaxed">Our AI automatically routes your requests to the most cost-effective provider for a given task, ensuring you get the best value without compromising on quality.</p>
                 </div>
 
-                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700 flex flex-col justify-between transform hover:translate-y-[-5px] transition-transform duration-300">
-                    <div>
-                        <span class="text-5xl block mb-4">📦</span>
-                        <h3 class="text-2xl font-semibold text-white mb-4">Ready-to-Use App Template Library</h3>
-                        <ul class="list-none space-y-3 text-gray-300">
-                            <li>🛠️ Instant access to practical, customizable app templates.</li>
-                            <li>📝 Simple utilities, content viewers, and more to kickstart.</li>
-                            <li>📈 Scale & adapt templates to your unique app ideas.</li>
-                        </ul>
-                    </div>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1 group">
+                    <div class="text-purple-400 mb-4 text-5xl">🔄</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Seamless Limit Bypass</h3>
+                    <p class="text-gray-300 leading-relaxed">Hit a usage limit? AI Control Hub automatically switches to an available alternative, ensuring uninterrupted workflow and access to AI whenever you need it.</p>
                 </div>
 
-                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700 flex flex-col justify-between transform hover:translate-y-[-5px] transition-transform duration-300">
-                    <div>
-                        <span class="text-5xl block mb-4">🚀</span>
-                        <h3 class="text-2xl font-semibold text-white mb-4">End-to-End App Publishing</h3>
-                        <ul class="list-none space-y-3 text-gray-300">
-                            <li>✅ Navigate the Google Play Store submission process with ease.</li>
-                            <li>🛡️ Understand vital policies and avoid common pitfalls.</li>
-                            <li>📈 Optimize your app listing for maximum visibility & downloads.</li>
-                        </ul>
-                    </div>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1 group">
+                    <div class="text-purple-400 mb-4 text-5xl">📊</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Real-time Usage Tracking</h3>
+                    <p class="text-gray-300 leading-relaxed">Gain full transparency with real-time analytics. Monitor your AI consumption across all providers, identify trends, and make informed decisions.</p>
                 </div>
 
-                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700 flex flex-col justify-between transform hover:translate-y-[-5px] transition-transform duration-300">
-                    <div>
-                        <span class="text-5xl block mb-4">💸</span>
-                        <h3 class="text-2xl font-semibold text-white mb-4">Proven Monetization Strategies</h3>
-                        <ul class="list-none space-y-3 text-gray-300">
-                            <li>📈 Implement effective in-app purchases and subscription models.</li>
-                            <li>🤝 Master ad integration without compromising user experience.</li>
-                            <li>💡 Discover diverse revenue streams for long-term app success.</li>
-                        </ul>
-                    </div>
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1 group">
+                    <div class="text-purple-400 mb-4 text-5xl">🔔</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Proactive Limit Notifications</h3>
+                    <p class="text-gray-300 leading-relaxed">Never be caught off guard. Receive smart notifications before you hit usage limits on any specific AI service, giving you time to adjust or let us switch for you.</p>
                 </div>
 
-                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700 flex flex-col justify-between transform hover:translate-y-[-5px] transition-transform duration-300">
-                    <div>
-                        <span class="text-5xl block mb-4">🌐</span>
-                        <h3 class="text-2xl font-semibold text-white mb-4">Community & Support</h3>
-                        <ul class="list-none space-y-3 text-gray-300">
-                            <li>🗣️ Connect with fellow innovative AI app creators.</li>
-                            <li>❓ Get your questions answered by expert instructors.</li>
-                            <li>⬆️ Stay updated with the latest Google AI Studio developments.</li>
-                        </ul>
-                    </div>
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1 group">
+                    <div class="text-purple-400 mb-4 text-5xl">🎯</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Personalized Preferences</h3>
+                    <p class="text-gray-300 leading-relaxed">Tailor AI Control Hub to your specific needs. Set custom preferences for cost, performance, and preferred providers for different task types.</p>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-20 px-4 bg-gray-900 border-t border-gray-800">
-        <div class="max-w-xl mx-auto bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl border border-gray-700 text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
-                Don't Miss Out! Join the Exclusive Waitlist!
+    <section id="waitlist" class="py-16 bg-gray-800 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-gray-900 rounded-2xl p-8 md:p-12 shadow-3xl border border-purple-800">
+            <h2 class="text-3xl md:text-5xl font-extrabold gradient-text mb-6">
+                Don't Miss Out on Early Access!
             </h2>
-            <p class="text-lg text-gray-300 mb-8">
-                Secure your spot for early bird pricing and unlock special bonuses including an extra AI app template pack!
+            <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                Join the exclusive waitlist for <strong class="text-purple-300">AI Control Hub</strong> and be among the first to experience seamless AI management.
             </p>
 
-            <form class="space-y-6">
+            <!-- Limited Time Countdown -->
+            <div class="bg-purple-900 bg-opacity-30 rounded-lg p-6 mb-8 border border-purple-700 shadow-inner">
+                <p class="text-lg md:text-xl font-bold text-purple-200 mb-4">Early Access Closes In:</p>
+                <div id="countdown" class="flex justify-center items-baseline space-x-4 md:space-x-8">
+                    <div>
+                        <span class="countdown-digit" id="days">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <span class="text-5xl text-purple-400">:</span>
+                    <div>
+                        <span class="countdown-digit" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <span class="text-5xl text-purple-400">:</span>
+                    <div>
+                        <span class="countdown-digit" id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <span class="text-5xl text-purple-400">:</span>
+                    <div>
+                        <span class="countdown-digit" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+            <!-- End Countdown -->
+
+            <form class="space-y-6 max-w-lg mx-auto">
                 <div>
-                    <label for="name" class="sr-only">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name (Optional)" class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-400 text-lg">
+                    <label for="name" class="sr-only">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-400 transition duration-200">
                 </div>
                 <div>
-                    <label for="email" class="sr-only">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email Address" required class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-400 text-lg">
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-400 transition duration-200">
                 </div>
-                <button type="submit" class="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-4 rounded-full text-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
-                    Get Early Access Now!
+                <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                    Secure My Spot Now!
                 </button>
             </form>
-            <p class="mt-6 text-gray-400 text-sm">
-                We respect your privacy. Your information will not be shared.
-            </p>
+            <p class="mt-8 text-gray-400 text-sm">We respect your privacy. Your email will only be used for AI Control Hub updates.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 px-4 border-t border-gray-800 text-center text-gray-500 text-sm">
-        <div class="max-w-6xl mx-auto">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <div class="mt-4 space-x-4">
-                <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a>
-                <a href="#" class="hover:text-white transition-colors duration-200">Contact Us</a>
-            </div>
+    <footer class="bg-gray-900 py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            &copy; 2023 AI Control Hub. All rights reserved.
         </div>
     </footer>
 
-    <!-- Countdown Timer JavaScript -->
+    <!-- JavaScript for Countdown Timer -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Set the target date for the countdown. For a real launch, replace with a fixed date.
-            // Example: const countDownDate = new Date("Dec 25, 2023 00:00:00").getTime();
-            
-            // For demonstration, set to 7 days from when the page loads.
+            // Set the date we're counting down to (e.g., 7 days from now)
             const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now
-            const targetTime = countDownDate.getTime();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now for demonstration
 
+            // Update the count down every 1 second
             const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = targetTime - now;
 
+                // Get today's date and time
+                const now = new Date().getTime();
+
+                // Find the distance between now and the count down date
+                const distance = countDownDate - now;
+
+                // Time calculations for days, hours, minutes and seconds
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -255,14 +198,10 @@
                 document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
                 document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-                // If the countdown is over, write some text 
+                // If the count down is finished, write some text
                 if (distance < 0) {
                     clearInterval(x);
-                    const countdownContainer = document.getElementById("countdown");
-                    countdownContainer.innerHTML = "<p class='text-white text-center text-xl font-bold'>Offer Expired!</p>";
-                    countdownContainer.parentNode.classList.add('opacity-50', 'pointer-events-none'); // Dim and disable click on expired offer box
-                    document.querySelector('a[href="#waitlist-form"]').style.display = 'none'; // Hide CTA
-                    document.querySelector('p.mt-4.text-gray-400.text-sm').style.display = 'none'; // Hide bonus text
+                    document.getElementById("countdown").innerHTML = "<p class='text-red-400 font-bold'>EARLY ACCESS CLOSED!</p>";
                 }
             }, 1000);
         });
