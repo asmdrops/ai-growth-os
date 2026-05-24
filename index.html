@@ -3,139 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accelerate Your AI Future on Apple - Gen AI Developer Toolkit</title>
-    <meta name="description" content="The ultimate Gen AI Developer Toolkit for Apple Ecosystem. Integrate Apple's upcoming AI models into your iOS, macOS, and iPadOS applications with ease using our APIs, components, and low-code environment.">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Mastering Apple's Gen AI Toolkit - Early Bird Access</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles for the countdown - pure CSS for visual representation */
-        .countdown-timer {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
+        /* Custom styles for premium dark mode aesthetics */
+        body {
+            font-family: 'Inter', sans-serif; /* A modern, clean sans-serif font */
         }
-        .countdown-item {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            text-align: center;
-            min-width: 6rem;
+        /* Fade-in effect for sections */
+        .fade-in {
+            animation: fadeIn 1s ease-out;
         }
-        .countdown-value {
-            font-size: 2.5rem;
-            font-weight: bold;
-            line-height: 1;
-        }
-        .countdown-label {
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            opacity: 0.8;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-gray-950 text-gray-100 leading-relaxed">
 
     <!-- Hero Section -->
-    <header class="relative bg-cover bg-center bg-no-repeat min-h-screen flex items-center justify-center py-16 md:py-24 lg:py-32" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden" 
+             style="background-image: url('https://source.unsplash.com/1600x900/?A,tech'); background-size: cover; background-position: center;">
+        <!-- Overlay for text readability -->
         <div class="absolute inset-0 bg-black opacity-70"></div>
-        <div class="relative z-10 text-center px-4 md:px-8 max-w-5xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 animate-pulse-text">
-                Unleash Gen AI on Apple: <span class="text-blue-500">Accelerate Your Vision.</span>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 p-4 max-w-5xl mx-auto fade-in">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 drop-shadow-lg leading-tight">
+                Unlock Apple's Generative AI Revolution
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
-                The ultimate toolkit for iOS, macOS, and iPadOS developers. Seamlessly integrate Apple's upcoming AI models and frameworks into your applications, faster than ever.
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-10 text-gray-300 max-w-4xl mx-auto drop-shadow-md">
+                Be the first to master Apple's new Gen AI frameworks immediately after WWDC. Comprehensive guides, exclusive tutorials, and expert insights await.
             </p>
 
-            <!-- Limited Time Countdown (Visual representation, no JS) -->
-            <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 rounded-lg shadow-xl mb-12 transform hover:scale-105 transition-transform duration-300">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4">⏳ WWDC Countdown: Be Ready for Apple's AI Leap!</h2>
-                <p class="text-xl md:text-2xl text-gray-200">
-                    Secure your spot for early access before the worldwide reveal.
+            <!-- Countdown Timer & Early Bird Offer -->
+            <div class="mb-10 p-6 bg-gray-900 bg-opacity-80 rounded-xl shadow-2xl border border-blue-700 mx-auto max-w-xl">
+                <p class="text-xl sm:text-2xl font-bold text-yellow-400 mb-4 animate-pulse">
+                    🚀 Early Bird Discount Ends In:
                 </p>
-                <div class="countdown-timer text-gray-900 mt-6">
-                    <div class="countdown-item bg-white bg-opacity-90">
-                        <div class="countdown-value">07</div>
-                        <div class="countdown-label">Days</div>
+                <div id="countdown" class="flex justify-center space-x-3 sm:space-x-5 text-gray-100">
+                    <!-- Countdown units will be injected here by JavaScript -->
+                    <div class="flex flex-col items-center">
+                        <div class="bg-gray-800 p-3 sm:p-4 rounded-lg text-3xl sm:text-4xl md:text-5xl font-extrabold leading-none">00</div>
+                        <div class="text-sm sm:text-base mt-2 text-gray-400">Days</div>
                     </div>
-                    <div class="countdown-item bg-white bg-opacity-90">
-                        <div class="countdown-value">12</div>
-                        <div class="countdown-label">Hours</div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-gray-800 p-3 sm:p-4 rounded-lg text-3xl sm:text-4xl md:text-5xl font-extrabold leading-none">00</div>
+                        <div class="text-sm sm:text-base mt-2 text-gray-400">Hours</div>
                     </div>
-                    <div class="countdown-item bg-white bg-opacity-90">
-                        <div class="countdown-value">34</div>
-                        <div class="countdown-label">Mins</div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-gray-800 p-3 sm:p-4 rounded-lg text-3xl sm:text-4xl md:text-5xl font-extrabold leading-none">00</div>
+                        <div class="text-sm sm:text-base mt-2 text-gray-400">Minutes</div>
                     </div>
-                    <div class="countdown-item bg-white bg-opacity-90">
-                        <div class="countdown-value">56</div>
-                        <div class="countdown-label">Secs</div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-gray-800 p-3 sm:p-4 rounded-lg text-3xl sm:text-4xl md:text-5xl font-extrabold leading-none">00</div>
+                        <div class="text-sm sm:text-base mt-2 text-gray-400">Seconds</div>
                     </div>
                 </div>
-                <p class="text-sm text-gray-200 mt-4">
-                    *This countdown is illustrative and represents the urgency of upcoming announcements.
+                <p class="text-base sm:text-lg text-gray-400 mt-6">
+                    Limited slots available at an exclusive WWDC launch price. Don't miss out!
                 </p>
             </div>
 
-            <a href="#waitlist" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
-                🚀 Join the Early Access Waitlist
+            <a href="#waitlist-form" 
+               class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl">
+                Secure Your Early Bird Access Now!
             </a>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 md:px-8">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-16 text-white leading-tight">
-                Unlock the Future of AI Development on Apple
+    <section class="py-16 sm:py-20 bg-gray-900 text-center fade-in">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-16 text-blue-400">
+                What's Inside the Mastering Apple's Gen AI Toolkit?
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                <!-- Feature 1: Comprehensive E-book -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-5xl mb-6 text-blue-500">📚</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-50">Comprehensive E-book Guide</h3>
+                    <p class="text-gray-300 text-lg">
+                        A frequently updated, in-depth e-book for developers on integrating Apple's new Gen AI frameworks from Xcode to deployment.
+                    </p>
+                </div>
                 
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-6 text-blue-400 text-center">🍎</div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Apple-Native AI Integration</h3>
-                    <p class="text-gray-300 text-center">
-                        Purpose-built for the Apple ecosystem. Directly tap into iOS, macOS, and iPadOS frameworks with our optimized Gen AI APIs.
+                <!-- Feature 2: Exclusive Video Tutorials -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-5xl mb-6 text-green-500">🎬</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-50">Exclusive Video Tutorials</h3>
+                    <p class="text-gray-300 text-lg">
+                        Step-by-step video walkthroughs covering practical implementations and advanced techniques, guided by industry experts.
                     </p>
                 </div>
-
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-6 text-green-400 text-center">⚙️</div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Pre-built, Customizable Components</h3>
-                    <p class="text-gray-300 text-center">
-                        Drag-and-drop AI features into your apps. From natural language processing to image generation, accelerate your development.
+                
+                <!-- Feature 3: Practical Code Examples -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-5xl mb-6 text-purple-500">💻</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-50">Practical Code Examples</h3>
+                    <p class="text-gray-300 text-lg">
+                        Ready-to-use code snippets and full project examples to jumpstart your AI integration into Apple platforms.
                     </p>
                 </div>
-
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-6 text-yellow-400 text-center">⚡</div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Low-Code AI Environment</h3>
-                    <p class="text-gray-300 text-center">
-                        Reduce boilerplate code and focus on innovation. Our intuitive low-code tools empower rapid AI prototyping and deployment.
-                    </p>
-                </div>
-
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-6 text-purple-400 text-center">🔒</div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Secure & Scalable APIs</h3>
-                    <p class="text-gray-300 text-center">
-                        Robust APIs designed for performance and security, ensuring your Gen AI applications run smoothly and protect user data.
-                    </p>
-                </div>
-
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-6 text-red-400 text-center">🛠️</div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Future-Proofed for Apple AI</h3>
-                    <p class="text-gray-300 text-center">
-                        Stay ahead of the curve. Our toolkit is built to seamlessly adapt and leverage Apple's evolving AI models and frameworks.
-                    </p>
-                </div>
-
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-6 text-teal-400 text-center">📈</div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Recurring Revenue Ready</h3>
-                    <p class="text-gray-300 text-center">
-                        Build powerful AI features that can drive engagement and open up new recurring revenue streams for your apps.
+                
+                <!-- Feature 4: Weekly Apple AI Trends Newsletter -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-5xl mb-6 text-red-500">📰</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-50">Weekly 'Apple AI Trends' Newsletter</h3>
+                    <p class="text-gray-300 text-lg">
+                        Stay ahead with weekly updates, analysis of new developments, and insights into Apple's evolving AI ecosystem.
                     </p>
                 </div>
             </div>
@@ -143,64 +121,95 @@
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 md:px-8 max-w-2xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-8 text-white">
-                👋 Join the AI Revolution on Apple!
+    <section id="waitlist-form" class="py-16 sm:py-20 bg-gray-950 text-center fade-in">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 text-yellow-400">
+                Don't Miss Out! Join the Early Bird Waitlist!
             </h2>
-            <p class="text-lg text-gray-300 text-center mb-12">
-                Be among the first to experience the power of the Gen AI Developer Toolkit. Sign up for early access, exclusive updates, and launch discounts.
+            <p class="text-lg sm:text-xl mb-10 text-gray-300 max-w-xl mx-auto">
+                Get notified the moment 'Mastering Apple's Gen AI Toolkit' launches and claim your exclusive early bird discount!
             </p>
-
-            <form class="bg-gray-900 p-8 md:p-10 rounded-xl shadow-2xl space-y-6 border border-gray-700">
-                <div>
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Appleseed" class="shadow-sm appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 bg-gray-700 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" required>
+            
+            <form class="bg-gray-800 p-8 sm:p-10 rounded-xl shadow-2xl border border-blue-800">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-lg sm:text-xl font-semibold mb-3 text-gray-200">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required
+                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 text-lg">
                 </div>
-                <div>
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john@example.com" class="shadow-sm appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 bg-gray-700 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" required>
+                <div class="mb-8 text-left">
+                    <label for="email" class="block text-lg sm:text-xl font-semibold mb-3 text-gray-200">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required
+                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 text-lg">
                 </div>
-                <div>
-                    <label for="company" class="block text-gray-300 text-sm font-bold mb-2">Company / Organization (Optional)</label>
-                    <input type="text" id="company" name="company" placeholder="Apple Developers Inc." class="shadow-sm appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 bg-gray-700 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200">
-                </div>
-                
-                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-4 rounded-lg text-lg transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 shadow-md">
-                    Sign Me Up for Early Access!
+                <button type="submit" 
+                        class="w-full bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-bold py-4 px-8 rounded-full text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    Join Waitlist & Secure 20% Early Bird Discount
                 </button>
-                <p class="text-center text-sm text-gray-400 mt-4">
-                    We respect your privacy. Your email will only be used for updates on the Gen AI Developer Toolkit.
-                </p>
+                <p class="text-sm mt-4 text-gray-400">Your information is safe with us. We'll only send relevant updates.</p>
             </form>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-950 py-10">
-        <div class="container mx-auto px-4 md:px-8 text-center text-gray-500 text-sm">
-            <p>&copy; 2024 Gen AI Developer Toolkit. All rights reserved.</p>
-            <p class="mt-2">Built for Apple Developers, by developers.</p>
+    <!-- Footer (Optional, but good for completeness) -->
+    <footer class="bg-gray-900 py-10 text-center text-gray-400 text-sm">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2024 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">Leveraging high-margin knowledge products for your success.</p>
         </div>
     </footer>
 
-    <!-- Simple CSS animation for text, purely aesthetic, not critical to functionality -->
-    <style>
-        @keyframes pulseText {
-            0% {
-                text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-            }
-            50% {
-                text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(78, 151, 237, 0.6);
-            }
-            100% {
-                text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-            }
-        }
-        .animate-pulse-text {
-            animation: pulseText 3s infinite ease-in-out;
-        }
-    </style>
+    <!-- JavaScript for Countdown Timer -->
+    <script>
+        // Set the launch date for the countdown.
+        // For demonstration, let's set it to 7 days from the current time.
+        const now = new Date();
+        const launchDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 days from now
+        // For actual WWDC, you'd set a specific date and time, e.g.:
+        // const launchDate = new Date("Jun 15, 2024 10:00:00 GMT-0700"); 
 
+        const countdownElement = document.getElementById('countdown');
+
+        function updateCountdown() {
+            const currentTime = new Date().getTime();
+            const distance = launchDate - currentTime;
+
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            if (distance < 0) {
+                countdownElement.innerHTML = '<span class="text-red-500 text-2xl sm:text-3xl md:text-4xl font-bold">SALE ENDED!</span>';
+                // Optionally hide the button or change its text here
+                document.querySelector('a[href="#waitlist-form"]').style.display = 'none'; // Example
+                return;
+            }
+
+            countdownElement.innerHTML = `
+                <div class="flex flex-col items-center">
+                    <div class="bg-gray-800 p-3 sm:p-4 rounded-lg text-3xl sm:text-4xl md:text-5xl font-extrabold leading-none">${String(days).padStart(2, '0')}</div>
+                    <div class="text-sm sm:text-base mt-2 text-gray-400">Days</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-gray-800 p-3 sm:p-4 rounded-lg text-3xl sm:text-4xl md:text-5xl font-extrabold leading-none">${String(hours).padStart(2, '0')}</div>
+                    <div class="text-sm sm:text-base mt-2 text-gray-400">Hours</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-gray-800 p-3 sm:p-4 rounded-lg text-3xl sm:text-4xl md:text-5xl font-extrabold leading-none">${String(minutes).padStart(2, '0')}</div>
+                    <div class="text-sm sm:text-base mt-2 text-gray-400">Minutes</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-gray-800 p-3 sm:p-4 rounded-lg text-3xl sm:text-4xl md:text-5xl font-extrabold leading-none">${String(seconds).padStart(2, '0')}</div>
+                    <div class="text-sm sm:text-base mt-2 text-gray-400">Seconds</div>
+                </div>
+            `;
+        }
+
+        // Initial call
+        updateCountdown(); 
+        // Update every second
+        const countdownInterval = setInterval(updateCountdown, 1000);
+    </script>
 </body>
 </html>
