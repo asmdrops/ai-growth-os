@@ -1,228 +1,268 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GhostShield - Proactive Security & Remediation for Ghost CMS</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Defend M365: Real-Time Threat Protection & Automated Remediation</title>
+    <meta name="description" content="Protect your Microsoft 365 tenant from advanced phishing, suspicious OAuth grants, device code attacks, and atypical app permissions with real-time monitoring, automated remediation, and targeted security training. Join the waitlist!">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
     <style>
+        /* Custom Keyframe Animations for a modern touch */
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.01); }
+        }
+        .animate-pulse {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes fadeInMoveUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInMoveUp 0.8s ease-out forwards;
+        }
+
+        /* Basic override for better font smoothing on dark backgrounds */
         body {
-            font-family: 'Inter', sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-900 text-white font-sans antialiased">
+
+    <!-- Header (Minimalist for focused landing page) -->
+    <header class="absolute top-0 left-0 right-0 z-20 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white tracking-tight">Defend M365</a>
+        </div>
+    </header>
 
     <!-- Hero Section -->
     <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+        <!-- Background Image -->
         <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');"></div>
-        <div class="absolute inset-0 bg-black opacity-75"></div> <!-- Dark overlay -->
+        <!-- Dark Overlay for Readability -->
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-900/70 to-gray-900/90"></div>
         
-        <div class="relative z-10 p-4 max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
-                Stop the <span class="text-red-500">ClickFix Campaign</span>. Secure Your Ghost CMS.
+        <div class="relative z-10 p-4 md:p-8 max-w-4xl mx-auto">
+            <p class="text-blue-400 uppercase tracking-wide text-sm md:text-base mb-4 font-semibold">
+                🚨 FBI Warning: Kali365 Phishing Service Targets M365
+            </p>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6 animate-pulse">
+                Stop Advanced M365 Phishing Before It Starts.
             </h1>
-            <p class="text-lg md:text-xl lg:text-2xl mb-8 text-gray-200 font-light max-w-2xl mx-auto">
-                Introducing <span class="font-semibold text-indigo-400">GhostShield</span>: Automated vulnerability scanning, real-time threat detection for CVE-2026-26980, and one-click remediation.
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Real-time protection against suspicious OAuth grants, device code attacks, and atypical app permissions. Automated remediation, empowering your team with targeted M365 security awareness.
             </p>
             
-            <!-- Limited Time Offer Countdown -->
-            <div class="bg-gradient-to-r from-indigo-700 to-purple-700 p-4 rounded-lg shadow-xl mb-8 border-2 border-indigo-500">
-                <p class="text-lg md:text-xl font-bold mb-2 text-white">LIMITED TIME OFFER: Get 20% Off Your First Year!</p>
-                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 text-white">
-                    <div>
-                        <span id="days" class="block text-3xl md:text-4xl lg:text-5xl font-extrabold">00</span>
-                        <span class="block text-xs md:text-sm">Days</span>
-                    </div>
-                    <span class="text-3xl md:text-4xl lg:text-5xl font-extrabold">:</span>
-                    <div>
-                        <span id="hours" class="block text-3xl md:text-4xl lg:text-5xl font-extrabold">00</span>
-                        <span class="block text-xs md:text-sm">Hours</span>
-                    </div>
-                    <span class="text-3xl md:text-4xl lg:text-5xl font-extrabold">:</span>
-                    <div>
-                        <span id="minutes" class="block text-3xl md:text-4xl lg:text-5xl font-extrabold">00</span>
-                        <span class="block text-xs md:text-sm">Minutes</span>
-                    </div>
-                    <span class="text-3xl md:text-4xl lg:text-5xl font-extrabold">:</span>
-                    <div>
-                        <span id="seconds" class="block text-3xl md:text-4xl lg:text-5xl font-extrabold">00</span>
-                        <span class="block text-xs md:text-sm">Seconds</span>
-                    </div>
-                </div>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
+                <a href="#waitlist" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                    Secure Your M365 Now
+                </a>
+                <a href="#features" class="bg-transparent border border-gray-500 hover:border-blue-500 text-gray-300 hover:text-blue-400 font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+                    Learn More
+                </a>
             </div>
 
-            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                Join the Waitlist & Lock In Your Discount
-            </a>
+            <!-- Limited Time Countdown -->
+            <div class="bg-gray-800/70 backdrop-blur-sm p-4 md:p-6 rounded-lg shadow-xl inline-block mt-8 animate-fade-in-up">
+                <p class="text-orange-400 font-semibold text-lg md:text-xl mb-3">Limited Time Founding Member Access!</p>
+                <div class="flex justify-center items-center space-x-4 md:space-x-6 text-2xl md:text-4xl font-mono text-white">
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-value font-bold text-3xl md:text-5xl">07</span>
+                        <span class="text-sm md:text-base text-gray-400">Days</span>
+                    </div>
+                    <span class="text-gray-500 text-3xl md:text-5xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-value font-bold text-3xl md:text-5xl">14</span>
+                        <span class="text-sm md:text-base text-gray-400">Hours</span>
+                    </div>
+                    <span class="text-gray-500 text-3xl md:text-5xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-value font-bold text-3xl md:text-5xl">38</span>
+                        <span class="text-sm md:text-base text-gray-400">Minutes</span>
+                    </div>
+                    <span class="text-gray-500 text-3xl md:text-5xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-value font-bold text-3xl md:text-5xl">52</span>
+                        <span class="text-sm md:text-base text-gray-400">Seconds</span>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-500 mt-2">
+                    *This countdown is for visual representation. A JavaScript implementation would be required for dynamic functionality.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Trend Section -->
+    <section class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-5xl text-center">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-8 leading-tight">
+                The New Frontier of M365 Attacks: <span class="text-red-500">Are You Prepared?</span>
+            </h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-10">
+                Traditional security measures are failing against sophisticated Microsoft 365 attacks. From the FBI's recent warnings about services like Kali365, to the insidious nature of OAuth consent phishing and device code attacks, adversaries are bypassing MFA and gaining persistent access to your most critical data.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl text-left border border-gray-700 hover:border-blue-500 transition duration-300">
+                    <h3 class="text-xl font-bold mb-3 text-blue-400">⚠️ OAuth Consent Phishing</h3>
+                    <p class="text-gray-300">Granting malicious apps broad access, bypassing MFA and remaining undetected for extended periods.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl text-left border border-gray-700 hover:border-blue-500 transition duration-300">
+                    <h3 class="text-xl font-bold mb-3 text-red-400">🚫 Device Code Attacks</h3>
+                    <p class="text-gray-300">Exploiting trust relationships to authenticate to M365 without direct password compromise, a stealthy MFA bypass.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl text-left border border-gray-700 hover:border-blue-500 transition duration-300">
+                    <h3 class="text-xl font-bold mb-3 text-yellow-400">🕵️ Atypical App Permissions</h3>
+                    <p class="text-gray-300">Legitimate-looking applications requesting overly broad permissions, a common vector for lateral movement and data exfiltration.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900 text-center">
-        <div class="container mx-auto px-4 max-w-7xl">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-12 text-white">
-                Unmatched Protection Engineered for Ghost CMS
+    <section id="features" class="py-16 md:py-24 bg-gradient-to-b from-gray-900 to-zinc-900">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-12 leading-tight">
+                Unmatched Protection for Your M365 Ecosystem
             </h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-16 max-w-3xl mx-auto">
-                GhostShield provides a comprehensive security suite specifically designed to safeguard your Ghost CMS installations from known and emerging threats.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-
-                <!-- Feature 1: Automated Vulnerability Scanning -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-indigo-500 mb-4">
-                        <svg class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.276a1.001 1.001 0 00-1.29.135L9.5 13.784l-2.488-2.488a1.001 1.001 0 00-1.415 1.415l3.181 3.182a1 1 0 001.414 0l5.421-5.421a1.001 1 0 00-.135-1.29zM12 2a10 10 0 100 20 10 10 0 000-20z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Targeted Vulnerability Scanning</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: Real-Time Monitoring -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl flex flex-col items-center text-center border border-gray-700 hover:border-teal-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-teal-400 mb-6">👁️</div>
+                    <h3 class="text-2xl font-bold mb-4">Real-Time Threat Monitoring</h3>
                     <p class="text-gray-300">
-                        Proactively scan your Ghost CMS for critical vulnerabilities, including the notorious CVE-2026-26980 SQL injection flaw. Stay one step ahead of attackers.
+                        Proactive surveillance for suspicious OAuth grants, device code phishing, and atypical application permissions across your M365 tenant. Catch threats the moment they emerge.
                     </p>
                 </div>
-
-                <!-- Feature 2: Real-time Threat Detection -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-indigo-500 mb-4">
-                        <svg class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Real-time 'ClickFix' Threat Detection</h3>
+                <!-- Feature 2: Automated Remediation -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl flex flex-col items-center text-center border border-gray-700 hover:border-purple-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-purple-400 mb-6">⚙️</div>
+                    <h3 class="text-2xl font-bold mb-4">Automated Remediation Workflows</h3>
                     <p class="text-gray-300">
-                        Leverage advanced threat intelligence to detect and block 'ClickFix campaign' malware and other malicious activities targeting your Ghost CMS, 24/7.
+                        Rapidly neutralize threats with intelligent, pre-configured remediation actions. Automatically revoke malicious grants, block suspicious apps, and isolate compromised accounts.
                     </p>
                 </div>
-
-                <!-- Feature 3: Remediation Dashboard -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-indigo-500 mb-4">
-                        <svg class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-4m0 0l4-4m-4 4L10 4m0 0l-4 4m4-4v4m0 0l4 4m-4-4H4m8 0h8" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">One-Click Remediation & Hardening</h3>
+                <!-- Feature 3: Targeted Security Awareness -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl flex flex-col items-center text-center border border-gray-700 hover:border-green-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-green-400 mb-6">🎓</div>
+                    <h3 class="text-2xl font-bold mb-4">Targeted Security Awareness</h3>
                     <p class="text-gray-300">
-                        Instantly clean up infections with our one-click tools and receive actionable security hardening recommendations to fortify your Ghost CMS setup.
+                        Empower your end-users with dynamic, M365-specific training modules. Combat advanced phishing bypasses, turning your weakest link into your strongest defense.
                     </p>
                 </div>
-
-                <!-- Feature 4 (Premium): Managed Incident Response -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-500 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-purple-500 mb-4">
-                        <svg class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2zM12 14c-1.657 0-3-.895-3-2s1.343-2 3-2 3 .895 3 2-1.343 2-3 2z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Managed Incident Response <span class="text-sm px-2 py-1 bg-purple-600 rounded-full text-white font-medium ml-2">Premium</span></h3>
+                <!-- Feature 4: Comprehensive Threat Intelligence -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl flex flex-col items-center text-center border border-gray-700 hover:border-red-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-red-400 mb-6">📊</div>
+                    <h3 class="text-2xl font-bold mb-4">Comprehensive Threat Intelligence</h3>
                     <p class="text-gray-300">
-                        For critical incidents, our expert security team provides hands-on, managed incident response to minimize damage and restore operations swiftly.
+                        Leverage continuously updated threat intelligence feeds specifically curated for M365 attack vectors, staying ahead of emerging threats like Kali365.
                     </p>
                 </div>
-
-                <!-- Feature 5 (Premium): Advanced WAF Integration -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-500 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-purple-500 mb-4">
-                        <svg class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Advanced WAF & DDoS Protection <span class="text-sm px-2 py-1 bg-purple-600 rounded-full text-white font-medium ml-2">Premium</span></h3>
+                <!-- Feature 5: Cloud-Native & Scalable -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl flex flex-col items-center text-center border border-gray-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-indigo-400 mb-6">☁️</div>
+                    <h3 class="text-2xl font-bold mb-4">Cloud-Native & Scalable</h3>
                     <p class="text-gray-300">
-                        Integrate with leading Web Application Firewalls (WAFs) and DDoS protection services for an additional layer of perimeter defense and performance.
+                        Built for the cloud, Defend M365 seamlessly integrates with your existing tenant, scaling effortlessly to protect organizations of all sizes.
+                    </p>
+                </div>
+                <!-- Feature 6: Enhanced Security Posture -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl flex flex-col items-center text-center border border-gray-700 hover:border-orange-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-orange-400 mb-6">🔒</div>
+                    <h3 class="text-2xl font-bold mb-4">Enhanced Security Posture</h3>
+                    <p class="text-gray-300">
+                        Go beyond basic MFA. Our platform elevates your security posture against the most sophisticated, multi-stage M365 attacks, ensuring peace of mind.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / CTA Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gradient-to-br from-gray-900 to-gray-800 text-center relative overflow-hidden">
-        <!-- Decorative elements -->
-        <div class="absolute inset-0 opacity-10">
-            <svg class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <pattern id="pattern-circles" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                    <circle cx="10" cy="10" r="1" fill="#4a5568" />
-                </pattern>
-                <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)" />
-            </svg>
-        </div>
-
-        <div class="container mx-auto px-4 max-w-3xl relative z-10">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-8 text-white">
-                Don't Wait Until It's Too Late.
+    <!-- Waitlist / Call to Action Form -->
+    <section id="waitlist" class="py-16 md:py-24 bg-zinc-900">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
+                Get Early Access & Secure Your M365 Tenant
             </h2>
             <p class="text-lg md:text-xl text-gray-300 mb-10">
-                Join the GhostShield waitlist today to get early access, exclusive launch discounts, and ensure your Ghost CMS is protected from the next wave of attacks.
+                Join our exclusive waitlist for early access to Defend M365. Limited spots available for founding members to shape the future of M365 security and gain premium support.
             </p>
-
-            <form class="bg-gray-800 p-8 md:p-10 rounded-xl shadow-2xl max-w-lg mx-auto border border-gray-700">
+            
+            <form class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700 max-w-md mx-auto">
                 <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-semibold mb-2">Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white placeholder-gray-400 outline-none" required>
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-700 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" required>
+                </div>
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Work Email</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@yourcompany.com" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-700 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" required>
                 </div>
                 <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-semibold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white placeholder-gray-400 outline-none" required>
+                    <label for="company" class="block text-gray-300 text-sm font-bold mb-2">Company Name</label>
+                    <input type="text" id="company" name="company" placeholder="Acme Corp." class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-700 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" required>
                 </div>
-                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
-                    Secure My Ghost CMS Now!
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 w-full">
+                    Join the Waitlist
                 </button>
-                <p class="text-xs text-gray-500 mt-4">We respect your privacy. No spam, ever.</p>
+                <p class="text-xs text-gray-500 mt-4">We respect your privacy. Your data will not be shared.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm border-t border-gray-800">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2023 GhostShield. All rights reserved. <a href="#" class="text-indigo-400 hover:text-indigo-300">Privacy Policy</a> | <a href="#" class="text-indigo-400 hover:text-indigo-300">Terms of Service</a></p>
+    <footer class="bg-gray-950 py-10">
+        <div class="container mx-auto px-4 text-center text-gray-500">
+            <p>&copy; 2023 Defend M365. All rights reserved.</p>
+            <div class="mt-4 text-sm">
+                <a href="#" class="text-gray-400 hover:text-blue-400 mx-2">Privacy Policy</a> | 
+                <a href="#" class="text-gray-400 hover:text-blue-400 mx-2">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
+    <!--
+    NOTE: The countdown timer above is for visual representation only.
+    A JavaScript implementation would be required to make it dynamic.
+    Example JS snippet (not included in raw HTML output as per requirements):
+
     <script>
-        function setupCountdown() {
-            // Set the date we're counting down to (e.g., 7 days from now)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // 7 days from now
-            
-            // For testing, uncomment and set a specific future date/time for a short countdown:
-            // const futureTime = new Date().getTime() + (1000 * 60 * 5); // 5 minutes from now
-            // const countDownDate = new Date(futureTime);
+        document.addEventListener('DOMContentLoaded', () => {
+            const countdownElements = document.querySelectorAll('.countdown-value');
+            const targetDate = new Date();
+            targetDate.setDate(targetDate.getDate() + 7); // Set target 7 days from now
 
-            const x = setInterval(function() {
+            function updateCountdown() {
                 const now = new Date().getTime();
-                const distance = countDownDate - now;
+                const distance = targetDate - now;
 
-                // Calculate days, hours, minutes, seconds
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    countdownElements.forEach(el => el.textContent = '00');
+                    // Optionally update a message, e.g., document.querySelector('.countdown-message').textContent = 'Access Expired';
+                    return;
+                }
+
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Display the result in the respective elements, ensuring two digits
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                countdownElements[0].textContent = String(days).padStart(2, '0');
+                countdownElements[1].textContent = String(hours).padStart(2, '0');
+                countdownElements[2].textContent = String(minutes).padStart(2, '0');
+                countdownElements[3].textContent = String(seconds).padStart(2, '0');
+            }
 
-                // If the countdown is over, display expired message
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<p class='text-xl md:text-2xl font-bold'>OFFER EXPIRED</p>";
-                }
-            }, 1000); // Update every 1 second
-        }
-
-        // Run the countdown setup when the DOM is fully loaded
-        document.addEventListener('DOMContentLoaded', setupCountdown);
+            const countdownInterval = setInterval(updateCountdown, 1000);
+            updateCountdown(); // Initial call to display immediately
+        });
     </script>
+    -->
 </body>
 </html>
