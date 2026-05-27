@@ -1,213 +1,238 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ascend AI: AI-Powered Wearable Data Insights & Coaching</title>
+    <title>Roku OS Ad Survival Guide: Reclaim Your Streaming Experience!</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        /* Custom scrollbar for dark mode */
-        body::-webkit-scrollbar {
-            width: 8px;
-        }
-        body::-webkit-scrollbar-track {
-            background: #1a202c; /* dark-mode background */
-        }
-        body::-webkit-scrollbar-thumb {
-            background-color: #4a5568; /* dark-mode scrollbar thumb */
-            border-radius: 20px;
-            border: 2px solid #1a202c;
-        }
-        /* Hero image styling */
-        .hero-bg {
-            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
+        /* Custom styles for the hero background image and overlay */
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            position: relative;
+            min-height: 80vh; /* Ensure it's tall enough on all screens */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+            z-index: 0;
+        }
+        /* Gradient for buttons and highlights */
+        .btn-gradient {
+            background-image: linear-gradient(to right, #6D28D9, #9333EA); /* Purple-Indigo gradient */
+        }
+        .btn-gradient:hover {
+            background-image: linear-gradient(to right, #8B5CF6, #A78BFA); /* Lighter hover */
+        }
+        /* Custom scroll behavior for smooth navigation if internal links were present */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <section class="relative hero-bg min-h-screen flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-transparent opacity-90"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-gray-900 opacity-60"></div>
-        <div class="relative z-10 max-w-4xl mx-auto text-center space-y-8">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight text-white drop-shadow-lg">
-                <span class="bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text">Ascend AI:</span> Unlock Your Peak Potential
+    <header class="hero-background py-20 px-4">
+        <div class="hero-overlay"></div>
+        <div class="relative z-10 max-w-5xl mx-auto text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                <span class="text-purple-400">Reclaim Your Roku:</span> Master the New Ad-Heavy OS
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 font-light max-w-3xl mx-auto drop-shadow-md">
-                Go beyond basic. Integrate your Fitbit Air, Whoop, Oura, and more for advanced analytics, predictive health trends, and AI-driven coaching plans. Optimize performance, accelerate recovery, and elevate your well-being.
+            <p class="text-xl sm:text-2xl lg:text-3xl mb-10 text-gray-200 font-light max-w-4xl mx-auto">
+                Tired of the permanent ad taking over your Roku home screen? Our comprehensive guide reveals how to navigate, optimize, and discover ad-free alternatives <span class="font-semibold text-yellow-300">starting today.</span>
             </p>
 
-            <div class="bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-sm p-6 rounded-xl shadow-2xl space-y-4">
-                <p class="text-xl sm:text-2xl font-semibold text-blue-300">
-                    Exclusive Early Access - Limited Time Offer!
+            <div class="bg-gray-800 bg-opacity-75 p-6 md:p-8 rounded-xl shadow-2xl mb-8 border-2 border-purple-600 max-w-md mx-auto transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <p class="text-lg sm:text-xl text-yellow-300 font-bold mb-4 animate-pulse">
+                    ⚡ LIMITED TIME OFFER: Get 30% OFF Your Guide!
                 </p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-white text-3xl sm:text-4xl md:text-5xl font-bold">
+                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 text-white text-3xl sm:text-4xl lg:text-5xl font-extrabold">
                     <div class="flex flex-col items-center">
-                        <span id="days">00</span>
-                        <span class="text-sm font-normal text-gray-400">Days</span>
+                        <span id="days" class="w-14 sm:w-20 bg-gray-900 p-2 rounded-lg">00</span>
+                        <span class="text-xs sm:text-sm text-gray-400 font-medium mt-1">DAYS</span>
                     </div>
-                    <span class="text-gray-500">:</span>
+                    <span class="text-2xl sm:text-3xl">:</span>
                     <div class="flex flex-col items-center">
-                        <span id="hours">00</span>
-                        <span class="text-sm font-normal text-gray-400">Hours</span>
+                        <span id="hours" class="w-14 sm:w-20 bg-gray-900 p-2 rounded-lg">00</span>
+                        <span class="text-xs sm:text-sm text-gray-400 font-medium mt-1">HOURS</span>
                     </div>
-                    <span class="text-gray-500">:</span>
+                    <span class="text-2xl sm:text-3xl">:</span>
                     <div class="flex flex-col items-center">
-                        <span id="minutes">00</span>
-                        <span class="text-sm font-normal text-gray-400">Minutes</span>
+                        <span id="minutes" class="w-14 sm:w-20 bg-gray-900 p-2 rounded-lg">00</span>
+                        <span class="text-xs sm:text-sm text-gray-400 font-medium mt-1">MINS</span>
                     </div>
-                    <span class="text-gray-500">:</span>
+                    <span class="text-2xl sm:text-3xl">:</span>
                     <div class="flex flex-col items-center">
-                        <span id="seconds">00</span>
-                        <span class="text-sm font-normal text-gray-400">Seconds</span>
+                        <span id="seconds" class="w-14 sm:w-20 bg-gray-900 p-2 rounded-lg">00</span>
+                        <span class="text-xs sm:text-sm text-gray-400 font-medium mt-1">SECS</span>
                     </div>
                 </div>
-                <a href="#waitlist" class="inline-block bg-gradient-to-r from-blue-600 to-purple-700 hover:from-blue-700 hover:to-purple-800 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl transform hover:scale-105 transition-all duration-300 ease-in-out shadow-lg">
-                    Join the Exclusive Waitlist
+                <a href="#waitlist" class="mt-8 inline-block px-10 py-4 text-xl font-bold rounded-full btn-gradient shadow-lg transform transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-75">
+                    Get Your Roku OS Ad Survival Guide Now!
                 </a>
-                <p class="text-sm text-gray-400">Don't miss out on transforming your health with cutting-edge AI.</p>
+                <p class="mt-4 text-sm text-gray-300">Instant Digital Download. Lifetime Access. <span class="font-semibold text-purple-300">Don't miss out!</span></p>
             </div>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-20 md:py-24 bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 sm:mb-16">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4">
-                    Why <span class="bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text">Ascend AI</span> is Your Next Step
-                </h2>
-                <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-                    Go beyond the generic data. Our platform provides the intelligence you need to truly understand and optimize your body's performance and well-being.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Feature 1: Personalized AI Analytics -->
-                <div class="bg-gray-800 bg-opacity-80 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-blue-500 transition-all duration-300">
-                    <div class="text-blue-400 text-4xl mb-4">🚀</div> 
-                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-3">Personalized AI Analytics</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Deep dive into your health data with AI-driven insights tailored just for you. Understand complex patterns and optimize every aspect of your well-being.
+    <section id="features" class="py-16 md:py-24 px-4 bg-gray-900">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 md:mb-16 text-white">
+                Inside Your Roku OS Ad Survival Guide, You'll Discover:
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 flex flex-col items-center text-center">
+                    <div class="text-purple-400 text-5xl mb-4">💡</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Effortless Home Screen Navigation</h3>
+                    <p class="text-gray-300 text-lg">
+                        Bypass the intrusive new ad with expert-proven techniques and reclaim precious screen real estate.
                     </p>
                 </div>
-
-                <!-- Feature 2: Predictive Health Trends -->
-                <div class="bg-gray-800 bg-opacity-80 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300">
-                    <div class="text-purple-400 text-4xl mb-4">🔮</div> 
-                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-3">Predictive Health Trends</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Anticipate health shifts before they happen. Our platform analyzes your data to forecast potential issues and guide proactive adjustments.
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 flex flex-col items-center text-center">
+                    <div class="text-purple-400 text-5xl mb-4">⚙️</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Advanced Roku Optimization Secrets</h3>
+                    <p class="text-gray-300 text-lg">
+                        Unlock hidden settings to minimize ad exposure, boost performance, and personalize your experience.
                     </p>
                 </div>
-
-                <!-- Feature 3: Intelligent Coaching Plans -->
-                <div class="bg-gray-800 bg-opacity-80 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-green-500 transition-all duration-300">
-                    <div class="text-green-400 text-4xl mb-4">🧠</div> 
-                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-3">Intelligent Coaching Plans</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Receive dynamic, AI-powered coaching that adapts to your real-time data. Achieve your performance, recovery, and wellness goals faster.
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 flex flex-col items-center text-center">
+                    <div class="text-purple-400 text-5xl mb-4">🚫</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Legitimate Ad-Free Alternatives</h3>
+                    <p class="text-gray-300 text-lg">
+                        Explore vetted streaming services and devices that genuinely offer a superior, ad-free viewing journey.
                     </p>
                 </div>
-
-                <!-- Feature 4: Universal Wearable Integration -->
-                <div class="bg-gray-800 bg-opacity-80 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-orange-500 transition-all duration-300">
-                    <div class="text-orange-400 text-4xl mb-4">🔗</div> 
-                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-3">Universal Wearable Integration</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Seamlessly connect all your favorite health trackers – Fitbit Air, Whoop, Oura, and more – into one unified dashboard for a holistic view.
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 flex flex-col items-center text-center">
+                    <div class="text-purple-400 text-5xl mb-4">🛡️</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Future-Proof Your Streaming Setup</h3>
+                    <p class="text-gray-300 text-lg">
+                        Stay ahead of future ad integrations with adaptable strategies that keep you in control, always.
+                    </p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 flex flex-col items-center text-center">
+                    <div class="text-purple-400 text-5xl mb-4">⏱️</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Save Time, Banish Frustration</h3>
+                    <p class="text-gray-300 text-lg">
+                        Stop endlessly searching for solutions. Get direct, actionable steps to restore your peace of mind immediately.
+                    </p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 flex flex-col items-center text-center">
+                    <div class="text-purple-400 text-5xl mb-4">📈</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Expert Insights & Practical Tools</h3>
+                    <p class="text-gray-300 text-lg">
+                        Benefit from research-backed strategies, exclusive insights, and practical tools tailored for Roku users.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-20 md:py-24 bg-gray-800">
-        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4">
-                Be Among the First. Join the Waitlist!
+    <!-- Call to Action / Instant Access Form Section -->
+    <section id="waitlist" class="py-16 md:py-24 px-4 bg-gray-800 text-center">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-8 text-white">
+                Ready to Take Back Control of Your Roku?
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-xl mx-auto">
-                Secure your spot for early access to Ascend AI. Don't miss out on the future of personalized health insights and coaching. Limited spots available for beta testers!
+            <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Join a growing community of smart streamers reclaiming their Roku experience. Secure your copy of the
+                <span class="font-semibold text-purple-400">Roku OS Ad Survival Guide</span> now and finally say goodbye to unwanted interruptions.
             </p>
 
-            <form class="space-y-6 bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700">
-                <div>
-                    <label for="name" class="sr-only">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Full Name" required
-                           class="w-full p-4 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
-                </div>
-                <div>
-                    <label for="email" class="sr-only">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
-                           class="w-full p-4 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
-                </div>
-                <div>
+            <div class="bg-gray-900 p-8 md:p-10 rounded-xl shadow-2xl border-2 border-purple-700 max-w-xl mx-auto">
+                <h3 class="text-2xl sm:text-3xl font-bold mb-6 text-white">Grab Your Guide & <span class="text-yellow-300">Save 30% Today!</span></h3>
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="sr-only">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" required
+                               class="w-full px-5 py-3 rounded-lg bg-gray-700 text-gray-200 placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg shadow-inner">
+                    </div>
+                    <div>
+                        <label for="email" class="sr-only">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
+                               class="w-full px-5 py-3 rounded-lg bg-gray-700 text-gray-200 placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg shadow-inner">
+                    </div>
                     <button type="submit"
-                            class="w-full bg-gradient-to-r from-blue-600 to-purple-700 hover:from-blue-700 hover:to-purple-800 text-white font-bold py-4 px-8 rounded-lg text-xl transform hover:scale-105 transition-all duration-300 ease-in-out shadow-lg">
-                        Get Early Access Now
+                            class="w-full px-8 py-4 text-xl font-bold rounded-full btn-gradient shadow-xl transform transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-600 focus:ring-opacity-75">
+                        Secure My Instant Access & Discount!
                     </button>
-                </div>
-                <p class="text-sm text-gray-500">We respect your privacy. No spam, ever.</p>
-            </form>
+                </form>
+                <p class="mt-6 text-sm text-gray-400">
+                    <span class="text-yellow-300">*</span>Your information is 100% secure and will never be shared. By clicking, you agree to receive updates and exclusive offers.
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p>&copy; 2023 Ascend AI. All rights reserved. Integrating with Fitbit Air, Whoop, Oura, and more.</p>
+    <footer class="bg-gray-900 text-gray-500 py-10 px-4 text-center border-t border-gray-700">
+        <div class="container mx-auto text-sm">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="hover:text-purple-400 transition-colors duration-200">Privacy Policy</a> |
+                <a href="#" class="hover:text-purple-400 transition-colors duration-200">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
-    <!-- Countdown Script -->
+    <!-- JavaScript for Countdown Timer (Included within HTML for self-contained functionality) -->
     <script>
-        const countdown = () => {
-            // Set end date to 7 days from the current time for the "Limited Time" offer
-            const endDate = new Date();
-            endDate.setDate(endDate.getDate() + 7); // Adds 7 days to the current date
+        // Set the date we're counting down to (e.g., 3 days, 12 hours, 30 minutes from now)
+        const now = new Date();
+        const countdownDate = new Date(now.getTime() + (3 * 24 * 60 * 60 * 1000) + (12 * 60 * 60 * 1000) + (30 * 60 * 1000)); // ~3 days, 12h, 30m from now
 
-            const interval = setInterval(() => {
-                const now = new Date().getTime();
-                const distance = endDate - now;
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate.getTime() - now;
 
-                // Time calculations for days, hours, minutes and seconds
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Display the result in the corresponding elements
-                document.getElementById("days").innerText = days < 10 ? '0' + days : days;
-                document.getElementById("hours").innerText = hours < 10 ? '0' + hours : hours;
-                document.getElementById("minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
-                document.getElementById("seconds").innerText = seconds < 10 ? '0' + seconds : seconds;
+            // Update the elements if they exist
+            if (document.getElementById("days")) document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            if (document.getElementById("hours")) document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            if (document.getElementById("minutes")) document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            if (document.getElementById("seconds")) document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-                // If the count down is finished, write some text
-                if (distance < 0) {
-                    clearInterval(interval);
-                    document.getElementById("countdown").innerHTML = "<span class='text-red-400'>Offer Expired!</span>";
-                    // Optionally disable the waitlist button here
+            // If the countdown is over
+            if (distance < 0) {
+                clearInterval(x);
+                if (document.getElementById("countdown")) {
+                    document.getElementById("countdown").innerHTML = "<span class='text-red-500 text-lg sm:text-xl font-bold'>OFFER EXPIRED!</span>";
                 }
-            }, 1000);
-        };
-
-        // Call the countdown function when the window loads
-        window.onload = countdown;
+                const ctaButton = document.querySelector('.hero-background a.btn-gradient');
+                if (ctaButton) {
+                    ctaButton.innerText = "Offer Expired - View Full Price";
+                    ctaButton.classList.remove('btn-gradient', 'hover:scale-105');
+                    ctaButton.classList.add('bg-gray-600', 'cursor-not-allowed');
+                    ctaButton.removeAttribute('href'); // Remove link to form
+                }
+                const formButton = document.querySelector('#waitlist button[type="submit"]');
+                if (formButton) {
+                    formButton.innerText = "Offer Expired - View Full Price";
+                    formButton.classList.remove('btn-gradient', 'hover:scale-105');
+                    formButton.classList.add('bg-gray-600', 'cursor-not-allowed');
+                    formButton.setAttribute('disabled', 'true');
+                }
+                const offerText = document.querySelector('.animate-pulse');
+                if (offerText) offerText.innerHTML = "🚫 Offer has ended!";
+            }
+        }, 1000);
     </script>
-
 </body>
 </html>
