@@ -3,234 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roku OS Ad Survival Guide: Reclaim Your Streaming Experience!</title>
+    <title>The Google AI Escape Plan: Reclaim Your Privacy & Ad-Free Search</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for the hero background image and overlay */
-        .hero-background {
+        /* Custom styles for modern premium dark-mode aesthetic and responsiveness */
+        body {
+            font-family: 'Inter', sans-serif; /* A modern font choice */
+        }
+        .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            position: relative;
-            min-height: 80vh; /* Ensure it's tall enough on all screens */
+            background-attachment: fixed; /* For a subtle parallax effect */
+        }
+        .countdown-item {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            background-color: rgba(31, 41, 55, 0.8); /* bg-gray-800 with transparency */
+            border-radius: 0.5rem; /* rounded-lg */
+            padding: 0.75rem 1.25rem; /* p-3 px-5 */
+            margin: 0.5rem;
+            min-width: 70px; /* Ensure minimum width for values */
         }
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
-            z-index: 0;
+        .countdown-value {
+            font-size: 2.5rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+            line-height: 1; /* leading-none */
         }
-        /* Gradient for buttons and highlights */
-        .btn-gradient {
-            background-image: linear-gradient(to right, #6D28D9, #9333EA); /* Purple-Indigo gradient */
+        .countdown-label {
+            font-size: 0.875rem; /* text-sm */
+            text-transform: uppercase;
+            letter-spacing: 0.05em; /* tracking-wider */
+            margin-top: 0.25rem;
+            color: #9ca3af; /* text-gray-400 */
         }
-        .btn-gradient:hover {
-            background-image: linear-gradient(to right, #8B5CF6, #A78BFA); /* Lighter hover */
+        .form-input {
+            background-color: #1f2937; /* bg-gray-800 */
+            border: 1px solid #374151; /* border-gray-700 */
+            color: #d1d5db; /* text-gray-200 */
+            padding: 0.75rem 1rem; /* py-3 px-4 */
+            border-radius: 0.375rem; /* rounded-md */
+            transition: all 0.2s ease-in-out;
         }
-        /* Custom scroll behavior for smooth navigation if internal links were present */
-        html {
-            scroll-behavior: smooth;
+        .form-input:focus {
+            outline: none;
+            border-color: #3b82f6; /* border-blue-500 */
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* ring-blue-500/50 */
         }
-        body {
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        @keyframes pulse-subtle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.95; }
+        }
+        .animate-pulse-subtle {
+            animation: pulse-subtle 3s infinite ease-in-out;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-background py-20 px-4">
-        <div class="hero-overlay"></div>
-        <div class="relative z-10 max-w-5xl mx-auto text-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
-                <span class="text-purple-400">Reclaim Your Roku:</span> Master the New Ad-Heavy OS
+    <header class="relative min-h-screen flex items-center justify-center py-16 px-4 hero-bg">
+        <!-- Overlay for readability -->
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+
+        <div class="relative z-10 text-center max-w-5xl mx-auto px-4 md:px-8">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 animate-pulse-subtle">
+                Tired of Google's AI Overreach?
+                <span class="block text-blue-400 mt-2">Reclaim Your Digital Privacy & Ad-Free Peace!</span>
             </h1>
-            <p class="text-xl sm:text-2xl lg:text-3xl mb-10 text-gray-200 font-light max-w-4xl mx-auto">
-                Tired of the permanent ad taking over your Roku home screen? Our comprehensive guide reveals how to navigate, optimize, and discover ad-free alternatives <span class="font-semibold text-yellow-300">starting today.</span>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Join the growing wave of users ditching AI-cluttered search. This premium guide and toolkit will show you how to truly escape Big Tech's grip.
             </p>
 
-            <div class="bg-gray-800 bg-opacity-75 p-6 md:p-8 rounded-xl shadow-2xl mb-8 border-2 border-purple-600 max-w-md mx-auto transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                <p class="text-lg sm:text-xl text-yellow-300 font-bold mb-4 animate-pulse">
-                    ⚡ LIMITED TIME OFFER: Get 30% OFF Your Guide!
-                </p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 text-white text-3xl sm:text-4xl lg:text-5xl font-extrabold">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="w-14 sm:w-20 bg-gray-900 p-2 rounded-lg">00</span>
-                        <span class="text-xs sm:text-sm text-gray-400 font-medium mt-1">DAYS</span>
+            <!-- Limited Time Offer & Countdown -->
+            <div class="mb-10 p-6 bg-gray-800 bg-opacity-80 rounded-xl shadow-2xl border border-blue-500 max-w-md mx-auto">
+                <h2 class="text-2xl font-bold text-blue-400 mb-4 uppercase tracking-wide">
+                    Limited Time Launch Offer!
+                </h2>
+                <div id="countdown" class="flex justify-center flex-wrap gap-2 sm:gap-4 text-gray-100">
+                    <div class="countdown-item">
+                        <span id="days" class="countdown-value">00</span>
+                        <span class="countdown-label">Days</span>
                     </div>
-                    <span class="text-2xl sm:text-3xl">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="w-14 sm:w-20 bg-gray-900 p-2 rounded-lg">00</span>
-                        <span class="text-xs sm:text-sm text-gray-400 font-medium mt-1">HOURS</span>
+                    <div class="countdown-item">
+                        <span id="hours" class="countdown-value">00</span>
+                        <span class="countdown-label">Hours</span>
                     </div>
-                    <span class="text-2xl sm:text-3xl">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="w-14 sm:w-20 bg-gray-900 p-2 rounded-lg">00</span>
-                        <span class="text-xs sm:text-sm text-gray-400 font-medium mt-1">MINS</span>
+                    <div class="countdown-item">
+                        <span id="minutes" class="countdown-value">00</span>
+                        <span class="countdown-label">Minutes</span>
                     </div>
-                    <span class="text-2xl sm:text-3xl">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="w-14 sm:w-20 bg-gray-900 p-2 rounded-lg">00</span>
-                        <span class="text-xs sm:text-sm text-gray-400 font-medium mt-1">SECS</span>
+                    <div class="countdown-item">
+                        <span id="seconds" class="countdown-value">00</span>
+                        <span class="countdown-label">Seconds</span>
                     </div>
                 </div>
-                <a href="#waitlist" class="mt-8 inline-block px-10 py-4 text-xl font-bold rounded-full btn-gradient shadow-lg transform transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-75">
-                    Get Your Roku OS Ad Survival Guide Now!
-                </a>
-                <p class="mt-4 text-sm text-gray-300">Instant Digital Download. Lifetime Access. <span class="font-semibold text-purple-300">Don't miss out!</span></p>
+                <p class="text-md text-gray-300 mt-4">Offer ends soon. Don't miss out on digital freedom.</p>
             </div>
+
+            <a href="#waitlist-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                🔒 Secure Your Google AI Escape Plan Now!
+            </a>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 px-4 bg-gray-900">
+    <section id="features" class="py-16 md:py-24 px-4 bg-gray-950">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 md:mb-16 text-white">
-                Inside Your Roku OS Ad Survival Guide, You'll Discover:
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 flex flex-col items-center text-center">
-                    <div class="text-purple-400 text-5xl mb-4">💡</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Effortless Home Screen Navigation</h3>
-                    <p class="text-gray-300 text-lg">
-                        Bypass the intrusive new ad with expert-proven techniques and reclaim precious screen real estate.
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-blue-400">What You'll Discover Inside 'The Google AI Escape Plan'</h2>
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-blue-500">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-300">🛡️ Step-by-Step Privacy Migration</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Follow our easy-to-understand, zero-tech-jargon instructions to seamlessly transition from Google's ecosystem to truly private alternatives without losing your data or sanity.
                     </p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 flex flex-col items-center text-center">
-                    <div class="text-purple-400 text-5xl mb-4">⚙️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Advanced Roku Optimization Secrets</h3>
-                    <p class="text-gray-300 text-lg">
-                        Unlock hidden settings to minimize ad exposure, boost performance, and personalize your experience.
+
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-blue-500">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-300">🚀 Curated Toolkit of Essential Apps</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Access our exclusive, handpicked selection of battle-tested, privacy-focused apps, browser extensions, and services. We've done the exhaustive research so you don't have to.
                     </p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 flex flex-col items-center text-center">
-                    <div class="text-purple-400 text-5xl mb-4">🚫</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Legitimate Ad-Free Alternatives</h3>
-                    <p class="text-gray-300 text-lg">
-                        Explore vetted streaming services and devices that genuinely offer a superior, ad-free viewing journey.
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-blue-500">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-300">🚫 Ad-Free & AI-Content Avoidance Tactics</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Unlock exclusive settings and insider tips to block intrusive ads and bypass AI-generated fluff in search results and content feeds, ensuring you only see relevant, human-created information.
                     </p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 flex flex-col items-center text-center">
-                    <div class="text-purple-400 text-5xl mb-4">🛡️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Future-Proof Your Streaming Setup</h3>
-                    <p class="text-gray-300 text-lg">
-                        Stay ahead of future ad integrations with adaptable strategies that keep you in control, always.
+
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-blue-500">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-300">🔍 Superior Search Alternatives (Beyond DuckDuckGo)</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Go beyond the basics. Explore the best privacy-respecting search engines, learn their unique strengths, and master advanced techniques to optimize them for your daily needs.
                     </p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 flex flex-col items-center text-center">
-                    <div class="text-purple-400 text-5xl mb-4">⏱️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Save Time, Banish Frustration</h3>
-                    <p class="text-gray-300 text-lg">
-                        Stop endlessly searching for solutions. Get direct, actionable steps to restore your peace of mind immediately.
+
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-blue-500">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-300">🌐 Secure Browser & Email Setup</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Configure your browser and email clients for maximum security and privacy. Learn how to protect your digital footprint from trackers, data collectors, and surveillance.
                     </p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 flex flex-col items-center text-center">
-                    <div class="text-purple-400 text-5xl mb-4">📈</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Expert Insights & Practical Tools</h3>
-                    <p class="text-gray-300 text-lg">
-                        Benefit from research-backed strategies, exclusive insights, and practical tools tailored for Roku users.
+
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-blue-500">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-300">🔄 Future-Proof Your Digital Life</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Stay ahead of emerging privacy threats with actionable strategies to adapt to evolving online landscapes and maintain your digital autonomy, long-term.
                     </p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Call to Action / Instant Access Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 px-4 bg-gray-800 text-center">
-        <div class="container mx-auto max-w-4xl">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-8 text-white">
-                Ready to Take Back Control of Your Roku?
-            </h2>
-            <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
-                Join a growing community of smart streamers reclaiming their Roku experience. Secure your copy of the
-                <span class="font-semibold text-purple-400">Roku OS Ad Survival Guide</span> now and finally say goodbye to unwanted interruptions.
+    <!-- Waitlist/Call to Action Form Section -->
+    <section id="waitlist-form" class="py-16 md:py-24 px-4 bg-gray-900">
+        <div class="container mx-auto max-w-2xl text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-8 text-blue-400">Ready to Escape Google's Grasp?</h2>
+            <p class="text-xl text-gray-300 mb-10 leading-relaxed">
+                Don't let intrusive AI and endless ads control your online experience another day. Secure your copy of 'The Google AI Escape Plan' now and embark on a path to true digital freedom.
+                This limited-time offer won't last!
             </p>
 
-            <div class="bg-gray-900 p-8 md:p-10 rounded-xl shadow-2xl border-2 border-purple-700 max-w-xl mx-auto">
-                <h3 class="text-2xl sm:text-3xl font-bold mb-6 text-white">Grab Your Guide & <span class="text-yellow-300">Save 30% Today!</span></h3>
-                <form action="#" method="POST" class="space-y-6">
-                    <div>
-                        <label for="name" class="sr-only">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Full Name" required
-                               class="w-full px-5 py-3 rounded-lg bg-gray-700 text-gray-200 placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg shadow-inner">
-                    </div>
-                    <div>
-                        <label for="email" class="sr-only">Your Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
-                               class="w-full px-5 py-3 rounded-lg bg-gray-700 text-gray-200 placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg shadow-inner">
-                    </div>
-                    <button type="submit"
-                            class="w-full px-8 py-4 text-xl font-bold rounded-full btn-gradient shadow-xl transform transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-600 focus:ring-opacity-75">
-                        Secure My Instant Access & Discount!
-                    </button>
-                </form>
-                <p class="mt-6 text-sm text-gray-400">
-                    <span class="text-yellow-300">*</span>Your information is 100% secure and will never be shared. By clicking, you agree to receive updates and exclusive offers.
-                </p>
-            </div>
+            <form class="bg-gray-800 p-8 md:p-10 rounded-xl shadow-2xl border border-gray-700">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-200 text-sm font-bold mb-2">Your Name:</label>
+                    <input type="text" id="name" name="name" class="form-input w-full" placeholder="John Doe" required>
+                </div>
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Your Email:</label>
+                    <input type="email" id="email" name="email" class="form-input w-full" placeholder="john.doe@example.com" required>
+                </div>
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg transition duration-300 ease-in-out transform hover:scale-105 w-full md:w-auto mt-4">
+                    🚀 Get My Escape Plan & Exclusive Toolkit!
+                </button>
+                <p class="text-sm text-gray-400 mt-6">We respect your privacy. No spam, ever. Your information is safe with us.</p>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-500 py-10 px-4 text-center border-t border-gray-700">
-        <div class="container mx-auto text-sm">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">
-                <a href="#" class="hover:text-purple-400 transition-colors duration-200">Privacy Policy</a> |
-                <a href="#" class="hover:text-purple-400 transition-colors duration-200">Terms of Service</a>
-            </p>
+    <footer class="bg-gray-950 py-8 px-4 text-center text-gray-500 text-sm">
+        <div class="container mx-auto">
+            &copy; <span id="currentYear"></span> Your Company Name. All rights reserved. | <a href="#" class="hover:text-gray-300 transition-colors duration-200">Privacy Policy</a> | <a href="#" class="hover:text-gray-300 transition-colors duration-200">Terms of Service</a>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer (Included within HTML for self-contained functionality) -->
+    <!-- Countdown JavaScript -->
     <script>
-        // Set the date we're counting down to (e.g., 3 days, 12 hours, 30 minutes from now)
-        const now = new Date();
-        const countdownDate = new Date(now.getTime() + (3 * 24 * 60 * 60 * 1000) + (12 * 60 * 60 * 1000) + (30 * 60 * 1000)); // ~3 days, 12h, 30m from now
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Set the date we're counting down to (e.g., 7 days from now for a demo)
+        const countDownDate = new Date();
+        countDownDate.setDate(countDownDate.getDate() + 7); // Offer ends 7 days from page load
 
         const x = setInterval(function() {
             const now = new Date().getTime();
-            const distance = countdownDate.getTime() - now;
+            const distance = countDownDate - now;
 
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Update the elements if they exist
-            if (document.getElementById("days")) document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-            if (document.getElementById("hours")) document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-            if (document.getElementById("minutes")) document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-            if (document.getElementById("seconds")) document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-            // If the countdown is over
             if (distance < 0) {
                 clearInterval(x);
-                if (document.getElementById("countdown")) {
-                    document.getElementById("countdown").innerHTML = "<span class='text-red-500 text-lg sm:text-xl font-bold'>OFFER EXPIRED!</span>";
-                }
-                const ctaButton = document.querySelector('.hero-background a.btn-gradient');
+                document.getElementById("countdown").innerHTML = "<p class='text-red-500 font-bold text-xl'>OFFER EXPIRED! 😥</p>";
+                // Optionally disable the CTA button or change its text
+                const ctaButton = document.querySelector('a[href="#waitlist-form"]');
                 if (ctaButton) {
-                    ctaButton.innerText = "Offer Expired - View Full Price";
-                    ctaButton.classList.remove('btn-gradient', 'hover:scale-105');
-                    ctaButton.classList.add('bg-gray-600', 'cursor-not-allowed');
-                    ctaButton.removeAttribute('href'); // Remove link to form
+                    ctaButton.textContent = "Offer Expired. Get Notified for Next Launch!";
+                    ctaButton.classList.remove('bg-blue-600', 'hover:bg-blue-700', 'transform', 'hover:scale-105');
+                    ctaButton.classList.add('bg-gray-500', 'cursor-not-allowed');
                 }
-                const formButton = document.querySelector('#waitlist button[type="submit"]');
-                if (formButton) {
-                    formButton.innerText = "Offer Expired - View Full Price";
-                    formButton.classList.remove('btn-gradient', 'hover:scale-105');
-                    formButton.classList.add('bg-gray-600', 'cursor-not-allowed');
-                    formButton.setAttribute('disabled', 'true');
+                const formButton = document.querySelector('#waitlist-form button[type="submit"]');
+                 if (formButton) {
+                    formButton.textContent = "Join Waitlist for Next Offer!";
+                    formButton.classList.remove('bg-blue-600', 'hover:bg-blue-700', 'transform', 'hover:scale-105');
+                    formButton.classList.add('bg-gray-500', 'hover:bg-gray-600');
                 }
-                const offerText = document.querySelector('.animate-pulse');
-                if (offerText) offerText.innerHTML = "🚫 Offer has ended!";
             }
         }, 1000);
     </script>
