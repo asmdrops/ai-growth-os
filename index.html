@@ -3,243 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Google AI Escape Plan: Reclaim Your Privacy & Ad-Free Search</title>
+    <title>AI-Powered YouTube Podcast Growth & Optimization Suite</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for modern premium dark-mode aesthetic and responsiveness */
         body {
-            font-family: 'Inter', sans-serif; /* A modern font choice */
+            font-family: 'Inter', sans-serif;
         }
         .hero-bg {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-image: url('https://source.unsplash.com/1600x900/?AI-Powered,tech');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* For a subtle parallax effect */
+            background-repeat: no-repeat;
         }
-        .countdown-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(31, 41, 55, 0.8); /* bg-gray-800 with transparency */
-            border-radius: 0.5rem; /* rounded-lg */
-            padding: 0.75rem 1.25rem; /* p-3 px-5 */
-            margin: 0.5rem;
-            min-width: 70px; /* Ensure minimum width for values */
+        /* Custom scrollbar for dark mode aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
+            background-color: #1a202c; /* bg-gray-900 */
         }
-        .countdown-value {
-            font-size: 2.5rem; /* text-4xl */
-            font-weight: 700; /* font-bold */
-            line-height: 1; /* leading-none */
+        ::-webkit-scrollbar-thumb {
+            background-color: #4a5568; /* darker than text, lighter than background */
+            border-radius: 4px;
         }
-        .countdown-label {
-            font-size: 0.875rem; /* text-sm */
-            text-transform: uppercase;
-            letter-spacing: 0.05em; /* tracking-wider */
-            margin-top: 0.25rem;
-            color: #9ca3af; /* text-gray-400 */
-        }
-        .form-input {
-            background-color: #1f2937; /* bg-gray-800 */
-            border: 1px solid #374151; /* border-gray-700 */
-            color: #d1d5db; /* text-gray-200 */
-            padding: 0.75rem 1rem; /* py-3 px-4 */
-            border-radius: 0.375rem; /* rounded-md */
-            transition: all 0.2s ease-in-out;
-        }
-        .form-input:focus {
-            outline: none;
-            border-color: #3b82f6; /* border-blue-500 */
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* ring-blue-500/50 */
-        }
-        @keyframes pulse-subtle {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.95; }
-        }
-        .animate-pulse-subtle {
-            animation: pulse-subtle 3s infinite ease-in-out;
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #6a768c;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased overflow-x-hidden">
 
     <!-- Hero Section -->
-    <header class="relative min-h-screen flex items-center justify-center py-16 px-4 hero-bg">
-        <!-- Overlay for readability -->
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-
-        <div class="relative z-10 text-center max-w-5xl mx-auto px-4 md:px-8">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 animate-pulse-subtle">
-                Tired of Google's AI Overreach?
-                <span class="block text-blue-400 mt-2">Reclaim Your Digital Privacy & Ad-Free Peace!</span>
+    <header class="hero-bg relative min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8">
+        <div class="absolute inset-0 bg-black opacity-75"></div> <!-- Dark overlay for readability -->
+        <div class="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg animate-fade-in-down">
+                🚀 <span class="text-purple-400">AI-Powered Growth</span> for Your YouTube Podcast
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-                Join the growing wave of users ditching AI-cluttered search. This premium guide and toolkit will show you how to truly escape Big Tech's grip.
+            <p class="text-lg sm:text-xl lg:text-2xl font-medium mb-10 text-gray-200 drop-shadow-md animate-fade-in-up delay-200">
+                Unlock YouTube's algorithm with intelligent insights to skyrocket your views, engagement, and audience.
             </p>
-
-            <!-- Limited Time Offer & Countdown -->
-            <div class="mb-10 p-6 bg-gray-800 bg-opacity-80 rounded-xl shadow-2xl border border-blue-500 max-w-md mx-auto">
-                <h2 class="text-2xl font-bold text-blue-400 mb-4 uppercase tracking-wide">
-                    Limited Time Launch Offer!
-                </h2>
-                <div id="countdown" class="flex justify-center flex-wrap gap-2 sm:gap-4 text-gray-100">
-                    <div class="countdown-item">
-                        <span id="days" class="countdown-value">00</span>
-                        <span class="countdown-label">Days</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span id="hours" class="countdown-value">00</span>
-                        <span class="countdown-label">Hours</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span id="minutes" class="countdown-value">00</span>
-                        <span class="countdown-label">Minutes</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span id="seconds" class="countdown-value">00</span>
-                        <span class="countdown-label">Seconds</span>
-                    </div>
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#waitlist" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg whitespace-nowrap animate-pulse-once">
+                    Join the Waitlist Now!
+                </a>
+                <div class="text-sm sm:text-base font-semibold text-orange-400 bg-orange-900 bg-opacity-30 rounded-full px-4 py-2 border border-orange-500 shadow-md whitespace-nowrap animate-fade-in delay-400">
+                    🔥 Limited Spots Remaining – Act Fast!
                 </div>
-                <p class="text-md text-gray-300 mt-4">Offer ends soon. Don't miss out on digital freedom.</p>
             </div>
-
-            <a href="#waitlist-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
-                🔒 Secure Your Google AI Escape Plan Now!
-            </a>
+            <p class="mt-8 text-sm sm:text-base text-gray-400 animate-fade-in delay-600">
+                Inspired by YouTube's new podcast features, including the AI recommendation tool and ‘Auto speed’.
+            </p>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 px-4 bg-gray-950">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-blue-400">What You'll Discover Inside 'The Google AI Escape Plan'</h2>
-            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section id="features" class="py-16 sm:py-20 lg:py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4">
+                    Revolutionize Your YouTube Podcast Strategy
+                </h2>
+                <p class="text-lg text-gray-400 max-w-3xl mx-auto">
+                    Our AI Suite turns complex YouTube algorithms into actionable growth strategies, freeing you to focus on creating phenomenal content.
+                </p>
+            </div>
 
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
                 <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-blue-500">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-300">🛡️ Step-by-Step Privacy Migration</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Follow our easy-to-understand, zero-tech-jargon instructions to seamlessly transition from Google's ecosystem to truly private alternatives without losing your data or sanity.
+                <div class="bg-gray-800 p-6 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-purple-400 text-4xl mb-4">💡</div>
+                    <h3 class="text-xl font-bold text-white mb-2">YouTube SEO Optimization</h3>
+                    <p class="text-gray-300">
+                        AI-driven keyword suggestions, optimized titles, and description generation to rank higher and get discovered by new listeners.
                     </p>
                 </div>
-
                 <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-blue-500">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-300">🚀 Curated Toolkit of Essential Apps</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Access our exclusive, handpicked selection of battle-tested, privacy-focused apps, browser extensions, and services. We've done the exhaustive research so you don't have to.
+                <div class="bg-gray-800 p-6 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-purple-400 text-4xl mb-4">📈</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Engagement Enhancement</h3>
+                    <p class="text-gray-300">
+                        Auto-generate chapter markers, analyze pacing for YouTube's 'Auto speed,' and pinpoint engagement drop-off points for improvement.
                     </p>
                 </div>
-
                 <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-blue-500">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-300">🚫 Ad-Free & AI-Content Avoidance Tactics</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Unlock exclusive settings and insider tips to block intrusive ads and bypass AI-generated fluff in search results and content feeds, ensuring you only see relevant, human-created information.
+                <div class="bg-gray-800 p-6 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-purple-400 text-4xl mb-4">📊</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Custom Performance Analytics</h3>
+                    <p class="text-gray-300">
+                        Dive deep into YouTube-specific metrics beyond standard analytics, uncovering hidden growth opportunities and audience insights.
                     </p>
                 </div>
-
                 <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-blue-500">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-300">🔍 Superior Search Alternatives (Beyond DuckDuckGo)</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Go beyond the basics. Explore the best privacy-respecting search engines, learn their unique strengths, and master advanced techniques to optimize them for your daily needs.
+                <div class="bg-gray-800 p-6 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-purple-400 text-4xl mb-4">✂️</div>
+                    <h3 class="text-xl font-bold text-white mb-2">AI-Assisted Content Repurposing</h3>
+                    <p class="text-gray-300">
+                        Effortlessly transform long-form content into engaging YouTube Shorts with AI-selected highlights, auto-generated captions, and optimized edits.
                     </p>
                 </div>
-
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-blue-500">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-300">🌐 Secure Browser & Email Setup</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Configure your browser and email clients for maximum security and privacy. Learn how to protect your digital footprint from trackers, data collectors, and surveillance.
-                    </p>
-                </div>
-
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-blue-500">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-300">🔄 Future-Proof Your Digital Life</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Stay ahead of emerging privacy threats with actionable strategies to adapt to evolving online landscapes and maintain your digital autonomy, long-term.
-                    </p>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Waitlist/Call to Action Form Section -->
-    <section id="waitlist-form" class="py-16 md:py-24 px-4 bg-gray-900">
-        <div class="container mx-auto max-w-2xl text-center">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-8 text-blue-400">Ready to Escape Google's Grasp?</h2>
-            <p class="text-xl text-gray-300 mb-10 leading-relaxed">
-                Don't let intrusive AI and endless ads control your online experience another day. Secure your copy of 'The Google AI Escape Plan' now and embark on a path to true digital freedom.
-                This limited-time offer won't last!
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 sm:py-20 lg:py-24 bg-gray-800">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4">
+                Secure Your <span class="text-orange-400">Early Access</span> Today!
+            </h2>
+            <p class="text-lg text-gray-300 mb-8">
+                Join our exclusive waitlist for a limited number of early adopters. Don't miss out on transforming your YouTube podcast's potential.
             </p>
 
-            <form class="bg-gray-800 p-8 md:p-10 rounded-xl shadow-2xl border border-gray-700">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-200 text-sm font-bold mb-2">Your Name:</label>
-                    <input type="text" id="name" name="name" class="form-input w-full" placeholder="John Doe" required>
+            <!-- Limited Time Offer Banner -->
+            <div class="bg-gradient-to-r from-orange-500 to-red-600 text-white p-4 sm:p-5 rounded-lg shadow-xl mb-8 flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4 max-w-md mx-auto animate-pulse">
+                <span class="text-2xl sm:text-3xl">🚨</span>
+                <span class="font-bold text-xl sm:text-2xl uppercase">Limited Time Offer!</span>
+                <span class="text-base sm:text-lg">Special founder pricing for early sign-ups.</span>
+            </div>
+
+            <form class="bg-gray-900 p-8 sm:p-10 rounded-xl shadow-2xl border border-gray-700">
+                <div class="mb-6">
+                    <label for="name" class="block text-left text-sm font-medium text-gray-300 mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-400 transition duration-200" required>
                 </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Your Email:</label>
-                    <input type="email" id="email" name="email" class="form-input w-full" placeholder="john.doe@example.com" required>
+                <div class="mb-8">
+                    <label for="email" class="block text-left text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required
+                           class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-400 transition duration-200">
                 </div>
-                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg transition duration-300 ease-in-out transform hover:scale-105 w-full md:w-auto mt-4">
-                    🚀 Get My Escape Plan & Exclusive Toolkit!
+                <button type="submit"
+                        class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg">
+                    Join the Exclusive Waitlist
                 </button>
-                <p class="text-sm text-gray-400 mt-6">We respect your privacy. No spam, ever. Your information is safe with us.</p>
             </form>
+            <p class="mt-6 text-sm text-gray-400">We respect your privacy. No spam, ever.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 px-4 text-center text-gray-500 text-sm">
-        <div class="container mx-auto">
-            &copy; <span id="currentYear"></span> Your Company Name. All rights reserved. | <a href="#" class="hover:text-gray-300 transition-colors duration-200">Privacy Policy</a> | <a href="#" class="hover:text-gray-300 transition-colors duration-200">Terms of Service</a>
+    <footer class="bg-gray-900 py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500">
+            &copy; 2023 AI-Powered YouTube Podcast Growth & Optimization Suite. All rights reserved.
         </div>
     </footer>
 
-    <!-- Countdown JavaScript -->
-    <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Set the date we're counting down to (e.g., 7 days from now for a demo)
-        const countDownDate = new Date();
-        countDownDate.setDate(countDownDate.getDate() + 7); // Offer ends 7 days from page load
-
-        const x = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countDownDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "<p class='text-red-500 font-bold text-xl'>OFFER EXPIRED! 😥</p>";
-                // Optionally disable the CTA button or change its text
-                const ctaButton = document.querySelector('a[href="#waitlist-form"]');
-                if (ctaButton) {
-                    ctaButton.textContent = "Offer Expired. Get Notified for Next Launch!";
-                    ctaButton.classList.remove('bg-blue-600', 'hover:bg-blue-700', 'transform', 'hover:scale-105');
-                    ctaButton.classList.add('bg-gray-500', 'cursor-not-allowed');
-                }
-                const formButton = document.querySelector('#waitlist-form button[type="submit"]');
-                 if (formButton) {
-                    formButton.textContent = "Join Waitlist for Next Offer!";
-                    formButton.classList.remove('bg-blue-600', 'hover:bg-blue-700', 'transform', 'hover:scale-105');
-                    formButton.classList.add('bg-gray-500', 'hover:bg-gray-600');
-                }
-            }
-        }, 1000);
-    </script>
 </body>
 </html>
