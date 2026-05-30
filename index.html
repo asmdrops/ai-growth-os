@@ -1,234 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI-Free Digital Life Blueprint - Limited Time Offer!</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Mastering iOS 27 AI: Unleash Productivity & Creativity</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles for specific component look, still using Tailwind principles for responsiveness */
-        .countdown-segment {
-            @apply flex flex-col items-center justify-center bg-gray-800 bg-opacity-70 rounded-lg p-2 md:p-4;
+        body {
+            @apply bg-gray-900 text-gray-100 font-sans;
         }
-        .countdown-value {
-            @apply text-4xl md:text-5xl font-extrabold text-white;
-        }
-        .countdown-label {
-            @apply text-xs md:text-sm text-gray-400 uppercase tracking-wider mt-1;
+        /* Custom style for consistent digit width in countdown */
+        .countdown-timer {
+            font-variant-numeric: tabular-nums;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="antialiased">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <img src="https://source.unsplash.com/1600x900/?A,tech" alt="AI-Free Digital Life Blueprint Background" class="absolute inset-0 h-full w-full object-cover object-center">
-        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
-        
-        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
-                Reclaim Your Digital Sovereignty:
-                <span class="block text-purple-400 mt-2">The AI-Free Life Blueprint</span>
+    <header class="relative h-screen bg-cover bg-center flex items-center justify-center p-4 md:p-8" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+        <!-- Overlay for better text readability and dark mode aesthetic -->
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+
+        <div class="relative z-10 text-center max-w-4xl mx-auto space-y-6">
+            <h1 class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight drop-shadow-lg">
+                Mastering iOS 27 AI: <span class="text-blue-400">Unleash Productivity & Creativity</span>
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Escape the AI overload, reclaim your privacy, and boost your focus with our premium masterclass.
-                <span class="block mt-2">Your definitive guide to an AI-free online experience.</span>
+            <p class="text-gray-300 text-lg sm:text-xl md:text-2xl font-light max-w-2xl mx-auto drop-shadow">
+                Dive deep into leaked AI functionalities, get practical use-case predictions, and prepare to leverage Next-Gen Siri & Intelligent Features upon release.
             </p>
 
-            <!-- Limited Time Offer & Countdown -->
-            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 rounded-lg shadow-xl mb-8">
-                <h2 class="text-3xl font-bold text-white mb-4">Limited Time Offer!</h2>
-                <p class="text-xl text-white mb-6">Enrollment closes in:</p>
-                <div id="countdown" class="flex justify-center space-x-4 md:space-x-8">
-                    <div class="countdown-segment">
-                        <span class="countdown-value" id="days">00</span>
-                        <span class="countdown-label">Days</span>
-                    </div>
-                    <div class="countdown-segment">
-                        <span class="countdown-value" id="hours">00</span>
-                        <span class="countdown-label">Hours</span>
-                    </div>
-                    <div class="countdown-segment">
-                        <span class="countdown-value" id="minutes">00</span>
-                        <span class="countdown-label">Minutes</span>
-                    </div>
-                    <div class="countdown-segment">
-                        <span class="countdown-value" id="seconds">00</span>
-                        <span class="countdown-label">Seconds</span>
-                    </div>
+            <!-- Limited Time Countdown -->
+            <div class="bg-gradient-to-r from-purple-600 to-indigo-700 p-4 sm:p-6 rounded-lg shadow-xl inline-block mt-8">
+                <p class="text-white text-md sm:text-lg md:text-xl font-semibold mb-2">Early Bird Access Ends In:</p>
+                <div id="countdown" class="countdown-timer flex justify-center items-center space-x-3 sm:space-x-5 text-white text-3xl sm:text-4xl md:text-5xl font-bold">
+                    <div><span id="days">00</span><br><span class="text-sm sm:text-base font-medium">Days</span></div>
+                    <div>:</div>
+                    <div><span id="hours">00</span><br><span class="text-sm sm:text-base font-medium">Hours</span></div>
+                    <div>:</div>
+                    <div><span id="minutes">00</span><br><span class="text-sm sm:text-base font-medium">Minutes</span></div>
+                    <div>:</div>
+                    <div><span id="seconds">00</span><br><span class="text-sm sm:text-base font-medium">Seconds</span></div>
                 </div>
             </div>
 
-            <a href="#enroll-form" class="inline-block bg-purple-500 hover:bg-purple-600 text-white font-bold py-4 px-8 rounded-full text-xl uppercase tracking-wider transition duration-300 transform hover:scale-105 shadow-lg">
-                Secure Your Blueprint Now
+            <a href="#waitlist" class="mt-8 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 ease-in-out hover:scale-105 text-lg sm:text-xl md:text-2xl">
+                Secure Your Early Bird Spot Now!
             </a>
-            <p class="text-sm text-gray-400 mt-4">Join the movement for digital independence.</p>
         </div>
-    </section>
-
-    <!-- Market Trend / Problem Statement -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800 text-center">
-        <div class="container mx-auto max-w-3xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-                The Great AI Search Migration Has Begun. Are You Ready?
-            </h2>
-            <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                As <span class="text-purple-400">DuckDuckGo's 'No AI' Search Traffic Climbs</span> and users reject intrusive AI overhauls, the need for a truly private and productive online existence has never been more urgent.
-                AI isn't just a tool; it's a paradigm shift threatening your data, privacy, and focus.
-            </p>
-            <p class="text-lg text-gray-300 leading-relaxed">
-                This blueprint empowers you to take back control, navigate the digital world on your terms, and thrive without constant AI-driven distractions.
-            </p>
-        </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">What You'll Achieve with Your Blueprint</h2>
-            
+    <section class="py-16 md:py-24 bg-gray-950 text-gray-100">
+        <div class="container mx-auto px-4 max-w-screen-xl">
+            <h2 class="text-center text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 text-blue-400">What You'll Discover</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Feature 1: Reclaim Privacy -->
-                <div class="bg-gray-800 rounded-lg p-6 shadow-lg transform hover:scale-105 transition duration-300">
-                    <div class="flex items-center justify-center w-12 h-12 bg-purple-600 rounded-full mb-4 text-white text-2xl">🛡️</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Reclaim Your Privacy</h3>
-                    <p class="text-gray-300">
-                        Discover step-by-step instructions to minimize your digital footprint and shield your personal data from invasive AI algorithms.
-                    </p>
+
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-700 hover:border-blue-500">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-3">🕵️‍♂️</span>
+                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Exclusive Leaked AI Analysis</h3>
+                    </div>
+                    <p class="text-gray-300 text-md sm:text-lg">Gain unprecedented insight into the highly anticipated iOS 27 AI features and how they will revolutionize your device.</p>
                 </div>
 
-                <!-- Feature 2: Curated AI-Free Tools -->
-                <div class="bg-gray-800 rounded-lg p-6 shadow-lg transform hover:scale-105 transition duration-300">
-                    <div class="flex items-center justify-center w-12 h-12 bg-purple-600 rounded-full mb-4 text-white text-2xl">🛠️</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Curated AI-Free Tools</h3>
-                    <p class="text-gray-300">
-                        Access our expert-vetted list of browsers, VPNs, email services, and other essential tools that respect your privacy – completely AI-free.
-                    </p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-700 hover:border-blue-500">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-3">🚀</span>
+                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Practical Use-Case Predictions</h3>
+                    </div>
+                    <p class="text-gray-300 text-md sm:text-lg">Understand exactly how these advanced AI capabilities will translate into real-world productivity and creative workflows.</p>
                 </div>
 
-                <!-- Feature 3: Non-AI Task Alternatives -->
-                <div class="bg-gray-800 rounded-lg p-6 shadow-lg transform hover:scale-105 transition duration-300">
-                    <div class="flex items-center justify-center w-12 h-12 bg-purple-600 rounded-full mb-4 text-white text-2xl">💡</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Non-AI Task Alternatives</h3>
-                    <p class="text-gray-300">
-                        Learn how to accomplish common online tasks – from search to content creation and productivity – using robust, non-AI alternatives.
-                    </p>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-700 hover:border-blue-500">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-3">💡</span>
+                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Step-by-Step Preparation Tutorials</h3>
+                    </div>
+                    <p class="text-gray-300 text-md sm:text-lg">Follow actionable guides to optimize your current setup and be fully ready to embrace iOS 27 AI from day one.</p>
                 </div>
 
-                <!-- Feature 4: Boost Focus -->
-                <div class="bg-gray-800 rounded-lg p-6 shadow-lg transform hover:scale-105 transition duration-300">
-                    <div class="flex items-center justify-center w-12 h-12 bg-purple-600 rounded-full mb-4 text-white text-2xl">🧘</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Boost Your Focus</h3>
-                    <p class="text-gray-300">
-                        Eliminate AI-driven distractions and create a serene digital environment that enhances concentration and deep work.
-                    </p>
-                </div>
-                
-                <!-- Feature 5: Step-by-Step Guidance -->
-                <div class="bg-gray-800 rounded-lg p-6 shadow-lg transform hover:scale-105 transition duration-300">
-                    <div class="flex items-center justify-center w-12 h-12 bg-purple-600 rounded-full mb-4 text-white text-2xl">🧭</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Step-by-Step Guidance</h3>
-                    <p class="text-gray-300">
-                        Clear, actionable instructions guide you through every adjustment, making your transition to an AI-free life seamless.
-                    </p>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-700 hover:border-blue-500">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-3">🔒</span>
+                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Early Bird Access & Priority Updates</h3>
+                    </div>
+                    <p class="text-gray-300 text-md sm:text-lg">Be among the first to access the full course and receive immediate updates as new iOS 27 AI information emerges.</p>
                 </div>
 
-                <!-- Feature 6: Join Movement -->
-                <div class="bg-gray-800 rounded-lg p-6 shadow-lg transform hover:scale-105 transition duration-300">
-                    <div class="flex items-center justify-center w-12 h-12 bg-purple-600 rounded-full mb-4 text-white text-2xl">🌍</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Join a Growing Movement</h3>
-                    <p class="text-gray-300">
-                        Be part of a community actively choosing digital independence and conscious online living.
-                    </p>
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-700 hover:border-blue-500">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-3">🧠</span>
+                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Unlock Next-Gen Siri & Intelligent Features</h3>
+                    </div>
+                    <p class="text-gray-300 text-md sm:text-lg">Master the advanced capabilities of the redesigned Siri and other intelligent features for unparalleled control.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-700 hover:border-blue-500">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-3">⚡</span>
+                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Boost Productivity & Creativity</h3>
+                    </div>
+                    <p class="text-gray-300 text-md sm:text-lg">Learn to integrate iOS 27 AI into your daily routine to elevate your efficiency and unleash new creative potentials.</p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Enrollment Form Section -->
-    <section id="enroll-form" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800">
-        <div class="container mx-auto max-w-xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Don't Miss Out!</h2>
-            <p class="text-lg text-gray-300 mb-8">
-                This premium 'AI-Free Digital Life Blueprint' masterclass/guide is available for a limited time only.
-                Secure your spot and start building your private, productive digital future today.
+    <!-- Waitlist / Early Bird Form Section -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gradient-to-br from-gray-800 to-gray-900 text-gray-100">
+        <div class="container mx-auto px-4 max-w-xl text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 text-blue-400">Secure Your Early Bird Access!</h2>
+            <p class="text-lg sm:text-xl mb-10 max-w-prose mx-auto text-gray-300">
+                Don't miss out on being at the forefront of iOS 27 AI innovation. Sign up below to get exclusive early bird pricing, priority access to the course, and real-time updates directly to your inbox.
             </p>
-            
-            <form class="bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700">
-                <div class="mb-6">
-                    <label for="name" class="block text-left text-gray-300 text-sm font-bold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700 placeholder-gray-400" placeholder="John Doe" required>
+
+            <form class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700 space-y-6">
+                <div>
+                    <label for="name" class="block text-left text-sm font-semibold text-gray-200 mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring-blue-500 text-white placeholder-gray-400 text-base" required>
                 </div>
-                <div class="mb-6">
-                    <label for="email" class="block text-left text-gray-300 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700 placeholder-gray-400" placeholder="you@example.com" required>
+                <div>
+                    <label for="email" class="block text-left text-sm font-semibold text-gray-200 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                           class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring-blue-500 text-white placeholder-gray-400 text-base" required>
                 </div>
-                <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full text-lg uppercase tracking-wider transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 w-full">
-                    Enroll Now & Get Instant Access
+                <button type="submit"
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transform transition duration-300 ease-in-out hover:scale-105 text-lg">
+                    Join Early Bird Waitlist
                 </button>
-                <p class="text-xs text-gray-500 mt-4">Your information is 100% secure and will not be shared.</p>
+                <p class="text-sm text-gray-400 mt-4">We respect your privacy. Your information will not be shared.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
-        <div class="container mx-auto">
-            <p>&copy; 2023 AI-Free Digital Life Blueprint. All rights reserved.</p>
-            <div class="mt-4 space-x-4">
-                <a href="#" class="hover:text-purple-400 transition duration-300">Privacy Policy</a>
-                <a href="#" class="hover:text-purple-400 transition duration-300">Terms of Service</a>
-            </div>
+    <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2024 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="hover:text-blue-400 transition-colors duration-200">Privacy Policy</a> |
+                <a href="#" class="hover:text-blue-400 transition-colors duration-200">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
-    <!-- Countdown Script -->
+    <!-- Countdown Timer Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 7 days from now)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now
-            // For testing a shorter countdown, uncomment the line below and comment the above
-            // countDownDate.setHours(countDownDate.getHours() + 1); // 1 hour from now
+        // Set the date we're counting down to (e.g., 7 days from now for early bird)
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 7); // Set to 7 days from now
 
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
 
-                if (distance < 0) {
-                    clearInterval(x);
-                    const countdownDiv = document.getElementById("countdown");
-                    if (countdownDiv) {
-                        countdownDiv.innerHTML = "<p class='text-xl text-red-400'>OFFER EXPIRED!</p>";
-                        // Optionally disable the form and change CTA when offer expires
-                        const enrollButton = document.querySelector('#enroll-form button[type="submit"]');
-                        if (enrollButton) {
-                            enrollButton.disabled = true;
-                            enrollButton.textContent = "Enrollment Closed";
-                            enrollButton.classList.remove('bg-purple-600', 'hover:bg-purple-700');
-                            enrollButton.classList.add('bg-gray-500', 'cursor-not-allowed');
-                        }
-                    }
-                    return;
-                }
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-                // Update countdown elements, ensuring they exist before trying to update
-                const getElement = (id) => document.getElementById(id);
-
-                if (getElement("days")) getElement("days").innerHTML = String(days).padStart(2, '0');
-                if (getElement("hours")) getElement("hours").innerHTML = String(hours).padStart(2, '0');
-                if (getElement("minutes")) getElement("minutes").innerHTML = String(minutes).padStart(2, '0');
-                if (getElement("seconds")) getElement("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-            }, 1000);
-        });
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "<span class='text-red-400'>Early Bird Access Ended!</span>";
+                // Optionally, you might want to disable the CTA button or change its text here
+            }
+        }, 1000);
     </script>
+
 </body>
 </html>
