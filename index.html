@@ -3,142 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Search Enhancer: Reclaim Your Search from AI & Trackers</title>
+    <title>AI-Free Digital Life Blueprint - Limited Time Offer!</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔒</text></svg>">
-    <meta name="description" content="Tired of AI-generated content and privacy invasion in your search results? The Privacy Search Enhancer allows you to filter AI, customize privacy, prioritize sources, and aggregate meta-searches.">
-    <meta name="keywords" content="privacy search, AI content blocker, search enhancer, browser extension, DuckDuckGo, Brave Search, Startpage, anti-tracking, referrer spoofing, trusted sources">
+    <style>
+        /* Custom styles for specific component look, still using Tailwind principles for responsiveness */
+        .countdown-segment {
+            @apply flex flex-col items-center justify-center bg-gray-800 bg-opacity-70 rounded-lg p-2 md:p-4;
+        }
+        .countdown-value {
+            @apply text-4xl md:text-5xl font-extrabold text-white;
+        }
+        .countdown-label {
+            @apply text-xs md:text-sm text-gray-400 uppercase tracking-wider mt-1;
+        }
+    </style>
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="relative h-screen bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-        <div class="container mx-auto flex flex-col items-center justify-center h-full text-center p-4 relative z-10">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4 max-w-4xl">
-                Reclaim Your Search: Block AI Spam & Protect Your Privacy
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <img src="https://source.unsplash.com/1600x900/?A,tech" alt="AI-Free Digital Life Blueprint Background" class="absolute inset-0 h-full w-full object-cover object-center">
+        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+        
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
+                Reclaim Your Digital Sovereignty:
+                <span class="block text-purple-400 mt-2">The AI-Free Life Blueprint</span>
             </h1>
-            <p class="text-xl sm:text-2xl md:text-3xl font-light max-w-3xl mb-8 text-gray-200">
-                Tired of Google's AI-dominated search? Join the surge reclaiming control from algorithmic noise and privacy intrusions.
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Escape the AI overload, reclaim your privacy, and boost your focus with our premium masterclass.
+                <span class="block mt-2">Your definitive guide to an AI-free online experience.</span>
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                <a href="#waitlist" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
-                    Get Early Access Now
-                </a>
-                <a href="#features" class="bg-gray-700 hover:bg-gray-800 text-gray-200 font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
-                    Learn More
-                </a>
-            </div>
 
-            <!-- Limited Time Countdown -->
-            <div class="text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 p-4 rounded-lg shadow-xl max-w-xl mx-auto mt-8 border-2 border-yellow-300">
-                <p class="text-lg font-semibold mb-2">Exclusive Early Bird Offer Ends In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-3xl sm:text-4xl font-extrabold">
-                    <span id="days" class="inline-flex flex-col items-center bg-gray-900 text-yellow-400 p-2 rounded-md"><span class="block">00</span><span class="text-sm font-normal text-gray-400">Days</span></span>
-                    <span id="hours" class="inline-flex flex-col items-center bg-gray-900 text-yellow-400 p-2 rounded-md"><span class="block">00</span><span class="text-sm font-normal text-gray-400">Hrs</span></span>
-                    <span id="minutes" class="inline-flex flex-col items-center bg-gray-900 text-yellow-400 p-2 rounded-md"><span class="block">00</span><span class="text-sm font-normal text-gray-400">Mins</span></span>
-                    <span id="seconds" class="inline-flex flex-col items-center bg-gray-900 text-yellow-400 p-2 rounded-md"><span class="block">00</span><span class="text-sm font-normal text-gray-400">Secs</span></span>
+            <!-- Limited Time Offer & Countdown -->
+            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 rounded-lg shadow-xl mb-8">
+                <h2 class="text-3xl font-bold text-white mb-4">Limited Time Offer!</h2>
+                <p class="text-xl text-white mb-6">Enrollment closes in:</p>
+                <div id="countdown" class="flex justify-center space-x-4 md:space-x-8">
+                    <div class="countdown-segment">
+                        <span class="countdown-value" id="days">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-segment">
+                        <span class="countdown-value" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-segment">
+                        <span class="countdown-value" id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-segment">
+                        <span class="countdown-value" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
                 </div>
             </div>
+
+            <a href="#enroll-form" class="inline-block bg-purple-500 hover:bg-purple-600 text-white font-bold py-4 px-8 rounded-full text-xl uppercase tracking-wider transition duration-300 transform hover:scale-105 shadow-lg">
+                Secure Your Blueprint Now
+            </a>
+            <p class="text-sm text-gray-400 mt-4">Join the movement for digital independence.</p>
         </div>
-    </header>
+    </section>
+
+    <!-- Market Trend / Problem Statement -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800 text-center">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                The Great AI Search Migration Has Begun. Are You Ready?
+            </h2>
+            <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                As <span class="text-purple-400">DuckDuckGo's 'No AI' Search Traffic Climbs</span> and users reject intrusive AI overhauls, the need for a truly private and productive online existence has never been more urgent.
+                AI isn't just a tool; it's a paradigm shift threatening your data, privacy, and focus.
+            </p>
+            <p class="text-lg text-gray-300 leading-relaxed">
+                This blueprint empowers you to take back control, navigate the digital world on your terms, and thrive without constant AI-driven distractions.
+            </p>
+        </div>
+    </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-24 bg-gray-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 leading-tight max-w-4xl mx-auto">
-                Your Search, Your Rules. Unrivaled Control.
-            </h2>
-            <p class="text-center text-lg sm:text-xl max-w-3xl mx-auto mb-16 text-gray-300">
-                In a digital landscape increasingly saturated with AI-generated noise and privacy invasions, our Privacy Search Enhancer empowers you to take back control of your information flow.
-            </p>
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">What You'll Achieve with Your Blueprint</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Feature 1: Reclaim Privacy -->
+                <div class="bg-gray-800 rounded-lg p-6 shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="flex items-center justify-center w-12 h-12 bg-purple-600 rounded-full mb-4 text-white text-2xl">🛡️</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Reclaim Your Privacy</h3>
+                    <p class="text-gray-300">
+                        Discover step-by-step instructions to minimize your digital footprint and shield your personal data from invasive AI algorithms.
+                    </p>
+                </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Feature 1: Filter AI-Generated Content -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-blue-500 text-5xl mb-6 flex justify-center items-center">🤖🚫</div>
-                    <h3 class="text-2xl font-bold mb-4 text-center">Filter AI-Generated Content</h3>
-                    <p class="text-gray-300 text-center">Explicitly block or demote AI-summaries, AI-written articles, and other algorithmic noise across all major search engines. Get back to human-curated, authentic content.</p>
+                <!-- Feature 2: Curated AI-Free Tools -->
+                <div class="bg-gray-800 rounded-lg p-6 shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="flex items-center justify-center w-12 h-12 bg-purple-600 rounded-full mb-4 text-white text-2xl">🛠️</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Curated AI-Free Tools</h3>
+                    <p class="text-gray-300">
+                        Access our expert-vetted list of browsers, VPNs, email services, and other essential tools that respect your privacy – completely AI-free.
+                    </p>
                 </div>
-                <!-- Feature 2: Custom Privacy Controls -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-green-500 text-5xl mb-6 flex justify-center items-center">🔒✨</div>
-                    <h3 class="text-2xl font-bold mb-4 text-center">Custom Privacy Controls</h3>
-                    <p class="text-gray-300 text-center">Implement advanced tracking protection, referrer spoofing, and forced secure connections for all your search queries. Your data stays private, always.</p>
+
+                <!-- Feature 3: Non-AI Task Alternatives -->
+                <div class="bg-gray-800 rounded-lg p-6 shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="flex items-center justify-center w-12 h-12 bg-purple-600 rounded-full mb-4 text-white text-2xl">💡</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Non-AI Task Alternatives</h3>
+                    <p class="text-gray-300">
+                        Learn how to accomplish common online tasks – from search to content creation and productivity – using robust, non-AI alternatives.
+                    </p>
                 </div>
-                <!-- Feature 3: Source Prioritization -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-purple-500 text-5xl mb-6 flex justify-center items-center">📚✅</div>
-                    <h3 class="text-2xl font-bold mb-4 text-center">Source Prioritization</h3>
-                    <p class="text-gray-300 text-center">Whitelist trusted sources (e.g., academic, human-curated blogs) and blacklist low-quality or known AI-spam sites. Tailor your results to quality you trust.</p>
+
+                <!-- Feature 4: Boost Focus -->
+                <div class="bg-gray-800 rounded-lg p-6 shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="flex items-center justify-center w-12 h-12 bg-purple-600 rounded-full mb-4 text-white text-2xl">🧘</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Boost Your Focus</h3>
+                    <p class="text-gray-300">
+                        Eliminate AI-driven distractions and create a serene digital environment that enhances concentration and deep work.
+                    </p>
                 </div>
-                <!-- Feature 4: Meta-Search Aggregation -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-red-500 text-5xl mb-6 flex justify-center items-center">🌐📈</div>
-                    <h3 class="text-2xl font-bold mb-4 text-center">Meta-Search Aggregation</h3>
-                    <p class="text-gray-300 text-center">Query multiple privacy-focused engines (DuckDuckGo, Brave Search, Startpage) simultaneously from one customizable dashboard, with all your filters applied.</p>
+                
+                <!-- Feature 5: Step-by-Step Guidance -->
+                <div class="bg-gray-800 rounded-lg p-6 shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="flex items-center justify-center w-12 h-12 bg-purple-600 rounded-full mb-4 text-white text-2xl">🧭</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Step-by-Step Guidance</h3>
+                    <p class="text-gray-300">
+                        Clear, actionable instructions guide you through every adjustment, making your transition to an AI-free life seamless.
+                    </p>
                 </div>
+
+                <!-- Feature 6: Join Movement -->
+                <div class="bg-gray-800 rounded-lg p-6 shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="flex items-center justify-center w-12 h-12 bg-purple-600 rounded-full mb-4 text-white text-2xl">🌍</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Join a Growing Movement</h3>
+                    <p class="text-gray-300">
+                        Be part of a community actively choosing digital independence and conscious online living.
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-24 bg-gradient-to-br from-gray-900 to-gray-800">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-8 leading-tight max-w-4xl mx-auto">
-                Be the First to Experience True Search Freedom.
-            </h2>
-            <p class="text-center text-lg sm:text-xl max-w-2xl mx-auto mb-12 text-gray-300">
-                Join our exclusive waitlist for early access to the Privacy Search Enhancer. Secure your spot and be among the first to reclaim control over your online search experience.
+    <!-- Enrollment Form Section -->
+    <section id="enroll-form" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800">
+        <div class="container mx-auto max-w-xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Don't Miss Out!</h2>
+            <p class="text-lg text-gray-300 mb-8">
+                This premium 'AI-Free Digital Life Blueprint' masterclass/guide is available for a limited time only.
+                Secure your spot and start building your private, productive digital future today.
             </p>
-
-            <div class="max-w-xl mx-auto bg-gray-800 p-8 rounded-lg shadow-2xl border border-gray-700">
-                <form action="#" method="POST" class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name (Optional)</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe" class="block w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400 outline-none">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address <span class="text-red-500">*</span></label>
-                        <input type="email" id="email" name="email" required placeholder="your@email.com" class="block w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400 outline-none">
-                    </div>
-                    <div>
-                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md text-lg transition duration-300 transform hover:scale-105 shadow-md">
-                            Join the Waitlist
-                        </button>
-                    </div>
-                    <p class="text-center text-sm text-gray-400 mt-4">
-                        We respect your privacy. Your email will only be used for waitlist updates and product announcements.
-                    </p>
-                </form>
-            </div>
+            
+            <form class="bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700">
+                <div class="mb-6">
+                    <label for="name" class="block text-left text-gray-300 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700 placeholder-gray-400" placeholder="John Doe" required>
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-left text-gray-300 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700 placeholder-gray-400" placeholder="you@example.com" required>
+                </div>
+                <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full text-lg uppercase tracking-wider transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 w-full">
+                    Enroll Now & Get Instant Access
+                </button>
+                <p class="text-xs text-gray-500 mt-4">Your information is 100% secure and will not be shared.</p>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm border-t border-gray-800">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2024 Privacy Search Enhancer. All rights reserved.</p>
+    <footer class="bg-gray-900 py-8 px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+        <div class="container mx-auto">
+            <p>&copy; 2023 AI-Free Digital Life Blueprint. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-purple-400 transition duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-purple-400 transition duration-300">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
-    <!-- Countdown JavaScript -->
+    <!-- Countdown Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             // Set the date we're counting down to (e.g., 7 days from now)
             const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from the moment the page loads
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now
+            // For testing a shorter countdown, uncomment the line below and comment the above
+            // countDownDate.setHours(countDownDate.getHours() + 1); // 1 hour from now
 
-            // Update the countdown every 1 second
             const x = setInterval(function() {
                 const now = new Date().getTime();
                 const distance = countDownDate.getTime() - now;
 
                 if (distance < 0) {
                     clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<span class='text-red-500'>OFFER EXPIRED!</span>";
-                    document.getElementById("countdown").classList.remove('space-x-4');
-                    document.getElementById("countdown").classList.add('text-3xl');
+                    const countdownDiv = document.getElementById("countdown");
+                    if (countdownDiv) {
+                        countdownDiv.innerHTML = "<p class='text-xl text-red-400'>OFFER EXPIRED!</p>";
+                        // Optionally disable the form and change CTA when offer expires
+                        const enrollButton = document.querySelector('#enroll-form button[type="submit"]');
+                        if (enrollButton) {
+                            enrollButton.disabled = true;
+                            enrollButton.textContent = "Enrollment Closed";
+                            enrollButton.classList.remove('bg-purple-600', 'hover:bg-purple-700');
+                            enrollButton.classList.add('bg-gray-500', 'cursor-not-allowed');
+                        }
+                    }
                     return;
                 }
 
@@ -147,10 +219,14 @@
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                document.getElementById("days").innerHTML = (days < 10 ? "0" : "") + days + '<span class="block text-sm font-normal text-gray-400">Days</span>';
-                document.getElementById("hours").innerHTML = (hours < 10 ? "0" : "") + hours + '<span class="block text-sm font-normal text-gray-400">Hrs</span>';
-                document.getElementById("minutes").innerHTML = (minutes < 10 ? "0" : "") + minutes + '<span class="block text-sm font-normal text-gray-400">Mins</span>';
-                document.getElementById("seconds").innerHTML = (seconds < 10 ? "0" : "") + seconds + '<span class="block text-sm font-normal text-gray-400">Secs</span>';
+                // Update countdown elements, ensuring they exist before trying to update
+                const getElement = (id) => document.getElementById(id);
+
+                if (getElement("days")) getElement("days").innerHTML = String(days).padStart(2, '0');
+                if (getElement("hours")) getElement("hours").innerHTML = String(hours).padStart(2, '0');
+                if (getElement("minutes")) getElement("minutes").innerHTML = String(minutes).padStart(2, '0');
+                if (getElement("seconds")) getElement("seconds").innerHTML = String(seconds).padStart(2, '0');
+
             }, 1000);
         });
     </script>
