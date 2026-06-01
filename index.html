@@ -3,259 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EdgeMind AI - Unlock On-Device AI Power</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Local AI Productivity Suite - Secure, Private, On-Device AI</title>
+    <meta name="description" content="Unlock ultimate AI privacy and speed with our Local AI Productivity Suite. Leverage your AI PC's NPU for secure document analysis, offline code generation, and hyper-private insights. Keep sensitive data on-device, always.">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Google Fonts for a premium feel - optional, but enhances aesthetic. Default to sans if fails. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        /* Custom styles for hero overlay and dark mode consistency */
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for text readability */
         }
-        /* Custom styles for form checkboxes to ensure they are visible in dark mode */
-        input[type="checkbox"].form-checkbox {
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            height: 1.25rem;
-            width: 1.25rem;
-            border: 2px solid #6b7280; /* Tailwind gray-500 */
-            border-radius: 0.25rem; /* Tailwind rounded-md */
-            background-color: #374151; /* Tailwind gray-700 */
-            cursor: pointer;
-            display: inline-block;
-            vertical-align: middle;
-            position: relative;
-        }
-        input[type="checkbox"].form-checkbox:checked {
-            background-color: #6366f1; /* Tailwind indigo-500 */
-            border-color: #6366f1; /* Tailwind indigo-500 */
-        }
-        input[type="checkbox"].form-checkbox:checked::before {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(45deg);
-            width: 0.35rem; /* For checkmark length */
-            height: 0.75rem; /* For checkmark height */
-            border-bottom: 2px solid #fff;
-            border-right: 2px solid #fff;
-        }
-        input[type="checkbox"].form-checkbox:focus {
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.5); /* Tailwind ring-indigo-500 */
+        .dark {
+            color-scheme: dark;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased font-sans">
 
     <!-- Hero Section -->
-    <header class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-            <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
-        </div>
-        
-        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4 text-indigo-400 drop-shadow-lg">
-                EdgeMind AI: Unlock On-Device Power
+    <header class="relative bg-cover bg-center h-screen flex items-center justify-center p-4" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6 animate-pulse-slow">
+                Unlock Ultimate AI Privacy & Speed <br class="hidden sm:inline">
+                with Your Local AI Productivity Suite
             </h1>
-            <p class="text-xl sm:text-2xl md:text-3xl text-gray-200 mb-8 font-light leading-relaxed">
-                Revolutionize your workflow with AI that runs *locally* — Experience superior privacy, blazing speed, and offline functionality, powered by Nvidia's new on-device capabilities.
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Leverage your AI PC's NPU for secure document analysis, offline code generation, and hyper-private insights. Keep sensitive data on-device, always.
             </p>
-            <a href="#waitlist" class="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl transition duration-300 transform hover:scale-105 shadow-lg">
-                Get Early Access Now!
-            </a>
 
-            <!-- Limited Time Countdown -->
-            <div class="mt-8 text-lg sm:text-xl text-yellow-300 font-semibold bg-gray-800 bg-opacity-70 inline-block px-6 py-3 rounded-xl border border-yellow-400 max-w-full">
-                🚀 Early Access Window Closes In:
-                <div id="countdown" class="inline-block ml-3 text-2xl sm:text-3xl font-extrabold text-white">
-                    <span id="days">00</span>d <span id="hours">00</span>h <span id="minutes">00</span>m <span id="seconds">00</span>s
+            <!-- Limited Time Offer Countdown -->
+            <div class="bg-indigo-700 bg-opacity-70 text-white font-bold py-3 px-6 rounded-lg shadow-xl mb-8 transform hover:scale-105 transition-transform duration-300">
+                <p class="text-sm sm:text-base mb-2">Exclusive Early Access Window Ends In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-2xl sm:text-3xl lg:text-4xl">
+                    <span class="block bg-indigo-800 py-2 px-3 rounded-md">07<span class="text-sm block">Days</span></span>
+                    <span class="block bg-indigo-800 py-2 px-3 rounded-md">23<span class="text-sm block">Hours</span></span>
+                    <span class="block bg-indigo-800 py-2 px-3 rounded-md">59<span class="text-sm block">Mins</span></span>
+                    <span class="block bg-indigo-800 py-2 px-3 rounded-md">59<span class="text-sm block">Secs</span></span>
                 </div>
-                <p class="text-sm text-gray-400 mt-2">Limited spots available!</p>
+                <p class="text-xs mt-2 text-gray-300 italic">(Actual countdown requires JavaScript for functionality)</p>
             </div>
-            <!-- JavaScript for the countdown timer would be inserted here -->
-            <!-- For raw HTML, this would be a static placeholder, actual countdown needs JS. -->
-            <!-- Example JS for countdown (to be added by implementer): -->
-            <!--
-            <script>
-                // Set the date we're counting down to (e.g., 7 days from now)
-                const countdownDate = new Date();
-                countdownDate.setDate(countdownDate.getDate() + 7); // 7 days from now for demonstration
 
-                function updateCountdown() {
-                    const now = new Date().getTime();
-                    const distance = countdownDate - now;
-
-                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                    const format = (num) => String(num).padStart(2, '0');
-
-                    // Update main countdown
-                    if (document.getElementById("days")) document.getElementById("days").innerHTML = format(days);
-                    if (document.getElementById("hours")) document.getElementById("hours").innerHTML = format(hours);
-                    if (document.getElementById("minutes")) document.getElementById("minutes").innerHTML = format(minutes);
-                    if (document.getElementById("seconds")) document.getElementById("seconds").innerHTML = format(seconds);
-
-                    // Update reminder countdown
-                    if (document.getElementById("days-rem")) document.getElementById("days-rem").innerHTML = format(days);
-                    if (document.getElementById("hours-rem")) document.getElementById("hours-rem").innerHTML = format(hours);
-                    if (document.getElementById("minutes-rem")) document.getElementById("minutes-rem").innerHTML = format(minutes);
-                    if (document.getElementById("seconds-rem")) document.getElementById("seconds-rem").innerHTML = format(seconds);
-
-                    if (distance < 0) {
-                        clearInterval(x);
-                        if (document.getElementById("countdown")) document.getElementById("countdown").innerHTML = "EXPIRED";
-                        if (document.getElementById("countdown-reminder")) document.getElementById("countdown-reminder").innerHTML = "EXPIRED";
-                    }
-                }
-
-                updateCountdown(); // Call once immediately
-                const x = setInterval(updateCountdown, 1000); // Update every second
-            </script>
-            -->
+            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg text-lg sm:text-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-lg">
+                Join the Exclusive Waitlist
+            </a>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-20 md:py-24 bg-gray-950">
+    <section class="py-16 sm:py-24 bg-gray-900">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-6 text-indigo-400">
-                Why EdgeMind AI? The Future of Productivity is Local.
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-white mb-12 sm:mb-16">
+                Your Data, Your Device: Unmatched Local AI Power
             </h2>
-            <p class="text-xl sm:text-2xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-                Leveraging Nvidia's groundbreaking on-device AI, EdgeMind AI brings you unmatched performance and privacy, right on your machine.
-            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
-                <!-- Feature 1: Privacy First -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                    <div class="text-5xl text-purple-400 mb-4">🔒</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Privacy-First Processing</h3>
-                    <p class="text-gray-300 text-lg leading-relaxed">
-                        Your data stays on your device. With EdgeMind AI, sensitive documents and personal information never leave your machine, ensuring complete confidentiality.
-                    </p>
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-5xl mb-4">🔒</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Secure Document Analysis</h3>
+                    <p class="text-gray-300">Keep legal briefs, research papers, and proprietary documents completely private. Analyze sensitive information without it ever touching the cloud.</p>
                 </div>
 
-                <!-- Feature 2: Blazing Fast Performance -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                    <div class="text-5xl text-green-400 mb-4">⚡</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Blazing Fast & Responsive</h3>
-                    <p class="text-gray-300 text-lg leading-relaxed">
-                        No cloud latency, no internet dependency. Experience instant AI responses and real-time processing, powered by Nvidia's superchip directly on your laptop or PC.
-                    </p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-5xl mb-4">💻</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Offline Code Generation</h3>
+                    <p class="text-gray-300">Develop securely without internet exposure. Perfect for sensitive projects, proprietary algorithms, and ensuring your IP stays locked down.</p>
                 </div>
 
-                <!-- Feature 3: Always Offline -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                    <div class="text-5xl text-blue-400 mb-4">✈️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Always Offline Functionality</h3>
-                    <p class="text-gray-300 text-lg leading-relaxed">
-                        Work from anywhere, even without an internet connection. EdgeMind AI empowers you with full productivity whether you're on a plane, in a cafe, or off-grid.
-                    </p>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-5xl mb-4">🎤</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Hyper-Private Meeting Summarization</h3>
+                    <p class="text-gray-300">Summarize confidential discussions and generate action items knowing every byte of data remains on your device, always.</p>
                 </div>
 
-                <!-- Feature 4: Hyper-Efficient Document Processing -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                    <div class="text-5xl text-red-400 mb-4">📄</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Hyper-Efficient Document AI</h3>
-                    <p class="text-gray-300 text-lg leading-relaxed">
-                        Summarize lengthy reports, extract key insights, and intelligently process local documents with unparalleled speed and security.
-                    </p>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-5xl mb-4">💡</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Advanced Creative Brainstorming</h3>
+                    <p class="text-gray-300">Generate ideas, concepts, and content with unparalleled speed and privacy, leveraging your local NPU for instant, bespoke results.</p>
                 </div>
 
-                <!-- Feature 5: Intelligent Content Generation -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                    <div class="text-5xl text-yellow-400 mb-4">✍️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Intelligent Content Creator</h3>
-                    <p class="text-gray-300 text-lg leading-relaxed">
-                        Generate drafts, brainstorm ideas, and refine copy directly on your device. From marketing blurbs to creative writing, get instant assistance.
-                    </p>
-                </div>
-
-                <!-- Feature 6: Advanced Coding Assistance -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                    <div class="text-5xl text-orange-400 mb-4">💻</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Advanced Coding Assistant</h3>
-                    <p class="text-gray-300 text-lg leading-relaxed">
-                        Get real-time code suggestions, refactor complex functions, and debug efficiently without ever exposing your proprietary code to the cloud.
-                    </p>
-                </div>
             </div>
+            <p class="text-center text-gray-400 text-lg mt-12 max-w-3xl mx-auto">
+                Harness the full power of your new AI PC. Our suite is optimized to run directly on your NPU, delivering superior speed and ensuring sensitive data never leaves your device – a true alternative to cloud-only AI.
+            </p>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-20 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-xl text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 text-indigo-400">
-                Be Among the First to Experience EdgeMind AI.
+    <section id="waitlist" class="py-16 sm:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-white mb-8 sm:mb-12">
+                Join the Exclusive Waitlist
             </h2>
-            <p class="text-xl sm:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Secure your spot for early access and redefine your productivity. Limited spots available!
+            <p class="text-lg sm:text-xl text-gray-300 text-center mb-10 max-w-xl mx-auto">
+                Be among the first to experience the future of secure, local AI. Join our waitlist for early access, exclusive updates, and special launch offers.
             </p>
-
-            <!-- Countdown Reminder (for urgency, mirrors hero countdown) -->
-            <div class="mb-8 text-lg sm:text-xl text-yellow-300 font-semibold bg-gray-800 bg-opacity-70 inline-block px-6 py-3 rounded-xl border border-yellow-400 max-w-full">
-                🚨 Hurry! Early Access Closes In:
-                <div id="countdown-reminder" class="inline-block ml-3 text-2xl sm:text-3xl font-extrabold text-white">
-                    <span id="days-rem">00</span>d <span id="hours-rem">00</span>h <span id="minutes-rem">00</span>m <span id="seconds-rem">00</span>s
+            <form action="#" method="POST" class="bg-gray-900 p-8 rounded-lg shadow-2xl space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required
+                           class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-gray-400 text-base shadow-sm">
                 </div>
-            </div>
-
-            <form class="bg-gray-800 p-8 sm:p-10 rounded-xl shadow-2xl border border-gray-700">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-lg font-semibold mb-2">Name (Optional)</label>
-                    <input type="text" id="name" name="name" class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-400 text-lg" placeholder="John Doe">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required
+                           class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-gray-400 text-base shadow-sm">
                 </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-lg font-semibold mb-2">Email Address <span class="text-red-500">*</span></label>
-                    <input type="email" id="email" name="email" required class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-400 text-lg" placeholder="you@example.com">
+                <div class="flex items-center">
+                    <input id="updates" name="updates" type="checkbox"
+                           class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-600 rounded bg-gray-700">
+                    <label for="updates" class="ml-2 block text-sm text-gray-300">
+                        Yes, send me updates and early bird offers.
+                    </label>
                 </div>
-                
-                <div class="mb-8 text-left">
-                    <label class="block text-gray-300 text-lg font-semibold mb-3">I'm most interested in:</label>
-                    <div class="space-y-3">
-                        <label class="flex items-center text-gray-200 cursor-pointer">
-                            <input type="checkbox" name="interest[]" value="document-ai" class="form-checkbox">
-                            <span class="ml-3 text-lg">📄 Hyper-Efficient Document AI</span>
-                        </label>
-                        <label class="flex items-center text-gray-200 cursor-pointer">
-                            <input type="checkbox" name="interest[]" value="content-gen" class="form-checkbox">
-                            <span class="ml-3 text-lg">✍️ Intelligent Content Generation</span>
-                        </label>
-                        <label class="flex items-center text-gray-200 cursor-pointer">
-                            <input type="checkbox" name="interest[]" value="coding-assist" class="form-checkbox">
-                            <span class="ml-3 text-lg">💻 Advanced Coding Assistance</span>
-                        </label>
-                        <label class="flex items-center text-gray-200 cursor-pointer">
-                            <input type="checkbox" name="interest[]" value="general-prod" class="form-checkbox">
-                            <span class="ml-3 text-lg">🚀 General Productivity Enhancements</span>
-                        </label>
-                    </div>
-                </div>
-
-                <button type="submit" class="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-full text-xl transition duration-300 transform hover:scale-105 shadow-xl">
-                    Join the Exclusive Waitlist!
+                <button type="submit"
+                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-xl">
+                    Secure My Spot on the Waitlist
                 </button>
-                <p class="text-gray-400 text-sm mt-4">We respect your privacy. No spam, ever. Your data stays secure.</p>
             </form>
         </div>
     </section>
 
-    <footer class="bg-gray-950 py-10 text-center text-gray-500 text-sm">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <p>&copy; 2023 EdgeMind AI. All rights reserved. Powered by Nvidia On-Device AI.</p>
-            <p class="mt-2">Disclaimer: This is a conceptual landing page. Actual product features may vary.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
+            <p>&copy; <span id="currentYear"></span> Local AI Productivity Suite. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 transition-colors duration-200">Privacy Policy</a>
+                <span class="mx-2">|</span>
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 transition-colors duration-200">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
+    <script>
+        // Placeholder for countdown timer functionality.
+        // This JavaScript would be responsible for updating the countdown dynamically.
+        // For 'ONLY raw HTML' as requested, this is merely a placeholder comment.
+        // A real implementation would parse a target date and update #countdown's spans.
+
+        // Get the current year for the copyright
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Example of a minimal countdown script (requires full implementation)
+        // const countdownElement = document.getElementById('countdown');
+        // const targetDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000) + (23 * 60 * 60 * 1000) + (59 * 60 * 1000) + (59 * 1000); // 7 days, 23 hours, 59 mins, 59 secs from now
+        // function updateCountdown() {
+        //     const now = new Date().getTime();
+        //     const distance = targetDate - now;
+
+        //     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        //     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        //     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        //     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        //     if (countdownElement) {
+        //         countdownElement.innerHTML = `
+        //             <span class="block bg-indigo-800 py-2 px-3 rounded-md">${days < 10 ? '0' + days : days}<span class="text-sm block">Days</span></span>
+        //             <span class="block bg-indigo-800 py-2 px-3 rounded-md">${hours < 10 ? '0' + hours : hours}<span class="text-sm block">Hours</span></span>
+        //             <span class="block bg-indigo-800 py-2 px-3 rounded-md">${minutes < 10 ? '0' + minutes : minutes}<span class="text-sm block">Mins</span></span>
+        //             <span class="block bg-indigo-800 py-2 px-3 rounded-md">${seconds < 10 ? '0' + seconds : seconds}<span class="text-sm block">Secs</span></span>
+        //         `;
+        //     }
+
+        //     if (distance < 0) {
+        //         clearInterval(countdownInterval);
+        //         if (countdownElement) countdownElement.innerHTML = "<span class='text-xl text-red-500'>EXPIRED!</span>";
+        //     }
+        // }
+        // updateCountdown();
+        // const countdownInterval = setInterval(updateCountdown, 1000);
+    </script>
 </body>
 </html>
