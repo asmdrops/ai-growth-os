@@ -3,258 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The AI PC Productivity Blueprint</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Mastering Microsoft Project Solara: Agent-Native Development - Waitlist</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for dark mode and countdown components */
-        body {
-            font-family: 'Inter', sans-serif; /* A modern, clean font */
+        /* Custom styles for dark mode and image overlay */
+        .hero-section {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            position: relative;
         }
-        .bg-gradient-header {
-            background-image: linear-gradient(to right, #a78bfa, #c084fc, #e879f9); /* Purple to Pink gradient */
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
         }
-        .countdown-segment {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-            background-color: #2d3748; /* bg-gray-800 */
-            border-radius: 0.5rem; /* rounded-lg */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
-            margin: 0 0.5rem; /* mx-2 */
-            min-width: 70px; /* Ensure segments don't get too small */
-        }
-        .countdown-value {
-            font-size: 2.25rem; /* text-4xl */
-            font-weight: 800; /* font-extrabold */
-            color: #818cf8; /* text-indigo-400 */
-            line-height: 1;
-        }
-        .countdown-label {
-            font-size: 0.75rem; /* text-sm */
-            color: #9ca3af; /* text-gray-400 */
-            text-transform: uppercase;
-            letter-spacing: 0.05em; /* tracking-wide */
-            margin-top: 0.25rem;
-        }
-        /* Custom gradient text for headings */
-        .text-gradient-indigo-purple {
-            background-image: linear-gradient(to right, #a78bfa, #c084fc); /* Indigo to Purple */
+        .gradient-text {
+            background: linear-gradient(90deg, #6366f1, #a855f7); /* Indigo to Purple */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
-        .text-gradient-purple-pink {
-            background-image: linear-gradient(to right, #c084fc, #e879f9); /* Purple to Pink */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .text-gradient-teal-blue {
-            background-image: linear-gradient(to right, #5eead4, #67e8f9); /* Teal to Blue */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        /* Ensure responsive font sizes for countdown values */
-        @media (min-width: 640px) { /* sm */
-            .countdown-value {
-                font-size: 3rem; /* text-5xl */
-            }
-        }
-        @media (min-width: 768px) { /* md */
-            .countdown-value {
-                font-size: 3.75rem; /* text-6xl */
-            }
+            background-clip: text;
+            color: transparent; /* Fallback */
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 font-sans antialiased overflow-x-hidden">
+<body class="bg-gray-900 text-gray-200 font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="relative h-screen flex items-center justify-center text-center overflow-hidden p-4">
-        <div class="absolute inset-0 z-0">
-            <img src="https://source.unsplash.com/1600x900/?A,tech" alt="AI PC Productivity" class="w-full h-full object-cover opacity-20">
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950 to-transparent"></div>
-        </div>
-        <div class="relative z-10 p-4 md:p-8 max-w-5xl mx-auto flex flex-col items-center">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 text-gradient-indigo-purple">
-                Unlock the Future of Work: The AI PC Productivity Blueprint
+    <section class="hero-section min-h-screen flex items-center justify-center p-4">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="container mx-auto z-10 text-center py-16 md:py-24 lg:py-32 max-w-4xl">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                <span class="gradient-text">Mastering Microsoft Project Solara:</span><br class="block sm:hidden"> Agent-Native Development
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your workflow with cutting-edge AI PC strategies. Master personal AI agents, advanced prompt engineering, and seamlessly integrate next-gen hardware for unprecedented efficiency.
+            <p class="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto drop-shadow-md">
+                Unlock the future of software development by building the next generation of agent-driven applications with Microsoft's cutting-edge frameworks.
+            </p>
+            <p class="text-sm sm:text-base mb-10 text-gray-400 max-w-2xl mx-auto drop-shadow-sm">
+                Inspired by the pivotal shifts announced at <span class="font-semibold text-white">Microsoft Build 2026: The 7 biggest announcements - The Verge</span>, this course ensures you're ahead of the curve.
             </p>
 
-            <!-- Limited Time Offer Countdown -->
-            <div class="bg-indigo-900 bg-opacity-30 border border-indigo-700 p-6 rounded-2xl shadow-2xl backdrop-blur-sm mb-12 transform hover:scale-105 transition duration-300 ease-in-out">
-                <h3 class="text-xl sm:text-2xl font-bold mb-4 text-indigo-200">Exclusive Launch Offer: Limited Time Access!</h3>
-                <p class="text-lg text-gray-200 mb-6">Enroll now and get lifetime access to all future updates at a special introductory price. This offer ends soon!</p>
-                <div id="countdown" class="flex justify-center flex-wrap gap-y-4 text-center">
-                    <!-- Countdown segments will be populated by JS -->
+            <!-- Limited Time Offer & Countdown -->
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-700 text-white p-6 rounded-lg shadow-xl mb-12 max-w-xl mx-auto transform hover:scale-105 transition duration-300">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4">Exclusive Early-Bird Offer! 🚀</h2>
+                <p class="text-lg sm:text-xl mb-4">Enroll now to secure your significant launch discount before it's gone!</p>
+                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 mb-6">
+                    <div class="bg-white text-gray-900 p-2 sm:p-4 rounded-lg shadow-md font-mono text-xl sm:text-3xl min-w-[70px]">
+                        <span id="days">00</span> <span class="block text-xs sm:text-sm mt-1 text-gray-600">Days</span>
+                    </div>
+                    <div class="text-3xl sm:text-4xl font-bold">:</div>
+                    <div class="bg-white text-gray-900 p-2 sm:p-4 rounded-lg shadow-md font-mono text-xl sm:text-3xl min-w-[70px]">
+                        <span id="hours">00</span> <span class="block text-xs sm:text-sm mt-1 text-gray-600">Hours</span>
+                    </div>
+                    <div class="text-3xl sm:text-4xl font-bold">:</div>
+                    <div class="bg-white text-gray-900 p-2 sm:p-4 rounded-lg shadow-md font-mono text-xl sm:text-3xl min-w-[70px]">
+                        <span id="minutes">00</span> <span class="block text-xs sm:text-sm mt-1 text-gray-600">Minutes</span>
+                    </div>
+                    <div class="text-3xl sm:text-4xl font-bold">:</div>
+                    <div class="bg-white text-gray-900 p-2 sm:p-4 rounded-lg shadow-md font-mono text-xl sm:text-3xl min-w-[70px]">
+                        <span id="seconds">00</span> <span class="block text-xs sm:text-sm mt-1 text-gray-600">Seconds</span>
+                    </div>
                 </div>
-                <div class="mt-8">
-                    <a href="#enroll-now" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
-                        Secure Your Lifetime Access Now!
-                    </a>
-                    <p class="mt-4 text-sm text-gray-400">Offer expires when the timer hits zero – don't miss out!</p>
-                </div>
+                <a href="#waitlist-form" class="inline-block bg-yellow-400 text-gray-900 font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl hover:bg-yellow-300 transition duration-300 transform hover:scale-105 shadow-lg">
+                    Join Waitlist & Claim Discount!
+                </a>
             </div>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 max-w-screen-xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 text-gradient-purple-pink">
-                What You'll Master with the Blueprint
-            </h2>
-            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-7 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-4xl mb-4">🧠</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Optimize Personal AI Agents</h3>
-                    <p class="text-gray-300">Dive deep into configuring, training, and deploying your own AI agents for hyper-personalized productivity. Automate tasks and gain insights like never before.</p>
+    <section class="py-16 sm:py-20 lg:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">What You'll Master with Solara 💡</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-purple-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-purple-400">🧠 Core Agent-Native Architecture</h3>
+                    <p class="text-gray-300">Dive deep into the foundational principles of building intelligent, autonomous agent systems using Microsoft Project Solara.</p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-7 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-4xl mb-4">✍️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Advanced Prompt Engineering</h3>
-                    <p class="text-gray-300">Go beyond basic prompts. Learn sophisticated techniques to unlock the full potential of your AI PC's capabilities, generating high-quality outputs with precision.</p>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-purple-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-indigo-400">🤖 Seamless AI Model Integration</h3>
+                    <p class="text-gray-300">Learn practical strategies to integrate the latest Microsoft AI models, including Azure OpenAI and Copilot Studio, into your agents.</p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-7 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-4xl mb-4">🚀</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Reviews of Next-Gen Productivity Apps</h3>
-                    <p class="text-gray-300">Stay ahead of the curve with expert reviews and practical guides on the latest applications specifically designed to leverage new AI PC hardware efficiently.</p>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-purple-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-pink-400">🛠️ Hands-On Practical Examples</h3>
+                    <p class="text-gray-300">Build real-world agent applications from scratch with detailed, step-by-step guidance and practical code examples.</p>
                 </div>
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-7 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-4xl mb-4">🔗</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Seamless AI Integration into Workflows</h3>
-                    <p class="text-gray-300">Discover best practices for integrating AI tools and agents into your existing daily routines, ensuring a smooth transition to an AI-powered productivity ecosystem.</p>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-purple-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-green-400">🔗 Advanced Ecosystem Strategies</h3>
+                    <p class="text-gray-300">Explore integration patterns for complex agent interactions, distributed systems, and robust deployment pipelines.</p>
                 </div>
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-7 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-4xl mb-4">📈</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Weekly Deep Dives & Actionable Insights</h3>
-                    <p class="text-gray-300">Receive weekly, in-depth analyses and actionable strategies directly to your inbox, keeping you at the forefront of AI PC innovation and maximizing your potential.</p>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-purple-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-yellow-400">🔮 Future-Proofing Development Insights</h3>
+                    <p class="text-gray-300">Gain deep insights into emerging trends and best practices to ensure your skills remain relevant in the evolving AI landscape.</p>
                 </div>
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-7 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-4xl mb-4">💡</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Future-Proof Your Skills</h3>
-                    <p class="text-gray-300">Equip yourself with the essential knowledge and cutting-edge tools needed to thrive in the rapidly evolving landscape of AI-powered computing and the future of work.</p>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-purple-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-cyan-400">📈 Market-Driven Application Strategies</h3>
+                    <p class="text-gray-300">Understand how to identify and capitalize on market opportunities for agent-native applications, driving real-world impact.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action / Enrollment Form Section -->
-    <section id="enroll-now" class="py-16 md:py-24 bg-gray-950 text-center">
-        <div class="container mx-auto px-4 max-w-screen-md">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 text-gradient-teal-blue">
-                Ready to Redefine Your Productivity? Enroll Now!
-            </h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-10">
-                Seize this limited-time opportunity to get instant access to "The AI PC Productivity Blueprint" and revolutionize your digital workflow.
+    <!-- Why This Course Section -->
+    <section class="py-16 sm:py-20 lg:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-white">Why Agent-Native Development with Solara NOW? 🌐</h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-6 leading-relaxed">
+                The software industry is on the brink of its next major evolution. Agent-native development, powered by advancements like Microsoft Project Solara, is not just a trend—it's the future. This course prepares you for this critical shift.
             </p>
-            <form class="max-w-lg mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-200 text-sm font-bold mb-2">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Full Name"
-                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700 placeholder-gray-400 transition duration-200">
-                </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required
-                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700 placeholder-gray-400 transition duration-200">
-                </div>
-                <button type="submit"
-                        class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 w-full shadow-lg">
-                    Get Instant Access to the Blueprint!
-                </button>
-                <p class="mt-4 text-sm text-gray-400">Your privacy is our priority. No spam, only value.</p>
-            </form>
+            <p class="text-lg sm:text-xl text-gray-300 leading-relaxed">
+                Don't get left behind. Equip yourself with the expertise to build intelligent, autonomous, and scalable systems that will define the next generation of digital experiences.
+            </p>
+        </div>
+    </section>
+
+    <!-- Waitlist Form Section -->
+    <section id="waitlist-form" class="py-16 sm:py-20 lg:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <div class="bg-gray-900 p-8 sm:p-10 rounded-lg shadow-2xl border border-indigo-700">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-6 text-white gradient-text">Join Our Exclusive Waitlist Today!</h2>
+                <p class="text-lg text-center text-gray-300 mb-8">
+                    Be among the first to gain access to "Mastering Microsoft Project Solara" and secure your limited-time early-bird discount.
+                </p>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe"
+                               class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:ring-purple-500 focus:border-purple-500 transition duration-200" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required
+                               class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:ring-purple-500 focus:border-purple-500 transition duration-200">
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="privacy" name="privacy" required
+                               class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-600 rounded bg-gray-700">
+                        <label for="privacy" class="ml-2 block text-sm text-gray-300">
+                            I agree to receive updates about this course and exclusive early-bird offers.
+                        </label>
+                    </div>
+                    <button type="submit"
+                            class="w-full bg-yellow-400 text-gray-900 font-bold py-3 px-6 rounded-md text-lg hover:bg-yellow-300 transition duration-300 transform hover:scale-105 shadow-lg">
+                        Secure My Spot & Discount
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm">
+    <footer class="bg-gray-900 py-10 text-center text-gray-500 text-sm">
         <div class="container mx-auto px-4">
-            <p>&copy; 2024 The AI PC Productivity Blueprint. All rights reserved.</p>
-            <p class="mt-2">Empowering your future with cutting-edge AI PC insights.</p>
+            <p>&copy; 2024 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">Note: "Project Solara" is a hypothetical technology used for illustrative purposes.</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
+    <!-- Countdown Script -->
     <script>
-        function initializeCountdown(elementId, targetTimestamp) {
-            const countdownElement = document.getElementById(elementId);
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the date we're counting down to: 7 days from now.
+            // For a specific date, use: new Date("Oct 27, 2024 15:37:25").getTime();
+            const now = new Date();
+            const countDownDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 days from now
 
-            function updateCountdown() {
+            const x = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = targetTimestamp - now;
+                const distance = countDownDate - now;
 
-                // Time calculations for days, hours, minutes and seconds
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+                // Display the result in the corresponding elements
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+                // If the countdown is over, write some text
                 if (distance < 0) {
-                    clearInterval(interval);
-                    countdownElement.innerHTML = `
-                        <div class="text-2xl font-bold text-red-500 bg-gray-800 p-4 rounded-lg shadow-lg">
-                            Offer Expired!
-                        </div>
-                    `;
-                    // Optionally disable enrollment button or show different message
-                    const enrollButton = document.querySelector('a[href="#enroll-now"]');
-                    if (enrollButton) {
-                        enrollButton.classList.remove('bg-indigo-600', 'hover:bg-indigo-700', 'transform', 'hover:scale-105');
-                        enrollButton.classList.add('bg-gray-500', 'cursor-not-allowed');
-                        enrollButton.textContent = 'Offer Closed';
-                        enrollButton.removeAttribute('href');
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<p class='text-red-400 text-xl font-bold'>Offer Expired!</p>";
+                    // Optionally disable the CTA button
+                    const ctaButton = document.querySelector('a[href="#waitlist-form"]');
+                    if(ctaButton) {
+                        ctaButton.classList.add('opacity-50', 'cursor-not-allowed');
+                        ctaButton.removeAttribute('href');
+                        ctaButton.innerText = 'Offer Expired';
                     }
-                    const formButton = document.querySelector('#enroll-now button[type="submit"]');
-                    if (formButton) {
-                        formButton.classList.remove('bg-indigo-600', 'hover:bg-indigo-700', 'transform', 'hover:scale-105');
-                        formButton.classList.add('bg-gray-500', 'cursor-not-allowed');
-                        formButton.textContent = 'Offer Closed';
-                        formButton.setAttribute('disabled', 'true');
-                    }
-                    return;
                 }
-
-                countdownElement.innerHTML = `
-                    <div class="countdown-segment">
-                        <div class="countdown-value">${days < 10 ? '0' + days : days}</div>
-                        <div class="countdown-label">Days</div>
-                    </div>
-                    <div class="countdown-segment">
-                        <div class="countdown-value">${hours < 10 ? '0' + hours : hours}</div>
-                        <div class="countdown-label">Hours</div>
-                    </div>
-                    <div class="countdown-segment">
-                        <div class="countdown-value">${minutes < 10 ? '0' + minutes : minutes}</div>
-                        <div class="countdown-label">Minutes</div>
-                    </div>
-                    <div class="countdown-segment">
-                        <div class="countdown-value">${seconds < 10 ? '0' + seconds : seconds}</div>
-                        <div class="countdown-label">Seconds</div>
-                    </div>
-                `;
-            }
-
-            // Set the target date: 7 days from when the script runs
-            const targetDate = new Date();
-            targetDate.setDate(targetDate.getDate() + 7);
-            const initialTargetTimestamp = targetTimestamp || targetDate.getTime();
-
-            updateCountdown(); // Call immediately to avoid flicker
-            const interval = setInterval(updateCountdown, 1000);
-        }
-
-        // Initialize the countdown for 7 days from now
-        initializeCountdown('countdown');
+            }, 1000);
+        });
     </script>
+
 </body>
 </html>
