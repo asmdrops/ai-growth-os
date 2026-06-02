@@ -1,181 +1,168 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local AI Productivity Suite - Secure, Private, On-Device AI</title>
-    <meta name="description" content="Unlock ultimate AI privacy and speed with our Local AI Productivity Suite. Leverage your AI PC's NPU for secure document analysis, offline code generation, and hyper-private insights. Keep sensitive data on-device, always.">
+    <title>AgentForge AI - Custom AI Agents for AI Agent PCs</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for hero overlay and dark mode consistency */
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for text readability */
+        /* Custom styles for the background image and overlay */
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-        .dark {
-            color-scheme: dark;
+        .dark-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+        }
+        /* For smoother transitions and animations */
+        .transition-all-ease {
+            transition: all 0.3s ease-in-out;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased font-sans">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative bg-cover bg-center h-screen flex items-center justify-center p-4" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-        <div class="hero-overlay absolute inset-0"></div>
-        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6 animate-pulse-slow">
-                Unlock Ultimate AI Privacy & Speed <br class="hidden sm:inline">
-                with Your Local AI Productivity Suite
+    <header class="relative hero-background min-h-screen flex items-center justify-center text-center py-20 px-4">
+        <div class="absolute inset-0 dark-overlay"></div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                Forge Your Own AI: <span class="text-indigo-400">Custom Agents for AI Agent PCs</span>
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Leverage your AI PC's NPU for secure document analysis, offline code generation, and hyper-private insights. Keep sensitive data on-device, always.
+            <p class="text-lg sm:text-xl lg:text-2xl mb-10 text-gray-200 font-light max-w-2xl mx-auto">
+                Unleash the full potential of new AI Agent PCs from Microsoft, Dell, and HP. Drag, drop, deploy, and optimize bespoke AI agents for hyper-personalized content, specialized research, and advanced data analysis.
             </p>
-
-            <!-- Limited Time Offer Countdown -->
-            <div class="bg-indigo-700 bg-opacity-70 text-white font-bold py-3 px-6 rounded-lg shadow-xl mb-8 transform hover:scale-105 transition-transform duration-300">
-                <p class="text-sm sm:text-base mb-2">Exclusive Early Access Window Ends In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-2xl sm:text-3xl lg:text-4xl">
-                    <span class="block bg-indigo-800 py-2 px-3 rounded-md">07<span class="text-sm block">Days</span></span>
-                    <span class="block bg-indigo-800 py-2 px-3 rounded-md">23<span class="text-sm block">Hours</span></span>
-                    <span class="block bg-indigo-800 py-2 px-3 rounded-md">59<span class="text-sm block">Mins</span></span>
-                    <span class="block bg-indigo-800 py-2 px-3 rounded-md">59<span class="text-sm block">Secs</span></span>
-                </div>
-                <p class="text-xs mt-2 text-gray-300 italic">(Actual countdown requires JavaScript for functionality)</p>
-            </div>
-
-            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg text-lg sm:text-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-lg">
-                Join the Exclusive Waitlist
+            <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-xl transition-all-ease inline-block transform hover:scale-105">
+                Join the Exclusive Waitlist Now!
             </a>
+            <p class="mt-4 text-sm text-gray-300">Limited early access opportunities available.</p>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-white mb-12 sm:mb-16">
-                Your Data, Your Device: Unmatched Local AI Power
+    <section id="features" class="py-16 sm:py-24 px-4 bg-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-12 text-white">
+                Empower Your Professional Tasks with Bespoke AI
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-5xl mb-4">🔒</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Secure Document Analysis</h3>
-                    <p class="text-gray-300">Keep legal briefs, research papers, and proprietary documents completely private. Analyze sensitive information without it ever touching the cloud.</p>
+                <!-- Feature 1: Drag-and-Drop Builder -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all-ease transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-5xl">🛠️</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Intuitive Drag-and-Drop Builder</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Visually design and assemble complex AI agent workflows. Create powerful AI solutions for specific professional tasks without writing a single line of code.
+                    </p>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-5xl mb-4">💻</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Offline Code Generation</h3>
-                    <p class="text-gray-300">Develop securely without internet exposure. Perfect for sensitive projects, proprietary algorithms, and ensuring your IP stays locked down.</p>
+                <!-- Feature 2: Seamless Deployment -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all-ease transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-5xl">🚀</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Seamless Deployment & Management</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Effortlessly deploy your custom AI agents to run efficiently on the new generation of AI Agent PCs. Manage, monitor, and update from a centralized dashboard.
+                    </p>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-5xl mb-4">🎤</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Hyper-Private Meeting Summarization</h3>
-                    <p class="text-gray-300">Summarize confidential discussions and generate action items knowing every byte of data remains on your device, always.</p>
+                <!-- Feature 3: Hyper-Personalized Content -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all-ease transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-5xl">✍️</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Hyper-Personalized Content Generation</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Craft AI agents that understand your unique brand voice and target audience, generating highly personalized content across any platform or medium.
+                    </p>
                 </div>
 
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-5xl mb-4">💡</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Advanced Creative Brainstorming</h3>
-                    <p class="text-gray-300">Generate ideas, concepts, and content with unparalleled speed and privacy, leveraging your local NPU for instant, bespoke results.</p>
+                <!-- Feature 4: Specialized Research -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all-ease transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-5xl">🔬</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Specialized Research & Analysis</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Leverage AI to conduct in-depth research, synthesize vast datasets, and uncover critical insights specific to your professional domain with unparalleled speed.
+                    </p>
+                </div>
+
+                <!-- Feature 5: Advanced Data Analysis -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all-ease transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-5xl">📊</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Advanced Data Analysis & Optimization</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Develop agents that automate complex data cleaning, transformation, and analytical tasks, ensuring maximum accuracy and efficiency in your data pipelines.
+                    </p>
+                </div>
+
+                <!-- Feature 6: Optimized for AI Agent PCs -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all-ease transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-5xl">⚡</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Optimized for Next-Gen AI Agent PCs</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Designed to leverage dedicated AI hardware, ensuring your custom agents run with peak performance and power efficiency on the latest AI Agent PCs.
+                    </p>
                 </div>
 
             </div>
-            <p class="text-center text-gray-400 text-lg mt-12 max-w-3xl mx-auto">
-                Harness the full power of your new AI PC. Our suite is optimized to run directly on your NPU, delivering superior speed and ensuring sensitive data never leaves your device – a true alternative to cloud-only AI.
-            </p>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-white mb-8 sm:mb-12">
-                Join the Exclusive Waitlist
+    <section id="waitlist" class="py-16 sm:py-24 px-4 bg-gray-900">
+        <div class="max-w-2xl mx-auto bg-gray-800 p-8 sm:p-10 rounded-lg shadow-2xl text-center border border-indigo-500">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 text-white">
+                Secure Your Spot for Early Access!
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 text-center mb-10 max-w-xl mx-auto">
-                Be among the first to experience the future of secure, local AI. Join our waitlist for early access, exclusive updates, and special launch offers.
+            <p class="text-lg text-gray-300 mb-8 max-w-prose mx-auto">
+                Be among the first to experience AgentForge AI. Gain exclusive early access, influence future features, and revolutionize your professional workflow.
             </p>
-            <form action="#" method="POST" class="bg-gray-900 p-8 rounded-lg shadow-2xl space-y-6">
+
+            <!-- Limited Time Offer -->
+            <div class="bg-indigo-600 text-white py-3 px-6 rounded-lg mb-8 shadow-md">
+                <p class="text-xl font-bold uppercase tracking-wide">Limited-Time Founders' Offer!</p>
+                <p class="text-sm mt-1">Join the waitlist now for exclusive lifetime discounts & priority support.</p>
+                <!-- A real countdown timer would require JavaScript, which is outside the scope of raw HTML.
+                     This static message effectively conveys urgency as per strategy adjustments. -->
+            </div>
+
+            <form class="space-y-6">
                 <div>
-                    <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" required
-                           class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-gray-400 text-base shadow-sm">
+                    <label for="name" class="sr-only">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Full Name" required
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 text-white placeholder-gray-400 transition-all-ease">
                 </div>
                 <div>
-                    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required
-                           class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-gray-400 text-base shadow-sm">
-                </div>
-                <div class="flex items-center">
-                    <input id="updates" name="updates" type="checkbox"
-                           class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-600 rounded bg-gray-700">
-                    <label for="updates" class="ml-2 block text-sm text-gray-300">
-                        Yes, send me updates and early bird offers.
-                    </label>
+                    <label for="email" class="sr-only">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Professional Email" required
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 text-white placeholder-gray-400 transition-all-ease">
                 </div>
                 <button type="submit"
-                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-xl">
-                    Secure My Spot on the Waitlist
+                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-lg text-xl shadow-xl transition-all-ease transform hover:scale-105">
+                    Join AgentForge AI Waitlist
                 </button>
             </form>
+            <p class="text-sm text-gray-400 mt-6">
+                We respect your privacy. Your email will only be used for AgentForge AI updates and early access invitations.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 border-t border-gray-800">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
-            <p>&copy; <span id="currentYear"></span> Local AI Productivity Suite. All rights reserved.</p>
-            <p class="mt-2">
-                <a href="#" class="text-indigo-400 hover:text-indigo-300 transition-colors duration-200">Privacy Policy</a>
-                <span class="mx-2">|</span>
-                <a href="#" class="text-indigo-400 hover:text-indigo-300 transition-colors duration-200">Terms of Service</a>
-            </p>
+    <footer class="bg-gray-900 py-8 px-4 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto text-center text-gray-500 text-sm">
+            <p>&copy; 2023 AgentForge AI. All rights reserved.</p>
+            <nav class="mt-4 space-x-4 flex justify-center">
+                <a href="#" class="hover:text-white transition-all-ease">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-all-ease">Terms of Service</a>
+            </nav>
         </div>
     </footer>
 
-    <script>
-        // Placeholder for countdown timer functionality.
-        // This JavaScript would be responsible for updating the countdown dynamically.
-        // For 'ONLY raw HTML' as requested, this is merely a placeholder comment.
-        // A real implementation would parse a target date and update #countdown's spans.
-
-        // Get the current year for the copyright
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Example of a minimal countdown script (requires full implementation)
-        // const countdownElement = document.getElementById('countdown');
-        // const targetDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000) + (23 * 60 * 60 * 1000) + (59 * 60 * 1000) + (59 * 1000); // 7 days, 23 hours, 59 mins, 59 secs from now
-        // function updateCountdown() {
-        //     const now = new Date().getTime();
-        //     const distance = targetDate - now;
-
-        //     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        //     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        //     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        //     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        //     if (countdownElement) {
-        //         countdownElement.innerHTML = `
-        //             <span class="block bg-indigo-800 py-2 px-3 rounded-md">${days < 10 ? '0' + days : days}<span class="text-sm block">Days</span></span>
-        //             <span class="block bg-indigo-800 py-2 px-3 rounded-md">${hours < 10 ? '0' + hours : hours}<span class="text-sm block">Hours</span></span>
-        //             <span class="block bg-indigo-800 py-2 px-3 rounded-md">${minutes < 10 ? '0' + minutes : minutes}<span class="text-sm block">Mins</span></span>
-        //             <span class="block bg-indigo-800 py-2 px-3 rounded-md">${seconds < 10 ? '0' + seconds : seconds}<span class="text-sm block">Secs</span></span>
-        //         `;
-        //     }
-
-        //     if (distance < 0) {
-        //         clearInterval(countdownInterval);
-        //         if (countdownElement) countdownElement.innerHTML = "<span class='text-xl text-red-500'>EXPIRED!</span>";
-        //     }
-        // }
-        // updateCountdown();
-        // const countdownInterval = setInterval(updateCountdown, 1000);
-    </script>
 </body>
 </html>
