@@ -3,200 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastering Microsoft Project Solara: Agent-Native Development - Waitlist</title>
-    <!-- Tailwind CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Solara Agent Blueprint - Master Microsoft's AI Agent Platform</title>
+    <!-- Tailwind CSS v3.x from CDN for modern utilities -->
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
     <style>
-        /* Custom styles for dark mode and image overlay */
-        .hero-section {
+        /* Custom styles for premium dark mode aesthetics and hero image */
+        .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             position: relative;
+            min-height: 100vh; /* Ensure hero covers full viewport height */
+            display: flex; /* For centering content */
+            align-items: center; /* For centering content */
+            justify-content: center; /* For centering content */
         }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+        .hero-background::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.75); /* Darker overlay for strong contrast and premium feel */
+            z-index: 1;
         }
-        .gradient-text {
-            background: linear-gradient(90deg, #6366f1, #a855f7); /* Indigo to Purple */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            color: transparent; /* Fallback */
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding-top: 4rem; /* Initial padding for smaller screens */
+            padding-bottom: 4rem; /* Initial padding for smaller screens */
+        }
+        /* Fluid spacing for all sections */
+        .py-section {
+            padding-top: 4rem; /* 64px */
+            padding-bottom: 4rem; /* 64px */
+        }
+        @media (min-width: 640px) { /* sm */
+            .py-section {
+                padding-top: 6rem; /* 96px */
+                padding-bottom: 6rem; /* 96px */
+            }
+        }
+        @media (min-width: 1024px) { /* lg */
+            .py-section {
+                padding-top: 8rem; /* 128px */
+                padding-bottom: 8rem; /* 128px */
+            }
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-200 font-sans antialiased">
+<body class="bg-gray-950 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <section class="hero-section min-h-screen flex items-center justify-center p-4">
-        <div class="hero-overlay absolute inset-0"></div>
-        <div class="container mx-auto z-10 text-center py-16 md:py-24 lg:py-32 max-w-4xl">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
-                <span class="gradient-text">Mastering Microsoft Project Solara:</span><br class="block sm:hidden"> Agent-Native Development
+    <section class="hero-background">
+        <div class="hero-content container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight mb-4 text-white drop-shadow-lg">
+                Master Microsoft's Project Solara <br><span class="text-purple-400">Build Intelligent AI Agents</span>
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto drop-shadow-md">
-                Unlock the future of software development by building the next generation of agent-driven applications with Microsoft's cutting-edge frameworks.
+            <p class="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-200 font-light max-w-3xl mx-auto">
+                Unlock the future of AI agent development. The Solara Agent Blueprint delivers weekly in-depth guides, exclusive code, and market insights for developers leading on Project Solara.
             </p>
-            <p class="text-sm sm:text-base mb-10 text-gray-400 max-w-2xl mx-auto drop-shadow-sm">
-                Inspired by the pivotal shifts announced at <span class="font-semibold text-white">Microsoft Build 2026: The 7 biggest announcements - The Verge</span>, this course ensures you're ahead of the curve.
-            </p>
-
-            <!-- Limited Time Offer & Countdown -->
-            <div class="bg-gradient-to-r from-purple-700 to-indigo-700 text-white p-6 rounded-lg shadow-xl mb-12 max-w-xl mx-auto transform hover:scale-105 transition duration-300">
-                <h2 class="text-2xl sm:text-3xl font-bold mb-4">Exclusive Early-Bird Offer! 🚀</h2>
-                <p class="text-lg sm:text-xl mb-4">Enroll now to secure your significant launch discount before it's gone!</p>
-                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 mb-6">
-                    <div class="bg-white text-gray-900 p-2 sm:p-4 rounded-lg shadow-md font-mono text-xl sm:text-3xl min-w-[70px]">
-                        <span id="days">00</span> <span class="block text-xs sm:text-sm mt-1 text-gray-600">Days</span>
+            
+            <!-- Limited Time Countdown -->
+            <div class="bg-purple-900 bg-opacity-70 text-white rounded-xl p-6 sm:p-8 mb-10 mx-auto max-w-lg shadow-2xl border border-purple-700 backdrop-blur-sm">
+                <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-purple-200">Exclusive Early Bird Access Ends In:</h3>
+                <div class="flex justify-center space-x-3 sm:space-x-6 text-3xl sm:text-4xl lg:text-5xl font-mono">
+                    <div class="flex flex-col items-center">
+                        <span id="days" class="text-4xl sm:text-5xl font-extrabold text-purple-200">00</span>
+                        <span class="text-sm sm:text-base uppercase tracking-wide text-gray-300">Days</span>
                     </div>
-                    <div class="text-3xl sm:text-4xl font-bold">:</div>
-                    <div class="bg-white text-gray-900 p-2 sm:p-4 rounded-lg shadow-md font-mono text-xl sm:text-3xl min-w-[70px]">
-                        <span id="hours">00</span> <span class="block text-xs sm:text-sm mt-1 text-gray-600">Hours</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours" class="text-4xl sm:text-5xl font-extrabold text-purple-200">00</span>
+                        <span class="text-sm sm:text-base uppercase tracking-wide text-gray-300">Hours</span>
                     </div>
-                    <div class="text-3xl sm:text-4xl font-bold">:</div>
-                    <div class="bg-white text-gray-900 p-2 sm:p-4 rounded-lg shadow-md font-mono text-xl sm:text-3xl min-w-[70px]">
-                        <span id="minutes">00</span> <span class="block text-xs sm:text-sm mt-1 text-gray-600">Minutes</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes" class="text-4xl sm:text-5xl font-extrabold text-purple-200">00</span>
+                        <span class="text-sm sm:text-base uppercase tracking-wide text-gray-300">Minutes</span>
                     </div>
-                    <div class="text-3xl sm:text-4xl font-bold">:</div>
-                    <div class="bg-white text-gray-900 p-2 sm:p-4 rounded-lg shadow-md font-mono text-xl sm:text-3xl min-w-[70px]">
-                        <span id="seconds">00</span> <span class="block text-xs sm:text-sm mt-1 text-gray-600">Seconds</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds" class="text-4xl sm:text-5xl font-extrabold text-purple-200">00</span>
+                        <span class="text-sm sm:text-base uppercase tracking-wide text-gray-300">Seconds</span>
                     </div>
                 </div>
-                <a href="#waitlist-form" class="inline-block bg-yellow-400 text-gray-900 font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl hover:bg-yellow-300 transition duration-300 transform hover:scale-105 shadow-lg">
-                    Join Waitlist & Claim Discount!
-                </a>
+                <p class="mt-4 text-sm sm:text-base text-gray-300">Join the waitlist now to secure this limited-time offer.</p>
             </div>
+            
+            <a href="#waitlist" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-10 rounded-full text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                Join the Exclusive Waitlist Now!
+            </a>
+            <p class="mt-4 text-sm text-gray-400">Limited spots available for early bird pricing and access.</p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-20 lg:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">What You'll Master with Solara 💡</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-purple-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-purple-400">🧠 Core Agent-Native Architecture</h3>
-                    <p class="text-gray-300">Dive deep into the foundational principles of building intelligent, autonomous agent systems using Microsoft Project Solara.</p>
+    <section class="py-section bg-gray-950">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 sm:mb-16 leading-tight text-white">
+                What You Get with the <span class="text-purple-400">Solara Agent Blueprint</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                
+                <!-- Feature 1: Weekly In-Depth Guides -->
+                <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-800 hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-purple-400 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.206 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.794 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.794 5 16.5 5c1.706 0 3.332.477 4.5 1.253v13C19.832 18.477 18.206 18 16.5 18c-1.706 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Weekly In-Depth Guides</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">Stay ahead with comprehensive tutorials, architectural deep-dives, and best practices for building robust AI agents on Project Solara. Delivered directly to your inbox every week.</p>
                 </div>
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-purple-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-indigo-400">🤖 Seamless AI Model Integration</h3>
-                    <p class="text-gray-300">Learn practical strategies to integrate the latest Microsoft AI models, including Azure OpenAI and Copilot Studio, into your agents.</p>
-                </div>
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-purple-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-pink-400">🛠️ Hands-On Practical Examples</h3>
-                    <p class="text-gray-300">Build real-world agent applications from scratch with detailed, step-by-step guidance and practical code examples.</p>
-                </div>
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-purple-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-green-400">🔗 Advanced Ecosystem Strategies</h3>
-                    <p class="text-gray-300">Explore integration patterns for complex agent interactions, distributed systems, and robust deployment pipelines.</p>
-                </div>
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-purple-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-yellow-400">🔮 Future-Proofing Development Insights</h3>
-                    <p class="text-gray-300">Gain deep insights into emerging trends and best practices to ensure your skills remain relevant in the evolving AI landscape.</p>
-                </div>
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-purple-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-cyan-400">📈 Market-Driven Application Strategies</h3>
-                    <p class="text-gray-300">Understand how to identify and capitalize on market opportunities for agent-native applications, driving real-world impact.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Why This Course Section -->
-    <section class="py-16 sm:py-20 lg:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 max-w-4xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-white">Why Agent-Native Development with Solara NOW? 🌐</h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-6 leading-relaxed">
-                The software industry is on the brink of its next major evolution. Agent-native development, powered by advancements like Microsoft Project Solara, is not just a trend—it's the future. This course prepares you for this critical shift.
-            </p>
-            <p class="text-lg sm:text-xl text-gray-300 leading-relaxed">
-                Don't get left behind. Equip yourself with the expertise to build intelligent, autonomous, and scalable systems that will define the next generation of digital experiences.
-            </p>
+                <!-- Feature 2: Battle-Tested Code Templates -->
+                <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-800 hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-purple-400 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Battle-Tested Code Templates</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">Accelerate your development with ready-to-use, production-grade code templates. From basic agent structures to complex integrations, save time and build smarter.</p>
+                </div>
+
+                <!-- Feature 3: Exclusive Market Analysis -->
+                <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-800 hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-purple-400 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10v11h18V10M3 10c0-1.657 3.134-3 7-3s7 1.343 7 3M3 10h18M7 3h10a2 2 0 012 2v2a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Exclusive Market Analysis</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">Understand the evolving AI agent landscape. Get insights into emerging trends, competitor strategies, and lucrative niches within the Project Solara ecosystem.</p>
+                </div>
+
+                <!-- Feature 4: Early API Doc Interpretations -->
+                <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-800 hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-purple-400 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 16h-1A2 2 0 0110 14.5v-3A2 2 0 0111.5 9h1A2 2 0 0115 10.5v3A2 2 0 0113.5 16zM6 18h12a2 2 0 002-2V8a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Early API Doc Interpretations</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">Gain a significant head start. We break down complex Solara API documentation, offering simplified interpretations and practical usage examples before anyone else.</p>
+                </div>
+
+                <!-- Feature 5: Exclusive Community Access -->
+                <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-800 hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-purple-400 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H2v-2a4 4 0 014-4h12a4 4 0 014 4v2a1 1 0 01-1 1zm-7-9a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Exclusive Community Access</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">Connect with an elite network of Solara developers. Share insights, troubleshoot challenges, and collaborate on groundbreaking projects in a private, expert-only forum.</p>
+                </div>
+                
+                <!-- Feature 6: Future-Proof Your Skills -->
+                 <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-800 hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-purple-400 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.01 12.01 0 002.92 14.93C4.24 18.067 7.276 20 12 20c4.724 0 7.76-1.933 9.08-5.07a12.01 12.01 0 00-1.357-1.353"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Future-Proof Your Skills</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">Project Solara is defining the next generation of computing. Our blueprint ensures you're not just ready for it, but leading the charge in this new paradigm.</p>
+                </div>
+
+            </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 sm:py-20 lg:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 max-w-2xl">
-            <div class="bg-gray-900 p-8 sm:p-10 rounded-lg shadow-2xl border border-indigo-700">
-                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-6 text-white gradient-text">Join Our Exclusive Waitlist Today!</h2>
-                <p class="text-lg text-center text-gray-300 mb-8">
-                    Be among the first to gain access to "Mastering Microsoft Project Solara" and secure your limited-time early-bird discount.
-                </p>
-                <form class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe"
-                               class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:ring-purple-500 focus:border-purple-500 transition duration-200" required>
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="you@example.com" required
-                               class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:ring-purple-500 focus:border-purple-500 transition duration-200">
-                    </div>
-                    <div class="flex items-center">
-                        <input type="checkbox" id="privacy" name="privacy" required
-                               class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-600 rounded bg-gray-700">
-                        <label for="privacy" class="ml-2 block text-sm text-gray-300">
-                            I agree to receive updates about this course and exclusive early-bird offers.
-                        </label>
-                    </div>
-                    <button type="submit"
-                            class="w-full bg-yellow-400 text-gray-900 font-bold py-3 px-6 rounded-md text-lg hover:bg-yellow-300 transition duration-300 transform hover:scale-105 shadow-lg">
-                        Secure My Spot & Discount
-                    </button>
-                </form>
-            </div>
+    <section id="waitlist" class="py-section bg-gray-950 border-t border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-8 leading-tight text-white">
+                Secure Your Spot: <span class="text-purple-400">Join the Waitlist</span>
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-10 sm:mb-12 max-w-xl mx-auto">
+                Be among the first to gain exclusive access to the Solara Agent Blueprint. Limited availability for our inaugural launch. Don't miss out on shaping the future of AI agents.
+            </p>
+            
+            <form action="#" method="POST" class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-2xl border border-gray-800 mx-auto">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-200 text-sm sm:text-base font-bold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" 
+                           class="shadow appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent bg-gray-800 transition duration-300"
+                           required>
+                </div>
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-200 text-sm sm:text-base font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" 
+                           class="shadow appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent bg-gray-800 transition duration-300"
+                           required>
+                </div>
+                <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl w-full">
+                    Join Waitlist Now
+                </button>
+                <p class="text-xs text-gray-400 mt-4">We respect your privacy. Your email will only be used for Solara Agent Blueprint updates and early access notifications.</p>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 text-center text-gray-500 text-sm">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2024 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">Note: "Project Solara" is a hypothetical technology used for illustrative purposes.</p>
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2023 Solara Agent Blueprint. All rights reserved.</p>
+            <p class="mt-2 text-sm">Empowering developers for Microsoft Project Solara.</p>
         </div>
     </footer>
-
-    <!-- Countdown Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the date we're counting down to: 7 days from now.
-            // For a specific date, use: new Date("Oct 27, 2024 15:37:25").getTime();
-            const now = new Date();
-            const countDownDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 days from now
-
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate - now;
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                // Display the result in the corresponding elements
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-                // If the countdown is over, write some text
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<p class='text-red-400 text-xl font-bold'>Offer Expired!</p>";
-                    // Optionally disable the CTA button
-                    const ctaButton = document.querySelector('a[href="#waitlist-form"]');
-                    if(ctaButton) {
-                        ctaButton.classList.add('opacity-50', 'cursor-not-allowed');
-                        ctaButton.removeAttribute('href');
-                        ctaButton.innerText = 'Offer Expired';
-                    }
-                }
-            }, 1000);
-        });
-    </script>
 
 </body>
 </html>
