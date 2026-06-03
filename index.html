@@ -3,144 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Sentinel: Unrivaled AI Security & Behavior Testing for High-Stakes Verticals</title>
+    <title>AI-Powered Seller Navigator | Premium Amazon Strategy Guide</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+        /* Custom styles for dark overlay and responsive image */
         .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?AI,tech');
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            position: relative;
+            min-height: 85vh; /* Responsive height, adapts to content */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem 1rem; /* Padding for mobile */
         }
-        /* Custom scrollbar for dark mode aesthetic */
-        ::-webkit-scrollbar {
-            width: 10px;
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker, more premium overlay */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
         }
-        ::-webkit-scrollbar-track {
-            background: #2d3748; /* bg-gray-800 */
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        ::-webkit-scrollbar-thumb {
-            background: #4a5568; /* bg-gray-600 */
-            border-radius: 5px;
+        /* Countdown specific styling */
+        .countdown-item {
+            @apply flex flex-col items-center justify-center bg-gray-800 bg-opacity-70 rounded-lg p-4;
+            min-width: 90px; /* Ensure minimum width for desktop, allows shrinking for mobile */
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #6b7280; /* bg-gray-500 */
+        .countdown-value {
+            @apply text-4xl md:text-5xl font-bold text-white;
+        }
+        .countdown-label {
+            @apply text-sm md:text-lg text-gray-400 uppercase tracking-wide mt-1;
+        }
+
+        /* Responsive text size adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem; /* text-4xl */
+            }
+            .hero-subtitle {
+                font-size: 1.25rem; /* text-xl */
+            }
+            .countdown-value {
+                font-size: 2.5rem; /* Smaller for mobile */
+            }
+            .countdown-label {
+                font-size: 0.75rem; /* Smaller for mobile */
+            }
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="relative hero-background min-h-screen flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark Overlay -->
-
-        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 py-16">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6 drop-shadow-lg">
-                AI Sentinel: Ultimate Security for Niche AI Verticals
+    <header class="hero-background">
+        <div class="hero-overlay"></div>
+        <div class="hero-content px-4 sm:px-6 lg:px-8">
+            <h1 class="hero-title text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                Amazon's AI is Changing Everything. <br class="hidden md:block">Don't Get Left Behind.
             </h1>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-3xl mx-auto drop-shadow-md">
-                Deploy advanced AI behavior testing & security analysis tailored for FinTech, Healthcare, and Autonomous Vehicles.
-                Enhance compliance and fortify your AI where stakes are highest.
+            <p class="hero-subtitle text-lg md:text-xl lg:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto drop-shadow-md">
+                Introducing the 'AI-Powered Seller Navigator' – Your weekly living guide to optimize listings, master marketing, and dominate advertising amidst evolving AI-generated search and visual features.
             </p>
 
-            <!-- Limited Time Countdown (Static for HTML output) -->
-            <div class="bg-yellow-600 bg-opacity-90 text-white p-4 rounded-lg shadow-xl mb-12 transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                <p class="text-2xl font-bold mb-2">LIMITED-TIME EARLY ACCESS WINDOW CLOSING SOON!</p>
-                <div class="flex justify-center items-center space-x-4 text-xl sm:text-3xl font-bold">
-                    <span class="bg-yellow-700 px-3 py-2 rounded-md">07 <span class="text-base font-normal block">Days</span></span>
-                    <span class="bg-yellow-700 px-3 py-2 rounded-md">14 <span class="text-base font-normal block">Hours</span></span>
-                    <span class="bg-yellow-700 px-3 py-2 rounded-md">33 <span class="text-base font-normal block">Mins</span></span>
-                    <span class="bg-yellow-700 px-3 py-2 rounded-md">59 <span class="text-base font-normal block">Secs</span></span>
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-700 p-6 rounded-lg shadow-xl mb-12 max-w-xl mx-auto border-2 border-indigo-500">
+                <p class="text-xl md:text-2xl font-semibold mb-4 text-white">🔥 Limited Time Offer! Join the Waitlist Now:</p>
+                <div id="countdown" class="grid grid-cols-4 gap-4 md:gap-6 justify-center">
+                    <div class="countdown-item">
+                        <span id="days" class="countdown-value">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours" class="countdown-value">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes" class="countdown-value">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds" class="countdown-value">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
                 </div>
-                <p class="text-sm mt-2 text-yellow-100">Secure your spot before the access window expires!</p>
             </div>
 
-            <a href="#waitlist" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                Join the Exclusive Waitlist!
+            <a href="#waitlist-form" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Secure Your Competitive Edge & Join the Waitlist!
             </a>
         </div>
     </header>
 
-    <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-24 bg-gray-800">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-12">
-                Revolutionize Your AI's Integrity & Compliance
+    <!-- Problem/Context Section -->
+    <section class="py-16 bg-gray-900 text-center px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-100">
+                The Amazon You Knew Is Gone.
             </h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-6">
+                With AI now generating "fake" product images and reshaping search results, standing out on Amazon is harder than ever. Your existing strategies are quickly becoming obsolete. This isn't just a trend; it's a fundamental shift demanding new, dynamic approaches.
+            </p>
+            <p class="text-lg md:text-xl text-gray-300 mb-8">
+                The 'AI-Powered Seller Navigator' is designed to cut through the noise, giving you the clarity and actionable intelligence needed to not just survive, but thrive in this new landscape.
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-800 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-gray-100">What You'll Get: Weekly Strategic Advantage</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <!-- Feature 1: Advanced AI Behavior Testing -->
-                <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-blue-400 text-5xl mb-6">
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 10v2m-2-2h2m14 0h2M11 7h2m-2 2h2m-2 4h2m-2 2h2M5 15h2m-2 2h2m14-2h2m-2-2h2m-4-6h-2M6 4h.01M18 4h.01M6 20h.01M18 20h.01M6 9h.01M18 9h.01M6 15h.01M18 15h.01"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-4">Advanced AI Behavior Testing Environments</h3>
-                    <p class="text-gray-300">
-                        Implement rigorous testing environments to analyze AI model predictability and ensure reliable performance in high-stakes scenarios.
-                    </p>
+                <!-- Feature 1 -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 transition duration-300 ease-in-out hover:scale-105 hover:border-indigo-500">
+                    <div class="text-5xl mb-4 text-indigo-400">💡</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">AI-Optimized Listing Strategies</h3>
+                    <p class="text-gray-300">Discover cutting-edge techniques to make your product listings irresistible to Amazon's evolving AI algorithms and visual search features, ensuring maximum visibility.</p>
                 </div>
 
-                <!-- Feature 2: Industry-Specific Security Analysis -->
-                <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-blue-400 text-5xl mb-6">
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-4">Niche-Specific Security & Vulnerability Analysis</h3>
-                    <p class="text-gray-300">
-                        Receive deep security insights and vulnerability reporting, meticulously aligned with FinTech, Healthcare, and Autonomous Vehicle sector-specific risks.
-                    </p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 transition duration-300 ease-in-out hover:scale-105 hover:border-indigo-500">
+                    <div class="text-5xl mb-4 text-green-400">📈</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Data-Driven Marketing Playbooks</h3>
+                    <p class="text-gray-300">Leverage weekly insights into emerging market trends and AI-driven consumer behavior to craft highly effective marketing campaigns that convert.</p>
                 </div>
 
-                <!-- Feature 3: Simulated Adversarial Attacks -->
-                <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-blue-400 text-5xl mb-6">
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-4">Complex Adversarial Attack Simulation</h3>
-                    <p class="text-gray-300">
-                        Proactively expose and mitigate AI weaknesses by simulating sophisticated, real-world adversarial attacks against your models.
-                    </p>
+                <!-- Feature 3 -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 transition duration-300 ease-in-out hover:scale-105 hover:border-indigo-500">
+                    <div class="text-5xl mb-4 text-red-400">🎯</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Advanced Advertising Tactics</h3>
+                    <p class="text-gray-300">Stay ahead of the competition with proven strategies for Amazon Ads, optimizing your spend and maximizing ROI in an increasingly complex ad environment.</p>
                 </div>
 
-                <!-- Feature 4: Integrated Compliance Frameworks -->
-                <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-blue-400 text-5xl mb-6">
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-4">Integrated Regulatory Compliance Frameworks</h3>
-                    <p class="text-gray-300">
-                        Ensure your AI development adheres to critical industry regulations and compliance standards, minimizing legal and reputational exposure.
-                    </p>
+                <!-- Feature 4 -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 transition duration-300 ease-in-out hover:scale-105 hover:border-indigo-500">
+                    <div class="text-5xl mb-4 text-yellow-400">⚙️</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">"Living Guide" Updates</h3>
+                    <p class="text-gray-300">Unlike static courses, our 'Living Guide' is continuously updated weekly, adapting to Amazon's rapid AI advancements, so you're always equipped with the latest.</p>
                 </div>
 
-                <!-- Feature 5: Complementing Microsoft's AI Tools (Leveraging Trend) -->
-                <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-blue-400 text-5xl mb-6">
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v13a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-4">A Comprehensive Solution with Microsoft Tools</h3>
-                    <p class="text-gray-300">
-                        Go beyond basic testing. Our platform complements Microsoft's new AI behavior testing tools, offering deeper, industry-specific security and compliance.
-                    </p>
+                <!-- Feature 5 -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 transition duration-300 ease-in-out hover:scale-105 hover:border-indigo-500">
+                    <div class="text-5xl mb-4 text-blue-400">🔍</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Deep Dive Trend Analysis</h3>
+                    <p class="text-gray-300">Understand the real impact of trends like "Amazon's fake product images" and get actionable advice on how to mitigate risks and capitalize on new opportunities.</p>
                 </div>
 
-                <!-- Feature 6: Actionable Vulnerability Reporting -->
-                <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-blue-400 text-5xl mb-6">
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-4">Detailed & Actionable Vulnerability Reporting</h3>
-                    <p class="text-gray-300">
-                        Get clear, concise reports identifying specific vulnerabilities and providing actionable recommendations for your sector-specific AI models.
-                    </p>
+                <!-- Feature 6 -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 transition duration-300 ease-in-out hover:scale-105 hover:border-indigo-500">
+                    <div class="text-5xl mb-4 text-pink-400">💬</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Community & Support (Coming Soon)</h3>
+                    <p class="text-gray-300">Connect with fellow top-tier sellers and industry experts. Share strategies, ask questions, and grow your network in an exclusive, supportive environment.</p>
                 </div>
 
             </div>
@@ -148,67 +173,71 @@
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-24 bg-gray-900">
-        <div class="max-w-xl mx-auto px-4 text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Secure Your Place: Join Our Exclusive Early Access Waitlist
-            </h2>
-            <p class="text-lg text-gray-300 mb-10">
-                Be among the first to experience the next generation of AI security and compliance. Limited spots available for early adopters.
+    <section id="waitlist-form" class="py-20 bg-gray-900 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-xl mx-auto bg-gray-800 p-10 rounded-lg shadow-2xl border-2 border-indigo-600">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center text-white">Join the Exclusive Waitlist!</h2>
+            <p class="text-lg text-gray-300 mb-8 text-center">
+                Be among the first to gain access to the 'AI-Powered Seller Navigator' and transform your Amazon business. Limited spots available for early adopters.
             </p>
-
-            <!-- Countdown repetition to reinforce urgency near the form -->
-            <div class="bg-red-700 bg-opacity-90 text-white p-4 rounded-lg shadow-xl mb-10 transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                <p class="text-2xl font-bold mb-2">EARLY ACCESS REGISTRATION ENDS IN:</p>
-                <div class="flex justify-center items-center space-x-4 text-xl sm:text-3xl font-bold">
-                    <span class="bg-red-800 px-3 py-2 rounded-md">07 <span class="text-base font-normal block">Days</span></span>
-                    <span class="bg-red-800 px-3 py-2 rounded-md">14 <span class="text-base font-normal block">Hours</span></span>
-                    <span class="bg-red-800 px-3 py-2 rounded-md">33 <span class="text-base font-normal block">Mins</span></span>
-                    <span class="bg-red-800 px-3 py-2 rounded-md">59 <span class="text-base font-normal block">Secs</span></span>
-                </div>
-                <p class="text-sm mt-2 text-red-100">Don't miss this limited window of opportunity!</p>
-            </div>
-
-            <form class="bg-gray-800 p-8 rounded-xl shadow-2xl space-y-6">
+            <form action="#" method="POST" class="space-y-6">
                 <div>
-                    <label for="name" class="block text-left text-sm font-medium text-gray-300 mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-white focus:ring-blue-500 focus:border-blue-500 transition duration-200" required>
+                    <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                    <input type="text" name="name" id="name" autocomplete="name" required class="block w-full px-4 py-3 rounded-md bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg transition duration-200">
                 </div>
                 <div>
-                    <label for="email" class="block text-left text-sm font-medium text-gray-300 mb-2">Work Email</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@company.com" required
-                           class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-white focus:ring-blue-500 focus:border-blue-500 transition duration-200">
+                    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                    <input type="email" name="email" id="email" autocomplete="email" required class="block w-full px-4 py-3 rounded-md bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg transition duration-200">
                 </div>
-                <div class="relative">
-                    <label for="industry" class="block text-left text-sm font-medium text-gray-300 mb-2">Your Industry (Optional)</label>
-                    <select id="industry" name="industry"
-                            class="block w-full p-3 pr-10 rounded-lg bg-gray-700 border border-gray-600 text-white focus:ring-blue-500 focus:border-blue-500 transition duration-200 appearance-none">
-                        <option value="">Select your industry</option>
-                        <option value="fintech">FinTech</option>
-                        <option value="healthcare">Healthcare</option>
-                        <option value="autonomous-vehicles">Autonomous Vehicles</option>
-                        <option value="other">Other</option>
-                    </select>
-                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-400">
-                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                    </div>
+                <div>
+                    <button type="submit" class="w-full flex justify-center py-4 px-6 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300 ease-in-out transform hover:scale-105">
+                        Get Early Access & Updates
+                    </button>
                 </div>
-                <button type="submit"
-                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
-                    Secure My Early Access
-                </button>
-                <p class="text-xs text-gray-400 mt-4">We respect your privacy. Your data is safe with us. No spam, ever.</p>
+                <p class="text-center text-sm text-gray-400 mt-6">
+                    We respect your privacy. Your information will not be shared.
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 border-t border-gray-700">
-        <div class="max-w-6xl mx-auto px-4 text-center text-gray-400 text-sm">
-            &copy; 2023 AI Sentinel. All rights reserved. | <a href="#" class="text-blue-400 hover:underline">Privacy Policy</a> | <a href="#" class="text-blue-400 hover:underline">Terms of Service</a>
+    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p>&copy; 2023 AI-Powered Seller Navigator. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- JavaScript for Countdown Timer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now
+            // For a specific fixed date, use:
+            // const countDownDate = new Date("Jan 1, 2025 00:00:00").getTime();
+
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate.getTime() - now;
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<p class='text-xl md:text-2xl font-bold text-red-500'>Offer Expired!</p>";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+                document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+                document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+                document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
