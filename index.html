@@ -1,264 +1,243 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The AI PC Advantage - Unlock On-Device AI Power</title>
+    <title>Mastering Apple AI: Developer & Business Strategy | Premium Subscription</title>
     <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Google Fonts - Inter for a modern, premium feel -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts for a premium aesthetic -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
+        /* Custom styles for background image and overlay to ensure dark mode aesthetic and readability */
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* Ensure a deep dark background */
+            color: #e2e8f0; /* Light text for dark background */
         }
-        /* Custom styles for premium dark mode aesthetics and animations */
-        @keyframes fadeInMoveUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
         }
-        .animate-fade-in-up {
-            animation: fadeInMoveUp 0.8s ease-out forwards;
-        }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-400 { animation-delay: 0.4s; }
-        .delay-600 { animation-delay: 0.6s; }
-
-        .gradient-button {
-            background-image: linear-gradient(to right, #6366f1, #a855f7); /* Indigo to Purple */
-            transition: all 0.3s ease;
-        }
-        .gradient-button:hover {
-            background-image: linear-gradient(to left, #6366f1, #a855f7);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
         }
         .hero-overlay {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.8) 100%);
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for strong contrast and text readability */
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
         }
-        .feature-card {
-            background-color: rgba(31, 41, 55, 0.6); /* bg-gray-800 with transparency */
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(75, 85, 99, 0.4); /* border-gray-600 with transparency */
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-        .waitlist-form-bg {
-             background: linear-gradient(135deg, rgba(31, 41, 55, 0.8) 0%, rgba(17, 24, 39, 0.8) 100%);
-             backdrop-filter: blur(10px);
-             border: 1px solid rgba(75, 85, 99, 0.5);
-             box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        /* Ensure max-width on content for better readability on very wide screens */
+        .content-container {
+            max-width: 1440px; /* Adjust as needed for ultimate responsiveness */
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <img src="https://source.unsplash.com/1600x900/?A,tech" alt="AI PC Technology Background" class="absolute inset-0 w-full h-full object-cover">
-        <div class="hero-overlay absolute inset-0"></div>
-
-        <div class="relative z-10 p-4 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white mb-6 animate-fade-in-up">
-                Unlock Your Edge in the <span class="text-purple-400">AI PC Revolution</span>
+    <section class="hero-background min-h-screen flex items-center justify-center text-center py-16 px-4 sm:px-6 lg:px-8">
+        <div class="hero-overlay"></div>
+        <div class="relative z-10 max-w-5xl mx-auto space-y-8">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight drop-shadow-lg">
+                Mastering Apple AI: <br class="sm:hidden"> Developer & Business Strategy
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-10 max-w-2xl mx-auto animate-fade-in-up delay-200">
-                Weekly Deep Dives, Productivity Hacks, and Curated Insights into the <span class="font-bold text-indigo-300">Market Trends</span> shaping the future of on-device AI.
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
+                Unlock the full potential of Apple's next-gen AI platform powered by Nvidia Blackwell.
+                Position yourself at the forefront of innovation.
             </p>
-            
-            <!-- Limited Time Offer Countdown Placeholder -->
-            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-4 rounded-lg shadow-xl mb-10 max-w-md mx-auto animate-fade-in-up delay-400">
-                <p class="text-xl font-bold mb-2">🔥 Limited Time Launch Offer! 🔥</p>
-                <p class="text-sm uppercase tracking-wider mb-2">Early bird pricing ends in:</p>
-                <div class="flex justify-center space-x-4 text-3xl font-mono">
-                    <div class="flex flex-col items-center">
-                        <span id="days">00</span>
-                        <span class="text-xs">Days</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <span id="hours">00</span>
-                        <span class="text-xs">Hours</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes">00</span>
-                        <span class="text-xs">Minutes</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds">00</span>
-                        <span class="text-xs">Seconds</span>
-                    </div>
-                </div>
-                <p class="text-xs mt-2 text-gray-200">Join the waitlist now to lock in your exclusive discount!</p>
-            </div>
-
-            <a href="#waitlist" class="gradient-button text-white font-bold py-4 px-8 rounded-full text-lg sm:text-xl inline-block shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50 animate-fade-in-up delay-600">
-                🚀 Join the Waitlist & Secure Your Launch Offer!
+            <p class="text-base sm:text-lg text-indigo-300 font-semibold mt-4">
+                The future is here: Apple's overhauled Siri is reportedly running on Nvidia's Blackwell chips.
+                Are you ready to build?
+            </p>
+            <a href="#waitlist" class="inline-block bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-2xl">
+                Secure Early Access Now
             </a>
         </div>
     </section>
 
-    <!-- About The AI PC Advantage Section -->
-    <section class="py-16 sm:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="text-center md:text-left">
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">
-                        Navigating the Next Frontier: <br class="hidden sm:inline"><span class="text-purple-400">The AI PC Era</span>
-                    </h2>
-                    <p class="text-gray-300 text-lg sm:text-xl leading-relaxed mb-6">
-                        The computing landscape is undergoing a monumental shift. As highlighted by the <span class="font-semibold italic">Financial Times</span>, "<span class="text-indigo-300">Nvidia takes AI battle from the data centre to the laptop</span>" – signifying a new era where powerful AI capabilities move directly to your device.
-                    </p>
-                    <p class="text-gray-400 text-base sm:text-lg leading-relaxed">
-                        Are you ready to harness this power? 'The AI PC Advantage' is your essential guide to understanding, optimizing, and thriving with the latest AI hardware, software, and applications. Don't just keep up, get ahead.
-                    </p>
-                </div>
-                <div class="flex justify-center">
-                    <img src="https://source.unsplash.com/600x400/?futuristic,computer" alt="AI PC future concept" class="rounded-xl shadow-2xl border border-gray-700 max-w-full h-auto transform hover:scale-105 transition-transform duration-300">
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Features Section -->
-    <section class="py-16 sm:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 max-w-7xl">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white text-center mb-12">
-                What You'll Gain with <span class="text-purple-400">'The AI PC Advantage'</span>
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div class="content-container">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white text-center mb-12 leading-tight">
+                Your Edge in the New AI Frontier
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1: Weekly Deep Dives -->
-                <div class="feature-card p-6 rounded-xl flex flex-col items-center text-center">
-                    <i class="fas fa-microchip text-4xl text-indigo-400 mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-3">Weekly Deep Dives</h3>
-                    <p class="text-gray-300">Stay ahead with comprehensive analyses of new AI PC hardware, software updates, and platform advancements.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+                <!-- Feature 1: Monthly In-Depth Guides -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col items-start border border-gray-700 hover:border-indigo-600">
+                    <div class="text-5xl mb-4">📚</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Monthly In-Depth Guides</h3>
+                    <p class="text-gray-300 leading-relaxed flex-grow">
+                        Gain exclusive access to comprehensive guides breaking down Apple AI advancements,
+                        architectural shifts, and their strategic impact on developers and businesses.
+                    </p>
                 </div>
-                <!-- Feature 2: Productivity & Creative Tutorials -->
-                <div class="feature-card p-6 rounded-xl flex flex-col items-center text-center">
-                    <i class="fas fa-lightbulb text-4xl text-green-400 mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-3">Productivity & Creative Tutorials</h3>
-                    <p class="text-gray-300">Learn practical, actionable strategies to leverage on-device AI for enhanced productivity and creative workflows.</p>
+                <!-- Feature 2: Exclusive Siri API Tutorials -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col items-start border border-gray-700 hover:border-indigo-600">
+                    <div class="text-5xl mb-4">💻</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Exclusive Siri API Tutorials</h3>
+                    <p class="text-gray-300 leading-relaxed flex-grow">
+                        Be among the first to master new Siri APIs as they emerge. Our hands-on tutorials
+                        will show you how to integrate advanced conversational AI into your apps.
+                    </p>
                 </div>
-                <!-- Feature 3: Performance Optimization -->
-                <div class="feature-card p-6 rounded-xl flex flex-col items-center text-center">
-                    <i class="fas fa-tachometer-alt text-4xl text-red-400 mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-3">Performance Optimization</h3>
-                    <p class="text-gray-300">Master tips and tricks to get the most out of your AI PC, ensuring peak performance for all your tasks.</p>
+                <!-- Feature 3: Nvidia Blackwell Optimization -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col items-start border border-gray-700 hover:border-indigo-600">
+                    <div class="text-5xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Nvidia Blackwell Optimization</h3>
+                    <p class="text-gray-300 leading-relaxed flex-grow">
+                        Learn precise strategies to optimize your AI models and applications for peak performance
+                        on Nvidia's Blackwell architecture, ensuring maximum efficiency on Apple's platform.
+                    </p>
                 </div>
-                <!-- Feature 4: Curated AI-Native App Reviews -->
-                <div class="feature-card p-6 rounded-xl flex flex-col items-center text-center">
-                    <i class="fas fa-star text-4xl text-yellow-400 mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-3">Curated AI-Native App Reviews</h3>
-                    <p class="text-gray-300">Discover and evaluate the best emerging AI-native applications that genuinely boost your capabilities.</p>
+                <!-- Feature 4: Private Community Forum -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col items-start border border-gray-700 hover:border-indigo-600">
+                    <div class="text-5xl mb-4">🤝</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Private Community Forum</h3>
+                    <p class="text-gray-300 leading-relaxed flex-grow">
+                        Connect with an elite network of early adopters, seasoned developers, and forward-thinking
+                        business strategists in our exclusive, moderated forum.
+                    </p>
                 </div>
-                <!-- Feature 5: Exclusive Market Trend Analysis -->
-                <div class="feature-card p-6 rounded-xl flex flex-col items-center text-center">
-                    <i class="fas fa-chart-line text-4xl text-blue-400 mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-3">Exclusive Market Trend Analysis</h3>
-                    <p class="text-gray-300">Gain unique insights into the AI PC market, helping you make informed decisions and anticipate future developments.</p>
+                <!-- Feature 5: Strategic Business Insights -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col items-start border border-gray-700 hover:border-indigo-600">
+                    <div class="text-5xl mb-4">💡</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Strategic Business Insights</h3>
+                    <p class="text-gray-300 leading-relaxed flex-grow">
+                        Go beyond code. Understand the commercial implications and monetization strategies
+                        within Apple's evolving AI ecosystem to maximize your market impact.
+                    </p>
                 </div>
-                <!-- Feature 6: Premium Community Access -->
-                <div class="feature-card p-6 rounded-xl flex flex-col items-center text-center">
-                    <i class="fas fa-users text-4xl text-pink-400 mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-3">Premium Community Access</h3>
-                    <p class="text-gray-300">Connect with fellow enthusiasts and experts in a private, collaborative environment for knowledge sharing.</p>
+                <!-- Feature 6: Continuous Learning & Updates -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col items-start border border-gray-700 hover:border-indigo-600">
+                    <div class="text-5xl mb-4">📈</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Continuous Updates & Forecasts</h3>
+                    <p class="text-gray-300 leading-relaxed flex-grow">
+                        The AI landscape is dynamic. Our subscription ensures you're always informed with real-time
+                        analysis, breaking news, and expert forecasts to stay competitive.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-24 bg-gray-900 relative overflow-hidden">
-        <div class="absolute inset-0 z-0 bg-cover bg-center opacity-10" style="background-image: url('https://source.unsplash.com/1600x900/?circuit,board')"></div>
-        <div class="container mx-auto px-4 max-w-3xl relative z-10">
-            <div class="waitlist-form-bg rounded-2xl p-8 sm:p-12 text-center">
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">
-                    Don't Miss Out! <span class="text-purple-400">Join the Exclusive Waitlist</span>
-                </h2>
-                <p class="text-gray-300 text-lg sm:text-xl mb-8">
-                    Secure your spot and get early access to our <span class="font-bold text-indigo-300">Limited Time Launch Offers</span>. The future of AI PCs starts here!
-                </p>
+    <section id="waitlist" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-black">
+        <div class="content-container max-w-xl mx-auto bg-gray-900 p-8 sm:p-10 rounded-3xl shadow-2xl border-t-4 border-indigo-700">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white text-center mb-6">
+                Join the Exclusive Waitlist
+            </h2>
+            <p class="text-lg text-gray-300 text-center mb-8 max-w-md mx-auto">
+                Secure your spot for "Mastering Apple AI" and gain unparalleled early access.
+                <span class="font-bold text-indigo-400">Limited early adopter spots available.</span>
+            </p>
 
-                <form class="space-y-6">
-                    <div>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required
-                               class="w-full p-4 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200 text-lg">
+            <!-- Limited Time Countdown Placeholder -->
+            <div class="text-center bg-indigo-800 bg-opacity-30 border border-indigo-600 rounded-lg p-5 mb-8">
+                <p class="text-xl sm:text-2xl font-bold text-indigo-300 mb-2">
+                    Early Access Offer Closes In:
+                </p>
+                <div class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-wide flex justify-center items-center space-x-3 sm:space-x-5">
+                    <div class="flex flex-col items-center">
+                        <span id="countdown-days" class="w-14 sm:w-20 bg-indigo-700 py-2 rounded-lg">XX</span>
+                        <span class="text-xs sm:text-sm text-gray-300 mt-1">Days</span>
                     </div>
-                    <div>
-                        <input type="email" id="email" name="email" placeholder="Your Email Address" required
-                               class="w-full p-4 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200 text-lg">
+                    <span class="text-indigo-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="countdown-hours" class="w-14 sm:w-20 bg-indigo-700 py-2 rounded-lg">XX</span>
+                        <span class="text-xs sm:text-sm text-gray-300 mt-1">Hours</span>
                     </div>
-                    <div>
-                        <button type="submit" class="gradient-button w-full text-white font-bold py-4 px-6 rounded-lg text-xl sm:text-2xl shadow-xl hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50 transition transform hover:scale-105 duration-300">
-                            ✨ Get Early Access & Special Launch Pricing!
-                        </button>
+                    <span class="text-indigo-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="countdown-minutes" class="w-14 sm:w-20 bg-indigo-700 py-2 rounded-lg">XX</span>
+                        <span class="text-xs sm:text-sm text-gray-300 mt-1">Mins</span>
                     </div>
-                </form>
+                    <span class="text-indigo-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="countdown-seconds" class="w-14 sm:w-20 bg-indigo-700 py-2 rounded-lg">XX</span>
+                        <span class="text-xs sm:text-sm text-gray-300 mt-1">Secs</span>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-400 mt-3">
+                    (Actual countdown functionality would be powered by JavaScript upon page load.)
+                </p>
             </div>
+
+            <form class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="w-full p-3 bg-gray-800 border border-gray-700 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-500 transition duration-200 shadow-sm" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required
+                           class="w-full p-3 bg-gray-800 border border-gray-700 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-500 transition duration-200 shadow-sm">
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-3 rounded-md text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                    Sign Up for Early Access
+                </button>
+            </form>
+            <p class="text-xs text-gray-500 text-center mt-6">
+                We value your privacy. Your information will not be shared.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-8 text-center text-gray-400 text-sm">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2024 The AI PC Advantage. All rights reserved. | Powered by On-Device Intelligence.</p>
-        </div>
+    <footer class="py-8 px-4 sm:px-6 lg:px-8 bg-gray-950 text-gray-400 text-center text-sm">
+        <p>&copy; 2024 Mastering Apple AI. All rights reserved. | <a href="#" class="text-indigo-400 hover:underline">Privacy Policy</a></p>
     </footer>
 
-    <!-- JavaScript for Countdown Timer (Placeholder logic, needs real implementation for dynamic countdown) -->
+    <!-- A simple JavaScript placeholder for the countdown (not to be executed as per "ONLY raw HTML") -->
     <script>
-        // This JavaScript provides a static placeholder for the countdown timer.
-        // For a functional countdown, you would calculate the time remaining until a specific date.
-        function updateCountdown() {
-            const countdownElements = ['days', 'hours', 'minutes', 'seconds'];
-            countdownElements.forEach(id => {
-                const element = document.getElementById(id);
-                if (element) {
-                    element.textContent = '00'; // Displays static "00" as a placeholder
+        /*
+        // Example JavaScript for a real countdown timer, if allowed:
+        function initializeCountdown(elementId, targetDate) {
+            const countdownElement = document.getElementById(elementId);
+            if (!countdownElement) return; // Exit if element not found
+
+            const updateCountdown = () => {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+
+                if (distance < 0) {
+                    countdownElement.innerHTML = "EXPIRED";
+                    clearInterval(interval);
+                    return;
                 }
-            });
 
-            // Example of how a real countdown would be implemented (commented out):
-            /*
-            const targetDate = new Date("2025-01-01T00:00:00").getTime(); // Set your target date here
-            const now = new Date().getTime();
-            const distance = targetDate - now;
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            if (distance < 0) {
-                // If the countdown is over
-                document.getElementById('days').textContent = '00';
-                document.getElementById('hours').textContent = '00';
-                document.getElementById('minutes').textContent = '00';
-                document.getElementById('seconds').textContent = '00';
-                // Optionally hide the countdown or display an "Offer Expired" message
-                return;
-            }
+                document.getElementById("countdown-days").innerText = String(days).padStart(2, '0');
+                document.getElementById("countdown-hours").innerText = String(hours).padStart(2, '0');
+                document.getElementById("countdown-minutes").innerText = String(minutes).padStart(2, '0');
+                document.getElementById("countdown-seconds").innerText = String(seconds).padStart(2, '0');
+            };
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            function padZero(num) {
-                return num < 10 ? '0' + num : num;
-            }
-
-            document.getElementById('days').textContent = padZero(days);
-            document.getElementById('hours').textContent = padZero(hours);
-            document.getElementById('minutes').textContent = padZero(minutes);
-            document.getElementById('seconds').textContent = padZero(seconds);
-            */
+            updateCountdown(); // Initial call to display immediately
+            const interval = setInterval(updateCountdown, 1000);
         }
 
-        // Call the update function once on page load
-        document.addEventListener('DOMContentLoaded', updateCountdown);
-        // In a live environment, you would call `setInterval(updateCountdown, 1000);` to update every second.
+        // To use: Set a future date. Example: 7 days from now.
+        // const launchDate = new Date();
+        // launchDate.setDate(launchDate.getDate() + 7); // 7 days from now
+        // document.addEventListener('DOMContentLoaded', () => {
+        //     initializeCountdown('countdown-timer-container', launchDate.getTime());
+        // });
+        */
     </script>
 </body>
 </html>
