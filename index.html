@@ -3,273 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azure AI Migration & Cost Optimization - Early Access</title>
-    <meta name="description" content="Migrate your AI APIs to Azure, optimize performance, and achieve significant cost savings with our intelligent SaaS solution. Get early access!">
-    <meta name="keywords" content="Azure AI, AI migration, cost optimization, OpenAI migration, Microsoft AI, cloud AI, developer tools, SaaS">
+    <title>The Microsoft AI Shift: Navigating the Post-OpenAI Future</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom scrollbar for dark mode */
-        body::-webkit-scrollbar {
-            width: 10px;
+        /* Custom styles for dark mode and premium feel, ensures full responsiveness */
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            overflow-x: hidden; /* Prevents horizontal scroll on small screens */
         }
-        body::-webkit-scrollbar-track {
-            background: #1a202c; /* Dark background */
-        }
-        body::-webkit-scrollbar-thumb {
-            background-color: #4a5568; /* Grayish thumb */
-            border-radius: 20px;
-            border: 2px solid #1a202c; /* Border color */
-        }
-        body::-webkit-scrollbar-thumb:hover {
-            background-color: #6a7489; /* Lighter on hover */
-        }
-
-        .countdown-segment {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(31, 41, 55, 0.7); /* Darker background with transparency */
-            border-radius: 0.75rem; /* rounded-lg */
-            padding: 1rem; /* p-4 */
-            margin: 0.5rem; /* m-2 */
-            min-width: 80px; /* Adjust as needed */
-        }
-        .countdown-value {
-            font-size: 2.5rem; /* text-5xl */
-            font-weight: 700; /* font-bold */
-            color: #E2E8F0; /* text-gray-200 */
-        }
-        .countdown-label {
-            font-size: 0.875rem; /* text-sm */
-            color: #A0AEC0; /* text-gray-400 */
-            text-transform: uppercase;
-            margin-top: 0.25rem;
-        }
-
-        /* Hero section specific styles */
         .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* For a parallax-like effect */
-            position: relative;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* For a subtle parallax effect */
         }
-
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay */
-            backdrop-filter: blur(8px); /* Subtle blur effect */
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
+        /* Fluid Typography for ultra-responsiveness */
+        html { font-size: 16px; } /* Base font size */
+        @media (min-width: 640px) { html { font-size: 17px; } } /* sm */
+        @media (min-width: 768px) { html { font-size: 18px; } } /* md */
+        @media (min-width: 1024px) { html { font-size: 19px; } } /* lg */
+        @media (min-width: 1280px) { html { font-size: 20px; } } /* xl */
+        @media (min-width: 1536px) { html { font-size: 21px; } } /* 2xl */
+        /* For 4K monitors, further increase base font size */
+        @media (min-width: 2000px) { html { font-size: 24px; } }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased leading-relaxed">
 
     <!-- Hero Section -->
-    <header class="hero-background min-h-screen flex items-center justify-center py-16 px-4 md:px-8">
-        <div class="hero-overlay"></div>
-        <div class="hero-content text-center max-w-7xl mx-auto z-20">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 drop-shadow-lg animate-pulse-fade-in">
-                Unlock Azure's AI Power: Migrate, Optimize, Save.
+    <header class="relative hero-background min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8">
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+        <div class="relative z-10 text-center max-w-4xl lg:max-w-6xl mx-auto py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 text-indigo-400 drop-shadow-lg">
+                The Microsoft AI Shift: <span class="block mt-2 sm:mt-3">Navigating the Post-OpenAI Future</span>
             </h1>
-            <p class="text-xl sm:text-2xl lg:text-3xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
-                Seamlessly transition your AI APIs to Azure, maximize performance, and dramatically cut costs with intelligent automation.
+            <p class="text-xl sm:text-2xl md:text-3xl text-gray-200 mb-8 max-w-3xl lg:max-w-4xl mx-auto drop-shadow">
+                <span class="font-semibold text-white">"Microsoft AI chief says company was 'set free' from OpenAI to pursue superintelligence."</span> – VentureBeat
             </p>
-            <p class="text-lg sm:text-xl text-indigo-300 font-semibold mb-4">
-                As Microsoft breaks free, discover the full potential of Azure AI.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 sm:mb-12 max-w-2xl lg:max-w-3xl mx-auto drop-shadow">
+                Unlock exclusive, in-depth analysis of Microsoft's evolving AI strategy. Designed for <span class="font-bold text-white">Developers, CTOs, and Investors</span> who need to stay ahead.
             </p>
-
-            <!-- Limited Time Countdown -->
-            <div class="bg-gray-800 bg-opacity-75 backdrop-filter backdrop-blur-sm rounded-xl p-6 sm:p-8 mb-10 shadow-xl border border-blue-600 max-w-2xl mx-auto">
-                <p class="text-xl sm:text-2xl font-bold text-teal-400 mb-4 animate-bounce-slow">Early Access Enrollment Closes In:</p>
-                <div id="countdown" class="flex justify-center flex-wrap">
-                    <div class="countdown-segment">
-                        <div class="countdown-value" id="days">00</div>
-                        <div class="countdown-label">Days</div>
-                    </div>
-                    <div class="countdown-segment">
-                        <div class="countdown-value" id="hours">00</div>
-                        <div class="countdown-label">Hours</div>
-                    </div>
-                    <div class="countdown-segment">
-                        <div class="countdown-value" id="minutes">00</div>
-                        <div class="countdown-label">Minutes</div>
-                    </div>
-                    <div class="countdown-segment">
-                        <div class="countdown-value" id="seconds">00</div>
-                        <div class="countdown-label">Seconds</div>
-                    </div>
-                </div>
-            </div>
-
-            <a href="#waitlist" class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition-all duration-300 ease-in-out transform hover:scale-105 shadow-lg active:scale-95">
-                Join Early Access Now!
+            <a href="#waitlist-form" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-lg text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                Secure Your Early Access 🚀
             </a>
         </div>
     </header>
 
-    <!-- Features Section -->
-    <section id="features" class="py-20 px-4 md:px-8 bg-gradient-to-b from-gray-900 to-gray-800">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">
-                How We Empower Your Azure AI Journey
+    <!-- Value Proposition / Introduction Section -->
+    <section class="py-16 md:py-24 lg:py-32 bg-gray-950">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 text-white">
+                The AI Landscape is Shifting. Are You Ready?
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2 group">
-                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white text-3xl mb-6 mx-auto group-hover:rotate-6 transition-transform">
-                        &#x1F50E; <!-- Magnifying Glass Tilted Right -->
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-100 mb-4 text-center">Intelligent API Analysis</h3>
-                    <p class="text-gray-300 leading-relaxed text-center">
-                        Gain deep insights into your current AI API usage, whether it's OpenAI, custom models, or other cloud providers. Understand your consumption patterns and identify optimization opportunities.
-                    </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
+                <div class="text-lg sm:text-xl text-gray-300 leading-relaxed space-y-6">
+                    <p>The relationship between Microsoft and OpenAI has fundamentally changed, ushering in a new era of AI competition and innovation. This shift is not just theoretical; it has profound implications for every aspect of enterprise technology.</p>
+                    <p>From the evolution of Azure AI services to the future of Windows development and the capabilities of GitHub Copilot, understanding Microsoft's independent AI trajectory is critical for strategic decision-making.</p>
+                    <p class="font-bold text-indigo-300">"The Microsoft AI Shift" is your essential guide to navigating this complex, fast-moving environment.</p>
                 </div>
-
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-2 group">
-                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-purple-600 text-white text-3xl mb-6 mx-auto group-hover:scale-110 transition-transform">
-                        &#x1F9BE; <!-- Robot -->
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-100 mb-4 text-center">Azure AI Model Recommendations</h3>
-                    <p class="text-gray-300 leading-relaxed text-center">
-                        Our advanced engine recommends equivalent or superior Microsoft Azure AI models, tailored to your specific use cases, ensuring optimal performance and functionality.
-                    </p>
+                <div>
+                    <img src="https://source.unsplash.com/600x400/?futuristic,data" alt="Futuristic data analysis" class="rounded-xl shadow-2xl w-full h-auto object-cover max-w-full mx-auto" />
                 </div>
-
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-teal-500 transition-all duration-300 transform hover:-translate-y-2 group">
-                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-teal-600 text-white text-3xl mb-6 mx-auto group-hover:animate-spin-slow transition-transform">
-                        &#x1F4B8; <!-- Money Bag -->
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-100 mb-4 text-center">Real-time Cost Savings Estimates</h3>
-                    <p class="text-gray-300 leading-relaxed text-center">
-                        See precise, data-backed projections of your potential cost savings by migrating to Azure AI. Understand your ROI before you even begin the transition.
-                    </p>
-                </div>
-
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2 group">
-                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-indigo-600 text-white text-3xl mb-6 mx-auto group-hover:skew-x-6 transition-transform">
-                        &#x1F680; <!-- Rocket -->
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-100 mb-4 text-center">Automated Migration Assistance</h3>
-                    <p class="text-gray-300 leading-relaxed text-center">
-                        Streamline your migration with intelligent tools and guided workflows. Reduce manual effort and accelerate your transition to Azure AI with confidence.
-                    </p>
-                </div>
-
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-orange-500 transition-all duration-300 transform hover:-translate-y-2 group">
-                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-orange-600 text-white text-3xl mb-6 mx-auto group-hover:scale-105 transition-transform">
-                        &#x1F4CA; <!-- Bar Chart -->
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-100 mb-4 text-center">Ongoing Cost Monitoring & Alerts</h3>
-                    <p class="text-gray-300 leading-relaxed text-center">
-                        Maintain control over your AI expenses with intuitive dashboards and proactive alerts. Prevent budget overruns and continuously optimize your Azure AI spend.
-                    </p>
-                </div>
-
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-red-500 transition-all duration-300 transform hover:-translate-y-2 group">
-                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-red-600 text-white text-3xl mb-6 mx-auto group-hover:animate-pulse-fast transition-transform">
-                        &#x1F4BB; <!-- Laptop Computer -->
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-100 mb-4 text-center">Developer & Business Focused</h3>
-                    <p class="text-gray-300 leading-relaxed text-center">
-                        Built for both technical teams needing granular control and business leaders seeking strategic oversight, ensuring everyone benefits from optimized AI operations.
-                    </p>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-20 px-4 md:px-8 bg-gray-900">
-        <div class="max-w-2xl mx-auto bg-gray-800 p-8 sm:p-10 rounded-xl shadow-2xl border border-gray-700 transform transition-all duration-300 hover:scale-105">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">
-                Secure Your Spot for Early Access
+    <!-- Features Section -->
+    <section class="py-16 md:py-24 lg:py-32 bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 md:mb-16 text-white">
+                What You'll Get With Your Strategic AI Briefing
             </h2>
-            <p class="text-lg text-gray-300 text-center mb-8">
-                Be among the first to revolutionize your AI strategy and start saving. Join our exclusive waitlist today!
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">🔬</span>
+                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Deep Dive Analysis</h3>
+                    </div>
+                    <p class="text-gray-300 text-base sm:text-lg">Unpack Microsoft's evolving AI strategy, directly informed by key industry developments and internal shifts post-OpenAI.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">💡</span>
+                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Actionable Insights</h3>
+                    </div>
+                    <p class="text-gray-300 text-base sm:text-lg">Receive concrete recommendations on how your business can prepare for and leverage these monumental shifts.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">⚙️</span>
+                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Product Implications</h3>
+                    </div>
+                    <p class="text-gray-300 text-base sm:text-lg">Specific analysis on Azure AI, Windows development, GitHub Copilot, and other critical Microsoft AI offerings.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">📈</span>
+                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Competitive Landscape</h3>
+                    </div>
+                    <p class="text-gray-300 text-base sm:text-lg">Stay informed on how Microsoft's moves impact the broader AI ecosystem and your competitive positioning.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">🔮</span>
+                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Future-Proof Your Strategy</h3>
+                    </div>
+                    <p class="text-gray-300 text-base sm:text-lg">Anticipate upcoming trends and technologies to build a resilient and forward-thinking AI strategy.</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">✉️</span>
+                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Premium Delivery</h3>
+                    </div>
+                    <p class="text-gray-300 text-base sm:text-lg">Delivered weekly as a concise newsletter or monthly as an in-depth "Strategic AI Briefing" – you choose.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist Form Section with Countdown -->
+    <section id="waitlist-form" class="py-16 md:py-24 lg:py-32 bg-gray-950">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl lg:max-w-3xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-8 text-white">
+                Limited-Time Opportunity: Join the Exclusive Waitlist!
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 text-center mb-10 max-w-xl lg:max-w-2xl mx-auto">
+                Be among the first to gain access to "The Microsoft AI Shift" and receive exclusive early-bird benefits. Don't miss out on shaping your future.
             </p>
 
-            <form class="space-y-6">
-                <div>
-                    <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+            <!-- Countdown Timer -->
+            <div class="bg-gradient-to-r from-indigo-700 to-purple-800 p-6 sm:p-8 rounded-xl shadow-2xl mb-12 text-center border-2 border-indigo-400">
+                <p class="text-white text-2xl sm:text-3xl font-bold mb-4">
+                    Early Access Closes In:
+                </p>
+                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 md:space-x-6 text-white text-3xl sm:text-4xl md:text-5xl font-extrabold">
+                    <div class="flex flex-col items-center">
+                        <span id="days">00</span>
+                        <span class="text-xs sm:text-sm md:text-base font-medium">Days</span>
+                    </div>
+                    <span class="text-white">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours">00</span>
+                        <span class="text-xs sm:text-sm md:text-base font-medium">Hours</span>
+                    </div>
+                    <span class="text-white">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes">00</span>
+                        <span class="text-xs sm:text-sm md:text-base font-medium">Minutes</span>
+                    </div>
+                    <span class="text-white">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds">00</span>
+                        <span class="text-xs sm:text-sm md:text-base font-medium">Seconds</span>
+                    </div>
+                </div>
+            </div>
+
+            <form class="bg-gray-800 p-8 sm:p-10 rounded-xl shadow-2xl border border-gray-700">
+                <div class="mb-6">
+                    <label for="name" class="block text-gray-200 text-lg sm:text-xl font-medium mb-2">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name"
+                           class="w-full px-5 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-base sm:text-lg"
                            required>
                 </div>
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Work Email</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                <div class="mb-8">
+                    <label for="email" class="block text-gray-200 text-lg sm:text-xl font-medium mb-2">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com"
+                           class="w-full px-5 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-base sm:text-lg"
                            required>
                 </div>
                 <button type="submit"
-                        class="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 rounded-lg text-xl transition-all duration-300 ease-in-out transform hover:scale-105 shadow-xl active:scale-95">
-                    Join the Waitlist
+                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-lg text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                    Join the Waitlist Now! ✨
                 </button>
+                <p class="text-center text-sm text-gray-400 mt-6">
+                    By joining, you agree to receive updates and special offers related to "The Microsoft AI Shift". We respect your privacy.
+                </p>
             </form>
-            <p class="text-xs text-gray-400 text-center mt-6">
-                We respect your privacy. Your information will not be shared.
-                <a href="#" class="text-blue-400 hover:text-blue-300 underline">Privacy Policy</a>
-            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 px-4 md:px-8 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto text-center text-gray-500 text-sm">
-            <p>&copy; <span id="currentYear"></span> Azure AI Migration & Cost Optimization SaaS. All rights reserved.</p>
-            <p class="mt-2">
-                <a href="#" class="text-gray-400 hover:text-blue-400 mx-2">Terms of Service</a> |
-                <a href="#" class="text-gray-400 hover:text-blue-400 mx-2">Privacy Policy</a>
-            </p>
+    <footer class="bg-gray-900 py-10 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+            <p>&copy; <span id="currentYear"></span> Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">"The Microsoft AI Shift: Navigating the Post-OpenAI Future" is an independent analysis and not affiliated with Microsoft or OpenAI.</p>
         </div>
     </footer>
 
+    <!-- JavaScript for Countdown Timer and Current Year -->
     <script>
-        // Set the current year in the footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Countdown Timer Logic
+        // Set the date we're counting down to (e.g., 7 days from now, plus some hours/minutes/seconds)
         const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 7); // Set countdown for 7 days from now
+        countdownDate.setDate(countdownDate.getDate() + 7); // Set to 7 days from now
+        countdownDate.setHours(countdownDate.getHours() + 12); // Add 12 hours
+        countdownDate.setMinutes(countdownDate.getMinutes() + 30); // Add 30 minutes
+        countdownDate.setSeconds(countdownDate.getSeconds() + 45); // Add 45 seconds
 
-        const countdownInterval = setInterval(function() {
+
+        const x = setInterval(function() {
             const now = new Date().getTime();
-            const distance = countdownDate - now;
+            const distance = countdownDate.getTime() - now;
 
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+            // Update the HTML elements if they exist
+            if (document.getElementById("days")) {
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+            }
 
+            // If the countdown is finished, write some text
             if (distance < 0) {
-                clearInterval(countdownInterval);
-                document.getElementById("countdown").innerHTML = "<p class='text-red-500 text-xl font-bold'>Early Access Closed!</p>";
-                // Optionally disable the waitlist form here
+                clearInterval(x);
+                if (document.getElementById("countdown")) {
+                    document.getElementById("countdown").innerHTML = "<p class='text-white text-xl sm:text-2xl md:text-3xl font-bold'>OFFER EXPIRED!</p>";
+                }
             }
         }, 1000);
+
+        // Update current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
