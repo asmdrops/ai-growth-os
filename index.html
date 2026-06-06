@@ -1,226 +1,275 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple AI & iOS 27 Developer Toolkit - Exclusive Access</title>
-    <meta name="description" content="Unlock Apple's latest AI and iOS 27 advancements with exclusive code, API guides, trend analysis, and a private community. Join the waitlist for premium access.">
-    <!-- Tailwind CSS CDN -->
+    <title>Azure AI Migration & Cost Optimization - Early Access</title>
+    <meta name="description" content="Migrate your AI APIs to Azure, optimize performance, and achieve significant cost savings with our intelligent SaaS solution. Get early access!">
+    <meta name="keywords" content="Azure AI, AI migration, cost optimization, OpenAI migration, Microsoft AI, cloud AI, developer tools, SaaS">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Google Fonts - Inter for a modern, clean look -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        /* Custom scrollbar for dark mode */
+        body::-webkit-scrollbar {
+            width: 10px;
         }
-        /* Custom dark mode styles for a deeper aesthetic */
-        .dark {
-            color-scheme: dark;
+        body::-webkit-scrollbar-track {
+            background: #1a202c; /* Dark background */
         }
-        .dark body {
-            background-color: #0A0A0A; /* Deepest dark */
-            color: #E5E7EB; /* Light gray text */
+        body::-webkit-scrollbar-thumb {
+            background-color: #4a5568; /* Grayish thumb */
+            border-radius: 20px;
+            border: 2px solid #1a202c; /* Border color */
         }
-        .dark .card-bg {
-            background-color: #1a1a1a;
+        body::-webkit-scrollbar-thumb:hover {
+            background-color: #6a7489; /* Lighter on hover */
         }
-        .dark .input-field {
-            background-color: #262626;
-            border-color: #4B5563;
-            color: #E5E7EB;
+
+        .countdown-segment {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(31, 41, 55, 0.7); /* Darker background with transparency */
+            border-radius: 0.75rem; /* rounded-lg */
+            padding: 1rem; /* p-4 */
+            margin: 0.5rem; /* m-2 */
+            min-width: 80px; /* Adjust as needed */
         }
-        .dark .input-field::placeholder {
-            color: #9CA3AF;
+        .countdown-value {
+            font-size: 2.5rem; /* text-5xl */
+            font-weight: 700; /* font-bold */
+            color: #E2E8F0; /* text-gray-200 */
         }
-        /* Fluid typography for large screens if needed, otherwise Tailwind's responsive classes handle most */
-        @media (min-width: 1536px) { /* For 2XL and above */
-            .text-6xl-2xl { font-size: 4.5rem; line-height: 1; } /* Example for very large screens */
-            .text-5xl-2xl { font-size: 3.5rem; line-height: 1; }
+        .countdown-label {
+            font-size: 0.875rem; /* text-sm */
+            color: #A0AEC0; /* text-gray-400 */
+            text-transform: uppercase;
+            margin-top: 0.25rem;
+        }
+
+        /* Hero section specific styles */
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* For a parallax-like effect */
+            position: relative;
+        }
+
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay */
+            backdrop-filter: blur(8px); /* Subtle blur effect */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-50 antialiased leading-relaxed">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="relative min-h-screen flex items-center justify-center text-center overflow-hidden py-16 px-4">
-        <!-- Hero Image -->
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-            <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
-        </div>
-
-        <div class="relative z-10 max-w-7xl mx-auto flex flex-col items-center justify-center">
-            <p class="text-indigo-400 text-sm sm:text-base mb-3 md:mb-4 uppercase tracking-widest font-semibold">
-                💥 EXCLUSIVE PRE-LAUNCH ACCESS 💥
-            </p>
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-6xl-2xl font-extrabold leading-tight mb-4 sm:mb-6 text-white drop-shadow-lg max-w-5xl">
-                Master Apple's AI & iOS 27 Revolution: Build Smarter, Monetize Faster
+    <header class="hero-background min-h-screen flex items-center justify-center py-16 px-4 md:px-8">
+        <div class="hero-overlay"></div>
+        <div class="hero-content text-center max-w-7xl mx-auto z-20">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 drop-shadow-lg animate-pulse-fade-in">
+                Unlock Azure's AI Power: Migrate, Optimize, Save.
             </h1>
-            <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mb-6 sm:mb-8">
-                Leverage the future of app development with our premium <strong class="text-indigo-300">Apple AI & iOS 27 Developer Toolkit</strong>. Gain an unfair advantage in app monetization and efficiency, precisely aligned with WWDC's biggest advancements.
+            <p class="text-xl sm:text-2xl lg:text-3xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
+                Seamlessly transition your AI APIs to Azure, maximize performance, and dramatically cut costs with intelligent automation.
+            </p>
+            <p class="text-lg sm:text-xl text-indigo-300 font-semibold mb-4">
+                As Microsoft breaks free, discover the full potential of Azure AI.
             </p>
 
             <!-- Limited Time Countdown -->
-            <div class="bg-indigo-900 bg-opacity-40 border border-indigo-700 p-4 sm:p-6 rounded-xl shadow-2xl mb-8 flex flex-col items-center text-white max-w-md w-full">
-                <p class="text-lg sm:text-xl font-bold mb-3 text-indigo-200">Pre-Launch Offer Ends In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 md:space-x-5 text-3xl sm:text-4xl md:text-5xl font-extrabold">
-                    <div class="flex flex-col items-center">
-                        <span id="days">00</span>
-                        <span class="text-sm sm:text-base font-medium text-gray-300">Days</span>
+            <div class="bg-gray-800 bg-opacity-75 backdrop-filter backdrop-blur-sm rounded-xl p-6 sm:p-8 mb-10 shadow-xl border border-blue-600 max-w-2xl mx-auto">
+                <p class="text-xl sm:text-2xl font-bold text-teal-400 mb-4 animate-bounce-slow">Early Access Enrollment Closes In:</p>
+                <div id="countdown" class="flex justify-center flex-wrap">
+                    <div class="countdown-segment">
+                        <div class="countdown-value" id="days">00</div>
+                        <div class="countdown-label">Days</div>
                     </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours">00</span>
-                        <span class="text-sm sm:text-base font-medium text-gray-300">Hours</span>
+                    <div class="countdown-segment">
+                        <div class="countdown-value" id="hours">00</div>
+                        <div class="countdown-label">Hours</div>
                     </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes">00</span>
-                        <span class="text-sm sm:text-base font-medium text-gray-300">Minutes</span>
+                    <div class="countdown-segment">
+                        <div class="countdown-value" id="minutes">00</div>
+                        <div class="countdown-label">Minutes</div>
                     </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds">00</span>
-                        <span class="text-sm sm:text-base font-medium text-gray-300">Seconds</span>
+                    <div class="countdown-segment">
+                        <div class="countdown-value" id="seconds">00</div>
+                        <div class="countdown-label">Seconds</div>
                     </div>
                 </div>
             </div>
 
-            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
-                🚀 Secure Your Early Access & Discount Now!
+            <a href="#waitlist" class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition-all duration-300 ease-in-out transform hover:scale-105 shadow-lg active:scale-95">
+                Join Early Access Now!
             </a>
-            <p class="text-xs sm:text-sm text-gray-400 mt-3">Join the waitlist for exclusive discounts and early bird access.</p>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-20 md:py-24 bg-gray-950 text-center">
-        <div class="container mx-auto px-4 max-w-7xl">
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-6 text-white">
-                What the Toolkit Delivers: Your Unmatched Edge in the New iOS Era
+    <section id="features" class="py-20 px-4 md:px-8 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">
+                How We Empower Your Azure AI Journey
             </h2>
-            <p class="text-base sm:text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-                As reported by Bloomberg, WWDC's focus on AI and iOS 27 is set to redefine app development. Our toolkit ensures you're not just ready, but leading the charge in leveraging these critical market trends.
-            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Feature 1: Exclusive Code Examples -->
-                <div class="card-bg p-6 rounded-lg shadow-lg border border-gray-800 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <p class="text-4xl mb-4">💡</p>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Exclusive Code Examples</h3>
-                    <p class="text-gray-400 text-sm sm:text-base">
-                        Dive into practical, production-ready code showcasing Apple's latest AI capabilities and iOS 27 features. Spend less time experimenting, more time building.
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white text-3xl mb-6 mx-auto group-hover:rotate-6 transition-transform">
+                        &#x1F50E; <!-- Magnifying Glass Tilted Right -->
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-100 mb-4 text-center">Intelligent API Analysis</h3>
+                    <p class="text-gray-300 leading-relaxed text-center">
+                        Gain deep insights into your current AI API usage, whether it's OpenAI, custom models, or other cloud providers. Understand your consumption patterns and identify optimization opportunities.
                     </p>
                 </div>
 
-                <!-- Feature 2: Advanced API Integration Guides -->
-                <div class="card-bg p-6 rounded-lg shadow-lg border border-gray-800 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <p class="text-4xl mb-4">🔗</p>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Advanced API Integration Guides</h3>
-                    <p class="text-gray-400 text-sm sm:text-base">
-                        Step-by-step guides for integrating new AI APIs and iOS 27 functionalities into your apps, optimized for performance and user experience.
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-purple-600 text-white text-3xl mb-6 mx-auto group-hover:scale-110 transition-transform">
+                        &#x1F9BE; <!-- Robot -->
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-100 mb-4 text-center">Azure AI Model Recommendations</h3>
+                    <p class="text-gray-300 leading-relaxed text-center">
+                        Our advanced engine recommends equivalent or superior Microsoft Azure AI models, tailored to your specific use cases, ensuring optimal performance and functionality.
                     </p>
                 </div>
 
-                <!-- Feature 3: Weekly Trend Analysis & Insights -->
-                <div class="card-bg p-6 rounded-lg shadow-lg border border-gray-800 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <p class="text-4xl mb-4">📈</p>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Weekly Trend Analysis & Insights</h3>
-                    <p class="text-gray-400 text-sm sm:text-base">
-                        Stay ahead with expert analysis on Apple's AI, Siri, and iOS 27 developments. Understand market shifts and capitalize on emerging opportunities for monetization.
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-teal-500 transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-teal-600 text-white text-3xl mb-6 mx-auto group-hover:animate-spin-slow transition-transform">
+                        &#x1F4B8; <!-- Money Bag -->
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-100 mb-4 text-center">Real-time Cost Savings Estimates</h3>
+                    <p class="text-gray-300 leading-relaxed text-center">
+                        See precise, data-backed projections of your potential cost savings by migrating to Azure AI. Understand your ROI before you even begin the transition.
                     </p>
                 </div>
 
-                <!-- Feature 4: Private Community Forum -->
-                <div class="card-bg p-6 rounded-lg shadow-lg border border-gray-800 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <p class="text-4xl mb-4">🤝</p>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Private Community Forum</h3>
-                    <p class="text-gray-400 text-sm sm:text-base">
-                        Connect, collaborate, and troubleshoot with a curated network of elite Apple developers. Share insights and accelerate your learning curve.
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-indigo-600 text-white text-3xl mb-6 mx-auto group-hover:skew-x-6 transition-transform">
+                        &#x1F680; <!-- Rocket -->
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-100 mb-4 text-center">Automated Migration Assistance</h3>
+                    <p class="text-gray-300 leading-relaxed text-center">
+                        Streamline your migration with intelligent tools and guided workflows. Reduce manual effort and accelerate your transition to Azure AI with confidence.
                     </p>
                 </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-orange-500 transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-orange-600 text-white text-3xl mb-6 mx-auto group-hover:scale-105 transition-transform">
+                        &#x1F4CA; <!-- Bar Chart -->
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-100 mb-4 text-center">Ongoing Cost Monitoring & Alerts</h3>
+                    <p class="text-gray-300 leading-relaxed text-center">
+                        Maintain control over your AI expenses with intuitive dashboards and proactive alerts. Prevent budget overruns and continuously optimize your Azure AI spend.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-red-500 transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-red-600 text-white text-3xl mb-6 mx-auto group-hover:animate-pulse-fast transition-transform">
+                        &#x1F4BB; <!-- Laptop Computer -->
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-100 mb-4 text-center">Developer & Business Focused</h3>
+                    <p class="text-gray-300 leading-relaxed text-center">
+                        Built for both technical teams needing granular control and business leaders seeking strategic oversight, ensuring everyone benefits from optimized AI operations.
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / CTA Section -->
-    <section id="waitlist" class="py-16 sm:py-20 md:py-24 bg-gradient-to-br from-gray-900 to-black text-center">
-        <div class="container mx-auto px-4 max-w-xl">
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-6 text-white">
-                Don't Get Left Behind. Secure Your Spot Now.
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-20 px-4 md:px-8 bg-gray-900">
+        <div class="max-w-2xl mx-auto bg-gray-800 p-8 sm:p-10 rounded-xl shadow-2xl border border-gray-700 transform transition-all duration-300 hover:scale-105">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">
+                Secure Your Spot for Early Access
             </h2>
-            <p class="text-base sm:text-lg text-gray-300 mb-8">
-                Be among the first to access the premium Apple AI & iOS 27 Developer Toolkit. Joining the waitlist guarantees early bird pricing and exclusive updates before public launch.
+            <p class="text-lg text-gray-300 text-center mb-8">
+                Be among the first to revolutionize your AI strategy and start saving. Join our exclusive waitlist today!
             </p>
 
-            <form class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-2xl border border-gray-700 mx-auto max-w-lg">
-                <div class="mb-5 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-medium mb-2">Full Name</label>
+            <form class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
                     <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="input-field w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700 text-white placeholder-gray-400 text-base transition duration-200">
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                           required>
                 </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-medium mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required
-                           class="input-field w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700 text-white placeholder-gray-400 text-base transition duration-200">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Work Email</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                           required>
                 </div>
-                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                    ✅ Join the Exclusive Waitlist!
+                <button type="submit"
+                        class="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 rounded-lg text-xl transition-all duration-300 ease-in-out transform hover:scale-105 shadow-xl active:scale-95">
+                    Join the Waitlist
                 </button>
-                <p class="text-xs text-gray-500 mt-4">We respect your privacy. Your email will only be used for updates on this toolkit.</p>
             </form>
+            <p class="text-xs text-gray-400 text-center mt-6">
+                We respect your privacy. Your information will not be shared.
+                <a href="#" class="text-blue-400 hover:text-blue-300 underline">Privacy Policy</a>
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black py-8 text-center text-gray-500 text-sm">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2024 Apple AI & iOS 27 Developer Toolkit. All rights reserved.</p>
-            <p class="mt-2">Powered by cutting-edge insights for the modern Apple developer.</p>
+    <footer class="bg-gray-900 py-10 px-4 md:px-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto text-center text-gray-500 text-sm">
+            <p>&copy; <span id="currentYear"></span> Azure AI Migration & Cost Optimization SaaS. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="text-gray-400 hover:text-blue-400 mx-2">Terms of Service</a> |
+                <a href="#" class="text-gray-400 hover:text-blue-400 mx-2">Privacy Policy</a>
+            </p>
         </div>
     </footer>
 
-    <!-- Countdown Timer Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the target date for the countdown.
-            // For a live product, this would be a specific launch date.
-            // Here, we set it to 7 days from the page load for demonstration of "Limited Time".
-            const countDownDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000); // 7 days from now
+        // Set the current year in the footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate - now;
+        // Countdown Timer Logic
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 7); // Set countdown for 7 days from now
 
-                // Calculate times for days, hours, minutes, seconds
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        const countdownInterval = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
 
-                // Display the result in the elements
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // If the countdown is over
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<span class='text-xl sm:text-2xl font-bold text-red-400'>OFFER EXPIRED!</span>";
-                    // Optionally disable the waitlist button or change text
-                    const ctaButton = document.querySelector('a[href="#waitlist"]');
-                    if (ctaButton) {
-                        ctaButton.textContent = "Waitlist Still Open (No Special Offer)";
-                        ctaButton.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
-                        ctaButton.classList.add('bg-gray-500', 'cursor-not-allowed', 'hover:bg-gray-600');
-                        // For a real scenario, you might change the href to a general waitlist or remove the link.
-                        // ctaButton.removeAttribute('href');
-                    }
-                }
-            }, 1000);
-        });
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "<p class='text-red-500 text-xl font-bold'>Early Access Closed!</p>";
+                // Optionally disable the waitlist form here
+            }
+        }, 1000);
     </script>
 </body>
 </html>
