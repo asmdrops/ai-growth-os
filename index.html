@@ -1,226 +1,168 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastering Apple Intelligence - Premium Online Course</title>
+    <title>Mastering Your Midlife Health: Leveraging iOS 27</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        .hero-bg {
+        /* Custom styles for dark mode and responsive image overlay */
+        .hero-section {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-        }
-        .fade-in-up {
-            animation: fadeInUp 1s ease-out forwards;
-            opacity: 0;
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        /* Basic countdown styling for display */
-        .countdown-item {
-            display: inline-flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 80px;
-            height: 80px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            margin: 0 8px;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #fff;
             position: relative;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 0;
         }
-        .countdown-item span.label {
-            font-size: 0.8rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #ccc;
-            margin-top: -5px;
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.75); /* Darker overlay for premium feel */
+            z-index: -1;
         }
     </style>
 </head>
-<body class="bg-gray-950 text-white antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="relative min-h-screen flex items-center justify-center text-center p-4 overflow-hidden">
-        <div class="hero-bg absolute inset-0 z-0 opacity-20"></div>
-        <div class="absolute inset-0 bg-black opacity-70 z-10"></div>
-        
-        <div class="relative z-20 max-w-4xl mx-auto py-16 px-4 md:px-8 lg:px-12 fade-in-up">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-600">
-                Unlock the Future: Mastering Apple Intelligence
+    <header class="hero-section flex items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
+        <div class="max-w-4xl mx-auto text-center z-10">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                Mastering Your Midlife Health: <br class="hidden sm:inline">Leveraging iOS 27 for Perimenopause & Menopause
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl font-medium text-gray-200 mb-10 max-w-3xl mx-auto">
-                The definitive premium course and community for developers and power users to harness Apple's revolutionary AI. Dive deep into on-device and cloud AI, new Siri APIs, and practical workflows.
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Unlock the power of your Apple Health data to navigate perimenopause and menopause with clarity, confidence, and personalized strategies.
             </p>
-            
-            <div class="mb-12">
-                <h3 class="text-xl md:text-2xl font-semibold text-indigo-300 mb-4">Limited Time Early-Bird Discount Ends In:</h3>
-                <div class="flex justify-center items-center flex-wrap gap-4">
-                    <div class="countdown-item">
-                        <span class="value">07</span>
-                        <span class="label">Days</span>
+
+            <!-- Limited Time Countdown -->
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-800 p-4 sm:p-6 rounded-lg shadow-2xl mb-8 border border-purple-500">
+                <p class="text-white text-xl sm:text-2xl font-bold mb-3">Limited Enrollment: Don't Miss Out!</p>
+                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 text-white">
+                    <div class="flex flex-col items-center">
+                        <span class="text-3xl sm:text-4xl lg:text-5xl font-mono font-bold" id="days">00</span>
+                        <span class="text-xs sm:text-sm uppercase">Days</span>
                     </div>
-                    <div class="countdown-item">
-                        <span class="value">23</span>
-                        <span class="label">Hours</span>
+                    <span class="text-3xl sm:text-4xl lg:text-5xl font-mono">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-3xl sm:text-4xl lg:text-5xl font-mono font-bold" id="hours">00</span>
+                        <span class="text-xs sm:text-sm uppercase">Hours</span>
                     </div>
-                    <div class="countdown-item">
-                        <span class="value">59</span>
-                        <span class="label">Mins</span>
+                    <span class="text-3xl sm:text-4xl lg:text-5xl font-mono">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-3xl sm:text-4xl lg:text-5xl font-mono font-bold" id="minutes">00</span>
+                        <span class="text-xs sm:text-sm uppercase">Minutes</span>
                     </div>
-                    <div class="countdown-item">
-                        <span class="value">59</span>
-                        <span class="label">Secs</span>
+                    <span class="text-3xl sm:text-4xl lg:text-5xl font-mono">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-3xl sm:text-4xl lg:text-5xl font-mono font-bold" id="seconds">00</span>
+                        <span class="text-xs sm:text-sm uppercase">Seconds</span>
                     </div>
                 </div>
+                <script>
+                    // Basic client-side countdown timer for dynamic display
+                    const countdownDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000); // 7 days from now
+                    const x = setInterval(function() {
+                        const now = new Date().getTime();
+                        const distance = countdownDate - now;
+
+                        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                        document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                        document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                        document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                        document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+                        if (distance < 0) {
+                            clearInterval(x);
+                            document.getElementById("countdown").innerHTML = "<p class='text-white text-xl'>Enrollment Has Closed!</p>";
+                        }
+                    }, 1000);
+                </script>
             </div>
 
-            <a href="#enroll" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition duration-300 transform hover:scale-105 shadow-lg">
-                Secure Your Early-Bird Access Now!
+            <a href="#enroll" class="inline-block bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl sm:text-2xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Enroll Now & Secure Your Spot!
             </a>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 md:px-8 lg:px-12 max-w-7xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-blue-500">
-                What You'll Master
+    <section class="py-16 sm:py-20 lg:py-24 bg-gray-800 text-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-white mb-12">
+                What You'll Achieve in This Premium Program
             </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Feature 1 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-5xl text-purple-400 mb-4">💡</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Apple's Foundation Models</h3>
-                    <p class="text-gray-300">Gain a profound understanding of Apple's core AI models, their architecture, capabilities, and how they power the next generation of intelligent applications.</p>
+                <div class="bg-gray-700 p-8 rounded-lg shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 border border-transparent hover:border-purple-500">
+                    <span class="text-5xl mb-4" role="img" aria-label="Smartwatch icon">⌚</span>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Decode iOS 27 Health Data</h3>
+                    <p class="text-gray-300">Gain expert-led insights into interpreting complex metrics from the new iOS 27 health features to truly understand your body's signals.</p>
                 </div>
-                
                 <!-- Feature 2 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-5xl text-indigo-400 mb-4">⚙️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">On-Device vs. Cloud AI Optimization</h3>
-                    <p class="text-gray-300">Learn the critical differences and best practices for optimizing AI workloads for privacy-preserving on-device processing versus scalable cloud solutions.</p>
+                <div class="bg-gray-700 p-8 rounded-lg shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 border border-transparent hover:border-purple-500">
+                    <span class="text-5xl mb-4" role="img" aria-label="Strategy icon">🎯</span>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Personalized Symptom Management</h3>
+                    <p class="text-gray-300">Develop effective, personalized strategies to navigate and alleviate perimenopause and menopause symptoms, restoring comfort and vitality.</p>
                 </div>
-
                 <!-- Feature 3 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-5xl text-blue-400 mb-4">🗣️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Integrating New Siri APIs</h3>
-                    <p class="text-gray-300">Hands-on modules to integrate the powerful new Siri APIs into your applications, enabling intelligent voice interactions and contextual understanding.</p>
+                <div class="bg-gray-700 p-8 rounded-lg shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 border border-transparent hover:border-purple-500">
+                    <span class="text-5xl mb-4" role="img" aria-label="Nutrition icon">🍏</span>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Optimized Midlife Nutrition Guides</h3>
+                    <p class="text-gray-300">Access curated, science-backed nutrition plans specifically designed to support women's hormonal health and well-being during midlife.</p>
                 </div>
-                
                 <!-- Feature 4 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-5xl text-green-400 mb-4">🚀</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Practical AI Workflows</h3>
-                    <p class="text-gray-300">Discover and implement practical AI-driven workflows within Apple's native apps like Pages, Keynote, Notes, and Mail for enhanced productivity.</p>
+                <div class="bg-gray-700 p-8 rounded-lg shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 border border-transparent hover:border-purple-500">
+                    <span class="text-5xl mb-4" role="img" aria-label="Community icon">🤝</span>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Supportive Private Forum</h3>
+                    <p class="text-gray-300">Connect with an exclusive, thriving community of women navigating the same journey, sharing insights, support, and triumphs in a safe space.</p>
                 </div>
-
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-5xl text-yellow-400 mb-4">💻</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Templates & Code Snippets</h3>
-                    <p class="text-gray-300">Access a rich library of reusable templates, Swift/Objective-C code snippets, and project examples to kickstart your Apple Intelligence development.</p>
-                </div>
-
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-5xl text-red-400 mb-4">💬</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Live Expert Q&A Sessions</h3>
-                    <p class="text-gray-300">Participate in monthly live Q&A sessions with leading experts in Apple's AI ecosystem to get your burning questions answered and network.</p>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / Call to Action Form -->
-    <section id="enroll" class="py-16 sm:py-24 bg-gray-950">
-        <div class="container mx-auto px-4 md:px-8 lg:px-12 max-w-4xl text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-600">
-                Join the Masterclass
+    <!-- Waitlist / Enrollment Form Section -->
+    <section id="enroll" class="py-16 sm:py-20 lg:py-24 bg-gray-900">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-8">
+                Ready to Master Your Midlife Health Journey?
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-                The future of Apple is intelligent. Don't be left behind. Enroll now to secure your spot and gain immediate access to the early-bird discount. This is more than a course; it's your entry into an elite community.
+            <p class="text-lg sm:text-xl text-gray-300 mb-10">
+                Enroll now to gain instant access to expert-led modules, personalized management tools, and our exclusive, empowering community.
             </p>
-
-            <form action="#" method="POST" class="max-w-xl mx-auto bg-gray-800 p-6 sm:p-8 rounded-xl shadow-2xl border border-gray-700">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-200 text-sm font-semibold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" required
-                           class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200">
+            <form class="bg-gray-800 p-8 sm:p-10 rounded-lg shadow-2xl border border-purple-700">
+                <div class="mb-6">
+                    <label for="name" class="block text-left text-gray-200 text-lg font-semibold mb-2">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Jane Doe"
+                           class="w-full p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-200"
+                           required>
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-200 text-sm font-semibold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required
-                           class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200">
+                <div class="mb-6">
+                    <label for="email" class="block text-left text-gray-200 text-lg font-semibold mb-2">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="jane.doe@example.com"
+                           class="w-full p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-200"
+                           required>
                 </div>
-                <button type="submit" 
-                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-full text-xl transition duration-300 transform hover:scale-105 shadow-lg">
-                    Enroll Now & Claim Discount!
+                <button type="submit"
+                        class="w-full bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-bold py-4 px-6 rounded-md text-xl sm:text-2xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    Enroll Now & Transform Your Health!
                 </button>
-                <p class="text-xs text-gray-400 mt-4">We respect your privacy. No spam, ever.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black py-8 text-center text-gray-400 border-t border-gray-800">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2024 Mastering Apple Intelligence. All rights reserved.</p>
-            <p class="mt-2 text-sm">Powered by the Future of AI Education.</p>
-        </div>
+    <footer class="bg-gray-800 py-8 text-center text-gray-400 text-sm">
+        <p>&copy; 2023 Mastering Your Midlife Health. All rights reserved.</p>
+        <p class="mt-2">Leveraging the latest in Apple Health for Women's Wellness. A knowledge product by [Your Company Name].</p>
     </footer>
 
-    <!-- Basic JS for countdown (demonstration - for real implementation, use actual JS) -->
-    <script>
-        // This script is for illustrative purposes only to show where real countdown logic would go.
-        // For a functional countdown, you would calculate remaining time and update these values dynamically.
-        document.addEventListener('DOMContentLoaded', () => {
-            const countdownElements = document.querySelectorAll('.countdown-item .value');
-            if (countdownElements.length > 0) {
-                // In a real scenario, fetch target date and update elements every second.
-                // Example:
-                // const targetDate = new Date("2024-12-31T23:59:59").getTime();
-                // setInterval(() => {
-                //     const now = new Date().getTime();
-                //     const distance = targetDate - now;
-                //     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                //     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                //     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                //     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                //     countdownElements[0].textContent = days.toString().padStart(2, '0');
-                //     countdownElements[1].textContent = hours.toString().padStart(2, '0');
-                //     countdownElements[2].textContent = minutes.toString().padStart(2, '0');
-                //     countdownElements[3].textContent = seconds.toString().padStart(2, '0');
-                // }, 1000);
-            }
-        });
-    </script>
 </body>
 </html>
