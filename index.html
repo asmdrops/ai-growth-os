@@ -3,202 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple Intelligence Developer Masterclass & Toolkit</title>
+    <title>Apple Intelligence Navigator - Actionable AI Strategy</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for background image overlay and dark mode scrollbar */
-        .hero-bg-overlay {
-            background-image: linear-gradient(to top, rgba(17, 24, 39, 0.9) 0%, rgba(17, 24, 39, 0.6) 50%, rgba(17, 24, 39, 0.9) 100%);
-        }
+        /* Custom styles for dark mode and premium feel */
         body {
-            scrollbar-color: #6B7280 #1F2937; /* thumb and track color for dark mode */
-            scrollbar-width: thin;
+            font-family: 'Inter', sans-serif;
         }
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
+        /* Gradient for CTA buttons for premium feel */
+        .btn-gradient {
+            background-image: linear-gradient(to right, #4F46E5, #7C3AED); /* Indigo to Violet */
         }
-        ::-webkit-scrollbar-track {
-            background: #1F2937; /* bg-gray-800 */
+        .btn-gradient:hover {
+            background-image: linear-gradient(to right, #6366F1, #9333EA);
         }
-        ::-webkit-scrollbar-thumb {
-            background-color: #4B5563; /* bg-gray-600 */
-            border-radius: 4px;
-            border: 2px solid #1F2937;
+        .countdown-digit {
+            background: rgba(255, 255, 255, 0.08); /* Slightly visible background for digits */
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background-color: #6B7280; /* bg-gray-500 */
-        }
-
-        /* Simple CSS animations */
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .animate-fade-in-up {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-        .animate-fade-in-up.delay-100 { animation-delay: 0.1s; }
-        .animate-fade-in-up.delay-200 { animation-delay: 0.2s; }
-        .animate-fade-in-up.delay-300 { animation-delay: 0.3s; }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+    <section class="relative h-screen flex items-center justify-center">
         <div class="absolute inset-0">
-            <img src="https://source.unsplash.com/1600x900/?An,tech" alt="Apple Intelligence AI Development" class="w-full h-full object-cover">
-            <div class="absolute inset-0 hero-bg-overlay"></div>
+            <img src="https://source.unsplash.com/1600x900/?A,tech" alt="Apple AI Technology Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-90"></div>
         </div>
-
-        <div class="relative z-10 text-center max-w-4xl mx-auto px-6 py-12 bg-gray-800 bg-opacity-70 rounded-lg shadow-2xl backdrop-filter backdrop-blur-sm border border-gray-700">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4 animate-fade-in-up">
-                Unlock the Future: <br><span class="text-blue-400">Apple Intelligence Developer Masterclass & Toolkit</span>
+        <div class="relative z-10 text-center max-w-4xl px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6 drop-shadow-lg">
+                Navigate Apple's AI Revolution.<br> Beyond the Hype.
             </h1>
-            <p class="text-lg sm:text-xl text-gray-200 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-100">
-                Master Apple's new AI APIs and build groundbreaking applications leveraging Siri AI. Secure your competitive edge in the evolving iOS ecosystem.
+            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto drop-shadow-md">
+                Get actionable intelligence on Apple's unique approach to AI, privacy, and on-device innovation.
+                Essential for developers, product managers, and strategists.
+                Join the <span class="text-blue-400 font-bold">Apple Intelligence Navigator</span> waitlist.
             </p>
-
-            <!-- Countdown Timer for Limited Time Offer -->
-            <div class="bg-red-700 text-white p-4 rounded-lg shadow-lg mb-8 max-w-md mx-auto animate-fade-in-up delay-200">
-                <p class="text-sm uppercase font-bold mb-2">Limited Time Early Bird Access!</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-3xl font-bold">
-                    <div class="text-center">
-                        <span class="block" id="days">00</span>
-                        <span class="text-xs font-normal uppercase">Days</span>
-                    </div>
-                    <span class="text-2xl">:</span>
-                    <div class="text-center">
-                        <span class="block" id="hours">00</span>
-                        <span class="text-xs font-normal uppercase">Hours</span>
-                    </div>
-                    <span class="text-2xl">:</span>
-                    <div class="text-center">
-                        <span class="block" id="minutes">00</span>
-                        <span class="text-xs font-normal uppercase">Minutes</span>
-                    </div>
-                    <span class="text-2xl">:</span>
-                    <div class="text-center">
-                        <span class="block" id="seconds">00</span>
-                        <span class="text-xs font-normal uppercase">Seconds</span>
-                    </div>
-                </div>
-                <p class="text-sm mt-2">Prices increase after this offer ends!</p>
-                <!--
-                    NOTE: For a functional countdown, you would add JavaScript here.
-                    Example JS (to be placed in a script tag after the body or in a separate .js file):
-                    <script>
-                        const endDate = new Date("2024-12-31T23:59:59").getTime(); // Set your target date
-                        function updateCountdown() {
-                            const now = new Date().getTime();
-                            const distance = endDate - now;
-                            if (distance < 0) {
-                                document.getElementById("countdown").innerHTML = "Offer Expired!";
-                                clearInterval(x);
-                                return;
-                            }
-                            document.getElementById('days').innerText = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, '0');
-                            document.getElementById('hours').innerText = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
-                            document.getElementById('minutes').innerText = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
-                            document.getElementById('seconds').innerText = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
-                        }
-                        const x = setInterval(updateCountdown, 1000);
-                        updateCountdown(); // Initial call to display immediately
-                    </script>
-                -->
-            </div>
-            
-            <a href="#waitlist-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg animate-fade-in-up delay-300">
-                Join the Waitlist Now!
+            <a href="#waitlist" class="inline-block px-8 py-4 text-lg font-bold text-white rounded-full shadow-lg btn-gradient transition-all duration-300 ease-in-out transform hover:scale-105">
+                Secure Early Access
             </a>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-12">What You'll Achieve with This Masterclass</h2>
+    <section class="py-16 sm:py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">What You'll Uncover with the Navigator</h2>
+                <p class="text-lg text-gray-400">Deep-dive into Apple's strategic AI advancements, without the noise.</p>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-blue-400 mb-4 text-5xl">🚀</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Master Apple's AI APIs</h3>
-                    <p class="text-gray-300">Dive deep into the new Apple Intelligence APIs, understanding their capabilities and how to integrate them seamlessly into your iOS applications.</p>
+                <div class="bg-gray-800 rounded-lg p-8 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300">
+                    <p class="text-2xl font-bold text-blue-400 mb-4">🚀 Weekly AI Analysis & Forecasts</p>
+                    <p class="text-gray-300">Stay ahead with in-depth breakdowns of Apple's latest AI advancements and exclusive market shift forecasts.</p>
                 </div>
                 <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-green-400 mb-4 text-5xl">💡</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Build Innovative Siri AI Apps</h3>
-                    <p class="text-gray-300">Learn to leverage Siri AI for advanced conversational interfaces, proactive suggestions, and personalized user experiences.</p>
+                <div class="bg-gray-800 rounded-lg p-8 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300">
+                    <p class="text-2xl font-bold text-blue-400 mb-4">🧠 Foundation Model Deep Dives</p>
+                    <p class="text-gray-300">Understand the core technologies powering Apple Intelligence, from transformers to on-device neural engines.</p>
                 </div>
                 <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-purple-400 mb-4 text-5xl">🛠️</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Comprehensive Developer Toolkit</h3>
-                    <p class="text-gray-300">Access reusable code examples, project templates, and ready-to-use components to jumpstart your AI projects immediately.</p>
+                <div class="bg-gray-800 rounded-lg p-8 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300">
+                    <p class="text-2xl font-bold text-blue-400 mb-4">🛠️ Practical Implementation Frameworks</p>
+                    <p class="text-gray-300">Access ready-to-use frameworks and strategies for integrating new AI features into your apps and products.</p>
                 </div>
                 <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-yellow-400 mb-4 text-5xl">📈</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Stay Ahead of Market Trends</h3>
-                    <p class="text-gray-300">Understand the strategic shift Apple is making with AI, as highlighted by Craig Federighi, and position yourself at the forefront of this new wave.</p>
+                <div class="bg-gray-800 rounded-lg p-8 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300">
+                    <p class="text-2xl font-bold text-blue-400 mb-4">📱 On-Device AI Optimization</p>
+                    <p class="text-gray-300">Learn to optimize your applications for Apple's powerful on-device AI capabilities, enhancing performance and user experience.</p>
                 </div>
                 <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-red-400 mb-4 text-5xl">✨</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Best Practices & Optimization</h3>
-                    <p class="text-gray-300">Discover industry-leading practices for performance, user privacy, and ethical AI development specifically for Apple platforms.</p>
+                <div class="bg-gray-800 rounded-lg p-8 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300">
+                    <p class="text-2xl font-bold text-blue-400 mb-4">🔒 Privacy & Ethical AI Navigation</p>
+                    <p class="text-gray-300">Master the nuances of Apple's privacy-first AI approach and navigate the complex ethical implications for your products.</p>
                 </div>
                 <!-- Feature 6 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-orange-400 mb-4 text-5xl">🌐</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Expand Your Portfolio</h3>
-                    <p class="text-gray-300">Create compelling, AI-powered applications that stand out in the App Store and attract a broader user base.</p>
+                <div class="bg-gray-800 rounded-lg p-8 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300">
+                    <p class="text-2xl font-bold text-blue-400 mb-4">📈 Strategic Market Insights</p>
+                    <p class="text-gray-300">Gain a competitive edge with strategic insights into how Apple Intelligence will reshape the developer ecosystem and consumer landscape.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 md:py-24 bg-gradient-to-br from-gray-900 to-gray-800">
-        <div class="container mx-auto px-6 text-center max-w-2xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Secure Your Early Bird Access!</h2>
+    <section id="waitlist" class="py-16 sm:py-24 bg-gray-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Limited Time Early Access</h2>
             <p class="text-lg text-gray-300 mb-8">
-                Don't miss out on the opportunity to be among the first to master Apple Intelligence. Join our exclusive waitlist for early access, special pricing, and course updates.
+                Join the exclusive waitlist for the <span class="text-blue-400 font-bold">Apple Intelligence Navigator</span>.
+                Be among the first to receive critical insights and get special launch offers.
             </p>
-            <form action="#" method="POST" class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-200 text-sm font-medium mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
-                           required>
+
+            <!-- Countdown Placeholder (Visual representation as per requirements) -->
+            <div class="flex justify-center items-center space-x-3 sm:space-x-4 mb-10">
+                <div class="flex flex-col items-center">
+                    <span class="text-4xl sm:text-5xl font-bold text-white countdown-digit px-3 py-2 sm:px-4 rounded-lg">07</span>
+                    <span class="text-xs sm:text-sm text-gray-400 mt-2">Days</span>
                 </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-200 text-sm font-medium mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
-                           required>
+                <div class="text-3xl sm:text-4xl text-gray-500">:</div>
+                <div class="flex flex-col items-center">
+                    <span class="text-4xl sm:text-5xl font-bold text-white countdown-digit px-3 py-2 sm:px-4 rounded-lg">14</span>
+                    <span class="text-xs sm:text-sm text-gray-400 mt-2">Hours</span>
                 </div>
-                <button type="submit"
-                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
-                    Join the Exclusive Waitlist
+                <div class="text-3xl sm:text-4xl text-gray-500">:</div>
+                <div class="flex flex-col items-center">
+                    <span class="text-4xl sm:text-5xl font-bold text-white countdown-digit px-3 py-2 sm:px-4 rounded-lg">38</span>
+                    <span class="text-xs sm:text-sm text-gray-400 mt-2">Minutes</span>
+                </div>
+                <div class="text-3xl sm:text-4xl text-gray-500">:</div>
+                <div class="flex flex-col items-center">
+                    <span class="text-4xl sm:text-5xl font-bold text-white countdown-digit px-3 py-2 sm:px-4 rounded-lg">55</span>
+                    <span class="text-xs sm:text-sm text-gray-400 mt-2">Seconds</span>
+                </div>
+            </div>
+
+            <form action="#" method="POST" class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-2xl border border-gray-700">
+                <div class="mb-6">
+                    <label for="name" class="block text-left text-sm font-medium text-gray-300 mb-2">Name</label>
+                    <input type="text" name="name" id="name" autocomplete="name" required
+                           class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400 transition duration-200">
+                </div>
+                <div class="mb-8">
+                    <label for="email" class="block text-left text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                    <input type="email" name="email" id="email" autocomplete="email" required
+                           class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400 transition duration-200">
+                </div>
+                <button type="submit" class="w-full px-6 py-3 text-lg font-bold text-white rounded-md btn-gradient shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105">
+                    Join the Waitlist Now
                 </button>
-                <p class="text-gray-400 text-sm mt-4">We respect your privacy and will never share your email.</p>
+                <p class="text-xs text-gray-500 mt-4">Your data is safe with us. We hate spam too.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm">
-        <div class="container mx-auto px-6">
-            <p>&copy; 2024 Apple Intelligence Masterclass. All rights reserved.</p>
-            <p class="mt-2">Disclaimer: "Apple," "Siri," and "iOS" are trademarks of Apple Inc. This course is independently produced and not affiliated with or endorsed by Apple Inc.</p>
-        </div>
+        <p>&copy; 2024 Apple Intelligence Navigator. All rights reserved.</p>
+        <p class="mt-2">Built for professionals seeking actionable insights on Apple's AI strategy.</p>
     </footer>
 
 </body>
