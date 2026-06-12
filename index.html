@@ -3,166 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastering Your Midlife Health: Leveraging iOS 27</title>
+    <title>Master iOS 27 Siri AI: Unlock Hidden Productivity & Privacy</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for dark mode and responsive image overlay */
-        .hero-section {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+        /* Custom styles for dark mode and premium feel */
+        body {
+            font-family: 'Inter', sans-serif; /* A modern font choice */
+        }
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
             background-size: cover;
             background-position: center;
-            position: relative;
-            z-index: 0;
+            background-repeat: no-repeat;
         }
-        .hero-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.75); /* Darker overlay for premium feel */
-            z-index: -1;
+        /* For the countdown timer, assuming JavaScript will populate this */
+        .countdown-timer {
+            font-variant-numeric: tabular-nums; /* Keeps numbers aligned */
+        }
+        /* Basic scroll-behavior for smoother navigation (optional, not strictly requested but good UX) */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-gray-900 text-gray-200">
 
     <!-- Hero Section -->
-    <header class="hero-section flex items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
-        <div class="max-w-4xl mx-auto text-center z-10">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
-                Mastering Your Midlife Health: <br class="hidden sm:inline">Leveraging iOS 27 for Perimenopause & Menopause
+    <section class="hero-background relative min-h-screen flex items-center justify-center p-4">
+        <!-- Dark overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-70 backdrop-blur-sm"></div>
+
+        <div class="relative z-10 text-center max-w-4xl mx-auto py-16 px-6 sm:px-8 lg:px-12">
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-4 tracking-tight">
+                Master iOS 27's <span class="text-indigo-400">New Siri AI</span>
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Unlock the power of your Apple Health data to navigate perimenopause and menopause with clarity, confidence, and personalized strategies.
+            <p class="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-8 font-light max-w-2xl mx-auto">
+                Unlock Hidden Productivity & Privacy Features Exclusively for Your Apple Device.
             </p>
 
-            <!-- Limited Time Countdown -->
-            <div class="bg-gradient-to-r from-purple-700 to-indigo-800 p-4 sm:p-6 rounded-lg shadow-2xl mb-8 border border-purple-500">
-                <p class="text-white text-xl sm:text-2xl font-bold mb-3">Limited Enrollment: Don't Miss Out!</p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 text-white">
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-4xl lg:text-5xl font-mono font-bold" id="days">00</span>
-                        <span class="text-xs sm:text-sm uppercase">Days</span>
-                    </div>
-                    <span class="text-3xl sm:text-4xl lg:text-5xl font-mono">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-4xl lg:text-5xl font-mono font-bold" id="hours">00</span>
-                        <span class="text-xs sm:text-sm uppercase">Hours</span>
-                    </div>
-                    <span class="text-3xl sm:text-4xl lg:text-5xl font-mono">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-4xl lg:text-5xl font-mono font-bold" id="minutes">00</span>
-                        <span class="text-xs sm:text-sm uppercase">Minutes</span>
-                    </div>
-                    <span class="text-3xl sm:text-4xl lg:text-5xl font-mono">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-4xl lg:text-5xl font-mono font-bold" id="seconds">00</span>
-                        <span class="text-xs sm:text-sm uppercase">Seconds</span>
-                    </div>
+            <!-- Limited Time Discount & Countdown -->
+            <div class="bg-gradient-to-r from-indigo-700 to-purple-700 rounded-lg p-6 mb-8 shadow-xl border border-indigo-500">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">
+                    Limited-Time Launch Discount!
+                </h2>
+                <p class="text-xl sm:text-2xl text-indigo-100 mb-4">
+                    Secure your exclusive early access at 50% off!
+                </p>
+                <div class="countdown-timer flex justify-center items-center text-3xl sm:text-4xl font-bold text-white bg-indigo-900 bg-opacity-50 p-4 rounded-md mx-auto max-w-sm">
+                    <span id="days" class="px-2">00<span class="text-lg block font-normal">Days</span></span>:
+                    <span id="hours" class="px-2">00<span class="text-lg block font-normal">Hours</span></span>:
+                    <span id="minutes" class="px-2">00<span class="text-lg block font-normal">Mins</span></span>:
+                    <span id="seconds" class="px-2">00<span class="text-lg block font-normal">Secs</span></span>
+                    <!-- JavaScript will update these values -->
                 </div>
-                <script>
-                    // Basic client-side countdown timer for dynamic display
-                    const countdownDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000); // 7 days from now
-                    const x = setInterval(function() {
-                        const now = new Date().getTime();
-                        const distance = countdownDate - now;
-
-                        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                        document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                        document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                        document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                        document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-                        if (distance < 0) {
-                            clearInterval(x);
-                            document.getElementById("countdown").innerHTML = "<p class='text-white text-xl'>Enrollment Has Closed!</p>";
-                        }
-                    }, 1000);
-                </script>
+                <p class="text-sm text-gray-300 mt-3">*Offer available for the next 72 hours only.</p>
             </div>
 
-            <a href="#enroll" class="inline-block bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl sm:text-2xl transition-all duration-300 transform hover:scale-105 shadow-lg">
-                Enroll Now & Secure Your Spot!
+            <a href="#waitlist-form" class="inline-block bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 transition duration-300 ease-in-out text-white font-bold text-lg sm:text-xl lg:text-2xl px-10 py-4 rounded-full shadow-lg transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
+                Get Early Access & Secure Your Discount!
             </a>
+            <p class="text-sm text-gray-400 mt-4">
+                (Compatibility: New Siri AI is coming to newer Apple devices only. Check 9to5Mac for full list.)
+            </p>
         </div>
-    </header>
+    </section>
+
+    <!-- Introduction/Problem Statement -->
+    <section class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                Don't Get Left Behind by the Siri AI Revolution
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-400 leading-relaxed mb-8">
+                iOS 27's new Siri AI isn't just an update; it's a complete paradigm shift. Most users will scratch the surface, missing out on its true potential. Our in-depth guide and video course are designed to transform you from a basic user into a Siri AI master, leveraging every hidden feature for unparalleled productivity and iron-clad privacy.
+            </p>
+            <p class="text-lg sm:text-xl text-indigo-300 font-semibold">
+                This is your chance to be among the first to truly harness the power of on-device and cloud AI, exclusively available on supported Apple devices.
+            </p>
+        </div>
+    </section>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-20 lg:py-24 bg-gray-800 text-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-white mb-12">
-                What You'll Achieve in This Premium Program
+    <section class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gray-800">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">
+                What You'll Master with Siri AI
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
                 <!-- Feature 1 -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 border border-transparent hover:border-purple-500">
-                    <span class="text-5xl mb-4" role="img" aria-label="Smartwatch icon">⌚</span>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Decode iOS 27 Health Data</h3>
-                    <p class="text-gray-300">Gain expert-led insights into interpreting complex metrics from the new iOS 27 health features to truly understand your body's signals.</p>
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 group">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="w-10 h-10 mx-auto sm:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1-3m-6.938-1h13.856c1.54 0 2.502-1.667 1.732-3L13.732 7c-.77-1.333-2.694-1.333-3.464 0L3.34 14c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-3 text-center sm:text-left">
+                        Leverage On-Device AI Power
+                    </h3>
+                    <p class="text-gray-400 leading-relaxed text-center sm:text-left">
+                        Discover how Siri processes tasks directly on your device for unmatched speed and responsiveness, even offline.
+                    </p>
                 </div>
+
                 <!-- Feature 2 -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 border border-transparent hover:border-purple-500">
-                    <span class="text-5xl mb-4" role="img" aria-label="Strategy icon">🎯</span>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Personalized Symptom Management</h3>
-                    <p class="text-gray-300">Develop effective, personalized strategies to navigate and alleviate perimenopause and menopause symptoms, restoring comfort and vitality.</p>
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 group">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="w-10 h-10 mx-auto sm:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-3 text-center sm:text-left">
+                        Customize New Features
+                    </h3>
+                    <p class="text-gray-400 leading-relaxed text-center sm:text-left">
+                        Tailor Siri's enhanced capabilities to your unique workflow, creating personalized commands and automations.
+                    </p>
                 </div>
+
                 <!-- Feature 3 -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 border border-transparent hover:border-purple-500">
-                    <span class="text-5xl mb-4" role="img" aria-label="Nutrition icon">🍏</span>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Optimized Midlife Nutrition Guides</h3>
-                    <p class="text-gray-300">Access curated, science-backed nutrition plans specifically designed to support women's hormonal health and well-being during midlife.</p>
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 group">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="w-10 h-10 mx-auto sm:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-3 text-center sm:text-left">
+                        Advanced Privacy Controls
+                    </h3>
+                    <p class="text-gray-400 leading-relaxed text-center sm:text-left">
+                        Navigate and configure Siri's sophisticated privacy settings to keep your data secure and personal.
+                    </p>
                 </div>
+
                 <!-- Feature 4 -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 border border-transparent hover:border-purple-500">
-                    <span class="text-5xl mb-4" role="img" aria-label="Community icon">🤝</span>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Supportive Private Forum</h3>
-                    <p class="text-gray-300">Connect with an exclusive, thriving community of women navigating the same journey, sharing insights, support, and triumphs in a safe space.</p>
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 group">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="w-10 h-10 mx-auto sm:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-3 text-center sm:text-left">
+                        Seamless Workflow Integration
+                    </h3>
+                    <p class="text-gray-400 leading-relaxed text-center sm:text-left">
+                        Integrate Siri AI across your apps and devices, streamlining daily tasks and boosting overall efficiency.
+                    </p>
                 </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 group">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="w-10 h-10 mx-auto sm:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m-.707 5.657l.707-.707M12 21v-1m-4.636-1.636l-.707.707M5.636 5.636l.707-.707m12.728 0l-.707-.707M6.343 17.657L5.636 18.364m12.728 0l.707-.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-3 text-center sm:text-left">
+                        Unlock Hidden Productivity
+                    </h3>
+                    <p class="text-gray-400 leading-relaxed text-center sm:text-left">
+                        Go beyond basic commands to uncover sophisticated shortcuts and AI-driven features that save you time.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 group">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="w-10 h-10 mx-auto sm:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1L21 12h-3.819m0 0L14 7V3h-2v4M5.029 5.029A7.001 7.001 0 003 12a7.001 7.001 0 009 5.965V18l-2 1h1V6a1 1 0 011-1h2m0 0l-3.232-3.232"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-3 text-center sm:text-left">
+                        Cloud AI for Enhanced Intel
+                    </h3>
+                    <p class="text-gray-400 leading-relaxed text-center sm:text-left">
+                        Learn how Siri leverages cloud computing for complex queries and smart suggestions, enhancing your digital life.
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / Enrollment Form Section -->
-    <section id="enroll" class="py-16 sm:py-20 lg:py-24 bg-gray-900">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-8">
-                Ready to Master Your Midlife Health Journey?
+    <!-- Waitlist Form Section -->
+    <section id="waitlist-form" class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div class="max-w-xl mx-auto text-center bg-gray-800 p-8 sm:p-10 rounded-xl shadow-2xl border border-indigo-700">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                Ready to Master Siri AI?
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10">
-                Enroll now to gain instant access to expert-led modules, personalized management tools, and our exclusive, empowering community.
+            <p class="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed">
+                Join our waitlist now to secure your spot and be notified the moment "Mastering iOS 27's New Siri AI" launches. Don't miss out on the <span class="text-indigo-300 font-semibold">limited-time discount!</span>
             </p>
-            <form class="bg-gray-800 p-8 sm:p-10 rounded-lg shadow-2xl border border-purple-700">
-                <div class="mb-6">
-                    <label for="name" class="block text-left text-gray-200 text-lg font-semibold mb-2">Full Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Jane Doe"
-                           class="w-full p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-200"
-                           required>
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label for="email" class="sr-only">Email address</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required class="block w-full px-5 py-3 border border-gray-600 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-lg" placeholder="Enter your email address">
                 </div>
-                <div class="mb-6">
-                    <label for="email" class="block text-left text-gray-200 text-lg font-semibold mb-2">Email Address:</label>
-                    <input type="email" id="email" name="email" placeholder="jane.doe@example.com"
-                           class="w-full p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-200"
-                           required>
+                <div>
+                    <button type="submit" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold rounded-md text-white bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 transition duration-300 ease-in-out sm:text-lg lg:text-xl transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 shadow-xl">
+                        Join Waitlist & Secure Your Discount!
+                    </button>
                 </div>
-                <button type="submit"
-                        class="w-full bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-bold py-4 px-6 rounded-md text-xl sm:text-2xl transition-all duration-300 transform hover:scale-105 shadow-lg">
-                    Enroll Now & Transform Your Health!
-                </button>
+                <p class="text-sm text-gray-500">
+                    We respect your privacy. Your email will only be used for product updates and offers.
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-8 text-center text-gray-400 text-sm">
-        <p>&copy; 2023 Mastering Your Midlife Health. All rights reserved.</p>
-        <p class="mt-2">Leveraging the latest in Apple Health for Women's Wellness. A knowledge product by [Your Company Name].</p>
+    <footer class="bg-gray-900 border-t border-gray-800 py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto text-center text-gray-500 text-sm">
+            <p>&copy; 2024 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 transition-colors duration-200">Privacy Policy</a>
+                <span class="mx-2">|</span>
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 transition-colors duration-200">Terms of Service</a>
+            </p>
+            <p class="mt-4 text-xs">
+                Disclaimer: "Mastering iOS 27's New Siri AI" is an independent digital product and is not affiliated with, endorsed, or sponsored by Apple Inc.
+            </p>
+        </div>
     </footer>
+
+    <!-- Placeholder for Countdown JavaScript (would be in a script tag if allowed) -->
+    <script>
+        // This script is illustrative and would typically be placed within <script> tags
+        // in a real HTML file, but is excluded as per the "Return ONLY raw HTML" requirement.
+        /*
+        document.addEventListener('DOMContentLoaded', () => {
+            const countdownDate = new Date().getTime() + (72 * 60 * 60 * 1000); // 72 hours from now
+
+            const x = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = countdownDate - now;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerHTML = (days < 10 ? '0' : '') + days + '<span class="text-lg block font-normal">Days</span>';
+                document.getElementById("hours").innerHTML = (hours < 10 ? '0' : '') + hours + '<span class="text-lg block font-normal">Hours</span>';
+                document.getElementById("minutes").innerHTML = (minutes < 10 ? '0' : '') + minutes + '<span class="text-lg block font-normal">Mins</span>';
+                document.getElementById("seconds").innerHTML = (seconds < 10 ? '0' : '') + seconds + '<span class="text-lg block font-normal">Secs</span>';
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.querySelector('.countdown-timer').innerHTML = '<span class="text-xl">Offer Expired!</span>';
+                    // Optionally disable the button or change text
+                }
+            }, 1000);
+        });
+        */
+    </script>
 
 </body>
 </html>
