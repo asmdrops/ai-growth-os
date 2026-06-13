@@ -1,217 +1,222 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siri AI Mastery for iOS 27: Unlock Peak Productivity</title>
-    <meta name="description" content="Master the new Siri AI on iOS 27 with our premium digital guide and video course. Unlock advanced productivity, custom commands, and workflow integrations for your new Apple device.">
+    <title>Siri AI Compatibility & Upgrade Advisor | Get Ready for the Future</title>
+    <meta name="description" content="Check your Apple device's Siri AI compatibility, get personalized upgrade advice, and discover new features. Join the waitlist for early access!">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📱</text></svg>">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for modern dark aesthetic and responsiveness beyond Tailwind defaults */
-        body {
-            font-family: 'Inter', sans-serif; /* A modern, clean font */
-        }
+        /* Custom styles for hero image overlay and responsive grid background */
         .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
-            z-index: 0;
+            background-attachment: fixed; /* Provides a subtle parallax effect */
         }
-        .hero-background::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
-            z-index: 1;
+        .gradient-overlay {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9));
         }
-        .hero-content {
-            position: relative;
-            z-index: 2;
+
+        /* Animations for a modern feel */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-        .gradient-text {
-            background: linear-gradient(90deg, #10B981, #3B82F6); /* Emerald to Blue gradient */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        /* Custom countdown styling */
-        .countdown-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(31, 41, 55, 0.7); /* bg-gray-800 with transparency */
-            border-radius: 0.5rem;
-            padding: 0.75rem 0.5rem;
-            min-width: 60px; /* Ensure minimum width */
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
         }
-        @media (min-width: 640px) { /* sm breakpoint */
-            .countdown-item {
-                min-width: 80px;
-                padding: 1rem 0.75rem;
-            }
+        @keyframes pulseFade {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.98; transform: scale(1.005); }
+        }
+        .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+        .animate-slide-up { animation: slideUp 1s ease-out forwards; animation-delay: 0.3s; }
+        .animate-scale-in { animation: scaleIn 1s ease-out forwards; animation-delay: 0.6s; }
+        .animate-pulse-fade { animation: pulseFade 2s infinite ease-in-out; animation-delay: 1s; }
+
+        /* Responsive subtle grid background for features section */
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <section class="hero-background min-h-screen flex items-center justify-center p-4">
-        <div class="hero-content text-center max-w-6xl mx-auto py-16 px-6 lg:px-8">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 gradient-text">
-                Siri AI Mastery for iOS 27
+    <header class="relative hero-background min-h-screen flex items-center justify-center p-4 overflow-hidden">
+        <div class="absolute inset-0 gradient-overlay"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6 animate-fade-in">
+                <span class="block">Siri AI is Changing Everything.</span>
+                <span class="block mt-2">Is <span class="text-purple-400">Your</span> Apple Device Compatible?</span>
             </h1>
-            <p class="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Unlock Peak Productivity & Transform Your New Apple Device with Next-Gen AI
+            <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto animate-slide-up">
+                Stop guessing and get ready for the future. Our platform provides an instant compatibility check for the revolutionary new Siri AI features, highlights key differences, and suggests personalized upgrade options based on your budget and desired capabilities.
             </p>
-            <p class="text-lg sm:text-xl text-gray-400 mb-10 max-w-3xl mx-auto">
-                As Siri AI revolutionizes newer Apple devices, don't just upgrade – elevate your entire workflow. Discover custom commands, intelligent automations, and exclusive strategies that transform your device into an unstoppable productivity engine.
-            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 animate-scale-in">
+                <a href="#waitlist" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                    Get Early Access & Check Compatibility
+                </a>
+                <a href="#features" class="text-purple-400 hover:text-purple-300 font-semibold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out">
+                    Discover Features
+                </a>
+            </div>
 
             <!-- Limited Time Countdown -->
-            <div class="mb-12">
-                <h3 class="text-2xl sm:text-3xl font-bold text-red-400 mb-6">
-                    Launch Special Ends In:
-                </h3>
-                <div class="flex justify-center items-center space-x-3 sm:space-x-4 md:space-x-6 text-white text-shadow-md">
-                    <div class="countdown-item">
-                        <span id="days" class="text-3xl sm:text-4xl md:text-5xl font-extrabold">00</span>
-                        <span class="text-xs sm:text-sm text-gray-400 mt-1">DAYS</span>
+            <div class="mt-16 bg-gradient-to-r from-purple-800 to-indigo-800 p-6 rounded-lg shadow-xl border border-purple-700 animate-pulse-fade max-w-xl mx-auto">
+                <p class="text-xl sm:text-2xl font-bold text-white mb-4">Limited Early Bird Access & Exclusive Bonuses End In:</p>
+                <div class="flex justify-center items-center space-x-2 sm:space-x-4">
+                    <div class="bg-gray-800 text-white p-3 sm:p-4 rounded-lg flex flex-col items-center justify-center min-w-[60px] sm:min-w-[80px]">
+                        <span id="days" class="text-2xl sm:text-4xl font-extrabold">00</span>
+                        <span class="text-xs sm:text-base text-gray-400">Days</span>
                     </div>
-                    <div class="countdown-item">
-                        <span id="hours" class="text-3xl sm:text-4xl md:text-5xl font-extrabold">00</span>
-                        <span class="text-xs sm:text-sm text-gray-400 mt-1">HOURS</span>
+                    <div class="bg-gray-800 text-white p-3 sm:p-4 rounded-lg flex flex-col items-center justify-center min-w-[60px] sm:min-w-[80px]">
+                        <span id="hours" class="text-2xl sm:text-4xl font-extrabold">00</span>
+                        <span class="text-xs sm:text-base text-gray-400">Hours</span>
                     </div>
-                    <div class="countdown-item">
-                        <span id="minutes" class="text-3xl sm:text-4xl md:text-5xl font-extrabold">00</span>
-                        <span class="text-xs sm:text-sm text-gray-400 mt-1">MINS</span>
+                    <div class="bg-gray-800 text-white p-3 sm:p-4 rounded-lg flex flex-col items-center justify-center min-w-[60px] sm:min-w-[80px]">
+                        <span id="minutes" class="text-2xl sm:text-4xl font-extrabold">00</span>
+                        <span class="text-xs sm:text-base text-gray-400">Minutes</span>
                     </div>
-                    <div class="countdown-item">
-                        <span id="seconds" class="text-3xl sm:text-4xl md:text-5xl font-extrabold">00</span>
-                        <span class="text-xs sm:text-sm text-gray-400 mt-1">SECS</span>
+                    <div class="bg-gray-800 text-white p-3 sm:p-4 rounded-lg flex flex-col items-center justify-center min-w-[60px] sm:min-w-[80px]">
+                        <span id="seconds" class="text-2xl sm:text-4xl font-extrabold">00</span>
+                        <span class="text-xs sm:text-base text-gray-400">Seconds</span>
                     </div>
                 </div>
-                <p class="text-sm sm:text-base text-gray-500 mt-4 italic">
-                    (Note: Countdown functionality requires JavaScript, not included in raw HTML output.)
-                </p>
+                <!-- Placeholder for actual JavaScript countdown logic. In a real application, this would dynamically update the spans above. -->
+                <script>
+                    // const countdownDate = new Date("Dec 31, 2024 23:59:59").getTime(); // Set your target date
+                    // const x = setInterval(function() {
+                    //   const now = new Date().getTime();
+                    //   const distance = countdownDate - now;
+                    //   document.getElementById("days").innerHTML = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    //   document.getElementById("hours").innerHTML = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    //   document.getElementById("minutes").innerHTML = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    //   document.getElementById("seconds").innerHTML = Math.floor((distance % (1000 * 60)) / 1000);
+                    //   if (distance < 0) {
+                    //     clearInterval(x);
+                    //     document.querySelector('.countdown-container').innerHTML = "<p class='text-xl text-red-400 font-bold'>Offer Expired!</p>";
+                    //   }
+                    // }, 1000);
+                </script>
             </div>
-            <!-- End Limited Time Countdown -->
-
-            <a href="#waitlist-form" class="inline-block bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg sm:text-xl md:text-2xl uppercase tracking-wide transform hover:scale-105 transition-all duration-300 shadow-lg">
-                Secure Your Early Access Now!
-            </a>
-            <p class="text-sm sm:text-base text-gray-500 mt-4">
-                Exclusively for iOS 27 users on supported Apple devices.
-            </p>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-20 bg-gray-800 text-gray-200 p-4">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 gradient-text">
-                What You'll Achieve with Siri AI Mastery
+    <section id="features" class="py-20 bg-gray-900 relative">
+        <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-white mb-16">
+                What Siri AI Advisor Offers You
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
 
-                <!-- Feature 1 -->
-                <div class="bg-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                    <div class="text-emerald-400 text-4xl mb-4">🚀</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Hyper-Personalized Workflows</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Craft advanced custom commands tailored to your unique business and personal needs, making your device an extension of your mind.
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Feature 1: Instant Compatibility Scan -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-purple-700 transform hover:scale-105 transition duration-300 ease-in-out flex flex-col items-center text-center">
+                    <div class="text-purple-400 mb-4 text-5xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002.944 12c.045 4.095 1.761 7.42 4.416 9.176l.169.108c3.879 2.46 8.52 2.46 12.399 0l.169-.108c2.655-1.756 4.371-5.081 4.416-9.176a12.001 12.001 0 00-3.04-8.618z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Instant Compatibility Scan</h3>
+                    <p class="text-gray-300 text-lg">
+                        Input your current Apple device and get immediate clarity on its readiness for the new Siri AI features. No more confusion, just clear answers.
                     </p>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="bg-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                    <div class="text-blue-400 text-4xl mb-4">⚙️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Seamless App Integrations</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Integrate Siri AI across your favorite apps – from project management to communication – boosting efficiency like never before.
+                <!-- Feature 2: Personalized Upgrade Paths -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-purple-700 transform hover:scale-105 transition duration-300 ease-in-out flex flex-col items-center text-center">
+                    <div class="text-purple-400 mb-4 text-5xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Personalized Upgrade Paths</h3>
+                    <p class="text-gray-300 text-lg">
+                        If an upgrade is needed, we'll recommend the best new Apple devices (with affiliate links to Apple or authorized resellers) perfectly tailored to your budget and desired Siri AI capabilities.
                     </p>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="bg-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                    <div class="text-purple-400 text-4xl mb-4">⏱️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Time-Saving Automations</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Learn step-by-step how to automate repetitive tasks, saving hours each week and focusing on what truly matters.
+                <!-- Feature 3: Key Feature Differences -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-purple-700 transform hover:scale-105 transition duration-300 ease-in-out flex flex-col items-center text-center">
+                    <div class="text-purple-400 mb-4 text-5xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Key Feature Differences</h3>
+                    <p class="text-gray-300 text-lg">
+                        Understand exactly what's new and how Siri AI features will transform your Apple experience, with a clear breakdown of capabilities and benefits.
                     </p>
                 </div>
 
-                <!-- Feature 4 -->
-                <div class="bg-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                    <div class="text-yellow-400 text-4xl mb-4">🧠</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Unlock AI Capabilities</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Dive deep into the new AI features of iOS 27, understanding how to leverage them for smarter decision-making and creative problem-solving.
+                <!-- Feature 4 (Upsell/Bonus): Pro Guide -->
+                <div class="md:col-span-2 lg:col-span-3 bg-gradient-to-r from-purple-800 to-indigo-800 p-8 rounded-lg shadow-xl border border-purple-600 text-center transform hover:scale-102 transition duration-300 ease-in-out flex flex-col items-center">
+                    <div class="text-yellow-300 mb-4 text-5xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Exclusive 'Pro Guide to New Siri Features'</h3>
+                    <p class="text-gray-200 text-lg">
+                        Unlock the full potential of Siri AI. Master your compatible device with advanced tips, hidden functionalities, and expert workflows. <br> <strong class="text-yellow-300">Limited-time bonus for early waitlist sign-ups!</strong>
                     </p>
                 </div>
-
-                <!-- Feature 5 -->
-                <div class="bg-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                    <div class="text-green-400 text-4xl mb-4">💡</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Expert Tips & Tricks</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Go beyond the basics with advanced strategies and hidden features only seasoned Siri AI users know.
-                    </p>
-                </div>
-
-                <!-- Feature 6 -->
-                <div class="bg-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                    <div class="text-red-400 text-4xl mb-4">🛡️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Future-Proof Your Skills</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Stay ahead of the curve as Apple's AI evolves. This course equips you with foundational skills for any future updates.
-                    </p>
-                </div>
-
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 sm:py-20 bg-gray-900 text-white p-4">
-        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700">
-            <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 gradient-text">
-                Join the Exclusive Waitlist!
+    <section id="waitlist" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-white mb-8">
+                Ready for Siri AI? Join the Waitlist!
             </h2>
-            <p class="text-lg text-gray-300 mb-8">
-                Be the first to know when 'Siri AI Mastery for iOS 27' launches. Get early bird discounts and exclusive bonus content!
+            <p class="text-lg text-gray-300 text-center mb-10">
+                Be among the first to experience the Siri AI Compatibility & Upgrade Advisor. Join our exclusive waitlist for early access, special launch discounts, and expert insights delivered straight to your inbox.
             </p>
 
-            <form class="space-y-6">
-                <div>
-                    <label for="name" class="sr-only">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required
-                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition duration-200">
+            <form class="bg-gray-900 p-8 rounded-lg shadow-xl border border-purple-700">
+                <div class="mb-6">
+                    <label for="name" class="block text-gray-300 text-lg font-bold mb-2">Name (Optional)</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-gray-700"
+                           aria-label="Name">
                 </div>
-                <div>
-                    <label for="email" class="sr-only">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
-                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition duration-200">
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-300 text-lg font-bold mb-2">Email Address <span class="text-red-500">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-gray-700"
+                           aria-label="Email Address">
                 </div>
-                <button type="submit" class="w-full bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg text-xl uppercase tracking-wide transform hover:scale-105 transition-all duration-300 shadow-md">
-                    Get Early Access & Updates
-                </button>
+                <div class="flex items-center justify-center">
+                    <button type="submit"
+                            class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg w-full sm:w-auto">
+                        Join the Waitlist
+                    </button>
+                </div>
+                <p class="text-sm text-gray-500 text-center mt-6">
+                    We value your privacy. Your email will not be shared with third parties.
+                </p>
             </form>
-            <p class="text-sm text-gray-500 mt-6">
-                We respect your privacy. Your information will not be shared.
-            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-gray-500 text-center text-sm border-t border-gray-800 p-4">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p>&copy; 2024 Digital Education Authority. All rights reserved. | <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a> | <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a></p>
-            <p class="mt-2">Leveraging AI for Unprecedented Productivity</p>
+    <footer class="bg-gray-900 py-10 border-t border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
+            <p>&copy; 2024 Siri AI Advisor. All rights reserved.</p>
+            <p class="mt-2">Disclaimer: This service provides compatibility advice and affiliate links. "Siri AI" is a trademark of Apple Inc. We are not affiliated with Apple Inc. in an official capacity.</p>
         </div>
     </footer>
 
