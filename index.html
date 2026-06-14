@@ -3,266 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastering Apple Intelligence & New Siri: Your Ultimate AI Productivity Guide</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Apple AI Power User Academy - Master the New Siri & Apple Intelligence</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles for dark mode and premium aesthetic */
-        body {
-            font-family: 'Inter', sans-serif; /* A modern, clean font */
+        /* Custom styles for the countdown timer and gradient button */
+        .countdown-item {
+            @apply flex flex-col items-center justify-center bg-gray-800 bg-opacity-70 text-white p-4 rounded-lg shadow-lg;
+            min-width: 80px; /* Ensures consistent width for smaller screens */
         }
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
+        .countdown-number {
+            @apply text-4xl sm:text-5xl font-extrabold;
         }
-        .gradient-overlay {
-            background: linear-gradient(to bottom, rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.95)); /* Darker gradient */
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-        }
-        .cta-button {
-            background: linear-gradient(to right, #6D28D9, #4C1D95); /* Purple to darker purple */
-            transition: all 0.3s ease;
-        }
-        .cta-button:hover {
-            background: linear-gradient(to right, #4C1D95, #6D28D9); /* Reverse gradient on hover */
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(109, 40, 217, 0.4);
-        }
-        .feature-icon {
-            color: #8B5CF6; /* Bright purple for icons */
-        }
-        input[type="email"], input[type="text"] {
-            background-color: #2F3748; /* Darker input background */
-            border: 1px solid #4A5568; /* Subtle border */
-            color: #E2E8F0; /* Light text color */
-        }
-        input[type="email"]:focus, input[type="text"]:focus {
-            border-color: #8B5CF6; /* Purple focus border */
-            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
-        }
-        .countdown-segment {
-            background-color: rgba(45, 55, 72, 0.8); /* Slightly transparent dark background */
-            border: 1px solid rgba(74, 85, 104, 0.5);
-            backdrop-filter: blur(5px);
+        .countdown-label {
+            @apply text-xs sm:text-sm uppercase tracking-wider mt-2;
         }
 
-        /* Basic responsiveness for font sizes etc. */
-        @media (min-width: 640px) { /* Small screens */
-            h1 { font-size: 3.5rem; }
-            h2 { font-size: 2.5rem; }
+        .btn-gradient {
+            background-image: linear-gradient(to right, #6366f1, #8b5cf6, #ec4899);
+            @apply text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1;
         }
-        @media (min-width: 1024px) { /* Medium screens */
-            h1 { font-size: 4.5rem; }
-            h2 { font-size: 3rem; }
-        }
-        @media (min-width: 1536px) { /* Large screens */
-            h1 { font-size: 5.5rem; }
-            h2 { font-size: 3.5rem; }
+
+        /* Responsive adjustments for countdown */
+        @media (max-width: 640px) {
+            .countdown-item {
+                padding: 0.75rem; /* Smaller padding on small screens */
+                min-width: 65px;
+            }
+            .countdown-number {
+                font-size: 2.5rem; /* Smaller font size on small screens */
+            }
+            .countdown-label {
+                font-size: 0.65rem; /* Smaller label font size */
+            }
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased leading-relaxed">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-background min-h-screen flex items-center justify-center py-16 px-4">
-        <div class="gradient-overlay"></div>
-        <div class="container mx-auto relative z-10 text-center max-w-4xl">
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-300">
-                Unlock the Full Potential of Apple Intelligence & the New Siri
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://source.unsplash.com/1600x900/?An,tech" alt="Apple AI integration background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
+        </div>
+
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-6">
+            <p class="text-indigo-400 text-base sm:text-lg font-semibold mb-4 uppercase tracking-widest">
+                CNN Reports: "Apple's Big Siri Update Is Here. Now The Real Challenge Begins."
+            </p>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                Unlock <span class="text-purple-400">Apple Intelligence:</span> Master Siri, Automate Workflows, Secure Your Data.
             </h1>
-            <p class="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-8 font-light">
-                Your Ultimate AI Productivity Guide: Master the Future of Apple's Ecosystem.
-                <span class="block mt-2 font-medium">Overcome the new challenge of integrating powerful AI into your daily workflow.</span>
+            <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                The future of Apple is here. Go beyond basic commands and transform your Apple ecosystem into an unparalleled productivity powerhouse with our cutting-edge academy.
             </p>
 
-            <!-- Early Bird Discount & Countdown -->
-            <div class="bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-md rounded-xl p-6 sm:p-8 lg:p-10 mb-10 border border-purple-700 shadow-lg max-w-2xl mx-auto">
-                <p class="text-2xl sm:text-3xl font-bold mb-4 text-purple-400">Limited-Time Early Bird Discount!</p>
-                <div id="countdown" class="flex justify-center space-x-3 sm:space-x-5 mb-8">
-                    <div class="countdown-segment p-3 sm:p-4 rounded-lg">
-                        <span id="days" class="block text-3xl sm:text-4xl font-bold text-indigo-300">00</span>
-                        <span class="block text-xs sm:text-sm text-gray-400 mt-1">Days</span>
+            <!-- Limited Time Countdown -->
+            <div class="bg-purple-900 bg-opacity-50 p-4 sm:p-6 rounded-xl shadow-2xl mb-12 border border-purple-700">
+                <p class="text-yellow-300 text-xl sm:text-2xl font-bold mb-4">Limited Time Offer: Early Access Closes In</p>
+                <div class="flex justify-center space-x-2 sm:space-x-4 md:space-x-8 text-white">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">07</div>
+                        <div class="countdown-label">Days</div>
                     </div>
-                    <div class="countdown-segment p-3 sm:p-4 rounded-lg">
-                        <span id="hours" class="block text-3xl sm:text-4xl font-bold text-indigo-300">00</span>
-                        <span class="block text-xs sm:text-sm text-gray-400 mt-1">Hours</span>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">14</div>
+                        <div class="countdown-label">Hours</div>
                     </div>
-                    <div class="countdown-segment p-3 sm:p-4 rounded-lg">
-                        <span id="minutes" class="block text-3xl sm:text-4xl font-bold text-indigo-300">00</span>
-                        <span class="block text-xs sm:text-sm text-gray-400 mt-1">Minutes</span>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">32</div>
+                        <div class="countdown-label">Minutes</div>
                     </div>
-                    <div class="countdown-segment p-3 sm:p-4 rounded-lg">
-                        <span id="seconds" class="block text-3xl sm:text-4xl font-bold text-indigo-300">00</span>
-                        <span class="block text-xs sm:text-sm text-gray-400 mt-1">Seconds</span>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">58</div>
+                        <div class="countdown-label">Seconds</div>
                     </div>
                 </div>
-                <a href="#purchase" class="cta-button inline-block text-white text-xl sm:text-2xl font-bold py-4 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out uppercase tracking-wide">
-                    Secure Your Early Bird Access Now!
-                </a>
-                <p class="mt-4 text-gray-400 text-sm italic">Offer ends when the timer hits zero or supplies run out.</p>
+                <p class="text-gray-400 text-xs sm:text-sm mt-4">Actual countdown requires JavaScript to be fully functional.</p>
             </div>
+
+            <a href="#waitlist" class="btn-gradient inline-block">
+                Secure Your Spot & Get Early Access Now!
+            </a>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-24 bg-gray-900 px-4">
-        <div class="container mx-auto">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300">
-                What You'll Master with Our Comprehensive Bundle
-            </h2>
-            <p class="text-center text-lg sm:text-xl max-w-3xl mx-auto mb-16 text-gray-300">
-                Dive deep into Apple Intelligence and the new Siri. This bundle equips you with everything needed to leverage advanced AI for unparalleled productivity across your Apple devices.
+    <section class="py-16 md:py-24 bg-gray-950">
+        <div class="container mx-auto px-6 text-center max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-12">What You'll Master in the Academy</h2>
+            <p class="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+                The Apple AI Power User Academy isn't just another course; it's your definitive guide to harnessing the full potential of Apple Intelligence, updated quarterly with the latest advancements.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:border-purple-600 transition-all duration-300 ease-in-out transform hover:-translate-y-2">
-                    <div class="feature-icon mb-4">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197 2.132A1 1 0 0010 13.882V8.118a1 1 0 011.555-.832l3.197 2.132a1 1 0 010 1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-purple-300">Step-by-Step Video Tutorials</h3>
-                    <p class="text-gray-300">Learn visually with engaging, easy-to-follow video lessons covering every new feature, from basic setup to advanced workflows across Mac, iPhone, and iPad.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                <!-- Feature 1: Mastering the New Siri -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition-colors duration-300">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 flex items-center">
+                        <span class="text-indigo-400 text-2xl sm:text-3xl mr-3">🤖</span> Mastering the New Siri
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+                        Go beyond basic commands. Discover advanced conversational abilities, context awareness, and how to integrate Siri seamlessly into your daily tasks for ultimate efficiency.
+                    </p>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:border-purple-600 transition-all duration-300 ease-in-out transform hover:-translate-y-2">
-                    <div class="feature-icon mb-4">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-purple-300">Custom Siri Shortcuts Library</h3>
-                    <p class="text-gray-300">Download a curated collection of powerful, custom Siri shortcuts designed to automate your most common tasks and unleash AI-driven efficiency instantly.</p>
+                <!-- Feature 2: Seamless Workflow Integration -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition-colors duration-300">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 flex items-center">
+                        <span class="text-green-400 text-2xl sm:text-3xl mr-3">🔗</span> Seamless Workflow Integration
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+                        Learn to weave Apple's AI features into your existing productivity workflows. Automate repetitive tasks, leverage intelligent summaries, and streamline your entire digital life.
+                    </p>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:border-purple-600 transition-all duration-300 ease-in-out transform hover:-translate-y-2">
-                    <div class="feature-icon mb-4">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-purple-300">Advanced Workflow Templates</h3>
-                    <p class="text-gray-300">Access ready-to-use templates for maximizing your productivity with Notes, Mail, Photos, and other apps, all supercharged by Apple Intelligence.</p>
+                <!-- Feature 3: Privacy & Security Deep Dive -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition-colors duration-300">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 flex items-center">
+                        <span class="text-red-400 text-2xl sm:text-3xl mr-3">🔒</span> Privacy & Security Deep Dive
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+                        Understand Apple's on-device processing and Private Cloud Compute. Learn best practices to maintain your privacy while harnessing powerful AI capabilities.
+                    </p>
                 </div>
 
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:border-purple-600 transition-all duration-300 ease-in-out transform hover:-translate-y-2">
-                    <div class="feature-icon mb-4">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-purple-300">Troubleshooting & FAQs</h3>
-                    <p class="text-gray-300">Get quick answers and solutions to common issues or questions regarding new Siri features and Apple Intelligence, ensuring a smooth experience.</p>
+                <!-- Feature 4: Leveraging Third-Party AI Tools -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition-colors duration-300">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 flex items-center">
+                        <span class="text-yellow-400 text-2xl sm:text-3xl mr-3">🛠️</span> Leveraging Third-Party AI Tools
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+                        Discover and integrate the best third-party AI applications specifically designed to enhance your Apple user experience, boosting creativity and productivity.
+                    </p>
                 </div>
 
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:border-purple-600 transition-all duration-300 ease-in-out transform hover:-translate-y-2">
-                    <div class="feature-icon mb-4">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-purple-300">Comprehensive E-Book Guide</h3>
-                    <p class="text-gray-300">A detailed digital e-book companion, perfect for reference, deep dives, and consolidating your understanding of all things Apple Intelligence.</p>
+                <!-- Feature 5: Shortcut Automations & Templates -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition-colors duration-300">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 flex items-center">
+                        <span class="text-blue-400 text-2xl sm:text-3xl mr-3">⚡</span> Shortcut Automations & Templates
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+                        Gain access to exclusive templates and pre-built shortcut automations that instantly elevate your Apple AI interactions and save you countless hours.
+                    </p>
                 </div>
 
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:border-purple-600 transition-all duration-300 ease-in-out transform hover:-translate-y-2">
-                    <div class="feature-icon mb-4">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-purple-300">Future-Proof Your Productivity</h3>
-                    <p class="text-gray-300">Stay ahead of the curve. This guide is continuously updated to reflect new developments in Apple Intelligence and Siri, ensuring long-term relevance.</p>
+                <!-- Feature 6: Live Q&A & Quarterly Updates -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition-colors duration-300">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 flex items-center">
+                        <span class="text-pink-400 text-2xl sm:text-3xl mr-3">💬</span> Live Q&A & Quarterly Updates
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+                        Participate in live sessions to get your questions answered and stay ahead with quarterly module updates reflecting the latest Apple AI developments.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action / Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-24 bg-gray-800 px-4">
-        <div class="container mx-auto max-w-3xl text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-purple-300">
-                Ready to Revolutionize Your Productivity?
-            </h2>
+    <!-- Waitlist/Subscription Form Section -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gradient-to-br from-gray-900 to-purple-950">
+        <div class="container mx-auto px-6 text-center max-w-2xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-8">Ready to Become an Apple AI Power User?</h2>
             <p class="text-lg sm:text-xl text-gray-300 mb-10">
-                Don't miss out on the early bird discount! Invest in your future productivity today.
+                Don't get left behind as Apple Intelligence reshapes how we interact with technology. Secure your spot in the Academy and be among the first to master these revolutionary tools.
             </p>
-            <a href="#" class="cta-button inline-block text-white text-xl sm:text-2xl font-bold py-4 px-12 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out uppercase tracking-wide mb-16">
-                Get Instant Access with Early Bird Discount!
-            </a>
-
-            <!-- Waitlist Form for Future Offers -->
-            <div class="bg-gray-900 rounded-xl p-8 sm:p-10 shadow-2xl border border-gray-700 max-w-2xl mx-auto">
-                <h3 class="text-2xl sm:text-3xl font-bold mb-6 text-purple-400">
-                    Not Ready Yet? Join Our Exclusive Waitlist.
-                </h3>
-                <p class="text-md sm:text-lg text-gray-400 mb-8">
-                    Be the first to know about future discounts, updates, and new courses.
-                </p>
-                <form class="space-y-6">
-                    <div>
-                        <input type="text" id="name" name="name" placeholder="Your Name" class="w-full p-4 rounded-lg focus:outline-none text-lg" required>
-                    </div>
-                    <div>
-                        <input type="email" id="email" name="email" placeholder="Your Best Email Address" class="w-full p-4 rounded-lg focus:outline-none text-lg" required>
-                    </div>
-                    <button type="submit" class="cta-button w-full py-4 text-white text-xl font-bold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 ease-in-out uppercase tracking-wide">
-                        Join the Waitlist
-                    </button>
-                </form>
-                <p class="mt-6 text-gray-500 text-sm">We respect your privacy. No spam, ever.</p>
-            </div>
+            <form action="#" method="POST" class="bg-gray-800 p-8 md:p-10 rounded-xl shadow-2xl border border-purple-700">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-300 text-base sm:text-lg font-medium mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="w-full p-3 sm:p-4 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-purple-500 focus:border-purple-500 outline-none" required>
+                </div>
+                <div class="mb-8 text-left">
+                    <label for="email" class="block text-gray-300 text-base sm:text-lg font-medium mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                           class="w-full p-3 sm:p-4 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-purple-500 focus:border-purple-500 outline-none" required>
+                </div>
+                <button type="submit" class="btn-gradient w-full">
+                    Join the Apple AI Power User Academy Waitlist
+                </button>
+                <p class="text-gray-400 text-xs sm:text-sm mt-6">Your data is safe with us. We hate spam too.</p>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-500 text-center py-10 px-4 border-t border-gray-800">
-        <div class="container mx-auto">
-            <p>&copy; <span id="currentYear"></span> Your Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2 text-sm">
-                <a href="#" class="hover:text-purple-400 mx-2">Privacy Policy</a> |
-                <a href="#" class="hover:text-purple-400 mx-2">Terms of Service</a>
-            </p>
+    <footer class="bg-gray-950 py-10 text-center text-gray-500 text-xs sm:text-sm">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2024 Apple AI Power User Academy. All rights reserved.</p>
+            <p class="mt-2">Disclaimer: This course is independently developed and not officially endorsed by Apple Inc.</p>
         </div>
     </footer>
 
-    <!-- Countdown Timer Script -->
-    <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        const countdown = () => {
-            const endDate = new Date();
-            // Set the countdown for 7 days from now for demonstration purposes
-            endDate.setDate(endDate.getDate() + 7); 
-            // Or set a specific date: endDate = new Date("December 31, 2024 23:59:59").getTime();
-
-            const interval = setInterval(() => {
-                const now = new Date().getTime();
-                const distance = endDate - now;
-
-                if (distance < 0) {
-                    clearInterval(interval);
-                    document.getElementById("countdown").innerHTML = "<p class='text-red-500 text-xl font-bold'>OFFER EXPIRED!</p>";
-                    // Optionally disable the button here
-                    document.querySelector('.hero-background .cta-button').classList.add('opacity-50', 'cursor-not-allowed');
-                    document.querySelector('.hero-background .cta-button').removeAttribute('href');
-                    document.querySelector('.hero-background .cta-button').innerText = 'Offer Expired';
-                    return;
-                }
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                document.getElementById("days").innerText = String(days).padStart(2, '0');
-                document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
-            }, 1000);
-        }
-
-        countdown();
-    </script>
+    <!-- Note on JS for countdown: In a real implementation, a small JS snippet would update the countdown timer. -->
+    <!-- For this HTML-only output, the countdown displays static placeholder values. -->
 </body>
 </html>
