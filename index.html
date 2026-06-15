@@ -1,157 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Integrate – Apple Intelligence Toolkit for Developers</title>
+    <title>GameAd IQ: Master Contextual In-Game Advertising</title>
     <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Google Fonts: Inter for a modern, premium feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom scroll-behavior for smooth anchor links */
-        html {
-            scroll-behavior: smooth;
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        /* A subtle animation for the hero text, optional but adds a premium feel */
-        @keyframes pulse-light {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.9; }
-        }
-        .animate-pulse-light {
-            animation: pulse-light 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Creates a subtle parallax effect */
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-gray-900 text-white">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
-             style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for readability -->
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mb-6 animate-pulse-light">
-                Unlock Apple Intelligence.<br>Build Smarter Apps. Faster.
-            </h1>
-            <p class="text-xl sm:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Integrate Apple's powerful on-device AI and enhanced Siri capabilities into your iOS/macOS apps with our intuitive, pre-built toolkit.
-                Streamline development and deliver next-gen experiences.
-            </p>
-            <a href="#waitlist" class="inline-block">
-                <div class="bg-blue-600 hover:bg-blue-700 transition duration-300 text-white font-bold py-3 px-8 rounded-lg shadow-lg text-lg sm:text-xl transform hover:scale-105">
-                    Join the Exclusive Waitlist!
-                </div>
-            </a>
+    <section class="hero-bg relative min-h-screen flex items-center justify-center p-4">
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black opacity-70"></div>
 
-            <!-- Limited Time Countdown -->
-            <div class="mt-10 bg-gray-800 bg-opacity-80 p-4 rounded-lg shadow-xl inline-block max-w-full">
-                <p class="text-yellow-300 text-sm sm:text-base font-semibold uppercase mb-2">Limited-Time Early Access Window:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-5 text-white">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="text-2xl sm:text-3xl md:text-4xl font-bold">00</span>
-                        <span class="text-xs sm:text-sm text-gray-400">Days</span>
-                    </div>
-                    <span class="text-2xl sm:text-3xl md:text-4xl font-bold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="text-2xl sm:text-3xl md:text-4xl font-bold">00</span>
-                        <span class="text-xs sm:text-sm text-gray-400">Hours</span>
-                    </div>
-                    <span class="text-2xl sm:text-3xl md:text-4xl font-bold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="text-2xl sm:text-3xl md:text-4xl font-bold">00</span>
-                        <span class="text-xs sm:text-sm text-gray-400">Minutes</span>
-                    </div>
-                    <span class="text-2xl sm:text-3xl md:text-4xl font-bold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="text-2xl sm:text-3xl md:text-4xl font-bold">00</span>
-                        <span class="text-xs sm:text-sm text-gray-400">Seconds</span>
-                    </div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center px-4 py-16 sm:py-24 lg:py-32">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-6">
+                <span class="text-purple-400">GameAd IQ:</span> Intelligent, <br class="sm:hidden">Non-Intrusive In-Game Advertising
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                With EA's new advertising push, the gaming landscape is evolving.
+                <br>Be ahead of the curve: design, test, and analyze contextually relevant in-game ad creatives that truly enhance player experience.
+            </p>
+
+            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 rounded-lg shadow-xl mb-10 border border-purple-500">
+                <h3 class="text-2xl sm:text-3xl font-bold mb-3">Limited-Time Early Access!</h3>
+                <p class="text-xl sm:text-2xl text-gray-200 mb-4">Join our exclusive waitlist before it closes:</p>
+                <div id="countdown" class="text-4xl sm:text-5xl font-extrabold text-white mb-6 flex justify-center items-center flex-wrap gap-2">
+                    <span class="block animate-pulse">Loading countdown...</span>
                 </div>
+                <a href="#waitlist-form" class="inline-block bg-white text-gray-900 hover:bg-gray-200 transition duration-300 ease-in-out px-8 py-4 rounded-full text-lg sm:text-xl font-bold shadow-lg transform hover:scale-105">
+                    Secure Your Spot Now!
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 bg-gray-900">
+    <section class="py-16 sm:py-24 bg-gray-900 text-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white mb-12 sm:mb-16">
-                Engineered for Developer Excellence
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12">Empower Your Brand with Smarter In-Game Ads</h2>
+            <p class="text-lg sm:text-xl text-center text-gray-300 mb-16 max-w-3xl mx-auto">
+                GameAd IQ provides the critical tools brands and agencies need to navigate the new frontier of in-game advertising effectively and respectfully.
+            </p>
 
-                <!-- Feature 1: Pre-built AI Modules -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-blue-400 text-5xl mb-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                        </svg>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Feature 1: Visualize & Design -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 flex flex-col items-center text-center">
+                    <div class="text-purple-400 mb-4">
+                        <!-- SVG for Design/Visualize -->
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19H3v-6a3 3 0 013-3h3m0 0l-1-1m-2 0V5m1 0h2m-1 0V3m0 0a2 2 0 012-2h0a2 2 0 012 2v1"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Pre-built AI Modules</h3>
-                    <p class="text-gray-300 text-lg text-center">
-                        Accelerate development with ready-to-use components for common AI tasks. Drop them into your app and customize with ease.
+                    <h3 class="text-2xl font-bold mb-3">Visualize & Design</h3>
+                    <p class="text-gray-300">
+                        Seamlessly design and preview your ad creatives within various 3D game environments before launch, ensuring perfect contextual fit.
                     </p>
                 </div>
 
-                <!-- Feature 2: Powerful API Access -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-blue-400 text-5xl mb-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                        </svg>
+                <!-- Feature 2: A/B Test & Optimize -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 flex flex-col items-center text-center">
+                    <div class="text-purple-400 mb-4">
+                        <!-- SVG for A/B Testing -->
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M18 14v4a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h4m2 12l-3-3m0 0L6 9"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Powerful API Access</h3>
-                    <p class="text-gray-300 text-lg text-center">
-                        Gain programmatic control over Apple Intelligence capabilities with well-documented, developer-friendly APIs.
+                    <h3 class="text-2xl font-bold mb-3">A/B Test & Optimize</h3>
+                    <p class="text-gray-300">
+                        Run targeted A/B tests on different ad styles to gauge player engagement and retention, optimizing for maximum impact and minimal disruption.
                     </p>
                 </div>
 
-                <!-- Feature 3: Unified Management Dashboard -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-blue-400 text-5xl mb-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-0.75-3M3 13h18M3 17h18M6 10v-2a2 2 0 012-2h8a2 2 0 012 2v2M5 10h14a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2v-8a2 2 0 012-2z" />
-                        </svg>
+                <!-- Feature 3: Granular Analytics -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 flex flex-col items-center text-center">
+                    <div class="text-purple-400 mb-4">
+                        <!-- SVG for Analytics -->
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Unified Management Dashboard</h3>
-                    <p class="text-gray-300 text-lg text-center">
-                        Monitor, manage, and fine-tune all your AI-driven features and actions from a single, intuitive dashboard.
+                    <h3 class="text-2xl font-bold mb-3">Granular Analytics</h3>
+                    <p class="text-gray-300">
+                        Gain deep insights into ad performance with metrics specific to in-game interactions, ensuring your campaigns are genuinely effective and respectful.
                     </p>
                 </div>
 
-                <!-- Feature 4: Custom AI-Driven Actions -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-blue-400 text-5xl mb-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.324 1.114l1.519 4.674c.3.921-.755 1.688-1.539 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.784.57-1.838-.197-1.539-1.118l1.519-4.674a1 1 0 00-.324-1.114L2.924 9.101c-.783-.57-.381-1.81.588-1.81h4.915a1 1 0 00.95-.69l1.519-4.674z" />
-                        </svg>
+                <!-- Feature 4: Respectful Compliance -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 flex flex-col items-center text-center">
+                    <div class="text-purple-400 mb-4">
+                        <!-- SVG for Compliance/Trust -->
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.276a1.25 1.25 0 011.085-1.921c.583-.173 1.218.175 1.488.752a.75.75 0 00.999.55l.001.001A.75.75 0 0021.2 5.25c-.267-.29-.44-.61-.518-.948a1.25 1.25 0 01-1.921-1.085c-.173-.583.175-1.218.752-1.488a.75.75 0 00.55-.999l.001-.001A.75.75 0 0021.2 1.25c-.29-.267-.61-.44-.948-.518a1.25 1.25 0 01-1.921-1.085c-.173-.583.175-1.218.752-1.488a.75.75 0 00-.999.55l-.001.001A.75.75 0 0014.8 1.25c-.267.29-.61.44-.948-.518a1.25 1.25 0 01-1.921-1.085c-.173-.583.175-1.218.752-1.488a.75.75 0 00.55-.999l-.001-.001A.75.75 0 008.8 1.25c-.29-.267-.61-.44-.948-.518a1.25 1.25 0 01-1.921-1.085c-.173-.583.175-1.218.752-1.488a.75.75 0 00.55-.999l-.001-.001A.75.75 0 003.2 1.25c-.29-.267-.61-.44-.948-.518A1.25 1.25 0 01.25 2.155c-.173.583.175 1.218.752 1.488a.75.75 0 00.55.999l.001.001A.75.75 0 003.2 4.75c-.29.267-.61.44-.948.518A1.25 1.25 0 01.25 7.155c-.173.583.175 1.218.752 1.488a.75.75 0 00.55.999l.001.001A.75.75 0 003.2 9.75c-.29.267-.61.44-.948.518A1.25 1.25 0 01.25 12.155c-.173.583.175 1.218.752 1.488a.75.75 0 00.55.999l.001.001A.75.75 0 003.2 14.75c-.29.267-.61.44-.948.518A1.25 1.25 0 01.25 17.155c-.173.583.175 1.218.752 1.488a.75.75 0 00.55.999l.001.001A.75.75 0 003.2 19.75c-.29.267-.61.44-.948.518A1.25 1.25 0 01.25 22.155c-.173.583.175 1.218.752 1.488a.75.75 0 00.55.999l.001.001A.75.75 0 003.2 24.75c-.29.267-.61.44-.948.518A1.25 1.25 0 01.25 27.155c-.173.583.175 1.218.752 1.488a.75.75 0 00.55.999l.001.001A.75.75 0 003.2 29.75c-.29.267-.61.44-.948.518A1.25 1.25 0 01.25 32.155c-.173.583.175 1.218.752 1.488a.75.75 0 00.55.999l.001.001A.75.75 0 003.2 34.75c-.29.267-.61.44-.948.518A1.25 1.25 0 01.25 37.155c-.173.583.175 1.218.752 1.488a.75.75 0 00.55.999l.001.001A.75.75 0 003.2 39.75c-.29.267-.61.44-.948.518A1.25 1.25 0 01.25 42.155c-.173.583.175 1.218.752 1.488a.75.75 0 00.55.999l.001.001A.75.75 0 003.2 44.75c-.29.267-.61.44-.948.518A1.25 1.25 0 01.25 47.155c-.173.583.175 1.218.752 1.488a.75.75 0 00.55.999l.001.001A.75.75 0 003.2 49.75c-.29.267-.61.44-.948.518A1.25 1.25 0 01.25 52.155c-.173.583.175 1.218.752 1.488a.75.75 0 00.55.999l.001.001A.75.75 0 003.2 54.75c-.29.267-.61.44-.948.518A1.25 1.25 0 01.25 57.155c-.173.583.175 1.218.752 1.488a.75.75 0 00.55.999l.001.001A.75.75 0 003.2 59.75c-.29.267-.61.44-.948.518A1.25 1.25 0 01.25 62.155c-.173.583.175 1.218.752 1.488a.75.75 0 00.55.999l.001.001A.75.75 0 003.2 64.75c-.29.267-.61.44-.948.518A1.25 1.25 0 01.25 67.155c-.173.583.175 1.218.752 1.488a.75.75 0 00.55.999l.001.001A.75.75 0 003.2 69.75c-.29.267-.61.44-.948.518A1.25 1.25 0 01.25 72.155c-.173.583.175 1.218.752 1.488a.75.75 0 00.55.999l.001.001A.75.75 0 003.2 74.75c-.29.267-.61.44-.948.518A1.25 1.25 0 01.25 77.155c-.173.583.175 1.218.752 1.488a.75.75 0 00.55.999l.001.001A.75.75 0 003.2 79.75c-.29.267-.61.44-.948.518A1.25 1.25 0 01.25 82.155c-.173.583.175 1.218.752 1.488a.75.75 0 00.55.999l.001.001A.75.75 0 003.2 84.75c-.29.267-.61.44-.948.518A1.25 1.25 0 01.25 87.155c-.173.583.175 1.218.752 1.488a.75.75 0 00.55.999l.001.001A.75.75 0 003.2 89.75c-.29.267-.61.44-.948.518A1.25 1.25 0 01.25 92.155c-.173.583.175 1.218.752 1.488a.75.75 0 00.55.999l.001.001A.75.75 0 003.2 94.75c-.29.267-.61.44-.948.518A1.25 1.25 0 01.25 97.155c-.173.583.175 1.218.752 1.488a.75.75 0 00.55.999l.001.001A.75.75 0 003.2 99.75zM12 12h.01"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Custom AI-Driven Actions</h3>
-                    <p class="text-gray-300 text-lg text-center">
-                        Define and implement unique AI actions tailored to your app's specific needs, enhancing user interaction and productivity.
-                    </p>
-                </div>
-
-                <!-- Feature 5: Enhanced Voice Command Integration -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-blue-400 text-5xl mb-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Enhanced Voice Command Integration</h3>
-                    <p class="text-gray-300 text-lg text-center">
-                        Leverage the new Siri's deeper capabilities to enable powerful and natural voice control within your applications.
-                    </p>
-                </div>
-
-                <!-- Feature 6: Optimized On-Device Performance -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-blue-400 text-5xl mb-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Optimized On-Device Performance</h3>
-                    <p class="text-gray-300 text-lg text-center">
-                        Harness the full potential of Apple's on-device AI for unparalleled privacy, speed, and robust offline functionality.
+                    <h3 class="text-2xl font-bold mb-3">Respectful Compliance</h3>
+                    <p class="text-gray-300">
+                        Adhere to "respectful advertising" guidelines, building positive brand perception and ensuring your ads resonate with players.
                     </p>
                 </div>
 
@@ -160,80 +116,115 @@
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gray-800">
+    <section id="waitlist-form" class="py-16 sm:py-24 bg-gray-800 text-white">
         <div class="container mx-auto px-4 max-w-2xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white mb-8 sm:mb-12">
-                Join the Exclusive Waitlist
-            </h2>
-            <p class="text-lg sm:text-xl text-gray-300 text-center mb-8">
-                Be among the first to access the 'AI Integrate' toolkit and revolutionize your app's intelligence. Secure your spot now!
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-6">Join the Future of In-Game Advertising</h2>
+            <p class="text-lg text-gray-300 text-center mb-8">
+                Don't miss out on early access, exclusive features, and foundational pricing. Fill out the form below to secure your spot.
             </p>
-            <form class="bg-gray-700 p-8 rounded-lg shadow-2xl space-y-6">
+
+            <form action="#" method="POST" class="bg-gray-700 p-8 rounded-lg shadow-xl space-y-6 border border-gray-600">
                 <div>
-                    <label for="name" class="block text-gray-200 text-lg font-medium mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="w-full p-4 rounded-md bg-gray-600 border border-gray-500 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" required>
+                    <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
+                    <input type="text" name="name" id="name" autocomplete="name" required
+                           class="w-full px-4 py-3 rounded-md bg-gray-600 border border-gray-500 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
                 </div>
                 <div>
-                    <label for="email" class="block text-gray-200 text-lg font-medium mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="w-full p-4 rounded-md bg-gray-600 border border-gray-500 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" required>
+                    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Work Email</label>
+                    <input type="email" name="email" id="email" autocomplete="email" required
+                           class="w-full px-4 py-3 rounded-md bg-gray-600 border border-gray-500 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
                 </div>
                 <div>
-                    <label for="company" class="block text-gray-200 text-lg font-medium mb-2">Company / Role (Optional)</label>
-                    <input type="text" id="company" name="company" placeholder="Acme Inc. / iOS Developer"
-                           class="w-full p-4 rounded-md bg-gray-600 border border-gray-500 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200">
+                    <label for="company" class="block text-sm font-medium text-gray-300 mb-2">Company Name (Optional)</label>
+                    <input type="text" name="company" id="company" autocomplete="organization"
+                           class="w-full px-4 py-3 rounded-md bg-gray-600 border border-gray-500 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
                 </div>
-                <button type="submit"
-                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg text-xl sm:text-2xl shadow-lg transition duration-300 transform hover:scale-105">
-                    Secure My Spot
-                </button>
-                <p class="text-gray-400 text-sm text-center mt-4">
-                    We respect your privacy. No spam, ever.
-                </p>
+                <div class="text-center">
+                    <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-800">
+                        Join Waitlist Now!
+                    </button>
+                </div>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm">
-        <p>&copy; 2024 AI Integrate. All rights reserved.</p>
-        <p class="mt-2">
-            Empowering iOS & macOS developers with the future of Apple Intelligence.
-        </p>
+    <footer class="bg-gray-950 py-8 text-gray-400 text-center text-sm">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2023 GameAd IQ. All rights reserved. | <a href="#" class="text-purple-400 hover:underline">Privacy Policy</a> | <a href="#" class="text-purple-400 hover:underline">Terms of Service</a></p>
+        </div>
     </footer>
 
-    <!-- Countdown Script (Embedded for raw HTML output) -->
+    <!-- Countdown Timer Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to: 7 days from now for a solid "limited time" window
-            const now = new Date();
-            const countDownDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 days from now
+            const countdownElement = document.getElementById('countdown');
+            
+            // Set target date to 7 days from now for a "limited time" feel.
+            const targetDate = new Date();
+            targetDate.setDate(targetDate.getDate() + 7);
+            targetDate.setHours(23, 59, 59, 999); // End of the 7th day
 
-            const x = setInterval(function() {
-                const currentNow = new Date().getTime();
-                const distance = countDownDate.getTime() - currentNow;
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = targetDate.getTime() - now;
 
-                // If the countdown is finished
                 if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<p class='text-red-400 text-xl font-bold'>Offer Expired!</p>";
+                    clearInterval(countdownInterval);
+                    countdownElement.innerHTML = "<span class='text-red-400'>WAITLIST CLOSED!</span>";
+                    
+                    // Disable the join button in hero
+                    const joinButton = document.querySelector('a[href="#waitlist-form"]');
+                    if(joinButton) {
+                        joinButton.classList.add('opacity-50', 'cursor-not-allowed');
+                        joinButton.removeAttribute('href');
+                        joinButton.innerText = 'Waitlist Closed';
+                    }
+                    // Disable the submit button in the form
+                    const submitButton = document.querySelector('#waitlist-form button[type="submit"]');
+                    if(submitButton) {
+                        submitButton.classList.add('opacity-50', 'cursor-not-allowed');
+                        submitButton.setAttribute('disabled', 'true');
+                        submitButton.innerText = 'Waitlist Closed';
+                    }
+                    // Optionally disable input fields
+                    document.querySelectorAll('#waitlist-form input').forEach(input => {
+                        input.setAttribute('disabled', 'true');
+                        input.classList.add('opacity-50', 'cursor-not-allowed');
+                    });
                     return;
                 }
 
-                // Time calculations for days, hours, minutes and seconds
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Display the result in the corresponding elements
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                countdownElement.innerHTML = `
+                    <div class="flex flex-col items-center mx-1 sm:mx-2">
+                        <span class="text-3xl sm:text-4xl block">${days}</span>
+                        <span class="text-sm font-normal text-gray-300">Days</span>
+                    </div>
+                    <div class="text-3xl sm:text-4xl font-extrabold mx-0.5">:</div>
+                    <div class="flex flex-col items-center mx-1 sm:mx-2">
+                        <span class="text-3xl sm:text-4xl block">${hours}</span>
+                        <span class="text-sm font-normal text-gray-300">Hours</span>
+                    </div>
+                    <div class="text-3xl sm:text-4xl font-extrabold mx-0.5">:</div>
+                    <div class="flex flex-col items-center mx-1 sm:mx-2">
+                        <span class="text-3xl sm:text-4xl block">${minutes}</span>
+                        <span class="text-sm font-normal text-gray-300">Minutes</span>
+                    </div>
+                    <div class="text-3xl sm:text-4xl font-extrabold mx-0.5">:</div>
+                    <div class="flex flex-col items-center mx-1 sm:mx-2">
+                        <span class="text-3xl sm:text-4xl block">${seconds}</span>
+                        <span class="text-sm font-normal text-gray-300">Seconds</span>
+                    </div>
+                `;
+            }
 
-            }, 1000); // Update the count down every 1 second
+            updateCountdown(); // Initial call to display immediately
+            const countdownInterval = setInterval(updateCountdown, 1000);
         });
     </script>
 </body>
