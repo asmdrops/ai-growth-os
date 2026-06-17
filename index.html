@@ -1,234 +1,234 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Android 17 Power User Handbook for Pixel Devices</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#6D28D9', // A vibrant purple for primary actions
-                        secondary: '#4F46E5', // A slightly different blue-purple
-                        accent: '#FACC15', // A bright yellow for highlights
-                        darkbg: '#111827', // Dark background
-                        darkcard: '#1F2937', // Slightly lighter dark for cards
-                        darktext: '#E5E7EB', // Light text
-                    }
-                }
-            }
-        }
-    </script>
+    <title>BattleMaster Pro - Ultimate Pokémon Battle Companion</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for background image */
-        .hero-bg {
+        /* Custom styles for dark mode and responsiveness, and gradients */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-attachment: fixed; /* For parallax-like effect */
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #8B5CF6 0%, #EC4899 100%); /* Tailwind purple-500 to pink-500 */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn-gradient {
+            background: linear-gradient(90deg, #8B5CF6 0%, #EC4899 100%); /* Tailwind purple-500 to pink-500 */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4); /* Enhanced shadow on hover */
+        }
+        input[type="email"] {
+            border-color: #4A5568; /* Tailwind gray-600 */
+        }
+        input[type="email"]:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.5); /* Purple focus ring */
+            border-color: #8B5CF6;
         }
     </style>
 </head>
-<body class="bg-darkbg text-darktext font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-bg relative h-screen flex items-center justify-center text-center p-4">
+    <header class="relative hero-background min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-8">
         <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay -->
-        <div class="relative z-10 max-w-4xl mx-auto space-y-8">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white drop-shadow-lg animate-fade-in-down">
-                🚀 Unlock Android 17's Full Power on Your Pixel Device!
+        <div class="relative z-10 text-center max-w-4xl mx-auto py-16 px-6 sm:px-8 md:px-12 bg-gray-900 bg-opacity-80 rounded-xl shadow-2xl backdrop-filter backdrop-blur-sm">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4 text-white">
+                <span class="text-gradient block">Master the Meta.</span> <span class="block mt-2">Conquer the Ranks.</span>
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 leading-relaxed max-w-3xl mx-auto animate-fade-in-up">
-                Master new features, boost performance, enhance security, prepare for AI, and troubleshoot like a pro with the ultimate guide for Pixel users.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                The Ultimate Battle Companion for Competitive Pokémon Players. Get real-time insights, build unbeatable teams, and analyze every match to dominate <span class="font-semibold text-purple-400">Regulation Set M-B</span>.
             </p>
 
             <!-- Limited Time Offer & Countdown -->
-            <div class="bg-gradient-to-r from-primary to-secondary p-6 rounded-lg shadow-2xl inline-block transform -translate-y-4 animate-scale-in">
-                <p class="text-accent text-xl sm:text-2xl md:text-3xl font-bold uppercase mb-2">
-                    🔥 Limited-Time Launch Offer! 🔥
-                </p>
-                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 text-white text-3xl sm:text-4xl md:text-5xl font-mono font-extrabold">
+            <div class="bg-purple-800 bg-opacity-60 border border-purple-600 rounded-lg p-4 sm:p-6 mb-8 shadow-inner">
+                <p class="text-sm sm:text-base font-semibold uppercase tracking-wide text-purple-200 mb-2">Exclusive Early Access - Limited Time Offer!</p>
+                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 text-white font-mono text-2xl sm:text-3xl md:text-4xl">
                     <div class="flex flex-col items-center">
-                        <span id="days">00</span>
-                        <span class="text-xs sm:text-sm text-gray-200">Days</span>
+                        <span id="days" class="font-bold">00</span>
+                        <span class="text-xs sm:text-sm text-gray-300 uppercase">Days</span>
                     </div>
-                    <span class="text-accent">:</span>
+                    <span class="text-purple-400">:</span>
                     <div class="flex flex-col items-center">
-                        <span id="hours">00</span>
-                        <span class="text-xs sm:text-sm text-gray-200">Hours</span>
+                        <span id="hours" class="font-bold">00</span>
+                        <span class="text-xs sm:text-sm text-gray-300 uppercase">Hours</span>
                     </div>
-                    <span class="text-accent">:</span>
+                    <span class="text-purple-400">:</span>
                     <div class="flex flex-col items-center">
-                        <span id="minutes">00</span>
-                        <span class="text-xs sm:text-sm text-gray-200">Minutes</span>
+                        <span id="minutes" class="font-bold">00</span>
+                        <span class="text-xs sm:text-sm text-gray-300 uppercase">Minutes</span>
                     </div>
-                    <span class="text-accent">:</span>
+                    <span class="text-purple-400">:</span>
                     <div class="flex flex-col items-center">
-                        <span id="seconds">00</span>
-                        <span class="text-xs sm:text-sm text-gray-200">Seconds</span>
+                        <span id="seconds" class="font-bold">00</span>
+                        <span class="text-xs sm:text-sm text-gray-300 uppercase">Seconds</span>
                     </div>
                 </div>
             </div>
 
-            <a href="#purchase" class="inline-block bg-accent hover:bg-yellow-500 text-darkbg text-xl sm:text-2xl font-bold px-10 py-4 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out animate-bounce-in">
-                Secure Your Handbook Now!
+            <a href="#waitlist" class="inline-block btn-gradient text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50">
+                Join the Elite Waitlist Now!
             </a>
-            <p class="text-sm text-gray-400 mt-4">Join 1,000+ early adopters already mastering Android 17!</p>
+            <p class="text-sm text-gray-400 mt-4">Don't miss out on exclusive early bird access.</p>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-darkcard text-darktext px-4">
-        <div class="container mx-auto max-w-5xl text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-white">
-                What You'll Achieve with This Handbook
+    <section class="py-16 sm:py-20 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white mb-12 sm:mb-16">
+                Unrivaled Tools for Competitive Play
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
 
-                <!-- Feature 1 -->
-                <div class="bg-darkbg p-6 rounded-lg shadow-xl border border-gray-700 hover:shadow-2xl hover:border-primary transition duration-300">
-                    <div class="text-5xl mb-4 text-primary">🚀</div>
-                    <h3 class="text-xl font-semibold mb-2 text-white">Master Every New Feature</h3>
-                    <p class="text-gray-300">Dive deep into Android 17's latest functionalities with crystal-clear, step-by-step guides designed exclusively for Pixel devices.</p>
+                <!-- Feature 1: Advanced Team Builder -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex items-center justify-center w-16 h-16 bg-purple-600 rounded-full mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1-3m-6.964-1.24A1 1 0 0010 17h4a1 1 0 00.964-1.24L14 13l3-3V3H6v7l3 3 2.964 2.76zM7 3h10M7 3v4"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 text-center">Advanced Team Builder</h3>
+                    <p class="text-gray-300 text-center text-base sm:text-lg">
+                        Craft optimal teams with unparalleled synergy. Explore Pokémon matchups, type resistances, and ability combinations effortlessly.
+                    </p>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="bg-darkbg p-6 rounded-lg shadow-xl border border-gray-700 hover:shadow-2xl hover:border-primary transition duration-300">
-                    <div class="text-5xl mb-4 text-primary">⚡</div>
-                    <h3 class="text-xl font-semibold mb-2 text-white">Optimize Performance Like a Pro</h3>
-                    <p class="text-gray-300">Unleash your Pixel's true speed and efficiency. Learn hidden settings and tweaks to ensure buttery-smooth performance all day long.</p>
+                <!-- Feature 2: Real-time Meta Insights -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex items-center justify-center w-16 h-16 bg-pink-600 rounded-full mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3m0 0l3 3m-3-3v8m0-9a9 9 0 110 18 9 9 0 010-18zm0 18a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 text-center">Real-time Meta Insights</h3>
+                    <p class="text-gray-300 text-center text-base sm:text-lg">
+                        Stay ahead of the curve with live data on current ranked seasons (Regulation Set M-B). Understand popular Pokémon, moves, and strategies.
+                    </p>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="bg-darkbg p-6 rounded-lg shadow-xl border border-gray-700 hover:shadow-2xl hover:border-primary transition duration-300">
-                    <div class="text-5xl mb-4 text-primary">🔒</div>
-                    <h3 class="text-xl font-semibold mb-2 text-white">Fortify Your Device Security</h3>
-                    <p class="text-gray-300">Understand Android 17's advanced security enhancements and implement best practices to keep your data safe and private.</p>
+                <!-- Feature 3: Stat & Move-set Analyzer -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex items-center justify-center w-16 h-16 bg-blue-600 rounded-full mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2h-1c-1.657 0-3 .895-3 2s1.343 2 3 2h1a2 2 0 002-2v-3.333c0-1.657-1.343-3-3-3s-3 .895-3 2v.417M12 18h.01M17 18h.01M19 12h.01M14 6h.01M5 6h.01"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 text-center">Stat & Move-set Analyzer</h3>
+                    <p class="text-gray-300 text-center text-base sm:text-lg">
+                        Deep dive into Pokémon stats, EV spreads, IVs, and move options. Calculate damage and optimize sets for peak performance.
+                    </p>
                 </div>
 
-                <!-- Feature 4 -->
-                <div class="bg-darkbg p-6 rounded-lg shadow-xl border border-gray-700 hover:shadow-2xl hover:border-primary transition duration-300">
-                    <div class="text-5xl mb-4 text-primary">🧠</div>
-                    <h3 class="text-xl font-semibold mb-2 text-white">AI-Ready: Prepare for the Future</h3>
-                    <p class="text-gray-300">Get ahead of the curve with a dedicated module on upcoming AI features and how to configure your Pixel to leverage them.</p>
+                <!-- Feature 4: Personalized Battle Log Analysis -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex items-center justify-center w-16 h-16 bg-green-600 rounded-full mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 2v-6m2 2V9h2a2 2 0 002-2V5a2 2 0 00-2-2H4a2 2 0 00-2 2v2a2 2 0 002 2h2v4a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 text-center">Personalized Battle Log Analysis</h3>
+                    <p class="text-gray-300 text-center text-base sm:text-lg">
+                        Learn from every match. Upload your battle logs and get tailored insights to identify weaknesses and refine your strategy.
+                    </p>
                 </div>
 
-                <!-- Feature 5 -->
-                <div class="bg-darkbg p-6 rounded-lg shadow-xl border border-gray-700 hover:shadow-2xl hover:border-primary transition duration-300">
-                    <div class="text-5xl mb-4 text-primary">🛠️</div>
-                    <h3 class="text-xl font-semibold mb-2 text-white">Troubleshoot & Fix 38 Common Issues</h3>
-                    <p class="text-gray-300">Say goodbye to frustration! Our comprehensive troubleshooting section covers 38 common problems with clear, actionable fixes.</p>
+                <!-- Feature 5: Exclusive Pro Player Strategies (Premium Hint) -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex items-center justify-center w-16 h-16 bg-yellow-600 rounded-full mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.324 1.127l1.519 4.674c.3.921-.755 1.688-1.539 1.127l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.784.561-1.838-.196-1.539-1.127l1.519-4.674a1 1 0 00-.324-1.127L2.451 9.401c-.783-.57-.381-1.81.588-1.81h4.915a1 1 0 00.95-.69l1.519-4.674z"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 text-center">Exclusive Pro Player Strategies</h3>
+                    <p class="text-gray-300 text-center text-base sm:text-lg">
+                        Gain an unfair advantage with in-depth matchup predictions and strategies revealed by top-ranked competitive players.
+                    </p>
                 </div>
 
-                <!-- Feature 6 -->
-                <div class="bg-darkbg p-6 rounded-lg shadow-xl border border-gray-700 hover:shadow-2xl hover:border-primary transition duration-300">
-                    <div class="text-5xl mb-4 text-primary">✨</div>
-                    <h3 class="text-xl font-semibold mb-2 text-white">Exclusive Pixel-Only Tips & Tricks</h3>
-                    <p class="text-gray-300">Unlock unique features and shortcuts available only on Pixel devices, transforming your daily experience.</p>
+                <!-- Feature 6: Cross-Platform Access -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex items-center justify-center w-16 h-16 bg-teal-600 rounded-full mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 text-center">Cross-Platform Access</h3>
+                    <p class="text-gray-300 text-center text-base sm:text-lg">
+                        Seamlessly plan and analyze on web or mobile. Your data syncs across devices so you're always ready to battle.
+                    </p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Call to Action / Purchase Section -->
-    <section id="purchase" class="py-16 md:py-24 bg-darkbg text-darktext px-4">
-        <div class="container mx-auto max-w-3xl text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-white">
-                Don't Miss Out on This Limited Opportunity!
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 sm:py-20 md:py-24 bg-gray-950">
+        <div class="container mx-auto px-4 sm:px-6 md:px-8 max-w-2xl text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
+                The Championship Awaits. Don't Miss Out!
             </h2>
             <p class="text-lg sm:text-xl text-gray-300 mb-10">
-                This exclusive Android 17 Power User Handbook for Pixel Devices is available at a special launch price for a limited time only. Elevate your Pixel experience today!
+                Be among the first to gain an unfair advantage. Join our waitlist now and secure exclusive early bird access to BattleMaster Pro.
             </p>
-            <a href="#" class="inline-block bg-primary hover:bg-indigo-700 text-white text-xl sm:text-2xl font-bold px-12 py-5 rounded-full shadow-xl transform hover:scale-105 transition duration-300 ease-in-out animate-pulse-once">
-                Get Your Handbook Instantly for Just $29
-            </a>
-            <p class="text-sm text-gray-400 mt-6">
-                (Regular Price: $49. The price will go up after the countdown ends.)
-            </p>
-        </div>
-    </section>
-
-    <!-- Secondary Lead Capture / Stay Updated Section (as 'Waitlist' interpretation) -->
-    <section class="py-16 bg-darkcard text-darktext px-4">
-        <div class="container mx-auto max-w-2xl text-center">
-            <h2 class="text-2xl sm:text-3xl font-bold mb-6 text-white">
-                Want Advanced Pixel Tips & Future Updates?
-            </h2>
-            <p class="text-gray-300 mb-8">
-                Join our exclusive newsletter to receive cutting-edge insights, future product announcements, and productivity hacks directly to your inbox.
-            </p>
-            <form class="max-w-md mx-auto">
+            <form action="#" method="POST" class="w-full max-w-md mx-auto">
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <input type="email" placeholder="Your Email Address" class="flex-grow p-4 rounded-lg bg-darkbg border border-gray-700 text-darktext focus:ring-primary focus:border-primary outline-none" required>
-                    <button type="submit" class="bg-secondary hover:bg-primary text-white font-bold px-8 py-4 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
-                        Stay Updated
+                    <input type="email" placeholder="Your best email address" required
+                           class="flex-grow p-3 sm:p-4 rounded-full bg-gray-800 text-white border border-gray-700 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 shadow-md placeholder-gray-400 text-base sm:text-lg">
+                    <button type="submit"
+                            class="btn-gradient text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50 flex-shrink-0">
+                        Secure My Spot!
                     </button>
                 </div>
+                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, ever.</p>
             </form>
-            <p class="text-xs text-gray-500 mt-4">We respect your privacy. Unsubscribe anytime.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-darkbg py-8 text-center text-gray-500 text-sm px-4">
-        <div class="container mx-auto max-w-5xl">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">
-                <a href="#" class="hover:text-primary transition duration-300">Privacy Policy</a> |
-                <a href="#" class="hover:text-primary transition duration-300">Terms of Service</a>
-            </p>
+    <footer class="bg-gray-800 py-8 px-4 sm:px-6 md:px-8 text-center text-gray-400 text-sm">
+        <div class="container mx-auto">
+            &copy; <span id="currentYear"></span> BattleMaster Pro. All rights reserved.
         </div>
     </footer>
 
-    <!-- Countdown JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the date we're counting down to (e.g., 7 days from now)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // 7 days from now
-            countDownDate.setHours(23, 59, 59, 999); // Set to end of day
+        // Set the date we're counting down to (e.g., 7 days from now)
+        const countdownEndDate = new Date();
+        countdownEndDate.setDate(countdownEndDate.getDate() + 7); // Set to 7 days from now
 
-            // Update the count down every 1 second
-            const x = setInterval(function() {
+        const countdownInterval = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownEndDate - now;
 
-                // Get today's date and time
-                const now = new Date().getTime();
+            // Calculate time units
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Find the distance between now and the count down date
-                const distance = countDownDate.getTime() - now;
+            // Display the result with leading zeros
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-                // Time calculations for days, hours, minutes and seconds
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // If the countdown is over, write some text
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = '<span class="text-xl sm:text-2xl text-red-400 font-bold">Offer Expired!</span>';
+                // Optionally disable the waitlist form
+                document.querySelector('#waitlist form button[type="submit"]').disabled = true;
+                document.querySelector('#waitlist form button[type="submit"]').classList.add('opacity-50', 'cursor-not-allowed');
+            }
+        }, 1000);
 
-                // Display the result in the element with id="countdown"
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-                // If the count down is finished, write some text
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "OFFER EXPIRED";
-                    // Optionally disable the purchase button or change its text
-                    const purchaseButton = document.querySelector('a[href="#purchase"]');
-                    if (purchaseButton) {
-                        purchaseButton.textContent = "Offer Expired";
-                        purchaseButton.classList.add('opacity-50', 'cursor-not-allowed');
-                        purchaseButton.href = "#"; // Prevent navigation
-                    }
-                }
-            }, 1000);
-        });
+        // Set current year in footer
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
