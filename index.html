@@ -3,232 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BattleMaster Pro - Ultimate Pokémon Battle Companion</title>
+    <title>Mastering Siri AI in iOS 27 - Unlock Your Productivity</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for dark mode and responsiveness, and gradients */
-        body {
-            font-family: 'Inter', sans-serif;
+        /* Custom scrollbar for a premium dark-mode feel */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        ::-webkit-scrollbar-track {
+            background: #111827; /* bg-gray-900 */
         }
-        .text-gradient {
-            background: linear-gradient(90deg, #8B5CF6 0%, #EC4899 100%); /* Tailwind purple-500 to pink-500 */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        ::-webkit-scrollbar-thumb {
+            background: #4F46E5; /* indigo-600 */
+            border-radius: 10px;
         }
-        .btn-gradient {
-            background: linear-gradient(90deg, #8B5CF6 0%, #EC4899 100%); /* Tailwind purple-500 to pink-500 */
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        }
-        .btn-gradient:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4); /* Enhanced shadow on hover */
-        }
-        input[type="email"] {
-            border-color: #4A5568; /* Tailwind gray-600 */
-        }
-        input[type="email"]:focus {
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.5); /* Purple focus ring */
-            border-color: #8B5CF6;
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6366F1; /* indigo-500 */
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-950 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="relative hero-background min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-8">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay -->
-        <div class="relative z-10 text-center max-w-4xl mx-auto py-16 px-6 sm:px-8 md:px-12 bg-gray-900 bg-opacity-80 rounded-xl shadow-2xl backdrop-filter backdrop-blur-sm">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4 text-white">
-                <span class="text-gradient block">Master the Meta.</span> <span class="block mt-2">Conquer the Ranks.</span>
+    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');"></div>
+        <div class="absolute inset-0 bg-black bg-opacity-70 backdrop-blur-sm"></div>
+        
+        <div class="relative z-10 p-4 max-w-6xl mx-auto">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6 animate-pulse">
+                Mastering Siri AI in iOS 27: <br class="sm:hidden">Unlocking Your Productivity & Customization Potential
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                The Ultimate Battle Companion for Competitive Pokémon Players. Get real-time insights, build unbeatable teams, and analyze every match to dominate <span class="font-semibold text-purple-400">Regulation Set M-B</span>.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto">
+                Transform your daily workflow, personalize your iOS experience, and achieve peak efficiency with advanced Siri AI techniques.
+                Go beyond basic commands and integrate new AI features into every aspect of your digital life.
             </p>
-
+            
             <!-- Limited Time Offer & Countdown -->
-            <div class="bg-purple-800 bg-opacity-60 border border-purple-600 rounded-lg p-4 sm:p-6 mb-8 shadow-inner">
-                <p class="text-sm sm:text-base font-semibold uppercase tracking-wide text-purple-200 mb-2">Exclusive Early Access - Limited Time Offer!</p>
-                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 text-white font-mono text-2xl sm:text-3xl md:text-4xl">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="font-bold">00</span>
-                        <span class="text-xs sm:text-sm text-gray-300 uppercase">Days</span>
+            <div class="bg-indigo-800 bg-opacity-50 border border-indigo-700 p-4 sm:p-6 rounded-lg shadow-lg mb-8 max-w-md mx-auto">
+                <p class="text-lg sm:text-xl font-semibold text-indigo-200 mb-3">Limited-Time Early Access Offer!</p>
+                <div class="flex justify-center items-center space-x-4 sm:space-x-6 text-white text-2xl sm:text-3xl md:text-4xl font-bold">
+                    <div>
+                        <span id="countdown-days" class="block">07</span>
+                        <span class="text-xs sm:text-sm font-normal text-indigo-300">Days</span>
                     </div>
-                    <span class="text-purple-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="font-bold">00</span>
-                        <span class="text-xs sm:text-sm text-gray-300 uppercase">Hours</span>
+                    <span>:</span>
+                    <div>
+                        <span id="countdown-hours" class="block">23</span>
+                        <span class="text-xs sm:text-sm font-normal text-indigo-300">Hours</span>
                     </div>
-                    <span class="text-purple-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="font-bold">00</span>
-                        <span class="text-xs sm:text-sm text-gray-300 uppercase">Minutes</span>
+                    <span>:</span>
+                    <div>
+                        <span id="countdown-minutes" class="block">59</span>
+                        <span class="text-xs sm:text-sm font-normal text-indigo-300">Mins</span>
                     </div>
-                    <span class="text-purple-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="font-bold">00</span>
-                        <span class="text-xs sm:text-sm text-gray-300 uppercase">Seconds</span>
+                    <span>:</span>
+                    <div>
+                        <span id="countdown-seconds" class="block">59</span>
+                        <span class="text-xs sm:text-sm font-normal text-indigo-300">Secs</span>
                     </div>
                 </div>
+                <p class="text-sm text-indigo-300 mt-3">Offer ends soon! Secure your spot with exclusive bonuses.</p>
             </div>
 
-            <a href="#waitlist" class="inline-block btn-gradient text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50">
-                Join the Elite Waitlist Now!
+            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                Join the Waitlist Now & Get Exclusive Discounts!
             </a>
-            <p class="text-sm text-gray-400 mt-4">Don't miss out on exclusive early bird access.</p>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-20 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl">
+    <section class="py-16 sm:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-6xl">
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white mb-12 sm:mb-16">
-                Unrivaled Tools for Competitive Play
+                What You'll Master Inside Siri AI in iOS 27
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-
-                <!-- Feature 1: Advanced Team Builder -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300">
-                    <div class="flex items-center justify-center w-16 h-16 bg-purple-600 rounded-full mb-6 mx-auto">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1-3m-6.964-1.24A1 1 0 0010 17h4a1 1 0 00.964-1.24L14 13l3-3V3H6v7l3 3 2.964 2.76zM7 3h10M7 3v4"></path></svg>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-indigo-400 mr-4">💡</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white">Step-by-Step Tutorials</h3>
                     </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 text-center">Advanced Team Builder</h3>
-                    <p class="text-gray-300 text-center text-base sm:text-lg">
-                        Craft optimal teams with unparalleled synergy. Explore Pokémon matchups, type resistances, and ability combinations effortlessly.
+                    <p class="text-gray-300 text-base sm:text-lg">
+                        Dive into clear, concise, and easy-to-follow guides for every new Siri AI feature in iOS 27. From basic setup to advanced configurations.
+                    </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-green-400 mr-4">🧠</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white">Advanced Prompt Engineering</h3>
+                    </div>
+                    <p class="text-gray-300 text-base sm:text-lg">
+                        Learn the secrets to crafting powerful prompts that unlock Siri's full potential. Get smarter, more relevant responses, every time.
                     </p>
                 </div>
 
-                <!-- Feature 2: Real-time Meta Insights -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300">
-                    <div class="flex items-center justify-center w-16 h-16 bg-pink-600 rounded-full mb-6 mx-auto">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3m0 0l3 3m-3-3v8m0-9a9 9 0 110 18 9 9 0 010-18zm0 18a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-yellow-400 mr-4">⚙️</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white">Seamless Workflow Integration</h3>
                     </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 text-center">Real-time Meta Insights</h3>
-                    <p class="text-gray-300 text-center text-base sm:text-lg">
-                        Stay ahead of the curve with live data on current ranked seasons (Regulation Set M-B). Understand popular Pokémon, moves, and strategies.
+                    <p class="text-gray-300 text-base sm:text-lg">
+                        Integrate Siri AI effortlessly into your daily apps and routines. Boost productivity for professionals, students, and content creators alike.
                     </p>
                 </div>
 
-                <!-- Feature 3: Stat & Move-set Analyzer -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300">
-                    <div class="flex items-center justify-center w-16 h-16 bg-blue-600 rounded-full mb-6 mx-auto">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2h-1c-1.657 0-3 .895-3 2s1.343 2 3 2h1a2 2 0 002-2v-3.333c0-1.657-1.343-3-3-3s-3 .895-3 2v.417M12 18h.01M17 18h.01M19 12h.01M14 6h.01M5 6h.01"></path></svg>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-blue-400 mr-4">🎯</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white">Specific Use-Case Scenarios</h3>
                     </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 text-center">Stat & Move-set Analyzer</h3>
-                    <p class="text-gray-300 text-center text-base sm:text-lg">
-                        Deep dive into Pokémon stats, EV spreads, IVs, and move options. Calculate damage and optimize sets for peak performance.
+                    <p class="text-gray-300 text-base sm:text-lg">
+                        Explore tailored strategies for various fields: manage projects, study smarter, automate content creation, and more.
                     </p>
                 </div>
 
-                <!-- Feature 4: Personalized Battle Log Analysis -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300">
-                    <div class="flex items-center justify-center w-16 h-16 bg-green-600 rounded-full mb-6 mx-auto">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 2v-6m2 2V9h2a2 2 0 002-2V5a2 2 0 00-2-2H4a2 2 0 00-2 2v2a2 2 0 002 2h2v4a2 2 0 002 2z"></path></svg>
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-purple-400 mr-4">📄</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white">Downloadable Templates & Shortcuts</h3>
                     </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 text-center">Personalized Battle Log Analysis</h3>
-                    <p class="text-gray-300 text-center text-base sm:text-lg">
-                        Learn from every match. Upload your battle logs and get tailored insights to identify weaknesses and refine your strategy.
+                    <p class="text-gray-300 text-base sm:text-lg">
+                        Access a library of ready-to-use Siri Shortcuts and prompt templates to supercharge your AI interactions instantly.
                     </p>
                 </div>
 
-                <!-- Feature 5: Exclusive Pro Player Strategies (Premium Hint) -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300">
-                    <div class="flex items-center justify-center w-16 h-16 bg-yellow-600 rounded-full mb-6 mx-auto">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.324 1.127l1.519 4.674c.3.921-.755 1.688-1.539 1.127l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.784.561-1.838-.196-1.539-1.127l1.519-4.674a1 1 0 00-.324-1.127L2.451 9.401c-.783-.57-.381-1.81.588-1.81h4.915a1 1 0 00.95-.69l1.519-4.674z"></path></svg>
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-red-400 mr-4">💬</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white">Exclusive Community Forum</h3>
                     </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 text-center">Exclusive Pro Player Strategies</h3>
-                    <p class="text-gray-300 text-center text-base sm:text-lg">
-                        Gain an unfair advantage with in-depth matchup predictions and strategies revealed by top-ranked competitive players.
+                    <p class="text-gray-300 text-base sm:text-lg">
+                        Join a vibrant community for ongoing support, share insights, get updates, and collaborate with fellow Siri AI enthusiasts.
                     </p>
                 </div>
-
-                <!-- Feature 6: Cross-Platform Access -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300">
-                    <div class="flex items-center justify-center w-16 h-16 bg-teal-600 rounded-full mb-6 mx-auto">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 text-center">Cross-Platform Access</h3>
-                    <p class="text-gray-300 text-center text-base sm:text-lg">
-                        Seamlessly plan and analyze on web or mobile. Your data syncs across devices so you're always ready to battle.
-                    </p>
-                </div>
-
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-20 md:py-24 bg-gray-950">
-        <div class="container mx-auto px-4 sm:px-6 md:px-8 max-w-2xl text-center">
+    <section id="waitlist" class="py-16 sm:py-24 bg-gray-950">
+        <div class="container mx-auto px-4 max-w-2xl text-center">
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
-                The Championship Awaits. Don't Miss Out!
+                Be the First to Master Siri AI in iOS 27!
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10">
-                Be among the first to gain an unfair advantage. Join our waitlist now and secure exclusive early bird access to BattleMaster Pro.
+            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-xl mx-auto">
+                Join our exclusive waitlist to receive launch notifications, early bird discounts, and bonus content delivered straight to your inbox. Don't miss out!
             </p>
-            <form action="#" method="POST" class="w-full max-w-md mx-auto">
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <input type="email" placeholder="Your best email address" required
-                           class="flex-grow p-3 sm:p-4 rounded-full bg-gray-800 text-white border border-gray-700 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 shadow-md placeholder-gray-400 text-base sm:text-lg">
-                    <button type="submit"
-                            class="btn-gradient text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50 flex-shrink-0">
-                        Secure My Spot!
-                    </button>
+            
+            <form class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-2xl border border-indigo-700 max-w-lg mx-auto">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-200 text-sm sm:text-base font-semibold mb-2">Your Name (Optional)</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" class="w-full p-3 sm:p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 outline-none">
                 </div>
-                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, ever.</p>
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-200 text-sm sm:text-base font-semibold mb-2">Your Best Email Address <span class="text-red-500">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required class="w-full p-3 sm:p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 outline-none">
+                </div>
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 sm:py-4 px-6 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                    Join the Exclusive Waitlist!
+                </button>
+                <p class="text-xs text-gray-400 mt-4">
+                    We value your privacy. Your email will never be shared or sold. You can unsubscribe at any time.
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-8 px-4 sm:px-6 md:px-8 text-center text-gray-400 text-sm">
-        <div class="container mx-auto">
-            &copy; <span id="currentYear"></span> BattleMaster Pro. All rights reserved.
+    <footer class="bg-gray-900 py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+            <p>&copy; 2024 Digital Education Authority. All rights reserved.</p>
+            <div class="mt-2 space-x-4">
+                <a href="#" class="hover:text-white transition duration-200">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition duration-200">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
-    <script>
-        // Set the date we're counting down to (e.g., 7 days from now)
-        const countdownEndDate = new Date();
-        countdownEndDate.setDate(countdownEndDate.getDate() + 7); // Set to 7 days from now
-
-        const countdownInterval = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countdownEndDate - now;
-
-            // Calculate time units
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the result with leading zeros
-            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-            // If the countdown is over, write some text
-            if (distance < 0) {
-                clearInterval(countdownInterval);
-                document.getElementById("countdown").innerHTML = '<span class="text-xl sm:text-2xl text-red-400 font-bold">Offer Expired!</span>';
-                // Optionally disable the waitlist form
-                document.querySelector('#waitlist form button[type="submit"]').disabled = true;
-                document.querySelector('#waitlist form button[type="submit"]').classList.add('opacity-50', 'cursor-not-allowed');
-            }
-        }, 1000);
-
-        // Set current year in footer
-        document.getElementById("currentYear").textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
