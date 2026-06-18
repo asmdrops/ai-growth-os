@@ -1,192 +1,222 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastering Siri AI in iOS 27 - Unlock Your Productivity</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Synthex AI: Pixel-Perfect Code, Instantly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom scrollbar for a premium dark-mode feel */
-        ::-webkit-scrollbar {
-            width: 8px;
+        /* Custom styles for modern premium dark-mode aesthetic */
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            color-scheme: dark; /* Helps browsers apply dark mode more universally */
         }
-        ::-webkit-scrollbar-track {
-            background: #111827; /* bg-gray-900 */
+        .dark {
+            background-color: #0d1117; /* Deep dark background */
+            color: #c9d1d9; /* Light gray text for contrast */
         }
-        ::-webkit-scrollbar-thumb {
-            background: #4F46E5; /* indigo-600 */
-            border-radius: 10px;
+        .bg-gradient-hero-overlay {
+            background: linear-gradient(to top, rgba(13, 17, 23, 0.95) 0%, rgba(13, 17, 23, 0.7) 40%, rgba(13, 17, 23, 0.3) 70%, transparent 100%);
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #6366F1; /* indigo-500 */
+        .bg-gradient-brand {
+            background-image: linear-gradient(to right, var(--tw-gradient-stops));
+            --tw-gradient-from: #3b82f6; /* blue-500 */
+            --tw-gradient-to: #a855f7; /* purple-500 */
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 font-sans antialiased">
+<body class="dark bg-gray-900 text-gray-200">
 
     <!-- Hero Section -->
     <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');"></div>
-        <div class="absolute inset-0 bg-black bg-opacity-70 backdrop-blur-sm"></div>
-        
-        <div class="relative z-10 p-4 max-w-6xl mx-auto">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6 animate-pulse">
-                Mastering Siri AI in iOS 27: <br class="sm:hidden">Unlocking Your Productivity & Customization Potential
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?An,tech');">
+            <!-- Overlay for better text readability and dark mode integration -->
+            <div class="absolute inset-0 bg-gradient-hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">Synthex AI:</span>
+                Pixel-Perfect Code, Instantly.
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto">
-                Transform your daily workflow, personalize your iOS experience, and achieve peak efficiency with advanced Siri AI techniques.
-                Go beyond basic commands and integrate new AI features into every aspect of your digital life.
+            <p class="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-medium mb-10 max-w-3xl mx-auto">
+                Transform your design system into production-ready UI components,
+                <span class="font-semibold text-white">powered by AI for enterprise scalability.</span>
             </p>
-            
-            <!-- Limited Time Offer & Countdown -->
-            <div class="bg-indigo-800 bg-opacity-50 border border-indigo-700 p-4 sm:p-6 rounded-lg shadow-lg mb-8 max-w-md mx-auto">
-                <p class="text-lg sm:text-xl font-semibold text-indigo-200 mb-3">Limited-Time Early Access Offer!</p>
-                <div class="flex justify-center items-center space-x-4 sm:space-x-6 text-white text-2xl sm:text-3xl md:text-4xl font-bold">
-                    <div>
-                        <span id="countdown-days" class="block">07</span>
-                        <span class="text-xs sm:text-sm font-normal text-indigo-300">Days</span>
+
+            <!-- Limited Time Countdown -->
+            <div class="mb-12 bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 shadow-lg inline-block mx-auto max-w-full">
+                <p class="text-lg sm:text-xl text-gray-300 font-semibold mb-3">Early Access Registration Closes In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4">
+                    <div class="flex flex-col items-center">
+                        <span id="days" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">00</span>
+                        <span class="text-xs sm:text-sm text-gray-400 mt-1">Days</span>
                     </div>
-                    <span>:</span>
-                    <div>
-                        <span id="countdown-hours" class="block">23</span>
-                        <span class="text-xs sm:text-sm font-normal text-indigo-300">Hours</span>
+                    <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-500">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">00</span>
+                        <span class="text-xs sm:text-sm text-gray-400 mt-1">Hours</span>
                     </div>
-                    <span>:</span>
-                    <div>
-                        <span id="countdown-minutes" class="block">59</span>
-                        <span class="text-xs sm:text-sm font-normal text-indigo-300">Mins</span>
+                    <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-500">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">00</span>
+                        <span class="text-xs sm:text-sm text-gray-400 mt-1">Minutes</span>
                     </div>
-                    <span>:</span>
-                    <div>
-                        <span id="countdown-seconds" class="block">59</span>
-                        <span class="text-xs sm:text-sm font-normal text-indigo-300">Secs</span>
+                    <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-500">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">00</span>
+                        <span class="text-xs sm:text-sm text-gray-400 mt-1">Seconds</span>
                     </div>
                 </div>
-                <p class="text-sm text-indigo-300 mt-3">Offer ends soon! Secure your spot with exclusive bonuses.</p>
             </div>
 
-            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
-                Join the Waitlist Now & Get Exclusive Discounts!
+            <a href="#waitlist" class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg sm:text-xl transition duration-300 transform hover:scale-105 shadow-lg">
+                Join the Exclusive Waitlist
             </a>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white mb-12 sm:mb-16">
-                What You'll Master Inside Siri AI in iOS 27
+    <section class="py-20 sm:py-28 bg-gray-900 text-gray-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-16 leading-tight">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-teal-500">Unleash Development Velocity</span>
+                with Synthex AI
             </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl text-indigo-400 mr-4">💡</span>
-                        <h3 class="text-xl sm:text-2xl font-bold text-white">Step-by-Step Tutorials</h3>
-                    </div>
-                    <p class="text-gray-300 text-base sm:text-lg">
-                        Dive into clear, concise, and easy-to-follow guides for every new Siri AI feature in iOS 27. From basic setup to advanced configurations.
-                    </p>
-                </div>
-                
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl text-green-400 mr-4">🧠</span>
-                        <h3 class="text-xl sm:text-2xl font-bold text-white">Advanced Prompt Engineering</h3>
-                    </div>
-                    <p class="text-gray-300 text-base sm:text-lg">
-                        Learn the secrets to crafting powerful prompts that unlock Siri's full potential. Get smarter, more relevant responses, every time.
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-14">
+
+                <!-- Feature 1: AI-Powered Design System Translation -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl text-blue-400 mb-6">🤖</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">AI-Powered Design System Translation</h3>
+                    <p class="text-gray-300 text-lg">
+                        Seamlessly transform design system tokens and visual mocks from Figma into production-ready UI code with intelligent adaptation.
                     </p>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl text-yellow-400 mr-4">⚙️</span>
-                        <h3 class="text-xl sm:text-2xl font-bold text-white">Seamless Workflow Integration</h3>
-                    </div>
-                    <p class="text-gray-300 text-base sm:text-lg">
-                        Integrate Siri AI effortlessly into your daily apps and routines. Boost productivity for professionals, students, and content creators alike.
+                <!-- Feature 2: Real-Time Code Synchronization -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl text-green-400 mb-6">🔄</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Real-Time Code Synchronization</h3>
+                    <p class="text-gray-300 text-lg">
+                        Keep your codebase perfectly aligned with design updates. Any change in Figma automatically reflects in your generated code.
                     </p>
                 </div>
 
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl text-blue-400 mr-4">🎯</span>
-                        <h3 class="text-xl sm:text-2xl font-bold text-white">Specific Use-Case Scenarios</h3>
-                    </div>
-                    <p class="text-gray-300 text-base sm:text-lg">
-                        Explore tailored strategies for various fields: manage projects, study smarter, automate content creation, and more.
+                <!-- Feature 3: Framework-Specific Output -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl text-purple-400 mb-6">⚛️</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Framework-Specific Output</h3>
+                    <p class="text-gray-300 text-lg">
+                        Generate clean, semantic React/TypeScript UI components, complete with Storybook integration, tailored for your tech stack.
                     </p>
                 </div>
 
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl text-purple-400 mr-4">📄</span>
-                        <h3 class="text-xl sm:text-2xl font-bold text-white">Downloadable Templates & Shortcuts</h3>
-                    </div>
-                    <p class="text-gray-300 text-base sm:text-lg">
-                        Access a library of ready-to-use Siri Shortcuts and prompt templates to supercharge your AI interactions instantly.
+                <!-- Feature 4: Enterprise-Grade Consistency -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl text-yellow-400 mb-6">🔒</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Enterprise-Grade Consistency</h3>
+                    <p class="text-gray-300 text-lg">
+                        Enforce strict design consistency across all your projects, eliminating design drift and costly rework for large teams.
                     </p>
                 </div>
 
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl text-red-400 mr-4">💬</span>
-                        <h3 class="text-xl sm:text-2xl font-bold text-white">Exclusive Community Forum</h3>
-                    </div>
-                    <p class="text-gray-300 text-base sm:text-lg">
-                        Join a vibrant community for ongoing support, share insights, get updates, and collaborate with fellow Siri AI enthusiasts.
+                <!-- Feature 5: Seamless Figma Integration -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl text-red-400 mb-6">🔌</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Seamless Figma Integration</h3>
+                    <p class="text-gray-300 text-lg">
+                        Our powerful Figma plugin brings your design workflow and development environment closer than ever before.
                     </p>
                 </div>
+
+                <!-- Feature 6: Accelerate Time-to-Market -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl text-cyan-400 mb-6">🚀</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Accelerate Time-to-Market</h3>
+                    <p class="text-gray-300 text-lg">
+                        Significantly reduce development cycles by automating component creation, letting your team focus on innovation.
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-24 bg-gray-950">
-        <div class="container mx-auto px-4 max-w-2xl text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
-                Be the First to Master Siri AI in iOS 27!
+    <section id="waitlist" class="py-20 sm:py-28 bg-gradient-to-br from-gray-900 to-blue-950 text-gray-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-8 leading-tight">
+                Be Among the First to Experience Synthex AI
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-xl mx-auto">
-                Join our exclusive waitlist to receive launch notifications, early bird discounts, and bonus content delivered straight to your inbox. Don't miss out!
+            <p class="text-xl sm:text-2xl text-gray-300 mb-10">
+                Join our exclusive waitlist for early access, product updates, and special introductory offers.
             </p>
-            
-            <form class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-2xl border border-indigo-700 max-w-lg mx-auto">
+
+            <form class="bg-gray-800 rounded-xl p-8 sm:p-10 shadow-2xl border border-gray-700">
                 <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-200 text-sm sm:text-base font-semibold mb-2">Your Name (Optional)</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" class="w-full p-3 sm:p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 outline-none">
+                    <label for="name" class="block text-gray-300 text-sm font-semibold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" class="w-full px-5 py-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" placeholder="John Doe" required>
                 </div>
                 <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-200 text-sm sm:text-base font-semibold mb-2">Your Best Email Address <span class="text-red-500">*</span></label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required class="w-full p-3 sm:p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 outline-none">
+                    <label for="email" class="block text-gray-300 text-sm font-semibold mb-2">Work Email</label>
+                    <input type="email" id="email" name="email" class="w-full px-5 py-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" placeholder="name@company.com" required>
                 </div>
-                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 sm:py-4 px-6 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                    Join the Exclusive Waitlist!
+                <div class="mb-8 text-left">
+                    <label for="company" class="block text-gray-300 text-sm font-semibold mb-2">Company Name (Optional)</label>
+                    <input type="text" id="company" name="company" class="w-full px-5 py-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" placeholder="Acme Corporation">
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
+                    Join the Waitlist Now!
                 </button>
-                <p class="text-xs text-gray-400 mt-4">
-                    We value your privacy. Your email will never be shared or sold. You can unsubscribe at any time.
-                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 border-t border-gray-800">
-        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
-            <p>&copy; 2024 Digital Education Authority. All rights reserved.</p>
-            <div class="mt-2 space-x-4">
-                <a href="#" class="hover:text-white transition duration-200">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition duration-200">Terms of Service</a>
-            </div>
+    <footer class="py-10 bg-gray-950 text-gray-400 text-center text-sm">
+        <div class="container mx-auto px-4">
+            &copy; 2023 Synthex AI. All rights reserved. | <a href="#" class="hover:text-blue-400 transition duration-200">Privacy Policy</a> | <a href="#" class="hover:text-blue-400 transition duration-200">Terms of Service</a>
         </div>
     </footer>
 
+    <script>
+        // Countdown Timer Script
+        const countdownElement = document.getElementById('countdown');
+        const daysElement = document.getElementById('days');
+        const hoursElement = document.getElementById('hours');
+        const minutesElement = document.getElementById('minutes');
+        const secondsElement = document.getElementById('seconds');
+
+        // Set the date we're counting down to (e.g., 3 weeks from now for early access)
+        const countDownDate = new Date();
+        countDownDate.setDate(countDownDate.getDate() + 21); // 21 days from current date
+        countDownDate.setHours(23, 59, 59, 999); // Set to end of the day
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate.getTime() - now;
+
+            if (distance < 0) {
+                clearInterval(x);
+                countdownElement.innerHTML = "<span class='text-xl sm:text-2xl text-red-500 font-bold'>Registration Closed!</span>";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            daysElement.innerHTML = String(days).padStart(2, '0');
+            hoursElement.innerHTML = String(hours).padStart(2, '0');
+            minutesElement.innerHTML = String(minutes).padStart(2, '0');
+            secondsElement.innerHTML = String(seconds).padStart(2, '0');
+        }, 1000);
+    </script>
 </body>
 </html>
