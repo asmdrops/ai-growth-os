@@ -1,222 +1,201 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Synthex AI: Pixel-Perfect Code, Instantly</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Adobe AI Pro: Mastering Prompt Engineering & Workflow Automation</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for modern premium dark-mode aesthetic */
-        body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            color-scheme: dark; /* Helps browsers apply dark mode more universally */
+        /* Custom styles for the hero background image and overlay */
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-        .dark {
-            background-color: #0d1117; /* Deep dark background */
-            color: #c9d1d9; /* Light gray text for contrast */
-        }
-        .bg-gradient-hero-overlay {
-            background: linear-gradient(to top, rgba(13, 17, 23, 0.95) 0%, rgba(13, 17, 23, 0.7) 40%, rgba(13, 17, 23, 0.3) 70%, transparent 100%);
-        }
-        .bg-gradient-brand {
-            background-image: linear-gradient(to right, var(--tw-gradient-stops));
-            --tw-gradient-from: #3b82f6; /* blue-500 */
-            --tw-gradient-to: #a855f7; /* purple-500 */
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
         }
     </style>
 </head>
-<body class="dark bg-gray-900 text-gray-200">
+<body class="bg-gray-900 text-gray-100 font-sans leading-normal tracking-normal">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?An,tech');">
-            <!-- Overlay for better text readability and dark mode integration -->
-            <div class="absolute inset-0 bg-gradient-hero-overlay"></div>
-        </div>
-
-        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
-                <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">Synthex AI:</span>
-                Pixel-Perfect Code, Instantly.
+    <header class="hero-bg relative min-h-screen flex items-center justify-center p-4">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 py-12 md:py-24 bg-gray-900 bg-opacity-80 rounded-lg shadow-2xl">
+            <span class="text-indigo-400 text-sm md:text-base font-bold uppercase tracking-widest block mb-3">Limited-Time Early Bird Access!</span>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                <span class="block text-indigo-400">Adobe AI Pro:</span> Mastering Prompt Engineering & Workflow Automation
             </h1>
-            <p class="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-medium mb-10 max-w-3xl mx-auto">
-                Transform your design system into production-ready UI components,
-                <span class="font-semibold text-white">powered by AI for enterprise scalability.</span>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Unlock the full potential of Adobe's new AI in <span class="font-semibold text-white">Premiere Pro, Illustrator & InDesign</span>. Boost productivity, unleash creativity, and stay ahead in the evolving digital landscape.
             </p>
 
-            <!-- Limited Time Countdown -->
-            <div class="mb-12 bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 shadow-lg inline-block mx-auto max-w-full">
-                <p class="text-lg sm:text-xl text-gray-300 font-semibold mb-3">Early Access Registration Closes In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">00</span>
-                        <span class="text-xs sm:text-sm text-gray-400 mt-1">Days</span>
+            <!-- Countdown Timer -->
+            <div class="bg-purple-800 bg-opacity-70 text-white p-4 rounded-lg shadow-lg inline-block mb-8">
+                <p class="text-sm font-semibold mb-2 uppercase tracking-wide">Special Enrollment Closes In:</p>
+                <div id="countdown" class="flex justify-center space-x-4">
+                    <div>
+                        <span id="days" class="block text-4xl font-bold">00</span>
+                        <span class="text-xs uppercase tracking-wider">Days</span>
                     </div>
-                    <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-500">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">00</span>
-                        <span class="text-xs sm:text-sm text-gray-400 mt-1">Hours</span>
+                    <div>
+                        <span id="hours" class="block text-4xl font-bold">00</span>
+                        <span class="text-xs uppercase tracking-wider">Hours</span>
                     </div>
-                    <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-500">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">00</span>
-                        <span class="text-xs sm:text-sm text-gray-400 mt-1">Minutes</span>
+                    <div>
+                        <span id="minutes" class="block text-4xl font-bold">00</span>
+                        <span class="text-xs uppercase tracking-wider">Minutes</span>
                     </div>
-                    <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-500">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">00</span>
-                        <span class="text-xs sm:text-sm text-gray-400 mt-1">Seconds</span>
+                    <div>
+                        <span id="seconds" class="block text-4xl font-bold">00</span>
+                        <span class="text-xs uppercase tracking-wider">Seconds</span>
                     </div>
                 </div>
             </div>
 
-            <a href="#waitlist" class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg sm:text-xl transition duration-300 transform hover:scale-105 shadow-lg">
-                Join the Exclusive Waitlist
+            <a href="#waitlist-form" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl inline-block">
+                Secure Your Early Access Spot Now!
             </a>
+            <p class="text-gray-400 text-sm mt-4">Don't miss out on mastering the future of creative AI.</p>
+        </div>
+    </header>
+
+    <!-- Introduction/Problem-Solution Section -->
+    <section class="py-16 md:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 max-w-5xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-8">The Creative Landscape Just Changed. Are You Ready?</h2>
+            <p class="text-lg sm:text-xl text-gray-300 leading-relaxed mb-8">
+                With Adobe's groundbreaking integration of AI assistants into Premiere Pro, Illustrator, and InDesign, the way we create is being redefined. This isn't just an update; it's a paradigm shift. Those who master these new tools will unlock unprecedented levels of productivity and creative freedom.
+            </p>
+            <p class="text-lg sm:text-xl text-gray-300 leading-relaxed">
+                Our "Adobe AI Pro" course is your definitive guide to <span class="font-semibold text-indigo-400">prompt engineering, workflow automation, and intelligent content generation</span> across your favorite Adobe applications. Stop falling behind – start leading.
+            </p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-20 sm:py-28 bg-gray-900 text-gray-200">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-16 leading-tight">
-                <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-teal-500">Unleash Development Velocity</span>
-                with Synthex AI
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-14">
-
-                <!-- Feature 1: AI-Powered Design System Translation -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-4xl text-blue-400 mb-6">🤖</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">AI-Powered Design System Translation</h3>
-                    <p class="text-gray-300 text-lg">
-                        Seamlessly transform design system tokens and visual mocks from Figma into production-ready UI code with intelligent adaptation.
-                    </p>
+    <section class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-12">What You'll Master in Adobe AI Pro:</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-purple-700 transform hover:scale-105 transition duration-300">
+                    <div class="text-purple-400 text-4xl mb-4 text-center">💡</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Master Prompt Engineering</h3>
+                    <p class="text-gray-300">Learn to craft precise, effective prompts that harness Adobe's AI to generate exactly what you envision, from initial concepts to polished final assets.</p>
                 </div>
-
-                <!-- Feature 2: Real-Time Code Synchronization -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-4xl text-green-400 mb-6">🔄</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Real-Time Code Synchronization</h3>
-                    <p class="text-gray-300 text-lg">
-                        Keep your codebase perfectly aligned with design updates. Any change in Figma automatically reflects in your generated code.
-                    </p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-purple-700 transform hover:scale-105 transition duration-300">
+                    <div class="text-purple-400 text-4xl mb-4 text-center">⚡</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Automate Tedious Workflows</h3>
+                    <p class="text-gray-300">Discover how AI can streamline repetitive tasks in Premiere, Illustrator, and InDesign, freeing up your time for truly creative endeavors.</p>
                 </div>
-
-                <!-- Feature 3: Framework-Specific Output -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-4xl text-purple-400 mb-6">⚛️</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Framework-Specific Output</h3>
-                    <p class="text-gray-300 text-lg">
-                        Generate clean, semantic React/TypeScript UI components, complete with Storybook integration, tailored for your tech stack.
-                    </p>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-purple-700 transform hover:scale-105 transition duration-300">
+                    <div class="text-purple-400 text-4xl mb-4 text-center">🚀</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Accelerate Content Creation</h3>
+                    <p class="text-gray-300">Generate stunning visuals, dynamic video sequences, and compelling layouts in a fraction of the time with intelligent AI assistance.</p>
                 </div>
-
-                <!-- Feature 4: Enterprise-Grade Consistency -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-4xl text-yellow-400 mb-6">🔒</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Enterprise-Grade Consistency</h3>
-                    <p class="text-gray-300 text-lg">
-                        Enforce strict design consistency across all your projects, eliminating design drift and costly rework for large teams.
-                    </p>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-purple-700 transform hover:scale-105 transition duration-300">
+                    <div class="text-purple-400 text-4xl mb-4 text-center">🛠️</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Tailored for Creative Pros</h3>
+                    <p class="text-gray-300">Content specifically designed for video editors, graphic designers, and layout artists, ensuring practical, real-world application.</p>
                 </div>
-
-                <!-- Feature 5: Seamless Figma Integration -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-4xl text-red-400 mb-6">🔌</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Seamless Figma Integration</h3>
-                    <p class="text-gray-300 text-lg">
-                        Our powerful Figma plugin brings your design workflow and development environment closer than ever before.
-                    </p>
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-purple-700 transform hover:scale-105 transition duration-300">
+                    <div class="text-purple-400 text-4xl mb-4 text-center">📈</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Boost Your Productivity</h3>
+                    <p class="text-gray-300">Learn advanced techniques to integrate AI seamlessly into your existing projects, significantly enhancing your output and efficiency.</p>
                 </div>
-
-                <!-- Feature 6: Accelerate Time-to-Market -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-4xl text-cyan-400 mb-6">🚀</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Accelerate Time-to-Market</h3>
-                    <p class="text-gray-300 text-lg">
-                        Significantly reduce development cycles by automating component creation, letting your team focus on innovation.
-                    </p>
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-purple-700 transform hover:scale-105 transition duration-300">
+                    <div class="text-purple-400 text-4xl mb-4 text-center">🎨</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Unlock New Creative Possibilities</h3>
+                    <p class="text-gray-300">Move beyond manual limitations and explore innovative design approaches made possible only through sophisticated AI tools.</p>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-20 sm:py-28 bg-gradient-to-br from-gray-900 to-blue-950 text-gray-200">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-8 leading-tight">
-                Be Among the First to Experience Synthex AI
-            </h2>
-            <p class="text-xl sm:text-2xl text-gray-300 mb-10">
-                Join our exclusive waitlist for early access, product updates, and special introductory offers.
+    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-800 border-t-4 border-purple-600">
+        <div class="container mx-auto px-4 max-w-2xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Join the Early Access Waitlist!</h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                Be among the first to master Adobe's AI capabilities. Sign up now to receive exclusive early bird pricing, course updates, and launch notifications.
             </p>
-
-            <form class="bg-gray-800 rounded-xl p-8 sm:p-10 shadow-2xl border border-gray-700">
+            <form class="bg-gray-900 p-8 rounded-lg shadow-2xl border border-purple-700">
                 <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-semibold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" class="w-full px-5 py-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" placeholder="John Doe" required>
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700"
+                           required>
                 </div>
                 <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-semibold mb-2">Work Email</label>
-                    <input type="email" id="email" name="email" class="w-full px-5 py-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" placeholder="name@company.com" required>
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700"
+                           required>
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="company" class="block text-gray-300 text-sm font-semibold mb-2">Company Name (Optional)</label>
-                    <input type="text" id="company" name="company" class="w-full px-5 py-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" placeholder="Acme Corporation">
-                </div>
-                <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
-                    Join the Waitlist Now!
+                <button type="submit"
+                        class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 w-full md:w-auto">
+                    Get Early Access & Updates
                 </button>
+                <p class="text-gray-500 text-xs mt-4">We respect your privacy. Your information will not be shared.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 bg-gray-950 text-gray-400 text-center text-sm">
+    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm">
         <div class="container mx-auto px-4">
-            &copy; 2023 Synthex AI. All rights reserved. | <a href="#" class="hover:text-blue-400 transition duration-200">Privacy Policy</a> | <a href="#" class="hover:text-blue-400 transition duration-200">Terms of Service</a>
+            <p>&copy; 2023 Adobe AI Pro. All rights reserved. | Powered by [Your Company Name]</p>
         </div>
     </footer>
 
+    <!-- Countdown JavaScript -->
     <script>
-        // Countdown Timer Script
-        const countdownElement = document.getElementById('countdown');
-        const daysElement = document.getElementById('days');
-        const hoursElement = document.getElementById('hours');
-        const minutesElement = document.getElementById('minutes');
-        const secondsElement = document.getElementById('seconds');
+        function setupCountdown() {
+            const countdownElement = document.getElementById('countdown');
+            if (!countdownElement) return;
 
-        // Set the date we're counting down to (e.g., 3 weeks from now for early access)
-        const countDownDate = new Date();
-        countDownDate.setDate(countDownDate.getDate() + 21); // 21 days from current date
-        countDownDate.setHours(23, 59, 59, 999); // Set to end of the day
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now
+            countDownDate.setHours(23, 59, 59, 0); // Set to end of day for consistency
 
-        const x = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countDownDate.getTime() - now;
+            // Update the count down every 1 second
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate - now;
 
-            if (distance < 0) {
-                clearInterval(x);
-                countdownElement.innerHTML = "<span class='text-xl sm:text-2xl text-red-500 font-bold'>Registration Closed!</span>";
-                return;
-            }
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                // Display the result in the elements, ensure two digits
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-            daysElement.innerHTML = String(days).padStart(2, '0');
-            hoursElement.innerHTML = String(hours).padStart(2, '0');
-            minutesElement.innerHTML = String(minutes).padStart(2, '0');
-            secondsElement.innerHTML = String(seconds).padStart(2, '0');
-        }, 1000);
+                // If the count down is finished
+                if (distance < 0) {
+                    clearInterval(x);
+                    countdownElement.innerHTML = "<p class='text-xl text-red-400'>Enrollment Closed!</p>";
+                }
+            }, 1000);
+        }
+
+        // Call setupCountdown when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', setupCountdown);
     </script>
+
 </body>
 </html>
