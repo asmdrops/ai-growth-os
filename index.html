@@ -3,198 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adobe AI Pro: Mastering Prompt Engineering & Workflow Automation</title>
-    <!-- Tailwind CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Mastering Gemini's Memory & Connected Apps - Hyper-Personalized Productivity</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles for the hero background image and overlay */
-        .hero-bg {
-            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        /* Modern font for premium feel */
+        body {
+            font-family: 'Inter', sans-serif;
         }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
+        /* Custom scroll-behavior for smooth anchor links */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans leading-normal tracking-normal">
+<body class="bg-gray-950 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-bg relative min-h-screen flex items-center justify-center p-4">
-        <div class="hero-overlay absolute inset-0"></div>
-        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 py-12 md:py-24 bg-gray-900 bg-opacity-80 rounded-lg shadow-2xl">
-            <span class="text-indigo-400 text-sm md:text-base font-bold uppercase tracking-widest block mb-3">Limited-Time Early Bird Access!</span>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6">
-                <span class="block text-indigo-400">Adobe AI Pro:</span> Mastering Prompt Engineering & Workflow Automation
+    <header class="relative bg-cover bg-center h-screen flex items-center justify-center p-4 overflow-hidden"
+            style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+        <!-- Overlay for better text readability and dark mode aesthetic -->
+        <div class="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80"></div>
+
+        <div class="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <span class="inline-block bg-indigo-600 text-white text-xs sm:text-sm font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wide shadow-md">
+                🔥 Unlock the Future of AI Productivity
+            </span>
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 drop-shadow-lg animate-fade-in-up">
+                Mastering Gemini's Memory & Connected Apps for Hyper-Personalized Productivity
             </h1>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Unlock the full potential of Adobe's new AI in <span class="font-semibold text-white">Premiere Pro, Illustrator & InDesign</span>. Boost productivity, unleash creativity, and stay ahead in the evolving digital landscape.
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200">
+                Transform Gemini into your ultimate personal assistant. Leverage advanced prompt engineering, robust privacy, and seamless app integrations for unparalleled efficiency.
             </p>
 
-            <!-- Countdown Timer -->
-            <div class="bg-purple-800 bg-opacity-70 text-white p-4 rounded-lg shadow-lg inline-block mb-8">
-                <p class="text-sm font-semibold mb-2 uppercase tracking-wide">Special Enrollment Closes In:</p>
-                <div id="countdown" class="flex justify-center space-x-4">
-                    <div>
-                        <span id="days" class="block text-4xl font-bold">00</span>
-                        <span class="text-xs uppercase tracking-wider">Days</span>
+            <!-- Limited Time Countdown -->
+            <div class="bg-gradient-to-r from-blue-800 to-purple-800 p-6 rounded-xl shadow-2xl mb-10 border border-purple-700 animate-pulse-light">
+                <p class="text-xl sm:text-2xl font-bold mb-3 text-white">⏳ Special Launch Offer Ends In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 sm:space-x-6 text-3xl sm:text-4xl lg:text-6xl font-extrabold text-blue-300">
+                    <div class="flex flex-col items-center">
+                        <span id="days" class="w-16 h-16 flex items-center justify-center bg-gray-900 rounded-lg shadow-inner">00</span>
+                        <span class="text-sm sm:text-base text-gray-300 font-medium mt-2">Days</span>
                     </div>
-                    <div>
-                        <span id="hours" class="block text-4xl font-bold">00</span>
-                        <span class="text-xs uppercase tracking-wider">Hours</span>
+                    <span class="text-gray-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours" class="w-16 h-16 flex items-center justify-center bg-gray-900 rounded-lg shadow-inner">00</span>
+                        <span class="text-sm sm:text-base text-gray-300 font-medium mt-2">Hours</span>
                     </div>
-                    <div>
-                        <span id="minutes" class="block text-4xl font-bold">00</span>
-                        <span class="text-xs uppercase tracking-wider">Minutes</span>
+                    <span class="text-gray-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes" class="w-16 h-16 flex items-center justify-center bg-gray-900 rounded-lg shadow-inner">00</span>
+                        <span class="text-sm sm:text-base text-gray-300 font-medium mt-2">Minutes</span>
                     </div>
-                    <div>
-                        <span id="seconds" class="block text-4xl font-bold">00</span>
-                        <span class="text-xs uppercase tracking-wider">Seconds</span>
+                    <span class="text-gray-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds" class="w-16 h-16 flex items-center justify-center bg-gray-900 rounded-lg shadow-inner">00</span>
+                        <span class="text-sm sm:text-base text-gray-300 font-medium mt-2">Seconds</span>
                     </div>
                 </div>
             </div>
 
-            <a href="#waitlist-form" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl inline-block">
-                Secure Your Early Access Spot Now!
+            <a href="#waitlist-form" class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl animate-bounce-slow">
+                Secure Your Early Access Spot Today!
             </a>
-            <p class="text-gray-400 text-sm mt-4">Don't miss out on mastering the future of creative AI.</p>
         </div>
     </header>
 
-    <!-- Introduction/Problem-Solution Section -->
-    <section class="py-16 md:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 max-w-5xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-8">The Creative Landscape Just Changed. Are You Ready?</h2>
-            <p class="text-lg sm:text-xl text-gray-300 leading-relaxed mb-8">
-                With Adobe's groundbreaking integration of AI assistants into Premiere Pro, Illustrator, and InDesign, the way we create is being redefined. This isn't just an update; it's a paradigm shift. Those who master these new tools will unlock unprecedented levels of productivity and creative freedom.
+    <!-- Trend & Opportunity Section (Market Trends focus) -->
+    <section class="py-16 sm:py-20 lg:py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-gray-100">The AI Landscape is Evolving: Are You Keeping Pace?</h2>
+            <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8">
+                The latest <strong class="text-blue-400">9to5Google</strong> announcement confirms it: <em class="text-purple-400">"Gemini Live can now access your past chats Memory, Connected Apps info."</em> This is a game-changer for AI-powered productivity, marking a clear market trend towards deeply integrated, context-aware AI assistants. Don't get left behind.
             </p>
-            <p class="text-lg sm:text-xl text-gray-300 leading-relaxed">
-                Our "Adobe AI Pro" course is your definitive guide to <span class="font-semibold text-indigo-400">prompt engineering, workflow automation, and intelligent content generation</span> across your favorite Adobe applications. Stop falling behind – start leading.
-            </p>
+            <div class="flex justify-center flex-wrap gap-3">
+                <span class="inline-block bg-indigo-700 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-md">
+                    #AITrends
+                </span>
+                <span class="inline-block bg-indigo-700 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-md">
+                    #GeminiAI
+                </span>
+                <span class="inline-block bg-indigo-700 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-md">
+                    #FutureOfWork
+                </span>
+            </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-12">What You'll Master in Adobe AI Pro:</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-purple-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-purple-400 text-4xl mb-4 text-center">💡</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Master Prompt Engineering</h3>
-                    <p class="text-gray-300">Learn to craft precise, effective prompts that harness Adobe's AI to generate exactly what you envision, from initial concepts to polished final assets.</p>
+    <section class="py-16 sm:py-20 lg:py-24 bg-gray-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 text-gray-100">What You'll Master Inside This Premium Course</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-400 flex items-center">
+                        ✨ Advanced Prompt Engineering
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Learn to craft prompts that leverage Gemini's memory for contextually rich, accurate, and deeply personalized responses. No more generic outputs!
+                    </p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-purple-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-purple-400 text-4xl mb-4 text-center">⚡</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Automate Tedious Workflows</h3>
-                    <p class="text-gray-300">Discover how AI can streamline repetitive tasks in Premiere, Illustrator, and InDesign, freeing up your time for truly creative endeavors.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-400 flex items-center">
+                        🔒 Privacy Best Practices & Control
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Gain complete control over your data. Understand Gemini's privacy settings, manage your memory, and ensure your sensitive information stays secure.
+                    </p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-purple-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-purple-400 text-4xl mb-4 text-center">🚀</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Accelerate Content Creation</h3>
-                    <p class="text-gray-300">Generate stunning visuals, dynamic video sequences, and compelling layouts in a fraction of the time with intelligent AI assistance.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-400 flex items-center">
+                        🔗 Connected Apps Integration Mastery
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Seamlessly link Gemini with your essential apps (Google Workspace, Calendar, Photos) to automate tasks, retrieve data, and streamline your workflow.
+                    </p>
                 </div>
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-purple-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-purple-400 text-4xl mb-4 text-center">🛠️</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Tailored for Creative Pros</h3>
-                    <p class="text-gray-300">Content specifically designed for video editors, graphic designers, and layout artists, ensuring practical, real-world application.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-green-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-semibold mb-4 text-green-400 flex items-center">
+                        📝 Hyper-Personalized Content Creation
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Generate high-quality blogs, emails, social media posts, and more, infused with your unique voice and past insights, exponentially faster.
+                    </p>
                 </div>
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-purple-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-purple-400 text-4xl mb-4 text-center">📈</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Boost Your Productivity</h3>
-                    <p class="text-gray-300">Learn advanced techniques to integrate AI seamlessly into your existing projects, significantly enhancing your output and efficiency.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-orange-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-semibold mb-4 text-orange-400 flex items-center">
+                        🔍 Advanced Research & Synthesis
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Let Gemini analyze complex documents, summarize findings, and connect new information with your existing knowledge base for deeper insights.
+                    </p>
                 </div>
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-purple-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-purple-400 text-4xl mb-4 text-center">🎨</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Unlock New Creative Possibilities</h3>
-                    <p class="text-gray-300">Move beyond manual limitations and explore innovative design approaches made possible only through sophisticated AI tools.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-red-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-semibold mb-4 text-red-400 flex items-center">
+                        🤖 Proactive Personal Assistant Tasks
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Automate daily routines, manage your schedule, and receive intelligent, proactive suggestions based on your past interactions and connected app data.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-800 border-t-4 border-purple-600">
-        <div class="container mx-auto px-4 max-w-2xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Join the Early Access Waitlist!</h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8">
-                Be among the first to master Adobe's AI capabilities. Sign up now to receive exclusive early bird pricing, course updates, and launch notifications.
+    <!-- Call to Action / Value Proposition Section -->
+    <section class="py-16 sm:py-20 lg:py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-gray-100">Stop Guessing. Start Mastering.</h2>
+            <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-10">
+                This isn't just another online course; it's your definitive blueprint for transforming Gemini into your most intuitive, efficient, and *hyper-personalized* productivity partner. Elevate your workflow and achieve more than you thought possible.
             </p>
-            <form class="bg-gray-900 p-8 rounded-lg shadow-2xl border border-purple-700">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name:</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700"
-                           required>
-                </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address:</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700"
-                           required>
-                </div>
-                <button type="submit"
-                        class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 w-full md:w-auto">
-                    Get Early Access & Updates
-                </button>
-                <p class="text-gray-500 text-xs mt-4">We respect your privacy. Your information will not be shared.</p>
-            </form>
+            <a href="#waitlist-form" class="inline-block bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                I'm Ready for Hyper-Personalized Productivity!
+            </a>
+        </div>
+    </section>
+
+    <!-- Waitlist Form Section -->
+    <section id="waitlist-form" class="py-16 sm:py-20 lg:py-24 bg-gray-950">
+        <div class="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-6 text-gray-100">Join the Exclusive Waitlist!</h2>
+                <p class="text-gray-300 text-center mb-8">
+                    Be among the first to get access to "Mastering Gemini's Memory & Connected Apps." Secure your spot and receive special early-bird pricing and exclusive bonuses!
+                </p>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                        <input type="text" id="name" name="name" required
+                               class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-blue-500 focus:ring-blue-500 transition duration-200 placeholder-gray-500"
+                               placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" required
+                               class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-blue-500 focus:ring-blue-500 transition duration-200 placeholder-gray-500"
+                               placeholder="you@example.com">
+                    </div>
+                    <button type="submit"
+                            class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                        Get Early Access & Bonuses!
+                    </button>
+                    <p class="text-center text-sm text-gray-500 mt-4">We respect your privacy. No spam, ever.</p>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2023 Adobe AI Pro. All rights reserved. | Powered by [Your Company Name]</p>
+    <footer class="bg-gray-900 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500">
+            <p>&copy; 2024 Digital Education Authority. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Countdown JavaScript -->
+    <!-- Countdown Timer JavaScript -->
     <script>
-        function setupCountdown() {
-            const countdownElement = document.getElementById('countdown');
-            if (!countdownElement) return;
-
+        document.addEventListener('DOMContentLoaded', function () {
             // Set the date we're counting down to (e.g., 7 days from now)
             const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now
-            countDownDate.setHours(23, 59, 59, 0); // Set to end of day for consistency
+            countDownDate.setDate(countDownDate.getDate() + 7); // 7 days from now for demonstration
+            // To set a specific date:
+            // const countDownDate = new Date("Dec 25, 2024 00:00:00").getTime();
 
-            // Update the count down every 1 second
             const x = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = countDownDate - now;
+                const distance = countDownDate.getTime() - now;
 
-                // Time calculations for days, hours, minutes and seconds
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Display the result in the elements, ensure two digits
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                // Display the result in the elements
+                const daysEl = document.getElementById("days");
+                const hoursEl = document.getElementById("hours");
+                const minutesEl = document.getElementById("minutes");
+                const secondsEl = document.getElementById("seconds");
 
-                // If the count down is finished
+                if (daysEl) daysEl.innerHTML = String(days).padStart(2, '0');
+                if (hoursEl) hoursEl.innerHTML = String(hours).padStart(2, '0');
+                if (minutesEl) minutesEl.innerHTML = String(minutes).padStart(2, '0');
+                if (secondsEl) secondsEl.innerHTML = String(seconds).padStart(2, '0');
+
+                // If the count down is finished, write some text
                 if (distance < 0) {
                     clearInterval(x);
-                    countdownElement.innerHTML = "<p class='text-xl text-red-400'>Enrollment Closed!</p>";
+                    const countdownContainer = document.getElementById("countdown");
+                    if (countdownContainer) {
+                        countdownContainer.innerHTML = "<span class='text-red-500 text-3xl sm:text-4xl lg:text-5xl font-extrabold'>OFFER EXPIRED!</span>";
+                    }
+                    const ctaButton = document.querySelector('a[href="#waitlist-form"]');
+                    if (ctaButton) {
+                        ctaButton.textContent = "Join Waitlist for Next Cohort";
+                        ctaButton.classList.remove('from-blue-600', 'to-purple-600', 'hover:from-blue-700', 'hover:to-purple-700', 'from-green-500', 'to-teal-600', 'hover:from-green-600', 'hover:to-teal-700', 'animate-bounce-slow');
+                        ctaButton.classList.add('bg-gray-600', 'hover:bg-gray-700');
+                    }
                 }
             }, 1000);
-        }
-
-        // Call setupCountdown when the DOM is fully loaded
-        document.addEventListener('DOMContentLoaded', setupCountdown);
+        });
     </script>
 
 </body>
