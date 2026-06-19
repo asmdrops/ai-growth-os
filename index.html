@@ -3,214 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WatchOS 27 Upgrade & Survival Guide - Limited Time Offer</title>
+    <title>Philips Hue Power User Blueprint - Master Your Smart Home</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
+        /* Custom styles for dark mode aesthetic, responsive typography, and specific components */
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Inter', sans-serif;
         }
+        .gradient-button {
+            background-image: linear-gradient(to right, #6366f1, #8b5cf6); /* Indigo to Purple */
+            transition: all 0.3s ease;
+        }
+        .gradient-button:hover {
+            background-image: linear-gradient(to right, #8b5cf6, #a78bfa);
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+        }
         .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            position: relative;
+            background-attachment: fixed; /* Parallax effect for depth */
         }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for strong text contrast */
+        }
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 70px; /* Fixed width for consistent look */
+            height: 70px; /* Fixed height for consistent look */
+            background-color: rgba(31, 41, 55, 0.85); /* Semi-transparent dark gray */
+            border-radius: 10px;
+            margin: 0 5px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.4); /* Stronger shadow */
+            border: 1px solid rgba(139, 92, 246, 0.3); /* Subtle purple border */
+        }
+        .countdown-item span:first-child {
+            font-size: 1.9rem; /* Slightly larger digits */
+            font-weight: bold;
+            color: #a78bfa; /* Lighter purple for digits */
+        }
+        .countdown-item span:last-child {
+            font-size: 0.75rem; /* Smaller label */
+            text-transform: uppercase;
+            color: #cbd5e1; /* text-gray-300 */
+        }
+
+        /* ULTRA-RESPONSIVE: Fluid typography for large screens */
+        @media (min-width: 1536px) { /* For 2XL screens (4K monitors) and up */
+            h1 { font-size: 5.5rem; }
+            h2 { font-size: 4rem; }
+            .text-xl { font-size: 1.85rem; }
+            .text-lg { font-size: 1.35rem; }
+        }
+        /* Animation for subtle entrance */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
+        .animate-fade-in-up { animation: fadeInUp 1s ease-out forwards; }
+        .hero-headline { animation-delay: 0.2s; }
+        .hero-subheadline { animation-delay: 0.4s; }
+        .hero-countdown { animation-delay: 0.6s; }
+        .hero-cta { animation-delay: 0.8s; }
     </style>
 </head>
-<body class="bg-gray-900 text-white antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative hero-background min-h-screen flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black opacity-75"></div> <!-- Dark Overlay -->
-        <div class="relative z-10 text-center max-w-4xl mx-auto py-16 px-6">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-indigo-400 drop-shadow-lg">
-                Don't Let watchOS 27 Leave Your Apple Watch Behind!
+    <section class="relative hero-background h-screen flex items-center justify-center p-4 overflow-hidden" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="relative z-10 text-center max-w-5xl mx-auto space-y-6 md:space-y-8">
+            <h1 class="hero-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white drop-shadow-lg opacity-0">
+                💡 Master Your Smart Home: <br class="sm:hidden"> The Hue Power User Blueprint is Here!
             </h1>
-            <p class="text-xl sm:text-2xl lg:text-3xl text-gray-200 mb-8 max-w-2xl mx-auto drop-shadow-md">
-                Secure your indispensable guide to navigating Apple's major OS update. Upgrade smart, survive the changes, and maximize your device's potential.
+            <p class="hero-subheadline text-lg sm:text-xl md:text-2xl text-gray-200 mt-4 max-w-3xl mx-auto opacity-0">
+                Unlock <span class="text-purple-400 font-semibold">advanced integrations, custom automations, and energy savings</span> for your entire home,
+                including <span class="font-bold text-yellow-300">non-smart lights with Hue's new wired modules</span>.
             </p>
 
-            <!-- Limited Time Offer & Countdown -->
-            <div class="bg-gradient-to-r from-purple-700 to-indigo-700 p-6 sm:p-8 rounded-lg shadow-2xl mb-10 mx-auto max-w-xl border border-indigo-500">
-                <p class="text-2xl sm:text-3xl font-bold mb-4 text-white">Limited-Time Early Access Discount!</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 sm:space-x-6 text-3xl md:text-5xl font-extrabold text-white">
-                    <div class="text-center">
-                        <span id="days" class="block bg-gray-800 py-2 px-3 sm:py-3 sm:px-4 rounded-md shadow-inner">00</span>
-                        <span class="text-sm sm:text-base mt-1 block text-gray-300">Days</span>
+            <!-- Limited Time Countdown -->
+            <div class="hero-countdown mt-10 flex flex-col items-center justify-center opacity-0">
+                <p class="text-xl text-red-400 font-bold mb-4 animate-pulse">Waitlist CLOSES In:</p>
+                <div id="countdown" class="flex justify-center gap-2 md:gap-4">
+                    <div class="countdown-item">
+                        <span id="days">00</span>
+                        <span>Days</span>
                     </div>
-                    <span class="text-white">:</span>
-                    <div class="text-center">
-                        <span id="hours" class="block bg-gray-800 py-2 px-3 sm:py-3 sm:px-4 rounded-md shadow-inner">00</span>
-                        <span class="text-sm sm:text-base mt-1 block text-gray-300">Hours</span>
+                    <div class="countdown-item">
+                        <span id="hours">00</span>
+                        <span>Hours</span>
                     </div>
-                    <span class="text-white">:</span>
-                    <div class="text-center">
-                        <span id="minutes" class="block bg-gray-800 py-2 px-3 sm:py-3 sm:px-4 rounded-md shadow-inner">00</span>
-                        <span class="text-sm sm:text-base mt-1 block text-gray-300">Minutes</span>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <span>Minutes</span>
                     </div>
-                    <span class="text-white">:</span>
-                    <div class="text-center">
-                        <span id="seconds" class="block bg-gray-800 py-2 px-3 sm:py-3 sm:px-4 rounded-md shadow-inner">00</span>
-                        <span class="text-sm sm:text-base mt-1 block text-gray-300">Seconds</span>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <span>Seconds</span>
                     </div>
                 </div>
             </div>
 
-            <a href="#purchase-form" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl lg:text-2xl transition duration-300 transform hover:scale-105 shadow-lg border-2 border-indigo-500 hover:border-indigo-700">
-                Get Your WatchOS 27 Survival Guide Now & Save!
+            <a href="#waitlist-form" class="hero-cta gradient-button inline-block px-10 py-4 mt-8 text-xl font-bold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 opacity-0">
+                🚀 Join the Exclusive Waitlist Now!
             </a>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-20 px-4 bg-gray-900">
-        <div class="container mx-auto max-w-5xl">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 sm:mb-16 text-indigo-400">
-                What's Inside Your Essential Survival Kit?
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+    <section id="features" class="py-16 md:py-24 bg-gray-800 text-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-purple-400 mb-12">What You'll Discover in the Blueprint</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
                 <!-- Feature 1 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-300 flex flex-col items-center text-center">
-                    <div class="text-indigo-400 text-4xl sm:text-5xl mb-4">⚙️</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">New Model Comparisons</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">Detailed breakdowns of the latest Apple Watch models, helping you decide if an upgrade is truly worth it for *your* needs.</p>
+                <div class="bg-gray-700 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-600">
+                    <p class="text-5xl mb-4">🔌</p>
+                    <h3 class="text-2xl font-semibold mb-3 text-white">Integrate Any Light</h3>
+                    <p class="text-gray-300">Leverage Hue's new wired modules to seamlessly bring your existing non-smart lights into the smart Hue ecosystem, expanding control and saving costs.</p>
                 </div>
                 <!-- Feature 2 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-300 flex flex-col items-center text-center">
-                    <div class="text-indigo-400 text-4xl sm:text-5xl mb-4">💰</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Optimal Trade-In Strategies</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">Unlock the best value for your older Apple Watch. We reveal insider tips for maximizing your trade-in returns.</p>
+                <div class="bg-gray-700 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-600">
+                    <p class="text-5xl mb-4">⚙️</p>
+                    <h3 class="text-2xl font-semibold mb-3 text-white">Advanced Automation Recipes</h3>
+                    <p class="text-gray-300">Go beyond basic routines. Create complex, intelligent automation scenarios, custom scenes, and triggered events for ultimate convenience and personalization.</p>
                 </div>
                 <!-- Feature 3 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-300 flex flex-col items-center text-center">
-                    <div class="text-indigo-400 text-4xl sm:text-5xl mb-4">🛠️</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Curated Repair Services</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">Don't overpay! A hand-picked list of trusted third-party repair services for those looking to extend their device's life.</p>
+                <div class="bg-gray-700 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-600">
+                    <p class="text-5xl mb-4">⚡</p>
+                    <h3 class="text-2xl font-semibold mb-3 text-white">Optimize Energy Usage</h3>
+                    <p class="text-gray-300">Master strategies to significantly reduce your energy bill with smart scheduling, advanced occupancy sensors, and efficient lighting practices within your Hue setup.</p>
                 </div>
                 <!-- Feature 4 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-300 flex flex-col items-center text-center">
-                    <div class="text-indigo-400 text-4xl sm:text-5xl mb-4">✅</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Exclusive Compatibility Checker</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">Our proprietary guide helps you quickly verify if your existing apps and features will survive the watchOS 27 update.</p>
-                </div>
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-300 flex flex-col items-center text-center">
-                    <div class="text-indigo-400 text-4xl sm:text-5xl mb-4">✨</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Maximize Unsupported Models</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">Expert strategies and a curated list of apps to keep your "unsupported" Apple Watch highly functional and useful.</p>
-                </div>
-                <!-- Feature 6 (Added for balance, focused on the immediate pain/solution) -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-300 flex flex-col items-center text-center">
-                    <div class="text-indigo-400 text-4xl sm:text-5xl mb-4">📚</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Instant Digital Download</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">Get immediate access to your comprehensive guide. Start preparing for watchOS 27 right now!</p>
+                <div class="bg-gray-700 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-600">
+                    <p class="text-5xl mb-4">🔗</p>
+                    <h3 class="text-2xl font-semibold mb-3 text-white">Third-Party Compatibility</h3>
+                    <p class="text-gray-300">Explore seamless integrations with popular smart home platforms (Alexa, Google Home), voice assistants, and non-Hue accessories to build a truly unified and powerful smart home.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist/Purchase Form Section -->
-    <section id="purchase-form" class="py-16 sm:py-20 px-4 bg-gray-800 border-t border-gray-700">
-        <div class="container mx-auto max-w-3xl text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-8 sm:mb-10 text-indigo-400">
-                Don't Miss Out! Secure Your Guide Now!
-            </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-10 max-w-2xl mx-auto">
-                Claim your early bird discount on the "WatchOS 27 Upgrade & Survival Guide." This special offer is available for a limited time only!
+    <!-- Waitlist Form Section -->
+    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-900 text-gray-100">
+        <div class="container mx-auto px-6 text-center max-w-2xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">Don't Miss Out on the Hue Power User Blueprint!</h2>
+            <p class="text-xl text-gray-300 mb-10">
+                Be among the first to get access to this comprehensive guide. Join the waitlist now to receive early bird discounts, bonus content, and exclusive updates directly in your inbox!
             </p>
 
-            <div class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-2xl border border-gray-700">
-                <div class="flex flex-col sm:flex-row justify-center items-center mb-6">
-                    <p class="text-gray-400 line-through text-2xl sm:text-3xl mr-0 sm:mr-4 mb-2 sm:mb-0">$49.99</p>
-                    <p class="text-indigo-400 font-extrabold text-5xl sm:text-6xl">$39.99</p>
+            <form class="bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl space-y-6 border border-purple-700">
+                <div>
+                    <label for="name" class="block text-left text-lg font-semibold text-gray-200 mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-200">
                 </div>
-                <p class="text-base sm:text-lg text-gray-300 mb-8">Save 20% by acting fast!</p>
-
-                <form class="space-y-6">
-                    <div>
-                        <input type="text" id="name" name="name" placeholder="Your Full Name" required
-                               class="w-full p-3 sm:p-4 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 text-base sm:text-lg placeholder-gray-400">
-                    </div>
-                    <div>
-                        <input type="email" id="email" name="email" placeholder="Your Best Email" required
-                               class="w-full p-3 sm:p-4 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 text-base sm:text-lg placeholder-gray-400">
-                    </div>
-                    <div>
-                        <button type="submit"
-                                class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 sm:py-4 px-6 rounded-full text-lg sm:text-xl transition duration-300 transform hover:scale-105 shadow-lg border-2 border-indigo-500 hover:border-indigo-700">
-                            Get Instant Access & Download
-                        </button>
-                    </div>
-                </form>
-                <p class="text-xs sm:text-sm text-gray-500 mt-6">By clicking "Get Instant Access", you agree to our terms and privacy policy.</p>
-            </div>
+                <div>
+                    <label for="email" class="block text-left text-lg font-semibold text-gray-200 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required
+                           class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-200">
+                </div>
+                <button type="submit" class="gradient-button w-full px-8 py-4 text-xl font-bold rounded-md shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                    🔐 Get Early Access & Discounts
+                </button>
+                <p class="text-sm text-gray-400 mt-4">We respect your privacy. Your email will only be used for Blueprint updates and offers. Unsubscribe anytime.</p>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 sm:py-10 px-4 border-t border-gray-700">
-        <div class="container mx-auto text-center text-gray-500 text-sm">
-            <p>&copy; <span id="currentYear"></span> Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">
-                <a href="#" class="text-indigo-400 hover:underline">Privacy Policy</a> |
-                <a href="#" class="text-indigo-400 hover:underline">Terms of Service</a>
-            </p>
+    <footer class="bg-gray-900 text-gray-500 py-8 text-center border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2 text-sm">Philips Hue and its ecosystem are trademarks of Signify Holding B.V. This guide is an independent educational resource and is not affiliated with Signify Holding B.V.</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer and Year -->
+    <!-- JavaScript for Countdown Timer and entrance animations -->
     <script>
-        // Countdown Timer Logic
-        const daysElement = document.getElementById('days');
-        const hoursElement = document.getElementById('hours');
-        const minutesElement = document.getElementById('minutes');
-        const secondsElement = document.getElementById('seconds');
-        const countdownContainer = document.getElementById('countdown');
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (e.g., 7 days from now from page load)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Adds 7 days to the current date
 
-        // Set the date we're counting down to (e.g., 3 days, 12 hours, 30 minutes, 15 seconds from now for demo)
-        const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 3);
-        countdownDate.setHours(countdownDate.getHours() + 12);
-        countdownDate.setMinutes(countdownDate.getMinutes() + 30);
-        countdownDate.setSeconds(countdownDate.getSeconds() + 15);
+            // Elements for countdown display
+            const daysSpan = document.getElementById("days");
+            const hoursSpan = document.getElementById("hours");
+            const minutesSpan = document.getElementById("minutes");
+            const secondsSpan = document.getElementById("seconds");
+            const countdownContainer = document.getElementById("countdown");
+            const ctaButton = document.querySelector('.hero-cta');
 
-        const updateCountdown = () => {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
+            // Update the countdown every 1 second
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate.getTime() - now;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            if (distance < 0) {
-                clearInterval(interval);
-                countdownContainer.innerHTML = "<span class='text-red-400 text-2xl sm:text-3xl font-bold'>Offer Expired!</span>";
-                // Optionally disable the purchase button here
-                const purchaseButton = document.querySelector('#purchase-form button[type="submit"]');
-                if (purchaseButton) {
-                    purchaseButton.disabled = true;
-                    purchaseButton.classList.add('opacity-50', 'cursor-not-allowed');
-                    purchaseButton.classList.remove('hover:bg-indigo-600', 'hover:border-indigo-700');
-                    purchaseButton.textContent = "Offer Expired";
+                if (distance < 0) {
+                    clearInterval(x);
+                    countdownContainer.innerHTML = "<p class='text-red-500 text-2xl font-bold'>Waitlist Closed!</p>";
+                    ctaButton.classList.add('opacity-50', 'cursor-not-allowed');
+                    ctaButton.removeAttribute('href');
+                    ctaButton.textContent = 'Waitlist Closed';
+                    ctaButton.setAttribute('disabled', 'true');
+                    return;
                 }
-                return;
-            }
 
-            daysElement.textContent = String(days).padStart(2, '0');
-            hoursElement.textContent = String(hours).padStart(2, '0');
-            minutesElement.textContent = String(minutes).padStart(2, '0');
-            secondsElement.textContent = String(seconds).padStart(2, '0');
-        };
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        const interval = setInterval(updateCountdown, 1000);
-        updateCountdown(); // Initial call to display immediately
+                // Display the result with leading zeros
+                daysSpan.innerHTML = String(days).padStart(2, '0');
+                hoursSpan.innerHTML = String(hours).padStart(2, '0');
+                minutesSpan.innerHTML = String(minutes).padStart(2, '0');
+                secondsSpan.innerHTML = String(seconds).padStart(2, '0');
 
-        // Set current year for footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+            }, 1000);
+
+            // Apply entrance animations
+            document.querySelectorAll('.opacity-0').forEach(el => {
+                el.classList.add('animate-fade-in-down');
+                el.classList.remove('opacity-0');
+            });
+        });
     </script>
 </body>
 </html>
