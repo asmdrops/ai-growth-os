@@ -3,224 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Philips Hue Power User Blueprint - Master Your Smart Home</title>
+    <title>The Mindful Digital Life: Thrive with Minimal Tech</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for dark mode aesthetic, responsive typography, and specific components */
-        html {
-            scroll-behavior: smooth;
-        }
         body {
             font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        .gradient-button {
-            background-image: linear-gradient(to right, #6366f1, #8b5cf6); /* Indigo to Purple */
-            transition: all 0.3s ease;
-        }
-        .gradient-button:hover {
-            background-image: linear-gradient(to right, #8b5cf6, #a78bfa);
-            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
-        }
-        .hero-background {
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            position: relative;
-            background-attachment: fixed; /* Parallax effect for depth */
+            background-attachment: fixed; /* For a subtle parallax effect */
         }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for strong text contrast */
-        }
-        .countdown-item {
+        .countdown-segment {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 70px; /* Fixed width for consistent look */
-            height: 70px; /* Fixed height for consistent look */
-            background-color: rgba(31, 41, 55, 0.85); /* Semi-transparent dark gray */
-            border-radius: 10px;
-            margin: 0 5px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.4); /* Stronger shadow */
-            border: 1px solid rgba(139, 92, 246, 0.3); /* Subtle purple border */
+            padding: 1rem;
+            background-color: #2D3748; /* gray-800 equivalent */
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin: 0.5rem;
+            min-width: 90px; /* Ensure segments have a minimum width */
         }
-        .countdown-item span:first-child {
-            font-size: 1.9rem; /* Slightly larger digits */
-            font-weight: bold;
-            color: #a78bfa; /* Lighter purple for digits */
+        .countdown-value {
+            font-size: 2.25rem; /* text-4xl */
+            line-height: 2.5rem; /* text-4xl */
+            font-weight: 800; /* font-extrabold */
+            color: #81E6D9; /* indigo-400 equivalent for a tealish vibe */
         }
-        .countdown-item span:last-child {
-            font-size: 0.75rem; /* Smaller label */
+        @media (min-width: 640px) { /* sm breakpoint */
+            .countdown-value {
+                font-size: 3rem; /* sm:text-5xl */
+                line-height: 1;
+            }
+        }
+        .countdown-label {
+            font-size: 0.875rem; /* text-sm */
+            color: #A0AEC0; /* gray-400 equivalent */
             text-transform: uppercase;
-            color: #cbd5e1; /* text-gray-300 */
+            letter-spacing: 0.05em; /* tracking-wide */
+            margin-top: 0.25rem;
         }
-
-        /* ULTRA-RESPONSIVE: Fluid typography for large screens */
-        @media (min-width: 1536px) { /* For 2XL screens (4K monitors) and up */
-            h1 { font-size: 5.5rem; }
-            h2 { font-size: 4rem; }
-            .text-xl { font-size: 1.85rem; }
-            .text-lg { font-size: 1.35rem; }
-        }
-        /* Animation for subtle entrance */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
-        .animate-fade-in-up { animation: fadeInUp 1s ease-out forwards; }
-        .hero-headline { animation-delay: 0.2s; }
-        .hero-subheadline { animation-delay: 0.4s; }
-        .hero-countdown { animation-delay: 0.6s; }
-        .hero-cta { animation-delay: 0.8s; }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <section class="relative hero-background h-screen flex items-center justify-center p-4 overflow-hidden" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-        <div class="absolute inset-0 hero-overlay"></div>
-        <div class="relative z-10 text-center max-w-5xl mx-auto space-y-6 md:space-y-8">
-            <h1 class="hero-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white drop-shadow-lg opacity-0">
-                💡 Master Your Smart Home: <br class="sm:hidden"> The Hue Power User Blueprint is Here!
+    <header class="hero-bg relative h-screen flex items-center justify-center text-center overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay -->
+        <div class="relative z-10 p-4 sm:p-8 md:p-12 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                Reclaim Your Focus: <br class="sm:hidden"> The Mindful Digital Life
             </h1>
-            <p class="hero-subheadline text-lg sm:text-xl md:text-2xl text-gray-200 mt-4 max-w-3xl mx-auto opacity-0">
-                Unlock <span class="text-purple-400 font-semibold">advanced integrations, custom automations, and energy savings</span> for your entire home,
-                including <span class="font-bold text-yellow-300">non-smart lights with Hue's new wired modules</span>.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8">
+                A Gen Z Guide to Thriving with Minimal Tech, Maximizing Real-World Productivity & Well-being.
             </p>
-
-            <!-- Limited Time Countdown -->
-            <div class="hero-countdown mt-10 flex flex-col items-center justify-center opacity-0">
-                <p class="text-xl text-red-400 font-bold mb-4 animate-pulse">Waitlist CLOSES In:</p>
-                <div id="countdown" class="flex justify-center gap-2 md:gap-4">
-                    <div class="countdown-item">
-                        <span id="days">00</span>
-                        <span>Days</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span id="hours">00</span>
-                        <span>Hours</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span id="minutes">00</span>
-                        <span>Minutes</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span id="seconds">00</span>
-                        <span>Seconds</span>
-                    </div>
-                </div>
-            </div>
-
-            <a href="#waitlist-form" class="hero-cta gradient-button inline-block px-10 py-4 mt-8 text-xl font-bold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 opacity-0">
-                🚀 Join the Exclusive Waitlist Now!
+            <p class="text-md sm:text-lg text-gray-400 mb-10 italic">
+                Tired of digital overwhelm? Discover a new way to connect with the real world, just like the growing buzz around "dumbphones" suggests a new era of intentional tech.
+            </p>
+            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-lg">
+                Get Early Access & Exclusive Bonuses
             </a>
+        </div>
+    </header>
+
+    <!-- Value Proposition / Problem & Solution Section -->
+    <section class="py-16 bg-gray-900 text-center px-4">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-white">
+                Is Your Digital Life Draining Your Real Life?
+            </h2>
+            <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                In an always-on world, Gen Z faces unprecedented digital demands. Constant notifications, the pressure of online presence, and endless scrolling steal your time, focus, and peace of mind. But what if there was a path to harness technology, rather than be enslaved by it?
+            </p>
+            <p class="text-lg text-gray-300 leading-relaxed">
+                "The Mindful Digital Life" is your essential guide to navigating the digital landscape with purpose. We'll equip you with the strategies to regain control, reduce digital noise, and amplify your real-world experiences.
+            </p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 bg-gray-800 text-gray-100">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-purple-400 mb-12">What You'll Discover in the Blueprint</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-                <!-- Feature 1 -->
-                <div class="bg-gray-700 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-600">
-                    <p class="text-5xl mb-4">🔌</p>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Integrate Any Light</h3>
-                    <p class="text-gray-300">Leverage Hue's new wired modules to seamlessly bring your existing non-smart lights into the smart Hue ecosystem, expanding control and saving costs.</p>
+    <section class="py-16 bg-gray-800 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">
+                What You'll Discover Inside
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
+                    <h3 class="text-xl font-semibold mb-4 text-indigo-400">⚡ Digital Detox Playbook</h3>
+                    <p class="text-gray-300">Step-by-step guides to effectively disconnect and recharge, breaking free from constant digital stimulation. Learn to set boundaries that stick!</p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="bg-gray-700 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-600">
-                    <p class="text-5xl mb-4">⚙️</p>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Advanced Automation Recipes</h3>
-                    <p class="text-gray-300">Go beyond basic routines. Create complex, intelligent automation scenarios, custom scenes, and triggered events for ultimate convenience and personalization.</p>
+
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
+                    <h3 class="text-xl font-semibold mb-4 text-indigo-400">📱 Minimalist Phone Mastery</h3>
+                    <p class="text-gray-300">Practical tips for decluttering your smartphone or embracing minimalist devices, turning your tech into a tool, not a distraction.</p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="bg-gray-700 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-600">
-                    <p class="text-5xl mb-4">⚡</p>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Optimize Energy Usage</h3>
-                    <p class="text-gray-300">Master strategies to significantly reduce your energy bill with smart scheduling, advanced occupancy sensors, and efficient lighting practices within your Hue setup.</p>
+
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
+                    <h3 class="text-xl font-semibold mb-4 text-indigo-400">🚫 Overcome FOMO & Comparison</h3>
+                    <p class="text-gray-300">Strategies to silence the fear of missing out and stop comparing your life to curated online highlight reels. Embrace your unique journey!</p>
                 </div>
-                <!-- Feature 4 -->
-                <div class="bg-gray-700 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-600">
-                    <p class="text-5xl mb-4">🔗</p>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Third-Party Compatibility</h3>
-                    <p class="text-gray-300">Explore seamless integrations with popular smart home platforms (Alexa, Google Home), voice assistants, and non-Hue accessories to build a truly unified and powerful smart home.</p>
+
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
+                    <h3 class="text-xl font-semibold mb-4 text-indigo-400">📈 Boost Real-World Productivity</h3>
+                    <p class="text-gray-300">Unlock your focus and enhance your concentration to excel in studies, work, and personal projects without digital interruptions.</p>
                 </div>
+
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
+                    <h3 class="text-xl font-semibold mb-4 text-indigo-400">🧘 Maximize Well-being & Presence</h3>
+                    <p class="text-gray-300">Cultivate mindfulness, improve sleep, and foster deeper connections in your offline life. Experience true presence!</p>
+                </div>
+
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
+                    <h3 class="text-xl font-semibold mb-4 text-indigo-400">🤝 Exclusive Private Community</h3>
+                    <p class="text-gray-300">Connect with like-minded Gen Z individuals on the same journey. Share insights, challenges, and celebrate wins in a supportive, ad-free space.</p>
+                </div>
+
+            </div>
+            <div class="mt-12 text-center">
+                <a href="#waitlist" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-lg">
+                    Join the Movement & Thrive
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-900 text-gray-100">
-        <div class="container mx-auto px-6 text-center max-w-2xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">Don't Miss Out on the Hue Power User Blueprint!</h2>
-            <p class="text-xl text-gray-300 mb-10">
-                Be among the first to get access to this comprehensive guide. Join the waitlist now to receive early bird discounts, bonus content, and exclusive updates directly in your inbox!
+    <!-- Limited Time Offer / Countdown Section -->
+    <section class="py-16 bg-gray-900 text-center px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                Launch Offer: Secure Your Spot & Exclusive Bonuses!
+            </h2>
+            <p class="text-xl text-gray-300 mb-8">
+                The Mindful Digital Life is launching soon with limited early-bird access and special bonuses for our first members. Don't miss out!
             </p>
 
-            <form class="bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl space-y-6 border border-purple-700">
-                <div>
-                    <label for="name" class="block text-left text-lg font-semibold text-gray-200 mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-200">
+            <div id="countdown" class="flex justify-center flex-wrap mb-10">
+                <!-- Countdown segments will be populated by JS -->
+                <div class="countdown-segment">
+                    <span class="countdown-value" id="days">00</span>
+                    <span class="countdown-label">Days</span>
                 </div>
-                <div>
-                    <label for="email" class="block text-left text-lg font-semibold text-gray-200 mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required
-                           class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-200">
+                <div class="countdown-segment">
+                    <span class="countdown-value" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
                 </div>
-                <button type="submit" class="gradient-button w-full px-8 py-4 text-xl font-bold rounded-md shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-                    🔐 Get Early Access & Discounts
-                </button>
-                <p class="text-sm text-gray-400 mt-4">We respect your privacy. Your email will only be used for Blueprint updates and offers. Unsubscribe anytime.</p>
+                <div class="countdown-segment">
+                    <span class="countdown-value" id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-segment">
+                    <span class="countdown-value" id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+
+            <p class="text-lg text-gray-400 mb-8">
+                Enrollment opens for a limited window. Ensure you're on the waitlist to be notified first and receive our exclusive launch discount and bonus content.
+            </p>
+            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-lg">
+                Join the Waitlist Now!
+            </a>
+        </div>
+    </section>
+
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 bg-gray-800 px-4">
+        <div class="container mx-auto max-w-md">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-8">
+                Ready to Reclaim Your Digital Life?
+            </h2>
+            <p class="text-lg text-center text-gray-300 mb-8">
+                Join the waitlist to be among the first to experience "The Mindful Digital Life." You'll receive updates, exclusive early-bird offers, and bonus content before anyone else!
+            </p>
+            <form class="bg-gray-700 p-8 rounded-lg shadow-xl">
+                <div class="mb-6">
+                    <label for="name" class="block text-gray-200 text-sm font-bold mb-2">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name"
+                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 bg-gray-900 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500"
+                           required>
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com"
+                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 bg-gray-900 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500"
+                           required>
+                </div>
+                <div class="flex items-center justify-center">
+                    <button type="submit"
+                            class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out w-full text-lg">
+                        Join the Waitlist
+                    </button>
+                </div>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-500 py-8 text-center border-t border-gray-800">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2 text-sm">Philips Hue and its ecosystem are trademarks of Signify Holding B.V. This guide is an independent educational resource and is not affiliated with Signify Holding B.V.</p>
+    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm px-4">
+        <div class="container mx-auto">
+            <p>&copy; 2023 The Mindful Digital Life. All rights reserved.</p>
+            <p class="mt-2">Designed for Gen Z, by digital life experts.</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer and entrance animations -->
+    <!-- JavaScript for Countdown Timer -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 7 days from now from page load)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Adds 7 days to the current date
+            // Set the launch date to 30 days from today for demonstration purposes
+            const launchDate = new Date();
+            launchDate.setDate(launchDate.getDate() + 30); 
+            const countDownDate = launchDate.getTime();
 
-            // Elements for countdown display
-            const daysSpan = document.getElementById("days");
-            const hoursSpan = document.getElementById("hours");
-            const minutesSpan = document.getElementById("minutes");
-            const secondsSpan = document.getElementById("seconds");
-            const countdownContainer = document.getElementById("countdown");
-            const ctaButton = document.querySelector('.hero-cta');
-
-            // Update the countdown every 1 second
+            // Update the count down every 1 second
             const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
 
-                if (distance < 0) {
-                    clearInterval(x);
-                    countdownContainer.innerHTML = "<p class='text-red-500 text-2xl font-bold'>Waitlist Closed!</p>";
-                    ctaButton.classList.add('opacity-50', 'cursor-not-allowed');
-                    ctaButton.removeAttribute('href');
-                    ctaButton.textContent = 'Waitlist Closed';
-                    ctaButton.setAttribute('disabled', 'true');
-                    return;
-                }
+                // Get today's date and time
+                const now = new Date().getTime();
+
+                // Find the distance between now and the count down date
+                const distance = countDownDate - now;
 
                 // Time calculations for days, hours, minutes and seconds
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -228,20 +238,20 @@
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Display the result with leading zeros
-                daysSpan.innerHTML = String(days).padStart(2, '0');
-                hoursSpan.innerHTML = String(hours).padStart(2, '0');
-                minutesSpan.innerHTML = String(minutes).padStart(2, '0');
-                secondsSpan.innerHTML = String(seconds).padStart(2, '0');
+                // Display the result in the corresponding elements
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
+                // If the count down is finished, display a message
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<p class='text-xl text-green-400 font-bold'>Launch has begun! Check your inbox!</p>";
+                }
             }, 1000);
-
-            // Apply entrance animations
-            document.querySelectorAll('.opacity-0').forEach(el => {
-                el.classList.add('animate-fade-in-down');
-                el.classList.remove('opacity-0');
-            });
         });
     </script>
+
 </body>
 </html>
