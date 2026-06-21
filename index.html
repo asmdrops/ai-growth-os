@@ -1,257 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Mindful Digital Life: Thrive with Minimal Tech</title>
+    <title>Mastering iOS 27 AI: Unlock Your iPhone's Full Potential</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
-        .hero-bg {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* For a subtle parallax effect */
+        .gradient-button {
+            background-image: linear-gradient(to right, #4F46E5, #3B82F6, #0EA5E9);
         }
-        .countdown-segment {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-            background-color: #2D3748; /* gray-800 equivalent */
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            margin: 0.5rem;
-            min-width: 90px; /* Ensure segments have a minimum width */
+        .gradient-button:hover {
+            background-image: linear-gradient(to left, #4F46E5, #3B82F6, #0EA5E9);
         }
-        .countdown-value {
-            font-size: 2.25rem; /* text-4xl */
-            line-height: 2.5rem; /* text-4xl */
-            font-weight: 800; /* font-extrabold */
-            color: #81E6D9; /* indigo-400 equivalent for a tealish vibe */
+        .hero-background-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
         }
-        @media (min-width: 640px) { /* sm breakpoint */
-            .countdown-value {
-                font-size: 3rem; /* sm:text-5xl */
-                line-height: 1;
+        @media (min-width: 1024px) {
+            .hero-section {
+                background-attachment: fixed; /* Parallax effect for desktop */
             }
-        }
-        .countdown-label {
-            font-size: 0.875rem; /* text-sm */
-            color: #A0AEC0; /* gray-400 equivalent */
-            text-transform: uppercase;
-            letter-spacing: 0.05em; /* tracking-wide */
-            margin-top: 0.25rem;
         }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-bg relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay -->
-        <div class="relative z-10 p-4 sm:p-8 md:p-12 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4">
-                Reclaim Your Focus: <br class="sm:hidden"> The Mindful Digital Life
+    <section class="relative h-screen bg-cover bg-center flex items-center justify-center text-center overflow-hidden hero-section"
+        style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+        <div class="absolute inset-0 hero-background-overlay"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-6 py-12">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6">
+                Master iOS 27 AI: Unlock Your iPhone's Full Potential
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8">
-                A Gen Z Guide to Thriving with Minimal Tech, Maximizing Real-World Productivity & Well-being.
+            <p class="text-lg sm:text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
+                Go Beyond Siri. Discover practical AI features in iOS 27 that will revolutionize your productivity, ignite your creativity, and simplify your daily life.
             </p>
-            <p class="text-md sm:text-lg text-gray-400 mb-10 italic">
-                Tired of digital overwhelm? Discover a new way to connect with the real world, just like the growing buzz around "dumbphones" suggests a new era of intentional tech.
-            </p>
-            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-lg">
-                Get Early Access & Exclusive Bonuses
-            </a>
-        </div>
-    </header>
+            
+            <!-- Limited Time Offer & Countdown -->
+            <div class="bg-blue-900 bg-opacity-70 border border-blue-700 rounded-xl p-6 mb-10 shadow-xl transform hover:scale-105 transition-transform duration-300">
+                <h2 class="text-2xl sm:text-3xl font-bold text-blue-100 mb-4">
+                    Exclusive Launch Offer: <span class="text-yellow-400">50% OFF & Premium Bonus Content!</span>
+                </h2>
+                <p class="text-blue-200 text-lg mb-4">
+                    This special discount and our comprehensive bonus modules are available for a limited time only!
+                </p>
+                <div class="flex justify-center items-center space-x-4 mb-6">
+                    <div class="text-center">
+                        <span class="block text-4xl sm:text-5xl font-extrabold text-white" id="days">00</span>
+                        <span class="block text-sm sm:text-base text-blue-300">Days</span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl text-blue-400">:</span>
+                    <div class="text-center">
+                        <span class="block text-4xl sm:text-5xl font-extrabold text-white" id="hours">00</span>
+                        <span class="block text-sm sm:text-base text-blue-300">Hours</span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl text-blue-400">:</span>
+                    <div class="text-center">
+                        <span class="block text-4xl sm:text-5xl font-extrabold text-white" id="minutes">00</span>
+                        <span class="block text-sm sm:text-base text-blue-300">Minutes</span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl text-blue-400">:</span>
+                    <div class="text-center">
+                        <span class="block text-4xl sm:text-5xl font-extrabold text-white" id="seconds">00</span>
+                        <span class="block text-sm sm:text-base text-blue-300">Seconds</span>
+                    </div>
+                </div>
+                <a href="#purchase" class="inline-block gradient-button text-white font-bold py-4 px-8 rounded-full text-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    Get Instant Access Now!
+                </a>
+            </div>
 
-    <!-- Value Proposition / Problem & Solution Section -->
-    <section class="py-16 bg-gray-900 text-center px-4">
-        <div class="container mx-auto max-w-3xl">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-white">
-                Is Your Digital Life Draining Your Real Life?
-            </h2>
-            <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                In an always-on world, Gen Z faces unprecedented digital demands. Constant notifications, the pressure of online presence, and endless scrolling steal your time, focus, and peace of mind. But what if there was a path to harness technology, rather than be enslaved by it?
-            </p>
-            <p class="text-lg text-gray-300 leading-relaxed">
-                "The Mindful Digital Life" is your essential guide to navigating the digital landscape with purpose. We'll equip you with the strategies to regain control, reduce digital noise, and amplify your real-world experiences.
+            <p class="text-sm text-gray-300 mt-4">
+                Compatibility: For all iPhones running iOS 27 or newer.
             </p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 bg-gray-800 px-4">
-        <div class="container mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">
-                What You'll Discover Inside
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
-                    <h3 class="text-xl font-semibold mb-4 text-indigo-400">⚡ Digital Detox Playbook</h3>
-                    <p class="text-gray-300">Step-by-step guides to effectively disconnect and recharge, breaking free from constant digital stimulation. Learn to set boundaries that stick!</p>
-                </div>
-
-                <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
-                    <h3 class="text-xl font-semibold mb-4 text-indigo-400">📱 Minimalist Phone Mastery</h3>
-                    <p class="text-gray-300">Practical tips for decluttering your smartphone or embracing minimalist devices, turning your tech into a tool, not a distraction.</p>
-                </div>
-
-                <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
-                    <h3 class="text-xl font-semibold mb-4 text-indigo-400">🚫 Overcome FOMO & Comparison</h3>
-                    <p class="text-gray-300">Strategies to silence the fear of missing out and stop comparing your life to curated online highlight reels. Embrace your unique journey!</p>
-                </div>
-
-                <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
-                    <h3 class="text-xl font-semibold mb-4 text-indigo-400">📈 Boost Real-World Productivity</h3>
-                    <p class="text-gray-300">Unlock your focus and enhance your concentration to excel in studies, work, and personal projects without digital interruptions.</p>
-                </div>
-
-                <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
-                    <h3 class="text-xl font-semibold mb-4 text-indigo-400">🧘 Maximize Well-being & Presence</h3>
-                    <p class="text-gray-300">Cultivate mindfulness, improve sleep, and foster deeper connections in your offline life. Experience true presence!</p>
-                </div>
-
-                <div class="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
-                    <h3 class="text-xl font-semibold mb-4 text-indigo-400">🤝 Exclusive Private Community</h3>
-                    <p class="text-gray-300">Connect with like-minded Gen Z individuals on the same journey. Share insights, challenges, and celebrate wins in a supportive, ad-free space.</p>
-                </div>
-
+    <section class="py-16 sm:py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+                    What You'll Discover Inside 'Mastering iOS 27 AI'
+                </h2>
+                <p class="text-lg text-gray-400 max-w-3xl mx-auto">
+                    Transform your iPhone into the ultimate AI-powered assistant for every aspect of your life.
+                </p>
             </div>
-            <div class="mt-12 text-center">
-                <a href="#waitlist" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-lg">
-                    Join the Movement & Thrive
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-blue-500 mb-4 text-4xl">🚀</div>
+                    <h3 class="text-xl font-bold text-white mb-3">AI-Powered Productivity Hacks</h3>
+                    <p class="text-gray-300">Streamline your workflows, automate repetitive tasks, and manage your schedule with intelligent AI suggestions and tools.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-green-500 mb-4 text-4xl">🎨</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Unleash Creative Potential</h3>
+                    <p class="text-gray-300">Generate stunning visuals, compose unique music, and craft compelling content with AI-driven creative assistants right on your iPhone.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-purple-500 mb-4 text-4xl">🧠</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Smarter Daily Life Management</h3>
+                    <p class="text-gray-300">From personalized health insights to optimized travel plans, AI will make your daily routines effortless and more efficient.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-red-500 mb-4 text-4xl">📸</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Next-Gen AI Photography & Video</h3>
+                    <p class="text-gray-300">Master advanced editing, intelligent object recognition, and cinematic video modes powered by iOS 27's cutting-edge AI.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-yellow-500 mb-4 text-4xl">🔒</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Enhanced Privacy & Security</h3>
+                    <p class="text-gray-300">Understand and utilize iOS 27's new AI-driven privacy features to keep your data safe and secure.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-teal-500 mb-4 text-4xl">🎁</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Exclusive Bonus Modules</h3>
+                    <p class="text-gray-300">Gain access to limited-time bonus content covering advanced AI tricks, future predictions, and expert workflow integrations.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#purchase" class="inline-block gradient-button text-white font-bold py-3 px-7 rounded-full text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    Unlock All Features Today!
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Limited Time Offer / Countdown Section -->
-    <section class="py-16 bg-gray-900 text-center px-4">
-        <div class="container mx-auto max-w-4xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Launch Offer: Secure Your Spot & Exclusive Bonuses!
+    <!-- Waitlist / Early Bird Access Form Section -->
+    <section id="waitlist" class="py-16 sm:py-24 bg-gray-800 border-t border-gray-700">
+        <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+                Missed the Launch Offer? Join Our AI Mastery Community!
             </h2>
-            <p class="text-xl text-gray-300 mb-8">
-                The Mindful Digital Life is launching soon with limited early-bird access and special bonuses for our first members. Don't miss out!
-            </p>
-
-            <div id="countdown" class="flex justify-center flex-wrap mb-10">
-                <!-- Countdown segments will be populated by JS -->
-                <div class="countdown-segment">
-                    <span class="countdown-value" id="days">00</span>
-                    <span class="countdown-label">Days</span>
-                </div>
-                <div class="countdown-segment">
-                    <span class="countdown-value" id="hours">00</span>
-                    <span class="countdown-label">Hours</span>
-                </div>
-                <div class="countdown-segment">
-                    <span class="countdown-value" id="minutes">00</span>
-                    <span class="countdown-label">Minutes</span>
-                </div>
-                <div class="countdown-segment">
-                    <span class="countdown-value" id="seconds">00</span>
-                    <span class="countdown-label">Seconds</span>
-                </div>
-            </div>
-
             <p class="text-lg text-gray-400 mb-8">
-                Enrollment opens for a limited window. Ensure you're on the waitlist to be notified first and receive our exclusive launch discount and bonus content.
+                Be the first to know about future iOS AI courses, exclusive content, updates, and next-level discounts. Don't miss out on empowering your iPhone with the latest AI!
             </p>
-            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-lg">
-                Join the Waitlist Now!
-            </a>
-        </div>
-    </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 bg-gray-800 px-4">
-        <div class="container mx-auto max-w-md">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-8">
-                Ready to Reclaim Your Digital Life?
-            </h2>
-            <p class="text-lg text-center text-gray-300 mb-8">
-                Join the waitlist to be among the first to experience "The Mindful Digital Life." You'll receive updates, exclusive early-bird offers, and bonus content before anyone else!
-            </p>
-            <form class="bg-gray-700 p-8 rounded-lg shadow-xl">
+            <form class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700">
                 <div class="mb-6">
-                    <label for="name" class="block text-gray-200 text-sm font-bold mb-2">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name"
-                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 bg-gray-900 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500"
-                           required>
+                    <label for="name" class="sr-only">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required
+                        class="w-full px-5 py-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
                 </div>
                 <div class="mb-6">
-                    <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com"
-                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 bg-gray-900 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500"
-                           required>
+                    <label for="email" class="sr-only">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
+                        class="w-full px-5 py-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
                 </div>
-                <div class="flex items-center justify-center">
-                    <button type="submit"
-                            class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out w-full text-lg">
-                        Join the Waitlist
+                <div>
+                    <button type="submit" class="w-full gradient-button text-white font-bold py-3 px-6 rounded-lg text-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                        Join the Community
                     </button>
                 </div>
+                <p class="text-sm text-gray-500 mt-4">We respect your privacy. No spam, ever.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm px-4">
-        <div class="container mx-auto">
-            <p>&copy; 2023 The Mindful Digital Life. All rights reserved.</p>
-            <p class="mt-2">Designed for Gen Z, by digital life experts.</p>
+    <footer class="bg-gray-900 py-10 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center text-gray-500 text-sm">
+            <p>&copy; 2024 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="text-blue-400 hover:text-blue-300 mx-2">Privacy Policy</a>
+                <span class="text-gray-600">|</span>
+                <a href="#" class="text-blue-400 hover:text-blue-300 mx-2">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
+    <!-- Placeholder for Countdown JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the launch date to 30 days from today for demonstration purposes
-            const launchDate = new Date();
-            launchDate.setDate(launchDate.getDate() + 30); 
-            const countDownDate = launchDate.getTime();
+        // This script is a placeholder. For a live site, you would implement actual countdown logic here.
+        // The display elements with IDs "days", "hours", "minutes", "seconds" are ready for dynamic updates.
+        function updateCountdown() {
+            // Example target date (adjust as needed for actual launch offer expiration)
+            const targetDate = new Date();
+            targetDate.setDate(targetDate.getDate() + 10); // 10 days from now
+            targetDate.setHours(targetDate.getHours() + 5); // plus 5 hours
+            targetDate.setMinutes(targetDate.getMinutes() + 30); // plus 30 minutes
+            targetDate.setSeconds(targetDate.getSeconds() + 45); // plus 45 seconds
 
-            // Update the count down every 1 second
-            const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
 
-                // Get today's date and time
-                const now = new Date().getTime();
+            if (distance < 0) {
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+                // Optionally, update CTA or hide countdown if offer has expired
+                return;
+            }
 
-                // Find the distance between now and the count down date
-                const distance = countDownDate - now;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Time calculations for days, hours, minutes and seconds
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+        }
 
-                // Display the result in the corresponding elements
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-                // If the count down is finished, display a message
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<p class='text-xl text-green-400 font-bold'>Launch has begun! Check your inbox!</p>";
-                }
-            }, 1000);
-        });
+        // Call the function once to set initial values (e.g., to '00' or calculated values)
+        updateCountdown();
+        // In a live environment, you would call this function repeatedly:
+        // setInterval(updateCountdown, 1000); 
     </script>
-
 </body>
 </html>
