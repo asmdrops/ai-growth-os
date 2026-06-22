@@ -1,233 +1,205 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastering iOS 27 AI: Unlock Your iPhone's Full Potential</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <title>Foresight.AI: Hyper-Personalized Financial Foresight - AI-Powered Wealth Optimization</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
-        .gradient-button {
-            background-image: linear-gradient(to right, #4F46E5, #3B82F6, #0EA5E9);
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-        .gradient-button:hover {
-            background-image: linear-gradient(to left, #4F46E5, #3B82F6, #0EA5E9);
+        /* Custom animation for the waitlist background */
+        @keyframes pulse-gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
-        .hero-background-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
-        }
-        @media (min-width: 1024px) {
-            .hero-section {
-                background-attachment: fixed; /* Parallax effect for desktop */
-            }
+        .animate-pulse-gradient {
+            background-size: 200% 200%;
+            animation: pulse-gradient 10s ease infinite;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-950 text-gray-100 antialiased">
+
+    <!-- Header (Simple Brand Logo) -->
+    <header class="absolute top-0 left-0 right-0 z-20 p-4 md:p-6">
+        <nav class="container mx-auto flex justify-between items-center max-w-screen-xl">
+            <a href="#" class="text-3xl font-extrabold text-teal-400 drop-shadow-lg">Foresight.<span class="text-white">AI</span></a>
+            <!-- Could add a 'Login' or 'Support' here, but for a waitlist LP, simplicity is key. -->
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section class="relative h-screen bg-cover bg-center flex items-center justify-center text-center overflow-hidden hero-section"
-        style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-        <div class="absolute inset-0 hero-background-overlay"></div>
-        <div class="relative z-10 max-w-4xl mx-auto px-6 py-12">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6">
-                Master iOS 27 AI: Unlock Your iPhone's Full Potential
+    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden hero-bg">
+        <!-- Background Overlay for readability -->
+        <div class="absolute inset-0 bg-gradient-to-br from-black/80 via-purple-950/70 to-blue-950/80"></div>
+
+        <div class="relative z-10 container mx-auto px-4 md:px-8 max-w-4xl">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 text-white drop-shadow-lg">
+                <span class="text-teal-400">AI-Powered</span> Financial Foresight:<br>Unlock Your Wealth Potential.
             </h1>
-            <p class="text-lg sm:text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-                Go Beyond Siri. Discover practical AI features in iOS 27 that will revolutionize your productivity, ignite your creativity, and simplify your daily life.
+            <p class="text-lg md:text-xl lg:text-2xl mb-8 text-gray-200 leading-relaxed max-w-3xl mx-auto">
+                Go beyond basic tracking. Foresight.AI securely connects to your financial data, complementing <span class="font-semibold text-teal-300">Apple Wallet's iOS 27 insights</span>, to proactively guide your investments, optimize debt, and guarantee your financial future.
             </p>
-            
-            <!-- Limited Time Offer & Countdown -->
-            <div class="bg-blue-900 bg-opacity-70 border border-blue-700 rounded-xl p-6 mb-10 shadow-xl transform hover:scale-105 transition-transform duration-300">
-                <h2 class="text-2xl sm:text-3xl font-bold text-blue-100 mb-4">
-                    Exclusive Launch Offer: <span class="text-yellow-400">50% OFF & Premium Bonus Content!</span>
-                </h2>
-                <p class="text-blue-200 text-lg mb-4">
-                    This special discount and our comprehensive bonus modules are available for a limited time only!
-                </p>
-                <div class="flex justify-center items-center space-x-4 mb-6">
-                    <div class="text-center">
-                        <span class="block text-4xl sm:text-5xl font-extrabold text-white" id="days">00</span>
-                        <span class="block text-sm sm:text-base text-blue-300">Days</span>
-                    </div>
-                    <span class="text-4xl sm:text-5xl text-blue-400">:</span>
-                    <div class="text-center">
-                        <span class="block text-4xl sm:text-5xl font-extrabold text-white" id="hours">00</span>
-                        <span class="block text-sm sm:text-base text-blue-300">Hours</span>
-                    </div>
-                    <span class="text-4xl sm:text-5xl text-blue-400">:</span>
-                    <div class="text-center">
-                        <span class="block text-4xl sm:text-5xl font-extrabold text-white" id="minutes">00</span>
-                        <span class="block text-sm sm:text-base text-blue-300">Minutes</span>
-                    </div>
-                    <span class="text-4xl sm:text-5xl text-blue-400">:</span>
-                    <div class="text-center">
-                        <span class="block text-4xl sm:text-5xl font-extrabold text-white" id="seconds">00</span>
-                        <span class="block text-sm sm:text-base text-blue-300">Seconds</span>
-                    </div>
-                </div>
-                <a href="#purchase" class="inline-block gradient-button text-white font-bold py-4 px-8 rounded-full text-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    Get Instant Access Now!
+
+            <!-- Call to Action & Limited-Time Countdown -->
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
+                <a href="#waitlist" class="bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg transform hover:scale-105 transition-all duration-300">
+                    Join Early Access Waitlist
                 </a>
             </div>
-
-            <p class="text-sm text-gray-300 mt-4">
-                Compatibility: For all iPhones running iOS 27 or newer.
-            </p>
+            <div id="countdown" class="bg-gray-800/60 backdrop-blur-sm rounded-lg p-4 inline-flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 shadow-xl border border-gray-700">
+                <span class="text-orange-400 text-sm md:text-base font-semibold uppercase">Limited-Time Early Access Window:</span>
+                <div class="flex space-x-3 text-white text-2xl md:text-3xl font-bold">
+                    <span><span id="days">00</span><span class="text-gray-400 text-sm font-normal block sm:inline-block ml-1">D</span></span>
+                    <span><span id="hours">00</span><span class="text-gray-400 text-sm font-normal block sm:inline-block ml-1">H</span></span>
+                    <span><span id="minutes">00</span><span class="text-gray-400 text-sm font-normal block sm:inline-block ml-1">M</span></span>
+                    <span><span id="seconds">00</span><span class="text-gray-400 text-sm font-normal block sm:inline-block ml-1">S</span></span>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-24 bg-gray-900">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-                    What You'll Discover Inside 'Mastering iOS 27 AI'
-                </h2>
-                <p class="text-lg text-gray-400 max-w-3xl mx-auto">
-                    Transform your iPhone into the ultimate AI-powered assistant for every aspect of your life.
-                </p>
-            </div>
-
+    <section class="py-16 md:py-24 bg-gray-900 text-gray-100">
+        <div class="container mx-auto px-4 md:px-8 max-w-screen-xl">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-12 text-white">
+                How Foresight.AI <span class="text-teal-400">Transforms</span> Your Finances
+            </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-blue-500 mb-4 text-4xl">🚀</div>
-                    <h3 class="text-xl font-bold text-white mb-3">AI-Powered Productivity Hacks</h3>
-                    <p class="text-gray-300">Streamline your workflows, automate repetitive tasks, and manage your schedule with intelligent AI suggestions and tools.</p>
+                <!-- Feature Card 1 -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-2xl hover:shadow-teal-500/30 transition-shadow duration-300 border border-gray-700">
+                    <div class="text-teal-400 mb-4 text-4xl">🔮</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Hyper-Personalized Predictive AI</h3>
+                    <p class="text-gray-300">Our advanced AI analyzes your unique financial fingerprint to predict future states, identifying opportunities and risks before they arise. Never be caught off guard again.</p>
                 </div>
-
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-green-500 mb-4 text-4xl">🎨</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Unleash Creative Potential</h3>
-                    <p class="text-gray-300">Generate stunning visuals, compose unique music, and craft compelling content with AI-driven creative assistants right on your iPhone.</p>
+                <!-- Feature Card 2 -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-2xl hover:shadow-teal-500/30 transition-shadow duration-300 border border-gray-700">
+                    <div class="text-teal-400 mb-4 text-4xl">🔗</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Seamless & Secure Integrations</h3>
+                    <p class="text-gray-300">Connect effortlessly to your banks, investments, and credit cards via bank-grade secure APIs. Get a holistic view without manual data entry. <span class="font-semibold text-teal-300">Complements Apple Wallet's insights.</span></p>
                 </div>
-
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-purple-500 mb-4 text-4xl">🧠</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Smarter Daily Life Management</h3>
-                    <p class="text-gray-300">From personalized health insights to optimized travel plans, AI will make your daily routines effortless and more efficient.</p>
+                <!-- Feature Card 3 -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-2xl hover:shadow-teal-500/30 transition-shadow duration-300 border border-gray-700">
+                    <div class="text-teal-400 mb-4 text-4xl">📈</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Actionable Investment Strategies</h3>
+                    <p class="text-gray-300">Receive precise, data-driven recommendations for optimizing your portfolio, identifying specific "limited-time" investment opportunities tailored to your risk profile.</p>
                 </div>
-
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-red-500 mb-4 text-4xl">📸</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Next-Gen AI Photography & Video</h3>
-                    <p class="text-gray-300">Master advanced editing, intelligent object recognition, and cinematic video modes powered by iOS 27's cutting-edge AI.</p>
+                <!-- Feature Card 4 -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-2xl hover:shadow-teal-500/30 transition-shadow duration-300 border border-gray-700">
+                    <div class="text-teal-400 mb-4 text-4xl">💰</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Intelligent Debt Optimization</h3>
+                    <p class="text-gray-300">Our AI identifies the smartest path to eliminate debt faster, suggesting strategies that save you thousands in interest and improve your financial freedom.</p>
                 </div>
-
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-yellow-500 mb-4 text-4xl">🔒</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Enhanced Privacy & Security</h3>
-                    <p class="text-gray-300">Understand and utilize iOS 27's new AI-driven privacy features to keep your data safe and secure.</p>
+                <!-- Feature Card 5 -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-2xl hover:shadow-teal-500/30 transition-shadow duration-300 border border-gray-700">
+                    <div class="text-teal-400 mb-4 text-4xl">🎯</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Goal-Based Budgeting & Savings</h3>
+                    <p class="text-gray-300">Set and achieve your financial milestones with intelligent budgeting that adapts to your spending and income, guiding you directly to your goals.</p>
                 </div>
-
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-teal-500 mb-4 text-4xl">🎁</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Exclusive Bonus Modules</h3>
-                    <p class="text-gray-300">Gain access to limited-time bonus content covering advanced AI tricks, future predictions, and expert workflow integrations.</p>
+                <!-- Feature Card 6 -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-2xl hover:shadow-teal-500/30 transition-shadow duration-300 border border-gray-700">
+                    <div class="text-teal-400 mb-4 text-4xl">🔒</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Bank-Grade Security & Privacy</h3>
+                    <p class="text-gray-300">Your financial data is protected with industry-leading encryption and security protocols. We never store your credentials and never sell your data.</p>
                 </div>
-            </div>
-            
-            <div class="text-center mt-12">
-                <a href="#purchase" class="inline-block gradient-button text-white font-bold py-3 px-7 rounded-full text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    Unlock All Features Today!
-                </a>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / Early Bird Access Form Section -->
-    <section id="waitlist" class="py-16 sm:py-24 bg-gray-800 border-t border-gray-700">
-        <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-                Missed the Launch Offer? Join Our AI Mastery Community!
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gray-950 text-gray-100 relative overflow-hidden">
+        <!-- Animated gradient background -->
+        <div class="absolute inset-0 z-0 opacity-10 bg-gradient-to-br from-purple-800 to-blue-800 animate-pulse-gradient"></div>
+        <div class="relative z-10 container mx-auto px-4 md:px-8 max-w-3xl text-center">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-8 text-white">
+                Be Among The First. <span class="text-teal-400">Join the Waitlist!</span>
             </h2>
-            <p class="text-lg text-gray-400 mb-8">
-                Be the first to know about future iOS AI courses, exclusive content, updates, and next-level discounts. Don't miss out on empowering your iPhone with the latest AI!
+            <p class="text-lg md:text-xl mb-8 text-gray-300">
+                Unlock early access, exclusive features, and special launch pricing. Limited spots available for initial beta.
             </p>
-
-            <form class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700">
-                <div class="mb-6">
-                    <label for="name" class="sr-only">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required
-                        class="w-full px-5 py-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
+            <form action="#" method="POST" class="bg-gray-800/70 backdrop-blur-md rounded-xl p-8 shadow-2xl border border-gray-700">
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Your Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required
+                           class="shadow appearance-none border border-gray-600 rounded-lg w-full py-3 px-4 text-gray-900 leading-tight focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-gray-200">
                 </div>
-                <div class="mb-6">
-                    <label for="email" class="sr-only">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
-                        class="w-full px-5 py-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
-                </div>
-                <div>
-                    <button type="submit" class="w-full gradient-button text-white font-bold py-3 px-6 rounded-lg text-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                        Join the Community
-                    </button>
-                </div>
-                <p class="text-sm text-gray-500 mt-4">We respect your privacy. No spam, ever.</p>
+                <button type="submit"
+                        class="w-full bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg transform hover:scale-105 transition-all duration-300">
+                    Secure My Spot Now
+                </button>
+                <p class="mt-4 text-sm text-gray-400">We respect your privacy and will never share your email.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center text-gray-500 text-sm">
-            <p>&copy; 2024 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">
-                <a href="#" class="text-blue-400 hover:text-blue-300 mx-2">Privacy Policy</a>
-                <span class="text-gray-600">|</span>
-                <a href="#" class="text-blue-400 hover:text-blue-300 mx-2">Terms of Service</a>
-            </p>
+    <footer class="bg-gray-900 py-8 text-gray-400 text-center text-sm border-t border-gray-800">
+        <div class="container mx-auto px-4 md:px-8">
+            <p>&copy; 2023 Foresight.AI. All rights reserved.</p>
+            <p class="mt-2">Leveraging AI to empower your financial future. <a href="#" class="text-teal-400 hover:underline">Privacy Policy</a> | <a href="#" class="text-teal-400 hover:underline">Terms of Service</a></p>
         </div>
     </footer>
 
-    <!-- Placeholder for Countdown JavaScript -->
+    <!-- Countdown Script -->
     <script>
-        // This script is a placeholder. For a live site, you would implement actual countdown logic here.
-        // The display elements with IDs "days", "hours", "minutes", "seconds" are ready for dynamic updates.
-        function updateCountdown() {
-            // Example target date (adjust as needed for actual launch offer expiration)
-            const targetDate = new Date();
-            targetDate.setDate(targetDate.getDate() + 10); // 10 days from now
-            targetDate.setHours(targetDate.getHours() + 5); // plus 5 hours
-            targetDate.setMinutes(targetDate.getMinutes() + 30); // plus 30 minutes
-            targetDate.setSeconds(targetDate.getSeconds() + 45); // plus 45 seconds
+        function setupCountdown(endDate) {
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
 
-            const now = new Date().getTime();
-            const distance = targetDate - now;
-
-            if (distance < 0) {
-                document.getElementById("days").innerHTML = "00";
-                document.getElementById("hours").innerHTML = "00";
-                document.getElementById("minutes").innerHTML = "00";
-                document.getElementById("seconds").innerHTML = "00";
-                // Optionally, update CTA or hide countdown if offer has expired
+            if (!daysEl || !hoursEl || !minutesEl || !secondsEl) {
+                console.error("Countdown elements not found.");
                 return;
             }
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            const countdownInterval = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = endDate - now;
 
-            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    daysEl.textContent = "00";
+                    hoursEl.textContent = "00";
+                    minutesEl.textContent = "00";
+                    secondsEl.textContent = "00";
+                    // Optional: Update CTA or message
+                    const countdownContainer = document.getElementById('countdown');
+                    if(countdownContainer) {
+                        countdownContainer.innerHTML = '<span class="text-orange-400 text-sm md:text-base font-semibold uppercase">Early Access Period Ended! Join the waitlist for future updates.</span>';
+                    }
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                daysEl.textContent = String(days).padStart(2, '0');
+                hoursEl.textContent = String(hours).padStart(2, '0');
+                minutesEl.textContent = String(minutes).padStart(2, '0');
+                secondsEl.textContent = String(seconds).padStart(2, '0');
+            }, 1000);
         }
 
-        // Call the function once to set initial values (e.g., to '00' or calculated values)
-        updateCountdown();
-        // In a live environment, you would call this function repeatedly:
-        // setInterval(updateCountdown, 1000); 
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set the end date for the countdown (e.g., 7 days from now)
+            const countdownEndDate = new Date();
+            countdownEndDate.setDate(countdownEndDate.getDate() + 7); // 7 days from the current date
+
+            setupCountdown(countdownEndDate.getTime());
+        });
     </script>
 </body>
 </html>
