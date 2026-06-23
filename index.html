@@ -3,202 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foresight.AI: Hyper-Personalized Financial Foresight - AI-Powered Wealth Optimization</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Prime Day Tech Deal Navigator - Unlock Top Deals Now!</title>
+    <meta name="description" content="Don't miss a single Prime Day tech deal. Subscribe to our daily curated newsletter for the top 5 deals in premium audio, computing, and more, before Prime Day ends!">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .hero-bg {
+        /* Custom styles for dark overlay and subtle animations */
+        .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
         }
-        /* Custom animation for the waitlist background */
-        @keyframes pulse-gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        .gradient-overlay {
+            background: linear-gradient(to bottom, rgba(17, 24, 39, 0.7) 0%, rgba(17, 24, 39, 0.95) 100%);
         }
-        .animate-pulse-gradient {
-            background-size: 200% 200%;
-            animation: pulse-gradient 10s ease infinite;
+        @keyframes pulse-once {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
         }
+        .animate-pulse-once {
+            animation: pulse-once 1.5s ease-out 1;
+        }
+        /* Fluid Typography - fallback for older browsers, Tailwind handles most of this */
+        h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+        h2 { font-size: clamp(2rem, 5vw, 3rem); }
+        p { font-size: clamp(1rem, 2vw, 1.125rem); }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 antialiased">
-
-    <!-- Header (Simple Brand Logo) -->
-    <header class="absolute top-0 left-0 right-0 z-20 p-4 md:p-6">
-        <nav class="container mx-auto flex justify-between items-center max-w-screen-xl">
-            <a href="#" class="text-3xl font-extrabold text-teal-400 drop-shadow-lg">Foresight.<span class="text-white">AI</span></a>
-            <!-- Could add a 'Login' or 'Support' here, but for a waitlist LP, simplicity is key. -->
-        </nav>
-    </header>
+<body class="bg-gray-900 text-gray-50 font-sans antialiased">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden hero-bg">
-        <!-- Background Overlay for readability -->
-        <div class="absolute inset-0 bg-gradient-to-br from-black/80 via-purple-950/70 to-blue-950/80"></div>
-
-        <div class="relative z-10 container mx-auto px-4 md:px-8 max-w-4xl">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 text-white drop-shadow-lg">
-                <span class="text-teal-400">AI-Powered</span> Financial Foresight:<br>Unlock Your Wealth Potential.
+    <header class="relative hero-background min-h-screen flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
+        <div class="absolute inset-0 gradient-overlay"></div>
+        <div class="relative z-10 max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 animate-pulse-once">
+                ⚡ Don't Miss a Single Prime Day Tech Steal. <br class="hidden sm:inline"> Your Ultimate Deal Navigator is Here!
             </h1>
-            <p class="text-lg md:text-xl lg:text-2xl mb-8 text-gray-200 leading-relaxed max-w-3xl mx-auto">
-                Go beyond basic tracking. Foresight.AI securely connects to your financial data, complementing <span class="font-semibold text-teal-300">Apple Wallet's iOS 27 insights</span>, to proactively guide your investments, optimize debt, and guarantee your financial future.
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+                Unlock daily curated lists of the <span class="text-teal-400 font-bold">top 5 must-have deals</span> across premium audio, high-performance computing, smart home & more. Up to <span class="text-indigo-400 font-bold">54% off</span> – but not for long!
             </p>
 
-            <!-- Call to Action & Limited-Time Countdown -->
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
-                <a href="#waitlist" class="bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg transform hover:scale-105 transition-all duration-300">
-                    Join Early Access Waitlist
-                </a>
-            </div>
-            <div id="countdown" class="bg-gray-800/60 backdrop-blur-sm rounded-lg p-4 inline-flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 shadow-xl border border-gray-700">
-                <span class="text-orange-400 text-sm md:text-base font-semibold uppercase">Limited-Time Early Access Window:</span>
-                <div class="flex space-x-3 text-white text-2xl md:text-3xl font-bold">
-                    <span><span id="days">00</span><span class="text-gray-400 text-sm font-normal block sm:inline-block ml-1">D</span></span>
-                    <span><span id="hours">00</span><span class="text-gray-400 text-sm font-normal block sm:inline-block ml-1">H</span></span>
-                    <span><span id="minutes">00</span><span class="text-gray-400 text-sm font-normal block sm:inline-block ml-1">M</span></span>
-                    <span><span id="seconds">00</span><span class="text-gray-400 text-sm font-normal block sm:inline-block ml-1">S</span></span>
+            <!-- Limited Time Countdown -->
+            <div class="bg-gradient-to-r from-indigo-600 to-purple-700 p-6 rounded-xl shadow-2xl mb-12 transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">
+                    Prime Day Ends In:
+                </h3>
+                <div id="countdown" class="flex justify-center space-x-4 sm:space-x-8 text-white font-mono text-4xl sm:text-5xl lg:text-6xl">
+                    <div>
+                        <span id="days" class="block">00</span>
+                        <span class="text-sm sm:text-base block text-gray-200">Days</span>
+                    </div>
+                    <div>
+                        <span id="hours" class="block">00</span>
+                        <span class="text-sm sm:text-base block text-gray-200">Hours</span>
+                    </div>
+                    <div>
+                        <span id="minutes" class="block">00</span>
+                        <span class="text-sm sm:text-base block text-gray-200">Minutes</span>
+                    </div>
+                    <div>
+                        <span id="seconds" class="block">00</span>
+                        <span class="text-sm sm:text-base block text-gray-200">Seconds</span>
+                    </div>
                 </div>
             </div>
+
+            <!-- Waitlist Form CTA -->
+            <div class="max-w-md mx-auto bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 animate-fade-in delay-200">
+                <p class="text-lg text-gray-300 mb-4">
+                    Enter your email to get instant access to the <span class="text-teal-400 font-semibold">Prime Day Deal Navigator</span> daily emails!
+                </p>
+                <form id="waitlist-form" action="#" method="POST" class="flex flex-col sm:flex-row gap-4">
+                    <input type="email" name="email" id="email-input" placeholder="Your best email address" required
+                           class="flex-grow px-5 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent placeholder-gray-400 text-base">
+                    <button type="submit"
+                            class="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900 text-base sm:w-auto w-full">
+                        Get Instant Access &rarr;
+                    </button>
+                </form>
+                <p class="text-xs text-gray-400 mt-4">
+                    We respect your privacy. Unsubscribe anytime. No spam, just deals!
+                </p>
+                <div id="form-message" class="mt-4 text-center text-green-400 hidden"></div>
+            </div>
+
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900 text-gray-100">
-        <div class="container mx-auto px-4 md:px-8 max-w-screen-xl">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-12 text-white">
-                How Foresight.AI <span class="text-teal-400">Transforms</span> Your Finances
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white text-center mb-12 leading-tight">
+                Why Our Navigator is Your Prime Day Secret Weapon
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature Card 1 -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-2xl hover:shadow-teal-500/30 transition-shadow duration-300 border border-gray-700">
-                    <div class="text-teal-400 mb-4 text-4xl">🔮</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Hyper-Personalized Predictive AI</h3>
-                    <p class="text-gray-300">Our advanced AI analyzes your unique financial fingerprint to predict future states, identifying opportunities and risks before they arise. Never be caught off guard again.</p>
-                </div>
-                <!-- Feature Card 2 -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-2xl hover:shadow-teal-500/30 transition-shadow duration-300 border border-gray-700">
-                    <div class="text-teal-400 mb-4 text-4xl">🔗</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Seamless & Secure Integrations</h3>
-                    <p class="text-gray-300">Connect effortlessly to your banks, investments, and credit cards via bank-grade secure APIs. Get a holistic view without manual data entry. <span class="font-semibold text-teal-300">Complements Apple Wallet's insights.</span></p>
-                </div>
-                <!-- Feature Card 3 -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-2xl hover:shadow-teal-500/30 transition-shadow duration-300 border border-gray-700">
-                    <div class="text-teal-400 mb-4 text-4xl">📈</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Actionable Investment Strategies</h3>
-                    <p class="text-gray-300">Receive precise, data-driven recommendations for optimizing your portfolio, identifying specific "limited-time" investment opportunities tailored to your risk profile.</p>
-                </div>
-                <!-- Feature Card 4 -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-2xl hover:shadow-teal-500/30 transition-shadow duration-300 border border-gray-700">
-                    <div class="text-teal-400 mb-4 text-4xl">💰</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Intelligent Debt Optimization</h3>
-                    <p class="text-gray-300">Our AI identifies the smartest path to eliminate debt faster, suggesting strategies that save you thousands in interest and improve your financial freedom.</p>
-                </div>
-                <!-- Feature Card 5 -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-2xl hover:shadow-teal-500/30 transition-shadow duration-300 border border-gray-700">
-                    <div class="text-teal-400 mb-4 text-4xl">🎯</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Goal-Based Budgeting & Savings</h3>
-                    <p class="text-gray-300">Set and achieve your financial milestones with intelligent budgeting that adapts to your spending and income, guiding you directly to your goals.</p>
-                </div>
-                <!-- Feature Card 6 -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-2xl hover:shadow-teal-500/30 transition-shadow duration-300 border border-gray-700">
-                    <div class="text-teal-400 mb-4 text-4xl">🔒</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Bank-Grade Security & Privacy</h3>
-                    <p class="text-gray-300">Your financial data is protected with industry-leading encryption and security protocols. We never store your credentials and never sell your data.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gray-950 text-gray-100 relative overflow-hidden">
-        <!-- Animated gradient background -->
-        <div class="absolute inset-0 z-0 opacity-10 bg-gradient-to-br from-purple-800 to-blue-800 animate-pulse-gradient"></div>
-        <div class="relative z-10 container mx-auto px-4 md:px-8 max-w-3xl text-center">
-            <h2 class="text-3xl md:text-5xl font-extrabold mb-8 text-white">
-                Be Among The First. <span class="text-teal-400">Join the Waitlist!</span>
-            </h2>
-            <p class="text-lg md:text-xl mb-8 text-gray-300">
-                Unlock early access, exclusive features, and special launch pricing. Limited spots available for initial beta.
-            </p>
-            <form action="#" method="POST" class="bg-gray-800/70 backdrop-blur-md rounded-xl p-8 shadow-2xl border border-gray-700">
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Your Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required
-                           class="shadow appearance-none border border-gray-600 rounded-lg w-full py-3 px-4 text-gray-900 leading-tight focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-gray-200">
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out group">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-teal-400 mr-4 group-hover:animate-bounce">🔍</span>
+                        <h3 class="text-2xl font-bold text-white group-hover:text-teal-300">Hyper-Curated Lists</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        No more endless scrolling through thousands of mediocre offers. We deliver only the top 5, hand-picked deals directly to your inbox daily.
+                    </p>
                 </div>
-                <button type="submit"
-                        class="w-full bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg transform hover:scale-105 transition-all duration-300">
-                    Secure My Spot Now
-                </button>
-                <p class="mt-4 text-sm text-gray-400">We respect your privacy and will never share your email.</p>
-            </form>
+
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out group">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-indigo-400 mr-4 group-hover:animate-pulse">⚡</span>
+                        <h3 class="text-2xl font-bold text-white group-hover:text-indigo-300">Category-Specific Focus</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Whether it's premium audio from Bose, powerful computing from Apple, or smart gadgets from Anker, we cover the tech categories you care about most.
+                    </p>
+                </div>
+
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out group">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-purple-400 mr-4 group-hover:animate-spin">⏰</span>
+                        <h3 class="text-2xl font-bold text-white group-hover:text-purple-300">Real-Time Deal Alerts</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Prime Day deals can vanish fast. Our timely updates ensure you're always ahead of the curve, never missing a flash sale or limited stock item.
+                    </p>
+                </div>
+
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out group">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-orange-400 mr-4 group-hover:animate-wiggle">💰</span>
+                        <h3 class="text-2xl font-bold text-white group-hover:text-orange-300">Save Smarter, Not Harder</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Maximize your savings on high-quality tech. We identify the true discounts and genuine opportunities to upgrade your gear for less.
+                    </p>
+                </div>
+
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out group">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-green-400 mr-4 group-hover:animate-heartbeat">✅</span>
+                        <h3 class="text-2xl font-bold text-white group-hover:text-green-300">Expert Vetted & Tested</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Our team of tech enthusiasts sifts through thousands of deals, verifying product quality and actual value so you can shop with confidence.
+                    </p>
+                </div>
+
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out group">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-cyan-400 mr-4 group-hover:animate-bounce-y">🚀</span>
+                        <h3 class="text-2xl font-bold text-white group-hover:text-cyan-300">Future-Proof Your Setup</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        From cutting-edge processors to immersive audio gear, get the latest tech innovations that will elevate your digital life.
+                    </p>
+                </div>
+
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-gray-400 text-center text-sm border-t border-gray-800">
-        <div class="container mx-auto px-4 md:px-8">
-            <p>&copy; 2023 Foresight.AI. All rights reserved.</p>
-            <p class="mt-2">Leveraging AI to empower your financial future. <a href="#" class="text-teal-400 hover:underline">Privacy Policy</a> | <a href="#" class="text-teal-400 hover:underline">Terms of Service</a></p>
+    <footer class="bg-gray-800 py-10 px-4 sm:px-6 lg:px-8 text-center text-gray-400 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto">
+            <p>&copy; 2023 Prime Day Tech Deals. All rights reserved.</p>
+            <p class="mt-2 text-sm">
+                *Prime Day is a registered trademark of Amazon. This newsletter is an independent curation service.
+            </p>
         </div>
     </footer>
 
-    <!-- Countdown Script -->
     <script>
-        function setupCountdown(endDate) {
-            const daysEl = document.getElementById('days');
-            const hoursEl = document.getElementById('hours');
-            const minutesEl = document.getElementById('minutes');
-            const secondsEl = document.getElementById('seconds');
+        // Custom Tailwind animation for group-hover:animate-bounce-y
+        // This would typically be defined in a Tailwind config or via postcss plugins
+        // For raw HTML, we'd need to simulate or use pre-defined keyframes if not using CDN with full JIT capabilities
+        // For simplicity, let's assume `animate-bounce-y` behaves like a vertical bounce
+        // We'll define simple keyframes for demonstration within the style block.
+        // Adding custom keyframes to the <style> tag
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes bounce-y {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-10px); }
+            }
+            .group-hover\\:animate-bounce-y:hover {
+                animation: bounce-y 0.6s ease-in-out infinite;
+            }
+            /* Add other custom animations if needed, e.g., for heart beat, wiggle */
+            @keyframes heartbeat {
+                0% { transform: scale(1); }
+                14% { transform: scale(1.03); }
+                28% { transform: scale(1); }
+                42% { transform: scale(1.03); }
+                70%, 100% { transform: scale(1); }
+            }
+            .group-hover\\:animate-heartbeat:hover {
+                animation: heartbeat 1.5s ease-in-out infinite;
+            }
+            @keyframes wiggle {
+                0%, 7% {
+                    transform: rotateZ(0);
+                }
+                15% {
+                    transform: rotateZ(-15deg);
+                }
+                20% {
+                    transform: rotateZ(10deg);
+                }
+                25% {
+                    transform: rotateZ(-10deg);
+                }
+                30% {
+                    transform: rotateZ(6deg);
+                }
+                35% {
+                    transform: rotateZ(-4deg);
+                }
+                40%, 100% {
+                    transform: rotateZ(0);
+                }
+            }
+            .group-hover\\:animate-wiggle:hover {
+                animation: wiggle 2s infinite;
+            }
+        `;
+        document.head.appendChild(style);
 
-            if (!daysEl || !hoursEl || !minutesEl || !secondsEl) {
-                console.error("Countdown elements not found.");
+
+        // Countdown Logic
+        const countdownDate = new Date();
+        // Set Prime Day to end in roughly 2 days and a few hours from when the page loads
+        // For a real application, this date would be fixed to actual Prime Day end.
+        countdownDate.setDate(countdownDate.getDate() + 2);
+        countdownDate.setHours(countdownDate.getHours() + 10);
+        countdownDate.setMinutes(countdownDate.getMinutes() + 30);
+        countdownDate.setSeconds(countdownDate.getSeconds() + 0);
+
+        const daysSpan = document.getElementById('days');
+        const hoursSpan = document.getElementById('hours');
+        const minutesSpan = document.getElementById('minutes');
+        const secondsSpan = document.getElementById('seconds');
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('countdown').innerHTML = "<span class='text-red-400'>Prime Day Has Ended!</span>";
                 return;
             }
 
-            const countdownInterval = setInterval(() => {
-                const now = new Date().getTime();
-                const distance = endDate - now;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                if (distance < 0) {
-                    clearInterval(countdownInterval);
-                    daysEl.textContent = "00";
-                    hoursEl.textContent = "00";
-                    minutesEl.textContent = "00";
-                    secondsEl.textContent = "00";
-                    // Optional: Update CTA or message
-                    const countdownContainer = document.getElementById('countdown');
-                    if(countdownContainer) {
-                        countdownContainer.innerHTML = '<span class="text-orange-400 text-sm md:text-base font-semibold uppercase">Early Access Period Ended! Join the waitlist for future updates.</span>';
-                    }
-                    return;
-                }
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                daysEl.textContent = String(days).padStart(2, '0');
-                hoursEl.textContent = String(hours).padStart(2, '0');
-                minutesEl.textContent = String(minutes).padStart(2, '0');
-                secondsEl.textContent = String(seconds).padStart(2, '0');
-            }, 1000);
+            daysSpan.innerHTML = String(days).padStart(2, '0');
+            hoursSpan.innerHTML = String(hours).padStart(2, '0');
+            minutesSpan.innerHTML = String(minutes).padStart(2, '0');
+            secondsSpan.innerHTML = String(seconds).padStart(2, '0');
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            // Set the end date for the countdown (e.g., 7 days from now)
-            const countdownEndDate = new Date();
-            countdownEndDate.setDate(countdownEndDate.getDate() + 7); // 7 days from the current date
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call to display immediately
 
-            setupCountdown(countdownEndDate.getTime());
+        // Form submission logic
+        document.getElementById('waitlist-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            const emailInput = document.getElementById('email-input');
+            const formMessage = document.getElementById('form-message');
+
+            if (emailInput.validity.valid) {
+                // In a real application, you would send this email to your backend/ESP
+                // For demonstration, we'll just show a success message.
+                formMessage.textContent = '🎉 You\'re on the list! Check your inbox soon.';
+                formMessage.classList.remove('hidden', 'text-red-400');
+                formMessage.classList.add('text-green-400');
+                emailInput.value = ''; // Clear the input
+            } else {
+                formMessage.textContent = 'Please enter a valid email address.';
+                formMessage.classList.remove('hidden', 'text-green-400');
+                formMessage.classList.add('text-red-400');
+            }
+            formMessage.classList.remove('hidden');
         });
     </script>
 </body>
