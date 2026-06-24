@@ -3,291 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prime Day Tech Deal Navigator - Unlock Top Deals Now!</title>
-    <meta name="description" content="Don't miss a single Prime Day tech deal. Subscribe to our daily curated newsletter for the top 5 deals in premium audio, computing, and more, before Prime Day ends!">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Prime Day Smart Shopper's Newsletter - WFH Productivity Tech</title>
+    <meta name="description" content="Unlock the best Work From Home Productivity Tech deals during Prime Day. Deeply vetted, historical price analysis, productivity scores, and expert reviews delivered daily.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for dark overlay and subtle animations */
+        /* Custom styles for dark overlay and hero background */
         .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
         }
-        .gradient-overlay {
-            background: linear-gradient(to bottom, rgba(17, 24, 39, 0.7) 0%, rgba(17, 24, 39, 0.95) 100%);
+        .dark-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Slightly darker overlay for premium feel */
         }
-        @keyframes pulse-once {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-            100% { transform: scale(1); }
+        /* Hide scrollbar for a cleaner look if overflow is needed for small elements */
+        body {
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none;    /* Firefox */
         }
-        .animate-pulse-once {
-            animation: pulse-once 1.5s ease-out 1;
+        body::-webkit-scrollbar {
+            display: none;            /* Chrome, Safari, Opera */
         }
-        /* Fluid Typography - fallback for older browsers, Tailwind handles most of this */
-        h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
-        h2 { font-size: clamp(2rem, 5vw, 3rem); }
-        p { font-size: clamp(1rem, 2vw, 1.125rem); }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-50 font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="relative hero-background min-h-screen flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
-        <div class="absolute inset-0 gradient-overlay"></div>
-        <div class="relative z-10 max-w-7xl mx-auto text-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 animate-pulse-once">
-                ⚡ Don't Miss a Single Prime Day Tech Steal. <br class="hidden sm:inline"> Your Ultimate Deal Navigator is Here!
+    <header class="relative hero-background min-h-screen flex items-center justify-center p-4">
+        <div class="absolute inset-0 dark-overlay"></div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center space-y-8 md:space-y-12 py-16">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white drop-shadow-lg">
+                <span class="text-blue-400">Prime Day Perfected:</span> Your Smart Guide to WFH Tech Deals
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-                Unlock daily curated lists of the <span class="text-teal-400 font-bold">top 5 must-have deals</span> across premium audio, high-performance computing, smart home & more. Up to <span class="text-indigo-400 font-bold">54% off</span> – but not for long!
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 leading-relaxed max-w-3xl mx-auto">
+                Stop sifting through endless deals and start saving strategically. Get daily, deeply vetted insights on Work From Home Productivity Tech, ensuring you only buy true discounts that elevate your workflow.
             </p>
 
-            <!-- Limited Time Countdown -->
-            <div class="bg-gradient-to-r from-indigo-600 to-purple-700 p-6 rounded-xl shadow-2xl mb-12 transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">
-                    Prime Day Ends In:
-                </h3>
-                <div id="countdown" class="flex justify-center space-x-4 sm:space-x-8 text-white font-mono text-4xl sm:text-5xl lg:text-6xl">
-                    <div>
+            <!-- Limited Time Countdown & CTA -->
+            <div class="bg-gray-800 bg-opacity-80 border border-blue-600 rounded-xl p-6 sm:p-8 shadow-2xl max-w-xl mx-auto flex flex-col items-center space-y-6">
+                <h3 class="text-2xl sm:text-3xl font-bold text-blue-400">Special Early Access Offer Ends In:</h3>
+                <div id="countdown" class="grid grid-cols-4 gap-4 text-white font-mono text-4xl sm:text-5xl md:text-6xl font-bold">
+                    <div class="flex flex-col items-center">
                         <span id="days" class="block">00</span>
-                        <span class="text-sm sm:text-base block text-gray-200">Days</span>
+                        <span class="text-sm sm:text-base text-gray-400 mt-1">Days</span>
                     </div>
-                    <div>
+                    <div class="flex flex-col items-center">
                         <span id="hours" class="block">00</span>
-                        <span class="text-sm sm:text-base block text-gray-200">Hours</span>
+                        <span class="text-sm sm:text-base text-gray-400 mt-1">Hours</span>
                     </div>
-                    <div>
+                    <div class="flex flex-col items-center">
                         <span id="minutes" class="block">00</span>
-                        <span class="text-sm sm:text-base block text-gray-200">Minutes</span>
+                        <span class="text-sm sm:text-base text-gray-400 mt-1">Minutes</span>
                     </div>
-                    <div>
+                    <div class="flex flex-col items-center">
                         <span id="seconds" class="block">00</span>
-                        <span class="text-sm sm:text-base block text-gray-200">Seconds</span>
+                        <span class="text-sm sm:text-base text-gray-400 mt-1">Seconds</span>
                     </div>
                 </div>
+                <a href="#waitlist-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl sm:text-2xl transition duration-300 transform hover:scale-105 shadow-lg">
+                    Secure Your Prime Day Edge Now!
+                </a>
+                <p class="text-sm text-gray-400">Limited spots available for early access to our Prime Day 2024 curated deals.</p>
             </div>
-
-            <!-- Waitlist Form CTA -->
-            <div class="max-w-md mx-auto bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 animate-fade-in delay-200">
-                <p class="text-lg text-gray-300 mb-4">
-                    Enter your email to get instant access to the <span class="text-teal-400 font-semibold">Prime Day Deal Navigator</span> daily emails!
-                </p>
-                <form id="waitlist-form" action="#" method="POST" class="flex flex-col sm:flex-row gap-4">
-                    <input type="email" name="email" id="email-input" placeholder="Your best email address" required
-                           class="flex-grow px-5 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent placeholder-gray-400 text-base">
-                    <button type="submit"
-                            class="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900 text-base sm:w-auto w-full">
-                        Get Instant Access &rarr;
-                    </button>
-                </form>
-                <p class="text-xs text-gray-400 mt-4">
-                    We respect your privacy. Unsubscribe anytime. No spam, just deals!
-                </p>
-                <div id="form-message" class="mt-4 text-center text-green-400 hidden"></div>
-            </div>
-
         </div>
     </header>
 
     <!-- Features Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white text-center mb-12 leading-tight">
-                Why Our Navigator is Your Prime Day Secret Weapon
-            </h2>
+    <section class="py-16 md:py-24 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-blue-400">What You'll Get: Intelligence, Not Noise</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out group">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl text-teal-400 mr-4 group-hover:animate-bounce">🔍</span>
-                        <h3 class="text-2xl font-bold text-white group-hover:text-teal-300">Hyper-Curated Lists</h3>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed">
-                        No more endless scrolling through thousands of mediocre offers. We deliver only the top 5, hand-picked deals directly to your inbox daily.
-                    </p>
+                <!-- Feature 1: Deeply Vetted Deals -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-blue-400 mb-4">💡</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-white">Deeply Vetted Deals</h3>
+                    <p class="text-gray-300">No more endless scrolling. Our experts handpick 3-5 top Work From Home tech deals daily, saving you hours of research time.</p>
                 </div>
 
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out group">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl text-indigo-400 mr-4 group-hover:animate-pulse">⚡</span>
-                        <h3 class="text-2xl font-bold text-white group-hover:text-indigo-300">Category-Specific Focus</h3>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed">
-                        Whether it's premium audio from Bose, powerful computing from Apple, or smart gadgets from Anker, we cover the tech categories you care about most.
-                    </p>
+                <!-- Feature 2: True Discount Analysis -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-blue-400 mb-4">📈</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-white">True Discount Analysis</h3>
+                    <p class="text-gray-300">We verify every deal with historical price data, ensuring you're getting a genuine discount, not a misleading markdown.</p>
                 </div>
 
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out group">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl text-purple-400 mr-4 group-hover:animate-spin">⏰</span>
-                        <h3 class="text-2xl font-bold text-white group-hover:text-purple-300">Real-Time Deal Alerts</h3>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed">
-                        Prime Day deals can vanish fast. Our timely updates ensure you're always ahead of the curve, never missing a flash sale or limited stock item.
-                    </p>
+                <!-- Feature 3: Productivity Score -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-blue-400 mb-4">🚀</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-white">Productivity Score</h3>
+                    <p class="text-gray-300">Each product comes with a unique 'Productivity Score' so you can instantly see its potential impact on your daily workflow.</p>
                 </div>
 
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out group">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl text-orange-400 mr-4 group-hover:animate-wiggle">💰</span>
-                        <h3 class="text-2xl font-bold text-white group-hover:text-orange-300">Save Smarter, Not Harder</h3>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed">
-                        Maximize your savings on high-quality tech. We identify the true discounts and genuine opportunities to upgrade your gear for less.
-                    </p>
+                <!-- Feature 4: Concise Expert Reviews -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-blue-400 mb-4">✍️</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-white">Concise Expert Reviews</h3>
+                    <p class="text-gray-300">Read short, unbiased expert opinions on each product, helping you make informed decisions quickly.</p>
                 </div>
 
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out group">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl text-green-400 mr-4 group-hover:animate-heartbeat">✅</span>
-                        <h3 class="text-2xl font-bold text-white group-hover:text-green-300">Expert Vetted & Tested</h3>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed">
-                        Our team of tech enthusiasts sifts through thousands of deals, verifying product quality and actual value so you can shop with confidence.
-                    </p>
+                <!-- Feature 5: Time-Saving Efficiency -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-blue-400 mb-4">⏰</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-white">Time-Saving Efficiency</h3>
+                    <p class="text-gray-300">Stop wasting precious time searching. We bring the best, relevant deals directly to your inbox, ready for you to act on.</p>
                 </div>
 
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out group">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl text-cyan-400 mr-4 group-hover:animate-bounce-y">🚀</span>
-                        <h3 class="text-2xl font-bold text-white group-hover:text-cyan-300">Future-Proof Your Setup</h3>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed">
-                        From cutting-edge processors to immersive audio gear, get the latest tech innovations that will elevate your digital life.
-                    </p>
+                <!-- Feature 6: Maximized Savings -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-5xl text-blue-400 mb-4">💰</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-white">Maximized Savings</h3>
+                    <p class="text-gray-300">Leverage our insights to ensure every dollar you spend on Prime Day translates into maximum value and enhanced productivity.</p>
                 </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Waitlist Form Section -->
+    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-900">
+        <div class="max-w-2xl mx-auto px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white">Don't Miss Out on the Smartest Deals</h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-10">Join our exclusive Prime Day Smart Shopper's Newsletter waitlist to get early access and ensure you receive our premium, vetted WFH tech deals daily.</p>
+
+            <div class="bg-gray-800 p-8 md:p-10 rounded-xl shadow-2xl border border-blue-600">
+                <h3 class="text-2xl sm:text-3xl font-bold mb-8 text-blue-400">Sign Up for Early Access</h3>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="sr-only">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required
+                               class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring-blue-500 text-white placeholder-gray-400 text-lg transition duration-200">
+                    </div>
+                    <div>
+                        <label for="email" class="sr-only">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email Address" required
+                               class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring-blue-500 text-white placeholder-gray-400 text-lg transition duration-200">
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-full text-xl transition duration-300 transform hover:scale-105 shadow-lg">
+                        Join the Smart Shopper Waitlist
+                    </button>
+                    <p class="text-sm text-gray-400 mt-4">We respect your privacy. Unsubscribe anytime.</p>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-10 px-4 sm:px-6 lg:px-8 text-center text-gray-400 border-t border-gray-700">
-        <div class="max-w-7xl mx-auto">
-            <p>&copy; 2023 Prime Day Tech Deals. All rights reserved.</p>
-            <p class="mt-2 text-sm">
-                *Prime Day is a registered trademark of Amazon. This newsletter is an independent curation service.
-            </p>
+    <footer class="bg-gray-800 py-8 text-center text-gray-400 text-sm border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <p>&copy; 2024 Prime Day Smart Shopper. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-blue-400 transition duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-blue-400 transition duration-300">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
+    <!-- JavaScript for Countdown Timer -->
     <script>
-        // Custom Tailwind animation for group-hover:animate-bounce-y
-        // This would typically be defined in a Tailwind config or via postcss plugins
-        // For raw HTML, we'd need to simulate or use pre-defined keyframes if not using CDN with full JIT capabilities
-        // For simplicity, let's assume `animate-bounce-y` behaves like a vertical bounce
-        // We'll define simple keyframes for demonstration within the style block.
-        // Adding custom keyframes to the <style> tag
-        const style = document.createElement('style');
-        style.innerHTML = `
-            @keyframes bounce-y {
-                0%, 100% { transform: translateY(0); }
-                50% { transform: translateY(-10px); }
-            }
-            .group-hover\\:animate-bounce-y:hover {
-                animation: bounce-y 0.6s ease-in-out infinite;
-            }
-            /* Add other custom animations if needed, e.g., for heart beat, wiggle */
-            @keyframes heartbeat {
-                0% { transform: scale(1); }
-                14% { transform: scale(1.03); }
-                28% { transform: scale(1); }
-                42% { transform: scale(1.03); }
-                70%, 100% { transform: scale(1); }
-            }
-            .group-hover\\:animate-heartbeat:hover {
-                animation: heartbeat 1.5s ease-in-out infinite;
-            }
-            @keyframes wiggle {
-                0%, 7% {
-                    transform: rotateZ(0);
-                }
-                15% {
-                    transform: rotateZ(-15deg);
-                }
-                20% {
-                    transform: rotateZ(10deg);
-                }
-                25% {
-                    transform: rotateZ(-10deg);
-                }
-                30% {
-                    transform: rotateZ(6deg);
-                }
-                35% {
-                    transform: rotateZ(-4deg);
-                }
-                40%, 100% {
-                    transform: rotateZ(0);
-                }
-            }
-            .group-hover\\:animate-wiggle:hover {
-                animation: wiggle 2s infinite;
-            }
-        `;
-        document.head.appendChild(style);
+        // Set the target date for the countdown (e.g., the start of Prime Day 2024 or a special enrollment period).
+        // For demonstration, this is set to 7 days, 1 hour, 30 minutes, 15 seconds from when the page loads.
+        const targetDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000) + (1 * 60 * 60 * 1000) + (30 * 60 * 1000) + (15 * 1000); 
 
-
-        // Countdown Logic
-        const countdownDate = new Date();
-        // Set Prime Day to end in roughly 2 days and a few hours from when the page loads
-        // For a real application, this date would be fixed to actual Prime Day end.
-        countdownDate.setDate(countdownDate.getDate() + 2);
-        countdownDate.setHours(countdownDate.getHours() + 10);
-        countdownDate.setMinutes(countdownDate.getMinutes() + 30);
-        countdownDate.setSeconds(countdownDate.getSeconds() + 0);
-
-        const daysSpan = document.getElementById('days');
-        const hoursSpan = document.getElementById('hours');
-        const minutesSpan = document.getElementById('minutes');
-        const secondsSpan = document.getElementById('seconds');
-
-        function updateCountdown() {
+        const countdownFunction = setInterval(function() {
             const now = new Date().getTime();
-            const distance = countdownDate - now;
+            const distance = targetDate - now;
 
-            if (distance < 0) {
-                clearInterval(countdownInterval);
-                document.getElementById('countdown').innerHTML = "<span class='text-red-400'>Prime Day Has Ended!</span>";
-                return;
-            }
-
+            // Calculate time units
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            daysSpan.innerHTML = String(days).padStart(2, '0');
-            hoursSpan.innerHTML = String(hours).padStart(2, '0');
-            minutesSpan.innerHTML = String(minutes).padStart(2, '0');
-            secondsSpan.innerHTML = String(seconds).padStart(2, '0');
-        }
+            // Display the result with leading zeros
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-        const countdownInterval = setInterval(updateCountdown, 1000);
-        updateCountdown(); // Initial call to display immediately
-
-        // Form submission logic
-        document.getElementById('waitlist-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-            const emailInput = document.getElementById('email-input');
-            const formMessage = document.getElementById('form-message');
-
-            if (emailInput.validity.valid) {
-                // In a real application, you would send this email to your backend/ESP
-                // For demonstration, we'll just show a success message.
-                formMessage.textContent = '🎉 You\'re on the list! Check your inbox soon.';
-                formMessage.classList.remove('hidden', 'text-red-400');
-                formMessage.classList.add('text-green-400');
-                emailInput.value = ''; // Clear the input
-            } else {
-                formMessage.textContent = 'Please enter a valid email address.';
-                formMessage.classList.remove('hidden', 'text-green-400');
-                formMessage.classList.add('text-red-400');
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = "<div class='text-xl sm:text-2xl text-blue-400 font-bold'>OFFER EXPIRED!</div>";
+                document.querySelector('.hero-background a').style.display = 'none'; // Hide CTA button
+                document.querySelector('.hero-background p.text-sm').textContent = "Stay tuned for future opportunities!"; // Update expiry message
             }
-            formMessage.classList.remove('hidden');
-        });
+        }, 1000);
     </script>
 </body>
 </html>
