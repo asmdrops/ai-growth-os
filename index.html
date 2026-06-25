@@ -3,192 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prime Day Smart Shopper's Newsletter - WFH Productivity Tech</title>
-    <meta name="description" content="Unlock the best Work From Home Productivity Tech deals during Prime Day. Deeply vetted, historical price analysis, productivity scores, and expert reviews delivered daily.">
+    <title>PlayCharge - Unified Payments for Android Developers</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Favicon using SVG emoji for raw HTML context -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡️</text></svg>">
     <style>
-        /* Custom styles for dark overlay and hero background */
+        /* Custom styles for gradients and hero background */
+        body {
+            font-family: 'Inter', sans-serif; /* A modern, clean font, commonly used in dark themes */
+        }
         .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            position: relative;
         }
-        .dark-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Slightly darker overlay for premium feel */
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
+            z-index: 1;
         }
-        /* Hide scrollbar for a cleaner look if overflow is needed for small elements */
-        body {
-            -ms-overflow-style: none; /* IE and Edge */
-            scrollbar-width: none;    /* Firefox */
+        .gradient-text {
+            background: linear-gradient(90deg, #6366f1, #a855f7); /* Indigo to Purple gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        body::-webkit-scrollbar {
-            display: none;            /* Chrome, Safari, Opera */
+        .feature-icon {
+            font-size: 2.5rem; /* Larger emoji icon size */
+            line-height: 1;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased overflow-x-hidden">
 
     <!-- Hero Section -->
-    <header class="relative hero-background min-h-screen flex items-center justify-center p-4">
-        <div class="absolute inset-0 dark-overlay"></div>
-        <div class="relative z-10 max-w-4xl mx-auto text-center space-y-8 md:space-y-12 py-16">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white drop-shadow-lg">
-                <span class="text-blue-400">Prime Day Perfected:</span> Your Smart Guide to WFH Tech Deals
-            </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 leading-relaxed max-w-3xl mx-auto">
-                Stop sifting through endless deals and start saving strategically. Get daily, deeply vetted insights on Work From Home Productivity Tech, ensuring you only buy true discounts that elevate your workflow.
+    <header class="hero-background min-h-screen flex items-center justify-center text-center relative py-16 px-4">
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <p class="text-indigo-400 text-lg md:text-xl mb-4 font-semibold uppercase tracking-wider">
+                Trend Alert: Google Play Store Welcomes Outside Payments!
             </p>
-
-            <!-- Limited Time Countdown & CTA -->
-            <div class="bg-gray-800 bg-opacity-80 border border-blue-600 rounded-xl p-6 sm:p-8 shadow-2xl max-w-xl mx-auto flex flex-col items-center space-y-6">
-                <h3 class="text-2xl sm:text-3xl font-bold text-blue-400">Special Early Access Offer Ends In:</h3>
-                <div id="countdown" class="grid grid-cols-4 gap-4 text-white font-mono text-4xl sm:text-5xl md:text-6xl font-bold">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
+                <span class="gradient-text block">Unify. Automate. Comply.</span>
+                Streamline Your Android App Payments.
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                The unified API & dashboard for Android developers to effortlessly integrate and manage all third-party payment gateways, track fees, automate revenue, and stay ahead of Google's new policies.
+            </p>
+            
+            <!-- Limited Time Countdown - Designed for 20% conversion increase -->
+            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-6 md:p-8 rounded-xl shadow-2xl mb-12 transform hover:scale-105 transition-transform duration-300 max-w-2xl mx-auto">
+                <h3 class="text-3xl md:text-4xl font-bold mb-4">Limited Early Access Offer!</h3>
+                <p class="text-lg md:text-xl mb-4">Secure your spot on the waitlist and unlock exclusive launch benefits.</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 md:space-x-8 text-4xl md:text-6xl font-extrabold">
                     <div class="flex flex-col items-center">
-                        <span id="days" class="block">00</span>
-                        <span class="text-sm sm:text-base text-gray-400 mt-1">Days</span>
+                        <span class="block">07</span>
+                        <span class="text-sm md:text-base font-medium uppercase mt-1">Days</span>
                     </div>
+                    <span class="text-indigo-200">:</span>
                     <div class="flex flex-col items-center">
-                        <span id="hours" class="block">00</span>
-                        <span class="text-sm sm:text-base text-gray-400 mt-1">Hours</span>
+                        <span class="block">12</span>
+                        <span class="text-sm md:text-base font-medium uppercase mt-1">Hours</span>
                     </div>
+                    <span class="text-indigo-200">:</span>
                     <div class="flex flex-col items-center">
-                        <span id="minutes" class="block">00</span>
-                        <span class="text-sm sm:text-base text-gray-400 mt-1">Minutes</span>
+                        <span class="block">34</span>
+                        <span class="text-sm md:text-base font-medium uppercase mt-1">Minutes</span>
                     </div>
+                    <span class="text-indigo-200">:</span>
                     <div class="flex flex-col items-center">
-                        <span id="seconds" class="block">00</span>
-                        <span class="text-sm sm:text-base text-gray-400 mt-1">Seconds</span>
+                        <span class="block">56</span>
+                        <span class="text-sm md:text-base font-medium uppercase mt-1">Seconds</span>
                     </div>
                 </div>
-                <a href="#waitlist-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl sm:text-2xl transition duration-300 transform hover:scale-105 shadow-lg">
-                    Secure Your Prime Day Edge Now!
-                </a>
-                <p class="text-sm text-gray-400">Limited spots available for early access to our Prime Day 2024 curated deals.</p>
+                <p class="text-sm md:text-base text-gray-200 mt-4">Offer ends in [This would be dynamically updated via JavaScript on a live site to reflect real-time countdown]</p>
             </div>
+            
+            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                Join the Exclusive Waitlist Now!
+            </a>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-800">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-blue-400">What You'll Get: Intelligence, Not Noise</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section id="features" class="py-20 md:py-32 bg-gray-950 px-4">
+        <div class="container mx-auto max-w-screen-xl">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-16 gradient-text">
+                Powerful Features to Supercharge Your App Revenue
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-                <!-- Feature 1: Deeply Vetted Deals -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-5xl text-blue-400 mb-4">💡</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Deeply Vetted Deals</h3>
-                    <p class="text-gray-300">No more endless scrolling. Our experts handpick 3-5 top Work From Home tech deals daily, saving you hours of research time.</p>
+                <!-- Feature 1: Unified API -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="feature-icon text-indigo-400 mb-4">
+                        <span role="img" aria-label="Unified API">🔗</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Unified API for All Gateways</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Integrate multiple third-party payment providers with a single, streamlined API. Reduce development complexity and launch faster.
+                    </p>
                 </div>
 
-                <!-- Feature 2: True Discount Analysis -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-5xl text-blue-400 mb-4">📈</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">True Discount Analysis</h3>
-                    <p class="text-gray-300">We verify every deal with historical price data, ensuring you're getting a genuine discount, not a misleading markdown.</p>
+                <!-- Feature 2: Intuitive Dashboard -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="feature-icon text-purple-400 mb-4">
+                        <span role="img" aria-label="Dashboard">📊</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Intuitive Dashboard & Analytics</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Gain a 360-degree view of all your transactions and payment performance across every gateway, all from one central hub.
+                    </p>
                 </div>
 
-                <!-- Feature 3: Productivity Score -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-5xl text-blue-400 mb-4">🚀</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Productivity Score</h3>
-                    <p class="text-gray-300">Each product comes with a unique 'Productivity Score' so you can instantly see its potential impact on your daily workflow.</p>
+                <!-- Feature 3: Automated Fee Tracking -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="feature-icon text-green-400 mb-4">
+                        <span role="img" aria-label="Fee Tracking">💸</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Automated Fee Tracking & Optimization</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Effortlessly monitor and analyze transaction fees from all providers to identify savings and optimize your payment costs.
+                    </p>
                 </div>
 
-                <!-- Feature 4: Concise Expert Reviews -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-5xl text-blue-400 mb-4">✍️</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Concise Expert Reviews</h3>
-                    <p class="text-gray-300">Read short, unbiased expert opinions on each product, helping you make informed decisions quickly.</p>
+                <!-- Feature 4: Revenue Reporting -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="feature-icon text-yellow-400 mb-4">
+                        <span role="img" aria-label="Reporting">📈</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Effortless Revenue Reporting</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Generate comprehensive and accurate revenue reports in seconds, consolidating data from all your payment channels.
+                    </p>
                 </div>
 
-                <!-- Feature 5: Time-Saving Efficiency -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-5xl text-blue-400 mb-4">⏰</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Time-Saving Efficiency</h3>
-                    <p class="text-gray-300">Stop wasting precious time searching. We bring the best, relevant deals directly to your inbox, ready for you to act on.</p>
+                <!-- Feature 5: Google Play Policy Compliance -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="feature-icon text-red-400 mb-4">
+                        <span role="img" aria-label="Compliance">⚖️</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Google Play Policy Compliance</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Navigate Google's evolving payment policies with confidence. Our platform helps ensure your app remains fully compliant.
+                    </p>
                 </div>
 
-                <!-- Feature 6: Maximized Savings -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-5xl text-blue-400 mb-4">💰</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Maximized Savings</h3>
-                    <p class="text-gray-300">Leverage our insights to ensure every dollar you spend on Prime Day translates into maximum value and enhanced productivity.</p>
+                <!-- Feature 6: Enterprise-Grade Security -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="feature-icon text-blue-400 mb-4">
+                        <span role="img" aria-label="Security">🔒</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Enterprise-Grade Security</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Protect your app and user data with industry-leading encryption, fraud detection, and robust security protocols.
+                    </p>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-900">
-        <div class="max-w-2xl mx-auto px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white">Don't Miss Out on the Smartest Deals</h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10">Join our exclusive Prime Day Smart Shopper's Newsletter waitlist to get early access and ensure you receive our premium, vetted WFH tech deals daily.</p>
+    <section id="waitlist" class="py-20 md:py-32 bg-gray-900 px-4">
+        <div class="container mx-auto max-w-2xl text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-8 gradient-text">
+                Ready to Revolutionize Your App Payments?
+            </h2>
+            <p class="text-xl text-gray-300 mb-12 max-w-xl mx-auto">
+                Join our exclusive waitlist for early access to PlayCharge. Be among the first to simplify your payment integrations, save time, and grow your revenue on Google Play.
+            </p>
 
-            <div class="bg-gray-800 p-8 md:p-10 rounded-xl shadow-2xl border border-blue-600">
-                <h3 class="text-2xl sm:text-3xl font-bold mb-8 text-blue-400">Sign Up for Early Access</h3>
-                <form class="space-y-6">
-                    <div>
-                        <label for="name" class="sr-only">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required
-                               class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring-blue-500 text-white placeholder-gray-400 text-lg transition duration-200">
-                    </div>
-                    <div>
-                        <label for="email" class="sr-only">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email Address" required
-                               class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring-blue-500 text-white placeholder-gray-400 text-lg transition duration-200">
-                    </div>
-                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-full text-xl transition duration-300 transform hover:scale-105 shadow-lg">
-                        Join the Smart Shopper Waitlist
-                    </button>
-                    <p class="text-sm text-gray-400 mt-4">We respect your privacy. Unsubscribe anytime.</p>
-                </form>
-            </div>
+            <form action="#" method="POST" class="bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl border border-gray-700">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-300 text-lg font-semibold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 text-white text-lg transition-colors duration-200"
+                           required>
+                </div>
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-300 text-lg font-semibold mb-2">Work Email</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 text-white text-lg transition-colors duration-200"
+                           required>
+                </div>
+                <div class="mb-8 text-left">
+                    <label for="company" class="block text-gray-300 text-lg font-semibold mb-2">Company (Optional)</label>
+                    <input type="text" id="company" name="company" placeholder="Your Company Name"
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 text-white text-lg transition-colors duration-200">
+                </div>
+                <button type="submit"
+                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    Join the Waitlist
+                </button>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-8 text-center text-gray-400 text-sm border-t border-gray-700">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <p>&copy; 2024 Prime Day Smart Shopper. All rights reserved.</p>
-            <div class="mt-4 space-x-4">
-                <a href="#" class="hover:text-blue-400 transition duration-300">Privacy Policy</a>
-                <a href="#" class="hover:text-blue-400 transition duration-300">Terms of Service</a>
-            </div>
+    <footer class="bg-gray-950 py-10 text-center text-gray-500 text-sm">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2023 PlayCharge. All rights reserved. Built for Android Developers.</p>
+            <p class="mt-2">
+                <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a> |
+                <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
-    <script>
-        // Set the target date for the countdown (e.g., the start of Prime Day 2024 or a special enrollment period).
-        // For demonstration, this is set to 7 days, 1 hour, 30 minutes, 15 seconds from when the page loads.
-        const targetDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000) + (1 * 60 * 60 * 1000) + (30 * 60 * 1000) + (15 * 1000); 
-
-        const countdownFunction = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = targetDate - now;
-
-            // Calculate time units
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the result with leading zeros
-            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-            // If the countdown is over, display a message
-            if (distance < 0) {
-                clearInterval(countdownFunction);
-                document.getElementById("countdown").innerHTML = "<div class='text-xl sm:text-2xl text-blue-400 font-bold'>OFFER EXPIRED!</div>";
-                document.querySelector('.hero-background a').style.display = 'none'; // Hide CTA button
-                document.querySelector('.hero-background p.text-sm').textContent = "Stay tuned for future opportunities!"; // Update expiry message
-            }
-        }, 1000);
-    </script>
+    <!-- Note: A real-time countdown timer would require JavaScript. This HTML provides the visual structure. -->
 </body>
 </html>
