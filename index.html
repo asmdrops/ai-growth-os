@@ -3,207 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Windows 10 EOL Navigator Toolkit - Limited Early Bird Access</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Prime Day Last Call Deals: Curated for You!</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for the hero background image */
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.9)), url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-        }
-        /* Ensure smooth scroll to anchors */
-        html {
-            scroll-behavior: smooth;
         }
     </style>
 </head>
-<body class="bg-zinc-950 text-gray-200 antialiased font-sans">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-background relative h-screen flex items-center justify-center p-4">
-        <!-- Overlay for better text readability and premium feel -->
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-
-        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4 drop-shadow-lg">
-                Secure Your Digital Future: <span class="text-purple-400">Windows 10 EOL Navigator Toolkit</span>
+    <header class="hero-bg relative min-h-screen flex items-center justify-center p-4">
+        <div class="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 py-16">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white mb-6 animate-fade-in-up">
+                🚨 Prime Day's Last Call: Don't Miss Out! 🚨
             </h1>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto drop-shadow-md">
-                Don't get left behind. Microsoft's decision to add another year to W10 support provides a <strong class="text-yellow-300">CRUCIAL, FINAL WINDOW</strong> to prepare. Master Windows 10 longevity and smooth migration strategies with our premium toolkit.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 font-medium">
+                Unlock exclusive, niche-specific deals before they vanish. We curate the <span class="text-blue-400 font-bold">absolute best Prime Day savings</span> just for you!
             </p>
 
-            <!-- Limited Time Countdown -->
-            <div class="bg-gradient-to-r from-purple-700 to-indigo-700 p-6 rounded-xl shadow-2xl mb-10 transform hover:scale-105 transition-transform duration-300 border border-purple-500">
-                <h2 class="text-3xl font-bold text-white mb-4">Limited Early Bird Access Ends In:</h2>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-white text-4xl sm:text-5xl lg:text-6xl font-mono">
+            <!-- Countdown Timer Placeholder -->
+            <div id="countdown" class="bg-gray-800 bg-opacity-70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-blue-600 mb-12 transform hover:scale-105 transition-transform duration-300" 
+                 data-prime-end-date="2024-07-13T00:00:00Z"> <!-- Replace with actual Prime Day end date for JS -->
+                <h3 class="text-2xl sm:text-3xl font-bold text-blue-300 mb-4">Deals Vanish In:</h3>
+                <div class="flex justify-center space-x-4 sm:space-x-6">
                     <div class="flex flex-col items-center">
-                        <span id="days">00</span>
-                        <span class="text-sm font-medium">DAYS</span>
+                        <span class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white" id="days">00</span>
+                        <span class="text-sm sm:text-base text-gray-400 mt-1">Days</span>
                     </div>
-                    <span class="text-gray-300">:</span>
                     <div class="flex flex-col items-center">
-                        <span id="hours">00</span>
-                        <span class="text-sm font-medium">HOURS</span>
+                        <span class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white" id="hours">00</span>
+                        <span class="text-sm sm:text-base text-gray-400 mt-1">Hours</span>
                     </div>
-                    <span class="text-gray-300">:</span>
                     <div class="flex flex-col items-center">
-                        <span id="minutes">00</span>
-                        <span class="text-sm font-medium">MINS</span>
+                        <span class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white" id="minutes">00</span>
+                        <span class="text-sm sm:text-base text-gray-400 mt-1">Minutes</span>
                     </div>
-                    <span class="text-gray-300">:</span>
                     <div class="flex flex-col items-center">
-                        <span id="seconds">00</span>
-                        <span class="text-sm font-medium">SECS</span>
+                        <span class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white" id="seconds">00</span>
+                        <span class="text-sm sm:text-base text-gray-400 mt-1">Seconds</span>
                     </div>
                 </div>
-                <p class="text-sm text-gray-300 mt-4 italic">This is your moment to act before the opportunity for a cost-effective, seamless transition disappears!</p>
+                <p class="text-sm text-gray-500 mt-4">(This countdown needs JavaScript to be dynamic. Values shown are static for raw HTML output.)</p>
             </div>
 
-            <a href="#waitlist-form" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-10 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg animate-pulse">
-                🚀 Secure My Early Bird Spot Now!
+            <a href="#waitlist-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl sm:text-2xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out uppercase tracking-wide animate-bounce-subtle">
+                ⚡ Get My Exclusive Deals!
             </a>
         </div>
     </header>
 
-    <main>
-        <!-- Features Section -->
-        <section class="py-16 sm:py-20 bg-zinc-900 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-12">What You'll Achieve with the Toolkit:</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-zinc-800 p-6 rounded-lg shadow-xl border border-zinc-700 hover:border-purple-500 transition-colors duration-300">
-                        <div class="text-4xl mb-4 text-purple-400">🔒</div>
-                        <h3 class="text-xl font-semibold text-white mb-2">Extended Security & Longevity</h3>
-                        <p class="text-gray-400">Unlock strategies to secure free extended updates for your Windows 10 devices, ensuring continued protection long after official support ends. Maximize your hardware's lifespan without costly upgrades.</p>
-                    </div>
-                    <div class="bg-zinc-800 p-6 rounded-lg shadow-xl border border-zinc-700 hover:border-indigo-500 transition-colors duration-300">
-                        <div class="text-4xl mb-4 text-indigo-400">🚀</div>
-                        <h3 class="text-xl font-semibold text-white mb-2">Seamless Migration Pathways</h3>
-                        <p class="text-gray-400">Navigate the transition with confidence. Our step-by-step video mini-course guides you through phased migration strategies to Windows 11 or robust alternative operating systems.</p>
-                    </div>
-                    <div class="bg-zinc-800 p-6 rounded-lg shadow-xl border border-zinc-700 hover:border-teal-500 transition-colors duration-300">
-                        <div class="text-4xl mb-4 text-teal-400">💡</div>
-                        <h3 class="text-xl font-semibold text-white mb-2">Optimized Performance & Stability</h3>
-                        <p class="text-gray-400">Discover expert tips and tricks to optimize your Windows 10 system for peak performance and unwavering stability, extending its utility for years to come.</p>
-                    </div>
-                    <div class="bg-zinc-800 p-6 rounded-lg shadow-xl border border-zinc-700 hover:border-yellow-500 transition-colors duration-300">
-                        <div class="text-4xl mb-4 text-yellow-400">📚</div>
-                        <h3 class="text-xl font-semibold text-white mb-2">Comprehensive E-book Guide</h3>
-                        <p class="text-gray-400">Access our in-depth e-book, packed with actionable insights, checklists, and advanced techniques to fully prepare for the Windows 10 End-of-Life event.</p>
-                    </div>
-                    <div class="bg-zinc-800 p-6 rounded-lg shadow-xl border border-zinc-700 hover:border-pink-500 transition-colors duration-300">
-                        <div class="text-4xl mb-4 text-pink-400">🤝</div>
-                        <h3 class="text-xl font-semibold text-white mb-2">Exclusive Community Access</h3>
-                        <p class="text-gray-400">Join a private forum of fellow navigators. Get ongoing support, share insights, and receive the latest updates directly from experts and peers for a lifetime.</p>
-                    </div>
-                    <div class="bg-zinc-800 p-6 rounded-lg shadow-xl border border-zinc-700 hover:border-orange-500 transition-colors duration-300">
-                        <div class="text-4xl mb-4 text-orange-400">💰</div>
-                        <h3 class="text-xl font-semibold text-white mb-2">Cost-Saving Strategies</h3>
-                        <p class="text-gray-400">Avoid expensive hardware upgrades or recurring licensing fees. Learn how to extend the life of your current setup or migrate efficiently without breaking the bank.</p>
-                    </div>
+    <!-- Features Section -->
+    <section class="py-16 sm:py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-white mb-12 sm:mb-16">
+                Why Our Prime Day Deals Channel?
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-blue-600 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-blue-400 mb-4 text-4xl">🎯</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">Niche-Specific Curation</h3>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Tired of endless scrolling? Get deals tailored to your interests, like "Sustainable Tech" or "Smart Home Essentials for New Homeowners." No fluff, just what you want.
+                    </p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-blue-600 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-blue-400 mb-4 text-4xl">📧</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">Daily, Digestible Updates</h3>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Receive daily, emoji-rich deal summaries directly to your inbox or private Telegram channel. Quick to read, easy to act on – never miss a steal!
+                    </p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-blue-600 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-blue-400 mb-4 text-4xl">💰</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">Save Time & Money</h3>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        With hundreds of thousands of deals available (NBC News found 383+ *just the best*), our experts sift through the noise so you save precious time and secure genuine savings.
+                    </p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-blue-600 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-blue-400 mb-4 text-4xl">💎</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">Premium & Vetted Deals</h3>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        No junk. We focus on high-quality, innovative products that genuinely enhance your life, not just cheap thrills. Get true value.
+                    </p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-blue-600 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-blue-400 mb-4 text-4xl">🚀</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">Exclusive Access</h3>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Join a private community of smart shoppers who get early bird access to the best deals. Be ahead of the curve, not behind it.
+                    </p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-blue-600 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-blue-400 mb-4 text-4xl">✅</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">Unbiased Recommendations</h3>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Our only goal is to find you the best deals. We're not pushing specific brands, just genuine opportunities to save on top products.
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Waitlist Form Section -->
-        <section id="waitlist-form" class="py-16 sm:py-20 bg-zinc-950 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto bg-zinc-800 p-8 sm:p-10 rounded-xl shadow-2xl border border-purple-700">
-                <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-6">Join the Early Bird Waitlist!</h2>
-                <p class="text-lg text-gray-300 text-center mb-8">
-                    Be among the first to get access to the "Windows 10 EOL Navigator Toolkit" at a <strong class="text-yellow-300">special introductory price</strong>. Limited spots available, don't miss this opportunity!
-                </p>
-                <form class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe"
-                               class="w-full p-3 bg-zinc-700 border border-zinc-600 rounded-md text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200"
-                               required>
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="you@example.com"
-                               class="w-full p-3 bg-zinc-700 border border-zinc-600 rounded-md text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200"
-                               required>
-                    </div>
-                    <button type="submit"
-                            class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-md text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                        ✅ Secure My Early Bird Spot Now!
-                    </button>
-                    <p class="text-sm text-gray-400 text-center mt-4">
-                        We respect your privacy. Your information will not be shared.
-                    </p>
-                </form>
-            </div>
-        </section>
-    </main>
+    <!-- Waitlist Form Section -->
+    <section id="waitlist-form" class="py-16 sm:py-20 bg-gray-800 border-t border-gray-700">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">
+                🔒 Secure Your Spot: Prime Day Ends Soon!
+            </h2>
+            <p class="text-lg text-gray-300 mb-10">
+                Join our private channel or newsletter to get premium, curated deals delivered straight to you. Don't let these savings slip away!
+            </p>
+
+            <form class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-blue-700">
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">
+                        📧 Your Email Address
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required
+                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-700 transition-all duration-200">
+                </div>
+
+                <div class="mb-8 text-left">
+                    <label for="niche" class="block text-gray-300 text-sm font-bold mb-2">
+                        🎯 Preferred Deal Niche (Optional, for tailored deals)
+                    </label>
+                    <select id="niche" name="niche"
+                            class="block w-full py-3 px-4 border border-gray-600 bg-gray-700 rounded text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
+                        <option value="">Select a Niche (or General)</option>
+                        <option value="sustainable-tech">Sustainable Tech Deals ♻️</option>
+                        <option value="smart-home">Smart Home for New Homeowners 🏡</option>
+                        <option value="gaming-peripherals">Gaming Peripherals & Accessories 🎮</option>
+                        <option value="fitness-wellness">Fitness & Wellness Gadgets 👟</option>
+                        <option value="home-kitchen">Home & Kitchen Upgrades 🍳</option>
+                        <option value="general">General Prime Day Deals ✨</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-full text-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out uppercase tracking-wider animate-pulse-once">
+                    🚀 Join Now & Get My Deals!
+                </button>
+                <p class="text-xs text-gray-500 mt-4">We respect your privacy. Unsubscribe anytime.</p>
+            </form>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-zinc-900 py-8 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-6xl mx-auto text-center text-gray-500 text-sm">
-            &copy; <span id="current-year"></span> Digital Education Authority. All rights reserved. | <a href="#" class="hover:text-purple-400">Privacy Policy</a> | <a href="#" class="hover:text-purple-400">Terms of Service</a>
-        </div>
+    <footer class="bg-gray-900 py-10 text-center border-t border-gray-800">
+        <p class="text-gray-500 text-sm">&copy; 2023 Curated Prime Deals. All rights reserved. Amazon Prime Day is a registered trademark of Amazon.com, Inc. This service is not affiliated with Amazon.</p>
     </footer>
 
-    <!-- Countdown Timer JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 30 days from now for Early Bird)
-            // For production, replace this with a fixed, hard-coded date for consistency.
-            const now = new Date();
-            const earlyBirdEndDate = new Date(now.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 days from today
+    <!--
+        NOTE: For the countdown timer to be functional, a small JavaScript snippet would be required.
+        Example (would go in a <script> tag, not included in raw HTML output):
 
-            const countdownElement = document.getElementById('countdown');
-            const daysElement = document.getElementById('days');
-            const hoursElement = document.getElementById('hours');
-            const minutesElement = document.getElementById('minutes');
-            const secondsElement = document.getElementById('seconds');
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const countdownElement = document.getElementById('countdown');
+                const endDateString = countdownElement.getAttribute('data-prime-end-date');
+                const endDate = new Date(endDateString).getTime();
 
-            function updateCountdown() {
-                const now = new Date().getTime();
-                const distance = earlyBirdEndDate - now;
+                const updateCountdown = setInterval(function() {
+                    const now = new Date().getTime();
+                    const distance = endDate - now;
 
-                if (distance < 0) {
-                    clearInterval(countdownInterval);
-                    countdownElement.innerHTML = "<span class='text-red-400 font-bold'>Early Bird Access Has Ended!</span>";
-                    const ctaButton = document.querySelector('a[href="#waitlist-form"]');
-                    if(ctaButton) {
-                        ctaButton.textContent = "Join Regular Waitlist";
-                        ctaButton.classList.remove('animate-pulse', 'bg-purple-600', 'hover:bg-purple-700');
-                        ctaButton.classList.add('bg-gray-600', 'hover:bg-gray-700');
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    document.getElementById('days').innerText = String(days).padStart(2, '0');
+                    document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+                    document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+                    document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+
+                    if (distance < 0) {
+                        clearInterval(updateCountdown);
+                        countdownElement.innerHTML = '<h3 class="text-2xl sm:text-3xl font-bold text-blue-300 mb-4">Prime Day Has Ended!</h3><p class="text-xl text-white">Stay tuned for future deals!</p>';
                     }
-                     const formButton = document.querySelector('#waitlist-form button[type="submit"]');
-                    if(formButton) {
-                        formButton.textContent = "Join Regular Waitlist";
-                        formButton.classList.remove('bg-purple-600', 'hover:bg-purple-700');
-                        formButton.classList.add('bg-gray-600', 'hover:bg-gray-700');
-                    }
-                    const waitlistParagraph = document.querySelector('#waitlist-form p.text-lg');
-                    if(waitlistParagraph) {
-                        waitlistParagraph.innerHTML = "Sign up below to be notified when the <strong class='text-red-400'>Windows 10 EOL Navigator Toolkit</strong> becomes available at its standard price.";
-                    }
-                    return;
-                }
+                }, 1000);
+            });
+        </script>
+    -->
 
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                daysElement.innerHTML = String(days).padStart(2, '0');
-                hoursElement.innerHTML = String(hours).padStart(2, '0');
-                minutesElement.innerHTML = String(minutes).padStart(2, '0');
-                secondsElement.innerHTML = String(seconds).padStart(2, '0');
-            }
-
-            const countdownInterval = setInterval(updateCountdown, 1000);
-            updateCountdown(); // Initial call to display immediately
-
-            // Set current year in footer
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-        });
-    </script>
 </body>
 </html>
