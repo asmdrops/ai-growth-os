@@ -3,218 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlayCharge - Unified Payments for Android Developers</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Favicon using SVG emoji for raw HTML context -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡️</text></svg>">
+    <title>Windows 10 EOL Navigator Toolkit - Limited Early Bird Access</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles for gradients and hero background */
-        body {
-            font-family: 'Inter', sans-serif; /* A modern, clean font, commonly used in dark themes */
-        }
+        /* Custom styles for the hero background image */
         .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            position: relative;
         }
-        .hero-background::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
-            z-index: 1;
-        }
-        .gradient-text {
-            background: linear-gradient(90deg, #6366f1, #a855f7); /* Indigo to Purple gradient */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .feature-icon {
-            font-size: 2.5rem; /* Larger emoji icon size */
-            line-height: 1;
+        /* Ensure smooth scroll to anchors */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased overflow-x-hidden">
+<body class="bg-zinc-950 text-gray-200 antialiased font-sans">
 
     <!-- Hero Section -->
-    <header class="hero-background min-h-screen flex items-center justify-center text-center relative py-16 px-4">
-        <div class="relative z-10 max-w-4xl mx-auto">
-            <p class="text-indigo-400 text-lg md:text-xl mb-4 font-semibold uppercase tracking-wider">
-                Trend Alert: Google Play Store Welcomes Outside Payments!
-            </p>
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
-                <span class="gradient-text block">Unify. Automate. Comply.</span>
-                Streamline Your Android App Payments.
+    <header class="hero-background relative h-screen flex items-center justify-center p-4">
+        <!-- Overlay for better text readability and premium feel -->
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4 drop-shadow-lg">
+                Secure Your Digital Future: <span class="text-purple-400">Windows 10 EOL Navigator Toolkit</span>
             </h1>
-            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
-                The unified API & dashboard for Android developers to effortlessly integrate and manage all third-party payment gateways, track fees, automate revenue, and stay ahead of Google's new policies.
+            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto drop-shadow-md">
+                Don't get left behind. Microsoft's decision to add another year to W10 support provides a <strong class="text-yellow-300">CRUCIAL, FINAL WINDOW</strong> to prepare. Master Windows 10 longevity and smooth migration strategies with our premium toolkit.
             </p>
-            
-            <!-- Limited Time Countdown - Designed for 20% conversion increase -->
-            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-6 md:p-8 rounded-xl shadow-2xl mb-12 transform hover:scale-105 transition-transform duration-300 max-w-2xl mx-auto">
-                <h3 class="text-3xl md:text-4xl font-bold mb-4">Limited Early Access Offer!</h3>
-                <p class="text-lg md:text-xl mb-4">Secure your spot on the waitlist and unlock exclusive launch benefits.</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 md:space-x-8 text-4xl md:text-6xl font-extrabold">
+
+            <!-- Limited Time Countdown -->
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-700 p-6 rounded-xl shadow-2xl mb-10 transform hover:scale-105 transition-transform duration-300 border border-purple-500">
+                <h2 class="text-3xl font-bold text-white mb-4">Limited Early Bird Access Ends In:</h2>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-white text-4xl sm:text-5xl lg:text-6xl font-mono">
                     <div class="flex flex-col items-center">
-                        <span class="block">07</span>
-                        <span class="text-sm md:text-base font-medium uppercase mt-1">Days</span>
+                        <span id="days">00</span>
+                        <span class="text-sm font-medium">DAYS</span>
                     </div>
-                    <span class="text-indigo-200">:</span>
+                    <span class="text-gray-300">:</span>
                     <div class="flex flex-col items-center">
-                        <span class="block">12</span>
-                        <span class="text-sm md:text-base font-medium uppercase mt-1">Hours</span>
+                        <span id="hours">00</span>
+                        <span class="text-sm font-medium">HOURS</span>
                     </div>
-                    <span class="text-indigo-200">:</span>
+                    <span class="text-gray-300">:</span>
                     <div class="flex flex-col items-center">
-                        <span class="block">34</span>
-                        <span class="text-sm md:text-base font-medium uppercase mt-1">Minutes</span>
+                        <span id="minutes">00</span>
+                        <span class="text-sm font-medium">MINS</span>
                     </div>
-                    <span class="text-indigo-200">:</span>
+                    <span class="text-gray-300">:</span>
                     <div class="flex flex-col items-center">
-                        <span class="block">56</span>
-                        <span class="text-sm md:text-base font-medium uppercase mt-1">Seconds</span>
+                        <span id="seconds">00</span>
+                        <span class="text-sm font-medium">SECS</span>
                     </div>
                 </div>
-                <p class="text-sm md:text-base text-gray-200 mt-4">Offer ends in [This would be dynamically updated via JavaScript on a live site to reflect real-time countdown]</p>
+                <p class="text-sm text-gray-300 mt-4 italic">This is your moment to act before the opportunity for a cost-effective, seamless transition disappears!</p>
             </div>
-            
-            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl shadow-lg transform hover:scale-105 transition-transform duration-300">
-                Join the Exclusive Waitlist Now!
+
+            <a href="#waitlist-form" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-10 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg animate-pulse">
+                🚀 Secure My Early Bird Spot Now!
             </a>
         </div>
     </header>
 
-    <!-- Features Section -->
-    <section id="features" class="py-20 md:py-32 bg-gray-950 px-4">
-        <div class="container mx-auto max-w-screen-xl">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-16 gradient-text">
-                Powerful Features to Supercharge Your App Revenue
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-                <!-- Feature 1: Unified API -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="feature-icon text-indigo-400 mb-4">
-                        <span role="img" aria-label="Unified API">🔗</span>
+    <main>
+        <!-- Features Section -->
+        <section class="py-16 sm:py-20 bg-zinc-900 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-12">What You'll Achieve with the Toolkit:</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-zinc-800 p-6 rounded-lg shadow-xl border border-zinc-700 hover:border-purple-500 transition-colors duration-300">
+                        <div class="text-4xl mb-4 text-purple-400">🔒</div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Extended Security & Longevity</h3>
+                        <p class="text-gray-400">Unlock strategies to secure free extended updates for your Windows 10 devices, ensuring continued protection long after official support ends. Maximize your hardware's lifespan without costly upgrades.</p>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Unified API for All Gateways</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Integrate multiple third-party payment providers with a single, streamlined API. Reduce development complexity and launch faster.
-                    </p>
-                </div>
-
-                <!-- Feature 2: Intuitive Dashboard -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="feature-icon text-purple-400 mb-4">
-                        <span role="img" aria-label="Dashboard">📊</span>
+                    <div class="bg-zinc-800 p-6 rounded-lg shadow-xl border border-zinc-700 hover:border-indigo-500 transition-colors duration-300">
+                        <div class="text-4xl mb-4 text-indigo-400">🚀</div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Seamless Migration Pathways</h3>
+                        <p class="text-gray-400">Navigate the transition with confidence. Our step-by-step video mini-course guides you through phased migration strategies to Windows 11 or robust alternative operating systems.</p>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Intuitive Dashboard & Analytics</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Gain a 360-degree view of all your transactions and payment performance across every gateway, all from one central hub.
-                    </p>
-                </div>
-
-                <!-- Feature 3: Automated Fee Tracking -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="feature-icon text-green-400 mb-4">
-                        <span role="img" aria-label="Fee Tracking">💸</span>
+                    <div class="bg-zinc-800 p-6 rounded-lg shadow-xl border border-zinc-700 hover:border-teal-500 transition-colors duration-300">
+                        <div class="text-4xl mb-4 text-teal-400">💡</div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Optimized Performance & Stability</h3>
+                        <p class="text-gray-400">Discover expert tips and tricks to optimize your Windows 10 system for peak performance and unwavering stability, extending its utility for years to come.</p>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Automated Fee Tracking & Optimization</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Effortlessly monitor and analyze transaction fees from all providers to identify savings and optimize your payment costs.
-                    </p>
-                </div>
-
-                <!-- Feature 4: Revenue Reporting -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="feature-icon text-yellow-400 mb-4">
-                        <span role="img" aria-label="Reporting">📈</span>
+                    <div class="bg-zinc-800 p-6 rounded-lg shadow-xl border border-zinc-700 hover:border-yellow-500 transition-colors duration-300">
+                        <div class="text-4xl mb-4 text-yellow-400">📚</div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Comprehensive E-book Guide</h3>
+                        <p class="text-gray-400">Access our in-depth e-book, packed with actionable insights, checklists, and advanced techniques to fully prepare for the Windows 10 End-of-Life event.</p>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Effortless Revenue Reporting</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Generate comprehensive and accurate revenue reports in seconds, consolidating data from all your payment channels.
-                    </p>
-                </div>
-
-                <!-- Feature 5: Google Play Policy Compliance -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="feature-icon text-red-400 mb-4">
-                        <span role="img" aria-label="Compliance">⚖️</span>
+                    <div class="bg-zinc-800 p-6 rounded-lg shadow-xl border border-zinc-700 hover:border-pink-500 transition-colors duration-300">
+                        <div class="text-4xl mb-4 text-pink-400">🤝</div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Exclusive Community Access</h3>
+                        <p class="text-gray-400">Join a private forum of fellow navigators. Get ongoing support, share insights, and receive the latest updates directly from experts and peers for a lifetime.</p>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Google Play Policy Compliance</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Navigate Google's evolving payment policies with confidence. Our platform helps ensure your app remains fully compliant.
-                    </p>
-                </div>
-
-                <!-- Feature 6: Enterprise-Grade Security -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="feature-icon text-blue-400 mb-4">
-                        <span role="img" aria-label="Security">🔒</span>
+                    <div class="bg-zinc-800 p-6 rounded-lg shadow-xl border border-zinc-700 hover:border-orange-500 transition-colors duration-300">
+                        <div class="text-4xl mb-4 text-orange-400">💰</div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Cost-Saving Strategies</h3>
+                        <p class="text-gray-400">Avoid expensive hardware upgrades or recurring licensing fees. Learn how to extend the life of your current setup or migrate efficiently without breaking the bank.</p>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Enterprise-Grade Security</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Protect your app and user data with industry-leading encryption, fraud detection, and robust security protocols.
-                    </p>
                 </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-20 md:py-32 bg-gray-900 px-4">
-        <div class="container mx-auto max-w-2xl text-center">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-8 gradient-text">
-                Ready to Revolutionize Your App Payments?
-            </h2>
-            <p class="text-xl text-gray-300 mb-12 max-w-xl mx-auto">
-                Join our exclusive waitlist for early access to PlayCharge. Be among the first to simplify your payment integrations, save time, and grow your revenue on Google Play.
-            </p>
-
-            <form action="#" method="POST" class="bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl border border-gray-700">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-lg font-semibold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 text-white text-lg transition-colors duration-200"
-                           required>
-                </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-lg font-semibold mb-2">Work Email</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 text-white text-lg transition-colors duration-200"
-                           required>
-                </div>
-                <div class="mb-8 text-left">
-                    <label for="company" class="block text-gray-300 text-lg font-semibold mb-2">Company (Optional)</label>
-                    <input type="text" id="company" name="company" placeholder="Your Company Name"
-                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 text-white text-lg transition-colors duration-200">
-                </div>
-                <button type="submit"
-                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
-                    Join the Waitlist
-                </button>
-            </form>
-        </div>
-    </section>
+        <!-- Waitlist Form Section -->
+        <section id="waitlist-form" class="py-16 sm:py-20 bg-zinc-950 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto bg-zinc-800 p-8 sm:p-10 rounded-xl shadow-2xl border border-purple-700">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-6">Join the Early Bird Waitlist!</h2>
+                <p class="text-lg text-gray-300 text-center mb-8">
+                    Be among the first to get access to the "Windows 10 EOL Navigator Toolkit" at a <strong class="text-yellow-300">special introductory price</strong>. Limited spots available, don't miss this opportunity!
+                </p>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe"
+                               class="w-full p-3 bg-zinc-700 border border-zinc-600 rounded-md text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200"
+                               required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com"
+                               class="w-full p-3 bg-zinc-700 border border-zinc-600 rounded-md text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200"
+                               required>
+                    </div>
+                    <button type="submit"
+                            class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-md text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                        ✅ Secure My Early Bird Spot Now!
+                    </button>
+                    <p class="text-sm text-gray-400 text-center mt-4">
+                        We respect your privacy. Your information will not be shared.
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-10 text-center text-gray-500 text-sm">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2023 PlayCharge. All rights reserved. Built for Android Developers.</p>
-            <p class="mt-2">
-                <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a> |
-                <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a>
-            </p>
+    <footer class="bg-zinc-900 py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto text-center text-gray-500 text-sm">
+            &copy; <span id="current-year"></span> Digital Education Authority. All rights reserved. | <a href="#" class="hover:text-purple-400">Privacy Policy</a> | <a href="#" class="hover:text-purple-400">Terms of Service</a>
         </div>
     </footer>
 
-    <!-- Note: A real-time countdown timer would require JavaScript. This HTML provides the visual structure. -->
+    <!-- Countdown Timer JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (e.g., 30 days from now for Early Bird)
+            // For production, replace this with a fixed, hard-coded date for consistency.
+            const now = new Date();
+            const earlyBirdEndDate = new Date(now.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 days from today
+
+            const countdownElement = document.getElementById('countdown');
+            const daysElement = document.getElementById('days');
+            const hoursElement = document.getElementById('hours');
+            const minutesElement = document.getElementById('minutes');
+            const secondsElement = document.getElementById('seconds');
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = earlyBirdEndDate - now;
+
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    countdownElement.innerHTML = "<span class='text-red-400 font-bold'>Early Bird Access Has Ended!</span>";
+                    const ctaButton = document.querySelector('a[href="#waitlist-form"]');
+                    if(ctaButton) {
+                        ctaButton.textContent = "Join Regular Waitlist";
+                        ctaButton.classList.remove('animate-pulse', 'bg-purple-600', 'hover:bg-purple-700');
+                        ctaButton.classList.add('bg-gray-600', 'hover:bg-gray-700');
+                    }
+                     const formButton = document.querySelector('#waitlist-form button[type="submit"]');
+                    if(formButton) {
+                        formButton.textContent = "Join Regular Waitlist";
+                        formButton.classList.remove('bg-purple-600', 'hover:bg-purple-700');
+                        formButton.classList.add('bg-gray-600', 'hover:bg-gray-700');
+                    }
+                    const waitlistParagraph = document.querySelector('#waitlist-form p.text-lg');
+                    if(waitlistParagraph) {
+                        waitlistParagraph.innerHTML = "Sign up below to be notified when the <strong class='text-red-400'>Windows 10 EOL Navigator Toolkit</strong> becomes available at its standard price.";
+                    }
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                daysElement.innerHTML = String(days).padStart(2, '0');
+                hoursElement.innerHTML = String(hours).padStart(2, '0');
+                minutesElement.innerHTML = String(minutes).padStart(2, '0');
+                secondsElement.innerHTML = String(seconds).padStart(2, '0');
+            }
+
+            const countdownInterval = setInterval(updateCountdown, 1000);
+            updateCountdown(); // Initial call to display immediately
+
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+    </script>
 </body>
 </html>
