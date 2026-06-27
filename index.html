@@ -3,150 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The GTA 6 Digital Survival Guide: Mastering Pre-orders & Future-Proofing Your Library</title>
+    <title>Prime Deal Aftermath: Extended Tech & Apple Deals</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="https://www.rockstargames.com/favicon.ico">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-        /* Custom scrollbar for dark mode */
+        /* Custom scrollbar for a premium dark-mode feel */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #1a202c; /* dark-mode body background */
+            background: #1a202c; /* dark gray */
         }
         ::-webkit-scrollbar-thumb {
-            background: #4a5568; /* slightly lighter grey */
+            background: #4a5568; /* slightly lighter gray */
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #718096; /* even lighter on hover */
+            background: #6b7280;
+        }
+
+        /* Custom animations for enhanced engagement */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulseEffect {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.03); opacity: 0.9; }
+        }
+        @keyframes bounceEffect {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .animation-delay-200 {
+            animation-delay: 0.2s;
+        }
+        .animate-pulse-infinite {
+            animation: pulseEffect 1.5s ease-in-out infinite;
+        }
+        .animate-bounce-infinite {
+            animation: bounceEffect 1.5s ease-in-out infinite;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-900 text-white font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="relative bg-black min-h-screen flex items-center justify-center p-4 md:p-8 overflow-hidden" 
-            style="background-image: url('https://source.unsplash.com/1600x900/?A,tech'); background-size: cover; background-position: center;">
-        <div class="absolute inset-0 bg-black bg-opacity-75 z-0"></div>
-        
-        <div class="relative z-10 max-w-7xl mx-auto text-center py-16 px-6 md:px-12 lg:px-16">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg">
-                🚨 The <span class="text-red-500">GTA 6</span> Digital Survival Guide 🚀
+    <header class="relative h-screen bg-cover bg-center flex items-center justify-center p-4" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
+        <div class="relative z-10 text-center max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
+                Prime Deal Aftermath: <br class="sm:hidden">
+                <span class="text-blue-400">The Extended Shelf-Life Tech & Apple Deals</span>
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Master the Future of Gaming: Why the disc-less launch changes EVERYTHING. Secure your flawless GTA 6 experience NOW and future-proof your entire gaming library.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in-up animation-delay-200">
+                Don't let the *true* best Prime Day deals slip away! Get daily curated alerts on the <br class="hidden sm:inline"> most valuable, newly discounted Apple and productivity tech deals.
             </p>
             
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-                <a href="#waitlist-form" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 ease-in-out hover:scale-105 text-lg sm:text-xl md:text-2xl inline-block">
-                    Join Waitlist & Get Early Access! ✨
-                </a>
+            <!-- Limited Time Countdown -->
+            <div class="bg-gray-800 bg-opacity-75 p-6 rounded-lg shadow-xl inline-block mb-10 border border-blue-500 animate-pulse-infinite">
+                <p class="text-blue-300 text-xl md:text-2xl font-semibold mb-3">Limited Time Offer Ends In:</p>
+                <div id="countdown" class="flex justify-center space-x-4 text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+                    <div><span id="days">00</span><span class="block text-sm sm:text-base text-gray-400 font-normal mt-1">Days</span></div>
+                    <div>:</div>
+                    <div><span id="hours">00</span><span class="block text-sm sm:text-base text-gray-400 font-normal mt-1">Hours</span></div>
+                    <div>:</div>
+                    <div><span id="minutes">00</span><span class="block text-sm sm:text-base text-gray-400 font-normal mt-1">Minutes</span></div>
+                    <div>:</div>
+                    <div><span id="seconds">00</span><span class="block text-sm sm:text-base text-gray-400 font-normal mt-1">Seconds</span></div>
+                </div>
             </div>
 
-            <div class="bg-gray-800 bg-opacity-80 rounded-xl p-4 sm:p-6 md:p-8 inline-block shadow-2xl animate-pulse">
-                <p class="text-yellow-400 text-xl sm:text-2xl md:text-3xl font-bold mb-2">
-                    ⚡️ Limited Spots Available! ⚡️
-                </p>
-                <p class="text-gray-300 text-base sm:text-lg md:text-xl">
-                    Waitlist Closes In: <span class="text-white font-mono text-2xl sm:text-3xl md:text-4xl ml-2">5D 12H 34M 56S</span>
-                </p>
-            </div>
+            <a href="#waitlist" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl shadow-lg transform hover:scale-105 transition duration-300 ease-in-out animate-bounce-infinite">
+                Secure Your Daily Deal Alerts!
+            </a>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900 text-gray-100">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-12">
-                Unlock the Ultimate GTA 6 & Digital Gaming Advantage 🌟
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-16 text-blue-400">
+                Why 'Prime Deal Aftermath' is Your Secret Weapon
             </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 
-                <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-xl hover:shadow-2xl transform transition duration-300 ease-in-out hover:-translate-y-2">
-                    <p class="text-5xl mb-4">💾</p>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Choosing the Right Storage Solutions</h3>
-                    <p class="text-gray-300 leading-relaxed">Never run out of space again! Learn the best SSDs, external drives, and cloud strategies for your massive digital library.</p>
-                </div>
-                
-                <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-xl hover:shadow-2xl transform transition duration-300 ease-in-out hover:-translate-y-2">
-                    <p class="text-5xl mb-4">🚀</p>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Maximizing Download Speeds</h3>
-                    <p class="text-gray-300 leading-relaxed">Stop waiting! Optimize your network settings, router configuration, and console settings for lightning-fast downloads.</p>
-                </div>
-                
-                <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-xl hover:shadow-2xl transform transition duration-300 ease-in-out hover:-translate-y-2">
-                    <p class="text-5xl mb-4">🗃️</p>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Managing Digital Game Collections Effectively</h3>
-                    <p class="text-gray-300 leading-relaxed">Organize, archive, and access your games with ease. Master digital rights and library management for a clutter-free experience.</p>
-                </div>
-                
-                <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-xl hover:shadow-2xl transform transition duration-300 ease-in-out hover:-translate-y-2">
-                    <p class="text-5xl mb-4">🛠️</p>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Troubleshooting Common Digital-Only Issues</h3>
-                    <p class="text-gray-300 leading-relaxed">From corrupt downloads to licensing glitches, get pro tips to quickly resolve digital game issues and get back to playing.</p>
-                </div>
-                
-                <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-xl hover:shadow-2xl transform transition duration-300 ease-in-out hover:-translate-y-2">
-                    <p class="text-5xl mb-4">🌐</p>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Understanding the Digital-First Gaming Future</h3>
-                    <p class="text-gray-300 leading-relaxed">Prepare for what's next. We break down the implications of a disc-less future, cloud gaming, and subscription models.</p>
-                </div>
-                
-                <div class="bg-gray-800 rounded-lg p-6 md:p-8 shadow-xl hover:shadow-2xl transform transition duration-300 ease-in-out hover:-translate-y-2">
-                    <p class="text-5xl mb-4">🎮</p>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Exclusive PS5 Optimization Tips</h3>
-                    <p class="text-gray-300 leading-relaxed">Unleash the full power of your PlayStation 5 for GTA 6 and beyond with advanced settings, storage, and performance tweaks.</p>
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-5xl text-blue-400 mb-6 text-center">
+                        ⚡
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-center">Curated & Vetted Deals</h3>
+                    <p class="text-gray-300 text-lg text-center">
+                        Our experts sift through hundreds of offers to find only the best, truly valuable discounts on Apple & productivity tech that actually last. No duds, just diamonds.
+                    </p>
                 </div>
 
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-5xl text-blue-400 mb-6 text-center">
+                        ⏱️
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-center">Time-Saving Efficiency</h3>
+                    <p class="text-gray-300 text-lg text-center">
+                        Stop wasting hours searching. We deliver the top post-Prime Day deals directly to your inbox, so you can focus on what matters most.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-5xl text-blue-400 mb-6 text-center">
+                        🍎
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-center">Apple & Productivity Focus</h3>
+                    <p class="text-gray-300 text-lg text-center">
+                        Specializing in the tech you love – from MacBooks and iPads to premium accessories and work-from-home gadgets.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-5xl text-blue-400 mb-6 text-center">
+                        🕵️
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-center">Beyond The Hype</h3>
+                    <p class="text-gray-300 text-lg text-center">
+                        Many great deals linger or reappear after Prime Day. We track these hidden opportunities, giving you an unfair advantage.
+                    </p>
+                </div>
+
+                <!-- Feature 5 - Leverages "Market Trends" strategy -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-5xl text-blue-400 mb-6 text-center">
+                        📈
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-center">Market Trend Analysis</h3>
+                    <p class="text-gray-300 text-lg text-center">
+                        We identify which deals truly offer lasting value and reflect genuine market opportunities, not just fleeting discounts. Make smarter purchasing decisions.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-5xl text-blue-400 mb-6 text-center">
+                        💌
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-center">Daily & Direct</h3>
+                    <p class="text-gray-300 text-lg text-center">
+                        Fresh deals delivered straight to your inbox every day for a limited post-Prime Day period, ensuring you're always ahead of the curve.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-800 text-gray-100">
-        <div class="max-w-xl mx-auto px-6 md:px-12 lg:px-16 text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8">
-                Don't Miss Out! Secure Your Spot Now! 🔒
+    <section id="waitlist" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4 max-w-2xl text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
+                Don't Miss Out on These Extended Deals!
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed">
-                Join the exclusive waitlist for 'The GTA 6 Digital Survival Guide' and be among the first to master the new era of gaming. Get early access, bonus content, and expert insights delivered straight to your inbox!
+            <p class="text-lg sm:text-xl text-gray-300 mb-10">
+                The best post-Prime Day offers won't last forever. Join our exclusive list to get your daily curated deal alerts directly.
             </p>
             
-            <form action="#" method="POST" class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Your Name:</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" required
-                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-red-500 bg-gray-700 transition duration-300 ease-in-out">
-                </div>
-                <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Your Best Email:</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required
-                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-red-500 bg-gray-700 transition duration-300 ease-in-out">
-                </div>
-                <button type="submit" 
-                        class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 ease-in-out hover:scale-105 text-xl w-full">
-                    Get Early Access & Exclusive Bonuses! 🔥
+            <form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto" action="#" method="POST">
+                <input 
+                    type="email" 
+                    placeholder="Enter your best email address" 
+                    class="flex-grow p-4 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg"
+                    required
+                >
+                <button 
+                    type="submit" 
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transform hover:scale-105 transition duration-300 ease-in-out shadow-md"
+                >
+                    Get Daily Deal Alerts!
                 </button>
-                <p class="text-gray-500 text-sm mt-6">
-                    We respect your privacy. No spam, ever.
-                </p>
             </form>
+            <p class="text-sm text-gray-400 mt-6">
+                We respect your privacy. Unsubscribe anytime.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 text-center text-gray-500 text-sm border-t border-gray-700">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved. | <a href="#" class="hover:text-red-500 transition duration-300 ease-in-out">Privacy Policy</a></p>
-            <p class="mt-2">Disclaimer: This guide is independently produced and not affiliated with or endorsed by Rockstar Games or Take-Two Interactive.</p>
-        </div>
+    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm">
+        <p>&copy; 2023 Prime Deal Aftermath. All rights reserved.</p>
     </footer>
+
+    <!-- Countdown Script (inline for raw HTML requirement) -->
+    <script>
+        const countdown = () => {
+            // Set the target date for the countdown.
+            // For a 'post-Prime Day' limited period, we'll set it to 7 days from the page load.
+            // In a real implementation, this would be a fixed date specific to the deal window.
+            const now = new Date();
+            const countDownDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)).getTime(); // 7 days from now
+
+            // Update the count down every 1 second
+            const x = setInterval(() => {
+                const currentNow = new Date().getTime();
+                const distance = countDownDate - currentNow;
+
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the corresponding elements
+                const updateElement = (id, value) => {
+                    const el = document.getElementById(id);
+                    if (el) el.innerHTML = value < 10 ? "0" + value : value;
+                };
+
+                updateElement("days", days);
+                updateElement("hours", hours);
+                updateElement("minutes", minutes);
+                updateElement("seconds", seconds);
+
+                // If the count down is finished, display a message
+                if (distance < 0) {
+                    clearInterval(x);
+                    const countdownDiv = document.getElementById("countdown");
+                    if (countdownDiv) {
+                        countdownDiv.innerHTML = "<span class='text-red-500'>Offer Expired!</span>";
+                        countdownDiv.closest('.animate-pulse-infinite').classList.remove('animate-pulse-infinite'); // Stop animation
+                    }
+                    const ctaButton = document.querySelector('.animate-bounce-infinite');
+                    if (ctaButton) {
+                        ctaButton.classList.remove('animate-bounce-infinite');
+                        ctaButton.textContent = "Join for Future Deals"; // Update CTA
+                    }
+                }
+            }, 1000);
+        };
+
+        window.onload = countdown; // Initialize countdown when the page loads
+    </script>
 
 </body>
 </html>
