@@ -3,229 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Shift Navigator: Master Digital Strategy with the GTA 6 Blueprint</title>
+    <title>Navigating Instagram's New Algorithm Controls: Maximize Discovery & Engagement</title>
+    <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for the background image and overlay */
-        .hero-bg {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
-            position: relative;
+        /* Custom styles for the countdown for better presentation on all screen sizes */
+        .countdown-item {
+            @apply flex flex-col items-center justify-center bg-gray-800 rounded-lg p-3 sm:p-4 min-w-[70px] sm:min-w-[90px];
         }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        .countdown-value {
+            @apply text-3xl sm:text-4xl md:text-5xl font-extrabold text-indigo-400;
+        }
+        .countdown-label {
+            @apply text-xs sm:text-sm uppercase text-gray-400 mt-1 sm:mt-2;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-gray-900 text-white font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-bg h-screen flex items-center justify-center text-center">
-        <div class="hero-overlay"></div>
-        <div class="relative z-10 px-4 max-w-4xl mx-auto">
-            <p class="text-indigo-400 text-lg md:text-xl uppercase tracking-wider mb-4">Exclusive Insights for Indie Game Devs & Digital Strategists</p>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
-                Digital Shift Navigator: <br class="sm:hidden">Leveraging AAA Pre-Order Trends & Mastering the Post-Physical Media Landscape
+    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+        <!-- Hero Image Background -->
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');"></div>
+        <!-- Dark overlay for improved text readability -->
+        <div class="absolute inset-0 bg-black bg-opacity-75"></div>
+
+        <div class="relative z-10 p-4 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-600">
+                Navigating Instagram's New Algorithm Controls
             </h1>
-            <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">
-                Uncover the business strategies behind GTA 6's monumental launch, decode digital-only distribution, and supercharge your pre-order campaigns for unparalleled professional productivity.
+            <p class="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Maximize Discovery & Engagement in a Personalized Feed Era. Don't just adapt—dominate.
             </p>
-            <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
-                Secure Early Access & Join the Waitlist
+            
+            <!-- Limited Time Countdown - Strategy Adjustment Applied -->
+            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 rounded-xl shadow-lg inline-block mx-auto mb-8 animate-pulse">
+                <p class="text-lg sm:text-xl font-semibold mb-3 text-white">🔥 Early Bird Access & Special Discount Ends In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 md:space-x-6">
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="days">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#waitlist-form" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Secure Early Access & Discount!
             </a>
         </div>
-    </header>
+    </section>
 
-    <!-- Value Proposition / Introduction Section -->
-    <section class="py-20 bg-gray-900 px-4">
-        <div class="container mx-auto max-w-3xl text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">The Future of Game Releases is Digital-First. Are You Ready?</h2>
-            <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                The impending launch of GTA 6 isn't just another game release; it's a seismic event that could reshape the entire industry. As Creative Bloq notes, it signals the "final death knell for physical media," yet pre-orders remain critical. For indie game developers and digital media strategists, understanding these macro shifts isn't optional – it's crucial for survival and success.
-            </p>
-            <p class="text-lg text-gray-300 leading-relaxed">
-                'Digital Shift Navigator' dissects this pivotal moment, turning a monumental trend into actionable strategies you can implement today to optimize your launches, maximize pre-orders, and navigate the evolving digital landscape with confidence.
-            </p>
+    <!-- Problem & Solution / Why This Guide Is Essential Section -->
+    <section class="py-16 md:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 text-indigo-400">
+                Why This Guide Is Essential in a Shifting Instagram Landscape
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
+                        Instagram is empowering users with more control over their feeds, a significant market trend reported by <span class="font-semibold text-purple-400">TechCrunch</span>. This shift creates unprecedented challenges for creators and marketers: <span class="text-red-400 font-semibold">how do you ensure your content resonates and finds its audience when every feed is uniquely customized?</span>
+                    </p>
+                    <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+                        This premium, actionable guide provides the strategies to not just survive, but to truly thrive, leveraging these new controls for maximum discovery and engagement.
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <!-- Emojis in bullet points - Strategy Adjustment Applied for engaging content -->
+                    <div class="flex items-start">
+                        <span class="text-2xl text-indigo-400 mr-4 mt-1">❌</span>
+                        <p class="text-lg text-gray-200">The old strategies for reach are rapidly losing their effectiveness.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-2xl text-indigo-400 mr-4 mt-1">📉</span>
+                        <p class="text-lg text-gray-200">Generic, one-size-fits-all content is becoming invisible to the right audiences.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-2xl text-indigo-400 mr-4 mt-1">🚀</span>
+                        <p class="text-lg text-gray-200">This guide offers a clear, step-by-step roadmap to master personalization and algorithmic changes.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-2xl text-indigo-400 mr-4 mt-1">💡</span>
+                        <p class="text-lg text-gray-200">Gain a competitive edge by understanding what others are just beginning to realize.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-20 bg-gray-800 px-4">
-        <div class="container mx-auto max-w-5xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">What You'll Uncover in the Digital Shift Navigator</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
-                <div class="flex items-start">
-                    <span class="text-indigo-400 text-3xl mr-4 mt-1">🚀</span>
-                    <div>
-                        <h3 class="text-xl md:text-2xl font-semibold text-white mb-2">GTA 6 Business Blueprint Deconstructed</h3>
-                        <p class="text-gray-300 text-lg">
-                            Get an exclusive deep dive into the strategic decisions behind GTA 6's pre-release hype and business model. Learn how a multi-billion dollar studio navigates digital distribution.
-                        </p>
+    <section class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">
+                What You'll Discover Inside This Premium Guide
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-blue-400 mr-4">🧠</span>
+                        <h3 class="text-xl font-semibold text-white">Deep Dive into Algorithm Mechanics</h3>
                     </div>
+                    <p class="text-gray-300">Understand exactly how Instagram's new customization controls work and how they impact content visibility.</p>
                 </div>
-                <div class="flex items-start">
-                    <span class="text-emerald-400 text-3xl mr-4 mt-1">💡</span>
-                    <div>
-                        <h3 class="text-xl md:text-2xl font-semibold text-white mb-2">Mastering Digital-Only Launches</h3>
-                        <p class="text-gray-300 text-lg">
-                            Understand the implications of a post-physical media world. Discover effective tactics for marketing, distribution, and community building when your product is 100% digital.
-                        </p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-green-400 mr-4">🎯</span>
+                        <h3 class="text-xl font-semibold text-white">Personalized Feed Optimization Strategies</h3>
                     </div>
+                    <p class="text-gray-300">Learn actionable tactics to tailor your content for individual user preferences and increase relevance.</p>
                 </div>
-                <div class="flex items-start">
-                    <span class="text-purple-400 text-3xl mr-4 mt-1">📈</span>
-                    <div>
-                        <h3 class="text-xl md:text-2xl font-semibold text-white mb-2">Pre-Order Campaign Tactics for Indies</h3>
-                        <p class="text-gray-300 text-lg">
-                            Translate AAA success into indie strategies. Learn how to structure enticing pre-order bonuses, leverage influencer marketing, and build anticipation, even on a lean budget.
-                        </p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-yellow-400 mr-4">📝</span>
+                        <h3 class="text-xl font-semibold text-white">Ready-to-Use Content Templates</h3>
                     </div>
+                    <p class="text-gray-300">Access templates for posts, Reels, and Stories designed to capture attention and boost engagement metrics.</p>
                 </div>
-                <div class="flex items-start">
-                    <span class="text-yellow-400 text-3xl mr-4 mt-1">⚙️</span>
-                    <div>
-                        <h3 class="text-xl md:text-2xl font-semibold text-white mb-2">Boost Your Professional Productivity</h3>
-                        <p class="text-gray-300 text-lg">
-                            Beyond theory, this guide provides actionable frameworks and checklists. Apply industry-leading insights directly to your projects, streamlining your workflow and optimizing your market approach.
-                        </p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-red-400 mr-4">📈</span>
+                        <h3 class="text-xl font-semibold text-white">Advanced Discovery Best Practices</h3>
                     </div>
+                    <p class="text-gray-300">Implement cutting-edge techniques to get your content seen by new audiences, even with personalized feeds.</p>
                 </div>
-                 <div class="flex items-start">
-                    <span class="text-red-400 text-3xl mr-4 mt-1">🌐</span>
-                    <div>
-                        <h3 class="text-xl md:text-2xl font-semibold text-white mb-2">Future-Proof Your Digital Strategy</h3>
-                        <p class="text-gray-300 text-lg">
-                            Anticipate upcoming market shifts and adapt proactively. Position your studio or brand at the forefront of innovation, ensuring long-term relevance and growth in a dynamic industry.
-                        </p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-purple-400 mr-4">📊</span>
+                        <h3 class="text-xl font-semibold text-white">Tracking & Analytics Mastery</h3>
                     </div>
+                    <p class="text-gray-300">Decode your Instagram insights to understand what's working and how to continuously optimize your strategy.</p>
                 </div>
-                <div class="flex items-start">
-                    <span class="text-blue-400 text-3xl mr-4 mt-1">📊</span>
-                    <div>
-                        <h3 class="text-xl md:text-2xl font-semibold text-white mb-2">Exclusive Industry Insights & Data</h3>
-                        <p class="text-gray-300 text-lg">
-                            Gain access to curated data points and expert analysis that illuminate key trends, empowering you to make data-driven decisions and outperform competitors.
-                        </p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-pink-400 mr-4">🔮</span>
+                        <h3 class="text-xl font-semibold text-white">Future-Proof Your Instagram Strategy</h3>
                     </div>
+                    <p class="text-gray-300">Prepare for upcoming changes and build a resilient content strategy that stands the test of time.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section with Countdown -->
-    <section id="waitlist" class="py-20 bg-gray-900 px-4">
-        <div class="container mx-auto max-w-2xl text-center p-8 bg-gray-800 rounded-lg shadow-xl border border-indigo-700">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Don't Miss Out! Secure Your Early Access</h2>
-            <p class="text-lg text-gray-300 mb-8">
-                The 'Digital Shift Navigator' is launching soon. Join the exclusive waitlist now to get early bird pricing and be among the first to receive this essential guide.
+    <!-- Waitlist Form Section -->
+    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
+                Don't Miss Out on Early Access!
+            </h2>
+            <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+                Be among the first to receive <span class="font-semibold text-indigo-400">'Navigating Instagram's New Algorithm Controls'</span>.
+                Join the exclusive waitlist now to secure your early bird discount and immediate access upon launch.
             </p>
 
-            <!-- Limited Time Countdown -->
-            <div class="mb-10 p-6 bg-indigo-900 bg-opacity-30 rounded-lg border border-indigo-600">
-                <p class="text-2xl font-semibold text-indigo-400 mb-4">Limited Time Early Bird Offer Ends In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-white font-mono text-4xl md:text-5xl lg:text-6xl">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="px-3 py-2 bg-indigo-700 rounded-md shadow-md">00</span>
-                        <span class="text-sm md:text-base text-gray-300 mt-2">Days</span>
-                    </div>
-                    <span class="text-indigo-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="px-3 py-2 bg-indigo-700 rounded-md shadow-md">00</span>
-                        <span class="text-sm md:text-base text-gray-300 mt-2">Hours</span>
-                    </div>
-                    <span class="text-indigo-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="px-3 py-2 bg-indigo-700 rounded-md shadow-md">00</span>
-                        <span class="text-sm md:text-base text-gray-300 mt-2">Minutes</span>
-                    </div>
-                    <span class="text-indigo-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="px-3 py-2 bg-indigo-700 rounded-md shadow-md">00</span>
-                        <span class="text-sm md:text-base text-gray-300 mt-2">Seconds</span>
-                    </div>
+            <form class="bg-gray-900 p-8 md:p-12 rounded-xl shadow-2xl border border-gray-700 max-w-lg mx-auto">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-800 transition duration-300" required>
                 </div>
-                <p id="countdown-message" class="text-xl text-yellow-300 mt-6 font-semibold"></p>
-            </div>
-
-            <form class="flex flex-col md:flex-row gap-4" onsubmit="alert('Thank you for joining the waitlist!'); event.preventDefault();">
-                <input
-                    type="email"
-                    placeholder="Enter your email for early access"
-                    class="flex-grow p-4 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-400 text-lg"
-                    required
-                >
-                <button
-                    type="submit"
-                    class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-8 rounded-lg transition duration-300 transform hover:scale-105 text-lg shadow-md"
-                >
-                    Join The Waitlist Now!
+                <div class="mb-8 text-left">
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-800 transition duration-300" required>
+                </div>
+                <button type="submit"
+                        class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg w-full">
+                    Join The Exclusive Waitlist
                 </button>
             </form>
-            <p class="text-sm text-gray-400 mt-6">
-                We respect your privacy. Your email will only be used for updates regarding 'Digital Shift Navigator'.
-            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 bg-gray-900 text-center text-gray-500 text-sm border-t border-gray-800">
-        <div class="container mx-auto px-4">
-            &copy; 2023 Digital Shift Navigator. All rights reserved.
+    <footer class="bg-gray-900 py-10 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">"Navigating Instagram's New Algorithm Controls" is a premium knowledge product.</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
+    <!-- Countdown JavaScript - For functionality of the "Limited Time" feature -->
     <script>
-        // Set the date we're counting down to (e.g., 7 days from now for a limited offer)
-        const countdownDate = new new Date().getTime() + (7 * 24 * 60 * 60 * 1000); // 7 days from now
-        
-        const daysSpan = document.getElementById('days');
-        const hoursSpan = document.getElementById('hours');
-        const minutesSpan = document.getElementById('minutes');
-        const secondsSpan = document.getElementById('seconds');
-        const countdownMessage = document.getElementById('countdown-message');
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the date we're counting down to (e.g., 7 days from now for demonstration)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Sets deadline to 7 days from page load
+            // For a specific fixed date, uncomment and use:
+            // const countDownDate = new Date("Jan 1, 2024 00:00:00").getTime();
 
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate.getTime() - now;
 
-            // Time calculations for days, hours, minutes and seconds
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = '<span class="text-red-500 font-bold text-2xl">OFFER EXPIRED!</span>';
+                    const pulseElement = document.querySelector('.animate-pulse');
+                    if (pulseElement) pulseElement.classList.remove('animate-pulse'); // Stop pulse when expired
+                    // Optionally disable the waitlist form or change CTA
+                    document.querySelector('#waitlist-form button[type="submit"]').textContent = 'Offer Expired - Join Standard Waitlist';
+                    document.querySelector('#waitlist-form button[type="submit"]').classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
+                    document.querySelector('#waitlist-form button[type="submit"]').classList.add('bg-gray-600', 'cursor-not-allowed');
+                } else {
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Display the result
-            if (distance > 0) {
-                daysSpan.textContent = String(days).padStart(2, '0');
-                hoursSpan.textContent = String(hours).padStart(2, '0');
-                minutesSpan.textContent = String(minutes).padStart(2, '0');
-                secondsSpan.textContent = String(seconds).padStart(2, '0');
-            } else {
-                // If the countdown is over, write some text
-                clearInterval(countdownInterval);
-                daysSpan.textContent = '00';
-                hoursSpan.textContent = '00';
-                minutesSpan.textContent = '00';
-                secondsSpan.textContent = '00';
-                countdownMessage.textContent = 'The Early Bird Offer has Ended!';
-                // Optionally disable the form or change CTA here
-            }
-        }
-
-        // Update the countdown every 1 second
-        const countdownInterval = setInterval(updateCountdown, 1000);
-
-        // Initial call to display the countdown immediately
-        updateCountdown();
+                    document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                    document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                    document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                    document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                }
+            }, 1000);
+        });
     </script>
-
 </body>
 </html>
