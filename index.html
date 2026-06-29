@@ -3,231 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigating Instagram's New Algorithm Controls: Maximize Discovery & Engagement</title>
+    <title>The Creator's Playbook: Master Instagram's Customizable Algorithm</title>
     <!-- Tailwind CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter for a modern, premium look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for the countdown for better presentation on all screen sizes */
-        .countdown-item {
-            @apply flex flex-col items-center justify-center bg-gray-800 rounded-lg p-3 sm:p-4 min-w-[70px] sm:min-w-[90px];
+        /* Custom styles for premium dark mode and ultra-responsiveness */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Deep dark background for premium feel */
+            color: #c9d1d9; /* Light gray text for readability */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        .countdown-value {
-            @apply text-3xl sm:text-4xl md:text-5xl font-extrabold text-indigo-400;
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            /* Ensure it covers the full viewport height on initial load */
+            min-height: 100vh; 
+            display: flex; /* For centering content */
+            align-items: center; /* For vertical centering */
+            justify-content: center; /* For horizontal centering */
         }
-        .countdown-label {
-            @apply text-xs sm:text-sm uppercase text-gray-400 mt-1 sm:mt-2;
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1; /* Below text content */
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #6366f1, #a855f7, #ec4899); /* Tailwind Indigo, Purple, Pink */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Specific styling for the countdown timer numbers for better legibility */
+        .countdown-timer {
+            font-variant-numeric: tabular-nums; /* Keeps numbers aligned as they change */
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white font-sans antialiased">
+<body class="antialiased dark">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <!-- Hero Image Background -->
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');"></div>
-        <!-- Dark overlay for improved text readability -->
-        <div class="absolute inset-0 bg-black bg-opacity-75"></div>
-
-        <div class="relative z-10 p-4 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-600">
-                Navigating Instagram's New Algorithm Controls
+    <section class="hero-background text-center py-20 px-4">
+        <div class="hero-overlay"></div>
+        <div class="relative z-10 max-w-7xl mx-auto text-white">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight mb-6 md:mb-8">
+                Unlock Your Influence: Master <span class="gradient-text">Instagram's Customizable Algorithm</span>
             </h1>
-            <p class="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Maximize Discovery & Engagement in a Personalized Feed Era. Don't just adapt—dominate.
+            <p class="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium mb-8 md:mb-10 max-w-4xl mx-auto leading-relaxed">
+                The Rules Have Changed. Instagram's Algorithm is Now Personal.
+                Are You Ready to <strong class="text-purple-400">Optimize Your Reach & Engagement</strong>?
             </p>
-            
-            <!-- Limited Time Countdown - Strategy Adjustment Applied -->
-            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 rounded-xl shadow-lg inline-block mx-auto mb-8 animate-pulse">
-                <p class="text-lg sm:text-xl font-semibold mb-3 text-white">🔥 Early Bird Access & Special Discount Ends In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 md:space-x-6">
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="days">00</span>
-                        <span class="countdown-label">Days</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="hours">00</span>
-                        <span class="countdown-label">Hours</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="minutes">00</span>
-                        <span class="countdown-label">Minutes</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="seconds">00</span>
-                        <span class="countdown-label">Seconds</span>
-                    </div>
-                </div>
-            </div>
-            <a href="#waitlist-form" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                Secure Early Access & Discount!
+            <p class="text-base sm:text-lg lg:text-xl font-normal text-gray-300 mb-10 md:mb-12 max-w-3xl mx-auto">
+                Stay ahead of the curve as Instagram tests more ways to customize 'Your Algorithm'.
+                This is your definitive guide to leveraging these powerful shifts for exponential growth.
+            </p>
+            <a href="#waitlist-form" class="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-3.5 px-8 sm:py-4 sm:px-10 rounded-full text-base sm:text-lg lg:text-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Secure Your Early Access Now
             </a>
         </div>
     </section>
 
-    <!-- Problem & Solution / Why This Guide Is Essential Section -->
-    <section class="py-16 md:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 text-indigo-400">
-                Why This Guide Is Essential in a Shifting Instagram Landscape
+    <!-- Problem/Opportunity Section -->
+    <section class="bg-gray-900 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 text-gray-50">
+                The Digital Landscape is Shifting. <span class="gradient-text">Are You Adapting?</span>
             </h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <p class="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
-                        Instagram is empowering users with more control over their feeds, a significant market trend reported by <span class="font-semibold text-purple-400">TechCrunch</span>. This shift creates unprecedented challenges for creators and marketers: <span class="text-red-400 font-semibold">how do you ensure your content resonates and finds its audience when every feed is uniquely customized?</span>
-                    </p>
-                    <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
-                        This premium, actionable guide provides the strategies to not just survive, but to truly thrive, leveraging these new controls for maximum discovery and engagement.
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+                Instagram's move towards deeply personalized feeds means generic strategies are dead. Success now hinges
+                on understanding how to craft content that consistently resonates with individualized user preferences.
+                This isn't just a trend; it's the future of organic reach.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 text-left">
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700 hover:border-purple-500 flex flex-col h-full">
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-400">🚨 The Algorithm Black Box</h3>
+                    <p class="text-gray-300 flex-grow leading-relaxed">
+                        Feeling lost with declining reach and engagement? Yesterday's tactics won't cut it. Instagram's opaque algorithm changes leave many creators guessing, leading to frustration and stagnation.
                     </p>
                 </div>
-                <div class="space-y-6">
-                    <!-- Emojis in bullet points - Strategy Adjustment Applied for engaging content -->
-                    <div class="flex items-start">
-                        <span class="text-2xl text-indigo-400 mr-4 mt-1">❌</span>
-                        <p class="text-lg text-gray-200">The old strategies for reach are rapidly losing their effectiveness.</p>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="text-2xl text-indigo-400 mr-4 mt-1">📉</span>
-                        <p class="text-lg text-gray-200">Generic, one-size-fits-all content is becoming invisible to the right audiences.</p>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="text-2xl text-indigo-400 mr-4 mt-1">🚀</span>
-                        <p class="text-lg text-gray-200">This guide offers a clear, step-by-step roadmap to master personalization and algorithmic changes.</p>
-                    </div>
-                    <div class="flex items-start">
-                        <span class="text-2xl text-indigo-400 mr-4 mt-1">💡</span>
-                        <p class="text-lg text-gray-200">Gain a competitive edge by understanding what others are just beginning to realize.</p>
-                    </div>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700 hover:border-indigo-500 flex flex-col h-full">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-400">📈 The Customization Revolution</h3>
+                    <p class="text-gray-300 flex-grow leading-relaxed">
+                        Users now have unprecedented control over their feeds. This means your content needs to be not just good, but *relevant* to specific niches and preferences. It's a huge opportunity for those who understand it.
+                    </p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700 hover:border-pink-500 flex flex-col h-full">
+                    <h3 class="text-2xl font-semibold mb-4 text-pink-400">🚀 Your Creator's Playbook</h3>
+                    <p class="text-gray-300 flex-grow leading-relaxed">
+                        We've decoded the new Instagram. This course provides the exact strategies and tools to optimize your content, amplify your voice, and secure your place at the forefront of the creator economy.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">
-                What You'll Discover Inside This Premium Guide
+    <section class="bg-gray-950 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 text-gray-50">
+                Inside <span class="gradient-text">'The Creator's Playbook'</span>: What You'll Master
             </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl text-blue-400 mr-4">🧠</span>
-                        <h3 class="text-xl font-semibold text-white">Deep Dive into Algorithm Mechanics</h3>
-                    </div>
-                    <p class="text-gray-300">Understand exactly how Instagram's new customization controls work and how they impact content visibility.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700 hover:border-blue-500 flex flex-col items-start">
+                    <div class="text-5xl text-blue-400 mb-4">💡</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-50">New Algorithm Deep Dive</h3>
+                    <p class="text-gray-300 flex-grow leading-relaxed">
+                        Exclusive breakdowns of Instagram's latest features and how 'Your Algorithm' customization impacts content visibility. Understand the 'why' behind every strategic move.
+                    </p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl text-green-400 mr-4">🎯</span>
-                        <h3 class="text-xl font-semibold text-white">Personalized Feed Optimization Strategies</h3>
-                    </div>
-                    <p class="text-gray-300">Learn actionable tactics to tailor your content for individual user preferences and increase relevance.</p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700 hover:border-green-500 flex flex-col items-start">
+                    <div class="text-5xl text-green-400 mb-4">🛠️</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-50">Actionable Optimization Strategies</h3>
+                    <p class="text-gray-300 flex-grow leading-relaxed">
+                        Step-by-step methods to optimize your content for varied user preferences. Learn to create hyper-relevant content that grabs attention in personalized feeds.
+                    </p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl text-yellow-400 mr-4">📝</span>
-                        <h3 class="text-xl font-semibold text-white">Ready-to-Use Content Templates</h3>
-                    </div>
-                    <p class="text-gray-300">Access templates for posts, Reels, and Stories designed to capture attention and boost engagement metrics.</p>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700 hover:border-yellow-500 flex flex-col items-start">
+                    <div class="text-5xl text-yellow-400 mb-4">📝</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-50">Exclusive Content Templates</h3>
+                    <p class="text-gray-300 flex-grow leading-relaxed">
+                        Stop guessing! Access battle-tested templates for Reels, Stories, Carousels, and more, all designed to perform under the new algorithm. Save time and boost impact.
+                    </p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl text-red-400 mr-4">📈</span>
-                        <h3 class="text-xl font-semibold text-white">Advanced Discovery Best Practices</h3>
-                    </div>
-                    <p class="text-gray-300">Implement cutting-edge techniques to get your content seen by new audiences, even with personalized feeds.</p>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700 hover:border-red-500 flex flex-col items-start">
+                    <div class="text-5xl text-red-400 mb-4">🔄</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-50">Continually Updated Course</h3>
+                    <p class="text-gray-300 flex-grow leading-relaxed">
+                        Instagram never sleeps, and neither do we. Your lifetime access includes all future module updates, new strategies, and feature breakdowns as the platform evolves.
+                    </p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl text-purple-400 mr-4">📊</span>
-                        <h3 class="text-xl font-semibold text-white">Tracking & Analytics Mastery</h3>
-                    </div>
-                    <p class="text-gray-300">Decode your Instagram insights to understand what's working and how to continuously optimize your strategy.</p>
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700 hover:border-purple-500 flex flex-col items-start">
+                    <div class="text-5xl text-purple-400 mb-4">💬</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-50">Private Creator Community</h3>
+                    <p class="text-gray-300 flex-grow leading-relaxed">
+                        Join an exclusive forum of ambitious creators. Share insights, get direct support, and collaborate on cutting-edge strategies to dominate the new Instagram.
+                    </p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl text-pink-400 mr-4">🔮</span>
-                        <h3 class="text-xl font-semibold text-white">Future-Proof Your Instagram Strategy</h3>
-                    </div>
-                    <p class="text-gray-300">Prepare for upcoming changes and build a resilient content strategy that stands the test of time.</p>
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700 hover:border-teal-500 flex flex-col items-start">
+                    <div class="text-5xl text-teal-400 mb-4">📈</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-50">Data-Driven Performance Insights</h3>
+                    <p class="text-gray-300 flex-grow leading-relaxed">
+                        Learn to interpret your analytics through the lens of personalized algorithms. Make informed decisions, refine your strategy, and ensure consistent, measurable growth.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 max-w-3xl text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
-                Don't Miss Out on Early Access!
+    <section id="waitlist-form" class="bg-gray-900 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-xl mx-auto bg-gray-800 p-8 sm:p-10 lg:p-12 rounded-xl shadow-2xl border border-gray-700">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-6 text-gray-50">
+                Join the Exclusive Waitlist!
             </h2>
-            <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-                Be among the first to receive <span class="font-semibold text-indigo-400">'Navigating Instagram's New Algorithm Controls'</span>.
-                Join the exclusive waitlist now to secure your early bird discount and immediate access upon launch.
+            <p class="text-lg text-center text-gray-300 mb-8 max-w-md mx-auto">
+                Be among the first to gain access to <span class="font-semibold text-purple-400">'The Creator's Playbook'</span>
+                and receive exclusive launch bonuses. Don't miss out on this <strong class="text-red-400">limited opportunity</strong>.
             </p>
 
-            <form class="bg-gray-900 p-8 md:p-12 rounded-xl shadow-2xl border border-gray-700 max-w-lg mx-auto">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-800 transition duration-300" required>
+            <!-- Limited Time Countdown -->
+            <div class="bg-gradient-to-r from-purple-900 to-indigo-900 bg-opacity-70 border border-purple-700 text-purple-200 p-4 sm:p-5 rounded-lg text-center mb-8 flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4">
+                <p class="font-bold text-lg sm:text-xl flex-shrink-0 text-white">LIMITED TIME OFFER:</p>
+                <div id="countdown-timer" class="countdown-timer text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-wide text-purple-400">
+                    <!-- Placeholder for JS countdown. A real implementation would update this dynamically. -->
+                    <span class="text-purple-400">07</span>D : <span class="text-purple-400">23</span>H : <span class="text-purple-400">59</span>M : <span class="text-purple-400">59</span>S
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address:</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-800 transition duration-300" required>
+                <!--
+                    NOTE: A functional countdown timer requires JavaScript.
+                    The element above provides a static placeholder.
+                    To implement:
+                    1. Get the current date and the target date.
+                    2. Calculate the difference.
+                    3. Update the 'countdown-timer' element every second using setInterval().
+                    Example JS snippet (not included in final raw HTML output, but for context):
+                    <script>
+                        const countdownDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000); // 7 days from now
+                        const x = setInterval(function() {
+                            const now = new Date().getTime();
+                            const distance = countdownDate - now;
+                            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                            document.getElementById("countdown-timer").innerHTML =
+                                `<span class="text-purple-400">${String(days).padStart(2, '0')}</span>D : ` +
+                                `<span class="text-purple-400">${String(hours).padStart(2, '0')}</span>H : ` +
+                                `<span class="text-purple-400">${String(minutes).padStart(2, '0')}</span>M : ` +
+                                `<span class="text-purple-400">${String(seconds).padStart(2, '0')}</span>S`;
+                            if (distance < 0) {
+                                clearInterval(x);
+                                document.getElementById("countdown-timer").innerHTML = "<span class='text-red-400'>EXPIRED</span>";
+                            }
+                        }, 1000);
+                    </script>
+                -->
+            </div>
+
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label for="email" class="sr-only">Email address</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required
+                           class="w-full px-5 py-3 border border-gray-600 rounded-lg bg-gray-700 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-base sm:text-lg"
+                           placeholder="Enter your best email address">
                 </div>
-                <button type="submit"
-                        class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg w-full">
-                    Join The Exclusive Waitlist
-                </button>
+                <div>
+                    <button type="submit"
+                            class="w-full bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-bold py-3.5 px-6 rounded-lg text-lg sm:text-xl transition-all duration-300 transform hover:scale-105 shadow-xl">
+                        Get Early Access & Exclusive Bonuses
+                    </button>
+                </div>
             </form>
+            <p class="text-sm text-gray-400 text-center mt-6">
+                We respect your privacy. No spam, just valuable insights.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 border-t border-gray-800">
-        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">"Navigating Instagram's New Algorithm Controls" is a premium knowledge product.</p>
-        </div>
+    <footer class="bg-gray-950 py-10 px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+        <p>&copy; 2023 The Creator's Playbook. All rights reserved.</p>
+        <p class="mt-2">
+            <a href="#" class="hover:text-gray-300 mx-2">Privacy Policy</a>
+            <span class="text-gray-600">|</span>
+            <a href="#" class="hover:text-gray-300 mx-2">Terms of Service</a>
+        </p>
     </footer>
 
-    <!-- Countdown JavaScript - For functionality of the "Limited Time" feature -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the date we're counting down to (e.g., 7 days from now for demonstration)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Sets deadline to 7 days from page load
-            // For a specific fixed date, uncomment and use:
-            // const countDownDate = new Date("Jan 1, 2024 00:00:00").getTime();
-
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
-
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = '<span class="text-red-500 font-bold text-2xl">OFFER EXPIRED!</span>';
-                    const pulseElement = document.querySelector('.animate-pulse');
-                    if (pulseElement) pulseElement.classList.remove('animate-pulse'); // Stop pulse when expired
-                    // Optionally disable the waitlist form or change CTA
-                    document.querySelector('#waitlist-form button[type="submit"]').textContent = 'Offer Expired - Join Standard Waitlist';
-                    document.querySelector('#waitlist-form button[type="submit"]').classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
-                    document.querySelector('#waitlist-form button[type="submit"]').classList.add('bg-gray-600', 'cursor-not-allowed');
-                } else {
-                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                    document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                    document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                    document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                    document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-                }
-            }, 1000);
-        });
-    </script>
 </body>
 </html>
