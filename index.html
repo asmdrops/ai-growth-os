@@ -3,234 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Self-Hosted AI Agent Blueprint: From Local Setup to Mobile Mastery</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Gemini Prompt Pro: Master Personalized AI Image Creation</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for the hero background image and overlay */
+        /* Modern font for a premium feel */
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+        /* Hero background with dark overlay for readability */
         .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            position: relative;
+            z-index: 0;
+            min-height: 100vh; /* Ensure it covers full viewport height */
+            display: flex; /* Flexbox for vertical centering */
+            align-items: center; /* Vertically center content */
+            justify-content: center; /* Horizontally center content */
         }
-
-        /* Styles for the countdown timer elements */
-        .countdown-segment {
-            @apply flex flex-col items-center justify-center bg-gray-900 bg-opacity-70 rounded-lg p-3 sm:p-4 text-center border border-gray-700;
+        .hero-background::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.75); /* Darker overlay for strong contrast */
+            z-index: 1;
         }
-        .countdown-value {
-            @apply text-3xl sm:text-4xl font-extrabold text-blue-400;
-        }
-        .countdown-label {
-            @apply text-xs sm:text-sm text-gray-400 uppercase tracking-wider mt-1;
-        }
-
-        /* Ensuring smooth scrolling for anchor links */
-        html {
-            scroll-behavior: smooth;
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative hero-background min-h-screen flex items-center justify-center p-4">
-        <!-- Dark overlay for text readability -->
-        <div class="absolute inset-0 bg-black opacity-70"></div> 
-        <div class="relative z-10 text-center max-w-4xl mx-auto py-16 px-6">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 
-                       bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
-                The Self-Hosted AI Agent Blueprint: <br class="hidden sm:inline">From Local Setup to Mobile Mastery
+    <section class="hero-background py-20 md:py-32 lg:py-48 text-center">
+        <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6 animate-pulse">
+                Gemini Prompt Pro: Master Personalized AI Image Creation
             </h1>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Unlock unparalleled control and privacy. Learn to build, deploy, and master your own AI agents, self-hosted and accessible from anywhere – even your iOS/Android device with <strong class="text-blue-300">OpenClaw</strong> and similar technologies.
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Unlock the full potential of Gemini's <span class="text-green-400 font-semibold">now free for US users</span> personalized AI image generation. Propel your content, marketing, and e-commerce visuals beyond imagination with unparalleled precision.
             </p>
-            <a href="#waitlist" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                Join the Exclusive Waitlist Now!
-            </a>
-            <p class="text-sm text-gray-400 mt-4">Limited spots available for early access & exclusive bonuses.</p>
-        </div>
-    </header>
-
-    <!-- Value Proposition / Market Trends Section -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900">
-        <div class="max-w-screen-xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-blue-400">Why Self-Host Your AI Agents Today?</h2>
-            <p class="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                The future of AI is personal and private. With recent advancements like the <strong class="text-blue-300">OpenClaw app for iOS and Android</strong>,
-                the demand for self-controlled, always-on AI is skyrocketing. Don't just use AI; own it.
-            </p>
-            <div class="grid md:grid-cols-3 gap-8 mt-12">
-                <div class="p-6 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-5xl mb-4 text-purple-400">🔒</div>
-                    <h3 class="text-xl font-semibold mb-3">Unmatched Control & Privacy</h3>
-                    <p class="text-gray-300">Safeguard your data and customize agent behavior without third-party interference.</p>
-                </div>
-                <div class="p-6 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-5xl mb-4 text-green-400">💸</div>
-                    <h3 class="text-xl font-semibold mb-3">Cost-Effective & Scalable</h3>
-                    <p class="text-gray-300">Optimize costs and scale your AI operations on your own hardware, free from API fees.</p>
-                </div>
-                <div class="p-6 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-5xl mb-4 text-yellow-400">📱</div>
-                    <h3 class="text-xl font-semibold mb-3">Mobile Mastery (OpenClaw Ready!)</h3>
-                    <p class="text-gray-300">Access and command your self-hosted agents from anywhere, leveraging modern mobile apps like OpenClaw.</p>
-                </div>
+            
+            <!-- Limited Time Offer / Urgency Element -->
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-800 p-5 rounded-xl shadow-2xl mb-10 mx-auto max-w-md border-2 border-yellow-400">
+                <p class="text-white text-xl font-bold mb-2 uppercase tracking-wide">⚡ Limited Time Early Bird Access! ⚡</p>
+                <p class="text-yellow-300 text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">
+                    Offer Ending Soon!
+                </p>
+                <p class="text-white text-md mt-3">Special pricing for the first 100 members only. Don't miss out!</p>
             </div>
+
+            <a href="#waitlist" class="inline-block bg-gradient-to-r from-blue-600 to-purple-700 hover:from-blue-700 hover:to-purple-800 text-white font-bold py-4 px-10 sm:py-5 sm:px-12 rounded-full text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg ring-4 ring-blue-400 ring-opacity-50">
+                Secure Your Exclusive Access - Join The Waitlist Now!
+            </a>
+            <p class="text-sm text-gray-400 mt-5">Demand is high, spots are limited. Act fast!</p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800 border-t border-gray-700">
-        <div class="max-w-screen-xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-blue-400">What You'll Master in This Premium Course</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="flex items-start p-6 bg-gray-900 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-                    <div class="flex-shrink-0 mr-4 text-3xl text-purple-400">🎬</div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2">Step-by-Step Video Tutorials</h3>
-                        <p class="text-gray-300">High-definition, easy-to-follow video lessons guiding you from foundational concepts to advanced deployment strategies.</p>
-                    </div>
+    <section class="bg-gray-800 py-16 md:py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-12">What You'll Achieve with Gemini Prompt Pro</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Feature 1: Advanced Prompt Engineering -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="text-5xl mb-4">🧠</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Advanced Prompt Engineering</h3>
+                    <p class="text-gray-300 text-lg">Go beyond basic prompts. Learn the science and art of crafting precise, high-impact instructions that generate exactly what you envision, every time.</p>
                 </div>
-                <div class="flex items-start p-6 bg-gray-900 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-                    <div class="flex-shrink-0 mr-4 text-3xl text-green-400">⚙️</div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2">Pre-Configured Setup Scripts</h3>
-                        <p class="text-gray-300">Downloadable Docker Compose files and other scripts for seamless, one-command deployment across various environments.</p>
-                    </div>
+                <!-- Feature 2: Curated Niche Prompt Library -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="text-5xl mb-4">📚</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Curated Niche Prompt Library</h3>
+                    <p class="text-gray-300 text-lg">Access a continually updated vault of specialized prompts for marketing, social media, e-commerce product shots, and beyond. Stop guessing, start generating pro-level visuals.</p>
                 </div>
-                <div class="flex items-start p-6 bg-gray-900 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-                    <div class="flex-shrink-0 mr-4 text-3xl text-red-400">🛠️</div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2">Advanced Customization Workshops</h3>
-                        <p class="text-gray-300">Deep-dive workshops to tailor AI agents for specific needs: productivity, coding assistance, data analysis, and beyond.</p>
-                    </div>
+                <!-- Feature 3: Step-by-Step Workflow Guides -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="text-5xl mb-4">🛠️</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Step-by-Step Workflow Guides</h3>
+                    <p class="text-gray-300 text-lg">Detailed, actionable tutorials show you how to seamlessly integrate Gemini into your existing content creation and business workflows for maximum efficiency and output.</p>
                 </div>
-                <div class="flex items-start p-6 bg-gray-900 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-                    <div class="flex-shrink-0 mr-4 text-3xl text-orange-400">🤖</div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2">OpenClaw & Mobile Integration</h3>
-                        <p class="text-gray-300">Master connecting your self-hosted agents to cutting-edge mobile apps like OpenClaw for unparalleled on-the-go control.</p>
-                    </div>
+                <!-- Feature 4: Seamless Gemini Integration -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="text-5xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Seamless Gemini Integration</h3>
+                    <p class="text-gray-300 text-lg">Master techniques for personalizing Gemini outputs to match your brand's unique voice, visual identity, and specific campaign objectives across all platforms.</p>
                 </div>
-                <div class="flex items-start p-6 bg-gray-900 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-                    <div class="flex-shrink-0 mr-4 text-3xl text-teal-400">🤝</div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2">Private Community Forum</h3>
-                        <p class="text-gray-300">Gain access to an exclusive community of fellow pioneers for ongoing support, collaboration, and knowledge sharing.</p>
-                    </div>
+                <!-- Feature 5: Stay Ahead of Market Trends -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="text-5xl mb-4">📈</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Stay Ahead of Market Trends</h3>
+                    <p class="text-gray-300 text-lg">Leverage cutting-edge AI image generation to create visuals that not only capture attention but also drive engagement and conversions in today's digital landscape.</p>
                 </div>
-                <div class="flex items-start p-6 bg-gray-900 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-                    <div class="flex-shrink-0 mr-4 text-3xl text-yellow-400">🧠</div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2">Future-Proof Your Expertise</h3>
-                        <p class="text-gray-300">Acquire skills that stand the test of time, giving you true ownership and mastery in the rapidly evolving AI landscape.</p>
-                    </div>
+                <!-- Feature 6: Precision Visuals, Every Time -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="text-5xl mb-4">🎯</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Precision Visuals, Every Time</h3>
+                    <p class="text-gray-300 text-lg">Stop wasting time with generic outputs. Generate hyper-specific images tailored exactly to your campaign needs, drastically boosting your visual impact and ROI.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-gray-800 border-t border-gray-700">
-        <div class="max-w-2xl mx-auto text-center bg-gray-800 bg-opacity-70 p-8 rounded-xl shadow-2xl border border-blue-500/30">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-white">Don't Miss Out! Join the Exclusive Waitlist!</h2>
-            <p class="text-lg text-gray-300 mb-8">
-                Secure your spot for 'The Self-Hosted AI Agent Blueprint' and gain early bird access, exclusive discounts, and bonus content reserved only for our first cohort.
+    <section id="waitlist" class="bg-gray-900 py-16 md:py-24 lg:py-32">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-gray-800 p-8 sm:p-10 md:p-12 rounded-2xl shadow-2xl border-2 border-blue-600">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6">Join the Gemini Prompt Pro Waitlist!</h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                Be among the first to gain access to our premium subscription newsletter or online course. Limited spots available for early bird pricing – this is your exclusive chance to revolutionize your AI image creation workflow.
             </p>
-
-            <!-- Limited Time Offer & Countdown -->
-            <div class="bg-blue-600 bg-opacity-20 text-blue-200 p-4 rounded-lg mb-8 border border-blue-500">
-                <p class="font-bold text-xl mb-4 flex items-center justify-center">
-                    <svg class="w-7 h-7 mr-2 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    Early Bird Offer & Bonuses End In:
-                </p>
-                <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-lg mx-auto mt-4">
-                    <div class="countdown-segment">
-                        <span id="days" class="countdown-value">00</span>
-                        <span class="countdown-label">Days</span>
-                    </div>
-                    <div class="countdown-segment">
-                        <span id="hours" class="countdown-value">00</span>
-                        <span class="countdown-label">Hours</span>
-                    </div>
-                    <div class="countdown-segment">
-                        <span id="minutes" class="countdown-value">00</span>
-                        <span class="countdown-label">Minutes</span>
-                    </div>
-                    <div class="countdown-segment">
-                        <span id="seconds" class="countdown-value">00</span>
-                        <span class="countdown-label">Seconds</span>
-                    </div>
-                </div>
-            </div>
-
-            <form class="space-y-6">
+            <form action="#" method="POST" class="space-y-6">
                 <div>
-                    <label for="name" class="sr-only">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required
-                           class="w-full p-4 rounded-lg bg-gray-900 text-gray-100 border border-gray-700 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 transition duration-200 shadow-inner">
+                    <label for="email" class="sr-only">Email address</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required 
+                           class="block w-full px-5 py-3 border border-gray-700 rounded-md shadow-sm placeholder-gray-500 
+                                  focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-lg 
+                                  bg-gray-700 text-white transition duration-300 ease-in-out" 
+                           placeholder="Enter your best email address">
                 </div>
                 <div>
-                    <label for="email" class="sr-only">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
-                           class="w-full p-4 rounded-lg bg-gray-900 text-gray-100 border border-gray-700 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 transition duration-200 shadow-inner">
+                    <button type="submit" 
+                            class="w-full flex items-center justify-center px-5 py-3 border border-transparent 
+                                   text-base font-medium rounded-md text-white 
+                                   bg-gradient-to-r from-blue-600 to-purple-700 hover:from-blue-700 hover:to-purple-800 
+                                   transition duration-300 ease-in-out transform hover:scale-105 shadow-xl sm:text-lg">
+                        🚀 Get Early Access & Exclusive Updates!
+                    </button>
                 </div>
-                <button type="submit"
-                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
-                    Get Early Access & Exclusive Bonuses
-                </button>
             </form>
-            <p class="text-sm text-gray-400 mt-6">We respect your privacy. Your email will only be used for course updates and special offers.</p>
+            <p class="text-sm text-gray-500 mt-4">We respect your privacy. No spam, ever. Unsubscribe anytime.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 px-4 sm:px-6 lg:px-8 bg-gray-900 text-center text-gray-500 border-t border-gray-800">
-        <div class="max-w-screen-xl mx-auto">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2 text-sm">
-                <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Privacy Policy</a> |
-                <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Terms of Service</a>
-            </p>
+    <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p>&copy; 2023 Gemini Prompt Pro. All rights reserved.</p>
+            <p class="mt-2">Developed by a Digital Education Authority focusing on high-margin knowledge products.</p>
         </div>
     </footer>
 
-    <!-- Countdown JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 7 days from now for a fresh offer)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Sets the countdown for 7 days from page load
-
-            // Update the count down every 1 second
-            const x = setInterval(function() {
-                // Get today's date and time
-                const now = new Date().getTime();
-
-                // Find the distance between now and the count down date
-                const distance = countDownDate.getTime() - now;
-
-                // Time calculations for days, hours, minutes and seconds
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                // Display the result in the elements, padding with leading zeros
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-                // If the count down is finished, display a message
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<div class='col-span-4 text-red-400 text-xl font-bold'>OFFER EXPIRED! Join to be notified for the next launch.</div>";
-                    // Optionally disable the form or change button text
-                }
-            }, 1000);
-        });
-    </script>
 </body>
 </html>
