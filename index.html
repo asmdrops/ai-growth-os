@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xbox Digital Ownership Masterclass - Secure Your Future in Gaming</title>
+    <title>Post-Bug Privacy: Your Ultimate Guide to Secure Email Aliases & Online Anonymity</title>
+    <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Google Fonts for a modern premium feel -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -18,226 +20,181 @@
             background-position: center;
             background-repeat: no-repeat;
         }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for strong text readability */
-        }
-        /* ULTRA-RESPONSIVE text scaling for various screen sizes, especially for 4K */
-        @media (min-width: 1920px) { /* Full HD and up, towards 4K */
-            .text-ultra-responsive-6xl { font-size: 4.5rem; line-height: 1.1; } /* Larger for 4K monitors */
-            .text-ultra-responsive-4xl { font-size: 3rem; }
-        }
-        @media (min-width: 1280px) and (max-width: 1919px) { /* Large desktops */
-            .text-ultra-responsive-6xl { font-size: 3.75rem; line-height: 1.2; }
-            .text-ultra-responsive-4xl { font-size: 2.5rem; }
-        }
-        @media (min-width: 768px) and (max-width: 1279px) { /* Tablets, small laptops */
-            .text-ultra-responsive-6xl { font-size: 3rem; line-height: 1.25; }
-            .text-ultra-responsive-4xl { font-size: 2rem; }
-        }
-        @media (max-width: 767px) { /* Mobile phones */
-            .text-ultra-responsive-6xl { font-size: 2.25rem; line-height: 1.3; }
-            .text-ultra-responsive-4xl { font-size: 1.5rem; }
-        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 antialiased overflow-x-hidden">
-    
+
     <!-- Hero Section -->
-    <header class="relative hero-background min-h-screen flex items-center justify-center p-4">
-        <div class="absolute inset-0 hero-overlay"></div>
-        <div class="relative z-10 text-center max-w-6xl mx-auto space-y-8 py-16 md:py-24">
-            <h1 class="text-ultra-responsive-6xl font-extrabold leading-tight text-white mb-4">
-                Xbox's Digital Shift is <span class="text-green-500">HERE</span>.
-                <br>Master Your Collection. Maximize Your Value.
+    <header class="relative hero-background min-h-screen flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8">
+        <!-- Dark Overlay for Readability -->
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                Apple's 'Hide My Email' Exposed You.<br class="hidden sm:inline"> Reclaim Your Digital Fortress.
             </h1>
-            <p class="text-ultra-responsive-4xl text-gray-200 mb-8 max-w-4xl mx-auto">
-                Prepare for the inevitable disc-free future with the 'Xbox Digital Ownership Masterclass' – your essential guide to thriving in the new era of gaming.
+            <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto drop-shadow">
+                Introducing "Post-Bug Privacy": Your ultimate guide to secure email aliases, unmasking modern vulnerabilities, and achieving bulletproof online anonymity.
             </p>
 
-            <!-- Limited Time Countdown -->
-            <div class="bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-sm p-6 md:p-8 rounded-lg shadow-2xl border border-green-700 mx-auto max-w-xl">
-                <p class="text-xl md:text-2xl font-bold text-green-400 mb-4 uppercase tracking-wider">Limited-Time Early Bird Offer Ends In:</p>
-                <div class="grid grid-cols-4 gap-2 md:gap-4 text-white text-center">
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl md:text-5xl lg:text-6xl font-extrabold" id="days">00</span>
-                        <span class="text-sm md:text-base text-gray-300">Days</span>
+            <!-- Limited Time Offer & Countdown -->
+            <div class="bg-purple-800 bg-opacity-80 border-2 border-purple-600 rounded-lg p-6 mb-10 shadow-lg inline-block mx-auto max-w-full">
+                <p class="text-xl sm:text-2xl font-bold text-white mb-3 uppercase tracking-wide">
+                    Limited Time Launch Offer!
+                </p>
+                <div id="countdown-timer" class="flex flex-wrap justify-center items-center space-x-2 sm:space-x-4 text-purple-100 text-shadow">
+                    <div class="text-center p-2">
+                        <span class="block text-3xl sm:text-5xl font-extrabold" data-days>00</span>
+                        <span class="block text-sm sm:text-base">Days</span>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl md:text-5xl lg:text-6xl font-extrabold" id="hours">00</span>
-                        <span class="text-sm md:text-base text-gray-300">Hours</span>
+                    <span class="text-3xl sm:text-5xl font-extrabold">:</span>
+                    <div class="text-center p-2">
+                        <span class="block text-3xl sm:text-5xl font-extrabold" data-hours>00</span>
+                        <span class="block text-sm sm:text-base">Hours</span>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl md:text-5xl lg:text-6xl font-extrabold" id="minutes">00</span>
-                        <span class="text-sm md:text-base text-gray-300">Mins</span>
+                    <span class="text-3xl sm:text-5xl font-extrabold">:</span>
+                    <div class="text-center p-2">
+                        <span class="block text-3xl sm:text-5xl font-extrabold" data-minutes>00</span>
+                        <span class="block text-sm sm:text-base">Minutes</span>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl md:text-5xl lg:text-6xl font-extrabold" id="seconds">00</span>
-                        <span class="text-sm md:text-base text-gray-300">Secs</span>
+                    <span class="text-3xl sm:text-5xl font-extrabold">:</span>
+                    <div class="text-center p-2">
+                        <span class="block text-3xl sm:text-5xl font-extrabold" data-seconds>00</span>
+                        <span class="block text-sm sm:text-base">Seconds</span>
                     </div>
                 </div>
-                <p class="text-xs text-gray-400 mt-4"><em>(Dynamic countdown requires JavaScript for functionality)</em></p>
+                <p class="text-sm text-gray-300 mt-4">
+                    Secure your privacy at an exclusive early-bird price!
+                </p>
             </div>
 
-            <ul class="text-lg md:text-xl text-left text-gray-300 space-y-3 mt-8 max-w-md mx-auto px-4 md:px-0">
-                <li class="flex items-center space-x-3">
-                    <svg class="w-6 h-6 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                    <span>🎮 Digitise your physical games seamlessly.</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                    <svg class="w-6 h-6 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                    <span>💰 Unlock hidden value in your existing library.</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                    <svg class="w-6 h-6 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                    <span>🚀 Master digital sales & future game licensing.</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                    <svg class="w-6 h-6 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                    <span>✨ Optimise Game Pass like a pro in a disc-free world.</span>
-                </li>
-            </ul>
-
-            <a href="#waitlist-form" class="mt-10 inline-block px-10 py-4 text-xl md:text-2xl font-bold rounded-full bg-green-600 hover:bg-green-700 text-white transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                Secure Your Early Access & Bonus Content Now!
+            <a href="#waitlist" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                Get Instant Secure Access Now
             </a>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 bg-gray-900 text-center px-4">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-12">What You'll Master in the Class</h2>
-            
+    <section id="features" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-12 text-white">
+                What You'll Master in "Post-Bug Privacy"
+            </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-green-500 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-green-500 mb-4">
-                        <svg class="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h.01a1 1 0 100-2H10zm3 0a1 1 0 000 2h.01a1 1 0 100-2H13zm-3 4a1 1 0 000 2h.01a1 1 0 100-2H10z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">The Digital Migration Blueprint</h3>
-                    <p class="text-gray-300">Learn the safest and most efficient strategies to transition your beloved physical collection into a robust digital library, ensuring no game is left behind.</p>
+                <!-- Feature 1: Vulnerability Explanation -->
+                <div class="bg-gray-700 rounded-lg p-8 shadow-lg transform hover:scale-105 transition duration-300 ease-in-out border border-gray-600">
+                    <div class="text-purple-400 mb-4 text-5xl">💡</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Unmasking the Vulnerability</h3>
+                    <p class="text-gray-300">A detailed, jargon-free explanation of the recent Apple 'Hide My Email' bug and its real-world implications for your privacy.</p>
                 </div>
-                
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-green-500 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-green-500 mb-4">
-                        <svg class="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M17.778 8.222l-1.414-1.414A.999.999 0 0015.061 7H13V4a1 1 0 10-2 0v3H9.939a.999.999 0 00-.707.293L7.222 8.222a1 1 0 000 1.414l1.414 1.414A.999.999 0 009.939 12H11v3a1 1 0 102 0v-3h1.939a.999.999 0 00.707-.293l1.414-1.414a1 1 0 000-1.414zM6 14a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Value Maximization & Library Alchemy</h3>
-                    <p class="text-gray-300">Discover advanced tactics to assess and maximize the value of your current digital and physical games, turning overlooked assets into gaming power.</p>
+                <!-- Feature 2: Step-by-Step Mitigation -->
+                <div class="bg-gray-700 rounded-lg p-8 shadow-lg transform hover:scale-105 transition duration-300 ease-in-out border border-gray-600">
+                    <div class="text-purple-400 mb-4 text-5xl">🛠️</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Step-by-Step Mitigation</h3>
+                    <p class="text-gray-300">Clear, actionable instructions to immediately mitigate risks from exposed email addresses and secure your current accounts.</p>
                 </div>
-
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-green-500 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-green-500 mb-4">
-                        <svg class="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 012.293 13.707L3.586 15H4a1 1 0 011-1h10a1 1 0 011 1h.414l1.293-1.293A1 1 0 0117.707 12.293L17 11.586V8a6 6 0 00-6-6zM5 14.5a.5.5 0 11-1 0 .5.5 0 011 0zm8 0a.5.5 0 11-1 0 .5.5 0 011 0z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Navigating the Digital Marketplace</h3>
-                    <p class="text-gray-300">Become a savvy shopper! Understand pricing cycles, predict major sales, and master the art of securing the best deals on digital-only titles.</p>
+                <!-- Feature 3: Best Email Alias Services -->
+                <div class="bg-gray-700 rounded-lg p-8 shadow-lg transform hover:scale-105 transition duration-300 ease-in-out border border-gray-600">
+                    <div class="text-purple-400 mb-4 text-5xl">⚖️</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Best Email Alias Services</h3>
+                    <p class="text-gray-300">An unbiased comparison of leading email alias providers to help you choose the perfect service for your privacy needs.</p>
                 </div>
-
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-green-500 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-green-500 mb-4">
-                        <svg class="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.172l3.414 3.414a1 1 0 010 1.414l-3.414 3.414V17a1 1 0 11-2 0v-1.828l-3.414-3.414a1 1 0 010-1.414l3.414-3.414V3a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Future-Proofing & Licensing Decoded</h3>
-                    <p class="text-gray-300">Demystify game licensing in a digital-first world. Learn what you truly own, understand cross-gen entitlements, and prepare for future Xbox hardware changes.</p>
+                <!-- Feature 4: Comprehensive Privacy Checklist -->
+                <div class="bg-gray-700 rounded-lg p-8 shadow-lg transform hover:scale-105 transition duration-300 ease-in-out border border-gray-600">
+                    <div class="text-purple-400 mb-4 text-5xl">✅</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Comprehensive Privacy Checklist</h3>
+                    <p class="text-gray-300">A practical checklist for enhancing your overall digital privacy beyond email, covering browser, device, and online habits.</p>
                 </div>
-
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-green-500 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-green-500 mb-4">
-                        <svg class="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-7-8a1 1 0 011-1h2a1 1 0 110 2H4a1 1 0 01-1-1zM9 9a1 1 0 000 2h2a1 1 0 100-2H9zm6 1a1 1 0 11-2 0 1 1 0 012 0z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Game Pass Optimization for Disc-Free Era</h3>
-                    <p class="text-gray-300">Unlock the full potential of Xbox Game Pass. Strategies for game discovery, maximizing playtime, and smart subscription management in a world without discs.</p>
+                <!-- Feature 5: Future-Proofing Your Anonymity -->
+                <div class="bg-gray-700 rounded-lg p-8 shadow-lg transform hover:scale-105 transition duration-300 ease-in-out border border-gray-600">
+                    <div class="text-purple-400 mb-4 text-5xl">🛡️</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Future-Proofing Your Anonymity</h3>
+                    <p class="text-gray-300">Expert tips and strategies to proactively prevent future digital exposures and maintain robust online anonymity.</p>
                 </div>
-
-                <!-- Feature 6 (Bonus) -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-green-500 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-green-500 mb-4">
-                        <svg class="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 15a4 4 0 01-2 3v-3h-2v3a4 4 0 01-2-3v-3H6v3a4 4 0 01-2-3v-3H2v3C2 17.55 4.29 19 7 19h6c2.71 0 5-1.45 5-4.5v-3h-2v3z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Community & Continuous Updates</h3>
-                    <p class="text-gray-300">Gain access to an exclusive community, live Q&A sessions, and ongoing updates to stay ahead of every new Xbox digital development.</p>
+                <!-- Feature 6: Exclusive Expert Insights -->
+                <div class="bg-gray-700 rounded-lg p-8 shadow-lg transform hover:scale-105 transition duration-300 ease-in-out border border-gray-600">
+                    <div class="text-purple-400 mb-4 text-5xl">🎓</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Exclusive Expert Insights</h3>
+                    <p class="text-gray-300">Gain access to advanced privacy techniques and insights from leading cybersecurity professionals and privacy advocates.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-20 bg-gray-900 px-4">
-        <div class="max-w-xl mx-auto text-center bg-gray-800 p-8 md:p-10 rounded-xl shadow-2xl border border-green-700">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">
-                Don't Get Left Behind.
-                <br><span class="text-green-500">Secure Your Future</span> in Xbox Gaming.
+    <!-- Waitlist / Pre-order Form Section -->
+    <section id="waitlist" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div class="max-w-xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 text-white">
+                Don't Wait for the Next Breach. Act Now.
             </h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-8">
-                The digital shift is happening now. Join our VIP waitlist for exclusive early access, special launch discounts, and bonus materials!
+            <p class="text-lg text-gray-300 mb-8">
+                Secure your spot for "Post-Bug Privacy" at the limited-time launch price. Enter your details below to get immediate access and fortify your digital life.
             </p>
-            <form action="#" method="POST" class="space-y-6">
-                <div>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required
-                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200">
+            <form action="#" method="POST" class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700">
+                <div class="mb-6">
+                    <label for="name" class="block text-left text-sm font-medium text-gray-200 mb-2">Full Name</label>
+                    <input type="text" name="name" id="name" placeholder="John Doe" class="w-full px-5 py-3 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition duration-200" required>
                 </div>
-                <div>
-                    <input type="email" id="email" name="email" placeholder="Your Best Email" required
-                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200">
+                <div class="mb-6">
+                    <label for="email" class="block text-left text-sm font-medium text-gray-200 mb-2">Email Address</label>
+                    <input type="email" name="email" id="email" placeholder="john.doe@example.com" class="w-full px-5 py-3 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition duration-200" required>
                 </div>
-                <button type="submit" class="w-full px-8 py-4 text-xl md:text-2xl font-bold rounded-lg bg-green-600 hover:bg-green-700 text-white transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
-                    Join the VIP Waitlist Now!
+                <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-md text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                    Secure My Digital Privacy Now
                 </button>
-                <p class="text-sm text-gray-400 mt-4">
-                    Your information is 100% secure. We'll never share your email.
-                </p>
+                <p class="text-xs text-gray-400 mt-4">Your information is 100% secure. We respect your privacy and will never spam you.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 px-4 text-center text-gray-400 text-sm border-t border-gray-800">
-        <div class="max-w-7xl mx-auto">
-            <p>&copy; 2023 Xbox Digital Ownership Masterclass. All rights reserved.</p>
-            <p class="mt-2">Disclaimer: This course is independently produced and not affiliated with or endorsed by Microsoft or Xbox.</p>
-            <p class="mt-2">This is a premium knowledge product focused on practical strategies and value maximization (productivity application), not a gaming trend for casual entertainment.</p>
+    <footer class="py-10 px-4 sm:px-6 lg:px-8 bg-gray-800 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto text-center text-gray-400 text-sm">
+            &copy; 2024 Digital Education Authority. All rights reserved.
         </div>
     </footer>
 
-    <!-- JavaScript for dynamic countdown (add this script block if you need actual countdown functionality) -->
-    <!--
+    <!-- JavaScript for Countdown Timer -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        const countdownElement = document.getElementById('countdown-timer');
+        if (countdownElement) {
+            const daysSpan = countdownElement.querySelector('[data-days]');
+            const hoursSpan = countdownElement.querySelector('[data-hours]');
+            const minutesSpan = countdownElement.querySelector('[data-minutes]');
+            const secondsSpan = countdownElement.querySelector('[data-seconds]');
+
             // Set the date we're counting down to (e.g., 7 days from now)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from today
-            // Or set a specific date: new Date("Jan 1, 2024 00:00:00").getTime();
+            // For a production site, this would be a specific date/time from your backend.
+            const countDownDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000) + (1 * 60 * 60 * 1000); // 7 days and 1 hour from now
 
             const x = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
+                const distance = countDownDate - now;
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    countdownElement.innerHTML = "<p class='text-red-400 text-xl font-bold'>Offer Expired!</p>";
+                    // Optionally disable the CTA button here
+                    const ctaButton = document.querySelector('a[href="#waitlist"]');
+                    if (ctaButton) {
+                        ctaButton.textContent = "Offer Ended";
+                        ctaButton.classList.add('opacity-50', 'cursor-not-allowed');
+                        ctaButton.removeAttribute('href');
+                    }
+                    return;
+                }
 
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                if (document.getElementById("days")) document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                if (document.getElementById("hours")) document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                if (document.getElementById("minutes")) document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                if (document.getElementById("seconds")) document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-                if (distance < 0) {
-                    clearInterval(x);
-                    if (document.getElementById("days")) document.getElementById("days").innerHTML = "00";
-                    if (document.getElementById("hours")) document.getElementById("hours").innerHTML = "00";
-                    if (document.getElementById("minutes")) document.getElementById("minutes").innerHTML = "00";
-                    if (document.getElementById("seconds")) document.getElementById("seconds").innerHTML = "00";
-                    // You might want to hide the offer or change the CTA here
-                }
+                daysSpan.textContent = String(days).padStart(2, '0');
+                hoursSpan.textContent = String(hours).padStart(2, '0');
+                minutesSpan.textContent = String(minutes).padStart(2, '0');
+                secondsSpan.textContent = String(seconds).padStart(2, '0');
             }, 1000);
-        });
+        }
     </script>
-    -->
 </body>
 </html>
