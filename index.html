@@ -3,161 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Master iOS 27: The Ultimate Power User Masterclass</title>
+    <title>The 'Smart Wallet' Masterclass - Master Your Money with Google Wallet & Wear OS</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        /* Custom styles for dark mode and premium feel */
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', sans-serif; /* A modern sans-serif font */
         }
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
+        /* Gradient for buttons and highlights */
+        .btn-gradient {
+            background-image: linear-gradient(to right, #6366f1, #9333ea); /* Indigo to Purple */
+            transition: all 0.3s ease;
         }
+        .btn-gradient:hover {
+            background-image: linear-gradient(to right, #4f46e5, #7e22ce);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        /* Hero section overlay for text readability */
         .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for better contrast */
+        }
+        /* Countdown styling */
+        #countdown-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 0.75rem; /* Slightly larger radius */
+            padding: 1.5rem; /* More padding */
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3); /* Deeper shadow */
+        }
+        .countdown-timer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 columns */
+            gap: 1rem; /* Space between items */
             width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom right, rgba(17, 24, 39, 0.8), rgba(55, 65, 81, 0.7));
-            backdrop-filter: blur(2px);
+            max-width: 400px; /* Max width for countdown numbers */
+            margin-top: 1rem;
         }
-        .countdown-timer span {
-            display: inline-block;
-            margin: 0 0.5rem;
-            padding: 0.75rem 1.25rem;
-            background-color: rgba(31, 41, 55, 0.7);
+        .countdown-item {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.3);
             border-radius: 0.5rem;
-            font-size: 2.25rem; /* text-4xl */
-            font-weight: 700; /* font-bold */
+            padding: 0.75rem 0.25rem;
         }
-        .countdown-timer .label {
+        .countdown-item span {
             display: block;
-            font-size: 0.875rem; /* text-sm */
-            font-weight: 400; /* font-normal */
-            margin-top: 0.25rem;
-            color: #d1d5db; /* gray-300 */
+            font-size: 2.25rem; /* Larger numbers */
+            font-weight: 700;
+            color: #a78bfa; /* A distinct light purple for numbers */
+            line-height: 1;
+            margin-bottom: 0.25rem;
+        }
+        .countdown-item small {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #cbd5e0; /* Light gray */
+            font-weight: 600;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased leading-relaxed">
 
     <!-- Hero Section -->
-    <section class="hero-background min-h-screen flex items-center justify-center py-20 px-4 md:px-8 relative">
-        <div class="hero-overlay"></div>
-        <div class="container mx-auto relative z-10 text-center max-w-4xl">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-                Master iOS 27: Unlock Your iPhone's Full Potential
+    <header class="relative bg-[url('https://source.unsplash.com/1600x900/?The,tech')] bg-cover bg-center h-screen flex items-center justify-center text-center">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative z-10 container mx-auto px-6 py-16 lg:py-24 max-w-4xl">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
+                Unlock Your Financial Superpower: <br class="hidden md:inline">Master Google Wallet's New Insights 🚀
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">
-                **The Ultimate Masterclass & Interactive Guide for Power Users.** Dive deep into the new Siri AI, uncover hidden productivity features, fortify advanced privacy settings, and optimize your device setup.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                With Google Wallet finally showing all your spending in one place, it's time to transform raw data into actionable savings.
+                The 'Smart Wallet' Masterclass is your guide to advanced budgeting, personalized analytics, and real financial control.
             </p>
-
-            <div class="mb-10 p-6 bg-gradient-to-r from-gray-800 to-gray-700 rounded-xl shadow-lg border border-gray-600">
-                <p class="text-base sm:text-lg text-red-400 font-semibold mb-3 tracking-wide uppercase">
-                    Early Bird Access & Exclusive Bonuses End In:
-                </p>
-                <div id="countdown" class="flex justify-center items-center text-gray-100 countdown-timer flex-wrap gap-y-4">
-                    <div class="flex flex-col items-center mx-2 sm:mx-4">
-                        <span id="days" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">00</span>
-                        <span class="label">Days</span>
+            
+            <!-- Limited Time Countdown -->
+            <div id="countdown-container" class="mb-10 max-w-xl mx-auto border border-purple-600/50">
+                <p class="text-xl font-bold text-purple-300 mb-2 w-full">Limited Time Offer! Enrollment Closes In:</p>
+                <div class="countdown-timer-grid">
+                    <div class="countdown-item">
+                        <span id="days">00</span>
+                        <small>Days</small>
                     </div>
-                    <span class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">:</span>
-                    <div class="flex flex-col items-center mx-2 sm:mx-4">
-                        <span id="hours" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">00</span>
-                        <span class="label">Hours</span>
+                    <div class="countdown-item">
+                        <span id="hours">00</span>
+                        <small>Hours</small>
                     </div>
-                    <span class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">:</span>
-                    <div class="flex flex-col items-center mx-2 sm:mx-4">
-                        <span id="minutes" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">00</span>
-                        <span class="label">Minutes</span>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <small>Minutes</small>
                     </div>
-                    <span class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">:</span>
-                    <div class="flex flex-col items-center mx-2 sm:mx-4">
-                        <span id="seconds" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">00</span>
-                        <span class="label">Seconds</span>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <small>Seconds</small>
                     </div>
                 </div>
-                <p class="text-sm mt-4 text-gray-400">
-                    Based on market trends, Apple is already testing iOS 27.4 according to MacRumors, making this course essential to stay ahead!
+                <p class="text-sm text-gray-400 mt-4 w-full">
+                    (Note: Countdown functionality requires JavaScript, not included in this raw HTML output.)
                 </p>
             </div>
 
-            <a href="#waitlist-form" class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-full text-xl sm:text-2xl transition-all duration-300 transform hover:scale-105 shadow-xl">
-                Join the Exclusive Waitlist Now!
+            <a href="#waitlist-form" class="btn-gradient inline-block px-10 py-4 rounded-full text-lg font-bold text-white shadow-lg uppercase tracking-wide">
+                Secure My Spot on the Waitlist!
             </a>
+            <p class="mt-4 text-sm text-gray-400">Join over 1,500 aspiring financial masters and take control.</p>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-20 px-4 md:px-8 bg-gray-900">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
-                What You'll Master in iOS 27
+    <section class="py-20 lg:py-32 bg-gray-900">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center text-white mb-16 leading-tight">
+                What You'll Achieve with The Smart Wallet Masterclass
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
                 <!-- Feature 1 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-2xl font-bold mb-3 text-blue-400 flex items-center">
-                        <span class="text-3xl mr-3">🚀</span> Deep Dives into New Siri AI
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Master the intelligence powering your next-gen iPhone experience. Understand its new capabilities, custom configurations, and advanced voice commands to truly automate your life.
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300">
+                    <div class="text-purple-400 text-5xl mb-6">📊</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Master Advanced Budgeting</h3>
+                    <p class="text-gray-300">
+                        Go beyond basic categories. Learn to create hyper-personalized budgets using Google Wallet's aggregated data,
+                        identifying precise spending patterns and areas for optimization. 🧠
                     </p>
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-2xl font-bold mb-3 text-purple-400 flex items-center">
-                        <span class="text-3xl mr-3">💡</span> Hidden Productivity Features
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Unlock workflows you didn't know existed, saving you hours every week. Discover secret gestures, advanced app integrations, and automation shortcuts to boost your efficiency.
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300">
+                    <div class="text-green-400 text-5xl mb-6">💰</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Unlock Hidden Savings</h3>
+                    <p class="text-gray-300">
+                        Discover actionable strategies to cut unnecessary expenses and boost your savings rate. We show you exactly how
+                        to leverage your new spending insights for maximum financial gain. ✨
                     </p>
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-green-500 transition-all duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-2xl font-bold mb-3 text-green-400 flex items-center">
-                        <span class="text-3xl mr-3">🔒</span> Advanced Privacy Settings
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Fortify your digital fortress with expert-level configurations. Learn to control data sharing, manage app permissions, and protect your identity in an increasingly connected world.
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300">
+                    <div class="text-blue-400 text-5xl mb-6">📈</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Personalized Spending Analytics</h3>
+                    <p class="text-gray-300">
+                        Stop guessing! Dive deep into your unique spending habits with exclusive templates and tracking sheets.
+                        Understand where every dollar goes and why. 🛠️
                     </p>
                 </div>
 
                 <!-- Feature 4 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-yellow-500 transition-all duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-2xl font-bold mb-3 text-yellow-400 flex items-center">
-                        <span class="text-3xl mr-3">⚙️</span> Optimal Device Setup
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Transform your new iPhone into a finely-tuned performance machine. Get step-by-step guidance on initial setup, essential configurations, and ongoing maintenance for peak performance.
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300">
+                    <div class="text-red-400 text-5xl mb-6">✅</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Exclusive Templates & Tools</h3>
+                    <p class="text-gray-300">
+                        Access our battle-tested budgeting templates, custom data analysis sheets, and practical guides
+                        not available anywhere else. Simplify your financial journey. 🚀
                     </p>
                 </div>
 
                 <!-- Feature 5 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-red-500 transition-all duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-2xl font-bold mb-3 text-red-400 flex items-center">
-                        <span class="text-3xl mr-3">🎬</span> Premium Video Tutorials
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Learn visually with crystal-clear, step-by-step video tutorials. Our experts guide you through every feature and setting, ensuring you grasp complex concepts with ease.
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300">
+                    <div class="text-yellow-400 text-5xl mb-6">📱</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Google Wallet & Wear OS Integration</h3>
+                    <p class="text-gray-300">
+                        Specifically designed for Google Wallet and Wear OS users. Learn to synchronize, analyze, and act
+                        on your data directly from your devices. Seamlessly. 🌐
                     </p>
                 </div>
 
                 <!-- Feature 6 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-2xl font-bold mb-3 text-indigo-400 flex items-center">
-                        <span class="text-3xl mr-3">🌐</span> Members-Only Community
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Connect, share, and get real-time Q&A with fellow power users and our instructors. An exclusive space for ongoing support, networking, and advanced discussions.
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300">
+                    <div class="text-indigo-400 text-5xl mb-6">💡</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Expert Tips & Strategies</h3>
+                    <p class="text-gray-300">
+                        Benefit from insights and strategies derived from years of financial expertise,
+                        tailored to help you maximize your savings and achieve financial freedom faster. 🌟
                     </p>
                 </div>
 
@@ -166,73 +185,75 @@
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 sm:py-20 px-4 md:px-8 bg-gradient-to-br from-gray-800 to-gray-900 border-t border-gray-700">
-        <div class="container mx-auto max-w-2xl text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-500">
-                Don't Miss Out! Secure Your Spot for iOS 27 Mastery!
+    <section id="waitlist-form" class="py-20 lg:py-32 bg-gray-800">
+        <div class="container mx-auto px-6 max-w-2xl text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-8">
+                Ready to Master Your Money?
             </h2>
-            <p class="text-lg text-gray-300 mb-8 max-w-xl mx-auto">
-                Join our exclusive waitlist for early access to the Masterclass, special launch discounts, and bonus content delivered straight to your inbox.
+            <p class="text-lg text-gray-300 mb-10">
+                Join the waitlist for 'The Smart Wallet' Masterclass now and be among the first to gain
+                exclusive access, early-bird discounts, and bonus content. Don't miss out on financial clarity!
             </p>
-
-            <form class="bg-gray-800 p-8 rounded-lg shadow-2xl border border-gray-700">
+            
+            <form action="#" method="POST" class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-purple-700/50">
                 <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-200 text-sm font-bold mb-2">Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" 
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600 bg-gray-800 transition duration-200"
                            required>
                 </div>
                 <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Email Address</label>
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
                     <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600 bg-gray-800 transition duration-200"
                            required>
                 </div>
-                <button type="submit"
-                        class="bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-full text-xl transition-all duration-300 transform hover:scale-105 shadow-lg w-full">
-                    Join the Waitlist Now
+                <button type="submit" class="btn-gradient w-full px-8 py-4 rounded-full text-lg font-bold text-white shadow-xl uppercase tracking-wide">
+                    Join the Smart Wallet Waitlist!
                 </button>
+                <p class="text-xs text-gray-500 mt-6">
+                    We respect your privacy. Your information will not be shared. You can unsubscribe at any time.
+                </p>
             </form>
         </div>
     </section>
 
-    <footer class="py-8 bg-gray-900 text-gray-400 text-center text-sm border-t border-gray-800">
-        <p>&copy; 2024 Digital Education Authority. All rights reserved. | <a href="#" class="text-blue-500 hover:underline">Privacy Policy</a></p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-10 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2023 The Smart Wallet Masterclass. All rights reserved.</p>
+            <p class="mt-2 text-sm">Empowering your financial future with smart technology.</p>
+        </div>
     </footer>
 
-    <script>
-        // Countdown Timer Logic
-        const countdownElement = document.getElementById('countdown');
-        const daysElement = document.getElementById('days');
-        const hoursElement = document.getElementById('hours');
-        const minutesElement = document.getElementById('minutes');
-        const secondsElement = document.getElementById('seconds');
+    <!-- 
+        Note: The countdown functionality requires JavaScript to dynamically update the timer.
+        As per the instructions, this output contains ONLY raw HTML.
+        The JavaScript code for the countdown would typically be placed here, before the closing </body> tag,
+        or linked from an external .js file.
 
-        // Set the date we're counting down to (e.g., 7 days from now for a "limited time" offer)
-        const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 7); // 7 days from now
-        // For testing, you could set a specific date:
-        // const countdownDate = new Date("Oct 27, 2024 10:00:00").getTime();
+        Example (not included in the final raw HTML output):
+        <script>
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const countDownDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).getTime(); // Example: 7 days from now
 
-        const x = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate - now;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown-container").innerHTML = "<p class='text-red-400 font-bold text-xl'>Enrollment has closed!</p>";
+                    return;
+                }
 
-            daysElement.innerHTML = String(days).padStart(2, '0');
-            hoursElement.innerHTML = String(hours).padStart(2, '0');
-            minutesElement.innerHTML = String(minutes).padStart(2, '0');
-            secondsElement.innerHTML = String(seconds).padStart(2, '0');
+                document.getElementById("days").innerHTML = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+                document.getElementById("hours").innerHTML = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+                document.getElementById("minutes").innerHTML = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+                document.getElementById("seconds").innerHTML = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
+            }, 1000);
+        </script>
+    -->
 
-            if (distance < 0) {
-                clearInterval(x);
-                countdownElement.innerHTML = "<span class='text-red-500 font-bold'>OFFER EXPIRED!</span>";
-            }
-        }, 1000);
-    </script>
 </body>
 </html>
