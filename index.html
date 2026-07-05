@@ -1,182 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The 'Smart Wallet' Masterclass - Master Your Money with Google Wallet & Wear OS</title>
+    <title>MenuGenius AI - Optimize Your Restaurant for Google Maps AI Ordering</title>
+    <meta name="description" content="MenuGenius AI empowers restaurants to dominate Google Maps' new 'Ask Maps' and AI ordering features with AI-driven menu optimization, dynamic specials, and enhanced visibility.">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for dark mode and premium feel */
         body {
-            font-family: 'Inter', sans-serif; /* A modern sans-serif font */
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        /* Gradient for buttons and highlights */
-        .btn-gradient {
-            background-image: linear-gradient(to right, #6366f1, #9333ea); /* Indigo to Purple */
-            transition: all 0.3s ease;
+        /* Custom scrollbar for dark mode, subtle */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
         }
-        .btn-gradient:hover {
-            background-image: linear-gradient(to right, #4f46e5, #7e22ce);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        ::-webkit-scrollbar-track {
+            background: #1f2937; /* bg-gray-800 */
         }
-        /* Hero section overlay for text readability */
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for better contrast */
+        ::-webkit-scrollbar-thumb {
+            background: #4b5563; /* bg-gray-600 */
+            border-radius: 10px;
         }
-        /* Countdown styling */
-        #countdown-container {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 0.75rem; /* Slightly larger radius */
-            padding: 1.5rem; /* More padding */
-            display: flex;
-            flex-direction: column; /* Stack elements vertically */
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3); /* Deeper shadow */
-        }
-        .countdown-timer-grid {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 columns */
-            gap: 1rem; /* Space between items */
-            width: 100%;
-            max-width: 400px; /* Max width for countdown numbers */
-            margin-top: 1rem;
-        }
-        .countdown-item {
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.3);
-            border-radius: 0.5rem;
-            padding: 0.75rem 0.25rem;
-        }
-        .countdown-item span {
-            display: block;
-            font-size: 2.25rem; /* Larger numbers */
-            font-weight: 700;
-            color: #a78bfa; /* A distinct light purple for numbers */
-            line-height: 1;
-            margin-bottom: 0.25rem;
-        }
-        .countdown-item small {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            color: #cbd5e0; /* Light gray */
-            font-weight: 600;
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280; /* bg-gray-500 */
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased leading-relaxed">
+<body class="bg-gray-950 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative bg-[url('https://source.unsplash.com/1600x900/?The,tech')] bg-cover bg-center h-screen flex items-center justify-center text-center">
-        <div class="hero-overlay absolute inset-0"></div>
-        <div class="relative z-10 container mx-auto px-6 py-16 lg:py-24 max-w-4xl">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
-                Unlock Your Financial Superpower: <br class="hidden md:inline">Master Google Wallet's New Insights 🚀
+    <header class="relative min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-8 lg:p-12 overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+            <div class="absolute inset-0 bg-black opacity-75"></div>
+        </div>
+        <div class="relative z-10 text-center max-w-6xl mx-auto py-16 sm:py-20 md:py-24 lg:py-32">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight mb-6 bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text">
+                Transform Your Orders: Dominate Google Maps with AI
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto">
-                With Google Wallet finally showing all your spending in one place, it's time to transform raw data into actionable savings.
-                The 'Smart Wallet' Masterclass is your guide to advanced budgeting, personalized analytics, and real financial control.
+            <p class="text-lg sm:text-xl md:text-2xl font-medium text-gray-200 mb-10 max-w-4xl mx-auto">
+                MenuGenius AI is your secret weapon, leveraging advanced AI to optimize your restaurant's menu, specials, and promotions for Google Maps' groundbreaking 'Ask Maps' and AI ordering features. Stop guessing, start growing.
             </p>
-            
-            <!-- Limited Time Countdown -->
-            <div id="countdown-container" class="mb-10 max-w-xl mx-auto border border-purple-600/50">
-                <p class="text-xl font-bold text-purple-300 mb-2 w-full">Limited Time Offer! Enrollment Closes In:</p>
-                <div class="countdown-timer-grid">
-                    <div class="countdown-item">
-                        <span id="days">00</span>
-                        <small>Days</small>
-                    </div>
-                    <div class="countdown-item">
-                        <span id="hours">00</span>
-                        <small>Hours</small>
-                    </div>
-                    <div class="countdown-item">
-                        <span id="minutes">00</span>
-                        <small>Minutes</small>
-                    </div>
-                    <div class="countdown-item">
-                        <span id="seconds">00</span>
-                        <small>Seconds</small>
-                    </div>
-                </div>
-                <p class="text-sm text-gray-400 mt-4 w-full">
-                    (Note: Countdown functionality requires JavaScript, not included in this raw HTML output.)
-                </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+                <a href="#waitlist" class="bg-gradient-to-r from-blue-600 to-purple-700 hover:from-blue-700 hover:to-purple-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 ease-in-out hover:scale-105 text-lg sm:text-xl md:text-2xl">
+                    Join the Elite Waitlist
+                </a>
+                <a href="#features" class="text-white hover:text-blue-300 font-semibold py-3 px-8 transition duration-300 ease-in-out text-lg sm:text-xl md:text-2xl">
+                    Discover Our Features &darr;
+                </a>
             </div>
 
-            <a href="#waitlist-form" class="btn-gradient inline-block px-10 py-4 rounded-full text-lg font-bold text-white shadow-lg uppercase tracking-wide">
-                Secure My Spot on the Waitlist!
-            </a>
-            <p class="mt-4 text-sm text-gray-400">Join over 1,500 aspiring financial masters and take control.</p>
+            <!-- Limited Time Countdown -->
+            <div class="mt-12 p-4 bg-gray-800 bg-opacity-80 rounded-lg shadow-xl inline-block border-2 border-purple-500">
+                <p class="text-lg sm:text-xl font-semibold text-blue-300 mb-2">
+                    Exclusive Launch Offer: 20% Off Your First 3 Months!
+                </p>
+                <div class="flex items-center justify-center space-x-4 text-white font-bold text-2xl sm:text-3xl md:text-4xl">
+                    <span id="countdown-days" class="bg-gray-700 px-3 py-2 rounded-md border border-gray-600">00</span><span class="text-purple-400">:</span>
+                    <span id="countdown-hours" class="bg-gray-700 px-3 py-2 rounded-md border border-gray-600">00</span><span class="text-purple-400">:</span>
+                    <span id="countdown-minutes" class="bg-gray-700 px-3 py-2 rounded-md border border-gray-600">00</span><span class="text-purple-400">:</span>
+                    <span id="countdown-seconds" class="bg-gray-700 px-3 py-2 rounded-md border border-gray-600">00</span>
+                </div>
+                <p class="text-sm text-gray-400 mt-2">
+                    (Offer ends in: actual countdown requires JavaScript)
+                </p>
+            </div>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section class="py-20 lg:py-32 bg-gray-900">
-        <div class="container mx-auto px-6 max-w-6xl">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-center text-white mb-16 leading-tight">
-                What You'll Achieve with The Smart Wallet Masterclass
+    <section id="features" class="py-16 sm:py-20 md:py-24 lg:py-32 bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-16 bg-gradient-to-r from-blue-300 to-purple-500 text-transparent bg-clip-text">
+                How MenuGenius AI Transforms Your Google Maps Presence
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300">
-                    <div class="text-purple-400 text-5xl mb-6">📊</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Master Advanced Budgeting</h3>
-                    <p class="text-gray-300">
-                        Go beyond basic categories. Learn to create hyper-personalized budgets using Google Wallet's aggregated data,
-                        identifying precise spending patterns and areas for optimization. 🧠
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+
+                <!-- Feature 1: AI-Powered Menu Optimization -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-blue-400 mb-4 text-5xl flex justify-center">
+                        <!-- Icon for AI -->
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1-3m-6.938-9h13.856c1.54 0 2.586 1.344 2.158 2.875l-2.454 8.75c-.244.875-.85.875-1.094 0l-2.454-8.75c-.428-1.531.62-2.875 2.158-2.875zm-6.938-9h13.856"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-50 mb-4 text-center">AI-Driven Menu Optimization</h3>
+                    <p class="text-gray-300 text-center">
+                        Our AI analyzes customer search trends, competitor pricing, and local demand within Google's ecosystem to recommend optimal menu items, descriptions, and pricing for maximum Google Maps visibility and conversion.
                     </p>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300">
-                    <div class="text-green-400 text-5xl mb-6">💰</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Unlock Hidden Savings</h3>
-                    <p class="text-gray-300">
-                        Discover actionable strategies to cut unnecessary expenses and boost your savings rate. We show you exactly how
-                        to leverage your new spending insights for maximum financial gain. ✨
+                <!-- Feature 2: Dynamic Specials & Promotions -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-purple-400 mb-4 text-5xl flex justify-center">
+                        <!-- Icon for Promotions -->
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M3 21h18a1 1 0 001-1V8a1 1 0 00-1-1H3a1 1 0 00-1 1v12a1 1 0 001 1z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-50 mb-4 text-center">Dynamic Offers & Specials</h3>
+                    <p class="text-gray-300 text-center">
+                        Effortlessly update daily specials, limited-time offers, and targeted promotions that automatically sync with Google Maps. Respond to real-time events and seasonality to capture more direct orders.
                     </p>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300">
-                    <div class="text-blue-400 text-5xl mb-6">📈</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Personalized Spending Analytics</h3>
-                    <p class="text-gray-300">
-                        Stop guessing! Dive deep into your unique spending habits with exclusive templates and tracking sheets.
-                        Understand where every dollar goes and why. 🛠️
+                <!-- Feature 3: Enhanced Visibility & Conversion -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-green-400 mb-4 text-5xl flex justify-center">
+                        <!-- Icon for Visibility -->
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-50 mb-4 text-center">Boost Discovery & Orders</h3>
+                    <p class="text-gray-300 text-center">
+                        MenuGenius AI ensures your restaurant ranks higher in 'Ask Maps' queries and is prominently featured in Google's AI ordering interfaces. Convert more browsers into paying customers with intelligent placement.
                     </p>
                 </div>
 
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300">
-                    <div class="text-red-400 text-5xl mb-6">✅</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Exclusive Templates & Tools</h3>
-                    <p class="text-gray-300">
-                        Access our battle-tested budgeting templates, custom data analysis sheets, and practical guides
-                        not available anywhere else. Simplify your financial journey. 🚀
+                <!-- Feature 4: Next-Gen Google Maps AI Integration -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-yellow-400 mb-4 text-5xl flex justify-center">
+                        <!-- Icon for Integration -->
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-4a4 4 0 014-4h.01M9 17l4-4m-4 4l4-4m-4-7h6a2 2 0 012 2v6a2 2 0 01-2 2h-6a2 2 0 01-2-2V7a2 2 0 012-2z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-50 mb-4 text-center">Seamless Google Ecosystem Sync</h3>
+                    <p class="text-gray-300 text-center">
+                        Built specifically for Google Maps' evolving AI and ordering functionalities. MenuGenius AI makes your restaurant the "passenger princess that actually helps" customers find exactly what they want, effortlessly.
                     </p>
                 </div>
 
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300">
-                    <div class="text-yellow-400 text-5xl mb-6">📱</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Google Wallet & Wear OS Integration</h3>
-                    <p class="text-gray-300">
-                        Specifically designed for Google Wallet and Wear OS users. Learn to synchronize, analyze, and act
-                        on your data directly from your devices. Seamlessly. 🌐
+                <!-- Feature 5: Actionable Performance Analytics -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-red-400 mb-4 text-5xl flex justify-center">
+                        <!-- Icon for Analytics -->
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M3 21h18a1 1 0 001-1V8a1 1 0 00-1-1H3a1 1 0 00-1 1v12a1 1 0 001 1z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-50 mb-4 text-center">Real-time Performance Insights</h3>
+                    <p class="text-gray-300 text-center">
+                        Gain invaluable insights into what's driving orders through Google Maps. Track the impact of your optimized menus and promotions, allowing you to continually refine your strategy for peak performance.
                     </p>
                 </div>
 
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300">
-                    <div class="text-indigo-400 text-5xl mb-6">💡</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Expert Tips & Strategies</h3>
-                    <p class="text-gray-300">
-                        Benefit from insights and strategies derived from years of financial expertise,
-                        tailored to help you maximize your savings and achieve financial freedom faster. 🌟
+                <!-- Feature 6: Centralized, Effortless Management -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-indigo-400 mb-4 text-5xl flex justify-center">
+                        <!-- Icon for Management -->
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-50 mb-4 text-center">Simplified, Centralized Control</h3>
+                    <p class="text-gray-300 text-center">
+                        Manage all your menu items, pricing, and promotional content for Google Maps from one intuitive, centralized dashboard. Say goodbye to fragmented systems and hello to streamlined efficiency.
                     </p>
                 </div>
 
@@ -185,75 +158,86 @@
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-20 lg:py-32 bg-gray-800">
-        <div class="container mx-auto px-6 max-w-2xl text-center">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-8">
-                Ready to Master Your Money?
+    <section id="waitlist" class="py-16 sm:py-20 md:py-24 lg:py-32 bg-gray-950">
+        <div class="container mx-auto px-4 sm:px-6 md:px-8 max-w-2xl text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 bg-gradient-to-r from-purple-400 to-blue-600 text-transparent bg-clip-text">
+                Ready to Maximize Your Google Maps Orders?
             </h2>
-            <p class="text-lg text-gray-300 mb-10">
-                Join the waitlist for 'The Smart Wallet' Masterclass now and be among the first to gain
-                exclusive access, early-bird discounts, and bonus content. Don't miss out on financial clarity!
+            <p class="text-lg text-gray-300 mb-10 max-w-xl mx-auto">
+                Join our exclusive waitlist today to be among the first restaurants to leverage MenuGenius AI and revolutionize your online presence on Google Maps. Secure your spot now, before it's too late!
             </p>
-            
-            <form action="#" method="POST" class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-purple-700/50">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" 
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600 bg-gray-800 transition duration-200"
-                           required>
+            <form class="bg-gray-800 p-8 rounded-xl shadow-2xl space-y-6 max-w-md mx-auto border border-gray-700">
+                <div>
+                    <label for="name" class="block text-left text-sm font-medium text-gray-300 mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" required
+                           class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition duration-200"
+                           placeholder="John Doe">
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600 bg-gray-800 transition duration-200"
-                           required>
+                <div>
+                    <label for="restaurant-name" class="block text-left text-sm font-medium text-gray-300 mb-2">Restaurant Name</label>
+                    <input type="text" id="restaurant-name" name="restaurant-name" required
+                           class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition duration-200"
+                           placeholder="Taste of AI Bistro">
                 </div>
-                <button type="submit" class="btn-gradient w-full px-8 py-4 rounded-full text-lg font-bold text-white shadow-xl uppercase tracking-wide">
-                    Join the Smart Wallet Waitlist!
+                <div>
+                    <label for="email" class="block text-left text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" required
+                           class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition duration-200"
+                           placeholder="your.email@example.com">
+                </div>
+                <button type="submit"
+                        class="w-full bg-gradient-to-r from-blue-600 to-purple-700 hover:from-blue-700 hover:to-purple-800 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition duration-300 ease-in-out hover:scale-105 text-lg">
+                    Secure My Spot Now!
                 </button>
-                <p class="text-xs text-gray-500 mt-6">
-                    We respect your privacy. Your information will not be shared. You can unsubscribe at any time.
+                <p class="text-sm text-gray-400 mt-4">
+                    We respect your privacy. Your information will not be shared or sold.
                 </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 border-t border-gray-800">
-        <div class="container mx-auto px-6 text-center text-gray-500">
-            <p>&copy; 2023 The Smart Wallet Masterclass. All rights reserved.</p>
-            <p class="mt-2 text-sm">Empowering your financial future with smart technology.</p>
+    <footer class="bg-gray-900 py-10">
+        <div class="container mx-auto px-4 sm:px-6 md:px-8 text-center text-gray-400 text-sm">
+            <p>&copy; 2023 MenuGenius AI. All rights reserved.</p>
+            <p class="mt-2">Empowering restaurants to thrive in the Google Maps AI ordering era.</p>
         </div>
     </footer>
 
-    <!-- 
-        Note: The countdown functionality requires JavaScript to dynamically update the timer.
-        As per the instructions, this output contains ONLY raw HTML.
-        The JavaScript code for the countdown would typically be placed here, before the closing </body> tag,
-        or linked from an external .js file.
+    <!-- This script provides a *visual placeholder* for the countdown.
+         A real, functional countdown timer requires more robust JavaScript
+         to calculate time remaining to a specific future date and update
+         the DOM elements dynamically. This is illustrative only. -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const countdownElements = {
+                days: document.getElementById('countdown-days'),
+                hours: document.getElementById('countdown-hours'),
+                minutes: document.getElementById('countdown-minutes'),
+                seconds: document.getElementById('countdown-seconds')
+            };
 
-        Example (not included in the final raw HTML output):
-        <script>
-            // Set the date we're counting down to (e.g., 7 days from now)
-            const countDownDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).getTime(); // Example: 7 days from now
+            // This function updates the countdown display with *placeholder* values
+            function updatePlaceholderCountdown() {
+                // For a real countdown, you'd calculate the difference between
+                // new Date() and a targetDate (e.g., new Date('December 31, 2023 23:59:59'))
+                // Here, we just use arbitrary values for demonstration of the UI.
+                const now = new Date();
+                const fakeSeconds = (59 - now.getSeconds() + 60) % 60; // Count down from 59
+                const fakeMinutes = (59 - now.getMinutes() + 60) % 60; // Count down from 59
+                const fakeHours = (23 - now.getHours() + 24) % 24;   // Count down from 23
+                const fakeDays = Math.floor(Math.random() * 7) + 2;  // Random days, min 2
 
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate - now;
+                countdownElements.days.textContent = String(fakeDays).padStart(2, '0');
+                countdownElements.hours.textContent = String(fakeHours).padStart(2, '0');
+                countdownElements.minutes.textContent = String(fakeMinutes).padStart(2, '0');
+                countdownElements.seconds.textContent = String(fakeSeconds).padStart(2, '0');
+            }
 
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown-container").innerHTML = "<p class='text-red-400 font-bold text-xl'>Enrollment has closed!</p>";
-                    return;
-                }
-
-                document.getElementById("days").innerHTML = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
-                document.getElementById("hours").innerHTML = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
-                document.getElementById("minutes").innerHTML = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
-                document.getElementById("seconds").innerHTML = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
-            }, 1000);
-        </script>
-    -->
-
+            // Update the placeholder countdown every second
+            setInterval(updatePlaceholderCountdown, 1000);
+            updatePlaceholderCountdown(); // Initial call to set values immediately
+        });
+    </script>
 </body>
 </html>
