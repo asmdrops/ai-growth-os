@@ -3,227 +3,282 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlayStation Digital Future & Collection Preservation Roadmap 2024-2028</title>
+    <title>Interactive YouTube Master Guide - Unlock Mario Kart Style Videos!</title>
+    <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for the hero image and dark mode scrollbar */
+        /* Custom styles for dark mode and hero image overlay */
+        body {
+            font-family: 'Inter', sans-serif; /* A modern, clean font */
+        }
         .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Optional: parallax effect for premium feel */
+            background-repeat: no-repeat;
+            position: relative;
         }
-        ::-webkit-scrollbar {
-            width: 10px;
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.75); /* Darker overlay for strong text contrast */
         }
-        ::-webkit-scrollbar-track {
-            background: #1a202c; /* Dark background */
+        /* Styles for the countdown timer items */
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 1.5rem; /* Responsive padding */
+            background-color: #2D3748; /* bg-gray-800 */
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            min-width: 80px; /* Ensure minimum width for smaller screens */
         }
-        ::-webkit-scrollbar-thumb {
-            background: #4a5568; /* Greyish thumb */
-            border-radius: 5px;
+        @media (min-width: 640px) { /* sm breakpoint */
+            .countdown-item {
+                padding: 1.5rem 2rem;
+            }
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #6b7280; /* Lighter grey on hover */
+        .countdown-value {
+            font-size: 2.5rem; /* text-4xl */
+            font-weight: 800; /* font-extrabold */
+            color: #A78BFA; /* text-purple-400 */
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .countdown-value {
+                font-size: 3.5rem; /* md:text-5xl */
+            }
+        }
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .countdown-value {
+                font-size: 4.5rem; /* lg:text-6xl */
+            }
+        }
+        .countdown-label {
+            font-size: 0.875rem; /* text-sm */
+            color: #D1D5DB; /* text-gray-300 */
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .countdown-label {
+                font-size: 1rem; /* md:text-base */
+            }
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased font-sans">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-background relative h-screen flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-        <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
-                PlayStation Digital Future & Collection Preservation Roadmap <span class="text-blue-400">2024-2028</span>
+    <header class="hero-background min-h-screen flex items-center justify-center text-center py-20 px-4 relative">
+        <div class="hero-overlay"></div>
+        <div class="relative z-10 max-w-5xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                🚀 Unlock the Future of YouTube: Create Interactive Videos Like Mario Kart!
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Concerned about your PlayStation collection's future? Sony's latest clarification on re-order support signals a critical shift. Secure your legacy.
+            <p class="text-xl sm:text-2xl md:text-3xl text-gray-200 mb-10 leading-relaxed drop-shadow-md">
+                Dive into the cutting-edge of YouTube content! Learn to design, develop, and publish engaging, interactive experiences that boost engagement and skyrocket your monetization.
             </p>
-            <div class="bg-red-700 text-white py-3 px-6 rounded-lg shadow-xl inline-block mb-8 text-xl sm:text-2xl font-bold animate-pulse">
-                Limited Time Discount: <span class="font-mono">Ends Soon!</span>
-            </div>
-            <a href="#waitlist-form" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                Secure Your Spot Now!
+            <a href="#waitlist" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl animate-pulse">
+                ✨ Join the Exclusive Waitlist Now!
             </a>
+            <p class="text-sm text-gray-300 mt-4 italic">Limited spots available for early access & bonus content.</p>
         </div>
     </header>
 
-    <!-- Problem & Solution Section -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-8">
-                The Digital Cliff Edge is Real. Are You Prepared?
-            </h2>
-            <p class="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                With every new console generation and digital storefront update, the future of your beloved PlayStation game collection becomes more uncertain. From disappearing digital purchases to the decay of physical media, collectors face unprecedented challenges. This is your definitive guide.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
-                <div class="bg-gray-700 p-8 rounded-lg shadow-lg border border-gray-600">
-                    <h3 class="text-2xl font-semibold text-white mb-4 flex items-center">
-                        <svg class="w-7 h-7 mr-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        The Challenges You Face
-                    </h3>
-                    <ul class="list-disc list-inside text-gray-300 space-y-3">
-                        <li>Uncertainty around digital game licenses and storefront closures.</li>
-                        <li>Physical disc rot and the diminishing lifespan of optical media.</li>
-                        <li>Lack of clear strategies for cross-generational game ownership.</li>
-                        <li>Confusing market shifts for retro game values and accessibility.</li>
-                        <li>The looming question of future PlayStation hardware compatibility.</li>
-                    </ul>
-                </div>
-                <div class="bg-gray-700 p-8 rounded-lg shadow-lg border border-gray-600">
-                    <h3 class="text-2xl font-semibold text-white mb-4 flex items-center">
-                        <svg class="w-7 h-7 mr-3 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        Our Roadmap Provides the Solution
-                    </h3>
-                    <p class="text-gray-300 mb-4">
-                        This comprehensive Roadmap provides actionable strategies to protect and future-proof your PlayStation collection.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-300 space-y-3">
-                        <li><span class="font-semibold text-blue-300">Master Digital License Management:</span> Understand rights and secure your digital purchases.</li>
-                        <li><span class="font-semibold text-blue-300">Physical Preservation Blueprints:</span> Best practices for archiving and maintaining your disc collection.</li>
-                        <li><span class="font-semibold text-blue-300">Anticipate Market Shifts:</span> Insights into retro game value fluctuations and investment strategies.</li>
-                        <li><span class="font-semibold text-blue-300">Future-Proof Your Hardware:</span> Navigate upcoming consoles and ensure backward compatibility.</li>
-                        <li><span class="font-semibold text-blue-300">Exclusive Expert Insights:</span> Stay ahead of Sony's policy changes and industry trends.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section (Detailed) -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">
-                What You'll Discover Inside the Roadmap
+    <!-- Opportunity Section (Market Trends Focus) -->
+    <section class="py-16 md:py-24 bg-gray-900 px-4">
+        <div class="container mx-auto max-w-screen-xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+                💡 The Market is Shifting: Are You Ready for Interactive Video?
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1: Archiving Physical Discs -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300">
-                    <div class="text-blue-400 text-3xl mb-4 flex justify-center items-center h-12 w-12 rounded-full bg-gray-700">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.303-5.074 4.501 4.501 0 016.697 4.485C17.421 11.411 15.501 14 13 14H8a5 5 0 00-5 5v1a1 1 0 102 0v-1a3 3 0 013-3h5c.571 0 1.128.055 1.67.163.513.106.993.284 1.442.531A4.5 4.5 0 005.5 17z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Mastering Physical Disc Archiving</h3>
-                    <p class="text-gray-300 text-base">
-                        Unlock step-by-step guides for preserving your valuable physical PlayStation game discs from degradation. Learn optimal storage, cleaning techniques, and digital backup strategies for longevity.
-                    </p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-400">📈 Boost Engagement by 300%</h3>
+                    <p class="text-gray-300 text-lg">Traditional videos are losing steam. Interactive content can skyrocket watch times and keep viewers hooked, turning passive audiences into active participants.</p>
                 </div>
-                <!-- Feature 2: Digital Game License Management -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300">
-                    <div class="text-blue-400 text-3xl mb-4 flex justify-center items-center h-12 w-12 rounded-full bg-gray-700">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 9V7a2 2 0 012-2h6a2 2 0 012 2v2H5zm0 1v6a2 2 0 002 2h6a2 2 0 002-2v-6H5z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Securing Digital Game Licenses</h3>
-                    <p class="text-gray-300 text-base">
-                        Navigate the complexities of digital licenses with confidence. Learn how to secure your digital purchases, understand platform policies, and prepare for potential storefront changes and account transfers.
-                    </p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-400">💰 Unlock New Monetization Avenues</h3>
+                    <p class="text-gray-300 text-lg">From enhanced ad revenue to unique brand partnerships for interactive campaigns, learn how creators are converting engagement into real income.</p>
                 </div>
-                <!-- Feature 3: Anticipating Retro Market Shifts -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300">
-                    <div class="text-blue-400 text-3xl mb-4 flex justify-center items-center h-12 w-12 rounded-full bg-gray-700">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zm4 3a1 1 0 00-1 1v1h-1a1 1 0 100 2h1v1a1 1 0 102 0V6a1 1 0 00-1-1zm3 8a1 1 0 00-1 1v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1a1 1 0 00-1-1zm-4-3a1 1 0 00-1 1v1a1 1 0 002 0v-1a1 1 0 00-1-1zm-3-1a1 1 0 00-1 1v1h-1a1 1 0 100 2h1v1a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Predicting Retro Game Market Trends</h3>
-                    <p class="text-gray-300 text-base">
-                        Gain crucial insights into the fluctuating retro gaming market. Understand what drives value, identify future collectibles, and make informed decisions about buying, selling, or holding.
-                    </p>
-                </div>
-                <!-- Feature 4: Navigating Future PlayStation Hardware -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300">
-                    <div class="text-blue-400 text-3xl mb-4 flex justify-center items-center h-12 w-12 rounded-full bg-gray-700">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Future-Proofing Hardware Compatibility</h3>
-                    <p class="text-gray-300 text-base">
-                        Prepare for the next generation of PlayStation. We'll explore potential hardware changes, backward compatibility implications, and how to adapt your collection effectively.
-                    </p>
-                </div>
-                <!-- Feature 5: Exclusive Industry Insights -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300">
-                    <div class="text-blue-400 text-3xl mb-4 flex justify-center items-center h-12 w-12 rounded-full bg-gray-700">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 012.293 13H3a1 1 0 00.707-.293l.707-.707V8a6 6 0 016-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Exclusive Expert & Industry Insights</h3>
-                    <p class="text-gray-300 text-base">
-                        Get ahead of the curve with expert analysis on Sony's strategic moves, digital ecosystem changes, and what it all means for your collection's longevity and value.
-                    </p>
-                </div>
-                 <!-- Feature 6: Community & Support Access -->
-                 <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300">
-                    <div class="text-blue-400 text-3xl mb-4 flex justify-center items-center h-12 w-12 rounded-full bg-gray-700">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18H4a2 2 0 00-2 2v1h16v-1a2 2 0 00-2-2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Dedicated Community & Support</h3>
-                    <p class="text-gray-300 text-base">
-                        Join an exclusive community of like-minded PlayStation collectors and enthusiasts. Get direct support, share insights, and collaborate on cutting-edge preservation efforts.
-                    </p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-400">🌟 Stand Out in a Saturated Market</h3>
+                    <p class="text-gray-300 text-lg">The "Mario Kart on YouTube" phenomenon is just the tip of the iceberg. Be a pioneer and leverage cutting-edge interactive features to dominate your niche.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action / Urgency Section -->
-    <section class="bg-blue-600 py-16 px-4 sm:px-6 lg:px-8 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Don't Let Your Gaming Legacy Fade Away.
+    <!-- Features Section -->
+    <section class="py-16 md:py-24 bg-gray-800 px-4">
+        <div class="container mx-auto max-w-screen-xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+                What You'll Master in This Game-Changing Guide
             </h2>
-            <p class="text-xl text-blue-100 mb-8">
-                The future of gaming is digital, but that doesn't mean your collection is safe. This Roadmap is your essential guide to navigating the next era of PlayStation with confidence.
-            </p>
-            <div class="bg-red-700 text-white py-4 px-8 rounded-lg shadow-xl inline-block mb-8 text-2xl sm:text-3xl font-bold animate-pulse">
-                Act Now: <span class="font-mono">Limited Time Discount Ending Soon!</span>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+                <div class="space-y-6">
+                    <div class="flex items-start bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <span class="text-purple-400 text-3xl mr-4">🎯</span>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-2">Design, Develop & Publish Interactive Content</h3>
+                            <p class="text-gray-300">Master the full lifecycle of interactive video creation, from conceptualization to global launch, ensuring maximum impact.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <span class="text-purple-400 text-3xl mr-4">⚙️</span>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-2">Explore Current Hidden Features & Future Possibilities</h3>
+                            <p class="text-gray-300">Uncover YouTube's less-known interactive tools and get exclusive insights into upcoming features shaping the future of video.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <span class="text-purple-400 text-3xl mr-4">🛠️</span>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-2">Ready-to-Use Template Pack for Rapid Creation</h3>
+                            <p class="text-gray-300">Access professionally designed templates for quizzes, branching narratives, and choose-your-own-adventure videos – customize and deploy instantly!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex items-start bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <span class="text-purple-400 text-3xl mr-4">🏆</span>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-2">Best Practices for Unmatched Engagement</h3>
+                            <p class="text-gray-300">Learn the psychological triggers and strategic placements that guarantee higher viewer retention and conversion rates in your interactive videos.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <span class="text-purple-400 text-3xl mr-4">🧠</span>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-2">Technical How-Tos & Walkthroughs</h3>
+                            <p class="text-gray-300">Step-by-step guides for every technical aspect, from scripting interactive elements to integrating them flawlessly into your YouTube workflow.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <span class="text-purple-400 text-3xl mr-4">📈</span>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-2">Boost Monetization & Channel Growth</h3>
+                            <p class="text-gray-300">Strategies to leverage interactive content for increased ad impressions, viewer loyalty, and attracting premium sponsors for unique campaigns.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a href="#waitlist-form" class="bg-white text-blue-700 hover:bg-gray-200 font-bold py-4 px-12 rounded-full text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                Get the Roadmap Today!
-            </a>
         </div>
     </section>
 
-    <!-- Waitlist / Sign-up Form Section -->
-    <section id="waitlist-form" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800">
-        <div class="max-w-xl mx-auto text-center bg-gray-900 p-8 rounded-lg shadow-2xl border border-gray-700">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Ready to Future-Proof Your Collection?
+    <!-- Waitlist Form Section with Countdown -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gray-900 px-4">
+        <div class="container mx-auto max-w-screen-xl text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white">
+                ⏰ Limited Time Offer: Secure Your Spot Now!
             </h2>
-            <p class="text-lg text-gray-300 mb-8">
-                Join our exclusive waitlist for early access and claim your <span class="text-red-400 font-semibold">Limited Time Discount</span> when the 'PlayStation Digital Future & Collection Preservation Roadmap 2024-2028' launches. Don't miss out!
+            <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                This exclusive master guide and template pack will launch soon. Join the waitlist within the next
+                <span class="text-purple-400 font-semibold">7 days</span>
+                to get early access, launch bonuses, and special pricing!
             </p>
-            <form action="#" method="POST" class="space-y-6">
-                <div>
-                    <label for="name" class="sr-only">Full Name</label>
-                    <input type="text" name="name" id="name" autocomplete="name" required
-                           class="w-full px-5 py-3 border border-gray-600 bg-gray-700 text-white placeholder-gray-400 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-lg"
-                           placeholder="Your Full Name">
+
+            <!-- Countdown Timer -->
+            <div class="flex flex-wrap justify-center space-x-2 sm:space-x-4 md:space-x-8 mb-12" id="countdown">
+                <div class="countdown-item mt-4">
+                    <div class="countdown-value" id="days">00</div>
+                    <div class="countdown-label">Days</div>
                 </div>
-                <div>
-                    <label for="email" class="sr-only">Email Address</label>
-                    <input id="email" name="email" type="email" autocomplete="email" required
-                           class="w-full px-5 py-3 border border-gray-600 bg-gray-700 text-white placeholder-gray-400 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-lg"
-                           placeholder="Your Best Email Address">
+                <div class="countdown-item mt-4">
+                    <div class="countdown-value" id="hours">00</div>
+                    <div class="countdown-label">Hours</div>
                 </div>
-                <div>
+                <div class="countdown-item mt-4">
+                    <div class="countdown-value" id="minutes">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-item mt-4">
+                    <div class="countdown-value" id="seconds">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+
+            <!-- Waitlist Form -->
+            <div class="bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl max-w-lg mx-auto">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="sr-only">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required
+                               class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 text-lg">
+                    </div>
+                    <div>
+                        <label for="email" class="sr-only">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
+                               class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 text-lg">
+                    </div>
                     <button type="submit"
-                            class="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:text-xl transition duration-300 ease-in-out transform hover:scale-105">
-                        <svg class="h-6 w-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        Join the Waitlist & Get Discount
+                            class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                        🔥 Secure My Spot Now!
                     </button>
-                </div>
-                <p class="text-sm text-gray-400">
-                    We respect your privacy. Your information will not be shared.
+                </form>
+                <p class="text-sm text-gray-400 mt-6">
+                    We respect your privacy. Your email will only be used for updates regarding this master guide.
                 </p>
-            </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
-        <div class="max-w-7xl mx-auto">
-            <p>&copy; 2024 Digital Education Authority. All rights reserved. | <a href="#" class="text-blue-400 hover:text-blue-500">Privacy Policy</a> | <a href="#" class="text-blue-400 hover:text-blue-500">Terms of Service</a></p>
+    <footer class="bg-gray-800 py-10 px-4 text-center text-gray-400">
+        <div class="container mx-auto max-w-screen-xl">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="text-purple-400 hover:text-purple-300 mx-2">Privacy Policy</a> |
+                <a href="#" class="text-purple-400 hover:text-purple-300 mx-2">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
+    <!-- JavaScript for Countdown Timer (Place at the end of body for performance) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to: 7 days from now
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from the current date
+
+            const countdownFunction = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the corresponding elements, ensuring two digits
+                if (document.getElementById("days")) { // Check if elements exist before updating
+                    document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                    document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                    document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                    document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                }
+
+                // If the countdown is over, write some text
+                if (distance < 0) {
+                    clearInterval(countdownFunction);
+                    if (document.getElementById("countdown")) {
+                        document.getElementById("countdown").innerHTML = "<div class='text-xl text-red-500 font-bold'>Offer Expired! Don't miss the next one!</div>";
+                    }
+                    const waitlistButton = document.querySelector('#waitlist .bg-purple-600');
+                    if (waitlistButton) {
+                        waitlistButton.classList.remove('animate-pulse');
+                        waitlistButton.classList.add('bg-gray-500', 'cursor-not-allowed');
+                        waitlistButton.innerHTML = "Waitlist Closed";
+                        waitlistButton.setAttribute('disabled', 'true');
+                    }
+                }
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
