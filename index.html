@@ -3,180 +3,377 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SiriKit Pro - Master Siri AI Integrations</title>
+    <title>NexGen Flow: Universal Mobile AI Workflow Orchestrator - Hyper-efficient Productivity</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
     <style>
-        /* Custom styles for dark mode elegance and responsiveness */
-        body {
-            font-family: 'Inter', sans-serif; /* A modern font choice */
-        }
+        /* Custom styles for hero background, gradients, and animations */
         .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Optional: for parallax-like effect */
+            background-attachment: fixed; /* Parallax effect */
+            position: relative;
+            z-index: 0;
         }
-        .gradient-overlay {
-            background-image: linear-gradient(to bottom, rgba(17, 24, 39, 0.7) 0%, rgba(17, 24, 39, 0.9) 100%);
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+            z-index: 1;
         }
-        /* Specific styles for countdown, if JavaScript were enabled */
-        .countdown-timer {
-            font-variant-numeric: tabular-nums; /* Ensures numbers align even if they change */
+        .text-gradient {
+            background-image: linear-gradient(to right, #6366f1, #a855f7, #ec4899); /* Indigo, Purple, Pink */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-effect {
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.7), 0 0 30px rgba(236, 72, 153, 0.5); /* Purple and Pink glow */
+        }
+
+        /* Basic Tailwind-compatible animation keyframes */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-down {
+            animation: fadeInDown 1s ease-out forwards;
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        /* Delay utilities */
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-600 { animation-delay: 0.6s; }
+
+        /* Custom scrollbar for aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* Dark track */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #a855f7; /* Purple thumb */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8b5cf6;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
-    <!-- Header (Optional - a simple brand name) -->
-    <header class="py-4 px-4 sm:px-6 lg:px-8 bg-gray-800 shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-blue-400 hover:text-blue-300 transition duration-300">SiriKit Pro</a>
-            <!-- Could add navigation links here if desired -->
+    <!-- Navbar -->
+    <nav class="bg-gray-800 bg-opacity-80 backdrop-filter backdrop-blur-lg sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2 text-2xl font-bold text-white">
+                <span class="text-gradient">NexGen Flow</span>
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#features" class="text-gray-300 hover:text-white transition-colors duration-300">Features</a>
+                <a href="#waitlist" class="text-gray-300 hover:text-white transition-colors duration-300">Waitlist</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 pb-4">
+            <a href="#features" class="block px-4 py-2 text-gray-300 hover:text-white transition-colors duration-300 text-lg">Features</a>
+            <a href="#waitlist" class="block px-4 py-2 text-gray-300 hover:text-white transition-colors duration-300 text-lg">Waitlist</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background relative min-h-screen flex items-center justify-center text-center overflow-hidden py-20 lg:py-0">
+        <div class="hero-overlay z-10"></div>
+        <div class="relative z-20 px-4 max-w-5xl mx-auto">
+            <p class="text-indigo-300 text-lg sm:text-xl md:text-2xl font-semibold mb-4 animate-fade-in-down">
+                ⚡ MARKET TREND: WIRED says "Shut Those Laptops!" ⚡
+            </p>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white animate-fade-in-up">
+                Unleash <span class="text-gradient">Mobile AI Superpowers</span><br>
+                Build & Orchestrate Workflows On-The-Go.
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto animate-fade-in-up delay-200">
+                Transform your mobile device into the ultimate AI productivity hub. Drag, drop, and automate complex, multi-step workflows across Claude Cowork, your internal data, and all your mobile apps.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-10 animate-fade-in-up delay-400">
+                <a href="#waitlist" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform transition-all duration-300 hover:scale-105 glow-effect">
+                    Join the Exclusive Waitlist Now!
+                </a>
+            </div>
+            <div class="bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-sm p-4 rounded-xl inline-block shadow-xl animate-fade-in-up delay-600">
+                <p class="text-red-400 font-bold text-xl sm:text-2xl mb-2">LIMITED TIME OFFER!</p>
+                <div id="countdown" class="flex justify-center items-baseline space-x-3 text-white">
+                    <div class="flex flex-col items-center">
+                        <span id="days" class="text-4xl sm:text-5xl font-extrabold">00</span>
+                        <span class="text-sm sm:text-base text-gray-400">Days</span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl font-extrabold">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours" class="text-4xl sm:text-5xl font-extrabold">00</span>
+                        <span class="text-sm sm:text-base text-gray-400">Hours</span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl font-extrabold">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes" class="text-4xl sm:text-5xl font-extrabold">00</span>
+                        <span class="text-sm sm:text-base text-gray-400">Minutes</span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl font-extrabold">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds" class="text-4xl sm:text-5xl font-extrabold">00</span>
+                        <span class="text-sm sm:text-base text-gray-400">Seconds</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="relative hero-background min-h-screen flex items-center justify-center p-4">
-            <div class="absolute inset-0 gradient-overlay"></div>
-            <div class="relative z-10 max-w-5xl text-center px-4 py-16 sm:py-24 lg:py-32 rounded-lg bg-gray-900 bg-opacity-80 backdrop-filter backdrop-blur-sm shadow-2xl">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
-                    <span class="block text-blue-400">Unlock the Future:</span> Integrate Your Apps with Siri AI 🚀
-                </h1>
-                <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                    The latest developer beta allows Siri to pull information from third-party apps. SiriKit Pro gives you the powerful tools to capitalize on this groundbreaking trend—seamlessly, scalably, and securely.
-                </p>
-                <div class="space-y-4 sm:space-y-0 sm:space-x-6 flex flex-col sm:flex-row justify-center">
-                    <a href="#waitlist" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                        Join the Exclusive Waitlist Today!
-                    </a>
+    <!-- Features Section -->
+    <section id="features" class="py-20 sm:py-24 md:py-32 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16 text-white">
+                How <span class="text-gradient">NexGen Flow</span> Empowers Your Mobile Productivity
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-14">
+                <!-- Feature 1: Universal AI Workflow Builder -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-purple-400">⚙️</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Intuitive Workflow Builder</h3>
+                    <p class="text-gray-300">Drag-and-drop elements to visually construct custom, multi-step productivity workflows directly from your phone. No coding required, just pure efficiency.</p>
                 </div>
-                <p class="mt-8 text-md text-gray-400 italic">"Siri AI can pull info from third-party apps in the latest developer beta" - 9to5Mac</p>
-            </div>
-        </section>
-
-        <!-- Features Section -->
-        <section id="features" class="py-16 sm:py-24 lg:py-32 bg-gray-900">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4">
-                        Supercharge Your Siri Integrations ⚡
-                    </h2>
-                    <p class="text-lg text-gray-400 max-w-2xl mx-auto">
-                        SiriKit Pro provides an all-in-one platform for developers and businesses to harness the full potential of Siri's evolving AI capabilities.
-                    </p>
+                <!-- Feature 2: Orchestrate Across Apps & AI -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-pink-500 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-pink-400">🔗</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Cross-Platform Orchestration</h3>
+                    <p class="text-gray-300">Seamlessly chain commands across leading mobile AI agents like <span class="font-bold text-blue-400">Claude Cowork</span>, your internal company data, and other essential mobile applications.</p>
                 </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
-                    <!-- Feature 1 -->
-                    <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                        <div class="flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white text-3xl mb-6">
-                            ⚙️
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Advanced API Wrappers</h3>
-                        <p class="text-gray-300">Simplify complex SiriKit interactions with robust, developer-friendly API wrappers. Focus on building, not boilerplate.</p>
-                    </div>
-
-                    <!-- Feature 2 -->
-                    <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                        <div class="flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white text-3xl mb-6">
-                            🧩
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Pre-built Integration Templates</h3>
-                        <p class="text-gray-300">Accelerate development with ready-to-use templates for popular services: CRM, Project Management, Productivity Apps, and more!</p>
-                    </div>
-
-                    <!-- Feature 3 -->
-                    <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                        <div class="flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white text-3xl mb-6">
-                            🧪
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Siri Testing Sandbox</h3>
-                        <p class="text-gray-300">Develop and test your Siri integrations in a secure, isolated environment to ensure seamless data retrieval and interaction before deployment.</p>
-                    </div>
-
-                    <!-- Feature 4 -->
-                    <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                        <div class="flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white text-3xl mb-6">
-                            📊
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Analytics & Insights Dashboards</h3>
-                        <p class="text-gray-300">Track Siri usage patterns, monitor performance, and gain valuable insights into how users interact with your integrated apps.</p>
-                    </div>
+                <!-- Feature 3: Hyper-Efficient, On-The-Go -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-indigo-400">🚀</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Hyper-Efficiency, On-Demand</h3>
+                    <p class="text-gray-300">Automate complex tasks like 'Summarize meeting audio + draft follow-up email + schedule next meeting' – all from your pocket, ensuring peak productivity.</p>
+                </div>
+                <!-- Feature 4: Workflow Template Marketplace -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-green-500 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-green-400">💸</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Monetizable Workflow Marketplace</h3>
+                    <p class="text-gray-300">Share your specialized workflows with the community, or discover and monetize high-value templates from others. Power your efficiency, empower others.</p>
+                </div>
+                <!-- Feature 5: Truly Mobile-First Design -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-yellow-500 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-yellow-400">📱</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Optimized Mobile Experience</h3>
+                    <p class="text-gray-300">Engineered from the ground up for an intuitive, fast, and powerful mobile experience. Your smartphone is now your most potent AI control center.</p>
+                </div>
+                <!-- Feature 6: Secure & Private -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-cyan-500 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-cyan-400">🔒</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Enterprise-Grade Security</h3>
+                    <p class="text-gray-300">Your data and workflows are handled with industry-leading security and privacy protocols, ensuring your sensitive information remains protected and confidential.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Waitlist Form Section with Countdown -->
-        <section id="waitlist" class="py-16 sm:py-24 lg:py-32 bg-gray-800 border-t border-gray-700">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4">
-                    Be Among the First to Master Siri AI 🚀
-                </h2>
-                <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-                    Join our exclusive waitlist for early access, special launch discounts, and direct insights into SiriKit Pro's development.
-                </p>
+    <!-- Call to Action / How it Works -->
+    <section class="py-20 sm:py-24 md:py-32 bg-gray-800">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-white">
+                <span class="text-gradient">Stop Juggling Apps</span>, Start Flowing.
+            </h2>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10">
+                Join the revolution of mobile productivity. NexGen Flow is engineered for ambitious professionals who demand unparalleled efficiency without compromise, right from their fingertips.
+            </p>
+            <a href="#waitlist" class="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-full text-xl shadow-xl transform transition-all duration-300 hover:scale-105 glow-effect">
+                Get Early Access & Shape the Future
+            </a>
+        </div>
+    </section>
 
-                <!-- Countdown Timer (Placeholder - requires JS for functionality) -->
-                <div class="bg-blue-900 bg-opacity-50 border border-blue-600 p-6 rounded-lg mb-10 shadow-lg animate-pulse">
-                    <p class="text-xl sm:text-2xl font-bold text-blue-300 mb-2">
-                        Limited Time Offer! Only <span class="text-blue-200">500</span> Exclusive Spots Left!
-                    </p>
-                    <div class="countdown-timer text-4xl sm:text-5xl font-extrabold text-blue-100 flex justify-center items-baseline gap-4 sm:gap-6">
-                        <div class="flex flex-col items-center">
-                            <span class="text-5xl">07</span>
-                            <span class="text-sm font-medium text-blue-300">DAYS</span>
-                        </div>
-                        <span class="text-blue-400">:</span>
-                        <div class="flex flex-col items-center">
-                            <span class="text-5xl">23</span>
-                            <span class="text-sm font-medium text-blue-300">HRS</span>
-                        </div>
-                        <span class="text-blue-400">:</span>
-                        <div class="flex flex-col items-center">
-                            <span class="text-5xl">59</span>
-                            <span class="text-sm font-medium text-blue-300">MIN</span>
-                        </div>
-                        <span class="text-blue-400">:</span>
-                        <div class="flex flex-col items-center">
-                            <span class="text-5xl">59</span>
-                            <span class="text-sm font-medium text-blue-300">SEC</span>
-                        </div>
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-20 sm:py-24 md:py-32 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white">
+                Don't Miss Out: <span class="text-gradient">Join the Exclusive Waitlist!</span>
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                Be among the first to experience NexGen Flow and revolutionize your mobile productivity. Limited spots available for early bird access and exclusive beta features.
+            </p>
+
+            <!-- Waitlist Countdown (Reiterate urgency) -->
+            <div class="bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-sm p-4 rounded-xl inline-block shadow-xl mb-10">
+                <p class="text-red-400 font-bold text-xl sm:text-2xl mb-2">LIMITED TIME OFFER!</p>
+                <div id="countdown-waitlist" class="flex justify-center items-baseline space-x-3 text-white">
+                    <div class="flex flex-col items-center">
+                        <span id="waitlist-days" class="text-4xl sm:text-5xl font-extrabold">00</span>
+                        <span class="text-sm sm:text-base text-gray-400">Days</span>
                     </div>
-                    <p class="text-md text-blue-400 mt-4">This offer expires soon – don't miss out!</p>
+                    <span class="text-4xl sm:text-5xl font-extrabold">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="waitlist-hours" class="text-4xl sm:text-5xl font-extrabold">00</span>
+                        <span class="text-sm sm:text-base text-gray-400">Hours</span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl font-extrabold">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="waitlist-minutes" class="text-4xl sm:text-5xl font-extrabold">00</span>
+                        <span class="text-sm sm:text-base text-gray-400">Minutes</span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl font-extrabold">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="waitlist-seconds" class="text-4xl sm:text-5xl font-extrabold">00</span>
+                        <span class="text-sm sm:text-base text-gray-400">Seconds</span>
+                    </div>
                 </div>
-
-                <!-- Waitlist Form -->
-                <form class="bg-gray-900 p-8 rounded-lg shadow-2xl border border-gray-700">
-                    <div class="mb-6 text-left">
-                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
-                        <input type="text" id="name" name="name" required
-                               class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
-                               placeholder="John Doe">
-                    </div>
-                    <div class="mb-6 text-left">
-                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" required
-                               class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
-                               placeholder="john.doe@example.com">
-                    </div>
-                    <button type="submit"
-                            class="w-full sm:w-auto px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md shadow-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900">
-                        Join the SiriKit Pro Waitlist
-                    </button>
-                    <p class="mt-4 text-sm text-gray-400">We respect your privacy. Your information will not be shared.</p>
-                </form>
             </div>
-        </section>
-    </main>
+
+            <form class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700 max-w-lg mx-auto">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-300 text-lg font-medium mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:ring-purple-500 focus:border-purple-500 text-white placeholder-gray-400 text-lg transition-all duration-300">
+                </div>
+                <div class="mb-8 text-left">
+                    <label for="email" class="block text-gray-300 text-lg font-medium mb-2">Your Professional Email <span class="text-red-500">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="you@company.com" required
+                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:ring-purple-500 focus:border-purple-500 text-white placeholder-gray-400 text-lg transition-all duration-300">
+                </div>
+                <button type="submit"
+                        class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 px-6 rounded-lg text-xl shadow-lg transform transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 glow-effect">
+                    Secure My Early Access Spot!
+                </button>
+                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, ever. Unsubscribe at any time.</p>
+            </form>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-800 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500">
-            <p>&copy; 2023 SiriKit Pro. All rights reserved.</p>
-            <p class="mt-2 text-sm">Made with passion for developers and businesses. Powered by the future of AI.</p>
+    <footer class="bg-gray-800 py-10">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            <p>&copy; 2024 NexGen Flow. All rights reserved.</p>
+            <div class="mt-4 flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
+                <a href="#" class="hover:text-white transition-colors duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors duration-300">Terms of Service</a>
+                <a href="#" class="hover:text-white transition-colors duration-300">Contact Us</a>
+            </div>
         </div>
     </footer>
 
+    <!-- JavaScript for Countdown Timer and Mobile Menu -->
+    <script>
+        // Countdown Timer Logic
+        function setupCountdown(elementIds, endDate) {
+            const countdownElements = {
+                days: document.getElementById(elementIds.days),
+                hours: document.getElementById(elementIds.hours),
+                minutes: document.getElementById(elementIds.minutes),
+                seconds: document.getElementById(elementIds.seconds),
+            };
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = endDate - now;
+
+                if (distance < 0) {
+                    clearInterval(interval);
+                    for (const key in countdownElements) {
+                        if (countdownElements[key]) countdownElements[key].innerHTML = "00";
+                    }
+                    // Replace countdown with 'EXPIRED' message
+                    if (countdownElements.days) {
+                        const parent = countdownElements.days.closest('div.inline-block');
+                        if (parent) {
+                            parent.innerHTML = "<p class='text-red-400 font-bold text-xl sm:text-2xl'>OFFER EXPIRED! Stay tuned for updates.</p>";
+                        }
+                    }
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                if (countdownElements.days) countdownElements.days.innerHTML = String(days).padStart(2, '0');
+                if (countdownElements.hours) countdownElements.hours.innerHTML = String(hours).padStart(2, '0');
+                if (countdownElements.minutes) countdownElements.minutes.innerHTML = String(minutes).padStart(2, '0');
+                if (countdownElements.seconds) countdownElements.seconds.innerHTML = String(seconds).padStart(2, '0');
+            }
+
+            // Update every second
+            updateCountdown(); // Initial call to display immediately
+            const interval = setInterval(updateCountdown, 1000);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set the end date for the countdown (e.g., 7 days from now)
+            const now = new Date();
+            const endDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 days from now
+
+            // Setup countdown for Hero section
+            setupCountdown({
+                days: 'days',
+                hours: 'hours',
+                minutes: 'minutes',
+                seconds: 'seconds'
+            }, endDate);
+
+            // Setup countdown for Waitlist section (using the same end date)
+            setupCountdown({
+                days: 'waitlist-days',
+                hours: 'waitlist-hours',
+                minutes: 'waitlist-minutes',
+                seconds: 'waitlist-seconds'
+            }, endDate);
+
+            // Mobile Menu Toggle Logic
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                // Close mobile menu when a link is clicked
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
