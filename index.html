@@ -3,320 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexGen Flow: Universal Mobile AI Workflow Orchestrator - Hyper-efficient Productivity</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    <title>OrchestrAI: Unify Your AI Workforce Across Vendors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for hero background, gradients, and animations */
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Parallax effect */
-            position: relative;
-            z-index: 0;
+            background-repeat: no-repeat;
         }
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
-            z-index: 1;
-        }
-        .text-gradient {
-            background-image: linear-gradient(to right, #6366f1, #a855f7, #ec4899); /* Indigo, Purple, Pink */
+        .gradient-text {
+            background: linear-gradient(90deg, #6366f1 0%, #a855f7 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
         }
-        .glow-effect {
-            box-shadow: 0 0 15px rgba(168, 85, 247, 0.7), 0 0 30px rgba(236, 72, 153, 0.5); /* Purple and Pink glow */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
         }
-
-        /* Basic Tailwind-compatible animation keyframes */
-        @keyframes fadeInDown {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
+        /* Ensure responsiveness for small screens on countdown */
+        @media (max-width: 640px) {
+            #countdown > div {
+                margin: 0 0.25rem;
             }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
+            #countdown span:first-child { /* Targets the time numbers */
+                font-size: 2.5rem; /* Smaller size for numbers on mobile */
             }
-        }
-
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
+            #countdown span:last-child { /* Targets 'Days', 'Hours' etc. */
+                font-size: 0.75rem; /* Smaller size for labels on mobile */
             }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
+            #countdown span.text-4xl.md\:text-5xl.text-gray-500 { /* Targets the colon separators */
+                font-size: 2.5rem; /* Smaller size for colons on mobile */
             }
-        }
-
-        .animate-fade-in-down {
-            animation: fadeInDown 1s ease-out forwards;
-        }
-
-        .animate-fade-in-up {
-            animation: fadeInUp 1s ease-out forwards;
-        }
-
-        /* Delay utilities */
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-400 { animation-delay: 0.4s; }
-        .delay-600 { animation-delay: 0.6s; }
-
-        /* Custom scrollbar for aesthetics */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #1a202c; /* Dark track */
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #a855f7; /* Purple thumb */
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #8b5cf6;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
-
-    <!-- Navbar -->
-    <nav class="bg-gray-800 bg-opacity-80 backdrop-filter backdrop-blur-lg sticky top-0 z-50 shadow-lg">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center space-x-2 text-2xl font-bold text-white">
-                <span class="text-gradient">NexGen Flow</span>
-            </a>
-            <div class="hidden md:flex space-x-6">
-                <a href="#features" class="text-gray-300 hover:text-white transition-colors duration-300">Features</a>
-                <a href="#waitlist" class="text-gray-300 hover:text-white transition-colors duration-300">Waitlist</a>
-            </div>
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 pb-4">
-            <a href="#features" class="block px-4 py-2 text-gray-300 hover:text-white transition-colors duration-300 text-lg">Features</a>
-            <a href="#waitlist" class="block px-4 py-2 text-gray-300 hover:text-white transition-colors duration-300 text-lg">Waitlist</a>
-        </div>
-    </nav>
+<body class="bg-gray-950 text-white antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-background relative min-h-screen flex items-center justify-center text-center overflow-hidden py-20 lg:py-0">
-        <div class="hero-overlay z-10"></div>
-        <div class="relative z-20 px-4 max-w-5xl mx-auto">
-            <p class="text-indigo-300 text-lg sm:text-xl md:text-2xl font-semibold mb-4 animate-fade-in-down">
-                ⚡ MARKET TREND: WIRED says "Shut Those Laptops!" ⚡
-            </p>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white animate-fade-in-up">
-                Unleash <span class="text-gradient">Mobile AI Superpowers</span><br>
-                Build & Orchestrate Workflows On-The-Go.
+    <section class="relative min-h-screen flex items-center justify-center hero-bg">
+        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for readability -->
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 py-16 md:py-24">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 gradient-text">
+                OrchestrAI: Unify & Supercharge Your AI Workforce
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto animate-fade-in-up delay-200">
-                Transform your mobile device into the ultimate AI productivity hub. Drag, drop, and automate complex, multi-step workflows across Claude Cowork, your internal data, and all your mobile apps.
+            <p class="text-lg md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Stop juggling multiple AI platforms. OrchestrAI is the <strong class="text-indigo-300">central hub for 'AI Coworking'</strong>, enabling seamless management, integration, and automation across agents like Claude Cowork, ChatGPT, and Gemini.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-10 animate-fade-in-up delay-400">
-                <a href="#waitlist" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform transition-all duration-300 hover:scale-105 glow-effect">
-                    Join the Exclusive Waitlist Now!
-                </a>
-            </div>
-            <div class="bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-sm p-4 rounded-xl inline-block shadow-xl animate-fade-in-up delay-600">
-                <p class="text-red-400 font-bold text-xl sm:text-2xl mb-2">LIMITED TIME OFFER!</p>
-                <div id="countdown" class="flex justify-center items-baseline space-x-3 text-white">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="text-4xl sm:text-5xl font-extrabold">00</span>
-                        <span class="text-sm sm:text-base text-gray-400">Days</span>
-                    </div>
-                    <span class="text-4xl sm:text-5xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="text-4xl sm:text-5xl font-extrabold">00</span>
-                        <span class="text-sm sm:text-base text-gray-400">Hours</span>
-                    </div>
-                    <span class="text-4xl sm:text-5xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="text-4xl sm:text-5xl font-extrabold">00</span>
-                        <span class="text-sm sm:text-base text-gray-400">Minutes</span>
-                    </div>
-                    <span class="text-4xl sm:text-5xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="text-4xl sm:text-5xl font-extrabold">00</span>
-                        <span class="text-sm sm:text-base text-gray-400">Seconds</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <!-- Features Section -->
-    <section id="features" class="py-20 sm:py-24 md:py-32 bg-gray-900">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16 text-white">
-                How <span class="text-gradient">NexGen Flow</span> Empowers Your Mobile Productivity
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-14">
-                <!-- Feature 1: Universal AI Workflow Builder -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-4 text-purple-400">⚙️</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Intuitive Workflow Builder</h3>
-                    <p class="text-gray-300">Drag-and-drop elements to visually construct custom, multi-step productivity workflows directly from your phone. No coding required, just pure efficiency.</p>
+            <!-- CTA and Countdown -->
+            <div class="bg-gray-800/50 backdrop-blur-sm p-6 md:p-8 rounded-xl shadow-2xl border border-gray-700 max-w-md mx-auto">
+                <h2 class="text-2xl font-bold mb-4 text-indigo-400">Limited-Time Early Access Window!</h2>
+                <p class="text-gray-300 mb-4">Secure your spot to experience advanced AI orchestration before public launch.</p>
+                <div id="countdown" class="flex justify-center items-center space-x-2 md:space-x-4 mb-6">
+                    <div>
+                        <span id="days" class="block text-4xl md:text-5xl font-bold text-violet-400">00</span>
+                        <span class="block text-gray-400 text-sm">Days</span>
+                    </div>
+                    <span class="text-4xl md:text-5xl text-gray-500">:</span>
+                    <div>
+                        <span id="hours" class="block text-4xl md:text-5xl font-bold text-violet-400">00</span>
+                        <span class="block text-gray-400 text-sm">Hours</span>
+                    </div>
+                    <span class="text-4xl md:text-5xl text-gray-500">:</span>
+                    <div>
+                        <span id="minutes" class="block text-4xl md:text-5xl font-bold text-violet-400">00</span>
+                        <span class="block text-gray-400 text-sm">Minutes</span>
+                    </div>
+                    <span class="text-4xl md:text-5xl text-gray-500">:</span>
+                    <div>
+                        <span id="seconds" class="block text-4xl md:text-5xl font-bold text-violet-400">00</span>
+                        <span class="block text-gray-400 text-sm">Seconds</span>
+                    </div>
                 </div>
-                <!-- Feature 2: Orchestrate Across Apps & AI -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-pink-500 transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-4 text-pink-400">🔗</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Cross-Platform Orchestration</h3>
-                    <p class="text-gray-300">Seamlessly chain commands across leading mobile AI agents like <span class="font-bold text-blue-400">Claude Cowork</span>, your internal company data, and other essential mobile applications.</p>
-                </div>
-                <!-- Feature 3: Hyper-Efficient, On-The-Go -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-4 text-indigo-400">🚀</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Hyper-Efficiency, On-Demand</h3>
-                    <p class="text-gray-300">Automate complex tasks like 'Summarize meeting audio + draft follow-up email + schedule next meeting' – all from your pocket, ensuring peak productivity.</p>
-                </div>
-                <!-- Feature 4: Workflow Template Marketplace -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-green-500 transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-4 text-green-400">💸</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Monetizable Workflow Marketplace</h3>
-                    <p class="text-gray-300">Share your specialized workflows with the community, or discover and monetize high-value templates from others. Power your efficiency, empower others.</p>
-                </div>
-                <!-- Feature 5: Truly Mobile-First Design -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-yellow-500 transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-4 text-yellow-400">📱</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Optimized Mobile Experience</h3>
-                    <p class="text-gray-300">Engineered from the ground up for an intuitive, fast, and powerful mobile experience. Your smartphone is now your most potent AI control center.</p>
-                </div>
-                <!-- Feature 6: Secure & Private -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-cyan-500 transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl mb-4 text-cyan-400">🔒</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Enterprise-Grade Security</h3>
-                    <p class="text-gray-300">Your data and workflows are handled with industry-leading security and privacy protocols, ensuring your sensitive information remains protected and confidential.</p>
-                </div>
+                <button onclick="document.getElementById('waitlist-form-section').scrollIntoView({ behavior: 'smooth' });"
+                    class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75 text-xl w-full">
+                    Join the Waitlist Now!
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action / How it Works -->
-    <section class="py-20 sm:py-24 md:py-32 bg-gray-800">
-        <div class="container mx-auto px-4 max-w-4xl text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-white">
-                <span class="text-gradient">Stop Juggling Apps</span>, Start Flowing.
+    <!-- Features Section -->
+    <section class="py-20 md:py-28 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-screen-xl">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-16 text-white leading-tight">
+                Why OrchestrAI? Your <span class="gradient-text">Integrated AI Coworking Hub</span>
             </h2>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10">
-                Join the revolution of mobile productivity. NexGen Flow is engineered for ambitious professionals who demand unparalleled efficiency without compromise, right from their fingertips.
-            </p>
-            <a href="#waitlist" class="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-full text-xl shadow-xl transform transition-all duration-300 hover:scale-105 glow-effect">
-                Get Early Access & Shape the Future
-            </a>
+
+            <div class="features-grid">
+                <!-- Feature 1: Centralized AI Dashboard -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition-all duration-300">
+                    <div class="text-indigo-400 text-4xl mb-4">✨</div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Single Pane of Glass</h3>
+                    <p class="text-gray-300">Manage all your AI agents, from Claude Cowork to ChatGPT, within one intuitive, powerful dashboard. Streamline your AI ecosystem.</p>
+                </div>
+                <!-- Feature 2: Advanced Prompt Engineering -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition-all duration-300">
+                    <div class="text-indigo-400 text-4xl mb-4">✍️</div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Sophisticated Prompt Engineering</h3>
+                    <p class="text-gray-300">Design, test, and deploy complex prompts across multiple AI agents. Achieve precise and consistent results, every single time.</p>
+                </div>
+                <!-- Feature 3: Cross-Agent Task Automation -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition-all duration-300">
+                    <div class="text-indigo-400 text-4xl mb-4">🤖</div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Intelligent Task Automation</h3>
+                    <p class="text-gray-300">Automate multi-step workflows where different AI agents collaborate seamlessly, passing tasks and data to each other.</p>
+                </div>
+                <!-- Feature 4: Output Comparison -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition-all duration-300">
+                    <div class="text-indigo-400 text-4xl mb-4">📊</div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">AI Output Comparison</h3>
+                    <p class="text-gray-300">Directly compare responses from various AI agents to identify the best output, optimize performance, and make informed decisions.</p>
+                </div>
+                <!-- Feature 5: Knowledge Base Integration -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition-all duration-300">
+                    <div class="text-indigo-400 text-4xl mb-4">🧠</div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Integrated Knowledge Bases</h3>
+                    <p class="text-gray-300">Connect your internal documents, databases, and proprietary information, empowering all your AI agents with critical context.</p>
+                </div>
+                <!-- Feature 6: Vendor Agnostic & Future-Proof -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition-all duration-300">
+                    <div class="text-indigo-400 text-4xl mb-4">🚀</div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Vendor Agnostic & Scalable</h3>
+                    <p class="text-gray-300">Our platform is built for flexibility, integrating new AI models and platforms as they emerge, ensuring you're always ahead.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-20 sm:py-24 md:py-32 bg-gray-900">
-        <div class="container mx-auto px-4 max-w-3xl text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white">
-                Don't Miss Out: <span class="text-gradient">Join the Exclusive Waitlist!</span>
+    <section id="waitlist-form-section" class="py-20 md:py-28 bg-gray-950">
+        <div class="container mx-auto px-4 max-w-screen-md">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-8 text-white leading-tight">
+                Secure Your <span class="gradient-text">Early Access</span> to OrchestrAI
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8">
-                Be among the first to experience NexGen Flow and revolutionize your mobile productivity. Limited spots available for early bird access and exclusive beta features.
+            <p class="text-lg md:text-xl text-gray-300 text-center mb-12 max-w-2xl mx-auto">
+                Join our exclusive waitlist and be among the first to experience the revolution in AI agent management. Limited spots available!
             </p>
 
-            <!-- Waitlist Countdown (Reiterate urgency) -->
-            <div class="bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-sm p-4 rounded-xl inline-block shadow-xl mb-10">
-                <p class="text-red-400 font-bold text-xl sm:text-2xl mb-2">LIMITED TIME OFFER!</p>
-                <div id="countdown-waitlist" class="flex justify-center items-baseline space-x-3 text-white">
-                    <div class="flex flex-col items-center">
-                        <span id="waitlist-days" class="text-4xl sm:text-5xl font-extrabold">00</span>
-                        <span class="text-sm sm:text-base text-gray-400">Days</span>
-                    </div>
-                    <span class="text-4xl sm:text-5xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="waitlist-hours" class="text-4xl sm:text-5xl font-extrabold">00</span>
-                        <span class="text-sm sm:text-base text-gray-400">Hours</span>
-                    </div>
-                    <span class="text-4xl sm:text-5xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="waitlist-minutes" class="text-4xl sm:text-5xl font-extrabold">00</span>
-                        <span class="text-sm sm:text-base text-gray-400">Minutes</span>
-                    </div>
-                    <span class="text-4xl sm:text-5xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="waitlist-seconds" class="text-4xl sm:text-5xl font-extrabold">00</span>
-                        <span class="text-sm sm:text-base text-gray-400">Seconds</span>
-                    </div>
-                </div>
-            </div>
-
-            <form class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700 max-w-lg mx-auto">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-lg font-medium mb-2">Your Name</label>
+            <form class="bg-gray-800/50 backdrop-blur-sm p-8 md:p-10 rounded-xl shadow-2xl border border-gray-700">
+                <div class="mb-6">
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
                     <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:ring-purple-500 focus:border-purple-500 text-white placeholder-gray-400 text-lg transition-all duration-300">
+                        class="shadow appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-900" required>
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-300 text-lg font-medium mb-2">Your Professional Email <span class="text-red-500">*</span></label>
-                    <input type="email" id="email" name="email" placeholder="you@company.com" required
-                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:ring-purple-500 focus:border-purple-500 text-white placeholder-gray-400 text-lg transition-all duration-300">
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com"
+                        class="shadow appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-900" required>
+                </div>
+                <div class="mb-8">
+                    <label for="company" class="block text-gray-300 text-sm font-bold mb-2">Company (Optional)</label>
+                    <input type="text" id="company" name="company" placeholder="Your Company Name"
+                        class="shadow appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-900">
                 </div>
                 <button type="submit"
-                        class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 px-6 rounded-lg text-xl shadow-lg transform transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 glow-effect">
-                    Secure My Early Access Spot!
+                    class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg w-full shadow-lg transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75 text-xl">
+                    Join the Waitlist
                 </button>
-                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, ever. Unsubscribe at any time.</p>
+                <p class="text-center text-gray-500 text-xs mt-6">
+                    We respect your privacy. No spam, ever.
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-10">
-        <div class="container mx-auto px-4 text-center text-gray-400">
-            <p>&copy; 2024 NexGen Flow. All rights reserved.</p>
-            <div class="mt-4 flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
-                <a href="#" class="hover:text-white transition-colors duration-300">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition-colors duration-300">Terms of Service</a>
-                <a href="#" class="hover:text-white transition-colors duration-300">Contact Us</a>
-            </div>
+    <footer class="bg-gray-900 py-10">
+        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+            &copy; 2023 OrchestrAI. All rights reserved. | <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a> | <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer and Mobile Menu -->
+    <!-- Countdown Timer Script -->
     <script>
-        // Countdown Timer Logic
-        function setupCountdown(elementIds, endDate) {
-            const countdownElements = {
-                days: document.getElementById(elementIds.days),
-                hours: document.getElementById(elementIds.hours),
-                minutes: document.getElementById(elementIds.minutes),
-                seconds: document.getElementById(elementIds.seconds),
-            };
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (7 days from when the page loads for the first time)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set for 7 days from now.
 
-            function updateCountdown() {
+            // Retrieve saved countdown target if exists, otherwise save new one
+            let storedCountDownDate = localStorage.getItem('orchestrai_countdown_target');
+            if (storedCountDownDate) {
+                countDownDate.setTime(new Date(storedCountDownDate).getTime());
+            } else {
+                localStorage.setItem('orchestrai_countdown_target', countDownDate.toISOString());
+            }
+
+            const x = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = endDate - now;
+                const distance = countDownDate.getTime() - now;
+
+                const daysElement = document.getElementById("days");
+                const hoursElement = document.getElementById("hours");
+                const minutesElement = document.getElementById("minutes");
+                const secondsElement = document.getElementById("seconds");
+                const countdownContainer = document.getElementById("countdown");
+                const ctaButton = document.querySelector('.hero-bg button');
 
                 if (distance < 0) {
-                    clearInterval(interval);
-                    for (const key in countdownElements) {
-                        if (countdownElements[key]) countdownElements[key].innerHTML = "00";
+                    clearInterval(x);
+                    if (countdownContainer) {
+                        countdownContainer.innerHTML = "<div class='text-red-400 text-xl md:text-2xl font-bold'>OFFER EXPIRED!</div>";
                     }
-                    // Replace countdown with 'EXPIRED' message
-                    if (countdownElements.days) {
-                        const parent = countdownElements.days.closest('div.inline-block');
-                        if (parent) {
-                            parent.innerHTML = "<p class='text-red-400 font-bold text-xl sm:text-2xl'>OFFER EXPIRED! Stay tuned for updates.</p>";
-                        }
+                    if (ctaButton) {
+                        ctaButton.disabled = true;
+                        ctaButton.classList.add('opacity-50', 'cursor-not-allowed');
+                        ctaButton.classList.remove('hover:bg-indigo-700', 'transform', 'hover:-translate-y-1', 'focus:ring-2');
                     }
+                    localStorage.removeItem('orchestrai_countdown_target'); // Clear expired countdown
                     return;
                 }
 
@@ -325,55 +228,14 @@
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                if (countdownElements.days) countdownElements.days.innerHTML = String(days).padStart(2, '0');
-                if (countdownElements.hours) countdownElements.hours.innerHTML = String(hours).padStart(2, '0');
-                if (countdownElements.minutes) countdownElements.minutes.innerHTML = String(minutes).padStart(2, '0');
-                if (countdownElements.seconds) countdownElements.seconds.innerHTML = String(seconds).padStart(2, '0');
-            }
+                if (daysElement) daysElement.innerHTML = String(days).padStart(2, '0');
+                if (hoursElement) hoursElement.innerHTML = String(hours).padStart(2, '0');
+                if (minutesElement) minutesElement.innerHTML = String(minutes).padStart(2, '0');
+                if (secondsElement) secondsElement.innerHTML = String(seconds).padStart(2, '0');
 
-            // Update every second
-            updateCountdown(); // Initial call to display immediately
-            const interval = setInterval(updateCountdown, 1000);
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            // Set the end date for the countdown (e.g., 7 days from now)
-            const now = new Date();
-            const endDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 days from now
-
-            // Setup countdown for Hero section
-            setupCountdown({
-                days: 'days',
-                hours: 'hours',
-                minutes: 'minutes',
-                seconds: 'seconds'
-            }, endDate);
-
-            // Setup countdown for Waitlist section (using the same end date)
-            setupCountdown({
-                days: 'waitlist-days',
-                hours: 'waitlist-hours',
-                minutes: 'waitlist-minutes',
-                seconds: 'waitlist-seconds'
-            }, endDate);
-
-            // Mobile Menu Toggle Logic
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-
-                // Close mobile menu when a link is clicked
-                mobileMenu.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                    });
-                });
-            }
+            }, 1000);
         });
     </script>
+
 </body>
 </html>
