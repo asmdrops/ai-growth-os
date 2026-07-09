@@ -3,92 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpeakAI: Your AI-Powered Language Tutor</title>
+    <title>Ultimate Windows 11 Recovery & Data Safety Course</title>
+    <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        /* Custom styles for modern dark mode, premium feel, and responsive image */
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', sans-serif; /* A more modern, clean font */
+            background-color: #0f172a; /* Deeper dark blue-gray for premium feel */
+            color: #e2e8f0; /* Off-white for readability */
         }
-        .hero-bg {
+        .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Ensure text is above */
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for text readability */
+        }
+        .btn-primary {
+            background-image: linear-gradient(to right, #6366f1, #a855f7); /* Purple-blue gradient */
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            transition: transform 0.2s ease-in-out;
+            box-shadow: 0 4px 14px 0 rgba(100, 108, 241, 0.4);
+        }
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px 0 rgba(100, 108, 241, 0.6);
+        }
+        .section-heading {
+            color: #93c5fd; /* Light blue accent for headings */
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .feature-card {
+            background-color: #1e293b; /* Slightly lighter dark background for cards */
+            border-left: 4px solid #a855f7; /* Accent border */
+            padding: 2rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.2), 0 6px 10px -3px rgba(0, 0, 0, 0.1);
+        }
+        .form-input {
+            background-color: #334155; /* Dark input fields */
+            border: 1px solid #475569;
+            color: #f8fafc;
+            padding: 0.75rem 1rem;
+            border-radius: 0.375rem;
+            width: 100%;
+        }
+        .form-input:focus {
+            border-color: #a855f7;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.25);
+        }
+        .countdown-timer span {
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 0.25rem;
+            min-width: 60px; /* Ensure consistent width */
+        }
+        .countdown-timer span small {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-top: 0.25rem;
+        }
+
+        /* Responsive adjustments for headings and countdown */
+        @media (max-width: 768px) {
+            .section-heading {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+                line-height: 1.2;
+            }
+            .hero-content h2 {
+                font-size: 1.25rem;
+            }
+            .countdown-timer span {
+                font-size: 1.2rem;
+                padding: 0.5rem 0.75rem;
+                min-width: 50px;
+            }
+            .countdown-timer span small {
+                font-size: 0.6rem;
+            }
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white antialiased">
+<body class="antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-bg min-h-screen flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-        <div class="relative z-10 text-center max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 animate-fade-in">
-                Speak Any Language Flawlessly with AI
-            </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto animate-fade-in-up delay-200">
-                Experience hyper-realistic conversations with our AI tutors, powered by the new GPT-Live voice models. Get instant, precise feedback on pronunciation, grammar, and fluency.
-            </p>
-            <a href="#waitlist" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg animate-bounce-in delay-400">
-                Join Early Access Now!
-            </a>
+    <section class="relative min-h-screen flex items-center justify-center text-center overflow-hidden py-16">
+        <div class="hero-background"></div>
+        <div class="absolute inset-0 overlay flex items-center justify-center p-4">
+            <div class="relative z-10 max-w-4xl mx-auto hero-content">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                    🛡️ The Ultimate Windows 11 Recovery & Data Safety Course for Non-Technical Users
+                </h1>
+                <h2 class="text-xl md:text-2xl font-light mb-8 text-gray-200 drop-shadow-md">
+                    Unlock peace of mind. Learn to leverage the new 'Cloud Rebuild' feature, secure your data, and troubleshoot like a pro – no tech jargon required!
+                </h2>
+
+                <div class="bg-gradient-to-r from-purple-800 to-indigo-800 p-6 rounded-lg shadow-xl mb-8 border border-purple-600">
+                    <p class="text-lg md:text-xl font-semibold mb-4 text-white">
+                        🚨 Limited Time Launch Offer! Course doors closing in:
+                    </p>
+                    <div id="countdown" class="flex justify-center items-center flex-wrap gap-2 text-white countdown-timer">
+                        <span><span id="days">00</span><small>Days</small></span>
+                        <span><span id="hours">00</span><small>Hours</small></span>
+                        <span><span id="minutes">00</span><small>Minutes</small></span>
+                        <span><span id="seconds">00</span><small>Seconds</small></span>
+                    </div>
+                </div>
+
+                <a href="#waitlist-form" class="btn-primary inline-block text-lg md:text-xl">
+                    Secure Your Spot & Join Waitlist Now!
+                </a>
+                <p class="text-sm mt-4 text-gray-400">Exclusive access for early registrants. Don't miss out!</p>
+            </div>
         </div>
-    </header>
+    </section>
+
+    <!-- Market Trends / Problem Solution Section -->
+    <section class="py-16 px-4 bg-gray-900 text-center">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="section-heading">Why This Course Matters: Stay Ahead of the Curve 📈</h2>
+            <p class="text-lg mb-8 text-gray-300">
+                In an era where personal computers are central to our lives, ensuring their longevity and the safety of our precious data is paramount.
+                The latest advancements in Windows 11, like the 'Cloud Rebuild' feature, are game-changers – but only if you know how to use them.
+            </p>
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md border-t-4 border-indigo-500">
+                    <h3 class="text-2xl font-bold mb-4 text-indigo-300">📉 The Cost of Downtime & Data Loss</h3>
+                    <p class="text-gray-300">
+                        Imagine your Windows 11 PC refusing to boot, or worse, losing years of photos, documents, and memories.
+                        The frustration, the time lost, and the potential financial cost of professional recovery can be immense.
+                        Traditional troubleshooting is often complex and overwhelming for non-technical users.
+                    </p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md border-t-4 border-purple-500">
+                    <h3 class="text-2xl font-bold mb-4 text-purple-300">✨ The Future of PC Recovery is Here</h3>
+                    <p class="text-gray-300">
+                        As highlighted by <strong class="text-white">ZDNET: "You can soon restore Windows 11 from scratch even if it can't boot up - here's how"</strong>.
+                        The new Cloud Rebuild feature promises unprecedented recovery capabilities.
+                        This course teaches you to harness this power, integrating it with a bulletproof data safety strategy for ultimate peace of mind.
+                    </p>
+                </div>
+            </div>
+            <p class="text-lg mt-8 text-gray-300">
+                Don't wait until disaster strikes. Proactive knowledge is your best defense against PC woes.
+            </p>
+        </div>
+    </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 bg-gray-950 px-4">
+    <section class="py-16 px-4 bg-gray-800">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16 text-purple-400">
-                Unlock Your Fluency Potential
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
-                    <div class="text-5xl text-purple-500 mb-6">🎙️</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Hyper-Realistic AI Tutors</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Practice with cutting-edge GPT-Live voice models that sound indistinguishable from native speakers, for the most authentic learning experience.
+            <h2 class="section-heading">What You'll Master in This Premium Course 🌟</h2>
+            <p class="text-xl text-center mb-12 text-gray-300">
+                Designed specifically for non-technical users, this course breaks down complex concepts into simple, actionable steps.
+            </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card">
+                    <h3 class="text-2xl font-bold mb-3 text-white">☁️ Cloud Rebuild Mastery</h3>
+                    <p class="text-gray-300">
+                        Learn to effectively utilize Windows 11's revolutionary 'Cloud Rebuild' feature to restore your system from scratch, even when it won't boot. Step-by-step guidance for a seamless recovery.
                     </p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
-                    <div class="text-5xl text-blue-400 mb-6">🧠</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Real-Time Intelligent Feedback</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Receive instant, actionable insights on your pronunciation, grammar, and overall fluency to correct mistakes on the spot.
+                <div class="feature-card">
+                    <h3 class="text-2xl font-bold mb-3 text-white">🔒 Robust Data Backup Strategies</h3>
+                    <p class="text-gray-300">
+                        Integrate local backups with powerful cloud solutions. Never worry about losing your precious files, photos, or documents again. Set it and forget it!
                     </p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
-                    <div class="text-5xl text-green-400 mb-6">🌍</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Specialized Learning Modules</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Tailor your practice with modules for business, travel, academic exams (IELTS, TOEFL), or everyday conversations.
+                <div class="feature-card">
+                    <h3 class="text-2xl font-bold mb-3 text-white">🛠️ Advanced Boot Troubleshooting</h3>
+                    <p class="text-gray-300">
+                        Demystify common boot issues. Gain the confidence to diagnose and fix problems that prevent your PC from starting, using easy-to-follow guides.
                     </p>
                 </div>
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
-                    <div class="text-5xl text-yellow-400 mb-6">📱</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Practice Anytime, Anywhere</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Your personal AI tutor is available 24/7, ready to help you practice whenever and wherever suits your schedule.
+                <div class="feature-card">
+                    <h3 class="text-2xl font-bold mb-3 text-white">🩺 Proactive System Health Checks</h3>
+                    <p class="text-gray-300">
+                        Implement simple, routine checks to keep your Windows 11 system running smoothly, preventing issues before they arise and extending your PC's lifespan.
                     </p>
                 </div>
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
-                    <div class="text-5xl text-red-400 mb-6">📈</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Track Your Progress</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Monitor your improvement over time with detailed performance analytics and personalized learning paths.
+                <div class="feature-card">
+                    <h3 class="text-2xl font-bold mb-3 text-white">📚 Step-by-Step Video Modules</h3>
+                    <p class="text-gray-300">
+                        Clear, concise, and easy-to-understand video lessons with accompanying checklists and cheat sheets. Learn at your own pace, on your own terms.
                     </p>
                 </div>
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
-                    <div class="text-5xl text-pink-400 mb-6">🎯</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Goal-Oriented Learning</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Set specific language goals and let SpeakAI guide you with tailored lessons and practice exercises.
+                <div class="feature-card">
+                    <h3 class="text-2xl font-bold mb-3 text-white">💬 Exclusive Community Access</h3>
+                    <p class="text-gray-300">
+                        Join a supportive community of learners. Get your questions answered, share insights, and stay updated on the latest Windows 11 recovery best practices.
                     </p>
                 </div>
             </div>
@@ -96,95 +231,84 @@
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gray-900 px-4">
-        <div class="container mx-auto max-w-2xl text-center bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl border border-gray-700">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-6 text-orange-400">
-                Don't Miss Out! Get Early Access to SpeakAI
-            </h2>
-            <p class="text-lg text-gray-300 mb-8">
-                We're launching soon with limited spots. Join our waitlist to be among the first to experience the future of language learning!
+    <section id="waitlist-form" class="py-16 px-4 bg-gray-900 text-center">
+        <div class="container mx-auto max-w-2xl">
+            <h2 class="section-heading">Ready for Total Windows 11 Peace of Mind? ✨</h2>
+            <p class="text-xl mb-8 text-gray-300">
+                Join our exclusive waitlist for the "Ultimate Windows 11 Recovery & Data Safety Course."
+                Be the first to know when enrollment opens and secure your limited-time discount!
             </p>
-
-            <!-- Limited Time Countdown -->
-            <div class="mb-10 p-6 bg-purple-900 bg-opacity-30 rounded-lg border border-purple-700">
-                <p class="text-2xl font-semibold text-purple-300 mb-4">Limited Time Offer:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-4xl md:text-5xl font-mono font-bold text-orange-500">
-                    <div><span id="days">00</span><span class="block text-base text-gray-400 mt-1">Days</span></div>
-                    <span>:</span>
-                    <div><span id="hours">00</span><span class="block text-base text-gray-400 mt-1">Hours</span></div>
-                    <span>:</span>
-                    <div><span id="minutes">00</span><span class="block text-base text-gray-400 mt-1">Minutes</span></div>
-                    <span>:</span>
-                    <div><span id="seconds">00</span><span class="block text-base text-gray-400 mt-1">Seconds</span></div>
+            <form action="#" method="POST" class="bg-gray-800 p-8 rounded-lg shadow-xl border border-purple-700">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-200 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
                 </div>
-                <p class="text-lg text-gray-400 mt-4">Spots are filling up fast!</p>
-            </div>
-
-
-            <form class="space-y-6">
-                <div>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required
-                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:ring-purple-500 focus:border-purple-500 text-white placeholder-gray-400 text-lg">
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="john.doe@example.com" required>
                 </div>
-                <div>
-                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
-                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:ring-purple-500 focus:border-purple-500 text-white placeholder-gray-400 text-lg">
-                </div>
-                <button type="submit"
-                        class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
-                    Join the Waitlist
+                <button type="submit" class="btn-primary w-full text-lg">
+                    Join The Exclusive Waitlist!
                 </button>
-                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, ever.</p>
+                <p class="text-sm mt-4 text-gray-400">We respect your privacy. No spam, ever.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 px-4 text-center text-gray-500">
-        <div class="container mx-auto max-w-6xl">
-            <p>&copy; 2023 SpeakAI. All rights reserved.</p>
-            <div class="mt-4 text-sm">
-                <a href="#" class="text-gray-400 hover:text-purple-400 mx-2">Privacy Policy</a>
-                <span class="text-gray-600">|</span>
-                <a href="#" class="text-gray-400 hover:text-purple-400 mx-2">Terms of Service</a>
-            </div>
+    <footer class="py-8 px-4 bg-gray-950 text-center text-gray-500 text-sm">
+        <div class="container mx-auto">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved. | <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></p>
         </div>
     </footer>
 
+    <!-- Countdown Timer JavaScript -->
     <script>
-        // Countdown Timer Logic
-        const countdownElement = document.getElementById('countdown');
-        const daysElement = document.getElementById('days');
-        const hoursElement = document.getElementById('hours');
-        const minutesElement = document.getElementById('minutes');
-        const secondsElement = document.getElementById('seconds');
-
-        // Set the date we're counting down to (e.g., 7 days from now)
-        const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 7); // 7 days from today
-
-        function updateCountdown() {
+        const countdown = () => {
+            // Set your target date here. Format: "Month Day, Year HH:MM:SS"
+            // Example: "December 31, 2023 23:59:59"
+            const countDate = new Date("December 31, 2024 23:59:59").getTime(); 
             const now = new Date().getTime();
-            const distance = countdownDate - now;
+            const gap = countDate - now;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Define time units in milliseconds
+            const second = 1000;
+            const minute = second * 60;
+            const hour = minute * 60;
+            const day = hour * 24;
 
-            daysElement.innerText = String(days).padStart(2, '0');
-            hoursElement.innerText = String(hours).padStart(2, '0');
-            minutesElement.innerText = String(minutes).padStart(2, '0');
-            secondsElement.innerText = String(seconds).padStart(2, '0');
+            // Calculate the remaining time values
+            const textDay = Math.floor(gap / day);
+            const textHour = Math.floor((gap % day) / hour);
+            const textMinute = Math.floor((gap % hour) / minute);
+            const textSecond = Math.floor((gap % minute) / second);
 
-            if (distance < 0) {
+            // Get elements for displaying countdown
+            const daysElement = document.getElementById('days');
+            const hoursElement = document.getElementById('hours');
+            const minutesElement = document.getElementById('minutes');
+            const secondsElement = document.getElementById('seconds');
+            const countdownContainer = document.getElementById('countdown');
+
+            if (gap > 0) {
+                // Display on page, adding leading zero if < 10
+                daysElement.innerText = textDay < 10 ? '0' + textDay : textDay;
+                hoursElement.innerText = textHour < 10 ? '0' + textHour : textHour;
+                minutesElement.innerText = textMinute < 10 ? '0' + textMinute : textMinute;
+                secondsElement.innerText = textSecond < 10 ? '0' + textSecond : textSecond;
+            } else {
+                // If the countdown is over, display expired message and clear interval
+                if (countdownContainer) {
+                    countdownContainer.innerHTML = '<p class="text-xl md:text-2xl font-bold text-red-400">Offer Expired! Sign up for updates.</p>';
+                }
                 clearInterval(countdownInterval);
-                countdownElement.innerHTML = "<span class='text-xl text-red-500'>Offer Expired!</span>";
             }
-        }
+        };
 
-        const countdownInterval = setInterval(updateCountdown, 1000);
-        updateCountdown(); // Initial call to display immediately
+        // Update the countdown every second
+        const countdownInterval = setInterval(countdown, 1000);
+        // Call once immediately to avoid initial flicker
+        countdown(); 
     </script>
 </body>
 </html>
