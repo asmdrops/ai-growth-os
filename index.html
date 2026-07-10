@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WellnessFlow - Elevate Employee Well-being & Productivity</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Digital Oasis - Reclaim Your Focus & Boost Productivity</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles for modern dark-mode aesthetic and hero image overlay */
+        /* Custom styles for modern premium dark mode aesthetics */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');
         body {
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            /* Using Tailwind's default sans-serif stack for consistency */
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
         }
         .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?Develop,tech');
@@ -20,223 +20,191 @@
             position: relative;
         }
         .hero-bg::before {
-            content: '';
+            content: "";
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.75); /* Stronger dark overlay for better text readability */
-            z-index: 1;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        /* Ensure input fields look perfect in dark mode with focus states */
-        input[type="text"], input[type="email"] {
-            background-color: #1f2937; /* Tailwind gray-800 */
-            color: #f9fafb; /* Tailwind gray-50 */
-            border-color: #374151; /* Tailwind gray-700 */
-        }
-        input[type="text"]:focus, input[type="email"]:focus {
-            border-color: #6d28d9; /* Tailwind purple-700 */
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.5); /* Tailwind purple-500 with opacity */
+            background: linear-gradient(to top, rgba(17, 24, 39, 0.95) 0%, rgba(17, 24, 39, 0.6) 50%, rgba(17, 24, 39, 0.95) 100%);
+            /* Deeper, more enveloping gradient for maximum text readability and dark mode blend */
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased overflow-x-hidden">
 
     <!-- Hero Section -->
-    <header class="hero-bg min-h-screen flex items-center justify-center text-center p-4">
-        <div class="hero-content max-w-4xl mx-auto py-16 px-6 sm:px-8 lg:px-12">
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-500">
-                Unlock Peak Performance & Well-being
+    <section class="hero-bg min-h-screen flex items-center justify-center relative py-16 px-4">
+        <div class="relative z-10 text-center max-w-5xl mx-auto space-y-8">
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight text-white drop-shadow-2xl">
+                Reclaim Your Focus. Unleash Your Productivity.
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto">
-                Transform your corporate wellness strategy with gamified fitness challenges and a revolutionary "Wellness Lock" to boost employee engagement and productivity.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto drop-shadow-lg">
+                Digital Oasis: Your personalized platform for digital wellbeing, smarter habits, and unparalleled concentration in a world of endless distractions.
             </p>
-
-            <!-- Limited Time Offer Countdown -->
-            <div class="bg-purple-900 bg-opacity-40 border border-purple-700 rounded-lg p-4 mb-10 inline-block backdrop-blur-sm">
-                <p class="text-purple-200 text-sm sm:text-base font-semibold uppercase tracking-wide mb-2">
-                    Early Access Enrollment Closes In:
-                </p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-white font-bold text-2xl sm:text-4xl lg:text-5xl">
-                    <div><span id="days">00</span><span class="block text-sm sm:text-base font-medium text-purple-300">Days</span></div>
-                    <span class="text-gray-400">:</span>
-                    <div><span id="hours">00</span><span class="block text-sm sm:text-base font-medium text-purple-300">Hours</span></div>
-                    <span class="text-gray-400">:</span>
-                    <div><span id="minutes">00</span><span class="block text-sm sm:text-base font-medium text-purple-300">Minutes</span></div>
-                    <span class="text-gray-400">:</span>
-                    <div><span id="seconds">00</span><span class="block text-sm sm:text-base font-medium text-purple-300">Seconds</span></div>
-                </div>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+                <a href="#waitlist" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-8 rounded-full shadow-xl transform transition-all duration-300 ease-in-out hover:scale-105 text-lg">
+                    Join the Waitlist Now!
+                </a>
+                <a href="#features" class="bg-gray-700 hover:bg-gray-600 text-gray-200 font-bold py-3 px-8 rounded-full shadow-xl transform transition-all duration-300 ease-in-out hover:scale-105 text-lg">
+                    Discover Features
+                </a>
             </div>
 
-            <a href="#waitlist" class="inline-block bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-bold py-4 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out text-lg sm:text-xl">
-                Secure Your Spot on the Waitlist
-            </a>
-            <p class="text-sm text-gray-400 mt-4">Exclusively for B2B enterprises committed to employee well-being.</p>
+            <!-- Limited Time Offer Countdown -->
+            <div class="mt-10 p-4 md:p-5 bg-gradient-to-r from-yellow-500 to-orange-500 bg-opacity-90 rounded-xl shadow-2xl inline-block border border-yellow-400">
+                <p class="text-lg md:text-xl font-semibold text-white">
+                    🔥 Limited Early Bird Access Ends In: <span id="countdown" class="font-extrabold block text-2xl md:text-3xl mt-2">Loading...</span> 🔥
+                </p>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const countdownElement = document.getElementById('countdown');
+                        // Set the future date for the countdown (e.g., 7 days from now)
+                        const futureDate = new Date();
+                        futureDate.setDate(futureDate.getDate() + 7); 
+                        futureDate.setHours(futureDate.getHours() + 12); // Add some hours
+                        futureDate.setMinutes(futureDate.getMinutes() + 30); // Add some minutes
+
+                        function updateCountdown() {
+                            const now = new Date().getTime();
+                            const distance = futureDate - now;
+
+                            if (distance < 0) {
+                                countdownElement.innerHTML = "Offer Expired!";
+                                return;
+                            }
+
+                            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                            countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                        }
+
+                        setInterval(updateCountdown, 1000);
+                        updateCountdown(); // Initial call to display immediately
+                    });
+                </script>
+            </div>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-20 lg:py-24 bg-gray-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 sm:mb-16 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500">
-                Features Designed for Measurable Impact
+    <section id="features" class="py-20 px-4 bg-gray-950 text-center">
+        <div class="container mx-auto max-w-7xl">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-white">
+                How Digital Oasis Transforms Your World
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+            <p class="text-lg md:text-xl text-gray-400 mb-16 max-w-3xl mx-auto">
+                We empower you with cutting-edge tools to regain control of your digital life, fostering deep focus and sustainable productivity.
+            </p>
 
-                <!-- Feature 1: Gamified Wellness Challenges -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 hover:border-purple-600 group">
-                    <div class="text-5xl text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300">🏆</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Gamified Wellness Challenges</h3>
-                    <p class="text-gray-300">Drive unparalleled engagement with customizable, interactive fitness challenges, dynamic leaderboards, and collaborative team goals.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Feature 1: Personalized Digital Detox Plans -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group flex flex-col items-center text-center">
+                    <div class="text-5xl text-teal-400 mb-6 group-hover:scale-110 transition-transform duration-300">💡</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Personalized Detox Plans</h3>
+                    <p class="text-gray-300 leading-relaxed flex-grow">
+                        Custom-tailored programs adapt to your unique habits, guiding you towards reduced screen time, improved sleep, and enhanced real-world engagement.
+                    </p>
                 </div>
 
-                <!-- Feature 2: Seamless Tracker Integration -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 hover:border-purple-600 group">
-                    <div class="text-5xl text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300">🔗</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Seamless Tracker Integration</h3>
-                    <p class="text-gray-300">Automatically syncs with popular fitness trackers (Garmin, Fitbit, Apple Health, Google Fit) for effortless progress tracking and data aggregation.</p>
+                <!-- Feature 2: 'Dumb Phone' Mode Simulator -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group flex flex-col items-center text-center">
+                    <div class="text-5xl text-purple-400 mb-6 group-hover:scale-110 transition-transform duration-300">📵</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Dumb Phone Mode</h3>
+                    <p class="text-gray-300 leading-relaxed flex-grow">
+                        Inspired by the #DumbCoChallenge, transform your smartphone into a distraction-free device. Essential calls & apps only, for peak focus.
+                    </p>
                 </div>
 
-                <!-- Feature 3: Revolutionary Wellness Lock™ -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 hover:border-purple-600 group">
-                    <div class="text-5xl text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300">🔒</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Revolutionary Wellness Lock™</h3>
-                    <p class="text-gray-300">Boost collective productivity by enabling 'wellness locks' on company-issued apps, nudging employees to hit team step goals for work-related perks or temporary access.</p>
+                <!-- Feature 3: Smart Notification Management -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group flex flex-col items-center text-center">
+                    <div class="text-5xl text-blue-400 mb-6 group-hover:scale-110 transition-transform duration-300">🔔</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Smart Notification Control</h3>
+                    <p class="text-gray-300 leading-relaxed flex-grow">
+                        AI-powered intelligence filters and batches your alerts, ensuring only truly important notifications reach you during focus periods.
+                    </p>
                 </div>
 
-                <!-- Feature 4: Advanced Analytics & Reporting -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 hover:border-purple-600 group">
-                    <div class="text-5xl text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300">📈</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Advanced Analytics & Reporting</h3>
-                    <p class="text-gray-300">Access comprehensive dashboards and reports to measure employee well-being, challenge participation, and quantify your wellness program's ROI.</p>
+                <!-- Feature 4: AI-Driven Usage Insights -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group flex flex-col items-center text-center">
+                    <div class="text-5xl text-orange-400 mb-6 group-hover:scale-110 transition-transform duration-300">🧠</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">AI-Driven Insights</h3>
+                    <p class="text-gray-300 leading-relaxed flex-grow">
+                        Gain profound understanding of your digital habits with intuitive analytics. Identify patterns, reduce time sinks, and foster healthier engagement.
+                    </p>
                 </div>
 
-                <!-- Feature 5: Customizable Programs & Rewards -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 hover:border-purple-600 group">
-                    <div class="text-5xl text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300">⚙️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Customizable Programs & Rewards</h3>
-                    <p class="text-gray-300">Tailor challenges, set specific wellness goals, and design a flexible rewards system that truly resonates with your unique workforce.</p>
+                <!-- Feature 5: Productivity Integrations -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group flex flex-col items-center text-center">
+                    <div class="text-5xl text-green-400 mb-6 group-hover:scale-110 transition-transform duration-300">🔗</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Productivity Integrations</h3>
+                    <p class="text-gray-300 leading-relaxed flex-grow">
+                        Seamlessly connect Digital Oasis with your favorite productivity tools, calendars, and task managers to enhance your existing workflow.
+                    </p>
                 </div>
 
-                <!-- Feature 6: Enterprise-Grade Security & Privacy -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 hover:border-purple-600 group">
-                    <div class="text-5xl text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300">🛡️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Enterprise-Grade Security & Privacy</h3>
-                    <p class="text-gray-300">Our platform is engineered with robust security protocols and adheres to stringent data privacy compliance, safeguarding sensitive employee and company information.</p>
+                <!-- Feature 6: Tiered Access & Guided Programs -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group flex flex-col items-center text-center">
+                    <div class="text-5xl text-red-400 mb-6 group-hover:scale-110 transition-transform duration-300">🌟</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Guided Focus Programs</h3>
+                    <p class="text-gray-300 leading-relaxed flex-grow">
+                        Progress with tiered access to advanced features, expert-led courses, and structured programs designed for sustained digital wellbeing.
+                    </p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Call to Action / Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-20 lg:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 text-center max-w-3xl">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-500">
-                Ready to Revolutionize Corporate Wellness?
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-20 px-4 bg-gray-900">
+        <div class="container mx-auto max-w-3xl text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-white">
+                Join the Movement: Secure Early Access!
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10">
-                Join our exclusive waitlist today for early access and pilot opportunities. This limited-time offer closes soon!
+            <p class="text-lg md:text-xl text-gray-400 mb-12">
+                Be among the first to experience Digital Oasis. Join our exclusive waitlist for early bird pricing, beta access, and powerful insights delivered directly to your inbox.
             </p>
 
-            <!-- Reinforce Limited Time Offer Countdown -->
-            <div class="bg-purple-900 bg-opacity-40 border border-purple-700 rounded-lg p-4 mb-8 inline-block backdrop-blur-sm">
-                <p class="text-purple-200 text-sm sm:text-base font-semibold uppercase tracking-wide mb-2">
-                    Exclusive Early Access Offer Ends In:
-                </p>
-                <div id="countdown-form" class="flex justify-center items-center space-x-3 text-white font-bold text-xl sm:text-3xl">
-                    <div><span id="form-days">00</span><span class="block text-xs sm:text-sm font-medium text-purple-300">Days</span></div>
-                    <span class="text-gray-400">:</span>
-                    <div><span id="form-hours">00</span><span class="block text-xs sm:text-sm font-medium text-purple-300">Hours</span></div>
-                    <span class="text-gray-400">:</span>
-                    <div><span id="form-minutes">00</span><span class="block text-xs sm:text-sm font-medium text-purple-300">Minutes</span></div>
-                    <span class="text-gray-400">:</span>
-                    <div><span id="form-seconds">00</span><span class="block text-xs sm:text-sm font-medium text-purple-300">Seconds</span></div>
+            <form class="bg-gray-800 p-8 md:p-12 rounded-2xl shadow-2xl space-y-6 max-w-lg mx-auto border border-gray-700">
+                <div>
+                    <label for="name" class="sr-only">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required
+                           class="w-full p-4 rounded-lg bg-gray-700 text-gray-100 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-200 text-lg"
+                           aria-label="Your Name">
                 </div>
-            </div>
-
-            <form class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700 max-w-md mx-auto">
-                <div class="mb-6">
-                    <label for="companyName" class="sr-only">Company Name</label>
-                    <input type="text" id="companyName" name="companyName" placeholder="Your Company Name" required
-                           class="w-full px-5 py-3 rounded-lg border focus:ring-1 transition duration-200">
-                </div>
-                <div class="mb-6">
-                    <label for="email" class="sr-only">Work Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Work Email" required
-                           class="w-full px-5 py-3 rounded-lg border focus:ring-1 transition duration-200">
+                <div>
+                    <label for="email" class="sr-only">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
+                           class="w-full p-4 rounded-lg bg-gray-700 text-gray-100 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-200 text-lg"
+                           aria-label="Your Email Address">
                 </div>
                 <button type="submit"
-                        class="w-full bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-bold py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out text-lg">
-                    Join the Exclusive Waitlist
+                        class="w-full bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 text-xl">
+                    Get Early Access & Focus!
                 </button>
-                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, ever.</p>
+                <p class="text-sm text-gray-500 mt-4">
+                    We respect your privacy. Your email will only be used for Digital Oasis updates.
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 border-t border-gray-800">
-        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
-            <p>&copy; 2023 WellnessFlow. All rights reserved.</p>
-            <div class="mt-2 space-x-4">
-                <a href="#" class="hover:text-purple-400 transition-colors duration-200">Privacy Policy</a>
-                <a href="#" class="hover:text-purple-400 transition-colors duration-200">Terms of Service</a>
+    <footer class="bg-black py-10 px-4 text-center text-gray-500 text-sm border-t border-gray-800">
+        <div class="container mx-auto max-w-7xl">
+            <p>&copy; 2023 Digital Oasis. All rights reserved.</p>
+            <div class="mt-4 flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4">
+                <a href="#" class="hover:text-gray-300 transition-colors duration-200">Privacy Policy</a>
+                <span class="hidden sm:inline text-gray-600">|</span>
+                <a href="#" class="hover:text-gray-300 transition-colors duration-200">Terms of Service</a>
             </div>
         </div>
     </footer>
 
-    <!-- Countdown Script -->
-    <script>
-        function setupCountdown(targetDate, daysId, hoursId, minutesId, secondsId) {
-            const countDownDate = new Date(targetDate).getTime();
-
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate - now;
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                // Display the result in the elements
-                document.getElementById(daysId).innerHTML = String(days).padStart(2, '0');
-                document.getElementById(hoursId).innerHTML = String(hours).padStart(2, '0');
-                document.getElementById(minutesId).innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById(secondsId).innerHTML = String(seconds).padStart(2, '0');
-
-                // If the count down is finished, display "Expired"
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById(daysId).innerHTML = "00";
-                    document.getElementById(hoursId).innerHTML = "00";
-                    document.getElementById(minutesId).innerHTML = "00";
-                    document.getElementById(secondsId).innerHTML = "00";
-                    
-                    // Update the display to show "Offer Expired!"
-                    const countdownElement = document.getElementById(daysId).closest('div.flex');
-                    if (countdownElement) {
-                        countdownElement.innerHTML = '<span class="text-red-400 text-lg sm:text-xl lg:text-2xl font-semibold">Offer Expired!</span>';
-                    }
-                }
-            }, 1000);
-        }
-
-        // Set the target date for the countdown (e.g., 7 days from now)
-        const sevenDaysFromNow = new Date();
-        sevenDaysFromNow.setDate(sevenDaysFromNow.getDate() + 7); // Add 7 days to the current date
-        const targetDateString = sevenDaysFromNow.toISOString(); 
-
-        // Initialize both countdowns (hero and form sections)
-        setupCountdown(targetDateString, 'days', 'hours', 'minutes', 'seconds');
-        setupCountdown(targetDateString, 'form-days', 'form-hours', 'form-minutes', 'form-seconds');
-    </script>
 </body>
 </html>
