@@ -3,221 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Browser Companion - Unleash Your Productivity</title>
+    <title>WellnessFlow - Elevate Employee Well-being & Productivity</title>
     <!-- Tailwind CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Optional: Google Font for a modern look (Inter) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles for modern premium dark mode aesthetic */
+        /* Custom styles for modern dark-mode aesthetic and hero image overlay */
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0c0c1e; /* Deep dark background */
-            color: #e0e7ff; /* Light, slightly bluish white text */
-            scroll-behavior: smooth;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            /* Using Tailwind's default sans-serif stack for consistency */
         }
-        .gradient-text {
-            background-image: linear-gradient(to right, #8b5cf6, #ec4899); /* Purple to Pink Gradient */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .btn-primary {
-            background-image: linear-gradient(to right, #8b5cf6, #ec4899); /* Purple to Pink Gradient */
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 24px rgba(139, 92, 246, 0.4); /* Enhanced shadow */
-        }
-        .btn-primary:active {
-            transform: translateY(0);
-        }
-        .hero-section {
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?Develop,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             position: relative;
         }
-        .hero-overlay {
-            background: linear-gradient(to bottom, rgba(12,12,30,0.6) 0%, rgba(12,12,30,0.8) 50%, rgba(12,12,30,0.95) 100%);
+        .hero-bg::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.75); /* Stronger dark overlay for better text readability */
+            z-index: 1;
         }
-        /* Enhances feature card hover effect */
-        .feature-card {
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: #8b5cf6;
-            box-shadow: 0 15px 30px rgba(139, 92, 246, 0.2);
+        /* Ensure input fields look perfect in dark mode with focus states */
+        input[type="text"], input[type="email"] {
+            background-color: #1f2937; /* Tailwind gray-800 */
+            color: #f9fafb; /* Tailwind gray-50 */
+            border-color: #374151; /* Tailwind gray-700 */
+        }
+        input[type="text"]:focus, input[type="email"]:focus {
+            border-color: #6d28d9; /* Tailwind purple-700 */
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.5); /* Tailwind purple-500 with opacity */
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-section relative h-screen flex items-center justify-center p-4 lg:p-8" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-        <div class="hero-overlay"></div>
-        <div class="z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 gradient-text">
-                Your Browser Just Got Smarter.
+    <header class="hero-bg min-h-screen flex items-center justify-center text-center p-4">
+        <div class="hero-content max-w-4xl mx-auto py-16 px-6 sm:px-8 lg:px-12">
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-500">
+                Unlock Peak Performance & Well-being
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-indigo-200 mb-8 max-w-3xl mx-auto opacity-90">
-                With growing AI browser ambitions, our Smart Companion supercharges your workflow.
-                <br class="hidden md:inline"> Revolutionize research, summarization, and content curation, directly in your browser.
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                Transform your corporate wellness strategy with gamified fitness challenges and a revolutionary "Wellness Lock" to boost employee engagement and productivity.
             </p>
 
-            <!-- Limited Time Countdown -->
-            <div class="bg-gradient-to-r from-purple-800 to-pink-800 bg-opacity-70 backdrop-filter backdrop-blur-sm rounded-xl p-5 mb-8 max-w-lg mx-auto shadow-2xl border border-purple-700">
-                <p class="text-xl sm:text-2xl font-bold text-white mb-3">Limited Early Access Offer Ends In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 sm:space-x-6 text-white font-mono text-3xl sm:text-4xl md:text-5xl font-extrabold">
-                    <div><span id="days">00</span><span class="block text-sm sm:text-base font-normal text-indigo-200">Days</span></div>
-                    <span class="text-3xl sm:text-4xl">:</span>
-                    <div><span id="hours">00</span><span class="block text-sm sm:text-base font-normal text-indigo-200">Hours</span></div>
-                    <span class="text-3xl sm:text-4xl">:</span>
-                    <div><span id="minutes">00</span><span class="block text-sm sm:text-base font-normal text-indigo-200">Minutes</span></div>
-                    <span class="text-3xl sm:text-4xl">:</span>
-                    <div><span id="seconds">00</span><span class="block text-sm sm:text-base font-normal text-indigo-200">Seconds</span></div>
+            <!-- Limited Time Offer Countdown -->
+            <div class="bg-purple-900 bg-opacity-40 border border-purple-700 rounded-lg p-4 mb-10 inline-block backdrop-blur-sm">
+                <p class="text-purple-200 text-sm sm:text-base font-semibold uppercase tracking-wide mb-2">
+                    Early Access Enrollment Closes In:
+                </p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-white font-bold text-2xl sm:text-4xl lg:text-5xl">
+                    <div><span id="days">00</span><span class="block text-sm sm:text-base font-medium text-purple-300">Days</span></div>
+                    <span class="text-gray-400">:</span>
+                    <div><span id="hours">00</span><span class="block text-sm sm:text-base font-medium text-purple-300">Hours</span></div>
+                    <span class="text-gray-400">:</span>
+                    <div><span id="minutes">00</span><span class="block text-sm sm:text-base font-medium text-purple-300">Minutes</span></div>
+                    <span class="text-gray-400">:</span>
+                    <div><span id="seconds">00</span><span class="block text-sm sm:text-base font-medium text-purple-300">Seconds</span></div>
                 </div>
             </div>
 
-            <a href="#waitlist" class="btn-primary inline-block px-10 py-5 text-xl font-bold text-white rounded-full shadow-lg">
-                Claim Your Early Access Spot!
+            <a href="#waitlist" class="inline-block bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-bold py-4 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out text-lg sm:text-xl">
+                Secure Your Spot on the Waitlist
             </a>
+            <p class="text-sm text-gray-400 mt-4">Exclusively for B2B enterprises committed to employee well-being.</p>
         </div>
     </header>
 
-    <main>
-        <!-- Features Section -->
-        <section id="features" class="py-16 md:py-24 bg-gray-900">
-            <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-16 gradient-text">
-                    Next-Gen AI, Seamlessly Integrated
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Feature 1 -->
-                    <div class="feature-card bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700">
-                        <div class="text-purple-400 mb-4">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4m-6 2h.01"></path></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Custom Summarization 🧠</h3>
-                        <p class="text-gray-300 leading-relaxed">Instantly summarize articles, reports, or emails based on your professional role. Focus on key insights relevant to you, saving valuable time.</p>
-                    </div>
+    <!-- Features Section -->
+    <section id="features" class="py-16 sm:py-20 lg:py-24 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 sm:mb-16 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500">
+                Features Designed for Measurable Impact
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
 
-                    <!-- Feature 2 -->
-                    <div class="feature-card bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700">
-                        <div class="text-purple-400 mb-4">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM13 10H7"></path></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Real-time Research Assistant 🚀</h3>
-                        <p class="text-gray-300 leading-relaxed">Get instant answers, contextual data, and related content for any topic you're browsing. Your ultimate AI-powered research co-pilot, always by your side.</p>
-                    </div>
+                <!-- Feature 1: Gamified Wellness Challenges -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 hover:border-purple-600 group">
+                    <div class="text-5xl text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300">🏆</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Gamified Wellness Challenges</h3>
+                    <p class="text-gray-300">Drive unparalleled engagement with customizable, interactive fitness challenges, dynamic leaderboards, and collaborative team goals.</p>
+                </div>
 
-                    <!-- Feature 3 -->
-                    <div class="feature-card bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700">
-                        <div class="text-purple-400 mb-4">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.324 1.118l1.519 4.674c.3.921-.755 1.688-1.539 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.539-1.118l1.519-4.674a1 1 0 00-.324-1.118L2.98 8.098c-.783-.57-.381-1.81.588-1.81h4.915a1 1 0 00.95-.69l1.519-4.674z"></path></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Intelligent Content Curation 🌟</h3>
-                        <p class="text-gray-300 leading-relaxed">Banish information overload. Our AI learns your preferences, delivering personalized news, articles, and content directly relevant to your interests and goals.</p>
-                    </div>
+                <!-- Feature 2: Seamless Tracker Integration -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 hover:border-purple-600 group">
+                    <div class="text-5xl text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300">🔗</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Seamless Tracker Integration</h3>
+                    <p class="text-gray-300">Automatically syncs with popular fitness trackers (Garmin, Fitbit, Apple Health, Google Fit) for effortless progress tracking and data aggregation.</p>
+                </div>
 
-                    <!-- Feature 4 (Freemium Model Callout) -->
-                    <div class="feature-card bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700">
-                        <div class="text-purple-400 mb-4">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Freemium to Premium 💸</h3>
-                        <p class="text-gray-300 leading-relaxed">Start with powerful free features. Upgrade to premium tiers for unlimited usage, advanced AI models, and deeper integrations to maximize your efficiency.</p>
-                    </div>
+                <!-- Feature 3: Revolutionary Wellness Lock™ -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 hover:border-purple-600 group">
+                    <div class="text-5xl text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300">🔒</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Revolutionary Wellness Lock™</h3>
+                    <p class="text-gray-300">Boost collective productivity by enabling 'wellness locks' on company-issued apps, nudging employees to hit team step goals for work-related perks or temporary access.</p>
+                </div>
+
+                <!-- Feature 4: Advanced Analytics & Reporting -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 hover:border-purple-600 group">
+                    <div class="text-5xl text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300">📈</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Advanced Analytics & Reporting</h3>
+                    <p class="text-gray-300">Access comprehensive dashboards and reports to measure employee well-being, challenge participation, and quantify your wellness program's ROI.</p>
+                </div>
+
+                <!-- Feature 5: Customizable Programs & Rewards -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 hover:border-purple-600 group">
+                    <div class="text-5xl text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300">⚙️</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Customizable Programs & Rewards</h3>
+                    <p class="text-gray-300">Tailor challenges, set specific wellness goals, and design a flexible rewards system that truly resonates with your unique workforce.</p>
+                </div>
+
+                <!-- Feature 6: Enterprise-Grade Security & Privacy -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 hover:border-purple-600 group">
+                    <div class="text-5xl text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300">🛡️</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Enterprise-Grade Security & Privacy</h3>
+                    <p class="text-gray-300">Our platform is engineered with robust security protocols and adheres to stringent data privacy compliance, safeguarding sensitive employee and company information.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Waitlist Form Section -->
+    <section id="waitlist" class="py-16 sm:py-20 lg:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 text-center max-w-3xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-500">
+                Ready to Revolutionize Corporate Wellness?
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-10">
+                Join our exclusive waitlist today for early access and pilot opportunities. This limited-time offer closes soon!
+            </p>
+
+            <!-- Reinforce Limited Time Offer Countdown -->
+            <div class="bg-purple-900 bg-opacity-40 border border-purple-700 rounded-lg p-4 mb-8 inline-block backdrop-blur-sm">
+                <p class="text-purple-200 text-sm sm:text-base font-semibold uppercase tracking-wide mb-2">
+                    Exclusive Early Access Offer Ends In:
+                </p>
+                <div id="countdown-form" class="flex justify-center items-center space-x-3 text-white font-bold text-xl sm:text-3xl">
+                    <div><span id="form-days">00</span><span class="block text-xs sm:text-sm font-medium text-purple-300">Days</span></div>
+                    <span class="text-gray-400">:</span>
+                    <div><span id="form-hours">00</span><span class="block text-xs sm:text-sm font-medium text-purple-300">Hours</span></div>
+                    <span class="text-gray-400">:</span>
+                    <div><span id="form-minutes">00</span><span class="block text-xs sm:text-sm font-medium text-purple-300">Minutes</span></div>
+                    <span class="text-gray-400">:</span>
+                    <div><span id="form-seconds">00</span><span class="block text-xs sm:text-sm font-medium text-purple-300">Seconds</span></div>
                 </div>
             </div>
-        </section>
 
-        <!-- Waitlist Section -->
-        <section id="waitlist" class="py-16 md:py-24 bg-gray-950">
-            <div class="max-w-screen-md mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
-                    Join Our Exclusive Early Access Waitlist
-                </h2>
-                <p class="text-lg text-indigo-200 mb-10 opacity-90">
-                    Be among the first to experience the future of browser interaction. Limited spots are available for early bird benefits and direct influence on our roadmap!
-                </p>
-
-                <form class="max-w-xl mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl border border-purple-700">
-                    <div class="mb-6 text-left">
-                        <label for="name" class="block text-indigo-200 text-sm font-bold mb-2">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="Johnathan Doe" class="shadow-md appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 bg-gray-700 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent" required>
-                    </div>
-                    <div class="mb-8 text-left">
-                        <label for="email" class="block text-indigo-200 text-sm font-bold mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="shadow-md appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 bg-gray-700 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent" required>
-                    </div>
-                    <button type="submit" class="btn-primary w-full py-4 text-xl font-bold text-white rounded-full shadow-lg">
-                        Secure My Early Access Spot!
-                    </button>
-                    <p class="text-sm text-gray-400 mt-4 opacity-80">We value your privacy. Your email is safe with us. No spam, ever.</p>
-                </form>
-            </div>
-        </section>
-    </main>
+            <form class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700 max-w-md mx-auto">
+                <div class="mb-6">
+                    <label for="companyName" class="sr-only">Company Name</label>
+                    <input type="text" id="companyName" name="companyName" placeholder="Your Company Name" required
+                           class="w-full px-5 py-3 rounded-lg border focus:ring-1 transition duration-200">
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="sr-only">Work Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Work Email" required
+                           class="w-full px-5 py-3 rounded-lg border focus:ring-1 transition duration-200">
+                </div>
+                <button type="submit"
+                        class="w-full bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-bold py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out text-lg">
+                    Join the Exclusive Waitlist
+                </button>
+                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, ever.</p>
+            </form>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-8 text-center text-gray-400 text-sm">
-        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p>&copy; 2023 Smart Browser Companion. All rights reserved.</p>
+    <footer class="bg-gray-900 py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+            <p>&copy; 2023 WellnessFlow. All rights reserved.</p>
+            <div class="mt-2 space-x-4">
+                <a href="#" class="hover:text-purple-400 transition-colors duration-200">Privacy Policy</a>
+                <a href="#" class="hover:text-purple-400 transition-colors duration-200">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
-    <!-- Countdown Timer Script -->
+    <!-- Countdown Script -->
     <script>
-        // Set the date we're counting down to (e.g., 7 days from now)
-        // For a fixed deadline, set targetDate = new Date("Dec 25, 2023 10:00:00").getTime();
-        const targetDate = new Date();
-        targetDate.setDate(targetDate.getDate() + 7); // 7 days from when the page is loaded
+        function setupCountdown(targetDate, daysId, hoursId, minutesId, secondsId) {
+            const countDownDate = new Date(targetDate).getTime();
 
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = targetDate - now;
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate - now;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            const countdownElement = document.getElementById("countdown");
-            const ctaButton = document.querySelector('.btn-primary');
+                // Display the result in the elements
+                document.getElementById(daysId).innerHTML = String(days).padStart(2, '0');
+                document.getElementById(hoursId).innerHTML = String(hours).padStart(2, '0');
+                document.getElementById(minutesId).innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById(secondsId).innerHTML = String(seconds).padStart(2, '0');
 
-            if (distance < 0) {
-                countdownElement.innerHTML = `<span class="text-pink-500">OFFER EXPIRED!</span>`;
-                ctaButton.textContent = "Join Regular Waitlist";
-                ctaButton.classList.remove('btn-primary');
-                ctaButton.classList.add('bg-gray-600', 'hover:bg-gray-700', 'hover:shadow-none');
-                clearInterval(countdownInterval);
-                return;
-            }
-
-            document.getElementById("days").innerText = String(days).padStart(2, '0');
-            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+                // If the count down is finished, display "Expired"
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById(daysId).innerHTML = "00";
+                    document.getElementById(hoursId).innerHTML = "00";
+                    document.getElementById(minutesId).innerHTML = "00";
+                    document.getElementById(secondsId).innerHTML = "00";
+                    
+                    // Update the display to show "Offer Expired!"
+                    const countdownElement = document.getElementById(daysId).closest('div.flex');
+                    if (countdownElement) {
+                        countdownElement.innerHTML = '<span class="text-red-400 text-lg sm:text-xl lg:text-2xl font-semibold">Offer Expired!</span>';
+                    }
+                }
+            }, 1000);
         }
 
-        // Update the countdown every 1 second
-        const countdownInterval = setInterval(updateCountdown, 1000);
+        // Set the target date for the countdown (e.g., 7 days from now)
+        const sevenDaysFromNow = new Date();
+        sevenDaysFromNow.setDate(sevenDaysFromNow.getDate() + 7); // Add 7 days to the current date
+        const targetDateString = sevenDaysFromNow.toISOString(); 
 
-        // Initial call to display the countdown immediately
-        updateCountdown();
+        // Initialize both countdowns (hero and form sections)
+        setupCountdown(targetDateString, 'days', 'hours', 'minutes', 'seconds');
+        setupCountdown(targetDateString, 'form-days', 'form-hours', 'form-minutes', 'form-seconds');
     </script>
 </body>
 </html>
