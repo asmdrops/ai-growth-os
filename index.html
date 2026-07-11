@@ -3,208 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Oasis - Reclaim Your Focus & Boost Productivity</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>PokéRaid Pro - Event Optimizer & Raid Coordinator</title>
+    <meta name="description" content="A premium SaaS platform for Pokémon Go players to optimize events, coordinate raids, and connect with communities. Maximize rewards and efficiency.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366F1'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-7h2V7h-2v6zm0 4h2v-2h-2v2z'/%3E%3C/svg%3E" type="image/svg+xml">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for modern premium dark mode aesthetics */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
         }
-        .hero-bg {
-            background-image: url('https://source.unsplash.com/1600x900/?Develop,tech');
+        .animate-pulse-subtle {
+            animation: pulse 2s infinite ease-in-out;
+        }
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             position: relative;
         }
-        .hero-bg::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to top, rgba(17, 24, 39, 0.95) 0%, rgba(17, 24, 39, 0.6) 50%, rgba(17, 24, 39, 0.95) 100%);
-            /* Deeper, more enveloping gradient for maximum text readability and dark mode blend */
-        }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased overflow-x-hidden">
+<body class="bg-gray-900 text-white font-sans antialiased">
 
     <!-- Hero Section -->
-    <section class="hero-bg min-h-screen flex items-center justify-center relative py-16 px-4">
-        <div class="relative z-10 text-center max-w-5xl mx-auto space-y-8">
-            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight text-white drop-shadow-2xl">
-                Reclaim Your Focus. Unleash Your Productivity.
+    <header class="hero-background min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/75"></div> <!-- Dark overlay -->
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 py-16 md:py-24 lg:py-32">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-600 drop-shadow-lg animate-pulse-subtle">
+                Master Every Pokémon Go Event.
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto drop-shadow-lg">
-                Digital Oasis: Your personalized platform for digital wellbeing, smarter habits, and unparalleled concentration in a world of endless distractions.
+            <p class="mt-6 text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
+                A decade in, the game's potential is finally realized. Don't just play – dominate with real-time coordination, smart strategies, and a thriving community. As The Verge says, <span class="font-semibold italic">"Pokémon Go finally made good on its original promise"</span> – now it's your turn to make good on your potential.
             </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
-                <a href="#waitlist" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-8 rounded-full shadow-xl transform transition-all duration-300 ease-in-out hover:scale-105 text-lg">
-                    Join the Waitlist Now!
+            <div class="mt-12">
+                <a href="#waitlist" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-700 hover:from-indigo-700 hover:to-purple-800 text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl shadow-xl transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
+                    Join the Elite Waitlist
                 </a>
-                <a href="#features" class="bg-gray-700 hover:bg-gray-600 text-gray-200 font-bold py-3 px-8 rounded-full shadow-xl transform transition-all duration-300 ease-in-out hover:scale-105 text-lg">
-                    Discover Features
-                </a>
-            </div>
-
-            <!-- Limited Time Offer Countdown -->
-            <div class="mt-10 p-4 md:p-5 bg-gradient-to-r from-yellow-500 to-orange-500 bg-opacity-90 rounded-xl shadow-2xl inline-block border border-yellow-400">
-                <p class="text-lg md:text-xl font-semibold text-white">
-                    🔥 Limited Early Bird Access Ends In: <span id="countdown" class="font-extrabold block text-2xl md:text-3xl mt-2">Loading...</span> 🔥
+                <p class="mt-8 text-2xl md:text-3xl lg:text-4xl font-mono text-yellow-400 font-bold">
+                    Exclusive Access Ends In:
                 </p>
-                <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                        const countdownElement = document.getElementById('countdown');
-                        // Set the future date for the countdown (e.g., 7 days from now)
-                        const futureDate = new Date();
-                        futureDate.setDate(futureDate.getDate() + 7); 
-                        futureDate.setHours(futureDate.getHours() + 12); // Add some hours
-                        futureDate.setMinutes(futureDate.getMinutes() + 30); // Add some minutes
-
-                        function updateCountdown() {
-                            const now = new Date().getTime();
-                            const distance = futureDate - now;
-
-                            if (distance < 0) {
-                                countdownElement.innerHTML = "Offer Expired!";
-                                return;
-                            }
-
-                            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                            countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-                        }
-
-                        setInterval(updateCountdown, 1000);
-                        updateCountdown(); // Initial call to display immediately
-                    });
-                </script>
+                <div id="countdown" class="mt-4 flex justify-center space-x-4 md:space-x-6 text-3xl md:text-5xl lg:text-6xl font-extrabold text-white bg-gray-800 bg-opacity-70 rounded-lg py-4 px-6 inline-flex shadow-inner">
+                    <div class="text-center">
+                        <span id="days" class="block">00</span>
+                        <span class="text-base md:text-lg lg:text-xl font-medium text-gray-400">Days</span>
+                    </div>
+                    <span class="block text-gray-500">:</span>
+                    <div class="text-center">
+                        <span id="hours" class="block">00</span>
+                        <span class="text-base md:text-lg lg:text-xl font-medium text-gray-400">Hours</span>
+                    </div>
+                    <span class="block text-gray-500">:</span>
+                    <div class="text-center">
+                        <span id="minutes" class="block">00</span>
+                        <span class="text-base md:text-lg lg:text-xl font-medium text-gray-400">Minutes</span>
+                    </div>
+                    <span class="block text-gray-500">:</span>
+                    <div class="text-center">
+                        <span id="seconds" class="block">00</span>
+                        <span class="text-base md:text-lg lg:text-xl font-medium text-gray-400">Seconds</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 px-4 bg-gray-950 text-center">
-        <div class="container mx-auto max-w-7xl">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-white">
-                How Digital Oasis Transforms Your World
+    <section id="features" class="py-16 md:py-24 lg:py-32 bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 mb-12 md:mb-16">
+                Unleash Your Full Potential
             </h2>
-            <p class="text-lg md:text-xl text-gray-400 mb-16 max-w-3xl mx-auto">
-                We empower you with cutting-edge tools to regain control of your digital life, fostering deep focus and sustainable productivity.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-                <!-- Feature 1: Personalized Digital Detox Plans -->
-                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group flex flex-col items-center text-center">
-                    <div class="text-5xl text-teal-400 mb-6 group-hover:scale-110 transition-transform duration-300">💡</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Personalized Detox Plans</h3>
-                    <p class="text-gray-300 leading-relaxed flex-grow">
-                        Custom-tailored programs adapt to your unique habits, guiding you towards reduced screen time, improved sleep, and enhanced real-world engagement.
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700 hover:border-indigo-600">
+                    <div class="text-5xl text-indigo-400 mb-6 text-center">🔎</div>
+                    <h3 class="text-2xl font-bold text-white mb-3 text-center">Advanced Raid Filtering</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed text-center">
+                        Never miss a legendary. Filter raids by boss, time, distance, and type to pinpoint your next challenge instantly.
                     </p>
                 </div>
-
-                <!-- Feature 2: 'Dumb Phone' Mode Simulator -->
-                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group flex flex-col items-center text-center">
-                    <div class="text-5xl text-purple-400 mb-6 group-hover:scale-110 transition-transform duration-300">📵</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Dumb Phone Mode</h3>
-                    <p class="text-gray-300 leading-relaxed flex-grow">
-                        Inspired by the #DumbCoChallenge, transform your smartphone into a distraction-free device. Essential calls & apps only, for peak focus.
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700 hover:border-indigo-600">
+                    <div class="text-5xl text-teal-400 mb-6 text-center">🤝</div>
+                    <h3 class="text-2xl font-bold text-white mb-3 text-center">Seamless Group Coordination</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed text-center">
+                        Form powerful raid parties in seconds. Integrated chat, strategic planning tools, and real-time member tracking ensure victory.
                     </p>
                 </div>
-
-                <!-- Feature 3: Smart Notification Management -->
-                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group flex flex-col items-center text-center">
-                    <div class="text-5xl text-blue-400 mb-6 group-hover:scale-110 transition-transform duration-300">🔔</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Smart Notification Control</h3>
-                    <p class="text-gray-300 leading-relaxed flex-grow">
-                        AI-powered intelligence filters and batches your alerts, ensuring only truly important notifications reach you during focus periods.
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700 hover:border-indigo-600">
+                    <div class="text-5xl text-rose-400 mb-6 text-center">🧠</div>
+                    <h3 class="text-2xl font-bold text-white mb-3 text-center">Intelligent IV/CP Calculators</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed text-center">
+                        Maximize your Pokémon's potential. Get precise IV and CP estimates for event-specific Pokémon, ensuring optimal battle strategies.
                     </p>
                 </div>
-
-                <!-- Feature 4: AI-Driven Usage Insights -->
-                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group flex flex-col items-center text-center">
-                    <div class="text-5xl text-orange-400 mb-6 group-hover:scale-110 transition-transform duration-300">🧠</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">AI-Driven Insights</h3>
-                    <p class="text-gray-300 leading-relaxed flex-grow">
-                        Gain profound understanding of your digital habits with intuitive analytics. Identify patterns, reduce time sinks, and foster healthier engagement.
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700 hover:border-indigo-600">
+                    <div class="text-5xl text-yellow-400 mb-6 text-center">✅</div>
+                    <h3 class="text-2xl font-bold text-white mb-3 text-center">Personalized Event Checklists</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed text-center">
+                        Stay on track, earn every reward. Custom checklists guide you through event goals, research tasks, and shiny hunts efficiently.
                     </p>
                 </div>
-
-                <!-- Feature 5: Productivity Integrations -->
-                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group flex flex-col items-center text-center">
-                    <div class="text-5xl text-green-400 mb-6 group-hover:scale-110 transition-transform duration-300">🔗</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Productivity Integrations</h3>
-                    <p class="text-gray-300 leading-relaxed flex-grow">
-                        Seamlessly connect Digital Oasis with your favorite productivity tools, calendars, and task managers to enhance your existing workflow.
-                    </p>
-                </div>
-
-                <!-- Feature 6: Tiered Access & Guided Programs -->
-                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group flex flex-col items-center text-center">
-                    <div class="text-5xl text-red-400 mb-6 group-hover:scale-110 transition-transform duration-300">🌟</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Guided Focus Programs</h3>
-                    <p class="text-gray-300 leading-relaxed flex-grow">
-                        Progress with tiered access to advanced features, expert-led courses, and structured programs designed for sustained digital wellbeing.
-                    </p>
-                </div>
-
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-20 px-4 bg-gray-900">
-        <div class="container mx-auto max-w-3xl text-center">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-white">
-                Join the Movement: Secure Early Access!
+    <section id="waitlist" class="py-16 md:py-24 lg:py-32 bg-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 mb-10">
+                Ready to Dominate Every Event?
             </h2>
-            <p class="text-lg md:text-xl text-gray-400 mb-12">
-                Be among the first to experience Digital Oasis. Join our exclusive waitlist for early bird pricing, beta access, and powerful insights delivered directly to your inbox.
+            <p class="text-xl md:text-2xl text-gray-300 text-center max-w-3xl mx-auto mb-12">
+                Join our exclusive waitlist for early access to PokéRaid Pro. Limited spots are available to ensure a premium experience for our first users.
             </p>
-
-            <form class="bg-gray-800 p-8 md:p-12 rounded-2xl shadow-2xl space-y-6 max-w-lg mx-auto border border-gray-700">
-                <div>
-                    <label for="name" class="sr-only">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required
-                           class="w-full p-4 rounded-lg bg-gray-700 text-gray-100 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-200 text-lg"
-                           aria-label="Your Name">
-                </div>
-                <div>
-                    <label for="email" class="sr-only">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
-                           class="w-full p-4 rounded-lg bg-gray-700 text-gray-100 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-200 text-lg"
-                           aria-label="Your Email Address">
-                </div>
-                <button type="submit"
-                        class="w-full bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 text-xl">
-                    Get Early Access & Focus!
-                </button>
-                <p class="text-sm text-gray-500 mt-4">
-                    We respect your privacy. Your email will only be used for Digital Oasis updates.
-                </p>
-            </form>
+            <div class="max-w-lg mx-auto bg-gray-900 p-8 md:p-12 rounded-xl shadow-2xl border border-gray-700">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-lg font-medium text-gray-200 mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Ash Ketchum"
+                               class="w-full bg-gray-700 border border-gray-600 rounded-lg py-3 px-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-lg font-medium text-gray-200 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="ash@pokemail.com" required
+                               class="w-full bg-gray-700 border border-gray-600 rounded-lg py-3 px-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200">
+                    </div>
+                    <div>
+                        <button type="submit"
+                                class="w-full bg-gradient-to-r from-indigo-600 to-purple-700 hover:from-indigo-700 hover:to-purple-800 text-white font-bold py-3 px-6 rounded-lg text-xl shadow-md transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
+                            Secure My Spot
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-400 text-center">
+                        We respect your privacy. No spam, ever.
+                    </p>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black py-10 px-4 text-center text-gray-500 text-sm border-t border-gray-800">
-        <div class="container mx-auto max-w-7xl">
-            <p>&copy; 2023 Digital Oasis. All rights reserved.</p>
-            <div class="mt-4 flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4">
-                <a href="#" class="hover:text-gray-300 transition-colors duration-200">Privacy Policy</a>
-                <span class="hidden sm:inline text-gray-600">|</span>
-                <a href="#" class="hover:text-gray-300 transition-colors duration-200">Terms of Service</a>
-            </div>
+    <footer class="bg-gray-900 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-500 text-lg">&copy; 2024 PokéRaid Pro. All rights reserved. Not affiliated with Niantic or Nintendo.</p>
         </div>
     </footer>
+
+    <!-- Countdown Script -->
+    <script>
+        function setupCountdown(targetDateStr) {
+            const targetDate = new Date(targetDateStr).getTime();
+            const countdownInterval = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    document.getElementById("countdown").innerHTML = "<span class='text-red-500'>EXPIRED!</span>";
+                }
+            }, 1000);
+        }
+
+        // Set the target date for the countdown (e.g., 7 days from now)
+        const futureDate = new Date();
+        futureDate.setDate(futureDate.getDate() + 7); // 7 days from today
+        setupCountdown(futureDate.toISOString());
+    </script>
 
 </body>
 </html>
