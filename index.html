@@ -1,159 +1,146 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USB-C Masterclass & Toolkit: Unlock True Power & Compatibility</title>
-    <!-- Tailwind CSS CDN -->
+    <title>GuardianShield AI | Proactive Sextortion Detection & Support</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Google Fonts: Inter for a modern, premium feel -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
+        /* Custom styles for hero background image and overlay */
         .hero-background {
-            /* Using the provided Hero Image URL */
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for readability */
+        }
     </style>
 </head>
-<body class="bg-gray-900 text-white antialiased">
+<body class="bg-gray-900 text-gray-50 font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <!-- Background Image with subtle blur and scale for premium feel -->
-        <div class="hero-background absolute inset-0 transform scale-105 filter blur-sm"></div>
-        <!-- Dark overlay for text readability -->
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-
-        <div class="relative z-10 px-4 py-8 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight">
-                Tired of USB-C Mystery? <br class="hidden md:inline">
-                Unlock True Power & Compatibility.
+    <header class="relative hero-background min-h-screen flex items-center justify-center p-4">
+        <div class="absolute inset-0 overlay"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 md:px-8">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-up">
+                The Silent Threat Is Rising.<br><span class="text-indigo-400">GuardianShield AI</span> Is Here.
             </h1>
-            <p class="text-xl sm:text-2xl md:text-3xl font-medium mb-10 text-gray-300">
-                Go beyond identification apps. Master your entire USB-C ecosystem with our premium Masterclass & Toolkit.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto animate-fade-in">
+                Young men are increasingly targeted by sextortion. Our AI-powered platform provides proactive detection, secure communication, and a robust toolkit for evidence collection and support.
             </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-10">
+                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg">
+                    Join Early Access Waitlist
+                </a>
+                <a href="#features" class="bg-transparent border-2 border-indigo-500 text-indigo-300 hover:bg-indigo-500 hover:text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg">
+                    Learn More
+                </a>
+            </div>
 
-            <!-- Limited Time Offer & Countdown -->
-            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 rounded-lg shadow-xl mb-12 transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                <p class="text-2xl sm:text-3xl font-bold mb-4 uppercase tracking-wider">
-                    Exclusive Early Bird Access Ends In:
-                </p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 text-4xl sm:text-5xl md:text-6xl font-extrabold">
+            <!-- Limited Time Countdown -->
+            <div class="bg-gray-800 bg-opacity-70 rounded-lg p-6 max-w-md mx-auto shadow-xl border-t-4 border-indigo-500">
+                <p class="text-xl font-semibold text-indigo-300 mb-4">Special Waitlist Perks End In:</p>
+                <div id="countdown" class="flex justify-center items-center gap-4 text-3xl md:text-4xl font-mono text-white">
                     <div class="flex flex-col items-center">
-                        <span class="countdown-value block bg-white text-gray-900 rounded-lg py-2 px-3 sm:px-4 min-w-[60px] sm:min-w-[80px] md:min-w-[100px]">07</span>
-                        <span class="text-sm sm:text-base mt-1 text-gray-200">Days</span>
+                        <span id="days" class="block bg-gray-900 px-3 py-2 rounded-md">00</span>
+                        <span class="text-sm mt-1 text-gray-400">Days</span>
                     </div>
-                    <span class="text-white text-opacity-80 text-3xl sm:text-4xl">:</span>
+                    <span class="text-indigo-400">:</span>
                     <div class="flex flex-col items-center">
-                        <span class="countdown-value block bg-white text-gray-900 rounded-lg py-2 px-3 sm:px-4 min-w-[60px] sm:min-w-[80px] md:min-w-[100px]">23</span>
-                        <span class="text-sm sm:text-base mt-1 text-gray-200">Hours</span>
+                        <span id="hours" class="block bg-gray-900 px-3 py-2 rounded-md">00</span>
+                        <span class="text-sm mt-1 text-gray-400">Hours</span>
                     </div>
-                    <span class="text-white text-opacity-80 text-3xl sm:text-4xl">:</span>
+                    <span class="text-indigo-400">:</span>
                     <div class="flex flex-col items-center">
-                        <span class="countdown-value block bg-white text-gray-900 rounded-lg py-2 px-3 sm:px-4 min-w-[60px] sm:min-w-[80px] md:min-w-[100px]">59</span>
-                        <span class="text-sm sm:text-base mt-1 text-gray-200">Minutes</span>
+                        <span id="minutes" class="block bg-gray-900 px-3 py-2 rounded-md">00</span>
+                        <span class="text-sm mt-1 text-gray-400">Minutes</span>
                     </div>
-                    <span class="text-white text-opacity-80 text-3xl sm:text-4xl">:</span>
+                    <span class="text-indigo-400">:</span>
                     <div class="flex flex-col items-center">
-                        <span class="countdown-value block bg-white text-gray-900 rounded-lg py-2 px-3 sm:px-4 min-w-[60px] sm:min-w-[80px] md:min-w-[100px]">59</span>
-                        <span class="text-sm sm:text-base mt-1 text-gray-200">Seconds</span>
+                        <span id="seconds" class="block bg-gray-900 px-3 py-2 rounded-md">00</span>
+                        <span class="text-sm mt-1 text-gray-400">Seconds</span>
                     </div>
                 </div>
-                <p class="text-lg sm:text-xl font-medium mt-6 text-gray-200">
-                    Join the waitlist now and save 20% on launch day! Limited spots available.
-                </p>
             </div>
-            <!-- End Limited Time Offer & Countdown -->
-
-            <a href="#waitlist" class="inline-block bg-white text-gray-900 hover:bg-gray-200 px-10 py-4 rounded-full text-xl font-bold shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
-                Join the Exclusive Waitlist Now!
-            </a>
         </div>
     </header>
 
-    <!-- Problem/Context Section - Leveraging Market Trend -->
-    <section class="py-20 bg-gray-950 px-4">
-        <div class="container mx-auto max-w-3xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-6">
-                The USB-C Ecosystem is a Maze. We'll Give You the Map.
+    <!-- Trend/Problem Section (Integrated with product value) -->
+    <section class="py-20 bg-gray-800 text-center px-4 md:px-8">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                A Growing Crisis: <span class="text-indigo-400">Sextortion Is On The Rise</span>
             </h2>
-            <p class="text-lg sm:text-xl text-gray-400 leading-relaxed mb-8">
-                The buzz around new apps that reveal your mystery USB-C cables highlights a major problem: the USB-C landscape is riddled with confusion. But merely *identifying* your cables is just the first step.
+            <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                As reported by The Guardian, "Young men report more ‘sextortion’ than any other age group." This alarming trend highlights a critical gap in digital safety. GuardianShield AI bridges this gap, offering peace of mind to parents and empowering young men with crucial protection.
             </p>
-            <p class="text-lg sm:text-xl text-gray-400 leading-relaxed">
-                Our <span class="text-purple-400 font-semibold">USB-C Masterclass & Toolkit</span> goes beyond simple identification. We equip you with the deep knowledge and actionable tools to confidently buy, manage, and troubleshoot your USB-C devices, saving you time, money, and endless headaches.
+            <p class="text-xl font-semibold text-indigo-300">
+                Don't wait for a threat. Be proactive.
             </p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 bg-gray-900 px-4">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl sm:text-5xl font-extrabold text-center mb-16">
-                What You'll Master with Our Premium Toolkit:
+    <section id="features" class="py-20 bg-gray-900 px-4 md:px-8">
+        <div class="container mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold text-center text-white mb-16">
+                How GuardianShield AI Protects What Matters Most
             </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Feature 1: Comprehensive Guide -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-5xl mb-6 text-purple-400">💡</div>
-                    <h3 class="text-2xl font-bold mb-4">Comprehensive Standards Guide</h3>
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-indigo-600 hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-5xl mb-6">⚙️</div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">AI-Powered Threat Detection</h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Unravel the complexities of USB versions, Thunderbolt, Power Delivery (PD), and Alt Modes. Understand *exactly* what each standard means for your devices and workflow. No more guessing games.
+                        Our advanced AI constantly monitors consented digital communications for suspicious patterns and indicators of potential sextortion attempts, providing early warnings.
                     </p>
                 </div>
 
-                <!-- Feature 2: Curated Buying Guide -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-5xl mb-6 text-indigo-400">🛒</div>
-                    <h3 class="text-2xl font-bold mb-4">Curated Buying Guide for Every Use Case</h3>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-indigo-600 hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-5xl mb-6">🔒</div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Secure Messaging & Vault</h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Stop wasting money on incompatible cables and hubs. Our expert-curated guide shows you precisely what to buy for fast charging, 4K video, external GPUs, and specialized professional setups.
+                        Communicate safely with end-to-end encrypted messaging. Our secure digital vault provides a safe space for storing sensitive information, protected from prying eyes.
                     </p>
                 </div>
 
-                <!-- Feature 3: Cable Inventory System -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-5xl mb-6 text-pink-400">🏷️</div>
-                    <h3 class="text-2xl font-bold mb-4">Printable & Digital Cable Inventory System</h3>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-indigo-600 hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-5xl mb-6">📸</div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Evidence Collection Toolkit</h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Tame your cable chaos! Organize and label every USB-C cable you own with our easy-to-use templates. Know what's what at a glance and find the right cable, every time.
+                        Should an incident occur, our integrated toolkit streamlines the process of securely collecting and preserving crucial digital evidence for reporting authorities.
                     </p>
                 </div>
 
-                <!-- Feature 4: Advanced Troubleshooting -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-5xl mb-6 text-teal-400">🛠️</div>
-                    <h3 class="text-2xl font-bold mb-4">Advanced Troubleshooting & Solutions</h3>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-indigo-600 hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-5xl mb-6">🚨</div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Direct Reporting & Support</h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Diagnose and fix common USB-C issues quickly. From display problems to charging failures, get actionable steps and pro tips to resolve connectivity woes and get back to work seamlessly.
+                        Seamlessly report incidents to relevant online safety bodies and connect with vetted legal and counseling support services directly through the platform.
                     </p>
                 </div>
 
-                <!-- Feature 5: Save Time, Money & Frustration -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-5xl mb-6 text-yellow-400">💰</div>
-                    <h3 class="text-2xl font-bold mb-4">Save Time, Money & Frustration</h3>
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-indigo-600 hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-5xl mb-6">👨‍👩‍👦</div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Parental Oversight & Youth Empowerment</h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Avoid costly mistakes of buying wrong cables. Reduce setup time with optimal connections. Eliminate frustrating compatibility issues. Invest once, master forever, and elevate your productivity.
+                        Designed with appropriate controls for parents while empowering young men with knowledge and tools to navigate their digital world safely and responsibly.
                     </p>
                 </div>
 
-                <!-- Feature 6: Future-Proof Your Setup -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-5xl mb-6 text-green-400">🚀</div>
-                    <h3 class="text-2xl font-bold mb-4">Future-Proof Your Tech Setup</h3>
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-indigo-600 hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-5xl mb-6">🌐</div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Comprehensive Digital Safety</h3>
                     <p class="text-gray-300 leading-relaxed">
-                        USB-C is here to stay and evolve. With a deep understanding of its foundations, you'll be prepared for new devices and standards, ensuring your tech ecosystem remains efficient and effective for years to come.
+                        More than just detection, GuardianShield AI provides a holistic approach to online safety, offering resources and guidance for a secure digital life.
                     </p>
                 </div>
 
@@ -162,63 +149,76 @@
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-20 bg-gray-950 px-4">
+    <section id="waitlist" class="py-20 bg-gray-800 px-4 md:px-8">
         <div class="container mx-auto max-w-2xl text-center">
-            <h2 class="text-4xl sm:text-5xl font-extrabold mb-8">
-                Don't Miss Out: Be Among the First to Master USB-C!
+            <h2 class="text-4xl sm:text-5xl font-bold text-white mb-6">
+                Be Among the First to Gain <span class="text-indigo-400">GuardianShield AI</span>
             </h2>
-            <p class="text-xl sm:text-2xl text-gray-300 mb-10">
-                Secure your spot on the exclusive waitlist for the <span class="font-semibold text-purple-400">USB-C Masterclass & Toolkit</span> and gain early access perks, including a launch discount! Limited spots for early birds.
+            <p class="text-lg text-gray-300 mb-10 leading-relaxed">
+                Join our exclusive waitlist for early access, special introductory pricing, and critical updates on digital safety. Secure your peace of mind today.
             </p>
-
-            <form class="bg-gray-800 p-8 sm:p-10 rounded-xl shadow-2xl border border-gray-700">
+            <form class="bg-gray-900 p-8 rounded-lg shadow-xl border-t-4 border-indigo-500">
                 <div class="mb-6 text-left">
-                    <label for="name" class="block text-lg font-medium text-gray-200 mb-2">Full Name</label>
+                    <label for="name" class="block text-gray-200 text-sm font-bold mb-2">Full Name</label>
                     <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-purple-500 focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-400 transition duration-200 ease-in-out text-lg" required>
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-700 placeholder-gray-400"
+                           required>
                 </div>
                 <div class="mb-8 text-left">
-                    <label for="email" class="block text-lg font-medium text-gray-200 mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com"
-                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-purple-500 focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-400 transition duration-200 ease-in-out text-lg" required>
+                    <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-700 placeholder-gray-400"
+                           required>
                 </div>
                 <button type="submit"
-                        class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    Join the Waitlist & Get Early Access!
+                        class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg w-full sm:w-auto">
+                    Secure My Spot
                 </button>
             </form>
-
-            <p class="text-sm text-gray-500 mt-8">
-                We respect your privacy. Your information will not be shared.
-            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-10 px-4 text-center text-gray-500 text-sm">
-        <div class="container mx-auto max-w-6xl">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+    <footer class="bg-gray-900 text-gray-400 py-10 px-4 md:px-8">
+        <div class="container mx-auto text-center text-sm">
+            <p>&copy; 2023 GuardianShield AI. All rights reserved.</p>
             <p class="mt-2">
-                <a href="#" class="hover:text-white transition duration-200 mx-2">Privacy Policy</a> |
-                <a href="#" class="hover:text-white transition duration-200 mx-2">Terms of Service</a>
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 mr-4">Privacy Policy</a>
+                <a href="#" class="text-indigo-400 hover:text-indigo-300">Terms of Service</a>
             </p>
         </div>
     </footer>
 
-    <!-- Placeholder for JavaScript for countdown functionality (client-side implementation would be needed) -->
+    <!-- JavaScript for Countdown Timer -->
     <script>
-        // Note: For a fully functional countdown, this JavaScript would dynamically
-        // calculate and update the 'countdown-value' spans based on a target date.
-        // For the raw HTML deliverable, the values are static placeholders.
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log("Countdown functionality would be implemented here with client-side JavaScript.");
-            // Example:
-            // const targetDate = new Date('2023-12-31T23:59:59').getTime();
-            // const updateCountdown = () => { /* ... logic to update spans ... */ };
-            // setInterval(updateCountdown, 1000);
-            // updateCountdown();
-        });
-    </script>
+        const countdown = () => {
+            const countDate = new Date("December 31, 2023 23:59:59").getTime(); // Set your target date here
+            const now = new Date().getTime();
+            const remainingTime = countDate - now;
 
+            const second = 1000;
+            const minute = second * 60;
+            const hour = minute * 60;
+            const day = hour * 24;
+
+            const textDay = Math.floor(remainingTime / day);
+            const textHour = Math.floor((remainingTime % day) / hour);
+            const textMinute = Math.floor((remainingTime % hour) / minute);
+            const textSecond = Math.floor((remainingTime % minute) / second);
+
+            document.getElementById('days').innerText = textDay > 0 ? (textDay < 10 ? '0' : '') + textDay : '00';
+            document.getElementById('hours').innerText = textHour > 0 ? (textHour < 10 ? '0' : '') + textHour : '00';
+            document.getElementById('minutes').innerText = textMinute > 0 ? (textMinute < 10 ? '0' : '') + textMinute : '00';
+            document.getElementById('seconds').innerText = textSecond > 0 ? (textSecond < 10 ? '0' : '') + textSecond : '00';
+
+            if (remainingTime < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('countdown').innerHTML = `<p class="text-indigo-400 text-xl">Offer Expired!</p>`;
+            }
+        };
+
+        const countdownInterval = setInterval(countdown, 1000);
+        countdown(); // Call once immediately to avoid initial flicker
+    </script>
 </body>
 </html>
