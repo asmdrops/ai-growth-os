@@ -3,215 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The AI Underdog's Playbook - Premium Newsletter</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Windows 11 Power User: Optimize Performance Beyond Copilot's Default Settings</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Google Fonts for a modern premium look -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Custom fonts */
-        body {
-            font-family: 'Poppins', sans-serif;
+        /* Custom scrollbar for a premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
         }
-        .font-orbitron {
-            font-family: 'Orbitron', sans-serif;
+        ::-webkit-scrollbar-track {
+            background: #1f2937; /* Darker gray for track */
         }
-        /* Hero Background Image */
-        .hero-bg {
-            background-image: url('https://source.unsplash.com/1600x900/?The,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        ::-webkit-scrollbar-thumb {
+            background: #34d399; /* Tailwind teal-400 for thumb */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #25a176; /* Darker teal on hover */
+        }
+        /* For the countdown timer styling (static for raw HTML) */
+        .countdown-segment {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(31, 41, 55, 0.7); /* bg-gray-800 with transparency */
+            border-radius: 0.5rem; /* rounded-lg */
+            padding: 0.75rem 1rem; /* p-3 p-4 */
+            min-width: 60px; /* Adjust as needed for responsiveness */
+            margin: 0 0.25rem; /* mx-1 */
+            color: #d1d5db; /* text-gray-200 */
+        }
+        .countdown-value {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+            color: #34d399; /* text-teal-400 */
+            line-height: 1; /* For better vertical alignment */
+        }
+        .countdown-label {
+            font-size: 0.75rem; /* text-xs */
+            text-transform: uppercase;
+            letter-spacing: 0.05em; /* tracking-wider */
+            color: #9ca3af; /* text-gray-400 */
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .countdown-segment {
+                margin: 0 0.5rem; /* mx-2 */
+                min-width: 80px;
+                padding: 1rem 1.25rem; /* p-4 p-5 */
+            }
+            .countdown-value {
+                font-size: 3rem; /* text-5xl */
+            }
+            .countdown-label {
+                font-size: 0.875rem; /* text-sm */
+            }
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-bg relative h-screen flex items-center justify-center p-4">
-        <!-- Dark Overlay for text readability -->
-        <div class="absolute inset-0 bg-black opacity-70"></div> 
-        <div class="relative z-10 text-center max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-white font-orbitron drop-shadow-lg">
-                The AI Underdog's Playbook
+    <header class="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+            <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
+        </div>
+
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 py-8 md:py-16">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6">
+                Unlock Peak Performance: <br class="sm:hidden">
+                <span class="text-teal-400">Master Windows 11 Beyond Copilot's Limits</span>
             </h1>
-            <p class="text-xl sm:text-2xl md:text-3xl font-light mb-8 text-gray-200">
-                Navigate the Modern Internet. Claim Your Edge.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                Discover the advanced tweaks and hidden optimizations Windows 11 — and Copilot itself — won't tell you, to supercharge your PC's speed and efficiency.
             </p>
-            <p class="text-md sm:text-lg md:text-xl font-light mb-10 text-gray-300 max-w-2xl mx-auto">
-                Unlock weekly actionable insights, strategies, and case studies derived from the forefront of AI giants – expertly tailored for small businesses and content creators to gain a *distinct competitive advantage* in an AI-dominated landscape.
-            </p>
-            <p class="text-sm italic text-gray-400 mt-4 mb-8">
-                "AI giants learn what everyone else on the modern internet already knows" <br class="sm:hidden"/>— Business Insider
-            </p>
-            <a href="#waitlist-form" class="inline-block bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105 text-lg sm:text-xl">
-                Secure Your Competitive Edge Now!
+
+            <!-- Limited Time Offer & Countdown -->
+            <div class="mb-12">
+                <p class="text-sm uppercase tracking-widest text-teal-400 font-semibold mb-3">Limited Launch Offer Ends In:</p>
+                <div id="countdown" class="flex justify-center items-center">
+                    <!-- Countdown segments - these values are static and would be dynamically updated by JavaScript -->
+                    <div class="countdown-segment">
+                        <span class="countdown-value">07</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-segment">
+                        <span class="countdown-value">14</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-segment">
+                        <span class="countdown-value">38</span>
+                        <span class="countdown-label">Mins</span>
+                    </div>
+                    <div class="countdown-segment">
+                        <span class="countdown-value">52</span>
+                        <span class="countdown-label">Secs</span>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-400 mt-2">Sign up now to secure your exclusive launch pricing!</p>
+            </div>
+            
+            <a href="#waitlist-form" class="inline-block bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                Secure Your Spot on the Waitlist Now
             </a>
+            <p class="text-gray-400 text-sm mt-4 italic">Gain early access and special launch discounts.</p>
         </div>
     </header>
 
-    <!-- Features Section -->
-    <section class="py-16 sm:py-20 md:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 text-white">
-                What You'll Uncover Every Week
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-                <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-600 transition-colors duration-300">
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-purple-400">⚡ Actionable AI Insights</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Beyond the hype: practical, ready-to-implement strategies you can deploy immediately to enhance your business operations and content creation.
-                    </p>
+    <main class="container mx-auto px-4 py-16 max-w-7xl">
+
+        <!-- Problem/Context Section -->
+        <section class="text-center mb-20">
+            <h2 class="text-3xl sm:text-4xl font-bold text-teal-400 mb-6">The Truth About Windows 11 & Copilot</h2>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-8">
+                You've seen the headlines: "Windows 11 Copilot now tells you what’s slowing down your PC, while using 1GB RAM itself." The irony isn't lost on us.
+                While Copilot aims to help, it often becomes part of the problem, consuming valuable resources and missing deeper system inefficiencies.
+            </p>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                Are you tired of sluggish startups, unexplained slowdowns, and a PC that feels less responsive every day? It's time to take back control.
+            </p>
+        </section>
+
+        <!-- Features Section -->
+        <section class="mb-20">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-12">What You'll Master in This Guide</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: Advanced System Optimization -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-teal-400 text-4xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Advanced System Optimization</h3>
+                    <p class="text-gray-300">Dive deep into Windows 11's core to tweak settings, services, and background processes for unparalleled speed and responsiveness that default settings simply don't offer.</p>
                 </div>
-                <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-600 transition-colors duration-300">
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-indigo-400">🧠 AI Giant Strategies Decoded</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        We dissect complex tactics and breakthroughs from leading AI companies, translating them into digestible, small-business-friendly steps.
-                    </p>
+                <!-- Feature 2: Tame Copilot's RAM Usage -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-teal-400 text-4xl mb-4">🧠</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Tame Copilot's RAM Usage</h3>
+                    <p class="text-gray-300">Learn specific strategies to minimize Copilot's resource footprint, ensuring it doesn't become a bottleneck on your system. Get the benefits without the bloat.</p>
                 </div>
-                <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-600 transition-colors duration-300">
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-green-400">📊 Real-World Case Studies</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Learn from tangible examples of how small businesses and creators have successfully leveraged AI to overcome challenges and achieve growth.
-                    </p>
+                <!-- Feature 3: Identify Hidden Bottlenecks -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-teal-400 text-4xl mb-4">🔍</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Identify Hidden Bottlenecks</h3>
+                    <p class="text-gray-300">Go beyond basic task manager data. We'll show you how to identify obscure system bottlenecks and resource hogs that Copilot or built-in tools often miss.</p>
                 </div>
-                <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-600 transition-colors duration-300">
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-yellow-400">🎯 Tailored for The Underdog</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Specifically crafted for small businesses, solopreneurs, and content creators aiming to thrive, not just survive, in the rapidly evolving AI era.
-                    </p>
+                <!-- Feature 4: Essential Performance Tweaks -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-teal-400 text-4xl mb-4">⚡</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Essential Performance Tweaks</h3>
+                    <p class="text-gray-300">A curated collection of essential registry hacks, power plan adjustments, and network optimizations for achieving consistent, peak performance.</p>
                 </div>
-                <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-600 transition-colors duration-300">
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-red-400">⚔️ Unmatched Competitive Edge</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Stop feeling overwhelmed. Start strategically leveraging AI to outmaneuver bigger players and carve out your unique, profitable space online.
-                    </p>
+                <!-- Feature 5: Privacy-Focused Optimization -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-teal-400 text-4xl mb-4">🔒</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Privacy-Focused Optimization</h3>
+                    <p class="text-gray-300">Learn to optimize your system for performance while enhancing your privacy, disabling unnecessary telemetry and data collection features.</p>
                 </div>
-                <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-600 transition-colors duration-300 col-span-1 md:col-span-2 lg:col-span-1">
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-blue-400">🎁 Exclusive 'Limited Time' Offers</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Each edition brings a special chance to grab a deep-dive report or an exclusive template, available only for a short, high-value window!
-                    </p>
+                <!-- Feature 6: Maintenance & Longevity -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-teal-400 text-4xl mb-4">🛠️</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Maintenance & Longevity</h3>
+                    <p class="text-gray-300">Establish a robust maintenance routine that keeps your Windows 11 machine running smoothly for years, preventing future slowdowns.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Waitlist Form Section with Countdown -->
-    <section id="waitlist-form" class="py-16 sm:py-20 md:py-24 bg-gray-900 text-white">
-        <div class="container mx-auto px-4 max-w-3xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 text-white">
-                Secure Your Spot & Unlock Your Bonus!
-            </h2>
-            <div class="bg-gray-800 p-6 sm:p-8 md:p-10 rounded-xl shadow-2xl border border-gray-700">
-                <!-- Limited Time Offer Banner -->
-                <div class="text-center bg-gradient-to-r from-red-600 to-pink-700 p-4 rounded-t-lg mb-6">
-                    <p class="text-lg sm:text-xl font-bold uppercase tracking-wide">
-                        ⏳ Early Bird Special! ⏳
-                    </p>
-                    <p class="text-md sm:text-lg mt-2">
-                        Join the waitlist <span class="font-bold underline">NOW</span> and get a <span class="font-bold text-yellow-300">FREE Deep-Dive AI Strategy Report</span>!
-                    </p>
+        <!-- Waitlist Form Section -->
+        <section id="waitlist-form" class="bg-gray-800 p-8 md:p-12 rounded-lg shadow-xl max-w-2xl mx-auto text-center mb-20">
+            <h2 class="text-3xl font-bold text-teal-400 mb-6">Don't Miss Out on the Launch Offer!</h2>
+            <p class="text-lg text-gray-300 mb-8">
+                Join our exclusive waitlist to be among the first to get access to "Windows 11 Power User" at a special, limited-time launch price.
+                Spots are limited, and early birds get the biggest discounts!
+            </p>
+            <form class="space-y-6">
+                <div>
+                    <label for="name" class="sr-only">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required
+                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-teal-500 focus:border-transparent text-white placeholder-gray-400 outline-none transition duration-200">
                 </div>
-
-                <!-- Countdown Timer -->
-                <div class="text-center mb-8">
-                    <p class="text-md sm:text-lg mb-4 text-gray-300">Offer ends in:</p>
-                    <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 md:space-x-6">
-                        <div>
-                            <span id="days" class="font-orbitron text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-purple-400">00</span>
-                            <span class="block text-xs sm:text-sm text-gray-400 mt-1">DAYS</span>
-                        </div>
-                        <span class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-500">:</span>
-                        <div>
-                            <span id="hours" class="font-orbitron text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-purple-400">00</span>
-                            <span class="block text-xs sm:text-sm text-gray-400 mt-1">HOURS</span>
-                        </div>
-                        <span class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-500">:</span>
-                        <div>
-                            <span id="minutes" class="font-orbitron text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-purple-400">00</span>
-                            <span class="block text-xs sm:text-sm text-gray-400 mt-1">MINS</span>
-                        </div>
-                        <span class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-500">:</span>
-                        <div>
-                            <span id="seconds" class="font-orbitron text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-purple-400">00</span>
-                            <span class="block text-xs sm:text-sm text-gray-400 mt-1">SECS</span>
-                        </div>
-                    </div>
+                <div>
+                    <label for="email" class="sr-only">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Best Email" required
+                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-teal-500 focus:border-transparent text-white placeholder-gray-400 outline-none transition duration-200">
                 </div>
+                <button type="submit"
+                        class="w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-full text-lg shadow-md transform hover:scale-105 transition duration-300 ease-in-out">
+                    Join the Exclusive Waitlist
+                </button>
+                <p class="text-gray-400 text-sm mt-4">We respect your privacy. No spam, ever.</p>
+            </form>
+        </section>
 
-                <form class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name"
-                               class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50 text-white placeholder-gray-400 text-base sm:text-lg" required>
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="you@example.com"
-                               class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50 text-white placeholder-gray-400 text-base sm:text-lg" required>
-                    </div>
-                    <button type="submit"
-                            class="w-full bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-bold py-3 px-6 rounded-lg shadow-xl transform transition-transform duration-300 hover:scale-105 text-lg sm:text-xl">
-                        Join the AI Underdog Waitlist
-                    </button>
-                    <p class="text-center text-xs text-gray-400 mt-4">
-                        We respect your privacy. Unsubscribe anytime.
-                    </p>
-                </form>
-            </div>
-        </div>
-    </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 py-8 border-t border-gray-700">
-        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
-            &copy; 2023 The AI Underdog's Playbook. All rights reserved.
+    <footer class="bg-gray-900 border-t border-gray-800 text-gray-500 text-center py-8">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2 text-sm">
+                <a href="#" class="hover:text-teal-400 mx-2">Privacy Policy</a> |
+                <a href="#" class="hover:text-teal-400 mx-2">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
-    <script>
-        // Set the date we're counting down to (e.g., 7 days from now)
-        // For demonstration, setting it 7 days and some hours/minutes/seconds into the future.
-        const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 7); 
-        countdownDate.setHours(countdownDate.getHours() + 12); 
-        countdownDate.setMinutes(countdownDate.getMinutes() + 30);
-        countdownDate.setSeconds(countdownDate.getSeconds() + 45);
+    <!--
+        Note on Countdown Timer:
+        To make the countdown timer dynamic and update in real-time,
+        JavaScript would be required. Per the instruction "Return ONLY raw HTML",
+        the HTML structure for the countdown is provided with static placeholder values.
+        A JavaScript implementation would typically fetch a target date and
+        update the 'countdown-value' spans every second.
+    -->
 
-        const countdownInterval = setInterval(() => {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
-
-            // Calculate days, hours, minutes, seconds
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the result in the respective elements
-            if (document.getElementById("days")) { // Check if elements exist before updating
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-            }
-
-            // If the countdown is over, display "Offer Expired!"
-            if (distance < 0) {
-                clearInterval(countdownInterval);
-                if (document.getElementById("countdown")) {
-                    document.getElementById("countdown").innerHTML = '<span class="text-xl text-red-400 font-bold">Offer Expired!</span>';
-                }
-                const offerBanner = document.querySelector('.bg-gradient-to-r.from-red-600.to-pink-700');
-                if (offerBanner) {
-                    offerBanner.innerHTML = '<p class="text-lg sm:text-xl font-bold uppercase tracking-wide">Offer Expired!</p><p class="text-md sm:text-lg mt-2">The bonus has ended, but you can still join the waitlist!</p>';
-                }
-            }
-        }, 1000);
-    </script>
 </body>
 </html>
