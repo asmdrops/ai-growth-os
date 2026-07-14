@@ -3,144 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GuardianShield AI | Proactive Sextortion Detection & Support</title>
+    <title>Siri AI Productivity Masterclass - iOS 27 & macOS 27</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for hero background image and overlay */
+        /* Custom styles for the hero section background image */
         .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
-        .overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for readability */
-        }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-50 font-sans antialiased">
+<body class="bg-gray-900 text-white font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="relative hero-background min-h-screen flex items-center justify-center p-4">
-        <div class="absolute inset-0 overlay"></div>
-        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 md:px-8">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-up">
-                The Silent Threat Is Rising.<br><span class="text-indigo-400">GuardianShield AI</span> Is Here.
+    <header class="hero-background relative h-screen flex items-center justify-center text-center">
+        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
+        <div class="relative z-10 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white drop-shadow-lg">
+                Unlock Siri's True Potential:
+                <br>The AI Productivity Masterclass for iOS 27 & macOS 27
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto animate-fade-in">
-                Young men are increasingly targeted by sextortion. Our AI-powered platform provides proactive detection, secure communication, and a robust toolkit for evidence collection and support.
+            <p class="text-lg sm:text-xl lg:text-2xl mb-8 font-light text-gray-200 drop-shadow-md">
+                Master advanced commands, create seamless automation workflows,
+                integrate with your favorite apps, and ensure privacy with Siri on the latest Apple platforms.
+                <br><span class="font-semibold text-yellow-300">Leverage the power of iOS 27 & macOS 27 Public Betas!</span>
             </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-10">
-                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg">
-                    Join Early Access Waitlist
-                </a>
-                <a href="#features" class="bg-transparent border-2 border-indigo-500 text-indigo-300 hover:bg-indigo-500 hover:text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg">
-                    Learn More
-                </a>
-            </div>
 
-            <!-- Limited Time Countdown -->
-            <div class="bg-gray-800 bg-opacity-70 rounded-lg p-6 max-w-md mx-auto shadow-xl border-t-4 border-indigo-500">
-                <p class="text-xl font-semibold text-indigo-300 mb-4">Special Waitlist Perks End In:</p>
-                <div id="countdown" class="flex justify-center items-center gap-4 text-3xl md:text-4xl font-mono text-white">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="block bg-gray-900 px-3 py-2 rounded-md">00</span>
-                        <span class="text-sm mt-1 text-gray-400">Days</span>
+            <!-- Limited Time Discount & Countdown -->
+            <div class="bg-gradient-to-r from-purple-600 to-indigo-700 p-6 rounded-lg shadow-xl inline-block max-w-full lg:max-w-2xl transform hover:scale-105 transition-transform duration-300">
+                <p class="text-xl sm:text-2xl font-bold mb-3 text-yellow-300">
+                    🔥 Limited Time Launch Discount! Save 30% 🔥
+                </p>
+                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 mb-6">
+                    <div>
+                        <span class="block text-4xl sm:text-5xl font-bold" id="days">00</span>
+                        <span class="block text-xs sm:text-sm uppercase text-gray-200">Days</span>
                     </div>
-                    <span class="text-indigo-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="block bg-gray-900 px-3 py-2 rounded-md">00</span>
-                        <span class="text-sm mt-1 text-gray-400">Hours</span>
+                    <span class="block text-4xl sm:text-5xl font-bold">:</span>
+                    <div>
+                        <span class="block text-4xl sm:text-5xl font-bold" id="hours">00</span>
+                        <span class="block text-xs sm:text-sm uppercase text-gray-200">Hours</span>
                     </div>
-                    <span class="text-indigo-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="block bg-gray-900 px-3 py-2 rounded-md">00</span>
-                        <span class="text-sm mt-1 text-gray-400">Minutes</span>
+                    <span class="block text-4xl sm:text-5xl font-bold">:</span>
+                    <div>
+                        <span class="block text-4xl sm:text-5xl font-bold" id="minutes">00</span>
+                        <span class="block text-xs sm:text-sm uppercase text-gray-200">Minutes</span>
                     </div>
-                    <span class="text-indigo-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="block bg-gray-900 px-3 py-2 rounded-md">00</span>
-                        <span class="text-sm mt-1 text-gray-400">Seconds</span>
+                    <span class="block text-4xl sm:text-5xl font-bold">:</span>
+                    <div>
+                        <span class="block text-4xl sm:text-5xl font-bold" id="seconds">00</span>
+                        <span class="block text-xs sm:text-sm uppercase text-gray-200">Seconds</span>
                     </div>
                 </div>
+                <a href="#waitlist" class="inline-block bg-yellow-400 text-gray-900 font-bold py-4 px-8 rounded-full text-lg sm:text-xl hover:bg-yellow-300 transition-colors duration-300 shadow-lg uppercase tracking-wide">
+                    Enroll Now & Secure Your Discount
+                </a>
             </div>
         </div>
     </header>
 
-    <!-- Trend/Problem Section (Integrated with product value) -->
-    <section class="py-20 bg-gray-800 text-center px-4 md:px-8">
-        <div class="container mx-auto max-w-3xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-                A Growing Crisis: <span class="text-indigo-400">Sextortion Is On The Rise</span>
-            </h2>
-            <p class="text-lg text-gray-300 leading-relaxed mb-8">
-                As reported by The Guardian, "Young men report more ‘sextortion’ than any other age group." This alarming trend highlights a critical gap in digital safety. GuardianShield AI bridges this gap, offering peace of mind to parents and empowering young men with crucial protection.
-            </p>
-            <p class="text-xl font-semibold text-indigo-300">
-                Don't wait for a threat. Be proactive.
-            </p>
-        </div>
-    </section>
-
     <!-- Features Section -->
-    <section id="features" class="py-20 bg-gray-900 px-4 md:px-8">
-        <div class="container mx-auto">
-            <h2 class="text-4xl sm:text-5xl font-bold text-center text-white mb-16">
-                How GuardianShield AI Protects What Matters Most
+    <section class="py-16 sm:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 text-white">
+                What You'll Master in the Masterclass
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
 
                 <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-indigo-600 hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-5xl mb-6">⚙️</div>
-                    <h3 class="text-2xl font-semibold text-white mb-4">AI-Powered Threat Detection</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Our advanced AI constantly monitors consented digital communications for suspicious patterns and indicators of potential sextortion attempts, providing early warnings.
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-5xl">⚙️</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Advanced Siri Commands</h3>
+                    <p class="text-gray-300 text-lg">
+                        Go beyond basic requests. Discover hidden commands and syntax to make Siri truly understand your needs.
+                        Unleash Siri's full conversational potential on iOS 27 & macOS 27.
                     </p>
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-indigo-600 hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-5xl mb-6">🔒</div>
-                    <h3 class="text-2xl font-semibold text-white mb-4">Secure Messaging & Vault</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Communicate safely with end-to-end encrypted messaging. Our secure digital vault provides a safe space for storing sensitive information, protected from prying eyes.
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-5xl">🚀</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Custom Automation Workflows</h3>
+                    <p class="text-gray-300 text-lg">
+                        Design powerful Shortcuts and automations that integrate multiple apps and actions,
+                        streamlining your daily tasks and boosting productivity with minimal effort.
                     </p>
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-indigo-600 hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-5xl mb-6">📸</div>
-                    <h3 class="text-2xl font-semibold text-white mb-4">Evidence Collection Toolkit</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Should an incident occur, our integrated toolkit streamlines the process of securely collecting and preserving crucial digital evidence for reporting authorities.
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-5xl">🔗</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Third-Party App Integration</h3>
+                    <p class="text-gray-300 text-lg">
+                        Learn how to seamlessly connect Siri with your favorite third-party applications,
+                        extending its capabilities far beyond Apple's ecosystem.
                     </p>
                 </div>
 
                 <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-indigo-600 hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-5xl mb-6">🚨</div>
-                    <h3 class="text-2xl font-semibold text-white mb-4">Direct Reporting & Support</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Seamlessly report incidents to relevant online safety bodies and connect with vetted legal and counseling support services directly through the platform.
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-5xl">🔒</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Privacy & Security Best Practices</h3>
+                    <p class="text-gray-300 text-lg">
+                        Understand how Siri handles your data and implement privacy settings to ensure
+                        your information remains secure while maximizing convenience.
                     </p>
                 </div>
 
                 <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-indigo-600 hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-5xl mb-6">👨‍👩‍👦</div>
-                    <h3 class="text-2xl font-semibold text-white mb-4">Parental Oversight & Youth Empowerment</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Designed with appropriate controls for parents while empowering young men with knowledge and tools to navigate their digital world safely and responsibly.
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-5xl">💡</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Siri AI for Creative Professionals</h3>
+                    <p class="text-gray-300 text-lg">
+                        Discover how designers, writers, and artists can leverage Siri's AI
+                        to enhance workflows, generate ideas, and manage projects more efficiently.
                     </p>
                 </div>
 
                 <!-- Feature 6 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-indigo-600 hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-5xl mb-6">🌐</div>
-                    <h3 class="text-2xl font-semibold text-white mb-4">Comprehensive Digital Safety</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        More than just detection, GuardianShield AI provides a holistic approach to online safety, offering resources and guidance for a secure digital life.
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-5xl">📈</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Future-Proof Your Productivity</h3>
+                    <p class="text-gray-300 text-lg">
+                        Stay ahead of the curve with insights into upcoming Siri AI features and
+                        strategies to adapt your workflows to future iOS and macOS updates.
                     </p>
                 </div>
 
@@ -148,77 +136,99 @@
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-20 bg-gray-800 px-4 md:px-8">
-        <div class="container mx-auto max-w-2xl text-center">
-            <h2 class="text-4xl sm:text-5xl font-bold text-white mb-6">
-                Be Among the First to Gain <span class="text-indigo-400">GuardianShield AI</span>
+    <!-- Waitlist / Call to Action Form Section -->
+    <section id="waitlist" class="py-16 sm:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-6 text-white">
+                Don't Miss Your Chance!
             </h2>
-            <p class="text-lg text-gray-300 mb-10 leading-relaxed">
-                Join our exclusive waitlist for early access, special introductory pricing, and critical updates on digital safety. Secure your peace of mind today.
+            <p class="text-lg sm:text-xl text-center mb-10 text-gray-300">
+                Secure your spot in the Siri AI Productivity Masterclass now and lock in your
+                <span class="font-bold text-yellow-400">30% launch discount</span> before it expires!
             </p>
-            <form class="bg-gray-900 p-8 rounded-lg shadow-xl border-t-4 border-indigo-500">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-200 text-sm font-bold mb-2">Full Name</label>
+
+            <form class="bg-gray-900 p-8 sm:p-10 rounded-xl shadow-2xl border border-gray-700">
+                <div class="mb-6">
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
                     <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-700 placeholder-gray-400"
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700 transition-all duration-200"
                            required>
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Email Address</label>
+                <div class="mb-8">
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
                     <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-700 placeholder-gray-400"
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700 transition-all duration-200"
                            required>
                 </div>
-                <button type="submit"
-                        class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg w-full sm:w-auto">
-                    Secure My Spot
-                </button>
+                <div class="flex items-center justify-center">
+                    <button type="submit"
+                            class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full focus:outline-none focus:shadow-outline text-xl sm:text-2xl uppercase tracking-wider transform hover:scale-105 transition-all duration-300 shadow-lg">
+                        Get Instant Access & Discount!
+                    </button>
+                </div>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-10 px-4 md:px-8">
-        <div class="container mx-auto text-center text-sm">
-            <p>&copy; 2023 GuardianShield AI. All rights reserved.</p>
+    <footer class="bg-gray-900 py-10 border-t border-gray-700">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl text-center text-gray-500 text-sm">
+            <p>&copy; 2024 Digital Education Authority. All rights reserved.</p>
             <p class="mt-2">
-                <a href="#" class="text-indigo-400 hover:text-indigo-300 mr-4">Privacy Policy</a>
-                <a href="#" class="text-indigo-400 hover:text-indigo-300">Terms of Service</a>
+                This course is independently developed and not affiliated with Apple Inc.
+                <br>iOS, macOS, and Siri are registered trademarks of Apple Inc.
             </p>
         </div>
     </footer>
 
     <!-- JavaScript for Countdown Timer -->
     <script>
-        const countdown = () => {
-            const countDate = new Date("December 31, 2023 23:59:59").getTime(); // Set your target date here
-            const now = new Date().getTime();
-            const remainingTime = countDate - now;
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const launchDate = new Date();
+            launchDate.setDate(launchDate.getDate() + 7); // Offer ends in 7 days from now
+            // For a specific future date, use: const launchDate = new Date("Jan 1, 2025 00:00:00").getTime();
 
-            const second = 1000;
-            const minute = second * 60;
-            const hour = minute * 60;
-            const day = hour * 24;
+            const countdownFunction = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = launchDate - now;
 
-            const textDay = Math.floor(remainingTime / day);
-            const textHour = Math.floor((remainingTime % day) / hour);
-            const textMinute = Math.floor((remainingTime % hour) / minute);
-            const textSecond = Math.floor((remainingTime % minute) / second);
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById('days').innerText = textDay > 0 ? (textDay < 10 ? '0' : '') + textDay : '00';
-            document.getElementById('hours').innerText = textHour > 0 ? (textHour < 10 ? '0' : '') + textHour : '00';
-            document.getElementById('minutes').innerText = textMinute > 0 ? (textMinute < 10 ? '0' : '') + textMinute : '00';
-            document.getElementById('seconds').innerText = textSecond > 0 ? (textSecond < 10 ? '0' : '') + textSecond : '00';
+                // Display the result in the elements
+                if (document.getElementById("days")) {
+                    document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+                    document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+                    document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+                    document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+                }
 
-            if (remainingTime < 0) {
-                clearInterval(countdownInterval);
-                document.getElementById('countdown').innerHTML = `<p class="text-indigo-400 text-xl">Offer Expired!</p>`;
-            }
-        };
-
-        const countdownInterval = setInterval(countdown, 1000);
-        countdown(); // Call once immediately to avoid initial flicker
+                // If the countdown is finished, update UI
+                if (distance < 0) {
+                    clearInterval(countdownFunction);
+                    if (document.getElementById("countdown")) {
+                        document.getElementById("countdown").innerHTML = "<p class='text-red-400 text-xl font-bold'>Offer Expired!</p>";
+                        // Optionally disable the enroll button and form submission
+                        const enrollButton = document.querySelector('a[href="#waitlist"]');
+                        if (enrollButton) {
+                            enrollButton.classList.add('opacity-50', 'cursor-not-allowed');
+                            enrollButton.removeAttribute('href');
+                            enrollButton.innerText = 'Offer Expired';
+                        }
+                    }
+                    if (document.querySelector('form button[type="submit"]')) {
+                        const submitButton = document.querySelector('form button[type="submit"]');
+                        submitButton.classList.add('opacity-50', 'cursor-not-allowed');
+                        submitButton.setAttribute('disabled', 'true');
+                        submitButton.innerText = 'Offer Expired';
+                    }
+                }
+            }, 1000);
+        });
     </script>
 </body>
 </html>
