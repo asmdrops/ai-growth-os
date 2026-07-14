@@ -1,158 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productivity Search Hub - Reclaim Your Focus</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts for a premium feel (e.g., Poppins) -->
+    <title>AI Music Discovery Optimizer - Unlock Your Music's Potential</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        /* Custom styles for the countdown timer, if needed, or rely on JS */
-        .countdown-digit {
-            @apply text-4xl sm:text-5xl md:text-6xl font-extrabold text-purple-400 bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg;
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?AI,tech');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* For a subtle parallax effect on larger screens */
         }
-        .countdown-label {
-            @apply text-xs sm:text-sm text-gray-400 mt-2;
+        /* Custom scrollbar for dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+            background: #2d3748; /* bg-gray-800 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #6b46c1; /* bg-purple-600 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* bg-gray-900 */
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-50 antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat z-0" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');"></div>
-        <div class="absolute inset-0 bg-black opacity-75 z-10"></div>
-        
-        <div class="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-600 drop-shadow-lg">
-                Finally, a Search That Works For You.
+    <section class="relative hero-bg min-h-screen h-auto md:h-screen flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Overlay for readability -->
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8 lg:py-0">
+            <span class="inline-block bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xs sm:text-sm px-4 py-1.5 rounded-full mb-4 font-bold uppercase tracking-wider animate-pulse shadow-lg">
+                LIMITED EARLY ACCESS OPPORTUNITY
+            </span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6">
+                Dominate AI Music Discovery. Own Your Audience.
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Tired of Windows Search clutter and limitations? Discover the <span class="text-purple-300 font-semibold">Productivity Search Hub</span> – your intelligent, unified overlay for local files, cloud services, and productivity apps.
+            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                The future of music discovery is AI. Our platform provides independent artists and labels with exclusive insights into Spotify's & others' algorithms, revealing optimal metadata, keywords, and sonic characteristics for unparalleled organic growth.
             </p>
-
-            <!-- Limited Time Countdown -->
-            <div class="bg-gray-800/70 p-6 sm:p-8 rounded-xl shadow-2xl backdrop-blur-sm mx-auto max-w-2xl mb-10 border border-purple-700">
-                <p class="text-sm sm:text-base text-purple-300 font-semibold mb-4 uppercase tracking-wider">
-                    Exclusive Beta Access – Limited Spots Remaining!
-                </p>
-                <div id="countdown" class="flex justify-center space-x-3 sm:space-x-4 md:space-x-6">
-                    <div>
-                        <span class="countdown-digit" id="days">00</span>
-                        <p class="countdown-label">Days</p>
-                    </div>
-                    <div>
-                        <span class="countdown-digit" id="hours">00</span>
-                        <p class="countdown-label">Hours</p>
-                    </div>
-                    <div>
-                        <span class="countdown-digit" id="minutes">00</span>
-                        <p class="countdown-label">Minutes</p>
-                    </div>
-                    <div>
-                        <span class="countdown-digit" id="seconds">00</span>
-                        <p class="countdown-label">Seconds</p>
-                    </div>
-                </div>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#waitlist" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-3.5 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg">
+                    Join the Exclusive Waitlist
+                </a>
+                <a href="#features" class="bg-transparent border-2 border-purple-600 text-purple-200 hover:bg-purple-600 hover:text-white font-bold py-3.5 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg">
+                    See How It Works
+                </a>
             </div>
-
-            <a href="#waitlist" class="inline-block bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-                Join the Waitlist Now!
-            </a>
-        </div>
-    </section>
-
-    <!-- Problem & Solution Section -->
-    <section class="py-16 sm:py-20 bg-gray-900">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-4">
-                    The Modern Search Experience You Deserve
-                </h2>
-                <p class="text-lg text-gray-300 max-w-3xl mx-auto">
-                    Microsoft is testing Windows Search without ads and fluff – but we're taking it further. Productivity Search Hub is built from the ground up to eliminate fragmentation and bring true intelligence to your workflow.
-                </p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 flex flex-col items-center md:items-start">
-                    <div class="text-purple-400 text-5xl mb-4">💡</div>
-                    <h3 class="text-2xl font-semibold mb-3">The Problem: Disconnected Productivity</h3>
-                    <p class="text-gray-300">
-                        Your files are everywhere – local drives, OneDrive, Google Drive, Dropbox. Your information is scattered across Notion, Slack, Outlook. Finding anything specific is a time-consuming digital treasure hunt.
-                    </p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 flex flex-col items-center md:items-start">
-                    <div class="text-blue-400 text-5xl mb-4">✨</div>
-                    <h3 class="text-2xl font-semibold mb-3">Our Solution: Unified Intelligent Search</h3>
-                    <p class="text-gray-300">
-                        Productivity Search Hub is an intelligent overlay that unifies search across all your platforms. It understands context, automates actions, and gives you back valuable time.
-                    </p>
-                </div>
-            </div>
+            <p class="text-sm text-gray-400 mt-6 animate-fade-in opacity-80">
+                "Spotify expands its AI push with a ChatGPT-like music assistant" - TechCrunch. <br class="hidden sm:inline"> Don't get left behind in the AI revolution.
+            </p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-20 bg-gray-950">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
-                Key Features Designed for Maximum Efficiency
+    <section id="features" class="py-16 sm:py-20 lg:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-white mb-12 sm:mb-16">
+                Your Strategic Edge in the AI-Driven Music Landscape
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-800 transition-all duration-300 hover:scale-105 hover:border-purple-600 group">
-                    <div class="text-purple-500 text-4xl mb-4 group-hover:animate-bounce">🔍</div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-100">Unified Search Across Everything</h3>
-                    <p class="text-gray-400">
-                        Seamlessly search local files, OneDrive, Google Drive, Dropbox, Notion, Slack, Outlook, and more – all from one intuitive interface.
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
+                <!-- Feature 1: AI Algorithm Insights -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="flex items-center justify-center w-16 h-16 bg-purple-600 rounded-full mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 text-center">AI Algorithm Insights</h3>
+                    <p class="text-gray-300 text-center">
+                        Uncover precisely how Spotify's and other streaming platforms' AI systems categorize and recommend your tracks, turning opaque algorithms into clear opportunities.
                     </p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-800 transition-all duration-300 hover:scale-105 hover:border-blue-600 group">
-                    <div class="text-blue-500 text-4xl mb-4 group-hover:animate-pulse">🧠</div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-100">Natural Language Processing (NLP)</h3>
-                    <p class="text-gray-400">
-                        Ask for what you need like you'd talk to a colleague: "Find all project documents from last week about 'Q3 planning'".
+                <!-- Feature 2: Optimal Metadata & Keywords -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="flex items-center justify-center w-16 h-16 bg-purple-600 rounded-full mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 text-center">Metadata & Keyword Optimization</h3>
+                    <p class="text-gray-300 text-center">
+                        Get data-backed recommendations for track titles, descriptions, and keywords that directly boost your visibility in AI-powered searches and recommendations.
                     </p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-800 transition-all duration-300 hover:scale-105 hover:border-green-600 group">
-                    <div class="text-green-500 text-4xl mb-4 group-hover:animate-spin">⚙️</div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-100">Automate Actions & Workflows</h3>
-                    <p class="text-gray-400">
-                        Beyond just finding, execute. Automate tasks like "Find client emails from March and create a summary report" with a single command.
+                <!-- Feature 3: Mood & Genre Tag Optimization -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="flex items-center justify-center w-16 h-16 bg-purple-600 rounded-full mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 text-center">Mood & Genre Tagging</h3>
+                    <p class="text-gray-300 text-center">
+                        Pinpoint the perfect mood and genre tags to ensure your music is accurately presented and discovered by listeners actively seeking similar vibes.
                     </p>
                 </div>
-                <!-- Feature 4 -->
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-800 transition-all duration-300 hover:scale-105 hover:border-red-600 group">
-                    <div class="text-red-500 text-4xl mb-4 group-hover:animate-bounce">📊</div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-100">Advanced Filtering & Context</h3>
-                    <p class="text-gray-400">
-                        Refine your search with powerful filters by date, type, author, location, and even content keywords to pinpoint exactly what you need.
+                <!-- Feature 4: Sonic Characteristic Analysis -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="flex items-center justify-center w-16 h-16 bg-purple-600 rounded-full mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m3 10V7m3 10V7M3 10v6a2 2 0 002 2h14a2 2 0 002-2v-6H3z"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 text-center">Sonic DNA Analysis</h3>
+                    <p class="text-gray-300 text-center">
+                        Our advanced AI analyzes the inherent sonic qualities of your music, identifying characteristics that align with current discovery trends and listener preferences.
                     </p>
                 </div>
-                <!-- Feature 5 -->
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-800 transition-all duration-300 hover:scale-105 hover:border-yellow-600 group">
-                    <div class="text-yellow-500 text-4xl mb-4 group-hover:animate-pulse">⚡</div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-100">Lightning-Fast Performance</h3>
-                    <p class="text-gray-400">
-                        Forget slow, clunky searches. Our optimized engine delivers instant results, keeping you in the flow without interruption.
+                <!-- Feature 5: Enhanced Organic Discovery -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="flex items-center justify-center w-16 h-16 bg-purple-600 rounded-full mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 text-center">Boost Organic Discovery</h3>
+                    <p class="text-gray-300 text-center">
+                        Stop fighting the algorithm, start working with it. Strategically position your music to land on more AI-curated playlists, radio stations, and personalized recommendations.
                     </p>
                 </div>
-                <!-- Feature 6 -->
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-800 transition-all duration-300 hover:scale-105 hover:border-teal-600 group">
-                    <div class="text-teal-500 text-4xl mb-4 group-hover:animate-spin">🔒</div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-100">Secure & Private</h3>
-                    <p class="text-gray-400">
-                        Your data stays yours. We prioritize security and privacy, ensuring your sensitive information is always protected.
+                <!-- Feature 6: Future-Proof Your Career -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="flex items-center justify-center w-16 h-16 bg-purple-600 rounded-full mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></path></svg>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 text-center">Future-Proof Your Career</h3>
+                    <p class="text-gray-300 text-center">
+                        Adapt and thrive in the rapidly evolving streaming landscape. Our platform provides the intelligence needed to consistently stay ahead of the curve.
                     </p>
                 </div>
             </div>
@@ -160,74 +135,59 @@
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-20 bg-gray-900">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500">
-                Ready to Experience True Productivity?
+    <section id="waitlist" class="py-16 sm:py-20 lg:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-8">
+                Ready to Revolutionize Your Discovery?
             </h2>
-            <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join our exclusive waitlist for early access to the Productivity Search Hub. Limited spots are available for our beta program – secure yours today!
+            <p class="text-lg sm:text-xl text-gray-300 mb-10">
+                Join our exclusive waitlist for early access to the AI Music Discovery Optimizer. Limited spots available for artists and labels ready to innovate.
             </p>
-            
-            <form class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-purple-700 max-w-xl mx-auto">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-semibold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-50 placeholder-gray-400" required>
+
+            <!-- Limited Time Countdown / Banner -->
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-700 text-white p-6 rounded-xl shadow-xl mb-12 transform -rotate-1 skew-y-1 scale-105">
+                <p class="text-xl sm:text-2xl font-bold mb-2">Early Access Waitlist Closes Soon!</p>
+                <p class="text-md sm:text-lg">Don't miss this chance to secure your advantage in the AI-driven music world. First come, first served.</p>
+                <!-- A true countdown would require JS. This static message emphasizes urgency as requested. -->
+                <p class="text-xs mt-3 opacity-75">*(Waitlist period and launch dates will be communicated directly to members.)*</p>
+            </div>
+
+            <form class="bg-gray-800 p-8 sm:p-10 rounded-xl shadow-2xl border border-gray-700">
+                <div class="grid grid-cols-1 gap-6 mb-8">
+                    <div>
+                        <label for="name" class="block text-left text-sm font-medium text-gray-300 mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-white placeholder-gray-400 outline-none transition-colors duration-200" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-left text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-white placeholder-gray-400 outline-none transition-colors duration-200" required>
+                    </div>
+                    <div>
+                        <label for="artist_label" class="block text-left text-sm font-medium text-gray-300 mb-2">Artist Name / Label Name (Optional)</label>
+                        <input type="text" id="artist_label" name="artist_label" placeholder="Your Band, Record Label, etc." class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-white placeholder-gray-400 outline-none transition-colors duration-200">
+                    </div>
                 </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-semibold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-50 placeholder-gray-400" required>
-                </div>
-                <div class="mb-8 text-left">
-                    <label for="company" class="block text-gray-300 text-sm font-semibold mb-2">Company (Optional)</label>
-                    <input type="text" id="company" name="company" placeholder="Acme Corp" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-50 placeholder-gray-400">
-                </div>
-                <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-                    Get Early Access
+                <button type="submit" class="w-full bg-purple-700 hover:bg-purple-800 text-white font-bold py-3.5 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg">
+                    Secure My Early Access Spot
                 </button>
-                <p class="text-xs text-gray-400 mt-4">We respect your privacy. Your email will only be used for product updates.</p>
             </form>
+            <p class="text-sm text-gray-400 mt-6">
+                We respect your privacy. Your information will only be used to notify you about early access and product updates.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2023 Productivity Search Hub. All rights reserved.</p>
+    <footer class="bg-gray-800 py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl text-center text-gray-400 text-sm">
+            <p>&copy; 2023 AI Music Discovery Optimizer. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="hover:text-purple-400 transition-colors duration-200">Privacy Policy</a>
+                <span class="text-gray-600">|</span>
+                <a href="#" class="hover:text-purple-400 transition-colors duration-200">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 7 days from now)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now
-            countDownDate.setHours(countDownDate.getHours() + 10); // Add some hours
-            countDownDate.setMinutes(countDownDate.getMinutes() + 30); // Add some minutes
-
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
-
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<p class='text-xl font-bold text-red-400'>Waitlist Closed!</p>";
-                    // Optional: Disable form or change CTA
-                    return;
-                }
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-            }, 1000);
-        });
-    </script>
 </body>
 </html>
