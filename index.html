@@ -3,262 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cross-Store Android Publisher Dashboard - Unify Your App Empire</title>
-    <!-- Tailwind CSS CDN - Modern v3+ -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Fragmented No More: Unify Your Android App Distribution | [Your SaaS Name]</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Google Fonts for a modern look (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for a premium dark mode feel and fluid responsiveness */
+        /* Custom styles for dark mode aesthetic and hero image */
         body {
-            font-family: 'Inter', sans-serif; /* A modern, clean sans-serif font */
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Very dark background for premium feel */
+            color: #e2e8f0; /* Light text for readability */
         }
-        .hero-background {
+        .hero-section {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed; /* Optional: for parallax-like effect */
+            position: relative;
+            /* Ensures background covers entire section even if content is short */
+            min-height: 100vh; 
         }
-        /* Gradient overlay for readability over the hero image */
         .hero-overlay {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.8) 100%);
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+            position: absolute;
+            inset: 0;
         }
-        /* Define a subtle pulse animation for the countdown to grab attention */
-        @keyframes pulse-attention {
-            0%, 100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 rgba(100, 149, 237, 0.4); /* Blue shade */
-            }
-            50% {
-                transform: scale(1.02);
-                box-shadow: 0 0 15px rgba(100, 149, 237, 0.8);
-            }
+        /* Fluid countdown numbers for ultra-responsiveness */
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 65px; 
+            color: #c7d2fe; /* Indigo light */
         }
-        .animate-pulse-attention {
-            animation: pulse-attention 2s infinite ease-in-out;
+        .countdown-item span:first-child {
+            font-size: 2.8rem; /* Base size for numbers */
+            font-weight: 800; /* Extra bold for impact */
+            line-height: 1;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        .countdown-item span:last-child {
+            font-size: 0.875rem; /* Smaller labels */
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #9ca3af; /* Gray text for labels */
+        }
+        /* Responsive adjustments for countdown numbers */
+        @media (min-width: 640px) { /* sm */
+            .countdown-item span:first-child { font-size: 3.5rem; }
+            .countdown-item { min-width: 80px; }
+        }
+        @media (min-width: 768px) { /* md */
+            .countdown-item span:first-child { font-size: 4.5rem; }
+            .countdown-item { min-width: 100px; }
+        }
+        @media (min-width: 1024px) { /* lg */
+            .countdown-item span:first-child { font-size: 5.5rem; }
+            .countdown-item { min-width: 120px; }
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 antialiased">
+<body class="antialiased">
 
     <!-- Hero Section -->
-    <header class="relative hero-background min-h-screen flex items-center justify-center py-16 px-4">
-        <div class="absolute inset-0 hero-overlay"></div>
-        <div class="relative z-10 text-center max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-blue-400 text-lg sm:text-xl font-semibold mb-4 tracking-wide uppercase">
-                🚨 Market Shift: Third-Party Android Stores Are Here! 🚨
-            </p>
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
-                <span class="bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text">Conquer the New Android Frontier</span><br> with Unified App Management
+    <section class="hero-section flex items-center justify-center text-center text-white relative overflow-hidden">
+        <div class="hero-overlay"></div>
+        <div class="container mx-auto px-4 py-20 relative z-10 max-w-6xl">
+            <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-down">
+                Embrace the Multi-Store Future:<br> Unify Your Android Destiny.
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                The ecosystem just exploded. Stop the chaos of fragmented dashboards and manual updates.
-                Get ready for a <span class="font-bold text-blue-300">centralized platform</span> for Google Play & all major third-party Android app stores.
+            <p class="text-lg md:text-xl lg:text-2xl mb-10 opacity-90 max-w-3xl mx-auto animate-fade-in-up">
+                **Market Alert: The Verge confirms next week ushers in a new era of third-party Android app stores!** Stop juggling fragmented distribution. [Your SaaS Name] provides a single platform for unified distribution, analytics, and monetization across *all* app stores.
             </p>
+            
+            <!-- CTA Button & Limited Time Countdown -->
+            <div class="flex flex-col items-center space-y-8 animate-fade-in-up-delay">
+                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-xl md:text-2xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
+                    Secure Your Spot: Join the Waitlist!
+                </a>
 
-            <!-- Limited Time Countdown & CTA -->
-            <div class="bg-gray-800 bg-opacity-75 backdrop-blur-sm p-6 rounded-xl shadow-2xl inline-block mb-10 border border-blue-600 animate-pulse-attention">
-                <p class="text-blue-300 text-sm sm:text-base font-semibold uppercase tracking-wide mb-3">Early Access Spots Remaining:</p>
-                <div class="flex justify-center items-center space-x-4 text-white font-mono text-3xl sm:text-4xl lg:text-5xl">
-                    <div class="flex flex-col items-center">
-                        <span id="countdown-days">XX</span>
-                        <span class="text-sm text-gray-400">Days</span>
+                <div class="bg-gray-900 bg-opacity-70 backdrop-blur-md p-6 md:p-8 rounded-xl shadow-2xl border-2 border-indigo-700 flex flex-col items-center max-w-xl w-full">
+                    <p class="text-lg md:text-2xl font-semibold mb-4 text-indigo-300">Early Adopter Offer Ends In:</p>
+                    <div id="countdown" class="flex justify-center space-x-4 md:space-x-8">
+                        <div class="countdown-item">
+                            <span id="days">00</span>
+                            <span>Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="hours">00</span>
+                            <span>Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="minutes">00</span>
+                            <span>Minutes</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="seconds">00</span>
+                            <span>Seconds</span>
+                        </div>
                     </div>
-                    <span class="text-gray-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="countdown-hours">HH</span>
-                        <span class="text-sm text-gray-400">Hours</span>
-                    </div>
-                    <span class="text-gray-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="countdown-minutes">MM</span>
-                        <span class="text-sm text-gray-400">Mins</span>
-                    </div>
-                    <span class="text-gray-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="countdown-seconds">SS</span>
-                        <span class="text-sm text-gray-400">Secs</span>
-                    </div>
-                </div>
-                <p class="text-blue-200 text-sm sm:text-base mt-4 font-medium">This opportunity is truly limited. Secure your spot now!</p>
-                <!-- NOTE: A functional countdown requires JavaScript. This HTML provides the structure and placeholder for visual impact. -->
-            </div>
-
-            <a href="#waitlist-form" class="inline-block bg-gradient-to-r from-blue-600 to-purple-700 hover:from-blue-700 hover:to-purple-800 text-white font-bold py-4 px-10 rounded-full text-xl sm:text-2xl transition duration-300 transform hover:scale-105 shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">
-                Join Early Access Waitlist & Get Ahead
-            </a>
-            <p class="mt-4 text-gray-400 text-sm">No credit card required to join the waitlist.</p>
-        </div>
-    </header>
-
-    <!-- Problem/Solution Introduction Section (Trend Focused) -->
-    <section class="py-16 sm:py-24 bg-gray-900 px-4 sm:px-6 lg:px-8">
-        <div class="container mx-auto max-w-screen-xl text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6">
-                "Google and Epic give up fighting — third-party Android app stores are coming next week."
-            </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                This isn't just a headline; it's a paradigm shift. More stores mean more reach, but also <span class="font-bold text-red-400">exponentially more management headaches</span> without the right tools.
-            </p>
-            <p class="text-lg sm:text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-                Introducing the <span class="text-blue-400 font-semibold">Cross-Store Android Publisher Dashboard</span> – your mission control for the brave new world of Android app distribution.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300">
-                    <svg class="w-12 h-12 text-blue-500 mb-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    <h3 class="text-xl font-bold text-white mb-3">🚀 Massive Reach</h3>
-                    <p class="text-gray-400">Tap into new user bases by seamlessly publishing and managing across all leading Android app stores.</p>
-                </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300">
-                    <svg class="w-12 h-12 text-purple-500 mb-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                    <h3 class="text-xl font-bold text-white mb-3">📊 Unified Insights</h3>
-                    <p class="text-gray-400">Say goodbye to siloed data. Get a holistic view of your app's performance from a single source.</p>
-                </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300">
-                    <svg class="w-12 h-12 text-green-500 mb-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9a2 2 0 00-2-2h-7l-2 2m0 0l-2 2m2-2v7.586a1 1 0 00.293.707l3.914 3.914A1 1 0 0014 20.586V13h4a2 2 0 002-2V7a2 2 0 00-2-2H4a2 2 0 00-2 2v4a2 2 0 002 2h2"></path></svg>
-                    <h3 class="text-xl font-bold text-white mb-3">⏰ Time-Saving Automation</h3>
-                    <p class="text-gray-400">Streamline submission, updates, and testing processes, freeing up valuable developer hours.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-24 bg-gray-800 px-4 sm:px-6 lg:px-8">
-        <div class="container mx-auto max-w-screen-xl">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-white mb-12">
-                Core Features: Your Command Center for Android Publishing
+    <section class="py-20 md:py-28 bg-gray-900 text-white" id="features">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-center mb-16 text-indigo-400">
+                Revolutionize Your Android Distribution
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-                <!-- Feature 1: Unified Analytics -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl border border-gray-700 flex flex-col items-center text-center hover:shadow-blue-500/30 transition-shadow duration-300">
-                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Unified Analytics</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Track downloads, revenue, user acquisition, and engagement metrics across Google Play and all integrated third-party stores from a single, intuitive dashboard.
-                    </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
+                <!-- Feature 1: Unified Distribution -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="text-indigo-500 mb-5 text-5xl">🚀</div>
+                    <h3 class="text-2xl font-bold mb-4">Single Dashboard Distribution</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg">Upload your APK just once. Distribute seamlessly across Google Play and *all* emerging third-party app stores from a single, powerful command center. Eliminate repetitive tasks.</p>
                 </div>
-
-                <!-- Feature 2: Streamlined Update Management -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl border border-gray-700 flex flex-col items-center text-center hover:shadow-purple-500/30 transition-shadow duration-300">
-                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Streamlined Updates</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Push new builds, versions, and metadata changes to all connected app stores simultaneously. Reduce errors and accelerate your release cycles.
-                    </p>
+                <!-- Feature 2: Cross-Store Analytics -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="text-indigo-500 mb-5 text-5xl">📈</div>
+                    <h3 class="text-2xl font-bold mb-4">Comprehensive Performance Insights</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg">Gain powerful, consolidated insights into downloads, revenue, and user engagement across every store. Compare, analyze, and optimize your app's strategy effortlessly.</p>
                 </div>
-
-                <!-- Feature 3: A/B Testing for Store Listings -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl border border-gray-700 flex flex-col items-center text-center hover:shadow-green-500/30 transition-shadow duration-300">
-                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M18 21l-4-4m-1.5-1.5L9 19.5m2.409-9.914a5.002 5.002 0 01.594-3.473m-9.356 3.473a5.003 5.003 0 005.952 5.952L7.91 19.91l4.243-4.243m-4.243-4.243c-1.952-1.952-1.952-5.12 0-7.072s5.12-1.952 7.072 0M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Cross-Store A/B Testing</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Optimize your store listings with advanced A/B testing for icons, screenshots, descriptions, and more, all from a single control panel.
-                    </p>
+                <!-- Feature 3: Automated Updates -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="text-indigo-500 mb-5 text-5xl">🔄</div>
+                    <h3 class="text-2xl font-bold mb-4">Automated & Seamless Updates</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg">Push updates simultaneously across all connected stores with a click. Ensure users always have the latest, most secure version of your app, no matter where they downloaded it.</p>
                 </div>
-
-                <!-- Feature 4: Market Intelligence -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl border border-gray-700 flex flex-col items-center text-center hover:shadow-yellow-500/30 transition-shadow duration-300">
-                    <div class="w-16 h-16 bg-yellow-600 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Market Intelligence</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Receive real-time alerts on new store policies, emerging opportunities, and competitive insights to make data-driven decisions faster.
-                    </p>
+                <!-- Feature 4: Streamlined Monetization -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="text-indigo-500 mb-5 text-5xl">💰</div>
+                    <h3 class="text-2xl font-bold mb-4">Unified Monetization Management</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg">Integrate diverse payment processing solutions and manage in-app purchases, subscriptions, and ad revenue uniformly across all platforms. Maximize your global earnings.</p>
                 </div>
-
-                <!-- Feature 5: Centralized Submission & Management -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl border border-gray-700 flex flex-col items-center text-center hover:shadow-red-500/30 transition-shadow duration-300">
-                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Centralized Control</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Submit new apps and manage existing ones across diverse platforms with a unified, intuitive interface, simplifying your workflow.
-                    </p>
+                <!-- Feature 5: Frictionless Setup -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="text-indigo-500 mb-5 text-5xl">⚡</div>
+                    <h3 class="text-2xl font-bold mb-4">Frictionless Integration & Setup</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg">Designed for developers, our platform offers quick, intuitive setup and robust APIs for deep integration. Spend less time on logistics, more time on innovation.</p>
                 </div>
-
-                <!-- Feature 6: Secure & Reliable -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl border border-gray-700 flex flex-col items-center text-center hover:shadow-cyan-500/30 transition-shadow duration-300">
-                    <div class="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.003 12.003 0 002.928 12c0 3.064 1.233 5.959 3.208 8.169a12.003 12.003 0 0014.248.017c1.975-2.21 3.208-5.105 3.208-8.169a12.002 12.002 0 00-.5-3.524z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Enterprise-Grade Security</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Your app data and publishing credentials are safeguarded with industry-leading encryption and robust security protocols.
-                    </p>
+                <!-- Feature 6: Global Reach -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="text-indigo-500 mb-5 text-5xl">🌎</div>
+                    <h3 class="text-2xl font-bold mb-4">Expand Your Global Audience</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg">Unlock vast new markets and user bases previously out of reach. Leverage the full potential of an open Android ecosystem to significantly broaden your app's footprint.</p>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 sm:py-24 bg-gray-950 px-4 sm:px-6 lg:px-8">
-        <div class="container mx-auto max-w-lg text-center bg-gray-800 p-8 sm:p-12 rounded-2xl shadow-2xl border border-blue-700 relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-purple-900 opacity-20 transform -rotate-3 blur-3xl scale-150"></div>
-            <div class="relative z-10">
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">
-                    Ready to Master the New Android Ecosystem?
-                </h2>
-                <p class="text-lg text-gray-300 mb-8 max-w-md mx-auto">
-                    Join our exclusive early access waitlist to get started. Limited spots available to ensure a premium onboarding experience.
-                </p>
-
-                <!-- Small countdown clone for urgency here too -->
-                <div class="bg-gray-700 bg-opacity-75 p-3 rounded-lg inline-block mb-6 border border-blue-500 animate-pulse-attention">
-                    <p class="text-blue-200 text-sm font-semibold uppercase tracking-wide mb-2">Act Fast! Time Remaining:</p>
-                    <div class="flex justify-center items-center space-x-2 text-white font-mono text-2xl">
-                        <span id="countdown-form-days">XX</span>:<span id="countdown-form-hours">HH</span>:<span id="countdown-form-minutes">MM</span>:<span id="countdown-form-seconds">SS</span>
-                    </div>
-                    <!-- NOTE: A functional countdown requires JavaScript. This HTML provides the structure and placeholder for visual impact. -->
+    <section class="py-20 md:py-28 bg-gray-800 text-white" id="waitlist">
+        <div class="container mx-auto px-4 max-w-xl text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-8 text-indigo-400">
+                Ready to Conquer the New Android Frontier?
+            </h2>
+            <p class="text-lg md:text-xl mb-12 text-gray-300">
+                Join our exclusive waitlist today for early access, special introductory pricing, and transform the fragmented Android landscape into your biggest competitive advantage.
+            </p>
+            <form action="#" method="POST" class="bg-gray-900 p-8 md:p-10 rounded-xl shadow-2xl border-2 border-indigo-700">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 text-lg" required>
                 </div>
-
-                <form action="#" method="POST" class="space-y-6">
-                    <div>
-                        <label for="name" class="sr-only">Full Name</label>
-                        <input type="text" name="name" id="name" autocomplete="name" required
-                               class="w-full px-5 py-3 border border-gray-600 rounded-xl shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-700 text-white text-lg"
-                               placeholder="Your Full Name">
-                    </div>
-                    <div>
-                        <label for="company" class="sr-only">Company (Optional)</label>
-                        <input type="text" name="company" id="company" autocomplete="organization"
-                               class="w-full px-5 py-3 border border-gray-600 rounded-xl shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-700 text-white text-lg"
-                               placeholder="Your Company (Optional)">
-                    </div>
-                    <div>
-                        <label for="email" class="sr-only">Email Address</label>
-                        <input type="email" name="email" id="email" autocomplete="email" required
-                               class="w-full px-5 py-3 border border-gray-600 rounded-xl shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-700 text-white text-lg"
-                               placeholder="Your Professional Email Address">
-                    </div>
-                    <div>
-                        <button type="submit"
-                                class="w-full bg-gradient-to-r from-blue-600 to-purple-700 hover:from-blue-700 hover:to-purple-800 text-white font-bold py-4 px-6 rounded-xl text-xl transition duration-300 transform hover:scale-105 shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">
-                            Join the Exclusive Waitlist Now!
-                        </button>
-                    </div>
-                </form>
-                <p class="mt-6 text-gray-400 text-sm">We value your privacy. No spam, just updates on your early access.</p>
-            </div>
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Work Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@yourcompany.com" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 text-lg" required>
+                </div>
+                <div class="mb-8 text-left">
+                    <label for="company" class="block text-sm font-medium text-gray-300 mb-2">Company / App Name (Optional)</label>
+                    <input type="text" id="company" name="company" placeholder="My Awesome App Inc." class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 text-lg">
+                </div>
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-md shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
+                    Join the Exclusive Waitlist!
+                </button>
+                <p class="mt-6 text-sm text-gray-400">We value your privacy. Your information will never be shared or spammed.</p>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
-        <div class="container mx-auto max-w-screen-xl">
-            <p>&copy; 2023 Cross-Store Android Publisher Dashboard. All rights reserved.</p>
-            <p class="mt-2">Made with 💙 for Android Developers.</p>
+    <footer class="bg-gray-900 py-10 text-center text-gray-500 text-sm">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2023 [Your SaaS Name]. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="hover:text-white mx-2 transition duration-300">Privacy Policy</a> | 
+                <a href="#" class="hover:text-white mx-2 transition duration-300">Terms of Service</a>
+            </p>
         </div>
     </footer>
+
+    <!-- Countdown JavaScript -->
+    <script>
+        // Set the date we're counting down to (e.g., 7 days from now)
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 7); // Set to 7 days from today
+        countdownDate.setHours(23, 59, 59, 999); // Set to end of the day
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Update the countdown elements, ensuring they exist
+            if (document.getElementById("days")) {
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+            }
+
+            // If the countdown is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                if (document.getElementById("countdown")) {
+                    document.getElementById("countdown").innerHTML = "<p class='text-red-400 font-bold text-2xl md:text-3xl'>Offer Expired! Stay tuned for future announcements.</p>";
+                }
+            }
+        }, 1000);
+    </script>
 
 </body>
 </html>
