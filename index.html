@@ -3,204 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Workflow Enhancement Suites for OpenAI Keyboard - Elevate Your Productivity</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z'/%3E%3C/svg%3E">
+    <title>Elite Health Intelligence | Next-Gen Blood Pressure Management</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom scrollbar for a premium feel */
-        ::-webkit-scrollbar {
-            width: 8px;
+        /* Custom styles for gradients and animations not directly supported by default Tailwind without config */
+        .gradient-button {
+            background-image: linear-gradient(to right, #6D28D9, #8B5CF6); /* Purple to Violet */
+            transition: all 0.3s ease-in-out;
         }
-        ::-webkit-scrollbar-track {
-            background: #111827; /* gray-900 */
+        .gradient-button:hover {
+            background-image: linear-gradient(to right, #8B5CF6, #A78BFA);
+            box-shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.5), 0 4px 6px -2px rgba(139, 92, 246, 0.25);
         }
-        ::-webkit-scrollbar-thumb {
-            background: #4B5563; /* gray-600 */
-            border-radius: 4px;
+        @keyframes pulse-yellow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #6B7280; /* gray-500 */
-        }
-        html {
-            scroll-behavior: smooth;
+        .animate-pulse-yellow {
+            animation: pulse-yellow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 font-sans antialiased">
+<body class="bg-gray-950 text-gray-100 antialiased overflow-x-hidden">
 
     <!-- Hero Section -->
-    <header class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-gray-950/50 to-gray-950"></div>
-        </div>
-        <div class="relative z-10 p-4 max-w-4xl mx-auto flex flex-col items-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight mb-4 drop-shadow-lg">
-                Master Your OpenAI Keyboard.<br class="hidden sm:inline"> Redefine Your Workflow.
+    <section class="relative min-h-screen flex items-center justify-center bg-cover bg-center px-4 py-16 md:py-24" 
+             style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+        <!-- Dark overlay for readability -->
+        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+        
+        <div class="relative z-10 text-center max-w-5xl mx-auto space-y-6">
+            <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-tight text-white drop-shadow-lg">
+                <span class="text-purple-400">Revolutionize</span> Your Blood Pressure Management
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl drop-shadow-md">
-                Unlock peak productivity with custom keybinds, macro sequences, and integrated prompt libraries. Tailored for coding, writing, and data analysis.
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 font-light drop-shadow max-w-4xl mx-auto">
+                The <span class="font-semibold text-yellow-300">future is here</span>: A $399 Smart Ring Aims to Replace the 150-Year-Old Blood Pressure Cuff. We bring the intelligence to it.
             </p>
-
-            <!-- Limited Time Countdown -->
-            <div class="bg-indigo-700/70 backdrop-blur-sm border border-indigo-600 rounded-lg p-4 sm:p-6 mb-8 shadow-xl flex flex-col items-center">
-                <p class="text-xl sm:text-2xl font-bold text-indigo-100 mb-3">Early Bird Access Closes In:</p>
-                <div id="countdown" class="flex space-x-2 sm:space-x-4 text-3xl sm:text-5xl font-mono font-extrabold text-white">
-                    <div class="flex flex-col items-center">
-                        <span id="days">00</span>
-                        <span class="text-xs sm:text-sm text-indigo-200">DAYS</span>
-                    </div>
-                    <span class="text-indigo-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours">00</span>
-                        <span class="text-xs sm:text-sm text-indigo-200">HRS</span>
-                    </div>
-                    <span class="text-indigo-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes">00</span>
-                        <span class="text-xs sm:text-sm text-indigo-200">MINS</span>
-                    </div>
-                    <span class="text-indigo-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds">00</span>
-                        <span class="text-xs sm:text-sm text-indigo-200">SECS</span>
-                    </div>
-                </div>
+            <p class="text-md sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mt-4">
+                Advanced analytics, personalized insights, and predictive modeling for unparalleled health control.
+            </p>
+            
+            <div class="mt-8 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#waitlist" class="gradient-button text-white font-bold py-4 px-10 rounded-full shadow-lg text-xl md:text-2xl whitespace-nowrap">
+                    Join Early Access Waitlist
+                </a>
             </div>
 
-            <a href="#waitlist" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl transform hover:scale-105 transition-all duration-300 ease-in-out shadow-lg tracking-wide animate-pulse">
-                Join the Waitlist & Elevate Your AI Workflow!
-            </a>
-            <p class="mt-4 text-sm text-gray-400">Exclusive access for early adopters.</p>
+            <!-- Limited Time Countdown -->
+            <div class="mt-12 p-6 md:p-8 bg-gray-800 bg-opacity-80 rounded-2xl shadow-2xl backdrop-blur-sm max-w-xl lg:max-w-2xl mx-auto border border-gray-700">
+                <h3 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 animate-pulse-yellow">Limited Early Access Spots Available!</h3>
+                <div id="countdown" class="grid grid-cols-4 gap-4 text-white text-3xl md:text-5xl font-mono">
+                    <div><span id="days" class="block text-4xl md:text-6xl font-extrabold text-purple-400">00</span> <span class="text-xs md:text-sm block text-gray-400 uppercase tracking-wider mt-1">Days</span></div>
+                    <div><span id="hours" class="block text-4xl md:text-6xl font-extrabold text-purple-400">00</span> <span class="text-xs md:text-sm block text-gray-400 uppercase tracking-wider mt-1">Hours</span></div>
+                    <div><span id="minutes" class="block text-4xl md:text-6xl font-extrabold text-purple-400">00</span> <span class="text-xs md:text-sm block text-gray-400 uppercase tracking-wider mt-1">Minutes</span></div>
+                    <div><span id="seconds" class="block text-4xl md:text-6xl font-extrabold text-purple-400">00</span> <span class="text-xs md:text-sm block text-gray-400 uppercase tracking-wider mt-1">Seconds</span></div>
+                </div>
+                <p class="text-gray-400 text-sm md:text-base mt-4">Don't miss your chance to be at the forefront of personalized health.</p>
+            </div>
+
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-24 bg-gray-900">
-        <div class="container mx-auto px-6 max-w-screen-xl">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">
-                Unleash the Full Potential of Your OpenAI Keyboard
+    <section class="py-16 md:py-24 bg-gray-900" id="features">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-center text-white mb-12 lg:mb-16">
+                Your Personal Health Command Center
             </h2>
-            <p class="text-lg text-gray-300 text-center mb-16 max-w-3xl mx-auto">
-                Our AI Workflow Enhancement Suites empower you to streamline complex interactions, automate repetitive tasks, and consistently generate high-quality outputs with unparalleled speed.
+            <p class="text-center text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+                Seamlessly integrate data from your smart rings and wearables to transform raw metrics into actionable, life-changing insights.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
 
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-in-out border border-gray-700">
-                    <div class="text-indigo-500 mb-5 text-4xl">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11l-3-3m0 0l-3 3m3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z"></path></svg>
+                <!-- Feature 1: Advanced Trend Analysis -->
+                <div class="bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-purple-600 flex flex-col justify-between">
+                    <div>
+                        <div class="text-purple-400 mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Advanced Trend Analysis</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Go beyond daily numbers. Our platform identifies subtle patterns and long-term trends in your blood pressure data, helping you understand what truly impacts your health.
+                        </p>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Custom AI Keybinds</h3>
-                    <p class="text-gray-400">Map complex OpenAI prompts, model switches, and formatting commands directly to your keyboard. Execute multi-token requests with a single keystroke for instant AI interaction.</p>
+                    <div class="mt-6">
+                        <span class="text-sm font-semibold text-purple-300">Insightful Charts & Graphs</span>
+                    </div>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-in-out border border-gray-700">
-                    <div class="text-indigo-500 mb-5 text-4xl">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                <!-- Feature 2: Doctor-Shareable Reports -->
+                <div class="bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-purple-600 flex flex-col justify-between">
+                    <div>
+                        <div class="text-purple-400 mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Doctor-Shareable Reports</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Generate professional, easy-to-understand reports for your physician, streamlining appointments and ensuring informed decision-making based on continuous data.
+                        </p>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Intelligent Macro Sequences</h3>
-                    <p class="text-gray-400">Automate entire workflows. Chain multiple AI calls, apply transformations, and integrate with external tools seamlessly. Perfect for code generation, content creation pipelines, and more.</p>
+                    <div class="mt-6">
+                        <span class="text-sm font-semibold text-purple-300">Empower Your Consultations</span>
+                    </div>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-in-out border border-gray-700">
-                    <div class="text-indigo-500 mb-5 text-4xl">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.414 9.612 5 8.381 5c-4.477 0-8.268 2.943-8.625 7.001M12 6.253c1.168.341 2.388.87 3.619 1.629 4.477 0 8.268 2.943 8.625 7.001M12 6.253v13m-4 0h8m-4-7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                <!-- Feature 3: Medication Adherence Tracking -->
+                <div class="bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-purple-600 flex flex-col justify-between">
+                    <div>
+                        <div class="text-purple-400 mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 4a2 2 0 100-4 2 2 0 000 4zm-8-2h8m-8 0v-2c0-1.1.9-2 2-2h2v2h2v2h-2v2h-2c-1.1 0-2-.9-2-2v-2z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Medication Adherence Tracking</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Never miss a dose. Our intuitive system helps you track your medication intake and correlates it with your blood pressure data for optimized management.
+                        </p>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Integrated Prompt Libraries</h3>
-                    <p class="text-gray-400">Curate, organize, and quickly recall your most effective prompts. Share specialized 'Python Debugging Suites' or 'Creative Story Arc' prompt libraries with your team or the community.</p>
+                    <div class="mt-6">
+                        <span class="text-sm font-semibold text-purple-300">Seamless Reminders & Analytics</span>
+                    </div>
                 </div>
 
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-in-out border border-gray-700">
-                    <div class="text-indigo-500 mb-5 text-4xl">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0 0h3m-3 0h-3m-2-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <!-- Feature 4: Tailored Lifestyle Recommendations -->
+                <div class="bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-purple-600 flex flex-col justify-between">
+                    <div>
+                        <div class="text-purple-400 mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-2a2 2 0 00-2 2v5M14 10h-2m5.764 0h-2.112"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Tailored Lifestyle Recommendations</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Receive personalized advice based on your unique data, helping you make informed choices about diet, exercise, and stress management for optimal blood pressure.
+                        </p>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Share & Subscribe to Workflows</h3>
-                    <p class="text-gray-400">Discover, subscribe to, and share powerful workflow packs created by experts and the community. Monetize your own specialized suites or enhance your team's efficiency.</p>
+                    <div class="mt-6">
+                        <span class="text-sm font-semibold text-purple-300">Data-Driven Wellness</span>
+                    </div>
                 </div>
 
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-in-out border border-gray-700">
-                    <div class="text-indigo-500 mb-5 text-4xl">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                <!-- Feature 5: Predictive Modeling -->
+                <div class="bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-purple-600 flex flex-col justify-between">
+                    <div>
+                        <div class="text-purple-400 mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Predictive Modeling</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Our advanced AI analyzes your past data to predict potential future blood pressure changes, empowering you to proactively manage your health before issues arise.
+                        </p>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Cloud Synchronization & Backup</h3>
-                    <p class="text-gray-400">Your custom keybinds, macros, and prompt libraries are always with you. Access and sync your personalized AI workflows across all your devices, securely backed up in the cloud.</p>
+                    <div class="mt-6">
+                        <span class="text-sm font-semibold text-purple-300">See Tomorrow's Health Today</span>
+                    </div>
                 </div>
 
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-in-out border border-gray-700">
-                    <div class="text-indigo-500 mb-5 text-4xl">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                <!-- Feature 6: Seamless Wearable Integration -->
+                <div class="bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-purple-600 flex flex-col justify-between">
+                    <div>
+                        <div class="text-purple-400 mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Seamless Wearable Integration</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Connect effortlessly with leading smart rings and wearables to consolidate all your vital health data in one secure, intelligent platform.
+                        </p>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Premium Customization & Analytics</h3>
-                    <p class="text-gray-400">Gain granular control with advanced customization options. Track your AI usage and efficiency, identifying bottlenecks and optimizing your workflow for maximum output and cost-effectiveness.</p>
+                    <div class="mt-6">
+                        <span class="text-sm font-semibold text-purple-300">Oura, RingConn & More (Future)</span>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Section -->
-    <section id="waitlist" class="py-16 sm:py-24 bg-gray-950">
-        <div class="container mx-auto px-6 max-w-screen-xl text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500">
-                Don't Miss Out! Join Our Exclusive Waitlist.
+    <!-- Waitlist Form Section -->
+    <section class="py-16 md:py-24 bg-gray-950" id="waitlist">
+        <div class="container mx-auto px-4 max-w-2xl text-center">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-8">
+                Join the Health Revolution. Get Early Access.
             </h2>
-            <p class="text-lg text-gray-300 mb-12 max-w-2xl mx-auto">
-                Be among the first to experience the future of AI interaction. Sign up for early access, product updates, and exclusive launch offers.
+            <p class="text-lg md:text-xl text-gray-300 mb-10">
+                Be among the first to experience the next generation of blood pressure management.
+                Sign up for our exclusive waitlist and receive updates, special offers, and early access opportunities.
             </p>
 
-            <form action="#" method="POST" class="max-w-xl mx-auto p-8 bg-gray-800 rounded-2xl shadow-2xl border border-gray-700">
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-lg font-medium mb-3">Your Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" required
-                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 text-white placeholder-gray-400 transition-all duration-200">
+            <form class="bg-gray-800 p-8 md:p-10 rounded-2xl shadow-2xl border border-gray-700 space-y-6">
+                <div class="relative">
+                    <input type="email" id="email" name="email" placeholder="Enter your best email address" required
+                           class="w-full p-4 pr-12 text-lg rounded-xl bg-gray-700 text-white border border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all duration-300 placeholder-gray-400">
+                    <svg class="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path></svg>
                 </div>
-                <button type="submit"
-                        class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-4 px-8 rounded-full text-xl transform hover:scale-105 transition-all duration-300 ease-in-out shadow-lg tracking-wide animate-pulse-slow">
-                    Secure My Early Access!
+                <button type="submit" class="gradient-button text-white font-bold py-4 px-8 rounded-full shadow-xl text-xl md:text-2xl w-full">
+                    Secure My Spot
                 </button>
-                <p class="text-sm text-gray-500 mt-6">
-                    We respect your privacy. No spam, ever. Unsubscribe at any time.
+                <p class="text-sm text-gray-400">
+                    We respect your privacy. No spam, ever.
                 </p>
             </form>
+
+            <!-- Reinforce urgency -->
+            <div class="mt-12 text-center">
+                <p class="text-xl md:text-2xl font-semibold text-yellow-300 animate-pulse-yellow">
+                    Don't Miss Out! The Future of Your Health is Just a Click Away.
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10">
-        <div class="container mx-auto px-6 max-w-screen-xl text-center text-gray-500 text-sm">
-            <p>&copy; 2023 AI Workflow Enhancement Suites. All rights reserved.</p>
-            <p class="mt-2">Built for the OpenAI Keyboard.</p>
-            <div class="flex justify-center space-x-4 mt-4">
-                <a href="#" class="hover:text-gray-300 transition-colors duration-200">Privacy Policy</a>
-                <span class="text-gray-700">|</span>
-                <a href="#" class="hover:text-gray-300 transition-colors duration-200">Terms of Service</a>
-            </div>
+    <footer class="bg-gray-900 py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-gray-400 text-sm">
+            <p>&copy; 2024 Elite Health Intelligence. All rights reserved.</p>
+            <p class="mt-2">Disclaimer: This platform is for informational and management purposes only and does not replace professional medical advice. Always consult with a healthcare professional for diagnosis and treatment.</p>
         </div>
     </footer>
 
+    <!-- JavaScript for Countdown Timer -->
     <script>
-        // Countdown Logic
-        const countdownElement = document.getElementById('countdown');
-        const daysElement = document.getElementById('days');
-        const hoursElement = document.getElementById('hours');
-        const minutesElement = document.getElementById('minutes');
-        const secondsElement = document.getElementById('seconds');
-
         // Set the date we're counting down to (e.g., 7 days from now)
         const countdownDate = new Date();
         countdownDate.setDate(countdownDate.getDate() + 7); // Set to 7 days from now
-        // For testing, you could set a specific date:
-        // const countdownDate = new Date("Dec 25, 2023 00:00:00").getTime();
+        const finalCountdownTime = countdownDate.getTime();
 
         const updateCountdown = () => {
             const now = new Date().getTime();
-            const distance = countdownDate - now;
+            const distance = finalCountdownTime - now;
 
             // Time calculations for days, hours, minutes and seconds
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -208,22 +236,23 @@
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Display the result
-            daysElement.innerText = String(days).padStart(2, '0');
-            hoursElement.innerText = String(hours).padStart(2, '0');
-            minutesElement.innerText = String(minutes).padStart(2, '0');
-            secondsElement.innerText = String(seconds).padStart(2, '0');
+            // Display the result in the corresponding elements
+            document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
 
-            // If the countdown is over, write some text
+            // If the countdown is over, write some text 
             if (distance < 0) {
-                clearInterval(countdownInterval);
-                countdownElement.innerHTML = '<span class="text-xl text-red-400">OFFER EXPIRED!</span>';
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = '<span class="col-span-4 text-xl md:text-2xl text-red-500 font-semibold">Waitlist Closed!</span>';
+                document.getElementById("countdown").previousElementSibling.innerHTML = 'Early Access Period Has Ended!';
             }
         };
 
         // Update the countdown every 1 second
-        const countdownInterval = setInterval(updateCountdown, 1000);
-        updateCountdown(); // Call immediately to avoid initial flicker
+        const x = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call to display immediately
     </script>
 </body>
 </html>
