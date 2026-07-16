@@ -1,234 +1,271 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Health Intelligence | Next-Gen Blood Pressure Management</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>SecureAI Workflow Automation - Powering Productivity with 1Password Trust</title>
+    <meta name="description" content="Leverage AI agents like Claude securely with 1Password integration. Pre-built, audited, and customizable workflows for business productivity without exposing passwords. Join the waitlist for secure AI automation!">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Favicon - simple emoji for quick setup -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔒</text></svg>">
     <style>
-        /* Custom styles for gradients and animations not directly supported by default Tailwind without config */
-        .gradient-button {
-            background-image: linear-gradient(to right, #6D28D9, #8B5CF6); /* Purple to Violet */
-            transition: all 0.3s ease-in-out;
+        /* Custom styles for modern dark aesthetic and hero image overlay */
+        body {
+            background-color: #0A0A0A; /* Deep dark background */
+            color: #E0E0E0; /* Light text for contrast */
         }
-        .gradient-button:hover {
-            background-image: linear-gradient(to right, #8B5CF6, #A78BFA);
-            box-shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.5), 0 4px 6px -2px rgba(139, 92, 246, 0.25);
+        .dark .bg-gradient-hero {
+            background-image: linear-gradient(to top, rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.6) 30%, rgba(10, 10, 10, 0.0) 70%);
         }
-        @keyframes pulse-yellow {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-        .animate-pulse-yellow {
-            animation: pulse-yellow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        /* Fluid typography for ultra-responsiveness */
+        .text-fluid-hero {
+            font-size: clamp(2.5rem, 7vw, 5rem); /* min, ideal, max */
+        }
+        .text-fluid-h2 {
+            font-size: clamp(2rem, 5vw, 4rem);
+        }
+        .text-fluid-p {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #6366F1, #A855F7); /* Indigo to Purple gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 antialiased overflow-x-hidden">
+<body class="font-sans antialiased text-gray-200 bg-gray-950">
+
+    <!-- Header (Minimalist for a focused landing page) -->
+    <header class="absolute top-0 left-0 right-0 z-10 p-4 md:p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold gradient-text">SecureAI</a>
+            <!-- No navigation links to keep focus on conversion -->
+        </div>
+    </header>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center bg-cover bg-center px-4 py-16 md:py-24" 
-             style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-        <!-- Dark overlay for readability -->
-        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
-        
-        <div class="relative z-10 text-center max-w-5xl mx-auto space-y-6">
-            <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-tight text-white drop-shadow-lg">
-                <span class="text-purple-400">Revolutionize</span> Your Blood Pressure Management
+    <section class="relative h-screen min-h-[600px] flex items-center justify-center text-center text-white hero-background">
+        <!-- Overlay for readability -->
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+        <div class="absolute inset-0 bg-gradient-hero"></div>
+
+        <div class="container mx-auto px-4 z-10 max-w-4xl">
+            <span class="inline-block bg-purple-600 bg-opacity-80 text-white text-xs md:text-sm font-semibold px-3 py-1 rounded-full mb-4 animate-pulse">
+                🔥 Hot Trend: 1Password + Claude Integration!
+            </span>
+            <h1 class="text-fluid-hero font-extrabold leading-tight mb-4 tracking-tight md:leading-tight">
+                Unlock <span class="gradient-text">Secure AI Automation</span> with 1Password Trust
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 font-light drop-shadow max-w-4xl mx-auto">
-                The <span class="font-semibold text-yellow-300">future is here</span>: A $399 Smart Ring Aims to Replace the 150-Year-Old Blood Pressure Cuff. We bring the intelligence to it.
+            <p class="text-fluid-p text-gray-300 mb-8 max-w-2xl mx-auto">
+                Integrate Claude and other AI agents seamlessly and securely with your existing business tools. Automate workflows without ever exposing sensitive credentials.
             </p>
-            <p class="text-md sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mt-4">
-                Advanced analytics, personalized insights, and predictive modeling for unparalleled health control.
-            </p>
-            
-            <div class="mt-8 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="#waitlist" class="gradient-button text-white font-bold py-4 px-10 rounded-full shadow-lg text-xl md:text-2xl whitespace-nowrap">
-                    Join Early Access Waitlist
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
+                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 text-lg">
+                    Join the Exclusive Waitlist
+                </a>
+                <a href="#features" class="bg-gray-700 bg-opacity-70 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out text-lg">
+                    Learn More
                 </a>
             </div>
 
             <!-- Limited Time Countdown -->
-            <div class="mt-12 p-6 md:p-8 bg-gray-800 bg-opacity-80 rounded-2xl shadow-2xl backdrop-blur-sm max-w-xl lg:max-w-2xl mx-auto border border-gray-700">
-                <h3 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 animate-pulse-yellow">Limited Early Access Spots Available!</h3>
-                <div id="countdown" class="grid grid-cols-4 gap-4 text-white text-3xl md:text-5xl font-mono">
-                    <div><span id="days" class="block text-4xl md:text-6xl font-extrabold text-purple-400">00</span> <span class="text-xs md:text-sm block text-gray-400 uppercase tracking-wider mt-1">Days</span></div>
-                    <div><span id="hours" class="block text-4xl md:text-6xl font-extrabold text-purple-400">00</span> <span class="text-xs md:text-sm block text-gray-400 uppercase tracking-wider mt-1">Hours</span></div>
-                    <div><span id="minutes" class="block text-4xl md:text-6xl font-extrabold text-purple-400">00</span> <span class="text-xs md:text-sm block text-gray-400 uppercase tracking-wider mt-1">Minutes</span></div>
-                    <div><span id="seconds" class="block text-4xl md:text-6xl font-extrabold text-purple-400">00</span> <span class="text-xs md:text-sm block text-gray-400 uppercase tracking-wider mt-1">Seconds</span></div>
+            <div class="mt-12 p-6 bg-gray-800 bg-opacity-80 rounded-xl shadow-2xl backdrop-filter backdrop-blur-sm mx-auto max-w-lg border border-indigo-500">
+                <p class="text-lg font-semibold mb-3 text-yellow-400 animate-pulse">Limited-Time Founding Member Access Closes In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-3 md:space-x-4 text-3xl md:text-4xl lg:text-5xl font-extrabold text-indigo-400">
+                    <div class="flex flex-col items-center">
+                        <span id="days">00</span>
+                        <span class="text-sm md:text-base text-gray-400 font-normal">Days</span>
+                    </div>
+                    <span class="text-gray-500">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours">00</span>
+                        <span class="text-sm md:text-base text-gray-400 font-normal">Hours</span>
+                    </div>
+                    <span class="text-gray-500">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes">00</span>
+                        <span class="text-sm md:text-base text-gray-400 font-normal">Minutes</span>
+                    </div>
+                    <span class="text-gray-500">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds">00</span>
+                        <span class="text-sm md:text-base text-gray-400 font-normal">Seconds</span>
+                    </div>
                 </div>
-                <p class="text-gray-400 text-sm md:text-base mt-4">Don't miss your chance to be at the forefront of personalized health.</p>
             </div>
+        </div>
+    </section>
 
+    <!-- Problem/Solution Teaser -->
+    <section class="py-16 bg-gray-900 text-center">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-fluid-h2 font-bold mb-6 text-gray-100">The Future of AI Workflow: Secure, Automated, Seamless.</h2>
+            <p class="text-lg md:text-xl text-gray-400 leading-relaxed">
+                Unlock the full potential of AI agents without the security headaches. Our platform empowers your business to automate complex tasks,
+                ensure data privacy, and maintain full control over every AI-driven process.
+            </p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900" id="features">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-center text-white mb-12 lg:mb-16">
-                Your Personal Health Command Center
-            </h2>
-            <p class="text-center text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-                Seamlessly integrate data from your smart rings and wearables to transform raw metrics into actionable, life-changing insights.
-            </p>
+    <section id="features" class="py-20 bg-gray-950">
+        <div class="container mx-auto px-4 max-w-screen-xl">
+            <h2 class="text-fluid-h2 font-extrabold text-center mb-16 gradient-text">Features Designed for Trust & Productivity</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
 
-                <!-- Feature 1: Advanced Trend Analysis -->
-                <div class="bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-purple-600 flex flex-col justify-between">
-                    <div>
-                        <div class="text-purple-400 mb-4">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Advanced Trend Analysis</h3>
-                        <p class="text-gray-300 leading-relaxed">
-                            Go beyond daily numbers. Our platform identifies subtle patterns and long-term trends in your blood pressure data, helping you understand what truly impacts your health.
-                        </p>
+                <!-- Feature 1: Unrivaled Security & Privacy -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-transparent hover:border-indigo-500">
+                    <div class="text-indigo-400 text-5xl mb-6 flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
                     </div>
-                    <div class="mt-6">
-                        <span class="text-sm font-semibold text-purple-300">Insightful Charts & Graphs</span>
-                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-4 text-center">Unrivaled Security & Privacy</h3>
+                    <p class="text-gray-400 leading-relaxed text-center">
+                        Leverage 1Password integration to allow AI agents like Claude to operate without direct access to your credentials.
+                        Audited workflows ensure data integrity and confidentiality.
+                    </p>
                 </div>
 
-                <!-- Feature 2: Doctor-Shareable Reports -->
-                <div class="bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-purple-600 flex flex-col justify-between">
-                    <div>
-                        <div class="text-purple-400 mb-4">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Doctor-Shareable Reports</h3>
-                        <p class="text-gray-300 leading-relaxed">
-                            Generate professional, easy-to-understand reports for your physician, streamlining appointments and ensuring informed decision-making based on continuous data.
-                        </p>
+                <!-- Feature 2: Pre-built & Customizable Workflows -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-transparent hover:border-indigo-500">
+                    <div class="text-indigo-400 text-5xl mb-6 flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
                     </div>
-                    <div class="mt-6">
-                        <span class="text-sm font-semibold text-purple-300">Empower Your Consultations</span>
-                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-4 text-center">Pre-built & Customizable Workflows</h3>
+                    <p class="text-gray-400 leading-relaxed text-center">
+                        Start instantly with battle-tested templates for common business tasks. Customize them to fit your unique processes,
+                        from data entry to secure form submissions.
+                    </p>
                 </div>
 
-                <!-- Feature 3: Medication Adherence Tracking -->
-                <div class="bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-purple-600 flex flex-col justify-between">
-                    <div>
-                        <div class="text-purple-400 mb-4">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 4a2 2 0 100-4 2 2 0 000 4zm-8-2h8m-8 0v-2c0-1.1.9-2 2-2h2v2h2v2h-2v2h-2c-1.1 0-2-.9-2-2v-2z"></path></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Medication Adherence Tracking</h3>
-                        <p class="text-gray-300 leading-relaxed">
-                            Never miss a dose. Our intuitive system helps you track your medication intake and correlates it with your blood pressure data for optimized management.
-                        </p>
+                <!-- Feature 3: Granular Control & Monitoring -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-transparent hover:border-indigo-500">
+                    <div class="text-indigo-400 text-5xl mb-6 flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.561.342 1.2-.016 1.724-1.065z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
                     </div>
-                    <div class="mt-6">
-                        <span class="text-sm font-semibold text-purple-300">Seamless Reminders & Analytics</span>
-                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-4 text-center">Granular Control & Monitoring</h3>
+                    <p class="text-gray-400 leading-relaxed text-center">
+                        Implement role-based access, monitor agent activities in real-time, and maintain complete oversight.
+                        Know exactly what your AI agents are doing, always.
+                    </p>
                 </div>
 
-                <!-- Feature 4: Tailored Lifestyle Recommendations -->
-                <div class="bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-purple-600 flex flex-col justify-between">
-                    <div>
-                        <div class="text-purple-400 mb-4">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-2a2 2 0 00-2 2v5M14 10h-2m5.764 0h-2.112"></path></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Tailored Lifestyle Recommendations</h3>
-                        <p class="text-gray-300 leading-relaxed">
-                            Receive personalized advice based on your unique data, helping you make informed choices about diet, exercise, and stress management for optimal blood pressure.
-                        </p>
+                <!-- Feature 4: Seamless 1Password Integration -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-transparent hover:border-indigo-500">
+                    <div class="text-indigo-400 text-5xl mb-6 flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+                        </svg>
                     </div>
-                    <div class="mt-6">
-                        <span class="text-sm font-semibold text-purple-300">Data-Driven Wellness</span>
-                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-4 text-center">Seamless 1Password Integration</h3>
+                    <p class="text-gray-400 leading-relaxed text-center">
+                        The breakthrough 1Password integration means your AI agents can securely sign into web apps,
+                        performing tasks efficiently and autonomously without human intervention or password exposure.
+                    </p>
                 </div>
 
-                <!-- Feature 5: Predictive Modeling -->
-                <div class="bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-purple-600 flex flex-col justify-between">
-                    <div>
-                        <div class="text-purple-400 mb-4">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Predictive Modeling</h3>
-                        <p class="text-gray-300 leading-relaxed">
-                            Our advanced AI analyzes your past data to predict potential future blood pressure changes, empowering you to proactively manage your health before issues arise.
-                        </p>
+                <!-- Feature 5: Empower AI Agents like Claude -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-transparent hover:border-indigo-500">
+                    <div class="text-indigo-400 text-5xl mb-6 flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 17h10a2 2 0 002-2V9a2 2 0 00-2-2H7a2 2 0 00-2 2v6a2 2 0 002 2zM12 9v6"/>
+                        </svg>
                     </div>
-                    <div class="mt-6">
-                        <span class="text-sm font-semibold text-purple-300">See Tomorrow's Health Today</span>
-                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-4 text-center">Empower AI Agents like Claude</h3>
+                    <p class="text-gray-400 leading-relaxed text-center">
+                        Give your chosen AI agents the capabilities they need to truly automate tasks.
+                        Our platform provides the secure bridge between AI intelligence and real-world execution.
+                    </p>
                 </div>
 
-                <!-- Feature 6: Seamless Wearable Integration -->
-                <div class="bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-purple-600 flex flex-col justify-between">
-                    <div>
-                        <div class="text-purple-400 mb-4">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Seamless Wearable Integration</h3>
-                        <p class="text-gray-300 leading-relaxed">
-                            Connect effortlessly with leading smart rings and wearables to consolidate all your vital health data in one secure, intelligent platform.
-                        </p>
+                <!-- Feature 6: Boost Productivity & Efficiency -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-transparent hover:border-indigo-500">
+                    <div class="text-indigo-400 text-5xl mb-6 flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
                     </div>
-                    <div class="mt-6">
-                        <span class="text-sm font-semibold text-purple-300">Oura, RingConn & More (Future)</span>
-                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-4 text-center">Boost Productivity & Efficiency</h3>
+                    <p class="text-gray-400 leading-relaxed text-center">
+                        Minimize manual data entry, streamline complex processes, and free up your team to focus on strategic initiatives.
+                        AI-driven automation, simplified.
+                    </p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section class="py-16 md:py-24 bg-gray-950" id="waitlist">
-        <div class="container mx-auto px-4 max-w-2xl text-center">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-8">
-                Join the Health Revolution. Get Early Access.
-            </h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-10">
-                Be among the first to experience the next generation of blood pressure management.
-                Sign up for our exclusive waitlist and receive updates, special offers, and early access opportunities.
+    <!-- Waitlist / Call to Action Section -->
+    <section id="waitlist" class="py-20 bg-gray-900 text-center">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-fluid-h2 font-extrabold text-white mb-8">Ready to Transform Your Workflows?</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
+                Join our exclusive waitlist for early access to SecureAI Workflow Automation.
+                Be among the first to experience secure, intelligent, and efficient business processes.
             </p>
 
-            <form class="bg-gray-800 p-8 md:p-10 rounded-2xl shadow-2xl border border-gray-700 space-y-6">
-                <div class="relative">
-                    <input type="email" id="email" name="email" placeholder="Enter your best email address" required
-                           class="w-full p-4 pr-12 text-lg rounded-xl bg-gray-700 text-white border border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all duration-300 placeholder-gray-400">
-                    <svg class="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path></svg>
+            <form class="bg-gray-800 rounded-xl p-8 shadow-2xl space-y-6 border border-indigo-600">
+                <div>
+                    <label for="name" class="sr-only">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name"
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-300"
+                           required>
                 </div>
-                <button type="submit" class="gradient-button text-white font-bold py-4 px-8 rounded-full shadow-xl text-xl md:text-2xl w-full">
-                    Secure My Spot
+                <div>
+                    <label for="email" class="sr-only">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Business Email"
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-300"
+                           required>
+                </div>
+                <button type="submit"
+                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 text-lg md:text-xl">
+                    Secure My Spot Now!
                 </button>
-                <p class="text-sm text-gray-400">
-                    We respect your privacy. No spam, ever.
+                <p class="text-sm text-gray-500 mt-4">
+                    We respect your privacy. Your information will not be shared.
                 </p>
             </form>
-
-            <!-- Reinforce urgency -->
-            <div class="mt-12 text-center">
-                <p class="text-xl md:text-2xl font-semibold text-yellow-300 animate-pulse-yellow">
-                    Don't Miss Out! The Future of Your Health is Just a Click Away.
-                </p>
-            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 border-t border-gray-800">
-        <div class="container mx-auto px-4 text-center text-gray-400 text-sm">
-            <p>&copy; 2024 Elite Health Intelligence. All rights reserved.</p>
-            <p class="mt-2">Disclaimer: This platform is for informational and management purposes only and does not replace professional medical advice. Always consult with a healthcare professional for diagnosis and treatment.</p>
+    <footer class="py-10 bg-gray-950 text-center text-gray-500 text-sm">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2023 SecureAI. All rights reserved.</p>
+            <p class="mt-2">Built with trust and innovation.</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
+    <!-- Countdown Timer JavaScript -->
     <script>
-        // Set the date we're counting down to (e.g., 7 days from now)
-        const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 7); // Set to 7 days from now
-        const finalCountdownTime = countdownDate.getTime();
+        const daysElement = document.getElementById('days');
+        const hoursElement = document.getElementById('hours');
+        const minutesElement = document.getElementById('minutes');
+        const secondsElement = document.getElementById('seconds');
+        const countdownContainer = document.getElementById('countdown');
 
-        const updateCountdown = () => {
+        // Set the countdown target to 7 days from when the page loads
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 7); // Adjust days as needed
+
+        function updateCountdown() {
             const now = new Date().getTime();
-            const distance = finalCountdownTime - now;
+            const distance = countdownDate - now;
 
             // Time calculations for days, hours, minutes and seconds
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -236,23 +273,23 @@
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Display the result in the corresponding elements
-            document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
-            document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
-            document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
-            document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+            // Display the result, ensuring two digits
+            daysElement.innerHTML = String(days).padStart(2, '0');
+            hoursElement.innerHTML = String(hours).padStart(2, '0');
+            minutesElement.innerHTML = String(minutes).padStart(2, '0');
+            secondsElement.innerHTML = String(seconds).padStart(2, '0');
 
-            // If the countdown is over, write some text 
+            // If the countdown is over
             if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = '<span class="col-span-4 text-xl md:text-2xl text-red-500 font-semibold">Waitlist Closed!</span>';
-                document.getElementById("countdown").previousElementSibling.innerHTML = 'Early Access Period Has Ended!';
+                clearInterval(countdownInterval);
+                countdownContainer.innerHTML = `<span class="text-lg md:text-xl lg:text-2xl text-red-500 font-bold">Offer Expired!</span>`;
             }
-        };
+        }
 
         // Update the countdown every 1 second
-        const x = setInterval(updateCountdown, 1000);
-        updateCountdown(); // Initial call to display immediately
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        // Initial call to display immediately on page load
+        updateCountdown();
     </script>
 </body>
 </html>
