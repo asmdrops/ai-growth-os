@@ -3,242 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Persona Amplification: Go Beyond Basic AI Video for Sales & Marketing</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Nexus API - Your Gateway to EU Android AI & Search Data</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Custom styles for dark mode and hero overlay */
         body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         }
         .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            position: relative;
-            background-attachment: fixed; /* For a subtle parallax effect */
+            background-repeat: no-repeat;
         }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Slightly darker overlay for premium feel and text readability */
+        .dark-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Slightly darker overlay for better text contrast */
         }
-        .gradient-button {
-            background-image: linear-gradient(to right, #6366F1, #9333EA); /* Indigo to Purple */
-            transition: all 0.3s ease;
+        .btn-primary {
+            @apply bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1;
         }
-        .gradient-button:hover {
-            background-image: linear-gradient(to right, #4F46E5, #7E22CE); /* Darker shades on hover */
-            transform: translateY(-2px) scale(1.02);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-        .feature-card {
-            transition: all 0.3s ease;
-            transform: translateY(0);
-        }
-        .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-            border-color: #A78BFA; /* Light purple border on hover */
-        }
-        .form-input:focus {
-            border-color: #8B5CF6; /* Purple-500 */
-            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.5); /* Purple-500 with opacity */
+        .btn-secondary {
+            @apply bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white leading-relaxed antialiased">
+<body class="bg-gray-900 text-white antialiased">
 
     <!-- Hero Section -->
-    <section class="hero-bg h-screen flex items-center justify-center text-center">
-        <div class="hero-overlay absolute inset-0 w-full h-full"></div>
-        <div class="container mx-auto px-4 relative z-10 py-16 lg:py-0">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 animate-pulse">
-                Amplify Your Digital Persona. <br class="hidden md:block"/> Supercharge Outreach.
+    <header class="relative hero-bg min-h-screen flex items-center justify-center">
+        <div class="absolute inset-0 dark-overlay"></div>
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto py-20">
+            <span class="inline-block bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase mb-4 tracking-wide shadow-md">EU Mandate Unlocked</span>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 drop-shadow-lg">
+                Unlock EU Android's <span class="text-indigo-400">Open AI & Search Data</span>
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl font-medium mb-8 max-w-4xl mx-auto opacity-90 text-gray-200">
-                Go beyond mere AI-generated videos. Create a hyper-realistic AI avatar of yourself and deploy <span class="text-purple-300 font-semibold">hundreds of personalized video messages</span> at scale for sales and marketing.
-                <span class="block mt-4 font-bold text-indigo-300">This isn't just starring in your own AI video—it's owning the conversation.</span>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Simplify compliance, accelerate innovation. Our API Gateway provides a unified, developer-friendly interface to Google's newly mandated open functionalities.
             </p>
-
-            <div class="mb-10">
-                <a href="#waitlist" class="gradient-button text-white font-bold py-4 px-10 rounded-full text-xl sm:text-2xl inline-block shadow-lg uppercase tracking-wide">
-                    Join the Exclusive Waitlist!
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+                <a href="#waitlist" class="btn-primary">
+                    Join the Early Access Waitlist
+                </a>
+                <a href="#features" class="btn-secondary">
+                    Discover Features
                 </a>
             </div>
 
             <!-- Limited Time Countdown -->
-            <div class="bg-gray-800 bg-opacity-80 backdrop-filter backdrop-blur-md rounded-xl p-6 sm:p-8 md:p-10 max-w-xl mx-auto shadow-2xl border border-purple-500 animate-fade-in-up">
-                <p class="text-lg sm:text-xl font-bold mb-4 text-purple-300 uppercase tracking-wider">Early Access Window Closes In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-6 md:space-x-8">
+            <div class="bg-gradient-to-r from-indigo-700 to-purple-800 p-6 rounded-xl shadow-2xl max-w-xl mx-auto text-center border-2 border-indigo-500 transform transition-all hover:scale-105 duration-300">
+                <p class="text-sm uppercase tracking-wide text-indigo-200 mb-3">Limited-Time Early Bird Access Window Closes In:</p>
+                <div id="countdown" class="flex justify-center items-center text-4xl sm:text-5xl font-bold gap-4 text-white">
                     <div class="flex flex-col items-center">
-                        <span id="days" class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-indigo-400">00</span>
-                        <span class="text-sm sm:text-base text-gray-400 uppercase mt-1">Days</span>
+                        <span id="days">00</span>
+                        <span class="text-sm font-normal text-indigo-200">Days</span>
                     </div>
-                    <div class="text-4xl sm:text-5xl md:text-6xl text-gray-500">:</div>
+                    <span class="text-indigo-400">:</span>
                     <div class="flex flex-col items-center">
-                        <span id="hours" class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-indigo-400">00</span>
-                        <span class="text-sm sm:text-base text-gray-400 uppercase mt-1">Hours</span>
+                        <span id="hours">00</span>
+                        <span class="text-sm font-normal text-indigo-200">Hours</span>
                     </div>
-                    <div class="text-4xl sm:text-5xl md:text-6xl text-gray-500">:</div>
+                    <span class="text-indigo-400">:</span>
                     <div class="flex flex-col items-center">
-                        <span id="minutes" class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-indigo-400">00</span>
-                        <span class="text-sm sm:text-base text-gray-400 uppercase mt-1">Minutes</span>
+                        <span id="minutes">00</span>
+                        <span class="text-sm font-normal text-indigo-200">Minutes</span>
                     </div>
-                    <div class="text-4xl sm:text-5xl md:text-6xl text-gray-500">:</div>
+                    <span class="text-indigo-400">:</span>
                     <div class="flex flex-col items-center">
-                        <span id="seconds" class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-indigo-400">00</span>
-                        <span class="text-sm sm:text-base text-gray-400 uppercase mt-1">Seconds</span>
+                        <span id="seconds">00</span>
+                        <span class="text-sm font-normal text-indigo-200">Seconds</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-24 bg-gray-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 text-indigo-400">
-                Persona Amplification: Your AI Video Advantage Beyond Google Vids
+    <section id="features" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-16 text-white leading-tight">
+                Nexus API: Your Competitive Edge in the <span class="text-indigo-400">New EU Market</span>
             </h2>
-            <p class="text-xl sm:text-2xl text-center max-w-4xl mx-auto mb-16 text-gray-300">
-                While current trends like Google Vids offer a glimpse into AI video, we provide superior personalization, deep analytics, and robust workflow automation essential for modern sales and marketing.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
-                <!-- Feature 1: AI Avatar Creation -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 feature-card">
-                    <div class="text-5xl text-purple-400 mb-6 group-hover:scale-110 transform transition-transform">✨</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Capture Your True Essence</h3>
-                    <p class="text-gray-300 leading-relaxed">Upload a short video of yourself once to create a hyper-realistic AI avatar that perfectly mirrors your unique expressions, gestures, and tone.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Feature 1: Regulatory Compliance -->
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 group">
+                    <div class="text-indigo-500 mb-4 text-5xl group-hover:text-indigo-400 transition-colors duration-300">
+                        &#128274; <!-- Lock icon -->
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Compliance Simplified</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Effortlessly navigate complex EU regulations. Our gateway ensures full compliance with Google's mandated data and AI sharing requirements, letting you focus purely on innovation.
+                    </p>
                 </div>
-                <!-- Feature 2: Hyper-Personalized Templates -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 feature-card">
-                    <div class="text-5xl text-indigo-400 mb-6 group-hover:scale-110 transform transition-transform">✍️</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Library of Strategic Templates</h3>
-                    <p class="text-gray-300 leading-relaxed">Leverage a powerful library of pre-designed, hyper-personalized templates for every sales & marketing use case: 'Thank You' videos, 'Product Demo Intros', 'Cold Outreach', and more.</p>
+                <!-- Feature 2: Unified API Access -->
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 group">
+                    <div class="text-indigo-500 mb-4 text-5xl group-hover:text-indigo-400 transition-colors duration-300">
+                        &#128279; <!-- Link icon -->
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Unified API Access</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        One API, countless possibilities. Access Google's open search data, AI models, and Android functionalities through a single, consistent, and well-documented interface.
+                    </p>
                 </div>
-                <!-- Feature 3: Scalable Video Generation -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 feature-card">
-                    <div class="text-5xl text-blue-400 mb-6 group-hover:scale-110 transform transition-transform">🚀</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Generate Hundreds in Clicks</h3>
-                    <p class="text-gray-300 leading-relaxed">Mass-personalization simplified. Generate unique, custom videos for hundreds of prospects with just a few clicks, without sacrificing authenticity.</p>
+                <!-- Feature 3: Accelerated Development -->
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 group">
+                    <div class="text-indigo-500 mb-4 text-5xl group-hover:text-indigo-400 transition-colors duration-300">
+                        &#128640; <!-- Rocket icon -->
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Accelerate Development</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Drastically cut down integration time. Our developer-friendly SDKs and comprehensive documentation get your services live in days, not months. Launch faster, iterate quicker.
+                    </p>
                 </div>
-                <!-- Feature 4: CRM & Email Integration -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 feature-card">
-                    <div class="text-5xl text-green-400 mb-6 group-hover:scale-110 transform transition-transform">🔗</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Seamless Workflow Integration</h3>
-                    <p class="text-gray-300 leading-relaxed">Integrate effortlessly with your existing CRM (Salesforce, HubSpot, etc.) and email platforms (Outreach, Salesloft) to streamline delivery and follow-up.</p>
+                <!-- Feature 4: Scalable Infrastructure -->
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 group">
+                    <div class="text-indigo-500 mb-4 text-5xl group-hover:text-indigo-400 transition-colors duration-300">
+                        &#128200; <!-- Chart increasing icon -->
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Scalable & Reliable</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Built for growth, from startup to enterprise. Our robust cloud-native architecture ensures high availability, low latency, and infinite scalability to match your demands.
+                    </p>
                 </div>
-                <!-- Feature 5: Advanced Analytics -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 feature-card">
-                    <div class="text-5xl text-yellow-400 mb-6 group-hover:scale-110 transform transition-transform">📊</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Actionable Performance Insights</h3>
-                    <p class="text-gray-300 leading-relaxed">Go beyond simple views. Get granular data on video opens, watch rates, engagement hotspots, and conversion metrics to continuously optimize your strategy.</p>
+                <!-- Feature 5: EU Market Focused -->
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 group">
+                    <div class="text-indigo-500 mb-4 text-5xl group-hover:text-indigo-400 transition-colors duration-300">
+                        &#127466;&#127482; <!-- EU Flag emojis -->
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">EU Market Focused</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Specifically designed for the European market, addressing the unique challenges and opportunities presented by the Digital Markets Act (DMA). Gain a localized competitive edge.
+                    </p>
                 </div>
-                <!-- Feature 6: Automation & Productivity -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 feature-card">
-                    <div class="text-5xl text-red-400 mb-6 group-hover:scale-110 transform transition-transform">⚙️</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Robust Workflow Automation</h3>
-                    <p class="text-gray-300 leading-relaxed">Set up triggers and rules to automate video creation and delivery based on prospect actions, lifecycle stages, or campaign goals, saving countless hours.</p>
+                <!-- Feature 6: Open Search & AI Access -->
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 group">
+                    <div class="text-indigo-500 mb-4 text-5xl group-hover:text-indigo-400 transition-colors duration-300">
+                        &#128187; <!-- Computer icon -->
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Open Search & AI Access</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Leverage newly accessible Google search data and advanced AI functionalities on Android. Create innovative rival search engines, virtual assistants, and AI-powered apps.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-24 bg-gray-800">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-8 text-purple-400">
-                Ready to Revolutionize Your Outreach?
+    <section id="waitlist" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+                Be Among the First to Innovate
             </h2>
-            <p class="text-xl sm:text-2xl text-center max-w-3xl mx-auto mb-12 text-gray-300">
-                Join our exclusive waitlist for early access, special launch pricing, and a firsthand look at the future of personalized video engagement.
-                <span class="block mt-2 font-semibold text-indigo-300">Limited spots are filling up fast!</span>
+            <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                Join our exclusive waitlist for early access to the Nexus API. Secure a significant head start in the newly opened EU Android market.
             </p>
-
-            <form class="max-w-xl mx-auto bg-gray-900 p-8 sm:p-10 rounded-xl shadow-2xl border border-purple-600 animate-fade-in">
-                <div class="mb-6">
-                    <label for="name" class="block text-gray-300 text-lg font-medium mb-3">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" class="form-input w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white text-lg transition-colors duration-200" required>
+            <form class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700 max-w-xl mx-auto">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name</label>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-700" placeholder="Your Name" required>
                 </div>
-                <div class="mb-8">
-                    <label for="email" class="block text-gray-300 text-lg font-medium mb-3">Your Work Email</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@company.com" class="form-input w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white text-lg transition-colors duration-200" required>
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Work Email</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-700" placeholder="your@company.com" required>
                 </div>
-                <button type="submit" class="gradient-button w-full text-white font-bold py-4 px-6 rounded-lg text-xl sm:text-2xl shadow-xl uppercase tracking-wide">
-                    Secure My Early Access Now
+                <div class="mb-8 text-left">
+                    <label for="company" class="block text-gray-300 text-sm font-bold mb-2">Company Name (Optional)</label>
+                    <input type="text" id="company" name="company" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-700" placeholder="Your Company Inc.">
+                </div>
+                <button type="submit" class="btn-primary w-full py-4 text-xl">
+                    Secure My Early Access Spot
                 </button>
-                <p class="text-center text-gray-400 text-sm mt-6">
-                    We value your privacy. Your information is secure and will not be shared.
-                    <a href="#" class="text-purple-400 hover:text-purple-300 hover:underline ml-1">Privacy Policy</a>
-                </p>
+                <p class="text-xs text-gray-400 mt-4">We respect your privacy. No spam, ever. Your information is safe with us.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 border-t border-gray-700">
-        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
-            &copy; <span id="current-year"></span> AI Video Persona Amplification. All rights reserved.
+    <footer class="bg-gray-800 py-10">
+        <div class="container mx-auto px-4 text-center text-gray-500">
+            &copy; <span id="current-year"></span> Nexus API. All rights reserved.
         </div>
     </footer>
 
-    <!-- Countdown Script -->
+    <!-- JavaScript for Countdown Timer and Current Year -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the target date for the countdown (e.g., 7 days from page load)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Dynamically set for 7 days from now
+        // Set the date we're counting down to (e.g., 30 days from now for an "early bird" window)
+        const countDownDate = new Date();
+        countDownDate.setDate(countDownDate.getDate() + 30); // 30 days from today
+        countDownDate.setHours(23, 59, 59, 999); // End of the day for consistency
 
-            // Update the countdown every 1 second
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
+        // Update the count down every 1 second
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate.getTime() - now;
 
-                // Time calculations for days, hours, minutes and seconds
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Display the result in the corresponding elements
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+            // Output the result in elements with respective IDs, ensuring two digits
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-                // If the countdown is over, display a message
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<p class='text-xl sm:text-2xl font-bold text-red-500'>Early Access Closed!</p>";
-                }
-            }, 1000);
+            // If the count down is over
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "<p class='text-red-400'>Early Access Window Has Closed!</p>";
+                // Optionally disable the waitlist button or change its text here
+            }
+        }, 1000);
 
-            // Set current year for footer
-            document.getElementById("current-year").textContent = new Date().getFullYear();
-        });
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
-
-    <!-- Basic animations for better UX (optional, but good for premium feel) -->
-    <style>
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.01); }
-        }
-        .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
-        .animate-fade-in-up { animation: fadeInUp 1s ease-out forwards; }
-        .animate-pulse { animation: pulse 2s infinite ease-in-out; }
-    </style>
 
 </body>
 </html>
