@@ -3,223 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus API - Your Gateway to EU Android AI & Search Data</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>AegisAI - EU-Compliant Android AI Integration Suite</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Favicon (Shield emoji) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
     <style>
-        /* Custom styles for dark mode and hero overlay */
+        /* Custom styles for dark mode aesthetic and hero image */
         body {
             font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            background-color: #0d1117; /* Deep dark background */
+            color: #c9d1d9; /* Light gray text */
         }
-        .hero-bg {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+        .hero-section {
+            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            background-attachment: fixed; /* For a subtle parallax effect */
+            position: relative;
         }
-        .dark-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Slightly darker overlay for better text contrast */
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
         }
-        .btn-primary {
-            @apply bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1;
-        }
-        .btn-secondary {
-            @apply bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1;
+        /* Custom scroll-behavior for smooth anchor linking */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
-    <!-- Hero Section -->
-    <header class="relative hero-bg min-h-screen flex items-center justify-center">
-        <div class="absolute inset-0 dark-overlay"></div>
-        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto py-20">
-            <span class="inline-block bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase mb-4 tracking-wide shadow-md">EU Mandate Unlocked</span>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 drop-shadow-lg">
-                Unlock EU Android's <span class="text-indigo-400">Open AI & Search Data</span>
-            </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
-                Simplify compliance, accelerate innovation. Our API Gateway provides a unified, developer-friendly interface to Google's newly mandated open functionalities.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-                <a href="#waitlist" class="btn-primary">
-                    Join the Early Access Waitlist
-                </a>
-                <a href="#features" class="btn-secondary">
-                    Discover Features
-                </a>
-            </div>
-
-            <!-- Limited Time Countdown -->
-            <div class="bg-gradient-to-r from-indigo-700 to-purple-800 p-6 rounded-xl shadow-2xl max-w-xl mx-auto text-center border-2 border-indigo-500 transform transition-all hover:scale-105 duration-300">
-                <p class="text-sm uppercase tracking-wide text-indigo-200 mb-3">Limited-Time Early Bird Access Window Closes In:</p>
-                <div id="countdown" class="flex justify-center items-center text-4xl sm:text-5xl font-bold gap-4 text-white">
-                    <div class="flex flex-col items-center">
-                        <span id="days">00</span>
-                        <span class="text-sm font-normal text-indigo-200">Days</span>
-                    </div>
-                    <span class="text-indigo-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours">00</span>
-                        <span class="text-sm font-normal text-indigo-200">Hours</span>
-                    </div>
-                    <span class="text-indigo-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes">00</span>
-                        <span class="text-sm font-normal text-indigo-200">Minutes</span>
-                    </div>
-                    <span class="text-indigo-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds">00</span>
-                        <span class="text-sm font-normal text-indigo-200">Seconds</span>
-                    </div>
-                </div>
-            </div>
+    <!-- Header for Brand Name -->
+    <header class="py-4 px-4 sm:px-6 lg:px-8 bg-gray-900 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-500">AegisAI</a>
+            <!-- Navigation links could be added here if needed for larger sites -->
         </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero-section relative py-20 md:py-32 lg:py-48 flex items-center justify-center text-center">
+        <div class="hero-overlay"></div>
+        <div class="relative z-10 max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6">
+                Unlock True Android AI: The <span class="text-indigo-400">EU-Compliant</span> SDK for Unrivaled Access.
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
+                Leverage the new EU mandate. AegisAI provides developers with an SDK and APIs to seamlessly integrate powerful AI models, gain deep Android system access, and compete directly with Gemini.
+            </p>
+            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-lg">
+                Join the Exclusive Waitlist & Get Early Access!
+            </a>
+            <div id="countdown-hero" class="mt-6 text-gray-300 font-medium text-lg">
+                Limited-Time Offer Ends In: <span id="days" class="font-bold text-white">00</span>d <span id="hours" class="font-bold text-white">00</span>h <span id="minutes" class="font-bold text-white">00</span>m <span id="seconds" class="font-bold text-white">00</span>s
+            </div>
+        </div>
+    </section>
+
     <!-- Features Section -->
-    <section id="features" class="py-20 bg-gray-800">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-16 text-white leading-tight">
-                Nexus API: Your Competitive Edge in the <span class="text-indigo-400">New EU Market</span>
+    <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-900 text-center">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-12">
+                Built for the New Era of Android AI Development.
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <!-- Feature 1: Regulatory Compliance -->
-                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 group">
-                    <div class="text-indigo-500 mb-4 text-5xl group-hover:text-indigo-400 transition-colors duration-300">
-                        &#128274; <!-- Lock icon -->
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Compliance Simplified</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Effortlessly navigate complex EU regulations. Our gateway ensures full compliance with Google's mandated data and AI sharing requirements, letting you focus purely on innovation.
-                    </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-600 transition-all duration-300 group">
+                    <div class="text-indigo-400 text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">💡</div>
+                    <h3 class="text-xl font-bold text-white mb-3">EU-Mandate Compliant SDK</h3>
+                    <p class="text-gray-300">Integrate with confidence, knowing your AI adheres to all new EU regulations from day one. Future-proof your applications.</p>
                 </div>
-                <!-- Feature 2: Unified API Access -->
-                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 group">
-                    <div class="text-indigo-500 mb-4 text-5xl group-hover:text-indigo-400 transition-colors duration-300">
-                        &#128279; <!-- Link icon -->
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Unified API Access</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        One API, countless possibilities. Access Google's open search data, AI models, and Android functionalities through a single, consistent, and well-documented interface.
-                    </p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-600 transition-all duration-300 group">
+                    <div class="text-indigo-400 text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🔗</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Seamless Android System Access</h3>
+                    <p class="text-gray-300">Tap into core Android functionalities and data (where permitted) with purpose-built APIs for richer, more context-aware AI.</p>
                 </div>
-                <!-- Feature 3: Accelerated Development -->
-                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 group">
-                    <div class="text-indigo-500 mb-4 text-5xl group-hover:text-indigo-400 transition-colors duration-300">
-                        &#128640; <!-- Rocket icon -->
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Accelerate Development</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Drastically cut down integration time. Our developer-friendly SDKs and comprehensive documentation get your services live in days, not months. Launch faster, iterate quicker.
-                    </p>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-600 transition-all duration-300 group">
+                    <div class="text-indigo-400 text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🚀</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Boost Performance & Analytics</h3>
+                    <p class="text-gray-300">Gain deep insights into your AI model's efficiency on Android, optimize resource usage, and ensure a superior user experience.</p>
                 </div>
-                <!-- Feature 4: Scalable Infrastructure -->
-                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 group">
-                    <div class="text-indigo-500 mb-4 text-5xl group-hover:text-indigo-400 transition-colors duration-300">
-                        &#128200; <!-- Chart increasing icon -->
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Scalable & Reliable</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Built for growth, from startup to enterprise. Our robust cloud-native architecture ensures high availability, low latency, and infinite scalability to match your demands.
-                    </p>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-600 transition-all duration-300 group">
+                    <div class="text-indigo-400 text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🛡️</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Built-in Compliance Checks</h3>
+                    <p class="text-gray-300">Automated tools to help you identify and resolve potential compliance issues, keeping your models future-proof and risk-free.</p>
                 </div>
-                <!-- Feature 5: EU Market Focused -->
-                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 group">
-                    <div class="text-indigo-500 mb-4 text-5xl group-hover:text-indigo-400 transition-colors duration-300">
-                        &#127466;&#127482; <!-- EU Flag emojis -->
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">EU Market Focused</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Specifically designed for the European market, addressing the unique challenges and opportunities presented by the Digital Markets Act (DMA). Gain a localized competitive edge.
-                    </p>
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-600 transition-all duration-300 group">
+                    <div class="text-indigo-400 text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">⭐</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Visibility in the AegisAI Marketplace</h3>
+                    <p class="text-gray-300">Showcase your innovative, compliant AI models to a global audience and stand out against proprietary solutions like Gemini.</p>
                 </div>
-                <!-- Feature 6: Open Search & AI Access -->
-                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 group">
-                    <div class="text-indigo-500 mb-4 text-5xl group-hover:text-indigo-400 transition-colors duration-300">
-                        &#128187; <!-- Computer icon -->
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Open Search & AI Access</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Leverage newly accessible Google search data and advanced AI functionalities on Android. Create innovative rival search engines, virtual assistants, and AI-powered apps.
-                    </p>
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-600 transition-all duration-300 group">
+                    <div class="text-indigo-400 text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🛠️</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Developer-Centric Tooling</h3>
+                    <p class="text-gray-300">Comprehensive documentation, robust error handling, and a supportive community to accelerate your development cycle.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-20 bg-gray-900">
-        <div class="container mx-auto px-4 max-w-3xl text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
-                Be Among the First to Innovate
+    <section id="waitlist" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-800 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-8">
+                Secure Your Spot at the Forefront of Android AI.
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-                Join our exclusive waitlist for early access to the Nexus API. Secure a significant head start in the newly opened EU Android market.
+            <p class="text-lg text-gray-300 mb-10">
+                Limited opportunities for early access to AegisAI. Don't miss out on shaping the future of compliant AI on Android and gaining a competitive edge.
             </p>
-            <form class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700 max-w-xl mx-auto">
+            <div id="waitlist-countdown" class="bg-gray-900 p-6 rounded-lg shadow-inner mb-8 border border-indigo-600">
+                <p class="text-lg font-semibold text-indigo-400 mb-4">This exclusive early access opportunity ends in:</p>
+                <div class="flex justify-center space-x-4 text-white text-4xl font-bold">
+                    <div><span id="waitlist-days">00</span><p class="text-sm font-normal text-gray-400">Days</p></div>
+                    <div><span id="waitlist-hours">00</span><p class="text-sm font-normal text-gray-400">Hours</p></div>
+                    <div><span id="waitlist-minutes">00</span><p class="text-sm font-normal text-gray-400">Minutes</p></div>
+                    <div><span id="waitlist-seconds">00</span><p class="text-sm font-normal text-gray-400">Seconds</p></div>
+                </div>
+            </div>
+
+            <form class="bg-gray-900 p-8 rounded-lg shadow-2xl border border-gray-700 max-w-xl mx-auto">
                 <div class="mb-6 text-left">
                     <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name</label>
-                    <input type="text" id="name" name="name" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-700" placeholder="Your Name" required>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700" placeholder="John Doe" required>
                 </div>
                 <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Work Email</label>
-                    <input type="email" id="email" name="email" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-700" placeholder="your@company.com" required>
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700" placeholder="john.doe@example.com" required>
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="company" class="block text-gray-300 text-sm font-bold mb-2">Company Name (Optional)</label>
-                    <input type="text" id="company" name="company" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-700" placeholder="Your Company Inc.">
-                </div>
-                <button type="submit" class="btn-primary w-full py-4 text-xl">
-                    Secure My Early Access Spot
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-lg">
+                    Join the Waitlist Now!
                 </button>
-                <p class="text-xs text-gray-400 mt-4">We respect your privacy. No spam, ever. Your information is safe with us.</p>
+                <p class="text-xs text-gray-400 mt-4">We respect your privacy. Your data will be used to notify you about AegisAI updates.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-10">
-        <div class="container mx-auto px-4 text-center text-gray-500">
-            &copy; <span id="current-year"></span> Nexus API. All rights reserved.
+    <footer class="bg-gray-900 py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-800 text-center text-gray-400">
+        <div class="max-w-7xl mx-auto">
+            <p>&copy; 2024 AegisAI. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a>
+                <a href="#" class="hover:text-white transition-colors duration-200">Contact Us</a>
+            </div>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer and Current Year -->
+    <!-- JavaScript for Countdown Timer -->
     <script>
-        // Set the date we're counting down to (e.g., 30 days from now for an "early bird" window)
-        const countDownDate = new Date();
-        countDownDate.setDate(countDownDate.getDate() + 30); // 30 days from today
-        countDownDate.setHours(23, 59, 59, 999); // End of the day for consistency
+        function setupCountdown(targetDate, displayElements) {
+            const countdownInterval = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
 
-        // Update the count down every 1 second
-        const x = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countDownDate.getTime() - now;
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    if (displayElements.days) displayElements.days.innerHTML = "EXPIRED";
+                    if (displayElements.hours) displayElements.hours.innerHTML = "";
+                    if (displayElements.minutes) displayElements.minutes.innerHTML = "";
+                    if (displayElements.seconds) displayElements.seconds.innerHTML = "";
+                    
+                    // For the waitlist form, you might want to disable it or change CTA
+                    const waitlistForm = document.querySelector('#waitlist form button');
+                    if(waitlistForm) {
+                        waitlistForm.disabled = true;
+                        waitlistForm.textContent = "Waitlist Closed";
+                        waitlistForm.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
+                        waitlistForm.classList.add('bg-gray-500', 'cursor-not-allowed');
+                    }
+                    return;
+                }
 
-            // Time calculations for days, hours, minutes and seconds
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Output the result in elements with respective IDs, ensuring two digits
-            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                if (displayElements.days) displayElements.days.innerHTML = String(days).padStart(2, '0');
+                if (displayElements.hours) displayElements.hours.innerHTML = String(hours).padStart(2, '0');
+                if (displayElements.minutes) displayElements.minutes.innerHTML = String(minutes).padStart(2, '0');
+                if (displayElements.seconds) displayElements.seconds.innerHTML = String(seconds).padStart(2, '0');
+            }, 1000);
+        }
 
-            // If the count down is over
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "<p class='text-red-400'>Early Access Window Has Closed!</p>";
-                // Optionally disable the waitlist button or change its text here
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set target date for the countdown (e.g., 30 days from now)
+            // For a real scenario, replace this with a fixed date like: new Date("YYYY-MM-DDTHH:MM:SS").getTime()
+            const thirtyDaysFromNow = new Date();
+            thirtyDaysFromNow.setDate(thirtyDaysFromNow.getDate() + 30); 
+            const targetTime = thirtyDaysFromNow.getTime();
+
+            // Countdown for Hero Section
+            const heroCountdownElements = {
+                days: document.getElementById('days'),
+                hours: document.getElementById('hours'),
+                minutes: document.getElementById('minutes'),
+                seconds: document.getElementById('seconds'),
+            };
+            if (heroCountdownElements.days) { 
+                setupCountdown(targetTime, heroCountdownElements);
             }
-        }, 1000);
 
-        // Set current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+            // Countdown for Waitlist Form Section
+            const waitlistCountdownElements = {
+                days: document.getElementById('waitlist-days'),
+                hours: document.getElementById('waitlist-hours'),
+                minutes: document.getElementById('waitlist-minutes'),
+                seconds: document.getElementById('waitlist-seconds'),
+            };
+            if (waitlistCountdownElements.days) { 
+                setupCountdown(targetTime, waitlistCountdownElements);
+            }
+        });
     </script>
-
 </body>
 </html>
