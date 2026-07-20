@@ -3,193 +3,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ultimate Insider's Guide to Samsung Galaxy Z Fold 8 & Flip 8</title>
-    <meta name="description" content="Unlock the full potential of your new Samsung Galaxy Z Fold 8 & Flip 8 with our comprehensive insider's guide. Pre-order for exclusive access to leaks, comparisons, and mastery tips before Galaxy Unpacked 2026.">
+    <title>WordPress Shield: Real-Time Vulnerability Protection & Instant Patching</title>
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Google Fonts for Inter - Modern Premium Look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for animations and premium font */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');
+        /* Custom styles for premium dark mode aesthetics and specific elements */
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', sans-serif; /* A modern, clean font choice */
+            -webkit-font-smoothing: antialiased; /* Better font rendering */
+            -moz-osx-font-smoothing: grayscale; /* Better font rendering */
+            overflow-x: hidden; /* Prevent horizontal scroll on smaller screens */
         }
-        @keyframes fadeInSlow {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        /* Hero Section Background with Overlay */
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            z-index: 0;
         }
-        @keyframes slideInUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.9) 100%); /* Dark gradient overlay */
+            z-index: -1;
         }
-        @keyframes bounceOnce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
+        /* Gradient for buttons for premium feel */
+        .btn-gradient {
+            background-image: linear-gradient(to right, #6366f1, #a855f7); /* Indigo to Purple */
+            transition: all 0.3s ease;
         }
-        .animate-fade-in-slow { animation: fadeInSlow 1.5s ease-out forwards; }
-        .animate-slide-in-up { animation: slideInUp 1s ease-out forwards; }
-        .animate-fade-in { animation: fadeInSlow 1s ease-out forwards; }
-        .delay-200 { animation-delay: 0.2s; }
-        .animate-bounce-once { animation: bounceOnce 1.5s ease-in-out 0.5s 1; } /* Runs once after a delay */
+        .btn-gradient:hover {
+            background-image: linear-gradient(to right, #4f46e5, #9333ea); /* Darker shades on hover */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+        }
+        /* Countdown specific styles for visual distinction */
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 60px; /* Ensures consistent size */
+            padding: 8px;
+            background-color: rgba(255, 255, 255, 0.08); /* Semi-transparent white for dark mode */
+            border-radius: 8px;
+            margin: 0 4px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+        }
+        .countdown-value {
+            font-size: 1.8rem; /* Responsive sizing below */
+            font-weight: 700;
+            color: #e2e8f0; /* text-gray-200 */
+        }
+        .countdown-label {
+            font-size: 0.8rem; /* Responsive sizing below */
+            color: #cbd5e1; /* text-gray-300 */
+            text-transform: uppercase;
+        }
+
+        /* Responsive adjustments for countdown text */
+        @media (min-width: 640px) { /* sm */
+            .countdown-value { font-size: 2.2rem; }
+            .countdown-label { font-size: 0.9rem; }
+            .countdown-item { min-width: 70px; padding: 10px; margin: 0 6px; }
+        }
+        @media (min-width: 768px) { /* md */
+            .countdown-value { font-size: 2.8rem; }
+            .countdown-label { font-size: 1rem; }
+            .countdown-item { min-width: 80px; padding: 12px; margin: 0 8px; }
+        }
     </style>
 </head>
-<body class="bg-gray-950 text-white antialiased">
+<body class="bg-gray-900 text-gray-100">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <img src="https://source.unsplash.com/1600x900/?A,tech" alt="Samsung Galaxy Z Fold 8 & Flip 8 devices concept" class="absolute inset-0 w-full h-full object-cover object-center z-0 animate-fade-in-slow">
-        
-        <!-- Dark overlay for text readability, with a subtle gradient -->
-        <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/70 to-transparent z-10"></div>
-        <div class="absolute inset-0 bg-black opacity-50 z-10"></div> 
-
-        <div class="relative z-20 flex flex-col items-center justify-center p-4 max-w-5xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 animate-slide-in-up">
-                Master Your Galaxy: The Ultimate Insider's Guide to Z Fold 8 & Flip 8
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center relative py-16 px-4 md:px-8">
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <p class="text-indigo-400 uppercase tracking-wide font-semibold text-sm sm:text-base mb-3 md:mb-4">
+                As seen on TechCrunch: "Hackers exploiting recently patched WordPress bugs..."
+            </p>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mb-6">
+                WordPress Under Attack: <span class="text-purple-400">Instant Protection</span> from Critical Exploits
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl animate-fade-in delay-200">
-                Unlock <span class="text-indigo-400">Hidden Potential</span>, Maximize <span class="text-indigo-400">Every Feature</span>, and Navigate Your New Device Like a Pro.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Hackers are weaponizing recently patched vulnerabilities, putting <strong class="text-red-400">millions of WordPress sites at risk</strong>. Our SaaS delivers real-time monitoring, instant virtual patching, and expert incident response *before* it's too late.
             </p>
-            <a href="#waitlist-form" class="bg-gradient-to-r from-indigo-600 to-purple-700 hover:from-indigo-700 hover:to-purple-800 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out animate-bounce-once">
-                Secure Your VIP Insider Access Now!
-            </a>
-            <p class="text-sm mt-4 text-gray-400">Pre-launch exclusive access & bonuses for early birds!</p>
-        </div>
-    </section>
-
-    <!-- Pre-Order/Launch Countdown Section -->
-    <section class="bg-gray-900 py-16 md:py-24 text-center border-b border-gray-800">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-indigo-400 mb-6">
-                Galaxy Unpacked 2026 is Coming! 🎉
-            </h2>
-            <p class="text-xl text-gray-300 mb-8">
-                Don't miss out on vital insights to decide, prepare, and dominate with your next foldable.
-            </p>
-
-            <!-- Countdown Timer Placeholder (Requires JavaScript to be dynamic) -->
-            <div id="countdown" class="flex justify-center items-center gap-4 sm:gap-8 mb-10">
-                <div class="flex flex-col items-center">
-                    <span class="text-4xl sm:text-6xl font-extrabold text-white" id="days">XX</span>
-                    <span class="text-sm sm:text-base text-gray-400">Days</span>
+            
+            <!-- Limited Time Offer & Countdown -->
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-700 rounded-lg p-6 sm:p-8 md:p-10 mb-12 shadow-xl border border-purple-500 max-w-2xl mx-auto">
+                <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-white">
+                    Limited Time Early Adopter Offer!
+                </h3>
+                <p class="text-xl sm:text-2xl text-white mb-6">
+                    Join the Waitlist now and <span class="font-bold text-yellow-300">lock in 20% OFF Lifetime Access!</span>
+                </p>
+                <div id="countdown" class="flex justify-center items-center text-white mb-8">
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="days">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <span class="text-4xl font-bold mx-2">:</span>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <span class="text-4xl font-bold mx-2">:</span>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <span class="text-4xl font-bold mx-2">:</span>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
                 </div>
-                <div class="text-4xl sm:text-6xl text-indigo-500 font-extrabold">:</div>
-                <div class="flex flex-col items-center">
-                    <span class="text-4xl sm:text-6xl font-extrabold text-white" id="hours">XX</span>
-                    <span class="text-sm sm:text-base text-gray-400">Hours</span>
-                </div>
-                <div class="text-4xl sm:text-6xl text-indigo-500 font-extrabold">:</div>
-                <div class="flex flex-col items-center">
-                    <span class="text-4xl sm:text-6xl font-extrabold text-white" id="minutes">XX</span>
-                    <span class="text-sm sm:text-base text-gray-400">Minutes</span>
-                </div>
-                <div class="text-4xl sm:text-6xl text-indigo-500 font-extrabold">:</div>
-                <div class="flex flex-col items-center">
-                    <span class="text-4xl sm:text-6xl font-extrabold text-white" id="seconds">XX</span>
-                    <span class="text-sm sm:text-base text-gray-400">Seconds</span>
-                </div>
+                <a href="#waitlist-form" class="btn-gradient inline-block text-white text-xl sm:text-2xl font-bold py-4 px-10 rounded-full shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-400 focus:ring-opacity-75 transition-all duration-300 ease-in-out">
+                    Secure My WordPress Site Now!
+                </a>
             </div>
-            <p class="text-lg text-red-400 font-semibold mb-6">
-                Limited-time pre-order bonus available ONLY until launch! 🚀
-            </p>
-            <p class="text-sm text-gray-500 mb-8">
-                <!-- IMPORTANT: A functional countdown requires JavaScript. This HTML provides the structure. -->
-                <!-- To make this countdown dynamic, you would typically use JavaScript targeting elements like `id="days"`, `id="hours"`, etc., -->
-                <!-- calculating the time until a specific date (e.g., July 29, 2026) and updating these spans every second. -->
-            </p>
-            <a href="#waitlist-form" class="bg-white text-gray-900 font-bold py-3 px-8 rounded-full text-lg shadow-xl hover:bg-gray-200 transition-colors duration-300">
-                Get Pre-Launch Access & Exclusive Bonuses!
-            </a>
+            
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="bg-gray-950 py-16 md:py-24 border-b border-gray-800">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">
-                What You'll Gain: <span class="text-indigo-400">Unmatched Insights</span>
+    <section class="py-16 sm:py-20 md:py-24 bg-gray-900 px-4 md:px-8">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white mb-12 sm:mb-16">
+                Unrivaled Protection for Your WordPress Business
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Pre-Launch Features -->
-                <div class="bg-gray-800 rounded-lg p-6 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 border border-gray-700">
-                    <h3 class="text-xl font-semibold mb-4 text-indigo-300 flex items-center"><span class="mr-2 text-2xl">🔍</span> Pre-Launch Deep Dive:</h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li><span class="mr-2 text-lg">💡</span> Exclusive Leaks & Rumors Analysis: Get ahead with insider info.</li>
-                        <li><span class="mr-2 text-lg">🆚</span> Fold 8 vs. Flip 8 vs. Your Current Device: Comprehensive comparison to guide your upgrade decision.</li>
-                        <li><span class="mr-2 text-lg">💰</span> "Should You Upgrade?" Financial & Feature Breakdown: Make a confident, informed choice.</li>
-                        <li><span class="mr-2 text-lg">🎯</span> Competitor Analysis: See how Samsung stacks up against the latest foldable tech.</li>
-                    </ul>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
+                
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-5xl text-purple-400 mb-6">🚀</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Real-Time Threat Detection</h3>
+                    <p class="text-gray-300 text-lg">
+                        Our lightweight, intelligent monitoring system continuously scans for actively exploited critical vulnerabilities (CVEs). Get alerted the moment your site is targeted, giving you precious seconds to act.
+                    </p>
                 </div>
-                <!-- Post-Launch Mastery -->
-                <div class="bg-gray-800 rounded-lg p-6 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 border border-gray-700">
-                    <h3 class="text-xl font-semibold mb-4 text-purple-300 flex items-center"><span class="mr-2 text-2xl">🚀</span> Post-Launch Mastery:</h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li><span class="mr-2 text-lg">⚙️</span> Optimal Settings Configuration: Squeeze every ounce of performance and battery life.</li>
-                        <li><span class="mr-2 text-lg">📱</span> Best Apps for Foldables: Curated list to enhance productivity & entertainment on unique displays.</li>
-                        <li><span class="mr-2 text-lg">🛠️</span> Advanced Troubleshooting & Maintenance: Keep your cutting-edge device pristine.</li>
-                        <li><span class="mr-2 text-lg">🌟</span> Leveraging Flex Titanium & New Form Factors: Expert tips for unique usage scenarios.</li>
-                    </ul>
+                
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-5xl text-indigo-400 mb-6">🛡️</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Instant Virtual Patching</h3>
+                    <p class="text-gray-300 text-lg">
+                        Don't wait for official updates. Our system deploys immediate virtual patches via WAF rules or file-level remediation, neutralizing threats *before* they can compromise your site. Proactive defense redefined.
+                    </p>
                 </div>
-                <!-- Exclusive Recommendations -->
-                <div class="bg-gray-800 rounded-lg p-6 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 border border-gray-700">
-                    <h3 class="text-xl font-semibold mb-4 text-green-300 flex items-center"><span class="mr-2 text-2xl">🎁</span> Exclusive Recommendations:</h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li><span class="mr-2 text-lg">🛍️</span> Curated Accessory Guide: Cases, chargers, styluses optimized for Fold/Flip 8.</li>
-                        <li><span class="mr-2 text-lg">🔒</span> Security & Privacy Best Practices: Protect your data and device from evolving threats.</li>
-                        <li><span class="mr-2 text-lg">📸</span> Pro Camera Tips & Tricks: Capture stunning photos and videos with advanced features.</li>
-                        <li><span class="mr-2 text-lg">🔮</span> Future-Proofing Your Investment: Longevity tips and software update strategies for sustained value.</li>
-                    </ul>
+                
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-5xl text-yellow-400 mb-6">🔍</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Proactive Vulnerability Scanning</h3>
+                    <p class="text-gray-300 text-lg">
+                        Beyond real-time, we actively scan your WordPress installation for specific, high-risk CVEs hackers are known to exploit. Identify weaknesses and fix them before they become emergencies.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-5xl text-green-400 mb-6">📖</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Detailed Incident Response Guide</h3>
+                    <p class="text-gray-300 text-lg">
+                        Should the worst happen, our comprehensive, easy-to-follow guide walks you through every step of incident response. Minimize damage, restore trust, and get back online faster.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-5xl text-pink-400 mb-6">⚡</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Zero Performance Impact</h3>
+                    <p class="text-gray-300 text-lg">
+                        Engineered for efficiency, our monitoring is so lightweight you won't even notice it's there. Maintain your WordPress site's lightning-fast speed and exceptional user experience.
+                    </p>
+                </div>
+
+                <!-- Feature 6 (Summary / Value Proposition) -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 flex flex-col justify-center items-center text-center">
+                    <div class="text-5xl text-blue-400 mb-6">🌐</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Comprehensive WordPress Security</h3>
+                    <p class="text-gray-300 text-lg">
+                        Beyond just patching, we provide a holistic security posture, giving you peace of mind in an increasingly hostile online world. Focus on your business, we'll handle the threats.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist/Pre-Order Form -->
-    <section id="waitlist-form" class="bg-gray-900 py-16 md:py-24">
-        <div class="container mx-auto px-4 max-w-2xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-6 text-indigo-400">
-                Don't Get Left Behind.
+    <!-- Waitlist Form Section -->
+    <section id="waitlist-form" class="py-16 sm:py-20 md:py-24 bg-gray-800 px-4 md:px-8">
+        <div class="container mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8">
+                Don't Be a Statistic. Secure Your WordPress Future.
             </h2>
-            <p class="text-xl text-gray-300 text-center mb-10">
-                Join our VIP Waitlist for The Ultimate Insider's Guide to Z Fold 8 & Flip 8 and gain exclusive early access, special launch discounts, and bonus content.
+            <p class="text-lg sm:text-xl text-gray-300 mb-10">
+                Join our exclusive waitlist for early access to the most advanced WordPress vulnerability protection. Early adopters receive special pricing and priority onboarding. Protect your revenue and reputation.
             </p>
-            <form class="bg-gray-800 p-8 rounded-lg shadow-2xl border border-gray-700">
-                <div class="mb-6">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Full Name" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700 transition-colors duration-200" required>
+
+            <form class="bg-gray-900 p-8 sm:p-10 rounded-xl shadow-2xl border border-gray-700">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 bg-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200" required>
                 </div>
-                <div class="mb-6">
+                <div class="mb-6 text-left">
                     <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700 transition-colors duration-200" required>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 bg-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200" required>
                 </div>
-                <div class="mb-8">
-                    <label for="deviceInterest" class="block text-gray-300 text-sm font-bold mb-2">Which device are you most interested in?</label>
-                    <div class="relative">
-                        <select id="deviceInterest" name="deviceInterest" class="block appearance-none w-full bg-gray-700 border border-gray-600 text-gray-100 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200">
-                            <option value="both" class="bg-gray-800">Both Z Fold 8 & Z Flip 8</option>
-                            <option value="fold8" class="bg-gray-800">Galaxy Z Fold 8</option>
-                            <option value="flip8" class="bg-gray-800">Galaxy Z Flip 8</option>
-                            <option value="undecided" class="bg-gray-800">Undecided / Researching</option>
-                        </select>
-                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
-                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                        </div>
-                    </div>
+                <div class="mb-8 text-left">
+                    <label for="website" class="block text-gray-300 text-sm font-bold mb-2">Your WordPress Website URL (Optional)</label>
+                    <input type="url" id="website" name="website" placeholder="https://mywordpresssite.com" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 bg-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200">
                 </div>
-                <button type="submit" class="w-full bg-gradient-to-r from-indigo-600 to-purple-700 hover:from-indigo-700 hover:to-purple-800 text-white font-bold py-4 px-4 rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out text-xl">
-                    Join VIP Waitlist & Get Exclusive Bonuses!
+                <button type="submit" class="btn-gradient inline-block text-white text-xl font-bold py-4 px-12 rounded-full shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-400 focus:ring-opacity-75 transition-all duration-300 ease-in-out w-full sm:w-auto">
+                    Join the Early Access Waitlist
                 </button>
-                <p class="text-xs text-gray-500 mt-4 text-center">Your privacy is important to us. We'll never share your email. Unsubscribe anytime.</p>
+                <p class="text-gray-400 text-sm mt-6">
+                    We respect your privacy. Your information will not be shared.
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm border-t border-gray-800">
+    <footer class="bg-gray-900 py-10 text-center text-gray-500 text-sm border-t border-gray-800">
         <div class="container mx-auto px-4">
-            <p>&copy; 2024 Digital Education Authority. All rights reserved. | <a href="#" class="text-indigo-400 hover:underline">Privacy Policy</a> | <a href="#" class="text-indigo-400 hover:underline">Terms of Service</a></p>
+            <p>&copy; 2023 WordPress Shield. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 transition-colors duration-200">Privacy Policy</a> | 
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 transition-colors duration-200">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
+    <!-- Countdown Timer JavaScript (Inline for "ONLY raw HTML" requirement) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (e.g., 7 days from now for this limited time offer)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Offer valid for 7 days from page load
+
+            // Update the count down every 1 second
+            const x = setInterval(function() {
+
+                // Get today's date and time
+                const now = new Date().getTime();
+
+                // Find the distance between now and the count down date
+                const distance = countDownDate.getTime() - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Output the result in elements with respective IDs, ensuring two digits
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+                // If the count down is over, display "Offer Expired!"
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<p class='text-xl sm:text-2xl text-red-400 font-bold'>Offer Expired!</p>";
+                }
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
