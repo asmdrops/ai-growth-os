@@ -1,260 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System-Level AI Integration for Android | EU Compliant SDK & API</title>
-    <meta name="description" content="Empower your AI assistants with our B2B SaaS platform: standardized SDK/API for system-level Android integration, including built-in EU data compliance modules. Targeting AI startups & enterprise.">
+    <title>Ethos AI - Privacy-First AI for Service Teams</title>
+    <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Favicon (Privacy Shield Emoji) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .btn-gradient {
-            background-image: linear-gradient(to right, #6366f1, #a855f7); /* Indigo 500 to Purple 500 */
-            transition: all 0.3s ease;
-        }
-        .btn-gradient:hover {
-            background-image: linear-gradient(to right, #a855f7, #6366f1);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
-        }
-        .dark-input {
-            background-color: #2d3748; /* bg-gray-800 */
-            border-color: #4a5568; /* border-gray-600 */
-            color: #e2e8f0; /* text-gray-200 */
-        }
-        .dark-input:focus {
-            border-color: #6366f1; /* border-indigo-500 */
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.5); /* ring-indigo-500 */
-            outline: none;
+        /* Custom styles for the hero background image */
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="font-sans antialiased bg-gray-900 text-gray-100">
 
     <!-- Hero Section -->
-    <header class="relative w-full min-h-screen flex items-center justify-center text-center overflow-hidden p-4">
-        <div class="absolute inset-0 bg-[url('https://source.unsplash.com/1600x900/?A,tech')] bg-cover bg-center bg-no-repeat"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent"></div>
-        <div class="relative z-10 max-w-lg md:max-w-3xl lg:max-w-5xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight">
-                Achieve <span class="text-indigo-400">System-Level AI Integration</span> on Android. Seamlessly. Compliantly.
+    <header class="relative hero-background h-screen flex items-center justify-center">
+        <!-- Dark overlay for readability -->
+        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
+                AI for Service Teams, Built on Trust. <span class="text-indigo-400">Not Surveillance.</span>
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Break free from app boundaries. Our SDK & API enables your AI assistant to become the <em class="font-semibold text-white">default choice</em> on Android,
-                with built-in modules for <span class="text-purple-300">EU Data Regulation & Privacy</span>.
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8">
+                The future of customer service is AI-powered. But shouldn't privacy and agent empowerment be its foundation?
             </p>
-
-            <!-- Limited Time Countdown -->
-            <div class="bg-indigo-700/30 backdrop-blur-sm p-4 sm:p-6 rounded-xl shadow-lg mb-8 mx-auto max-w-xs sm:max-w-sm md:max-w-md border border-indigo-500 transform hover:scale-105 transition duration-300">
-                <p class="text-lg sm:text-xl font-bold text-indigo-200 mb-2">Early Access Closes In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 text-white text-3xl sm:text-4xl font-bold">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-indigo-600/50 rounded-lg">00</span>
-                        <span class="text-xs sm:text-sm font-normal text-indigo-200 mt-1">Days</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-indigo-600/50 rounded-lg">00</span>
-                        <span class="text-xs sm:text-sm font-normal text-indigo-200 mt-1">Hours</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-indigo-600/50 rounded-lg">00</span>
-                        <span class="text-xs sm:text-sm font-normal text-indigo-200 mt-1">Minutes</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-indigo-600/50 rounded-lg">00</span>
-                        <span class="text-xs sm:text-sm font-normal text-indigo-200 mt-1">Seconds</span>
-                    </div>
-                </div>
-            </div>
-
-            <a href="#waitlist" class="btn-gradient inline-flex items-center justify-center px-8 py-3 sm:px-10 sm:py-4 text-lg sm:text-xl font-semibold rounded-full shadow-lg hover:shadow-xl transform transition duration-300 ease-in-out">
-                Join the Early Access Waitlist &rarr;
+            <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform transition duration-300 hover:scale-105">
+                Join the Private Beta Waitlist
             </a>
-            <p class="text-sm sm:text-base text-gray-400 mt-4">For AI Startups & Enterprise AI Solution Providers</p>
+            <p class="text-sm text-gray-400 mt-4">
+                Limited Spots Available – Secure your team's privacy-first advantage.
+            </p>
         </div>
     </header>
 
-    <!-- Features Section -->
-    <section class="py-16 sm:py-24 bg-gray-900 relative">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 text-white">
-                Overcome Integration Roadblocks. Embrace Regulation.
+    <!-- Trend & Problem Section -->
+    <section class="py-16 md:py-24 bg-gray-900 text-center px-4">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                The AI Revolution in Service: A Double-Edged Sword?
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+            <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                From the Genius Bar to your contact center, AI is now summarizing conversations. The efficiency gains are undeniable. Yet, the question looms:
+                <span class="font-semibold text-indigo-400">At what cost to employee trust and customer privacy?</span>
+            </p>
+            <p class="text-md text-gray-400">
+                While some embrace monitoring, Ethos AI is built on a different principle: <span class="text-white font-medium">privacy-first, empowering your team</span>, and ensuring robust regulatory compliance.
+            </p>
+        </div>
+    </section>
 
-                <!-- Feature 1: Standardized SDK & API -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="flex items-center mb-4">
-                        <svg class="h-8 w-8 sm:h-10 sm:w-10 text-indigo-400 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                        </svg>
-                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Standardized SDK & API</h3>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
-                        Integrate your AI assistant into Android's core with our robust, battle-tested SDK and API.
-                        Designed for simplicity, built for massive scale. Eliminate fragmented development complexities.
-                    </p>
+    <!-- Features Section -->
+    <section class="py-16 md:py-24 bg-gray-800 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">
+                Ethos AI: Empowering Your Team, Protecting Your Data
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Feature 1: Customizable Privacy Controls -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-4xl mb-4">🛡️</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Customizable Privacy Controls</h3>
+                    <p class="text-gray-300">Define what data gets processed, when, and by whom. Granular controls ensure compliance with even the strictest regulations (GDPR, HIPAA, CCPA).</p>
                 </div>
 
-                <!-- Feature 2: System-Level Default -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="flex items-center mb-4">
-                        <svg class="h-8 w-8 sm:h-10 sm:w-10 text-indigo-400 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1l-.75-3M3 13h18M3 17h18M6 10v-4a2 2 0 012-2h8a2 2 0 012 2v4M5 13h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2z" />
-                        </svg>
-                        <h3 class="text-xl sm:text-2xl font-semibold text-white">System-Level Default Status</h3>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
-                        Go beyond app-confined experiences. Our platform empowers your AI to be configured as the
-                        <em class="font-medium text-white">native default assistant</em> across Android, akin to proprietary assistants.
-                    </p>
+                <!-- Feature 2: Intelligent Transcription & Summarization -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-4xl mb-4">✍️</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Intelligent Transcription & Summarization</h3>
+                    <p class="text-gray-300">Accurate AI transcripts of calls, chats, or in-person interactions, instantly summarized for your CRM – saving agents hours.</p>
                 </div>
 
-                <!-- Feature 3: EU Data Compliance Built-In -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="flex items-center mb-4">
-                        <svg class="h-8 w-8 sm:h-10 sm:w-10 text-indigo-400 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.276a1.125 1.125 0 011.233 1.968l-1.396 1.396-.453-1.049-.395-.911.954-.954 1.04-.453zM15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                        <h3 class="text-xl sm:text-2xl font-semibold text-white">EU Data Compliance Modules</h3>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
-                        Navigate the escalating EU regulatory landscape (GDPR, DMA, AI Act) with ease.
-                        Our platform integrates modules to ensure your AI assistant is <em class="font-medium text-white">compliant by design</em>, avoiding headaches.
-                    </p>
+                <!-- Feature 3: Transparent Consent Frameworks -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-4xl mb-4">✅</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Transparent Consent Frameworks</h3>
+                    <p class="text-gray-300">Built-in tools to ensure clear, explicit consent from customers and clear communication with agents about data usage.</p>
                 </div>
 
-                <!-- Feature 4: Accelerated Market Entry -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="flex items-center mb-4">
-                        <svg class="h-8 w-8 sm:h-10 sm:w-10 text-indigo-400 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Accelerated Market Entry</h3>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
-                        Drastically cut down development cycles and compliance hurdles. Go to market faster with a platform
-                        that handles the complex technical and regulatory heavy lifting for your team.
-                    </p>
+                <!-- Feature 4: Real-time Agent Knowledge Base -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-4xl mb-4">🧠</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Real-time Agent Knowledge Base</h3>
+                    <p class="text-gray-300">Empower agents with instant access to relevant information and responses during live interactions, improving first-contact resolution.</p>
                 </div>
 
-                <!-- Feature 5: Scalability & Reliability -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="flex items-center mb-4">
-                        <svg class="h-8 w-8 sm:h-10 sm:w-10 text-indigo-400 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0m18 0H3m9 8a8 8 0 01-8-8H5m8 8a8 8 0 008-8V6m-1 4a5 5 0 00-5-5h-.5A2.5 2.5 0 006 6.5v.5A2.5 2.5 0 018.5 9H9" />
-                        </svg>
-                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Scale with Enterprise Confidence</h3>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
-                        Built for enterprise-grade performance, security, and scalability. Focus your resources on refining
-                        your AI's intelligence, and leave the infrastructure to us.
-                    </p>
+                <!-- Feature 5: Actionable Post-Interaction Summaries -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-4xl mb-4">📊</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Actionable Post-Interaction Summaries</h3>
+                    <p class="text-gray-300">Automatically generate concise summaries for CRM, follow-up, and internal reporting, freeing agents to focus on customers, not paperwork.</p>
                 </div>
 
-                <!-- Feature 6: Developer-First Experience -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="flex items-center mb-4">
-                        <svg class="h-8 w-8 sm:h-10 sm:w-10 text-indigo-400 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4h-3m3 4h3m-6 2l-2 4m2-4l2 4m-2 4h4m-4 0a2 2 0 100 4m0-4h-3m3 4h3" />
-                        </svg>
-                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Developer-First Experience</h3>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
-                        Benefit from comprehensive documentation, intuitive developer tools, and dedicated expert support
-                        to ensure a smooth and efficient integration journey for your development team.
-                    </p>
+                <!-- Feature 6: Compliance-Ready & Audit-Proof -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-4xl mb-4">⚖️</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Compliance-Ready & Audit-Proof</h3>
+                    <p class="text-gray-300">Designed with strict regulatory environments in mind, providing a clear audit trail for data access and processing, giving you peace of mind.</p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Call to Action / Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-24 bg-gray-800 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-gradient-to-br from-indigo-900 to-purple-900"></div>
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6 text-white">
-                Ready to make your AI assistant a <span class="text-purple-400">System Default?</span>
+    <!-- Waitlist / CTA Section -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gray-900 px-4">
+        <div class="max-w-2xl mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                Secure Your Spot: Private Beta Waitlist
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-                Join our exclusive waitlist for early access to the SDK, API documentation, and compliance modules. Secure your competitive edge.
+            <p class="text-lg text-gray-300 mb-8">
+                Join our exclusive waitlist for early access to Ethos AI. Limited spots available to ensure a focused, privacy-first rollout. Don't miss out on empowering your team responsibly.
             </p>
 
-            <form action="#" method="POST" class="max-w-md mx-auto bg-gray-900 p-6 sm:p-8 rounded-xl shadow-2xl border border-gray-700 space-y-6">
+            <!-- Countdown Timer -->
+            <div class="bg-indigo-700 text-white p-4 rounded-lg mb-8 shadow-md">
+                <p class="text-sm font-semibold mb-2 uppercase tracking-wide">Limited-Time Offer Ends In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-3xl font-bold">
+                    <div class="flex flex-col items-center">
+                        <span id="days">00</span>
+                        <span class="text-sm font-normal">Days</span>
+                    </div>
+                    <span>:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours">00</span>
+                        <span class="text-sm font-normal">Hours</span>
+                    </div>
+                    <span>:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes">00</span>
+                        <span class="text-sm font-normal">Minutes</span>
+                    </div>
+                    <span>:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds">00</span>
+                        <span class="text-sm font-normal">Seconds</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Waitlist Form -->
+            <form class="space-y-6">
                 <div>
-                    <label for="company-name" class="sr-only">Company Name</label>
-                    <input type="text" name="company-name" id="company-name" placeholder="Your Company Name"
-                           class="w-full px-4 py-3 sm:px-5 sm:py-3.5 rounded-lg dark-input text-base sm:text-lg focus:ring-2 focus:ring-indigo-500 transition duration-200" required>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required
+                           class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-400">
                 </div>
                 <div>
-                    <label for="email" class="sr-only">Email Address</label>
-                    <input type="email" name="email" id="email" placeholder="Your Business Email"
-                           class="w-full px-4 py-3 sm:px-5 sm:py-3.5 rounded-lg dark-input text-base sm:text-lg focus:ring-2 focus:ring-indigo-500 transition duration-200" required>
+                    <input type="email" id="email" name="email" placeholder="Work Email Address" required
+                           class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-400">
                 </div>
                 <div>
-                    <button type="submit" class="btn-gradient w-full px-8 py-3 sm:py-4 text-lg sm:text-xl font-bold rounded-full shadow-lg hover:shadow-xl transform transition duration-300 ease-in-out">
-                        Secure Your Spot Now!
-                    </button>
+                    <input type="text" id="company" name="company" placeholder="Company Name (Optional)"
+                           class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-400">
                 </div>
-                <p class="text-xs sm:text-sm text-gray-400 mt-4">
-                    We respect your privacy. No spam, just essential updates on seamless AI integration.
-                </p>
+                <button type="submit"
+                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-md text-lg shadow-lg transform transition duration-300 hover:scale-105">
+                    Join the Waitlist Now!
+                </button>
             </form>
+            <p class="text-xs text-gray-500 mt-4">
+                We respect your privacy. Your information will not be shared.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-10">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
-            <p>&copy; 2023 [Your Company Name]. All rights reserved.</p>
-            <p class="mt-2 text-xs sm:text-sm">
-                <a href="#" class="text-indigo-400 hover:text-indigo-300">Privacy Policy</a>
-                <span class="mx-2">|</span>
-                <a href="#" class="text-indigo-400 hover:text-indigo-300">Terms of Service</a>
-            </p>
+    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm border-t border-gray-700">
+        <div class="max-w-6xl mx-auto px-4">
+            &copy; 2023 Ethos AI. All rights reserved. | <a href="#" class="hover:text-white">Privacy Policy</a> | <a href="#" class="hover:text-white">Terms of Service</a>
         </div>
     </footer>
 
-    <!-- Countdown Script -->
+    <!-- JavaScript for Countdown Timer -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the date we're counting down to (7 days from page load as an example)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (e.g., 7 days from now for a limited time offer)
             const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); 
-            // For a fixed date, use: const countDownDate = new Date("Dec 25, 2023 00:00:00").getTime();
-
-            const countdownElement = document.getElementById("countdown");
-            const daysElement = document.getElementById("days");
-            const hoursElement = document.getElementById("hours");
-            const minutesElement = document.getElementById("minutes");
-            const secondsElement = document.getElementById("seconds");
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set for 7 days from the current date
 
             // Update the count down every 1 second
             const x = setInterval(function() {
+                // Get today's date and time
                 const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
 
-                if (distance < 0) {
-                    clearInterval(x);
-                    if (countdownElement) {
-                        countdownElement.innerHTML = "<span class='text-red-400 text-xl sm:text-2xl'>Early Access Closed!</span>";
-                    }
-                    // Optionally: Disable the waitlist form or change CTA here
-                    const waitlistButton = document.querySelector('#waitlist button[type="submit"]');
-                    if (waitlistButton) {
-                        waitlistButton.textContent = "Request More Info";
-                        waitlistButton.classList.remove('btn-gradient');
-                        waitlistButton.classList.add('bg-gray-600', 'cursor-not-allowed');
-                        waitlistButton.disabled = true;
-                    }
-                    return;
-                }
+                // Find the distance between now and the count down date
+                const distance = countDownDate.getTime() - now;
 
                 // Time calculations for days, hours, minutes and seconds
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -262,13 +200,21 @@
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                if (daysElement) daysElement.innerHTML = String(days).padStart(2, '0');
-                if (hoursElement) hoursElement.innerHTML = String(hours).padStart(2, '0');
-                if (minutesElement) minutesElement.innerHTML = String(minutes).padStart(2, '0');
-                if (secondsElement) secondsElement.innerHTML = String(seconds).padStart(2, '0');
+                // Display the result in the corresponding elements, ensuring two digits
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-            }, 1000);
+                // If the count down is finished, display "EXPIRED" and clear the interval
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "EXPIRED";
+                    // Optionally, you could disable the form or change the CTA button text here
+                }
+            }, 1000); // Update every 1 second
         });
     </script>
+
 </body>
 </html>
