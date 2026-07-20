@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethos AI - Privacy-First AI for Service Teams</title>
-    <!-- Tailwind CSS CDN -->
+    <title>ConvergeAI: Consent-Driven AI for SMB Customer Interactions</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Favicon (Privacy Shield Emoji) -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for the hero background image */
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-900 text-gray-100;
+        }
         .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
@@ -18,203 +21,161 @@
         }
     </style>
 </head>
-<body class="font-sans antialiased bg-gray-900 text-gray-100">
+<body class="antialiased">
 
-    <!-- Hero Section -->
-    <header class="relative hero-background h-screen flex items-center justify-center">
-        <!-- Dark overlay for readability -->
-        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
-                AI for Service Teams, Built on Trust. <span class="text-indigo-400">Not Surveillance.</span>
-            </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8">
-                The future of customer service is AI-powered. But shouldn't privacy and agent empowerment be its foundation?
-            </p>
-            <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform transition duration-300 hover:scale-105">
-                Join the Private Beta Waitlist
-            </a>
-            <p class="text-sm text-gray-400 mt-4">
-                Limited Spots Available – Secure your team's privacy-first advantage.
-            </p>
-        </div>
+    <!-- Header (Optional, but good for branding) -->
+    <header class="py-4 px-4 sm:px-6 lg:px-8 bg-gray-900 sticky top-0 z-50 shadow-lg">
+        <nav class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="text-2xl font-bold text-white tracking-tight">ConvergeAI</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#features" class="text-gray-300 hover:text-indigo-400 transition duration-300">Features</a>
+                <a href="#waitlist" class="text-gray-300 hover:text-indigo-400 transition duration-300">Waitlist</a>
+            </div>
+            <a href="#waitlist" class="md:hidden py-2 px-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg shadow-md transition duration-300 font-medium">Join Now</a>
+        </nav>
     </header>
 
-    <!-- Trend & Problem Section -->
-    <section class="py-16 md:py-24 bg-gray-900 text-center px-4">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-                The AI Revolution in Service: A Double-Edged Sword?
+    <!-- Hero Section -->
+    <section class="hero-background relative h-screen flex items-center justify-center text-center">
+        <div class="absolute inset-0 bg-black bg-opacity-70 backdrop-blur-sm"></div>
+        <div class="relative z-10 p-4 sm:p-8 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mb-6 animate-pulse">
+                ConvergeAI: Smart Conversations, Securely Summarized.
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 font-light max-w-3xl mx-auto">
+                Inspired by industry leaders, ConvergeAI brings <span class="text-indigo-300 font-semibold">consent-driven AI transcription and summarization</span> to your small-to-medium service business. Elevate every customer interaction with privacy at its core.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#waitlist" class="w-full sm:w-auto px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white text-lg font-bold rounded-xl shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    Join the Early Access Waitlist
+                </a>
+                <a href="#features" class="w-full sm:w-auto px-8 py-4 bg-gray-800 hover:bg-gray-700 text-white text-lg font-medium rounded-xl shadow-lg transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Trend Section -->
+    <section class="py-16 sm:py-24 bg-gray-900 text-center px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-50 mb-6">
+                The Future of Customer Service is AI-Powered, but What About Privacy?
             </h2>
             <p class="text-lg text-gray-300 leading-relaxed mb-8">
-                From the Genius Bar to your contact center, AI is now summarizing conversations. The efficiency gains are undeniable. Yet, the question looms:
-                <span class="font-semibold text-indigo-400">At what cost to employee trust and customer privacy?</span>
+                As reported by Gizmodo, even tech giants like Apple are leveraging AI to summarize Genius Bar conversations. This trend highlights a powerful opportunity for efficiency, but also a critical challenge for trust.
             </p>
-            <p class="text-md text-gray-400">
-                While some embrace monitoring, Ethos AI is built on a different principle: <span class="text-white font-medium">privacy-first, empowering your team</span>, and ensuring robust regulatory compliance.
+            <p class="text-xl font-semibold text-indigo-400">
+                ConvergeAI empowers SMBs to harness this innovation, ensuring every interaction is not just efficient, but also explicitly consented and fully transparent.
             </p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-800 px-4">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">
-                Ethos AI: Empowering Your Team, Protecting Your Data
+    <section id="features" class="py-16 sm:py-24 bg-gray-800 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white text-center mb-12 sm:mb-16">
+                Unlock the Power of <span class="text-indigo-400">Informed Service</span>
             </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Feature 1: Customizable Privacy Controls -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-4xl mb-4">🛡️</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Customizable Privacy Controls</h3>
-                    <p class="text-gray-300">Define what data gets processed, when, and by whom. Granular controls ensure compliance with even the strictest regulations (GDPR, HIPAA, CCPA).</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
+                <!-- Feature 1 -->
+                <div class="bg-gray-900 p-6 sm:p-8 rounded-2xl shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 group">
+                    <div class="text-5xl mb-4 transition duration-300 group-hover:text-indigo-400">🔒</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Consent-Driven Interactions</h3>
+                    <p class="text-gray-300 text-lg">Ensure every AI-summarized interaction is backed by explicit customer consent. Customizable privacy controls put you in charge.</p>
                 </div>
-
-                <!-- Feature 2: Intelligent Transcription & Summarization -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-4xl mb-4">✍️</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Intelligent Transcription & Summarization</h3>
-                    <p class="text-gray-300">Accurate AI transcripts of calls, chats, or in-person interactions, instantly summarized for your CRM – saving agents hours.</p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-900 p-6 sm:p-8 rounded-2xl shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 group">
+                    <div class="text-5xl mb-4 transition duration-300 group-hover:text-indigo-400">📝</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Intelligent AI Summarization</h3>
+                    <p class="text-gray-300 text-lg">Automatically generate concise, actionable summaries from customer conversations, saving hours on manual notes.</p>
                 </div>
-
-                <!-- Feature 3: Transparent Consent Frameworks -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-4xl mb-4">✅</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Transparent Consent Frameworks</h3>
-                    <p class="text-gray-300">Built-in tools to ensure clear, explicit consent from customers and clear communication with agents about data usage.</p>
+                <!-- Feature 3 -->
+                <div class="bg-gray-900 p-6 sm:p-8 rounded-2xl shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 group">
+                    <div class="text-5xl mb-4 transition duration-300 group-hover:text-indigo-400">🎤</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Accurate On-Demand Transcription</h3>
+                    <p class="text-gray-300 text-lg">High-fidelity transcription of spoken words, accessible securely when you need it for review or training.</p>
                 </div>
-
-                <!-- Feature 4: Real-time Agent Knowledge Base -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-4xl mb-4">🧠</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Real-time Agent Knowledge Base</h3>
-                    <p class="text-gray-300">Empower agents with instant access to relevant information and responses during live interactions, improving first-contact resolution.</p>
+                <!-- Feature 4 -->
+                <div class="bg-gray-900 p-6 sm:p-8 rounded-2xl shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 group">
+                    <div class="text-5xl mb-4 transition duration-300 group-hover:text-indigo-400">💡</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Enhanced Agent Training & QA</h3>
+                    <p class="text-gray-300 text-lg">Identify best practices, pinpoint areas for improvement, and streamline onboarding with real-world interaction insights.</p>
                 </div>
-
-                <!-- Feature 5: Actionable Post-Interaction Summaries -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-4xl mb-4">📊</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Actionable Post-Interaction Summaries</h3>
-                    <p class="text-gray-300">Automatically generate concise summaries for CRM, follow-up, and internal reporting, freeing agents to focus on customers, not paperwork.</p>
+                <!-- Feature 5 -->
+                <div class="bg-gray-900 p-6 sm:p-8 rounded-2xl shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 group">
+                    <div class="text-5xl mb-4 transition duration-300 group-hover:text-indigo-400">🛡️</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Enterprise-Grade Data Security</h3>
+                    <p class="text-gray-300 text-lg">Your data is protected with advanced encryption and robust security protocols, keeping sensitive information safe.</p>
                 </div>
-
-                <!-- Feature 6: Compliance-Ready & Audit-Proof -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-4xl mb-4">⚖️</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Compliance-Ready & Audit-Proof</h3>
-                    <p class="text-gray-300">Designed with strict regulatory environments in mind, providing a clear audit trail for data access and processing, giving you peace of mind.</p>
+                <!-- Feature 6 -->
+                <div class="bg-gray-900 p-6 sm:p-8 rounded-2xl shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 group">
+                    <div class="text-5xl mb-4 transition duration-300 group-hover:text-indigo-400">✅</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Compliance & Audit Readiness</h3>
+                    <p class="text-gray-300 text-lg">Maintain clear, searchable records of interactions to support compliance requirements and internal audits.</p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / CTA Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gray-900 px-4">
-        <div class="max-w-2xl mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Secure Your Spot: Private Beta Waitlist
+    <!-- Call to Action / Waitlist Section -->
+    <section id="waitlist" class="py-16 sm:py-24 bg-gray-900 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto bg-gray-800 p-8 sm:p-10 rounded-3xl shadow-2xl border border-indigo-700 text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+                Ready to Transform Your Customer Interactions?
             </h2>
+            <p class="text-xl sm:text-2xl text-indigo-400 font-semibold mb-6">
+                Limited Time Offer: Join our waitlist now for <span class="font-extrabold">30% off</span> your first 3 months!
+            </p>
             <p class="text-lg text-gray-300 mb-8">
-                Join our exclusive waitlist for early access to Ethos AI. Limited spots available to ensure a focused, privacy-first rollout. Don't miss out on empowering your team responsibly.
+                Be among the first SMBs to experience a new era of customer service excellence with privacy by design.
             </p>
 
-            <!-- Countdown Timer -->
-            <div class="bg-indigo-700 text-white p-4 rounded-lg mb-8 shadow-md">
-                <p class="text-sm font-semibold mb-2 uppercase tracking-wide">Limited-Time Offer Ends In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-3xl font-bold">
-                    <div class="flex flex-col items-center">
-                        <span id="days">00</span>
-                        <span class="text-sm font-normal">Days</span>
-                    </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours">00</span>
-                        <span class="text-sm font-normal">Hours</span>
-                    </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes">00</span>
-                        <span class="text-sm font-normal">Minutes</span>
-                    </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds">00</span>
-                        <span class="text-sm font-normal">Seconds</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Waitlist Form -->
-            <form class="space-y-6">
+            <form action="#" method="POST" class="space-y-6">
                 <div>
                     <input type="text" id="name" name="name" placeholder="Your Name" required
-                           class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-400">
+                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white text-lg placeholder-gray-400 transition duration-300">
                 </div>
                 <div>
-                    <input type="email" id="email" name="email" placeholder="Work Email Address" required
-                           class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-400">
+                    <input type="text" id="business_name" name="business_name" placeholder="Business Name (e.g., Smith's Auto Repair)" required
+                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white text-lg placeholder-gray-400 transition duration-300">
                 </div>
                 <div>
-                    <input type="text" id="company" name="company" placeholder="Company Name (Optional)"
-                           class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-400">
+                    <input type="email" id="email" name="email" placeholder="Your Business Email" required
+                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white text-lg placeholder-gray-400 transition duration-300">
+                </div>
+                <div>
+                    <select id="industry" name="industry" required
+                            class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white text-lg transition duration-300">
+                        <option value="" disabled selected class="text-gray-400">Select Your Industry (e.g., Clinic, Consulting)</option>
+                        <option value="repair">Local Repair Shop</option>
+                        <option value="clinic">Clinic/Healthcare</option>
+                        <option value="consulting">Consulting Firm</option>
+                        <option value="legal">Legal Services</option>
+                        <option value="financial">Financial Services</option>
+                        <option value="real_estate">Real Estate</option>
+                        <option value="other">Other Service Business</option>
+                    </select>
                 </div>
                 <button type="submit"
-                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-md text-lg shadow-lg transform transition duration-300 hover:scale-105">
-                    Join the Waitlist Now!
+                        class="w-full sm:w-auto px-10 py-4 bg-indigo-600 hover:bg-indigo-700 text-white text-xl font-bold rounded-xl shadow-lg transform hover:scale-105 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800">
+                    Join ConvergeAI Waitlist Now!
                 </button>
             </form>
-            <p class="text-xs text-gray-500 mt-4">
-                We respect your privacy. Your information will not be shared.
+            <p class="mt-8 text-sm text-gray-400">
+                We respect your privacy. Your information will only be used to notify you about ConvergeAI updates and early access.
             </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm border-t border-gray-700">
-        <div class="max-w-6xl mx-auto px-4">
-            &copy; 2023 Ethos AI. All rights reserved. | <a href="#" class="hover:text-white">Privacy Policy</a> | <a href="#" class="hover:text-white">Terms of Service</a>
+    <footer class="py-10 bg-gray-900 text-center text-gray-500 text-sm px-4 sm:px-6 lg:px-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <p>&copy; 2023 ConvergeAI. All rights reserved. | <a href="#" class="hover:text-indigo-400 transition duration-300">Privacy Policy</a> | <a href="#" class="hover:text-indigo-400 transition duration-300">Terms of Service</a></p>
+            <p class="mt-2">Built for the modern SMB, with privacy and efficiency in mind.</p>
         </div>
     </footer>
-
-    <!-- JavaScript for Countdown Timer -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 7 days from now for a limited time offer)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Set for 7 days from the current date
-
-            // Update the count down every 1 second
-            const x = setInterval(function() {
-                // Get today's date and time
-                const now = new Date().getTime();
-
-                // Find the distance between now and the count down date
-                const distance = countDownDate.getTime() - now;
-
-                // Time calculations for days, hours, minutes and seconds
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                // Display the result in the corresponding elements, ensuring two digits
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-                // If the count down is finished, display "EXPIRED" and clear the interval
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "EXPIRED";
-                    // Optionally, you could disable the form or change the CTA button text here
-                }
-            }, 1000); // Update every 1 second
-        });
-    </script>
 
 </body>
 </html>
