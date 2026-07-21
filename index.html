@@ -3,235 +3,292 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Memory Crisis Navigator | Unlock Market Insights & Optimize PC Performance</title>
-    <meta name="description" content="Navigate the escalating RAM & SSD memory crisis with weekly market analyses, future trend forecasts, budget-friendly PC build recommendations, and advanced optimization strategies for your hardware.">
+    <title>Apple LeaseMaster - Master Your Apple Upgrades & Save Thousands</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .hero-bg {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* Provides a subtle parallax effect */
-        }
-        /* Custom scrollbar for dark mode aesthetic */
+        /* Custom scrollbar for a premium dark-mode aesthetic */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #1a202c; /* Dark background */
+            background: #1E293B; /* Tailwind slate-800 */
         }
         ::-webkit-scrollbar-thumb {
-            background: #4a5568; /* Gray thumb */
+            background: #475569; /* Tailwind slate-600 */
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #718096; /* Lighter gray on hover */
+            background: #64748B; /* Tailwind slate-500 */
+        }
+        
+        /* Body background for consistent dark mode */
+        body {
+            background-color: #0F172A; /* Tailwind slate-950 */
+            color: #E2E8F0; /* Tailwind slate-200 */
+        }
+
+        /* Hero overlay for better text readability over background image */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.7) 0%, rgba(15, 23, 42, 0.95) 100%); /* Adjusted for slate-950 base */
+            z-index: 10;
+        }
+
+        /* Specific styles for the countdown timer segments */
+        .countdown-segment {
+            background-color: rgba(30, 41, 59, 0.7); /* Tailwind slate-800 with transparency */
+            border-radius: 0.5rem; /* rounded-lg */
+            padding: 0.75rem 1.25rem; /* py-3 px-5 */
+        }
+
+        /* Keyframe for a subtle pulse animation on the countdown */
+        @keyframes pulse-slow {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.01); }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 4s infinite ease-in-out;
+        }
+
+        /* Keyframes for background blob animation */
+        @keyframes blob {
+            0% {
+                transform: translate(0px, 0px) scale(1);
+            }
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+        }
+        .animate-blob {
+            animation: blob 7s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        /* Waitlist button hover effect */
+        .waitlist-button {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .waitlist-button:hover {
+            background-color: #4338CA; /* Tailwind indigo-700 */
+            transform: translateY(-2px);
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="font-sans antialiased text-slate-200 bg-slate-950">
+    <!-- Header -->
+    <header class="py-4 px-4 sm:px-6 lg:px-8 bg-slate-900 shadow-xl relative z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-3xl sm:text-4xl font-extrabold text-indigo-400">
+                Apple <span class="text-slate-100">LeaseMaster</span>
+            </div>
+            <div>
+                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
+                    Join Waitlist
+                </a>
+            </div>
+        </div>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero-bg relative h-screen flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
-        <div class="relative z-10 text-center max-w-4xl mx-auto space-y-8">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white drop-shadow-lg">
-                The Memory Crisis Is Exploding. <br class="hidden sm:inline">Secure Your Edge.
+    <section class="relative bg-black min-h-screen flex items-center justify-center text-center overflow-hidden">
+        <!-- Hero Image -->
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');"></div>
+        <div class="hero-overlay"></div>
+        
+        <div class="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white">
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight drop-shadow-lg">
+                Unlock the Best Apple Upgrade Path. <br class="hidden md:inline"> Minimize Costs, Maximize Value.
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto">
-                Don't let soaring RAM & SSD prices cripple your PC builds or limit your productivity. Navigate the chaos with **The Memory Crisis Navigator** — your essential guide to weekly insights, forecasts, and budget-friendly strategies.
+            <p class="text-lg sm:text-xl lg:text-2xl mb-10 text-slate-300 max-w-4xl mx-auto font-light leading-relaxed drop-shadow-md">
+                Navigate Apple's rumored new 'Upgrade' program, traditional purchases, financing, and trade-ins with ease. LeaseMaster provides a dynamic comparison engine to save you time and money.
             </p>
 
-            <!-- Trend Integration (Leveraging "Market Trends" preference) -->
-            <div class="bg-red-900 bg-opacity-70 border-l-4 border-red-500 p-4 mx-auto max-w-xl rounded-md shadow-lg">
-                <p class="text-red-100 italic text-base sm:text-lg">
-                    "Valve suggests memory crisis is 'still getting worse,' admitting, 'we're limited by memory capacity, for sure'."
+            <!-- Limited Time Countdown -->
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-700 text-white p-6 sm:p-8 rounded-2xl shadow-xl border-2 border-indigo-400 mb-12 animate-pulse-slow max-w-2xl mx-auto">
+                <p class="text-base sm:text-lg font-semibold uppercase tracking-wider mb-3">
+                    Exclusive Early Bird Access Ending In:
                 </p>
-                <p class="text-red-200 text-sm mt-2">- GamesIndustry.biz</p>
-            </div>
-
-            <!-- Limited Time Countdown (Crucial for conversion) -->
-            <div class="mt-8">
-                <p class="text-xl sm:text-2xl lg:text-3xl font-bold text-yellow-400 animate-pulse">
-                    Early Access Discount Ends In:
-                </p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 mt-4 text-white text-3xl sm:text-4xl lg:text-5xl font-extrabold">
-                    <div class="bg-gray-800 p-3 sm:p-4 rounded-lg shadow-md">
-                        <span id="days">00</span><span class="block text-xs sm:text-sm font-normal">DAYS</span>
+                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-5 text-2xl sm:text-4xl lg:text-5xl font-bold">
+                    <div class="countdown-segment flex flex-col items-center min-w-[70px] sm:min-w-[90px]">
+                        <span id="days">00</span>
+                        <span class="text-xs sm:text-sm font-normal uppercase mt-1 text-slate-300">Days</span>
                     </div>
-                    <div class="bg-gray-800 p-3 sm:p-4 rounded-lg shadow-md">
-                        <span id="hours">00</span><span class="block text-xs sm:text-sm font-normal">HOURS</span>
+                    <span class="text-indigo-200">:</span>
+                    <div class="countdown-segment flex flex-col items-center min-w-[70px] sm:min-w-[90px]">
+                        <span id="hours">00</span>
+                        <span class="text-xs sm:text-sm font-normal uppercase mt-1 text-slate-300">Hours</span>
                     </div>
-                    <div class="bg-gray-800 p-3 sm:p-4 rounded-lg shadow-md">
-                        <span id="minutes">00</span><span class="block text-xs sm:text-sm font-normal">MINS</span>
+                    <span class="text-indigo-200">:</span>
+                    <div class="countdown-segment flex flex-col items-center min-w-[70px] sm:min-w-[90px]">
+                        <span id="minutes">00</span>
+                        <span class="text-xs sm:text-sm font-normal uppercase mt-1 text-slate-300">Minutes</span>
                     </div>
-                    <div class="bg-gray-800 p-3 sm:p-4 rounded-lg shadow-md">
-                        <span id="seconds">00</span><span class="block text-xs sm:text-sm font-normal">SECS</span>
+                    <span class="text-indigo-200">:</span>
+                    <div class="countdown-segment flex flex-col items-center min-w-[70px] sm:min-w-[90px]">
+                        <span id="seconds">00</span>
+                        <span class="text-xs sm:text-sm font-normal uppercase mt-1 text-slate-300">Seconds</span>
                     </div>
                 </div>
             </div>
 
-            <a href="#waitlist-form" class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
-                Join Early Access Waitlist Now!
+            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white text-xl sm:text-2xl font-bold py-4 px-10 rounded-full transition duration-300 ease-in-out transform hover:scale-105 shadow-2xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-75">
+                Join the Priority Waitlist
             </a>
+            <p class="mt-4 text-sm text-slate-400 font-medium">Limited spots available for founding members.</p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900 text-gray-100 px-4">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12">
-                What You'll Get with <span class="text-blue-500">The Navigator</span>
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-white mb-6 tracking-tight">
+                Data-Driven Decisions for Every Apple Device
             </h2>
+            <p class="text-lg sm:text-xl text-slate-300 mb-16 max-w-3xl mx-auto">
+                Apple LeaseMaster puts powerful comparison tools and personalized recommendations at your fingertips, ensuring you always get the optimal deal.
+            </p>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Feature 1: Market Analyses -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4 text-blue-400">📊</span>
-                        <h3 class="text-xl font-semibold">Weekly Market Analyses</h3>
+                <!-- Feature 1: Dynamic Cost Comparison -->
+                <div class="bg-slate-800 rounded-xl p-8 shadow-xl border border-slate-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl text-indigo-400 mb-6 flex justify-center items-center">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                     </div>
-                    <p class="text-gray-300">
-                        Stay ahead of the curve with deep dives into the latest RAM & SSD pricing trends, supply chain shifts, and market movements. Make informed purchasing decisions.
+                    <h3 class="text-2xl font-bold text-white mb-4">Dynamic Cost Comparison</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        Instantly compare monthly payments, total cost of ownership (TCO), and upgrade flexibility across Apple's upgrade program, traditional purchases, financing, and trade-ins for iPhones, Macs, and iPads.
                     </p>
                 </div>
-
-                <!-- Feature 2: Future Trend Forecasts -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4 text-purple-400">🔮</span>
-                        <h3 class="text-xl font-semibold">Future Trend Forecasts</h3>
+                <!-- Feature 2: Total Cost of Ownership -->
+                <div class="bg-slate-800 rounded-xl p-8 shadow-xl border border-slate-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl text-indigo-400 mb-6 flex justify-center items-center">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
                     </div>
-                    <p class="text-gray-300">
-                        Proprietary insights and expert predictions help you anticipate future price changes, letting you buy low and avoid costly mistakes.
+                    <h3 class="text-2xl font-bold text-white mb-4">True Cost of Ownership</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        Uncover the hidden costs. Our engine factors in depreciation, future value, and upgrade cycles to give you the real cost over the lifetime of your device.
                     </p>
                 </div>
-
-                <!-- Feature 3: Budget-Friendly PC Builds -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4 text-green-400">🛠️</span>
-                        <h3 class="text-xl font-semibold">Budget-Friendly PC Builds</h3>
+                <!-- Feature 3: Upgrade Path Optimization -->
+                <div class="bg-slate-800 rounded-xl p-8 shadow-xl border border-slate-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl text-indigo-400 mb-6 flex justify-center items-center">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
                     </div>
-                    <p class="text-gray-300">
-                        Curated PC build recommendations optimized for price-to-performance, complete with vetted affiliate links to save you time and money.
+                    <h3 class="text-2xl font-bold text-white mb-4">Optimal Upgrade Paths</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        Receive personalized recommendations on when and how to transition to your next Apple device, ensuring maximum savings and seamless flexibility.
                     </p>
                 </div>
-
-                <!-- Feature 4: Advanced Optimization Strategies -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4 text-orange-400">🚀</span>
-                        <h3 class="text-xl font-semibold">Advanced Optimization Strategies</h3>
+                <!-- Feature 4: Depreciation Analysis -->
+                <div class="bg-slate-800 rounded-xl p-8 shadow-xl border border-slate-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl text-indigo-400 mb-6 flex justify-center items-center">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
-                    <p class="text-gray-300">
-                        Unlock hidden performance from your current hardware. Expert tips and tricks to maximize RAM, SSD, and overall system efficiency without costly upgrades.
+                    <h3 class="text-2xl font-bold text-white mb-4">Real-time Depreciation Tracking</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        Monitor the depreciation of your specific Apple devices. Leverage these insights to make timely decisions and retain more value.
                     </p>
                 </div>
-
-                <!-- Feature 5: Exclusive Insights & Updates -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4 text-red-400">✨</span>
-                        <h3 class="text-xl font-semibold">Exclusive Insights & Updates</h3>
+                <!-- Feature 5: All Apple Devices -->
+                <div class="bg-slate-800 rounded-xl p-8 shadow-xl border border-slate-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl text-indigo-400 mb-6 flex justify-center items-center">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1.25-3M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 0a3 3 0 11-6 0 3 3 0 016 0zm-6 0a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                     </div>
-                    <p class="text-gray-300">
-                        Regular, subscriber-only updates on critical market shifts, new technologies, and actionable strategies directly to your inbox.
+                    <h3 class="text-2xl font-bold text-white mb-4">Comprehensive Apple Coverage</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        From the latest iPhone to high-end MacBooks and versatile iPads, LeaseMaster provides in-depth analysis across the entire Apple product line.
                     </p>
                 </div>
-
-                <!-- Feature 6: Ad-Free, Unbiased Content -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4 text-cyan-400">🔒</span>
-                        <h3 class="text-xl font-semibold">Ad-Free, Unbiased Content</h3>
+                <!-- Feature 6: Personalized Alerts -->
+                <div class="bg-slate-800 rounded-xl p-8 shadow-xl border border-slate-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl text-indigo-400 mb-6 flex justify-center items-center">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
                     </div>
-                    <p class="text-gray-300">
-                        Receive pure, unbiased market intelligence without distractions or sponsored content influencing our recommendations. Your success is our priority.
+                    <h3 class="text-2xl font-bold text-white mb-4">Smart Alerts & Notifications</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        Set custom alerts for ideal upgrade windows, significant program changes, or when your current device hits its peak trade-in value.
                     </p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Waitlist/Subscription Form Section -->
-    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-800 text-gray-100 px-4">
-        <div class="container mx-auto max-w-2xl text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                Secure Your Edge. <br class="hidden sm:inline"><span class="text-green-400">Join the Waitlist!</span>
+    <!-- Call to Action / Waitlist Form -->
+    <section id="waitlist" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-950 to-indigo-950 text-white relative overflow-hidden">
+        <!-- Background decorative blob elements for a modern feel -->
+        <div class="absolute top-1/4 left-0 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+        <div class="absolute bottom-1/4 right-0 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+
+        <div class="max-w-3xl mx-auto text-center relative z-10">
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-white mb-6 tracking-tight">
+                Get Early Access to Smarter Apple Upgrades!
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-prose mx-auto">
-                Be among the first to get access to 'The Memory Crisis Navigator' and lock in your exclusive early bird discount. Don't miss out on vital intelligence.
+            <p class="text-lg sm:text-xl text-indigo-200 mb-10 max-w-2xl mx-auto font-light">
+                Join our exclusive waitlist for Apple LeaseMaster to receive early access, special launch pricing, and insider updates before anyone else.
             </p>
 
-            <form action="#" method="POST" class="bg-gray-900 p-8 rounded-xl shadow-2xl space-y-6 border border-gray-700">
-                <div>
-                    <label for="name" class="block text-left text-sm font-medium text-gray-400 mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" required
-                           class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400 transition duration-200">
+            <form class="bg-slate-800 p-8 sm:p-10 rounded-2xl shadow-2xl border border-slate-700 max-w-lg mx-auto transform hover:scale-[1.01] transition-transform duration-300 ease-in-out">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-slate-200 text-sm font-semibold mb-2">Your Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" class="w-full px-5 py-3 rounded-lg bg-slate-700 border border-slate-600 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-white placeholder-slate-400 text-lg" required>
                 </div>
-                <div>
-                    <label for="email" class="block text-left text-sm font-medium text-gray-400 mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required
-                           class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400 transition duration-200">
+                <div class="mb-8 text-left">
+                    <label for="email" class="block text-slate-200 text-sm font-semibold mb-2">Your Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" class="w-full px-5 py-3 rounded-lg bg-slate-700 border border-slate-600 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-white placeholder-slate-400 text-lg" required>
                 </div>
-                <button type="submit"
-                        class="w-full bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-bold py-4 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                    Get Early Access Now
+                <button type="submit" class="waitlist-button w-full bg-indigo-600 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-75">
+                    Sign Me Up for Early Access!
                 </button>
-                <p class="text-sm text-gray-400 mt-4">
-                    By joining, you agree to receive email updates and our privacy policy.
+                <p class="mt-6 text-sm text-slate-400">
+                    We respect your privacy. Your information will not be shared.
                 </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 text-gray-400 text-center text-sm px-4">
-        <div class="container mx-auto max-w-6xl">
-            <p>&copy; 2023 The Memory Crisis Navigator. All rights reserved.</p>
-            <div class="mt-4 space-x-4">
-                <a href="#" class="hover:text-white transition duration-200">Terms of Service</a>
-                <a href="#" class="hover:text-white transition duration-200">Privacy Policy</a>
-            </div>
+    <footer class="py-10 px-4 sm:px-6 lg:px-8 bg-slate-900 text-slate-400 text-center text-sm">
+        <div class="max-w-7xl mx-auto">
+            <p>&copy; 2023 Apple LeaseMaster. All rights reserved. Not affiliated with Apple Inc.</p>
+            <p class="mt-2">
+                <a href="#" class="hover:text-slate-300 transition duration-200">Privacy Policy</a> |
+                <a href="#" class="hover:text-slate-300 transition duration-200">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
-    <!-- Countdown JavaScript -->
+    <!-- JavaScript for Countdown Timer -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 7 days from now for "Limited Time" offer)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from the current date
-            countDownDate.setHours(23, 59, 59, 999); // End of the day
+        const countdown = () => {
+            // Set the target date for the countdown (e.g., 7 days from now)
+            const now = new Date();
+            const endDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 days from page load
+            // For a fixed future date, uncomment the line below and modify:
+            // const endDate = new Date("December 31, 2024 23:59:59").getTime();
 
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
+            const x = setInterval(() => {
+                const currentTime = new Date().getTime();
+                const distance = endDate - currentTime;
 
                 if (distance < 0) {
                     clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<p class='text-red-500 text-2xl font-bold'>OFFER EXPIRED!</p>";
-                    // Optionally disable the CTA or change its text here
-                    const ctaButton = document.querySelector('a[href="#waitlist-form"]');
-                    if (ctaButton) {
-                        ctaButton.textContent = "Join Regular Waitlist";
-                        ctaButton.classList.remove('from-blue-600', 'to-purple-600', 'hover:from-blue-700', 'hover:to-purple-700');
-                        ctaButton.classList.add('from-gray-600', 'to-gray-500', 'cursor-not-allowed', 'opacity-70');
-                        ctaButton.removeAttribute('href'); // Prevent clicking for early access
-                    }
-                    const formButton = document.querySelector('#waitlist-form button[type="submit"]');
-                    if (formButton) {
-                        formButton.textContent = "Join Regular Waitlist";
-                        formButton.classList.remove('from-green-500', 'to-teal-500', 'hover:from-green-600', 'hover:to-teal-600');
-                        formButton.classList.add('from-gray-600', 'to-gray-500', 'cursor-not-allowed', 'opacity-70');
+                    const countdownElement = document.getElementById("countdown");
+                    if (countdownElement) {
+                        countdownElement.innerHTML = "<span class='text-xl sm:text-2xl text-red-400 font-semibold'>Offer Expired!</span>";
+                        countdownElement.parentElement.classList.remove('animate-pulse-slow');
+                        countdownElement.parentElement.classList.add('opacity-70');
                     }
                     return;
                 }
@@ -241,14 +298,16 @@
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                const getPadded = (num) => num < 10 ? "0" + num : num;
 
+                document.getElementById("days").innerHTML = getPadded(days);
+                document.getElementById("hours").innerHTML = getPadded(hours);
+                document.getElementById("minutes").innerHTML = getPadded(minutes);
+                document.getElementById("seconds").innerHTML = getPadded(seconds);
             }, 1000);
-        });
-    </script>
+        }
 
+        document.addEventListener('DOMContentLoaded', countdown);
+    </script>
 </body>
 </html>
