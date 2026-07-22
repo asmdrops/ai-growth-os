@@ -3,311 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple LeaseMaster - Master Your Apple Upgrades & Save Thousands</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Predictive iOS Dev: AI-Powered Issue Detection for Simulators</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom scrollbar for a premium dark-mode aesthetic */
+        /* Custom styles for modern dark mode aesthetic and hero background */
+        body {
+            font-family: 'Inter', sans-serif; /* A popular modern sans-serif font */
+            background-color: #0d1117; /* Deep dark background */
+            color: #e6edf3; /* Light text color for contrast */
+        }
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Slightly darker overlay for hero text readability */
+        }
+        /* Gradient for primary call to action buttons and headlines */
+        .gradient-button {
+            background: linear-gradient(90deg, #6366f1, #9333ea); /* Blue to Purple */
+            transition: all 0.3s ease;
+        }
+        .gradient-button:hover {
+            background: linear-gradient(90deg, #4f46e5, #7e22ce);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        /* Custom scrollbar for dark mode (optional, but good for premium feel) */
         ::-webkit-scrollbar {
             width: 8px;
+            height: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #1E293B; /* Tailwind slate-800 */
+            background: #1a202c;
         }
         ::-webkit-scrollbar-thumb {
-            background: #475569; /* Tailwind slate-600 */
+            background: #4a5568;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #64748B; /* Tailwind slate-500 */
+            background: #6b7280;
         }
-        
-        /* Body background for consistent dark mode */
-        body {
-            background-color: #0F172A; /* Tailwind slate-950 */
-            color: #E2E8F0; /* Tailwind slate-200 */
+        /* Custom animation for headline */
+        @keyframes pulse-gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
-
-        /* Hero overlay for better text readability over background image */
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.7) 0%, rgba(15, 23, 42, 0.95) 100%); /* Adjusted for slate-950 base */
-            z-index: 10;
-        }
-
-        /* Specific styles for the countdown timer segments */
-        .countdown-segment {
-            background-color: rgba(30, 41, 59, 0.7); /* Tailwind slate-800 with transparency */
-            border-radius: 0.5rem; /* rounded-lg */
-            padding: 0.75rem 1.25rem; /* py-3 px-5 */
-        }
-
-        /* Keyframe for a subtle pulse animation on the countdown */
-        @keyframes pulse-slow {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.01); }
-        }
-        .animate-pulse-slow {
-            animation: pulse-slow 4s infinite ease-in-out;
-        }
-
-        /* Keyframes for background blob animation */
-        @keyframes blob {
-            0% {
-                transform: translate(0px, 0px) scale(1);
-            }
-            33% {
-                transform: translate(30px, -50px) scale(1.1);
-            }
-            66% {
-                transform: translate(-20px, 20px) scale(0.9);
-            }
-            100% {
-                transform: translate(0px, 0px) scale(1);
-            }
-        }
-        .animate-blob {
-            animation: blob 7s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
-        }
-        .animation-delay-2000 {
-            animation-delay: 2s;
-        }
-
-        /* Waitlist button hover effect */
-        .waitlist-button {
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .waitlist-button:hover {
-            background-color: #4338CA; /* Tailwind indigo-700 */
-            transform: translateY(-2px);
+        .animate-pulse {
+            animation: pulse-gradient 6s ease-in-out infinite;
+            background-size: 200% 200%;
         }
     </style>
 </head>
-<body class="font-sans antialiased text-slate-200 bg-slate-950">
-    <!-- Header -->
-    <header class="py-4 px-4 sm:px-6 lg:px-8 bg-slate-900 shadow-xl relative z-50">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="text-3xl sm:text-4xl font-extrabold text-indigo-400">
-                Apple <span class="text-slate-100">LeaseMaster</span>
-            </div>
-            <div>
-                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
-                    Join Waitlist
-                </a>
-            </div>
-        </div>
-    </header>
+<body class="antialiased">
 
     <!-- Hero Section -->
-    <section class="relative bg-black min-h-screen flex items-center justify-center text-center overflow-hidden">
-        <!-- Hero Image -->
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');"></div>
-        <div class="hero-overlay"></div>
-        
-        <div class="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white">
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight drop-shadow-lg">
-                Unlock the Best Apple Upgrade Path. <br class="hidden md:inline"> Minimize Costs, Maximize Value.
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center p-4 md:p-8">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative z-10 max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-pink-500 to-purple-600 animate-pulse">
+                Predictive AI for iOS: Catch Bugs Before They Exist.
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl mb-10 text-slate-300 max-w-4xl mx-auto font-light leading-relaxed drop-shadow-md">
-                Navigate Apple's rumored new 'Upgrade' program, traditional purchases, financing, and trade-ins with ease. LeaseMaster provides a dynamic comparison engine to save you time and money.
+            <p class="text-xl sm:text-2xl lg:text-3xl text-gray-200 mb-8 font-light max-w-4xl mx-auto">
+                Introducing the first platform for <span class="font-semibold text-blue-300">AI-driven predictive issue detection</span> and <span class="font-semibold text-purple-300">performance optimization</span>
+                for iOS applications in simulator environments.
             </p>
+            <p class="text-md sm:text-lg text-gray-400 mb-12">
+                Integrates seamlessly with <b class="text-white">Claude Code's new live iOS app testing feature</b>, saving your team significant time and resources by proactively identifying critical issues.
+            </p>
+            <a href="#waitlist" class="gradient-button text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-600 focus:ring-opacity-50">
+                🚀 Join Early Access Waitlist!
+            </a>
+        </div>
+    </section>
 
-            <!-- Limited Time Countdown -->
-            <div class="bg-gradient-to-r from-purple-700 to-indigo-700 text-white p-6 sm:p-8 rounded-2xl shadow-xl border-2 border-indigo-400 mb-12 animate-pulse-slow max-w-2xl mx-auto">
-                <p class="text-base sm:text-lg font-semibold uppercase tracking-wider mb-3">
-                    Exclusive Early Bird Access Ending In:
-                </p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-5 text-2xl sm:text-4xl lg:text-5xl font-bold">
-                    <div class="countdown-segment flex flex-col items-center min-w-[70px] sm:min-w-[90px]">
-                        <span id="days">00</span>
-                        <span class="text-xs sm:text-sm font-normal uppercase mt-1 text-slate-300">Days</span>
-                    </div>
-                    <span class="text-indigo-200">:</span>
-                    <div class="countdown-segment flex flex-col items-center min-w-[70px] sm:min-w-[90px]">
-                        <span id="hours">00</span>
-                        <span class="text-xs sm:text-sm font-normal uppercase mt-1 text-slate-300">Hours</span>
-                    </div>
-                    <span class="text-indigo-200">:</span>
-                    <div class="countdown-segment flex flex-col items-center min-w-[70px] sm:min-w-[90px]">
-                        <span id="minutes">00</span>
-                        <span class="text-xs sm:text-sm font-normal uppercase mt-1 text-slate-300">Minutes</span>
-                    </div>
-                    <span class="text-indigo-200">:</span>
-                    <div class="countdown-segment flex flex-col items-center min-w-[70px] sm:min-w-[90px]">
-                        <span id="seconds">00</span>
-                        <span class="text-xs sm:text-sm font-normal uppercase mt-1 text-slate-300">Seconds</span>
-                    </div>
+    <!-- Problem/Solution Section -->
+    <section class="py-20 bg-gray-900 text-center px-4">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">
+                Stop Reacting. Start Predicting.
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 text-left">
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-100">The Modern iOS Dev Pain 😩</h3>
+                    <ul class="space-y-4 text-gray-300 text-lg">
+                        <li>Manual testing is slow, costly, and notoriously incomplete.</li>
+                        <li>Bugs often emerge late in the cycle, leading to frantic hotfixes.</li>
+                        <li>Simulator limitations mean subtle performance & UI issues are missed.</li>
+                        <li>Constant context switching from debugging drains valuable developer time.</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-100">Our Game-Changing Solution ✨</h3>
+                    <ul class="space-y-4 text-gray-300 text-lg">
+                        <li><b class="text-green-400">AI-powered insights:</b> Proactive detection in real-time.</li>
+                        <li><b class="text-green-400">Pre-emptive fixes:</b> Address issues *before* they impact users.</li>
+                        <li><b class="text-green-400">Deep integration:</b> Seamlessly works with Claude Code and your existing simulator workflow.</li>
+                        <li><b class="text-green-400">Massive time savings:</b> Focus on innovation, not endless debugging cycles.</li>
+                    </ul>
                 </div>
             </div>
-
-            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white text-xl sm:text-2xl font-bold py-4 px-10 rounded-full transition duration-300 ease-in-out transform hover:scale-105 shadow-2xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-75">
-                Join the Priority Waitlist
-            </a>
-            <p class="mt-4 text-sm text-slate-400 font-medium">Limited spots available for founding members.</p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-4xl sm:text-5xl font-extrabold text-white mb-6 tracking-tight">
-                Data-Driven Decisions for Every Apple Device
+    <section class="py-20 bg-gray-800 text-center px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-16 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-500">
+                Unlock Unprecedented iOS Development Efficiency
             </h2>
-            <p class="text-lg sm:text-xl text-slate-300 mb-16 max-w-3xl mx-auto">
-                Apple LeaseMaster puts powerful comparison tools and personalized recommendations at your fingertips, ensuring you always get the optimal deal.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1: Dynamic Cost Comparison -->
-                <div class="bg-slate-800 rounded-xl p-8 shadow-xl border border-slate-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl text-indigo-400 mb-6 flex justify-center items-center">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Dynamic Cost Comparison</h3>
-                    <p class="text-slate-300 leading-relaxed">
-                        Instantly compare monthly payments, total cost of ownership (TCO), and upgrade flexibility across Apple's upgrade program, traditional purchases, financing, and trade-ins for iPhones, Macs, and iPads.
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Feature 1: AI Predictive Analytics -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 border border-gray-700">
+                    <div class="text-5xl mb-4">🧠</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-100">AI-Powered Predictive Analytics</h3>
+                    <p class="text-gray-300">
+                        Our advanced AI models analyze real-time simulator data to predict potential bugs, crashes, and performance bottlenecks *before* they materialize. Get insights faster.
                     </p>
                 </div>
-                <!-- Feature 2: Total Cost of Ownership -->
-                <div class="bg-slate-800 rounded-xl p-8 shadow-xl border border-slate-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl text-indigo-400 mb-6 flex justify-center items-center">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">True Cost of Ownership</h3>
-                    <p class="text-slate-300 leading-relaxed">
-                        Uncover the hidden costs. Our engine factors in depreciation, future value, and upgrade cycles to give you the real cost over the lifetime of your device.
+                <!-- Feature 2: Real-time Performance Optimization -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 border border-gray-700">
+                    <div class="text-5xl mb-4">⚡</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-100">Real-time Performance Optimization</h3>
+                    <p class="text-gray-300">
+                        Identify and optimize CPU, memory, and battery drain in real-time. Our platform pinpoints inefficiencies, allowing you to fine-tune your app for peak performance.
                     </p>
                 </div>
-                <!-- Feature 3: Upgrade Path Optimization -->
-                <div class="bg-slate-800 rounded-xl p-8 shadow-xl border border-slate-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl text-indigo-400 mb-6 flex justify-center items-center">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Optimal Upgrade Paths</h3>
-                    <p class="text-slate-300 leading-relaxed">
-                        Receive personalized recommendations on when and how to transition to your next Apple device, ensuring maximum savings and seamless flexibility.
+                <!-- Feature 3: Proactive UI/UX Anomaly Detection -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 border border-gray-700">
+                    <div class="text-5xl mb-4">🎨</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-100">Proactive UI/UX Anomaly Detection</h3>
+                    <p class="text-gray-300">
+                        Detect subtle visual glitches, layout inconsistencies, and interaction issues that simulators often miss. Ensure a pixel-perfect and flawless user experience.
                     </p>
                 </div>
-                <!-- Feature 4: Depreciation Analysis -->
-                <div class="bg-slate-800 rounded-xl p-8 shadow-xl border border-slate-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl text-indigo-400 mb-6 flex justify-center items-center">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Real-time Depreciation Tracking</h3>
-                    <p class="text-slate-300 leading-relaxed">
-                        Monitor the depreciation of your specific Apple devices. Leverage these insights to make timely decisions and retain more value.
+                <!-- Feature 4: Seamless Claude Code Integration -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 border border-gray-700">
+                    <div class="text-5xl mb-4">🧩</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-100">Seamless Claude Code Integration</h3>
+                    <p class="text-gray-300">
+                        Connect directly with Claude Code's new live iOS app testing feature on Mac. Enhance your existing workflow with deeper, proactive insights without changing your tools.
                     </p>
                 </div>
-                <!-- Feature 5: All Apple Devices -->
-                <div class="bg-slate-800 rounded-xl p-8 shadow-xl border border-slate-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl text-indigo-400 mb-6 flex justify-center items-center">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1.25-3M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 0a3 3 0 11-6 0 3 3 0 016 0zm-6 0a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Comprehensive Apple Coverage</h3>
-                    <p class="text-slate-300 leading-relaxed">
-                        From the latest iPhone to high-end MacBooks and versatile iPads, LeaseMaster provides in-depth analysis across the entire Apple product line.
+                <!-- Feature 5: Significant Time & Cost Savings -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 border border-gray-700">
+                    <div class="text-5xl mb-4">⏱️</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-100">Significant Time & Cost Savings</h3>
+                    <p class="text-gray-300">
+                        Drastically reduce debugging cycles and late-stage bug fixes. Ship higher quality apps faster, saving countless developer hours and operational costs.
                     </p>
                 </div>
-                <!-- Feature 6: Personalized Alerts -->
-                <div class="bg-slate-800 rounded-xl p-8 shadow-xl border border-slate-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-5xl text-indigo-400 mb-6 flex justify-center items-center">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Smart Alerts & Notifications</h3>
-                    <p class="text-slate-300 leading-relaxed">
-                        Set custom alerts for ideal upgrade windows, significant program changes, or when your current device hits its peak trade-in value.
+                <!-- Feature 6: Actionable Reports & Insights -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 border border-gray-700">
+                    <div class="text-5xl mb-4">📊</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-100">Actionable Reports & Insights</h3>
+                    <p class="text-gray-300">
+                        Receive clear, concise, and actionable reports detailing identified issues, their potential impact, and precise recommendations for resolution.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action / Waitlist Form -->
-    <section id="waitlist" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-950 to-indigo-950 text-white relative overflow-hidden">
-        <!-- Background decorative blob elements for a modern feel -->
-        <div class="absolute top-1/4 left-0 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-        <div class="absolute bottom-1/4 right-0 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-
-        <div class="max-w-3xl mx-auto text-center relative z-10">
-            <h2 class="text-4xl sm:text-5xl font-extrabold text-white mb-6 tracking-tight">
-                Get Early Access to Smarter Apple Upgrades!
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-20 bg-gray-900 text-center px-4">
+        <div class="max-w-3xl mx-auto bg-gray-800 p-8 sm:p-12 rounded-xl shadow-2xl border border-purple-700">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-500">
+                🚨 Limited Time Early Access! 🚨
             </h2>
-            <p class="text-lg sm:text-xl text-indigo-200 mb-10 max-w-2xl mx-auto font-light">
-                Join our exclusive waitlist for Apple LeaseMaster to receive early access, special launch pricing, and insider updates before anyone else.
+            <p class="text-xl text-gray-300 mb-8">
+                Don't miss out on revolutionizing your iOS development workflow. Join our exclusive waitlist now to secure early access and special launch pricing!
             </p>
 
-            <form class="bg-slate-800 p-8 sm:p-10 rounded-2xl shadow-2xl border border-slate-700 max-w-lg mx-auto transform hover:scale-[1.01] transition-transform duration-300 ease-in-out">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-slate-200 text-sm font-semibold mb-2">Your Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" class="w-full px-5 py-3 rounded-lg bg-slate-700 border border-slate-600 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-white placeholder-slate-400 text-lg" required>
+            <!-- Countdown Timer -->
+            <div class="mb-10 p-6 bg-gray-900 rounded-lg shadow-inner border border-red-600">
+                <p class="text-3xl font-bold text-red-400 mb-4">Offer Ends In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-white text-4xl sm:text-5xl font-mono">
+                    <div class="flex flex-col items-center">
+                        <span id="days">00</span>
+                        <span class="text-lg text-gray-400">Days</span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours">00</span>
+                        <span class="text-lg text-gray-400">Hours</span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes">00</span>
+                        <span class="text-lg text-gray-400">Minutes</span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds">00</span>
+                        <span class="text-lg text-gray-400">Seconds</span>
+                    </div>
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="email" class="block text-slate-200 text-sm font-semibold mb-2">Your Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" class="w-full px-5 py-3 rounded-lg bg-slate-700 border border-slate-600 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-white placeholder-slate-400 text-lg" required>
+            </div>
+
+            <form class="space-y-6">
+                <div>
+                    <input type="email" placeholder="Enter your email address" required
+                           class="w-full p-4 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 border border-gray-600 text-lg">
                 </div>
-                <button type="submit" class="waitlist-button w-full bg-indigo-600 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-75">
-                    Sign Me Up for Early Access!
-                </button>
-                <p class="mt-6 text-sm text-slate-400">
-                    We respect your privacy. Your information will not be shared.
-                </p>
+                <div>
+                    <button type="submit" class="gradient-button w-full text-white font-bold py-4 px-8 rounded-lg text-xl shadow-xl hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-purple-600 focus:ring-opacity-50">
+                        🔥 Secure My Spot Now!
+                    </button>
+                </div>
             </form>
+            <p class="text-sm text-gray-400 mt-6">
+                We respect your privacy. No spam, ever.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 px-4 sm:px-6 lg:px-8 bg-slate-900 text-slate-400 text-center text-sm">
-        <div class="max-w-7xl mx-auto">
-            <p>&copy; 2023 Apple LeaseMaster. All rights reserved. Not affiliated with Apple Inc.</p>
-            <p class="mt-2">
-                <a href="#" class="hover:text-slate-300 transition duration-200">Privacy Policy</a> |
-                <a href="#" class="hover:text-slate-300 transition duration-200">Terms of Service</a>
-            </p>
+    <footer class="py-10 bg-gray-950 text-center text-gray-500 text-sm px-4">
+        <div class="max-w-6xl mx-auto">
+            <p>&copy; 2024 Predictive iOS Dev. All rights reserved.</p>
+            <p class="mt-2">Powered by AI & Seamless Claude Code Integration.</p>
         </div>
     </footer>
 
     <!-- JavaScript for Countdown Timer -->
     <script>
-        const countdown = () => {
-            // Set the target date for the countdown (e.g., 7 days from now)
-            const now = new Date();
-            const endDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 days from page load
-            // For a fixed future date, uncomment the line below and modify:
-            // const endDate = new Date("December 31, 2024 23:59:59").getTime();
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (e.g., 7 days from now for demonstration purposes)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Sets deadline to 7 days from page load
 
-            const x = setInterval(() => {
-                const currentTime = new Date().getTime();
-                const distance = endDate - currentTime;
+            // Update the count down every 1 second
+            const x = setInterval(function() {
+                // Get today's date and time
+                const now = new Date().getTime();
 
-                if (distance < 0) {
-                    clearInterval(x);
-                    const countdownElement = document.getElementById("countdown");
-                    if (countdownElement) {
-                        countdownElement.innerHTML = "<span class='text-xl sm:text-2xl text-red-400 font-semibold'>Offer Expired!</span>";
-                        countdownElement.parentElement.classList.remove('animate-pulse-slow');
-                        countdownElement.parentElement.classList.add('opacity-70');
-                    }
-                    return;
-                }
+                // Find the distance between now and the count down date
+                const distance = countDownDate.getTime() - now;
 
+                // Time calculations for days, hours, minutes and seconds
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                const getPadded = (num) => num < 10 ? "0" + num : num;
+                // Display the result in the elements, ensure two digits
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-                document.getElementById("days").innerHTML = getPadded(days);
-                document.getElementById("hours").innerHTML = getPadded(hours);
-                document.getElementById("minutes").innerHTML = getPadded(minutes);
-                document.getElementById("seconds").innerHTML = getPadded(seconds);
+                // If the count down is finished, display expired message and disable form
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "Offer Expired!";
+                    const submitButton = document.querySelector('#waitlist button[type="submit"]');
+                    if (submitButton) {
+                        submitButton.disabled = true;
+                        submitButton.textContent = "Offer Expired";
+                        submitButton.classList.remove('gradient-button');
+                        submitButton.classList.add('bg-gray-600', 'cursor-not-allowed');
+                    }
+                    const emailInput = document.querySelector('#waitlist input[type="email"]');
+                    if (emailInput) {
+                        emailInput.disabled = true;
+                        emailInput.placeholder = "Offer has ended.";
+                    }
+                }
             }, 1000);
-        }
-
-        document.addEventListener('DOMContentLoaded', countdown);
+        });
     </script>
+
 </body>
 </html>
