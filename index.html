@@ -1,297 +1,265 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastering Your MacBook Ultra: Unleash AI & Productivity Features</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter for premium feel -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>The Smart Desk Digest - Future-Proof Your Remote Productivity</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Optional: Google Fonts for a premium feel (uncomment to use) -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"> -->
     <style>
-        /* Custom styles for dark mode and premium feel */
+        /* Custom styles for modern dark mode and font if Inter is used */
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a; /* Deep dark background */
-            color: #e2e8f0; /* Light text */
+            /* font-family: 'Inter', sans-serif; */
+            /* Tailwind's default sans font is also excellent */
         }
-        .hero-bg {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
-        }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
-        }
-        .countdown-timer span {
-            font-variant-numeric: tabular-nums; /* Align numbers in timer */
-        }
-        .gradient-text {
-            background-image: linear-gradient(to right, #6366f1, #9333ea); /* Blue to Purple gradient */
+        .text-gradient-to-r {
+            background-image: linear-gradient(to right, var(--tw-gradient-stops));
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .btn-primary {
-            background-image: linear-gradient(to right, #4f46e5, #7c3aed); /* Stronger gradient for CTA */
-            transition: all 0.3s ease;
-        }
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
-        }
-        .feature-card {
-            background-color: #1a1a1a; /* Slightly lighter dark for feature cards */
-            border: 1px solid #2d2d2d;
-            transition: all 0.3s ease;
-        }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-            border-color: #4f46e5;
+            background-clip: text;
+            color: transparent;
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 antialiased">
+<body class="bg-gray-950 text-gray-100 antialiased leading-relaxed">
 
     <!-- Hero Section -->
-    <section class="hero-bg min-h-screen flex items-center justify-center text-center relative px-4 py-20 lg:py-0">
-        <div class="hero-overlay absolute inset-0 z-0"></div>
-        <div class="relative z-10 max-w-6xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 gradient-text drop-shadow-lg">
-                Mastering Your MacBook Ultra:<br class="hidden sm:inline"> Unleash Its 12 AI & Productivity Features
+    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+            <div class="absolute inset-0 bg-black opacity-75"></div> <!-- Dark overlay for readability -->
+        </div>
+
+        <div class="relative z-10 p-4 md:p-8 max-w-5xl mx-auto">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 text-white drop-shadow-lg animate-fade-in-down">
+                Master Your Remote Workspace.
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Unlock the full potential of your new MacBook Ultra. Discover exclusive AI capabilities and productivity hacks to redefine your workflow in the era of intelligence.
+            <p class="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 font-light drop-shadow-md animate-fade-in-up">
+                Unlock Peak Productivity & Ergonomic Excellence.
+            </p>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gradient-to-r from-blue-400 to-purple-500 mb-6 drop-shadow-lg animate-fade-in">
+                Introducing <span class="text-blue-300">The Smart Desk Digest</span>
+            </h2>
+            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto animate-fade-in-up delay-100">
+                Your weekly intelligence brief on cutting-edge desk tech, exclusive deals, and essential market trends to elevate your work-from-home setup.
             </p>
 
-            <!-- Countdown Timer -->
-            <div class="bg-indigo-900 bg-opacity-40 border border-indigo-700 rounded-lg p-6 sm:p-8 mb-10 inline-block max-w-full">
-                <p class="text-sm sm:text-base font-semibold text-indigo-200 uppercase tracking-wide mb-4">Limited Time Launch Discount Ends In:</p>
-                <div class="countdown-timer flex justify-center space-x-2 sm:space-x-4 md:space-x-6 text-white text-3xl sm:text-4xl md:text-5xl font-bold">
-                    <div>
-                        <span id="days">00</span><br>
-                        <span class="block text-xs sm:text-sm font-medium text-gray-300 mt-1">Days</span>
-                    </div>
-                    <div class="text-indigo-400">:</div>
-                    <div>
-                        <span id="hours">00</span><br>
-                        <span class="block text-xs sm:text-sm font-medium text-gray-300 mt-1">Hours</span>
-                    </div>
-                    <div class="text-indigo-400">:</div>
-                    <div>
-                        <span id="minutes">00</span><br>
-                        <span class="block text-xs sm:text-sm font-medium text-gray-300 mt-1">Minutes</span>
-                    </div>
-                    <div class="text-indigo-400">:</div>
-                    <div>
-                        <span id="seconds">00</span><br>
-                        <span class="block text-xs sm:text-sm font-medium text-gray-300 mt-1">Seconds</span>
-                    </div>
+            <!-- Limited Time Countdown / Offer -->
+            <div class="bg-gradient-to-r from-purple-700 to-blue-700 p-6 rounded-xl shadow-xl mb-12 transform hover:scale-105 transition-transform duration-300 ease-in-out border border-blue-500 animate-pulse-light">
+                <p class="text-xl md:text-2xl font-semibold text-white mb-3 flex items-center justify-center">
+                    🚀 Special Launch Offer for Early Birds! 🚀
+                </p>
+                <p class="text-3xl md:text-4xl font-extrabold text-yellow-300 mb-4 animate-bounce-subtle">
+                    Join the Waitlist & Get <span class="text-red-400">20% OFF</span> Your First Month!
+                </p>
+                <div class="flex justify-center items-center space-x-4 text-white text-3xl md:text-4xl font-bold countdown" id="countdown">
+                    <span class="bg-gray-800 px-4 py-2 rounded-lg min-w-[60px] md:min-w-[80px]">00</span><span class="text-lg">:</span>
+                    <span class="bg-gray-800 px-4 py-2 rounded-lg min-w-[60px] md:min-w-[80px]">00</span><span class="text-lg">:</span>
+                    <span class="bg-gray-800 px-4 py-2 rounded-lg min-w-[60px] md:min-w-[80px]">00</span><span class="text-lg">:</span>
+                    <span class="bg-gray-800 px-4 py-2 rounded-lg min-w-[60px] md:min-w-[80px]">00</span>
                 </div>
+                <p class="text-sm text-gray-300 mt-3 md:text-base">Offer valid for the first 500 waitlist sign-ups only!</p>
             </div>
 
-            <a href="#purchase" class="btn-primary inline-flex items-center justify-center px-10 py-4 text-lg sm:text-xl font-bold rounded-full shadow-lg text-white hover:brightness-110 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">
-                Secure Your Discount Now! &rarr;
+            <a href="#waitlist" class="inline-block bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl uppercase tracking-wide shadow-lg transform hover:scale-105 transition duration-300 ease-in-out border-2 border-transparent hover:border-white">
+                Secure My Spot & Discount!
             </a>
-        </div>
-    </section>
-
-    <!-- Introduction & Market Trend Section -->
-    <section class="py-16 sm:py-20 bg-gray-900 px-4">
-        <div class="container mx-auto max-w-4xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Stay Ahead of the Curve with AI-Driven Productivity
-            </h2>
-            <p class="text-lg sm:text-xl text-gray-300 leading-relaxed">
-                The future of work is intelligent. With the anticipated 'MacBook Ultra' set to revolutionize personal computing, leveraging its advanced AI and specialized hardware isn't just an advantage—it's a necessity. This course is your definitive guide to transforming how you interact with your Mac, making every task smarter, faster, and more efficient.
-            </p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-24 bg-gray-950 px-4">
-        <div class="container mx-auto max-w-7xl">
-            <h2 class="text-4xl sm:text-5xl font-extrabold text-center text-white mb-12">
-                What You'll Master: <span class="gradient-text">12 AI & Productivity Features</span>
+    <section class="py-16 md:py-24 bg-gray-900 text-white">
+        <div class="container mx-auto px-4 md:px-8 max-w-screen-xl">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-16 text-white leading-tight">
+                What You'll Discover Inside <span class="text-blue-400">The Smart Desk Digest</span>
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
-                    <div class="text-5xl text-blue-400 mb-4">💡</div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Smarter Task Automation</h3>
-                    <p class="text-gray-300">Automate repetitive tasks with AI-powered shortcuts and workflows tailored for the Ultra's capabilities.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+
+                <!-- Feature 1: Top-tier Gadgets -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:-translate-y-2 border-t-4 border-blue-500">
+                    <div class="text-5xl mb-6 text-blue-400">🚀</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Curated Desk Gadgets & Reviews</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Discover three top-tier desk gadgets each week, meticulously reviewed for their practicality and impact on your productivity. We vet what truly matters, so you don't have to.
+                        <ul class="mt-4 space-y-2 text-gray-300 list-none pl-0">
+                            <li>✨ Unbiased, in-depth analysis.</li>
+                            <li>🛠️ Real-world usage scenarios.</li>
+                            <li>💡 Innovative solutions for your setup.</li>
+                        </ul>
+                    </p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
-                    <div class="text-5xl text-purple-400 mb-4">🚀</div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">AI-Enhanced Creativity Tools</h3>
-                    <p class="text-gray-300">Utilize on-device AI for real-time content generation, image editing, and design assistance.</p>
+
+                <!-- Feature 2: Limited-Time Deals -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:-translate-y-2 border-t-4 border-yellow-500">
+                    <div class="text-5xl mb-6 text-yellow-400">⏳</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Exclusive Limited-Time Deals</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Access one highly sought-after gadget with an exclusive, limited-time deal. These aren't just discounts; they're opportunities to upgrade your setup at unbeatable prices, available only to subscribers.
+                        <ul class="mt-4 space-y-2 text-gray-300 list-none pl-0">
+                            <li>🔥 Deep discounts on premium tech.</li>
+                            <li>🛒 Hand-picked, high-value products.</li>
+                            <li>⚡ Act fast – these deals vanish quickly!</li>
+                        </ul>
+                    </p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
-                    <div class="text-5xl text-green-400 mb-4">💬</div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Intelligent Communication Hub</h3>
-                    <p class="text-gray-300">Streamline emails, messages, and virtual meetings with AI-driven summaries and smart replies.</p>
+
+                <!-- Feature 3: Market Trends Analysis -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:-translate-y-2 border-t-4 border-green-500">
+                    <div class="text-5xl mb-6 text-green-400">📈</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Ergonomic & Smart Desk Market Trends</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Stay ahead of the curve with our expert analysis of the latest market trends in ergonomic and smart desk solutions. Understand what's new, what's next, and how to future-proof your workspace.
+                        <ul class="mt-4 space-y-2 text-gray-300 list-none pl-0">
+                            <li>📊 Data-driven insights.</li>
+                            <li>🔮 Predictions for future tech.</li>
+                            <li>💡 Empower your purchasing decisions.</li>
+                        </ul>
+                    </p>
                 </div>
-                <!-- Feature 4 -->
-                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
-                    <div class="text-5xl text-red-400 mb-4">📊</div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Data Analysis & Visualization</h3>
-                    <p class="text-gray-300">Harness AI for quick insights from complex data, generating reports and visuals effortlessly.</p>
+
+                <!-- Feature 4: Exclusive Discounts & Sponsored Content -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:-translate-y-2 border-t-4 border-purple-500">
+                    <div class="text-5xl mb-6 text-purple-400">🎁</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Subscriber-Only Perks</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Beyond deals, enjoy special subscriber-only discounts from our partners and access to unique sponsored content, giving you deeper insights and even more ways to save and optimize.
+                        <ul class="mt-4 space-y-2 text-gray-300 list-none pl-0">
+                            <li>💰 Partner-exclusive savings.</li>
+                            <li>📚 In-depth sponsored content.</li>
+                            <li>🤝 Join a community of innovators.</li>
+                        </ul>
+                    </p>
                 </div>
-                <!-- Feature 5 -->
-                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
-                    <div class="text-5xl text-yellow-400 mb-4">🔒</div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Advanced Security Protocols</h3>
-                    <p class="text-gray-300">Leverage AI-driven threat detection and privacy features unique to the MacBook Ultra.</p>
+
+                <!-- Feature 5: Tailored for Remote Workers -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:-translate-y-2 border-t-4 border-red-500">
+                    <div class="text-5xl mb-6 text-red-400">🏠</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Tailored for Remote Success</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Every recommendation and analysis is geared towards empowering remote workers to maximize comfort, efficiency, and productivity in their home office setups.
+                        <ul class="mt-4 space-y-2 text-gray-300 list-none pl-0">
+                            <li>🏡 Optimize your home office.</li>
+                            <li>💪 Boost your daily output.</li>
+                            <li>🧘‍♀️ Enhance well-being at your desk.</li>
+                        </ul>
+                    </p>
                 </div>
-                <!-- Feature 6 -->
-                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
-                    <div class="text-5xl text-cyan-400 mb-4">🧠</div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Personalized Learning & Focus</h3>
-                    <p class="text-gray-300">Create an optimal work environment with AI that adapts to your focus patterns and learning style.</p>
+
+                <!-- Feature 6: No Gaming Trends (Implied Productivity) -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:-translate-y-2 border-t-4 border-indigo-500">
+                    <div class="text-5xl mb-6 text-indigo-400">🎯</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Pure Productivity Focus</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        We cut through the noise, focusing exclusively on desk solutions that directly enhance your work and well-being. No fleeting fads, just proven productivity.
+                        <ul class="mt-4 space-y-2 text-gray-300 list-none pl-0">
+                            <li>✅ Vetted for real-world impact.</li>
+                            <li>🚫 Zero gaming trends (unless productive).</li>
+                            <li>🧠 Smart choices for smarter work.</li>
+                        </ul>
+                    </p>
                 </div>
-                <!-- Feature 7 -->
-                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
-                    <div class="text-5xl text-pink-400 mb-4">✍️</div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">AI-Powered Writing Assistant</h3>
-                    <p class="text-gray-300">Enhance your writing with real-time grammar checks, style suggestions, and content generation.</p>
-                </div>
-                <!-- Feature 8 -->
-                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
-                    <div class="text-5xl text-orange-400 mb-4">🌐</div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Seamless Multi-Device Ecosystem</h3>
-                    <p class="text-gray-300">Optimize connectivity and workflow across your Apple devices with the Ultra's central AI intelligence.</p>
-                </div>
-                <!-- Feature 9 -->
-                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
-                    <div class="text-5xl text-indigo-400 mb-4">🔍</div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Enhanced Search & Discovery</h3>
-                    <p class="text-gray-300">Find anything instantly with AI-powered contextual search across files, apps, and the web.</p>
-                </div>
-                <!-- Feature 10 -->
-                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
-                    <div class="text-5xl text-lime-400 mb-4">🎙️</div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Advanced Voice Control & Dictation</h3>
-                    <p class="text-gray-300">Command your Mac with greater precision and speed using the Ultra's sophisticated voice AI.</p>
-                </div>
-                <!-- Feature 11 -->
-                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
-                    <div class="text-5xl text-fuchsia-400 mb-4">🗓️</div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Proactive Scheduling & Reminders</h3>
-                    <p class="text-gray-300">Let AI intelligently manage your calendar and remind you of priorities before they become urgent.</p>
-                </div>
-                <!-- Feature 12 -->
-                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
-                    <div class="text-5xl text-teal-400 mb-4">⚡</div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Optimized Performance & Battery</h3>
-                    <p class="text-gray-300">Learn how the Ultra's AI manages resources to deliver peak performance and extended battery life.</p>
-                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Secondary CTA / Purchase Section -->
-    <section id="purchase" class="py-16 sm:py-20 bg-gray-900 px-4 text-center">
-        <div class="container mx-auto max-w-3xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Ready to Transform Your Workflow?</h2>
-            <p class="text-lg sm:text-xl text-gray-300 leading-relaxed mb-8">
-                Don't miss out on the 'Limited Time Launch Discount' to gain unparalleled insights into your MacBook Ultra. This comprehensive guide is your key to mastering AI-driven productivity.
-            </p>
-            <a href="#checkout" class="btn-primary inline-flex items-center justify-center px-12 py-5 text-xl sm:text-2xl font-bold rounded-full shadow-xl text-white hover:brightness-110 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">
-                Unlock My Ultra Potential! &rarr;
-            </a>
-            <p class="mt-6 text-md text-gray-400">Offer expires with the countdown timer.</p>
-        </div>
-    </section>
-
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-24 bg-gray-950 px-4">
-        <div class="container mx-auto max-w-2xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Missed the Launch Discount? Join the Waitlist!
+    <section id="waitlist" class="py-16 md:py-24 bg-gray-950 text-white">
+        <div class="container mx-auto px-4 md:px-8 max-w-screen-md text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-8 text-white leading-tight">
+                Don't Miss Out! Join The Waitlist.
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8">
-                Be the first to know about future course updates, exclusive content, and upcoming promotions. Don't fall behind – stay on the cutting edge of AI productivity.
+            <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                Be among the first to receive <span class="font-semibold text-blue-400">The Smart Desk Digest</span> and secure your <span class="font-bold text-yellow-300">exclusive 20% launch discount</span>.
+                Spaces for this early bird offer are strictly limited!
             </p>
-            <form class="max-w-md mx-auto space-y-4">
-                <div>
-                    <input type="email" placeholder="Your Best Email Address" required
-                           class="w-full px-5 py-3 rounded-full bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300 shadow-md outline-none">
+
+            <form class="w-full max-w-lg mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl border border-blue-600">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-300 text-lg font-semibold mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="w-full px-5 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg placeholder-gray-400 transition duration-200" required>
                 </div>
-                <div>
-                    <button type="submit"
-                            class="w-full btn-primary px-5 py-3 rounded-full text-lg font-semibold text-white hover:brightness-110 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300 shadow-lg">
-                        Notify Me for Next Opportunity
-                    </button>
+                <div class="mb-8 text-left">
+                    <label for="email" class="block text-gray-300 text-lg font-semibold mb-2">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                           class="w-full px-5 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg placeholder-gray-400 transition duration-200" required>
                 </div>
+                <button type="submit"
+                        class="w-full bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-full text-2xl uppercase tracking-wide shadow-lg transform hover:scale-105 transition duration-300 ease-in-out border-2 border-transparent hover:border-white">
+                    Get Early Access & 20% OFF!
+                </button>
+                <p class="text-sm text-gray-500 mt-6">We respect your privacy. No spam, ever. Unsubscribe anytime.</p>
             </form>
-            <p class="text-sm text-gray-500 mt-6">We respect your privacy. No spam, ever.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 px-4">
-        <div class="container mx-auto text-center text-gray-400 text-sm">
-            <p>&copy; <span id="current-year"></span> Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">Disclaimer: 'MacBook Ultra' is a speculative product based on current market trends and rumors. This course prepares you for advanced features and AI integration in future high-end Apple products.</p>
+    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            &copy; 2023 The Smart Desk Digest. All rights reserved.
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
+    <!-- JavaScript for Countdown -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 7 days from now for a launch discount)
-            const launchDate = new Date();
-            launchDate.setDate(launchDate.getDate() + 7); // Set to 7 days from today
-            // For a specific date, use: const launchDate = new Date("Dec 25, 2024 00:00:00").getTime();
+        function setupCountdown() {
+            // Set the date we're counting down to (e.g., 7 days from now as a placeholder)
+            // For a real application, this date would be dynamic, perhaps fetched from a backend.
+            const initialDate = new Date();
+            initialDate.setDate(initialDate.getDate() + 7); // 7 days from now
+            const countDownDate = initialDate.getTime();
 
-            const daysElement = document.getElementById("days");
-            const hoursElement = document.getElementById("hours");
-            const minutesElement = document.getElementById("minutes");
-            const secondsElement = document.getElementById("seconds");
-            const countdownContainer = document.querySelector('.bg-indigo-900.bg-opacity-40');
-            const primaryCtaButton = document.querySelector('.btn-primary');
-
-            const countdownFunction = setInterval(function() {
+            const x = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = launchDate - now;
+                const distance = countDownDate - now;
 
-                // Time calculations for days, hours, minutes and seconds
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Display the result in the respective elements
-                daysElement.innerHTML = String(days).padStart(2, '0');
-                hoursElement.innerHTML = String(hours).padStart(2, '0');
-                minutesElement.innerHTML = String(minutes).padStart(2, '0');
-                secondsElement.innerHTML = String(seconds).padStart(2, '0');
+                const countdownElement = document.getElementById("countdown");
+                if (countdownElement) {
+                     countdownElement.innerHTML = `
+                        <span class="bg-gray-800 px-4 py-2 rounded-lg min-w-[60px] md:min-w-[80px]">${String(days).padStart(2, '0')}</span><span class="text-base md:text-lg mx-1">:</span>
+                        <span class="bg-gray-800 px-4 py-2 rounded-lg min-w-[60px] md:min-w-[80px]">${String(hours).padStart(2, '0')}</span><span class="text-base md:text-lg mx-1">:</span>
+                        <span class="bg-gray-800 px-4 py-2 rounded-lg min-w-[60px] md:min-w-[80px]">${String(minutes).padStart(2, '0')}</span><span class="text-base md:text-lg mx-1">:</span>
+                        <span class="bg-gray-800 px-4 py-2 rounded-lg min-w-[60px] md:min-w-[80px]">${String(seconds).padStart(2, '0')}</span>
+                    `;
+                }
 
-                // If the countdown is over, update elements
                 if (distance < 0) {
-                    clearInterval(countdownFunction);
-                    countdownContainer.innerHTML = '<p class="text-red-400 text-lg sm:text-xl md:text-2xl font-bold">Offer Expired!</p>';
-                    countdownContainer.classList.remove('bg-indigo-900', 'bg-opacity-40', 'border-indigo-700');
-                    countdownContainer.classList.add('bg-gray-800', 'border-gray-700', 'bg-opacity-70');
-
-                    if (primaryCtaButton) {
-                        primaryCtaButton.innerHTML = 'Join Waitlist for Next Offer &rarr;';
-                        primaryCtaButton.setAttribute('href', '#waitlist'); // Redirect to waitlist
-                        primaryCtaButton.classList.remove('btn-primary');
-                        primaryCtaButton.classList.add('bg-gray-700', 'hover:bg-gray-600', 'focus:ring-gray-500', 'shadow-md', 'text-gray-300'); // Adjust styling for expired
-                        primaryCtaButton.style.backgroundImage = 'none'; // Remove gradient
+                    clearInterval(x);
+                    if (countdownElement) {
+                        countdownElement.innerHTML = "<span class='text-yellow-300 text-2xl md:text-3xl font-bold'>OFFER EXPIRED!</span>";
+                        countdownElement.classList.remove('animate-pulse-light'); // Stop animation on expiry
+                    }
+                    const ctaButton = document.querySelector('a[href="#waitlist"]');
+                    if (ctaButton) {
+                        ctaButton.textContent = "Join The Waitlist"; // Change text if offer expired
+                        ctaButton.classList.remove('from-green-500', 'to-blue-600', 'hover:from-green-600', 'hover:to-blue-700');
+                        ctaButton.classList.add('from-gray-600', 'to-gray-700', 'hover:from-gray-700', 'hover:to-gray-800');
+                    }
+                    const formButton = document.querySelector('#waitlist button[type="submit"]');
+                    if (formButton) {
+                        formButton.textContent = "Join The Waitlist"; // Change text if offer expired
+                        formButton.classList.remove('from-green-500', 'to-blue-600', 'hover:from-green-600', 'hover:to-blue-700');
+                        formButton.classList.add('from-gray-600', 'to-gray-700', 'hover:from-gray-700', 'hover:to-gray-800');
+                        const offerText = document.querySelector('#waitlist p.mb-10');
+                        if (offerText) {
+                            offerText.innerHTML = "Be among the first to receive <span class=\"font-semibold text-blue-400\">The Smart Desk Digest</span>.";
+                        }
                     }
                 }
             }, 1000);
+        }
 
-            // Update current year for footer
-            document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Initialize countdown on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            if (document.getElementById("countdown")) {
+                setupCountdown();
+            }
         });
     </script>
 </body>
