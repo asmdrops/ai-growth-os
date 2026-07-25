@@ -1,235 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ModerAI – Real-Time AI Content Moderation for Smart Glasses</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Mastering Your MacBook Ultra: Unleash AI & Productivity Features</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter for premium feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* Custom overlay for hero image to ensure text readability */
-        .hero-overlay {
-            background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9));
-        }
-        /* Ensure smooth scrolling for anchor links */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Prevent horizontal scroll issues on very narrow screens */
+        /* Custom styles for dark mode and premium feel */
         body {
-            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; /* Deep dark background */
+            color: #e2e8f0; /* Light text */
         }
-        /* Tailwind's animate-pulse sometimes needs explicit keyframes for older browsers, but generally works fine. */
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: .5; }
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
         }
-        .animate-pulse {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+        }
+        .countdown-timer span {
+            font-variant-numeric: tabular-nums; /* Align numbers in timer */
+        }
+        .gradient-text {
+            background-image: linear-gradient(to right, #6366f1, #9333ea); /* Blue to Purple gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn-primary {
+            background-image: linear-gradient(to right, #4f46e5, #7c3aed); /* Stronger gradient for CTA */
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+        }
+        .feature-card {
+            background-color: #1a1a1a; /* Slightly lighter dark for feature cards */
+            border: 1px solid #2d2d2d;
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+            border-color: #4f46e5;
         }
     </style>
 </head>
-<body class="bg-gray-950 text-white font-sans antialiased">
+<body class="bg-gray-950 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative bg-cover bg-center min-h-screen flex items-center justify-center p-4" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-        <div class="absolute inset-0 hero-overlay"></div>
-        <div class="relative z-10 text-center max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-                Stop the Moderation Nightmare: AI for Smart Glasses Footage
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center relative px-4 py-20 lg:py-0">
+        <div class="hero-overlay absolute inset-0 z-0"></div>
+        <div class="relative z-10 max-w-6xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 gradient-text drop-shadow-lg">
+                Mastering Your MacBook Ultra:<br class="hidden sm:inline"> Unleash Its 12 AI & Productivity Features
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Proactively safeguard user privacy, brand reputation, and platform integrity with real-time AI moderation for smart glasses content.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Unlock the full potential of your new MacBook Ultra. Discover exclusive AI capabilities and productivity hacks to redefine your workflow in the era of intelligence.
             </p>
-            <a href="#waitlist" class="bg-purple-700 hover:bg-purple-600 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-75">
-                Join the Waitlist Now
+
+            <!-- Countdown Timer -->
+            <div class="bg-indigo-900 bg-opacity-40 border border-indigo-700 rounded-lg p-6 sm:p-8 mb-10 inline-block max-w-full">
+                <p class="text-sm sm:text-base font-semibold text-indigo-200 uppercase tracking-wide mb-4">Limited Time Launch Discount Ends In:</p>
+                <div class="countdown-timer flex justify-center space-x-2 sm:space-x-4 md:space-x-6 text-white text-3xl sm:text-4xl md:text-5xl font-bold">
+                    <div>
+                        <span id="days">00</span><br>
+                        <span class="block text-xs sm:text-sm font-medium text-gray-300 mt-1">Days</span>
+                    </div>
+                    <div class="text-indigo-400">:</div>
+                    <div>
+                        <span id="hours">00</span><br>
+                        <span class="block text-xs sm:text-sm font-medium text-gray-300 mt-1">Hours</span>
+                    </div>
+                    <div class="text-indigo-400">:</div>
+                    <div>
+                        <span id="minutes">00</span><br>
+                        <span class="block text-xs sm:text-sm font-medium text-gray-300 mt-1">Minutes</span>
+                    </div>
+                    <div class="text-indigo-400">:</div>
+                    <div>
+                        <span id="seconds">00</span><br>
+                        <span class="block text-xs sm:text-sm font-medium text-gray-300 mt-1">Seconds</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#purchase" class="btn-primary inline-flex items-center justify-center px-10 py-4 text-lg sm:text-xl font-bold rounded-full shadow-lg text-white hover:brightness-110 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">
+                Secure Your Discount Now! &rarr;
             </a>
-            <p class="mt-4 text-sm text-gray-400">Trusted by innovators and privacy-conscious platforms.</p>
         </div>
-    </header>
+    </section>
+
+    <!-- Introduction & Market Trend Section -->
+    <section class="py-16 sm:py-20 bg-gray-900 px-4">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                Stay Ahead of the Curve with AI-Driven Productivity
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 leading-relaxed">
+                The future of work is intelligent. With the anticipated 'MacBook Ultra' set to revolutionize personal computing, leveraging its advanced AI and specialized hardware isn't just an advantage—it's a necessity. This course is your definitive guide to transforming how you interact with your Mac, making every task smarter, faster, and more efficient.
+            </p>
+        </div>
+    </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-20 lg:py-24 bg-gray-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">
-                Key Capabilities of ModerAI
+    <section id="features" class="py-16 sm:py-24 bg-gray-950 px-4">
+        <div class="container mx-auto max-w-7xl">
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-center text-white mb-12">
+                What You'll Master: <span class="gradient-text">12 AI & Productivity Features</span>
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1: Real-Time Detection -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-4xl text-purple-400 mb-4">
-                        <i class="fas fa-stopwatch"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Real-Time Detection</h3>
-                    <p class="text-gray-300">
-                        Our advanced AI instantly scans smart glasses footage as it's streamed or uploaded, identifying violations before they become public.
-                    </p>
+                <!-- Feature 1 -->
+                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
+                    <div class="text-5xl text-blue-400 mb-4">💡</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Smarter Task Automation</h3>
+                    <p class="text-gray-300">Automate repetitive tasks with AI-powered shortcuts and workflows tailored for the Ultra's capabilities.</p>
                 </div>
-                <!-- Feature 2: Privacy Violation Flagging -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-4xl text-blue-400 mb-4">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Privacy Violation Flagging</h3>
-                    <p class="text-gray-300">
-                        Automatically detect and flag sensitive content, non-consensual recordings, and identifiable personal information to protect users.
-                    </p>
+                <!-- Feature 2 -->
+                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
+                    <div class="text-5xl text-purple-400 mb-4">🚀</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">AI-Enhanced Creativity Tools</h3>
+                    <p class="text-gray-300">Utilize on-device AI for real-time content generation, image editing, and design assistance.</p>
                 </div>
-                <!-- Feature 3: Brand Safety Assurance -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-4xl text-green-400 mb-4">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Brand Safety Assurance</h3>
-                    <p class="text-gray-300">
-                        Ensure your platform remains a safe and trusted environment by moderating content that could harm your brand reputation.
-                    </p>
+                <!-- Feature 3 -->
+                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
+                    <div class="text-5xl text-green-400 mb-4">💬</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Intelligent Communication Hub</h3>
+                    <p class="text-gray-300">Streamline emails, messages, and virtual meetings with AI-driven summaries and smart replies.</p>
                 </div>
-                <!-- Feature 4: Customizable Rule Sets -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-4xl text-red-400 mb-4">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Customizable Rule Sets</h3>
-                    <p class="text-gray-300">
-                        Tailor moderation rules to your specific platform policies, allowing for flexible and precise content governance.
-                    </p>
+                <!-- Feature 4 -->
+                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
+                    <div class="text-5xl text-red-400 mb-4">📊</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Data Analysis & Visualization</h3>
+                    <p class="text-gray-300">Harness AI for quick insights from complex data, generating reports and visuals effortlessly.</p>
                 </div>
-                <!-- Feature 5: Seamless API Integration -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-4xl text-yellow-400 mb-4">
-                        <i class="fas fa-plug"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Seamless API Integration</h3>
-                    <p class="text-gray-300">
-                        Effortlessly integrate ModerAI into your existing infrastructure with our robust and developer-friendly API.
-                    </p>
+                <!-- Feature 5 -->
+                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
+                    <div class="text-5xl text-yellow-400 mb-4">🔒</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Advanced Security Protocols</h3>
+                    <p class="text-gray-300">Leverage AI-driven threat detection and privacy features unique to the MacBook Ultra.</p>
                 </div>
-                <!-- Feature 6: Actionable Insights & Reporting -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-4xl text-pink-400 mb-4">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Actionable Insights & Reporting</h3>
-                    <p class="text-gray-300">
-                        Gain valuable data on content trends, violation patterns, and moderation effectiveness to continuously improve your platform.
-                    </p>
+                <!-- Feature 6 -->
+                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
+                    <div class="text-5xl text-cyan-400 mb-4">🧠</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Personalized Learning & Focus</h3>
+                    <p class="text-gray-300">Create an optimal work environment with AI that adapts to your focus patterns and learning style.</p>
+                </div>
+                <!-- Feature 7 -->
+                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
+                    <div class="text-5xl text-pink-400 mb-4">✍️</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">AI-Powered Writing Assistant</h3>
+                    <p class="text-gray-300">Enhance your writing with real-time grammar checks, style suggestions, and content generation.</p>
+                </div>
+                <!-- Feature 8 -->
+                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
+                    <div class="text-5xl text-orange-400 mb-4">🌐</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Seamless Multi-Device Ecosystem</h3>
+                    <p class="text-gray-300">Optimize connectivity and workflow across your Apple devices with the Ultra's central AI intelligence.</p>
+                </div>
+                <!-- Feature 9 -->
+                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
+                    <div class="text-5xl text-indigo-400 mb-4">🔍</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Enhanced Search & Discovery</h3>
+                    <p class="text-gray-300">Find anything instantly with AI-powered contextual search across files, apps, and the web.</p>
+                </div>
+                <!-- Feature 10 -->
+                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
+                    <div class="text-5xl text-lime-400 mb-4">🎙️</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Advanced Voice Control & Dictation</h3>
+                    <p class="text-gray-300">Command your Mac with greater precision and speed using the Ultra's sophisticated voice AI.</p>
+                </div>
+                <!-- Feature 11 -->
+                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
+                    <div class="text-5xl text-fuchsia-400 mb-4">🗓️</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Proactive Scheduling & Reminders</h3>
+                    <p class="text-gray-300">Let AI intelligently manage your calendar and remind you of priorities before they become urgent.</p>
+                </div>
+                <!-- Feature 12 -->
+                <div class="feature-card p-6 rounded-lg shadow-xl text-center">
+                    <div class="text-5xl text-teal-400 mb-4">⚡</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Optimized Performance & Battery</h3>
+                    <p class="text-gray-300">Learn how the Ultra's AI manages resources to deliver peak performance and extended battery life.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Section -->
-    <section id="waitlist" class="py-16 sm:py-20 lg:py-24 bg-gray-950">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
-                Don't Get Caught Off Guard. Join the ModerAI Waitlist!
-            </h2>
-            <p class="text-lg sm:text-xl text-center text-gray-300 mb-10 max-w-2xl mx-auto">
-                Be among the first to get access to ModerAI and secure your platform's future in the age of smart glasses.
+    <!-- Secondary CTA / Purchase Section -->
+    <section id="purchase" class="py-16 sm:py-20 bg-gray-900 px-4 text-center">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Ready to Transform Your Workflow?</h2>
+            <p class="text-lg sm:text-xl text-gray-300 leading-relaxed mb-8">
+                Don't miss out on the 'Limited Time Launch Discount' to gain unparalleled insights into your MacBook Ultra. This comprehensive guide is your key to mastering AI-driven productivity.
             </p>
+            <a href="#checkout" class="btn-primary inline-flex items-center justify-center px-12 py-5 text-xl sm:text-2xl font-bold rounded-full shadow-xl text-white hover:brightness-110 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">
+                Unlock My Ultra Potential! &rarr;
+            </a>
+            <p class="mt-6 text-md text-gray-400">Offer expires with the countdown timer.</p>
+        </div>
+    </section>
 
-            <!-- Limited Time Offer & Countdown -->
-            <div class="text-center bg-gradient-to-r from-red-700 to-purple-800 p-6 rounded-xl shadow-xl max-w-xl mx-auto mb-10 border border-purple-700">
-                <p class="text-2xl sm:text-3xl font-extrabold mb-4 text-white animate-pulse">LIMITED TIME OFFER!</p>
-                <p class="text-lg sm:text-xl text-white mb-4">Special early-bird access & exclusive pricing for the first 100 sign-ups.</p>
-                <div class="flex justify-center items-center space-x-3 sm:space-x-4 text-white font-bold text-3xl sm:text-4xl lg:text-5xl" id="countdown-timer">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="bg-gray-800 p-3 rounded-lg min-w-[60px] sm:min-w-[80px] lg:min-w-[100px] text-center">00</span>
-                        <span class="text-sm sm:text-base text-gray-200 mt-2">Days</span>
-                    </div>
-                    <span class="text-white">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="bg-gray-800 p-3 rounded-lg min-w-[60px] sm:min-w-[80px] lg:min-w-[100px] text-center">00</span>
-                        <span class="text-sm sm:text-base text-gray-200 mt-2">Hours</span>
-                    </div>
-                    <span class="text-white">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="bg-gray-800 p-3 rounded-lg min-w-[60px] sm:min-w-[80px] lg:min-w-[100px] text-center">00</span>
-                        <span class="text-sm sm:text-base text-gray-200 mt-2">Minutes</span>
-                    </div>
-                    <span class="text-white">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="bg-gray-800 p-3 rounded-lg min-w-[60px] sm:min-w-[80px] lg:min-w-[100px] text-center">00</span>
-                        <span class="text-sm sm:text-base text-gray-200 mt-2">Seconds</span>
-                    </div>
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 sm:py-24 bg-gray-950 px-4">
+        <div class="container mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                Missed the Launch Discount? Join the Waitlist!
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                Be the first to know about future course updates, exclusive content, and upcoming promotions. Don't fall behind – stay on the cutting edge of AI productivity.
+            </p>
+            <form class="max-w-md mx-auto space-y-4">
+                <div>
+                    <input type="email" placeholder="Your Best Email Address" required
+                           class="w-full px-5 py-3 rounded-full bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300 shadow-md outline-none">
                 </div>
-            </div>
-
-            <!-- Waitlist Form -->
-            <form class="max-w-xl mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700">
-                <div class="mb-6">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700 placeholder-gray-400" placeholder="John Doe" required>
-                </div>
-                <div class="mb-6">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Work Email</label>
-                    <input type="email" id="email" name="email" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700 placeholder-gray-400" placeholder="john.doe@yourcompany.com" required>
-                </div>
-                <div class="mb-8">
-                    <label for="company" class="block text-gray-300 text-sm font-bold mb-2">Company Name</label>
-                    <input type="text" id="company" name="company" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700 placeholder-gray-400" placeholder="Acme Corporation" required>
-                </div>
-                <div class="flex items-center justify-center">
-                    <button type="submit" class="bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out shadow-lg transform hover:scale-105 w-full focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-75">
-                        Secure My Spot Now!
+                <div>
+                    <button type="submit"
+                            class="w-full btn-primary px-5 py-3 rounded-full text-lg font-semibold text-white hover:brightness-110 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300 shadow-lg">
+                        Notify Me for Next Opportunity
                     </button>
                 </div>
             </form>
+            <p class="text-sm text-gray-500 mt-6">We respect your privacy. No spam, ever.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8">
-        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
-            <p>&copy; 2023 ModerAI. All rights reserved. <br class="sm:hidden"> Built for a safer digital future.</p>
+    <footer class="bg-gray-900 py-10 px-4">
+        <div class="container mx-auto text-center text-gray-400 text-sm">
+            <p>&copy; <span id="current-year"></span> Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">Disclaimer: 'MacBook Ultra' is a speculative product based on current market trends and rumors. This course prepares you for advanced features and AI integration in future high-end Apple products.</p>
         </div>
     </footer>
 
     <!-- JavaScript for Countdown Timer -->
     <script>
-        // Set the target date for the countdown (e.g., 7 days from now)
-        const targetDate = new Date();
-        targetDate.setDate(targetDate.getDate() + 7); // Sets it 7 days in the future from current time
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (e.g., 7 days from now for a launch discount)
+            const launchDate = new Date();
+            launchDate.setDate(launchDate.getDate() + 7); // Set to 7 days from today
+            // For a specific date, use: const launchDate = new Date("Dec 25, 2024 00:00:00").getTime();
 
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = targetDate.getTime() - now;
+            const daysElement = document.getElementById("days");
+            const hoursElement = document.getElementById("hours");
+            const minutesElement = document.getElementById("minutes");
+            const secondsElement = document.getElementById("seconds");
+            const countdownContainer = document.querySelector('.bg-indigo-900.bg-opacity-40');
+            const primaryCtaButton = document.querySelector('.btn-primary');
 
-            // Calculate time units
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            const countdownFunction = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = launchDate - now;
 
-            // Display the results
-            document.getElementById('days').innerText = String(days).padStart(2, '0');
-            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
-            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
-            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // If the countdown is over, show "Offer Expired"
-            if (distance < 0) {
-                clearInterval(countdownInterval);
-                document.getElementById('days').innerText = '00';
-                document.getElementById('hours').innerText = '00';
-                document.getElementById('minutes').innerText = '00';
-                document.getElementById('seconds').innerText = '00';
-                
-                const countdownContainer = document.getElementById('countdown-timer');
-                if (countdownContainer) {
-                    countdownContainer.innerHTML = '<p class="text-2xl sm:text-3xl font-extrabold text-white">Offer Expired!</p><p class="text-lg text-white mt-2">Stay tuned for future opportunities.</p>';
-                    // Optionally remove the animate-pulse from parent if needed
-                    countdownContainer.closest('.bg-gradient-to-r').classList.remove('animate-pulse');
+                // Display the result in the respective elements
+                daysElement.innerHTML = String(days).padStart(2, '0');
+                hoursElement.innerHTML = String(hours).padStart(2, '0');
+                minutesElement.innerHTML = String(minutes).padStart(2, '0');
+                secondsElement.innerHTML = String(seconds).padStart(2, '0');
+
+                // If the countdown is over, update elements
+                if (distance < 0) {
+                    clearInterval(countdownFunction);
+                    countdownContainer.innerHTML = '<p class="text-red-400 text-lg sm:text-xl md:text-2xl font-bold">Offer Expired!</p>';
+                    countdownContainer.classList.remove('bg-indigo-900', 'bg-opacity-40', 'border-indigo-700');
+                    countdownContainer.classList.add('bg-gray-800', 'border-gray-700', 'bg-opacity-70');
+
+                    if (primaryCtaButton) {
+                        primaryCtaButton.innerHTML = 'Join Waitlist for Next Offer &rarr;';
+                        primaryCtaButton.setAttribute('href', '#waitlist'); // Redirect to waitlist
+                        primaryCtaButton.classList.remove('btn-primary');
+                        primaryCtaButton.classList.add('bg-gray-700', 'hover:bg-gray-600', 'focus:ring-gray-500', 'shadow-md', 'text-gray-300'); // Adjust styling for expired
+                        primaryCtaButton.style.backgroundImage = 'none'; // Remove gradient
+                    }
                 }
-            }
-        }
+            }, 1000);
 
-        // Update the countdown every 1 second
-        const countdownInterval = setInterval(updateCountdown, 1000);
-        // Initial call to display the countdown immediately without waiting 1 second
-        updateCountdown();
+            // Update current year for footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
     </script>
-
 </body>
 </html>
