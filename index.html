@@ -3,264 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Smart Desk Digest - Future-Proof Your Remote Productivity</title>
+    <title>One UI 9 Mastery & Security Guide - Exclusive Early Access</title>
+    <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Optional: Google Fonts for a premium feel (uncomment to use) -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"> -->
+    <!-- Google Fonts - Inter for a modern, clean look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for modern dark mode and font if Inter is used */
+        /* Base font-family */
         body {
-            /* font-family: 'Inter', sans-serif; */
-            /* Tailwind's default sans font is also excellent */
+            font-family: 'Inter', sans-serif;
         }
-        .text-gradient-to-r {
-            background-image: linear-gradient(to right, var(--tw-gradient-stops));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+
+        /* Custom styling for the hero background with overlay */
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .hero-background::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* Dark gradient overlay for text readability */
+            background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.8) 100%);
+            z-index: 0; /* Ensure content stays on top */
+        }
+
+        /* Fluid container for content centering and max-width */
+        .container-fluid {
+            width: 100%;
+            max-width: 1536px; /* Tailwind's 2xl breakpoint for larger screens */
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        @media (min-width: 640px) { /* sm breakpoint */
+            .container-fluid {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+        }
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .container-fluid {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+
+        /* Countdown segment styling (static HTML representation as JS is not allowed) */
+        .countdown-segment {
+            background-color: rgba(255, 255, 255, 0.08); /* Slightly visible dark background */
+            border-radius: 0.75rem; /* Rounded-xl */
+            padding: 0.75rem 1rem;
+            min-width: 5rem; /* Ensure segments have minimum width */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Subtle shadow */
+        }
+        .countdown-segment-value {
+            font-size: 2.5rem; /* text-5xl */
+            font-weight: 800; /* font-extrabold */
+            line-height: 1;
+            color: #E0E7FF; /* Light blueish for contrast */
+        }
+        .countdown-segment-label {
+            font-size: 0.875rem; /* text-sm */
+            text-transform: uppercase;
+            letter-spacing: 0.08em; /* tracking-widest */
+            margin-top: 0.5rem;
+            color: #cbd5e1; /* gray-300 */
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 antialiased leading-relaxed">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-            <div class="absolute inset-0 bg-black opacity-75"></div> <!-- Dark overlay for readability -->
-        </div>
-
-        <div class="relative z-10 p-4 md:p-8 max-w-5xl mx-auto">
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 text-white drop-shadow-lg animate-fade-in-down">
-                Master Your Remote Workspace.
+    <section class="hero-background relative min-h-screen flex items-center justify-center text-center p-4">
+        <div class="relative z-10 container-fluid px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg max-w-5xl">
+                One UI 9's 'Unlucky 13'? <span class="text-purple-400">Not Anymore.</span>
             </h1>
-            <p class="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 font-light drop-shadow-md animate-fade-in-up">
-                Unlock Peak Productivity & Ergonomic Excellence.
-            </p>
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gradient-to-r from-blue-400 to-purple-500 mb-6 drop-shadow-lg animate-fade-in">
-                Introducing <span class="text-blue-300">The Smart Desk Digest</span>
-            </h2>
-            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto animate-fade-in-up delay-100">
-                Your weekly intelligence brief on cutting-edge desk tech, exclusive deals, and essential market trends to elevate your work-from-home setup.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl leading-relaxed">
+                Master advanced security & features, protect your Galaxy from the dreaded 13-PIN lock, and unlock its true potential.
             </p>
 
-            <!-- Limited Time Countdown / Offer -->
-            <div class="bg-gradient-to-r from-purple-700 to-blue-700 p-6 rounded-xl shadow-xl mb-12 transform hover:scale-105 transition-transform duration-300 ease-in-out border border-blue-500 animate-pulse-light">
-                <p class="text-xl md:text-2xl font-semibold text-white mb-3 flex items-center justify-center">
-                    🚀 Special Launch Offer for Early Birds! 🚀
-                </p>
-                <p class="text-3xl md:text-4xl font-extrabold text-yellow-300 mb-4 animate-bounce-subtle">
-                    Join the Waitlist & Get <span class="text-red-400">20% OFF</span> Your First Month!
-                </p>
-                <div class="flex justify-center items-center space-x-4 text-white text-3xl md:text-4xl font-bold countdown" id="countdown">
-                    <span class="bg-gray-800 px-4 py-2 rounded-lg min-w-[60px] md:min-w-[80px]">00</span><span class="text-lg">:</span>
-                    <span class="bg-gray-800 px-4 py-2 rounded-lg min-w-[60px] md:min-w-[80px]">00</span><span class="text-lg">:</span>
-                    <span class="bg-gray-800 px-4 py-2 rounded-lg min-w-[60px] md:min-w-[80px]">00</span><span class="text-lg">:</span>
-                    <span class="bg-gray-800 px-4 py-2 rounded-lg min-w-[60px] md:min-w-[80px]">00</span>
+            <!-- Limited Time Offer & Countdown Placeholder -->
+            <div class="bg-gradient-to-r from-purple-700 to-pink-600 text-white rounded-2xl shadow-2xl p-6 sm:p-8 mb-10 mx-auto w-full max-w-xl border border-purple-500">
+                <p class="text-xl sm:text-2xl font-bold mb-5 text-center">Exclusive Early Bird Offer Ends In:</p>
+                <div class="flex justify-center items-center space-x-3 sm:space-x-6 mb-7">
+                    <div class="countdown-segment">
+                        <span class="countdown-segment-value">07</span>
+                        <span class="countdown-segment-label">Days</span>
+                    </div>
+                    <div class="countdown-segment">
+                        <span class="countdown-segment-value">23</span>
+                        <span class="countdown-segment-label">Hours</span>
+                    </div>
+                    <div class="countdown-segment">
+                        <span class="countdown-segment-value">59</span>
+                        <span class="countdown-segment-label">Mins</span>
+                    </div>
+                    <div class="countdown-segment">
+                        <span class="countdown-segment-value">59</span>
+                        <span class="countdown-segment-label">Secs</span>
+                    </div>
                 </div>
-                <p class="text-sm text-gray-300 mt-3 md:text-base">Offer valid for the first 500 waitlist sign-ups only!</p>
+                <p class="text-base text-gray-100 text-center mb-6">
+                    Secure your premium 'One UI 9 Mastery Guide' at a special launch price. Don't miss this limited-time opportunity!
+                </p>
+                <a href="#waitlist-form" class="inline-block bg-white text-gray-900 font-extrabold py-4 px-10 rounded-full text-lg sm:text-xl shadow-xl hover:bg-gray-200 transition duration-300 transform hover:scale-105 active:scale-95 ease-in-out border-2 border-transparent hover:border-purple-600">
+                    Secure Your Early Access Now!
+                </a>
             </div>
-
-            <a href="#waitlist" class="inline-block bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl uppercase tracking-wide shadow-lg transform hover:scale-105 transition duration-300 ease-in-out border-2 border-transparent hover:border-white">
-                Secure My Spot & Discount!
-            </a>
+            
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900 text-white">
-        <div class="container mx-auto px-4 md:px-8 max-w-screen-xl">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-16 text-white leading-tight">
-                What You'll Discover Inside <span class="text-blue-400">The Smart Desk Digest</span>
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-
-                <!-- Feature 1: Top-tier Gadgets -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:-translate-y-2 border-t-4 border-blue-500">
-                    <div class="text-5xl mb-6 text-blue-400">🚀</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Curated Desk Gadgets & Reviews</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Discover three top-tier desk gadgets each week, meticulously reviewed for their practicality and impact on your productivity. We vet what truly matters, so you don't have to.
-                        <ul class="mt-4 space-y-2 text-gray-300 list-none pl-0">
-                            <li>✨ Unbiased, in-depth analysis.</li>
-                            <li>🛠️ Real-world usage scenarios.</li>
-                            <li>💡 Innovative solutions for your setup.</li>
-                        </ul>
-                    </p>
-                </div>
-
-                <!-- Feature 2: Limited-Time Deals -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:-translate-y-2 border-t-4 border-yellow-500">
-                    <div class="text-5xl mb-6 text-yellow-400">⏳</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Exclusive Limited-Time Deals</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Access one highly sought-after gadget with an exclusive, limited-time deal. These aren't just discounts; they're opportunities to upgrade your setup at unbeatable prices, available only to subscribers.
-                        <ul class="mt-4 space-y-2 text-gray-300 list-none pl-0">
-                            <li>🔥 Deep discounts on premium tech.</li>
-                            <li>🛒 Hand-picked, high-value products.</li>
-                            <li>⚡ Act fast – these deals vanish quickly!</li>
-                        </ul>
-                    </p>
-                </div>
-
-                <!-- Feature 3: Market Trends Analysis -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:-translate-y-2 border-t-4 border-green-500">
-                    <div class="text-5xl mb-6 text-green-400">📈</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Ergonomic & Smart Desk Market Trends</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Stay ahead of the curve with our expert analysis of the latest market trends in ergonomic and smart desk solutions. Understand what's new, what's next, and how to future-proof your workspace.
-                        <ul class="mt-4 space-y-2 text-gray-300 list-none pl-0">
-                            <li>📊 Data-driven insights.</li>
-                            <li>🔮 Predictions for future tech.</li>
-                            <li>💡 Empower your purchasing decisions.</li>
-                        </ul>
-                    </p>
-                </div>
-
-                <!-- Feature 4: Exclusive Discounts & Sponsored Content -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:-translate-y-2 border-t-4 border-purple-500">
-                    <div class="text-5xl mb-6 text-purple-400">🎁</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Subscriber-Only Perks</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Beyond deals, enjoy special subscriber-only discounts from our partners and access to unique sponsored content, giving you deeper insights and even more ways to save and optimize.
-                        <ul class="mt-4 space-y-2 text-gray-300 list-none pl-0">
-                            <li>💰 Partner-exclusive savings.</li>
-                            <li>📚 In-depth sponsored content.</li>
-                            <li>🤝 Join a community of innovators.</li>
-                        </ul>
-                    </p>
-                </div>
-
-                <!-- Feature 5: Tailored for Remote Workers -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:-translate-y-2 border-t-4 border-red-500">
-                    <div class="text-5xl mb-6 text-red-400">🏠</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Tailored for Remote Success</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Every recommendation and analysis is geared towards empowering remote workers to maximize comfort, efficiency, and productivity in their home office setups.
-                        <ul class="mt-4 space-y-2 text-gray-300 list-none pl-0">
-                            <li>🏡 Optimize your home office.</li>
-                            <li>💪 Boost your daily output.</li>
-                            <li>🧘‍♀️ Enhance well-being at your desk.</li>
-                        </ul>
-                    </p>
-                </div>
-
-                <!-- Feature 6: No Gaming Trends (Implied Productivity) -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:-translate-y-2 border-t-4 border-indigo-500">
-                    <div class="text-5xl mb-6 text-indigo-400">🎯</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Pure Productivity Focus</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        We cut through the noise, focusing exclusively on desk solutions that directly enhance your work and well-being. No fleeting fads, just proven productivity.
-                        <ul class="mt-4 space-y-2 text-gray-300 list-none pl-0">
-                            <li>✅ Vetted for real-world impact.</li>
-                            <li>🚫 Zero gaming trends (unless productive).</li>
-                            <li>🧠 Smart choices for smarter work.</li>
-                        </ul>
-                    </p>
-                </div>
-
+    <section id="features" class="py-16 sm:py-20 bg-gray-900 text-center container-fluid">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 text-white">
+            What You'll Achieve with Our Mastery Guide
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-8">
+            <!-- Feature 1 -->
+            <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-gray-700">
+                <div class="text-5xl mb-6 select-none">🛡️</div>
+                <h3 class="text-2xl font-semibold mb-4 text-white">Defeat the 13-PIN Lock Nightmare</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    Step-by-step prevention & recovery strategies to safeguard your device from the infamous One UI 9 13-PIN lock issue.
+                </p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-gray-700">
+                <div class="text-5xl mb-6 select-none">🔒</div>
+                <h3 class="text-2xl font-semibold mb-4 text-white">Advanced Device Security Protocols</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    Master best practices for data privacy, app permissions, biometric safeguards, and secure network connections.
+                </p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-gray-700">
+                <div class="text-5xl mb-6 select-none">✨</div>
+                <h3 class="text-2xl font-semibold mb-4 text-white">Master All New One UI 9 Features</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    Dive deep into every innovation, from enhanced widgets to intelligent battery management and revamped UI elements.
+                </p>
+            </div>
+            <!-- Feature 4 -->
+            <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-gray-700">
+                <div class="text-5xl mb-6 select-none">🚀</div>
+                <h3 class="text-2xl font-semibold mb-4 text-white">Unleash Peak Performance & Battery Life</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    Discover hidden settings and optimization secrets to boost your Galaxy's speed and significantly extend its battery duration.
+                </p>
+            </div>
+            <!-- Feature 5 -->
+            <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-gray-700">
+                <div class="text-5xl mb-6 select-none">📚</div>
+                <h3 class="text-2xl font-semibold mb-4 text-white">Comprehensive eBook & Video Course</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    Learn at your own pace with a meticulously crafted eBook and engaging video modules, packed with actionable insights.
+                </p>
+            </div>
+            <!-- Feature 6 -->
+            <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-gray-700">
+                <div class="text-5xl mb-6 select-none">✅</div>
+                <h3 class="text-2xl font-semibold mb-4 text-white">Future-Proof Your Samsung Galaxy</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    Stay ahead of potential vulnerabilities and maximize your smartphone's lifespan and utility for years to come.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gray-950 text-white">
-        <div class="container mx-auto px-4 md:px-8 max-w-screen-md text-center">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-8 text-white leading-tight">
-                Don't Miss Out! Join The Waitlist.
-            </h2>
-            <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto">
-                Be among the first to receive <span class="font-semibold text-blue-400">The Smart Desk Digest</span> and secure your <span class="font-bold text-yellow-300">exclusive 20% launch discount</span>.
-                Spaces for this early bird offer are strictly limited!
-            </p>
+    <!-- Waitlist/Pre-order Form Section -->
+    <section id="waitlist-form" class="py-16 sm:py-20 bg-gray-800 text-center container-fluid">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 text-white">
+            Secure Your Mastery Guide Now!
+        </h2>
+        <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed px-4">
+            Join our exclusive early access list to get your "One UI 9 Security & Feature Mastery Guide" at a special discounted rate. Beat the crowd and gain unparalleled knowledge.
+        </p>
 
-            <form class="w-full max-w-lg mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl border border-blue-600">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-lg font-semibold mb-2">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="w-full px-5 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg placeholder-gray-400 transition duration-200" required>
+        <div class="max-w-xl mx-auto bg-gray-900 rounded-xl p-8 sm:p-10 shadow-2xl border border-gray-700">
+            <form action="#" method="POST" class="space-y-6 text-left">
+                <div>
+                    <label for="name" class="block text-gray-300 text-sm font-medium mb-2">Your Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe"
+                           class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50 text-white placeholder-gray-400 outline-none transition duration-200 shadow-sm">
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-300 text-lg font-semibold mb-2">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="w-full px-5 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg placeholder-gray-400 transition duration-200" required>
+                <div>
+                    <label for="email" class="block text-gray-300 text-sm font-medium mb-2">Your Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="john.doe@example.com"
+                           class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50 text-white placeholder-gray-400 outline-none transition duration-200 shadow-sm">
                 </div>
-                <button type="submit"
-                        class="w-full bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-full text-2xl uppercase tracking-wide shadow-lg transform hover:scale-105 transition duration-300 ease-in-out border-2 border-transparent hover:border-white">
-                    Get Early Access & 20% OFF!
-                </button>
-                <p class="text-sm text-gray-500 mt-6">We respect your privacy. No spam, ever. Unsubscribe anytime.</p>
+                <div>
+                    <button type="submit"
+                            class="w-full bg-purple-600 text-white font-extrabold py-3 px-6 rounded-lg text-lg shadow-lg hover:bg-purple-700 transition duration-300 transform hover:scale-105 active:scale-95 ease-in-out border-2 border-transparent hover:border-white">
+                        Get Early Access & Discount
+                    </button>
+                </div>
             </form>
+            <p class="text-xs text-gray-400 mt-6">
+                We respect your privacy. Your email will only be used for exclusive updates and access to this guide.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm border-t border-gray-800">
-        <div class="container mx-auto px-4">
-            &copy; 2023 The Smart Desk Digest. All rights reserved.
+    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm border-t border-gray-800">
+        <div class="container-fluid px-4">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">Disclaimer: This guide is an independent product and not affiliated with Samsung Electronics.</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown -->
-    <script>
-        function setupCountdown() {
-            // Set the date we're counting down to (e.g., 7 days from now as a placeholder)
-            // For a real application, this date would be dynamic, perhaps fetched from a backend.
-            const initialDate = new Date();
-            initialDate.setDate(initialDate.getDate() + 7); // 7 days from now
-            const countDownDate = initialDate.getTime();
-
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate - now;
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                const countdownElement = document.getElementById("countdown");
-                if (countdownElement) {
-                     countdownElement.innerHTML = `
-                        <span class="bg-gray-800 px-4 py-2 rounded-lg min-w-[60px] md:min-w-[80px]">${String(days).padStart(2, '0')}</span><span class="text-base md:text-lg mx-1">:</span>
-                        <span class="bg-gray-800 px-4 py-2 rounded-lg min-w-[60px] md:min-w-[80px]">${String(hours).padStart(2, '0')}</span><span class="text-base md:text-lg mx-1">:</span>
-                        <span class="bg-gray-800 px-4 py-2 rounded-lg min-w-[60px] md:min-w-[80px]">${String(minutes).padStart(2, '0')}</span><span class="text-base md:text-lg mx-1">:</span>
-                        <span class="bg-gray-800 px-4 py-2 rounded-lg min-w-[60px] md:min-w-[80px]">${String(seconds).padStart(2, '0')}</span>
-                    `;
-                }
-
-                if (distance < 0) {
-                    clearInterval(x);
-                    if (countdownElement) {
-                        countdownElement.innerHTML = "<span class='text-yellow-300 text-2xl md:text-3xl font-bold'>OFFER EXPIRED!</span>";
-                        countdownElement.classList.remove('animate-pulse-light'); // Stop animation on expiry
-                    }
-                    const ctaButton = document.querySelector('a[href="#waitlist"]');
-                    if (ctaButton) {
-                        ctaButton.textContent = "Join The Waitlist"; // Change text if offer expired
-                        ctaButton.classList.remove('from-green-500', 'to-blue-600', 'hover:from-green-600', 'hover:to-blue-700');
-                        ctaButton.classList.add('from-gray-600', 'to-gray-700', 'hover:from-gray-700', 'hover:to-gray-800');
-                    }
-                    const formButton = document.querySelector('#waitlist button[type="submit"]');
-                    if (formButton) {
-                        formButton.textContent = "Join The Waitlist"; // Change text if offer expired
-                        formButton.classList.remove('from-green-500', 'to-blue-600', 'hover:from-green-600', 'hover:to-blue-700');
-                        formButton.classList.add('from-gray-600', 'to-gray-700', 'hover:from-gray-700', 'hover:to-gray-800');
-                        const offerText = document.querySelector('#waitlist p.mb-10');
-                        if (offerText) {
-                            offerText.innerHTML = "Be among the first to receive <span class=\"font-semibold text-blue-400\">The Smart Desk Digest</span>.";
-                        }
-                    }
-                }
-            }, 1000);
-        }
-
-        // Initialize countdown on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            if (document.getElementById("countdown")) {
-                setupCountdown();
-            }
-        });
-    </script>
 </body>
 </html>
