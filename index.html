@@ -3,181 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding QR Suite - Simplify Your Special Day</title>
-    <meta name="description" content="Design and manage custom, dynamic QR codes for all your wedding needs: digital invitations, interactive programs, photo sharing, gift registries, and more.">
+    <title>FFXIV Housing Magnate: Mastering Gil, Plots & Prestige</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;404;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+        /* Custom dark-mode styles for premium feel */
+        .dark {
+            --color-bg-primary: #1a202c;
+            --color-bg-secondary: #2d3748;
+            --color-text-primary: #e2e8f0;
+            --color-text-secondary: #a0aec0;
+            --color-accent: #667eea; /* Indigo */
+            --color-accent-hover: #5a67d8;
         }
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
+
+        body.dark {
+            background-color: var(--color-bg-primary);
+            color: var(--color-text-primary);
         }
+
+        .dark .bg-gradient-overlay {
+            background-image: linear-gradient(to bottom, rgba(26,32,44,0.7) 0%, rgba(26,32,44,0.9) 100%);
+        }
+
+        .dark .btn-primary {
+            background-color: var(--color-accent);
+            color: white;
+        }
+        .dark .btn-primary:hover {
+            background-color: var(--color-accent-hover);
+        }
+
+        /* Responsive Hero Image */
         .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-position: center center;
             background-size: cover;
-            background-repeat: no-repeat;
+            background-position: center;
         }
-        .countdown-timer {
-            font-variant-numeric: tabular-nums; /* Ensures numbers align even if they change width */
+        
+        /* Countdown specific styles */
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem; /* Default for larger screens */
+            line-height: 1;
+        }
+        .countdown-item span:first-child {
+            font-weight: 700;
+        }
+        .countdown-item span:last-child {
+            font-size: 0.875rem; /* text-sm */
+            text-transform: uppercase;
+            letter-spacing: 0.05em; /* tracking-wider */
+            color: var(--color-text-secondary);
+        }
+
+        @media (max-width: 640px) { /* sm breakpoint */
+            .countdown-item {
+                font-size: 1.875rem; /* text-3xl */
+            }
+        }
+        @media (min-width: 641px) and (max-width: 1024px) { /* md to lg */
+            .countdown-item {
+                font-size: 2.25rem; /* text-4xl */
+            }
         }
     </style>
 </head>
-<body class="dark:bg-gray-950 dark:text-gray-100 text-gray-900 antialiased">
+<body class="font-sans antialiased bg-gray-900 text-gray-50">
 
     <!-- Hero Section -->
-    <header class="relative h-screen flex items-center justify-center text-white hero-bg">
-        <!-- Background Image Overlay -->
-        <div class="absolute inset-0 bg-black bg-opacity-70 z-10"></div>
-
-        <!-- Content -->
-        <div class="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-4xl">
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-6 animate-fade-in-up">
-                Your Wedding, Brilliantly Connected.
+    <header class="relative min-h-screen flex items-center justify-center text-center text-white py-16 px-4 hero-bg">
+        <div class="absolute inset-0 bg-gradient-overlay"></div>
+        <div class="relative z-10 max-w-4xl mx-auto space-y-8">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-4 animate-fade-in-up">
+                Dominate Evercold's Housing Market: <br class="hidden sm:inline">The Ultimate Guide for FFXIV's New Era
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl mb-8 opacity-90 animate-fade-in-up delay-200">
-                Revolutionize your special day with custom, dynamic QR codes for every wedding detail.
+            <p class="text-xl sm:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-200">
+                Stop chasing fleeting plots and meager gil. With major housing updates on the horizon, this premium toolkit equips you to multiply your wealth, secure prime locations, and design breathtaking homes with unparalleled efficiency.
             </p>
-
-            <!-- Limited Time Countdown -->
-            <div class="bg-gradient-to-r from-purple-700 to-pink-600 text-white p-4 rounded-lg shadow-xl inline-block mb-10 transform hover:scale-105 transition-transform duration-300 animate-fade-in-up delay-400">
-                <p class="text-sm uppercase font-semibold tracking-wide">Limited Time Early Bird Offer!</p>
-                <p class="text-2xl sm:text-3xl lg:text-4xl font-bold countdown-timer mt-2">
-                    Ends In: <span id="days">00</span>d <span id="hours">00</span>h <span id="minutes">00</span>m <span id="seconds">00</span>s
-                </p>
-                <script>
-                    // Basic countdown placeholder (real implementation would require server-side time or more robust JS)
-                    document.addEventListener('DOMContentLoaded', function() {
-                        const targetDate = new Date();
-                        targetDate.setDate(targetDate.getDate() + 7); // Set target 7 days from now for demo
-
-                        const updateCountdown = () => {
-                            const now = new Date().getTime();
-                            const distance = targetDate.getTime() - now;
-
-                            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                            document.getElementById('days').innerText = String(days).padStart(2, '0');
-                            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
-                            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
-                            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
-
-                            if (distance < 0) {
-                                clearInterval(interval);
-                                document.querySelector('.countdown-timer').innerHTML = "OFFER EXPIRED!";
-                            }
-                        };
-
-                        const interval = setInterval(updateCountdown, 1000);
-                        updateCountdown(); // Initial call to display immediately
-                    });
-                </script>
-            </div>
-
-            <a href="#waitlist" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-10 rounded-full text-xl transition duration-300 transform hover:scale-105 shadow-lg animate-fade-in-up delay-600">
-                Get Early Access Now
+            <a href="#waitlist-form" class="inline-block btn-primary text-lg sm:text-xl font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 animate-fade-in-up delay-400">
+                Secure Early Access & Exclusive Bonuses!
             </a>
+            <p class="text-sm text-gray-400 mt-4 animate-fade-in-up delay-600">
+                ⚠️ Limited spots available for early bird pricing.
+            </p>
         </div>
     </header>
 
-    <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 dark:bg-gray-900 bg-gray-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 dark:text-gray-50 text-gray-800">
-                Elevate Every Wedding Moment
+    <!-- Urgency/Limited Time Countdown Section -->
+    <section class="bg-gray-800 py-12 sm:py-16 text-center text-gray-100 border-b border-gray-700">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-yellow-300">
+                ⚡ The Housing Market is About to Change Forever! ⚡
             </h2>
-            <p class="text-center text-lg md:text-xl max-w-3xl mx-auto mb-16 dark:text-gray-300 text-gray-600">
-                From 'Save the Date' to 'Thank You', our Wedding QR Suite streamlines communication, enhances guest experience, and preserves memories effortlessly.
+            <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                Yoshi-P's vision brings two major housing updates to FFXIV, inspired by World of Warcraft. This means unprecedented opportunities – and fierce competition. Our exclusive guide ensures you're ready to capitalize, not get left behind!
             </p>
+            <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-2xl inline-block">
+                <p class="text-2xl sm:text-3xl font-semibold mb-6 text-indigo-400">
+                    Special Launch Offer Ends In:
+                </p>
+                <div id="countdown-timer" class="flex justify-center items-stretch gap-4 sm:gap-8 lg:gap-12">
+                    <div class="countdown-item text-indigo-300">
+                        <span id="days">00</span>
+                        <span>Days</span>
+                    </div>
+                    <div class="countdown-item text-indigo-300">
+                        <span id="hours">00</span>
+                        <span>Hours</span>
+                    </div>
+                    <div class="countdown-item text-indigo-300">
+                        <span id="minutes">00</span>
+                        <span>Minutes</span>
+                    </div>
+                    <div class="countdown-item text-indigo-300">
+                        <span id="seconds">00</span>
+                        <span>Seconds</span>
+                    </div>
+                </div>
+            </div>
+            <p class="text-base text-gray-400 mt-8">
+                Don't miss out on unlocking your full potential before the game shifts.
+            </p>
+        </div>
+    </section>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Feature Card 1 -->
-                <div class="dark:bg-gray-800 bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center">
-                    <div class="text-purple-500 mb-4 text-5xl">🎉</div>
-                    <h3 class="text-2xl font-semibold mb-3 dark:text-white text-gray-800">Digital Invitations & RSVPs</h3>
-                    <p class="dark:text-gray-300 text-gray-600">Create elegant, interactive digital invitations with embedded RSVPs. Track guest responses in real-time, effortlessly.</p>
+    <!-- Features Section -->
+    <section class="py-16 sm:py-24 bg-gray-900 text-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 text-indigo-400">
+                What You'll Master with FFXIV Housing Magnate
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1: Gil Generation -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="text-5xl text-yellow-400 mb-6 text-center">💰</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-center">Gil Generation Goldmine</h3>
+                    <p class="text-gray-300 text-center">
+                        Unlock the most profitable housing item crafting and trading secrets. Turn your workshop into a passive income empire and watch your gil stack up effortlessly.
+                    </p>
                 </div>
 
-                <!-- Feature Card 2 -->
-                <div class="dark:bg-gray-800 bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center">
-                    <div class="text-pink-500 mb-4 text-5xl">📖</div>
-                    <h3 class="text-2xl font-semibold mb-3 dark:text-white text-gray-800">Interactive Programs & Menus</h3>
-                    <p class="dark:text-gray-300 text-gray-600">Guests can scan for ceremony details, personalized menus, vendor credits, and venue maps directly from their phones.</p>
+                <!-- Feature 2: Plot Acquisition -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="text-5xl text-green-400 mb-6 text-center">🏡</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-center">Efficient Plot Acquisition</h3>
+                    <p class="text-gray-300 text-center">
+                        Navigate the new housing updates with precision. Discover exclusive tactics to secure your dream estate, even amidst fierce competition. Never miss out on a prime plot again!
+                    </p>
                 </div>
 
-                <!-- Feature Card 3 -->
-                <div class="dark:bg-gray-800 bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center">
-                    <div class="text-blue-400 mb-4 text-5xl">📸</div>
-                    <h3 class="text-2xl font-semibold mb-3 dark:text-white text-gray-800">Instant Photo Sharing</h3>
-                    <p class="dark:text-gray-300 text-gray-600">Provide a seamless link for guests to upload their photos to a shared album or view professional galleries instantly.</p>
+                <!-- Feature 3: Interior Design -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="text-5xl text-blue-400 mb-6 text-center">✨</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-center">Optimized Design Blueprints</h3>
+                    <p class="text-gray-300 text-center">
+                        Access battle-tested interior design blueprints that save you time, gil, and resources. Create breathtaking, prestigious homes without breaking the bank or your sanity.
+                    </p>
                 </div>
 
-                <!-- Feature Card 4 -->
-                <div class="dark:bg-gray-800 bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center">
-                    <div class="text-green-400 mb-4 text-5xl">🎁</div>
-                    <h3 class="text-2xl font-semibold mb-3 dark:text-white text-gray-800">Gift Registry Integration</h3>
-                    <p class="dark:text-gray-300 text-gray-600">Guide guests directly to your preferred gift registries or honeymoon funds with a simple scan.</p>
-                </div>
-
-                <!-- Feature Card 5 -->
-                <div class="dark:bg-gray-800 bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center">
-                    <div class="text-orange-400 mb-4 text-5xl">✍️</div>
-                    <h3 class="text-2xl font-semibold mb-3 dark:text-white text-gray-800">Digital Guestbook & Messages</h3>
-                    <p class="dark:text-gray-300 text-gray-600">Allow guests to leave heartfelt messages, well wishes, or even video snippets digitally, creating a lasting memory.</p>
-                </div>
-
-                <!-- Feature Card 6 -->
-                <div class="dark:bg-gray-800 bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center">
-                    <div class="text-yellow-400 mb-4 text-5xl">💖</div>
-                    <h3 class="text-2xl font-semibold mb-3 dark:text-white text-gray-800">Custom Branding & Analytics</h3>
-                    <p class="dark:text-gray-300 text-gray-600">Match your wedding theme with custom QR designs and gain insights into guest engagement with built-in analytics.</p>
+                <!-- Feature 4: Market Trends -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="text-5xl text-red-400 mb-6 text-center">📈</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-center">Leveraging Market Trends</h3>
+                    <p class="text-gray-300 text-center">
+                        Understand and exploit the Evercold housing economy. Identify lucrative trends, predict market shifts, and make informed decisions to buy low and sell high for maximum profit.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 dark:bg-gray-950 bg-gray-100">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 dark:text-gray-50 text-gray-800">
-                Be Among The First.
+    <section id="waitlist-form" class="bg-gray-800 py-16 sm:py-24 border-t border-gray-700">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-indigo-400 mb-8">
+                Join the Exclusive Waitlist!
             </h2>
-            <p class="text-lg md:text-xl mb-12 dark:text-gray-300 text-gray-600">
-                Join our exclusive waitlist for early access, special launch pricing, and updates as we prepare to redefine wedding planning.
+            <p class="text-lg sm:text-xl text-gray-300 mb-10">
+                Be among the first to get access to "FFXIV Housing Magnate" and receive exclusive early bird pricing, bonus content, and direct notifications for the major housing updates.
             </p>
-
-            <form class="dark:bg-gray-800 bg-white p-8 rounded-xl shadow-2xl space-y-6">
+            <form class="space-y-6 bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700">
                 <div>
-                    <label for="name" class="sr-only">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" class="w-full p-4 rounded-lg border dark:border-gray-700 border-gray-300 dark:bg-gray-700 bg-gray-50 dark:text-white text-gray-800 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200" required>
+                    <label for="name" class="sr-only">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Full Name" required
+                           class="w-full px-5 py-3 border border-gray-600 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200">
                 </div>
                 <div>
-                    <label for="email" class="sr-only">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email Address" class="w-full p-4 rounded-lg border dark:border-gray-700 border-gray-300 dark:bg-gray-700 bg-gray-50 dark:text-white text-gray-800 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200" required>
+                    <label for="email" class="sr-only">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
+                           class="w-full px-5 py-3 border border-gray-600 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200">
                 </div>
-                <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white font-bold py-4 px-6 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-xl">
-                    Join the Waitlist Now
-                </button>
-                <p class="text-sm dark:text-gray-400 text-gray-500 mt-4">
-                    We respect your privacy. No spam, ever. You can unsubscribe at any time.
+                <div>
+                    <button type="submit" class="w-full btn-primary py-3 px-6 rounded-md text-lg font-bold shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
+                        Yes, I Want Early Access!
+                    </button>
+                </div>
+                <p class="text-sm text-gray-400">
+                    We value your privacy. Your information will never be shared.
                 </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="dark:bg-gray-900 bg-gray-100 py-10 text-center dark:text-gray-400 text-gray-600">
-        <p>&copy; 2023 Wedding QR Suite. All rights reserved.</p>
+    <footer class="bg-gray-900 py-8 text-center text-gray-400 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p>&copy; 2024 FFXIV Housing Magnate. All rights reserved.</p>
+            <p class="mt-2 text-sm">FFXIV and related assets are trademarks of Square Enix.</p>
+        </div>
     </footer>
 
+    <!-- Placeholder for Countdown JavaScript -->
+    <script>
+        // IMPORTANT: This is a placeholder. You need to implement your own JavaScript
+        // to make the countdown timer functional.
+        // Example:
+        const countdownElement = document.getElementById('countdown-timer');
+        const daysElement = document.getElementById('days');
+        const hoursElement = document.getElementById('hours');
+        const minutesElement = document.getElementById('minutes');
+        const secondsElement = document.getElementById('seconds');
+
+        // Set the date we're counting down to (Example: 7 days from now)
+        // You would replace this with your actual launch date
+        const launchDate = new Date();
+        launchDate.setDate(launchDate.getDate() + 7); // 7 days from now
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                countdownElement.innerHTML = `<span class="text-3xl sm:text-4xl text-yellow-300 font-bold">SALE ENDED!</span>`;
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            daysElement.innerText = String(days).padStart(2, '0');
+            hoursElement.innerText = String(hours).padStart(2, '0');
+            minutesElement.innerText = String(minutes).padStart(2, '0');
+            secondsElement.innerText = String(seconds).padStart(2, '0');
+        }
+
+        // Update the countdown every 1 second
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call to display immediately
+        
+        // Simple animation for hero section elements (optional, can be expanded with a JS animation library)
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroElements = document.querySelectorAll('.animate-fade-in-up');
+            heroElements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, 100 + (index * 150)); // Staggered animation
+            });
+        });
+    </script>
 </body>
 </html>
