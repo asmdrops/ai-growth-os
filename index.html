@@ -1,181 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The European Tech Guest Accelerator - Limited Time Offer</title>
+    <title>Proactive AI Security Agent Sandbox - Secure Your AI Defenses</title>
+    <meta name="description" content="Safely simulate, test, and fine-tune AI security agents to identify vulnerabilities, ensure compliance, and prevent integration conflicts before live deployment. Join the waitlist!">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
     <style>
-        /* Custom styles for modern aesthetic, dark mode, and font */
+        /* Custom styles for dark mode and premium feel */
         body {
-            font-family: 'Inter', sans-serif; /* A popular modern sans-serif font */
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         }
-        /* Gradient for CTA button to make it pop and feel premium */
-        .btn-gradient {
-            background-image: linear-gradient(to right, #6366f1, #8b5cf6); /* Indigo to Purple */
-            transition: all 0.3s ease-in-out;
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Optional: for parallax-like effect */
         }
-        .btn-gradient:hover {
-            background-image: linear-gradient(to right, #8b5cf6, #6366f1); /* Reverse for hover effect */
-            transform: scale(1.03); /* Slight scale for interaction */
-            box-shadow: 0 10px 20px rgba(139, 92, 246, 0.4); /* Enhanced shadow */
+        .dark .bg-gradient-overlay {
+            background-image: linear-gradient(to bottom, rgba(17, 24, 39, 0.95), rgba(17, 24, 39, 0.75), rgba(17, 24, 39, 0.95));
         }
-        /* Gradient for text */
-        .text-gradient {
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
+        .dark .form-input {
+            background-color: #1f2937; /* Gray-800 */
+            border-color: #374151; /* Gray-700 */
+            color: #d1d5db; /* Gray-300 */
         }
-        .gradient-purple-indigo {
-            background-image: linear-gradient(to right, #a78bfa, #818cf8); /* Light purple to light indigo */
+        .dark .form-input:focus {
+            border-color: #6366f1; /* Indigo-500 */
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.5);
+        }
+        /* Countdown styling */
+        .countdown-segment {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 60px; /* Ensure segments have minimum width */
+        }
+        .countdown-number {
+            font-size: 2.5rem;
+            line-height: 1;
+            font-weight: 700;
+        }
+        .countdown-label {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #9ca3af; /* Gray-400 */
+        }
+
+        /* Ultra-responsive adjustments */
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 2.5rem; /* text-4xl */
+            }
+            .hero-subtitle {
+                font-size: 1.125rem; /* text-lg */
+            }
+            .countdown-number {
+                font-size: 2rem;
+            }
+            .countdown-label {
+                font-size: 0.75rem;
+            }
+        }
+        @media (min-width: 641px) and (max-width: 1024px) {
+            .hero-title {
+                font-size: 3.5rem; /* text-5xl */
+            }
+            .hero-subtitle {
+                font-size: 1.25rem; /* text-xl */
+            }
+        }
+        @media (min-width: 1025px) {
+            .hero-title {
+                font-size: 4.5rem; /* text-6xl */
+            }
+            .hero-subtitle {
+                font-size: 1.5rem; /* text-2xl */
+            }
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 antialiased">
+<body class="dark bg-gray-900 text-gray-200 antialiased leading-relaxed">
 
     <!-- Hero Section -->
-    <header class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0">
-            <img src="https://source.unsplash.com/1600x900/?A,tech" alt="Dynamic European Tech Scene" class="w-full h-full object-cover object-center brightness-50">
-        </div>
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <p class="text-indigo-400 text-lg md:text-xl font-semibold mb-3 tracking-wide uppercase">As Featured on TechCrunch: Europe's New Tech Stage is LIVE!</p>
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-gradient gradient-purple-indigo">
-                Dominate Europe's Tech Media: Secure Your Guest Spot
-            </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                The premium digital guide and template pack for individuals and companies to land coveted guest appearances on ETN and other prominent European tech shows. Unlock actionable strategies, proven pitch frameworks, and insider insights.
-            </p>
+    <section class="hero-background relative min-h-screen flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-gradient-overlay flex items-center justify-center">
+            <div class="container mx-auto px-4 max-w-7xl text-center z-10 py-20 lg:py-32">
+                <p class="text-indigo-400 uppercase tracking-widest text-sm mb-4">
+                    The Future of AI Security Testing Is Here
+                </p>
+                <h1 class="hero-title font-extrabold text-white mb-6 leading-tight">
+                    Proactive AI Security Sandbox: <br class="hidden md:inline"> Simulate, Secure, Succeed.
+                </h1>
+                <p class="hero-subtitle text-gray-300 mb-10 max-w-3xl mx-auto">
+                    As industry giants like Microsoft unveil advanced AI cybersecurity tools, the need for robust testing is paramount. Our SaaS empowers security teams to safely simulate, fine-tune, and validate all AI security agents against evolving threats, ensuring seamless integration and uncovering vulnerabilities *before* deployment.
+                </p>
+                <div class="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row items-center justify-center mb-12">
+                    <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 text-lg">
+                        Get Early Access
+                    </a>
+                    <a href="#features" class="bg-gray-700 hover:bg-gray-800 text-gray-200 hover:text-white font-semibold py-3 px-8 rounded-lg shadow-md transition duration-300 ease-in-out text-lg">
+                        Learn More
+                    </a>
+                </div>
 
-            <!-- Limited Time Offer & Countdown -->
-            <div class="bg-gradient-to-r from-purple-900 to-indigo-900 p-6 rounded-xl shadow-2xl mb-8 border border-purple-700 max-w-sm mx-auto">
-                <p class="text-xl md:text-2xl font-bold text-yellow-300 mb-4">Limited Time Offer Ends In:</p>
-                <div class="flex justify-center items-center space-x-4 mb-6" id="countdown-timer">
-                    <!-- Placeholder for countdown values. These would be dynamically updated via JavaScript. -->
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl md:text-5xl font-extrabold text-white" data-days>07</span>
-                        <span class="text-sm text-gray-300">Days</span>
+                <!-- Limited Time Countdown -->
+                <div class="mt-12 p-6 bg-gray-800 bg-opacity-70 rounded-xl shadow-xl border border-indigo-500 max-w-2xl mx-auto">
+                    <h3 class="text-xl md:text-2xl font-bold text-white mb-4">Limited Early Access Offer!</h3>
+                    <p class="text-indigo-300 mb-6">Join the waitlist in the next:</p>
+                    <div id="countdown" class="flex justify-center space-x-4 md:space-x-8">
+                        <div class="countdown-segment">
+                            <span id="days" class="countdown-number text-indigo-400">00</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-segment">
+                            <span id="hours" class="countdown-number text-indigo-400">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-segment">
+                            <span id="minutes" class="countdown-number text-indigo-400">00</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <div class="countdown-segment">
+                            <span id="seconds" class="countdown-number text-indigo-400">00</span>
+                            <span class="countdown-label">Seconds</span>
+                        </div>
                     </div>
-                    <span class="text-4xl md:text-5xl font-extrabold text-white">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl md:text-5xl font-extrabold text-white" data-hours>23</span>
-                        <span class="text-sm text-gray-300">Hours</span>
-                    </div>
-                    <span class="text-4xl md:text-5xl font-extrabold text-white">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl md:text-5xl font-extrabold text-white" data-minutes>59</span>
-                        <span class="text-sm text-gray-300">Minutes</span>
-                    </div>
-                    <span class="text-4xl md:text-5xl font-extrabold text-white">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl md:text-5xl font-extrabold text-white" data-seconds>59</span>
-                        <span class="text-sm text-gray-300">Seconds</span>
-                    </div>
-                </div>
-                <a href="#waitlist-form" class="inline-block px-10 py-4 text-lg font-bold rounded-full btn-gradient text-white shadow-lg">
-                    Secure Your Exclusive Pack Now
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Features Section -->
-    <section class="py-20 bg-gray-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-16 text-gradient gradient-purple-indigo">
-                What You'll Achieve with The Accelerator
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <!-- Feature 1: Actionable Strategies -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.276a1.125 1.125 0 011.205-.19L21.6 7.6a1.125 1.125 0 01-.19 1.205l-10.8 9.9c-.37.33-.86.5-1.37.5h-5.4A1.88 1.88 0 012 18.2V7.8c0-1.03.85-1.88 1.88-1.88h5.4c.51 0 1.00-.17 1.37-.5l10.8-9.9z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Actionable Strategies</h3>
-                    <p class="text-gray-300">Gain step-by-step methodologies to identify, approach, and secure prime media placements. Cut through the noise with proven tactics used by top guests.</p>
-                </div>
-                <!-- Feature 2: Proven Pitch Frameworks -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M17 16l-4-4-4 4"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Proven Pitch Frameworks</h3>
-                    <p class="text-gray-300">Access ready-to-use templates optimized for European tech media. Save hours of guesswork and significantly increase your success rate in landing interviews.</p>
-                </div>
-                <!-- Feature 3: Insider Insights -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2a3 3 0 00-3 2v2m-6-5a4 4 0 118 0 4 4 0 01-8 0zm6 0v2"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Insider Insights</h3>
-                    <p class="text-gray-300">Uncover the secrets of what producers are *really* looking for, direct from media experts. Get an unfair advantage that sets you apart from the crowd.</p>
-                </div>
-                <!-- Feature 4: Interview Mastery -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.12a2.88 2.88 0 00-.73-2.617A2.88 2.88 0 0012 8c-.628 0-1.25.234-1.722.684a2.88 2.88 0 00-.73 2.617L9 16h6l-1.248-4.88z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Interview Mastery</h3>
-                    <p class="text-gray-300">Master the art of captivating on-air presence. Learn to deliver impactful messages that resonate with audiences and leave a lasting impression.</p>
-                </div>
-                <!-- Feature 5: Post-Appearance Leverage -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h6l3 3v7m-3-10h-6l-3-3v7"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Post-Appearance Leverage</h3>
-                    <p class="text-gray-300">Maximize the impact of every guest spot. Discover how to repurpose content, build authority, and leverage your appearances for long-term growth.</p>
-                </div>
-                <!-- Feature 6: Comprehensive Toolkit -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.207 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.793 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.793 5 16.5 5c1.707 0 3.332.477 4.5 1.253v13C19.832 18.477 18.207 18 16.5 18c-1.707 0-3.332.477-4.5 1.253"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Comprehensive Toolkit</h3>
-                    <p class="text-gray-300">More than just a guide – receive a complete toolkit with checklists, detailed examples, and supplementary resources to ensure your success.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / Call to Action Form -->
-    <section id="waitlist-form" class="py-20 bg-gray-950">
-        <div class="container mx-auto px-4 max-w-2xl">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-10 text-gradient gradient-purple-indigo">
-                Don't Miss Out! Secure Your Accelerator Pack
+    <!-- Features Section -->
+    <section id="features" class="py-20 lg:py-32 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white text-center mb-6">
+                Key Capabilities for Unmatched Security
             </h2>
-            <p class="text-xl text-gray-300 text-center mb-8">
-                Due to high demand and the 'Limited Time' nature, access to "The European Tech Guest Accelerator" is exclusive. Join the waitlist now to guarantee your early access and be notified instantly upon launch.
+            <p class="text-gray-400 text-lg md:text-xl text-center mb-16 max-w-3xl mx-auto">
+                Our Proactive AI Security Agent Sandbox provides your team with the tools needed to truly master your AI-driven defenses.
             </p>
 
-            <form class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-indigo-700">
-                <div class="mb-6">
-                    <label for="name" class="block text-gray-300 text-lg font-semibold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="w-full px-5 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-400" required>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-500 mb-4 text-5xl">
+                        <span role="img" aria-label="Shield">🛡️</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Isolated Simulation Environment</h3>
+                    <p class="text-gray-300">
+                        Safely deploy and test any AI security agent in a controlled, isolated sandbox. Understand behavior, performance, and resource usage without impacting your live infrastructure.
+                    </p>
                 </div>
-                <div class="mb-6">
-                    <label for="email" class="block text-gray-300 text-lg font-semibold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="w-full px-5 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-400" required>
+
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-500 mb-4 text-5xl">
+                        <span role="img" aria-label="Gear">⚙️</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Integrate & Fine-Tune Agents</h3>
+                    <p class="text-gray-300">
+                        Test commercial offerings alongside your custom-built solutions. Identify and resolve integration conflicts with existing systems before full-scale deployment.
+                    </p>
                 </div>
-                <button type="submit" class="w-full px-8 py-4 text-xl font-bold rounded-lg btn-gradient text-white shadow-xl">
-                    Join the Exclusive Waitlist
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-500 mb-4 text-5xl">
+                        <span role="img" aria-label="Microscope">🔬</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Evolving Threat Model Evaluation</h3>
+                    <p class="text-gray-300">
+                        Rigorously evaluate agent performance against dynamic and evolving threat models. Ensure your AI defenses are resilient against the latest attack vectors.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-500 mb-4 text-5xl">
+                        <span role="img" aria-label="Magnifying Glass">🔎</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Proactive Vulnerability Discovery</h3>
+                    <p class="text-gray-300">
+                        Uncover vulnerabilities that AI agents might miss, or even inadvertently create, when interacting with your infrastructure. Prevent surprises in live environments.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-500 mb-4 text-5xl">
+                        <span role="img" aria-label="Compliance">⚖️</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Optimize for Compliance & Performance</h3>
+                    <p class="text-gray-300">
+                        Fine-tune agent configurations for optimal performance and ensure they meet industry compliance standards, giving you peace of mind before deployment.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-500 mb-4 text-5xl">
+                        <span role="img" aria-label="Cloud">☁️</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Cloud-Native & Scalable Platform</h3>
+                    <p class="text-gray-300">
+                        A robust, cloud-based SaaS platform designed for scalability, security, and ease of use, ready to handle your most complex AI security testing needs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Waitlist Form Section -->
+    <section id="waitlist" class="py-20 lg:py-32 bg-gradient-to-br from-gray-900 to-gray-800">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">
+                Ready to Master Your AI Cybersecurity Defenses?
+            </h2>
+            <p class="text-gray-300 text-lg md:text-xl mb-12">
+                Join our exclusive waitlist for early access to the Proactive AI Security Agent Sandbox. Be among the first to secure your AI investments effectively.
+            </p>
+
+            <form action="#" method="POST" class="bg-gray-800 p-8 md:p-10 rounded-xl shadow-2xl border border-indigo-600">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" class="form-input shadow appearance-none border rounded w-full py-3 px-4 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Work Email</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@yourcompany.com" class="form-input shadow appearance-none border rounded w-full py-3 px-4 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+                <div class="mb-8 text-left">
+                    <label for="company" class="block text-gray-300 text-sm font-bold mb-2">Company Name</label>
+                    <input type="text" id="company" name="company" placeholder="Acme Security Inc." class="form-input shadow appearance-none border rounded w-full py-3 px-4 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-10 rounded-lg shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 text-xl w-full">
+                    Join the Early Access Waitlist
                 </button>
-                <p class="text-sm text-gray-400 mt-6 text-center">
-                    We value your privacy. Your information will not be shared.
-                </p>
+                <p class="text-gray-500 text-sm mt-4">We respect your privacy. No spam, ever.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm border-t border-gray-800">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2023 The European Tech Guest Accelerator. All rights reserved.</p>
-            <p class="mt-2">A Premium Knowledge Product by Digital Education Authority</p>
+    <footer class="bg-gray-900 py-10 border-t border-gray-800">
+        <div class="container mx-auto px-4 max-w-7xl text-center text-gray-400 text-sm">
+            <p>&copy; 2024 AI Security Sandbox. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-white transition duration-200">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition duration-200">Terms of Service</a>
+                <a href="#" class="hover:text-white transition duration-200">Contact Us</a>
+            </div>
         </div>
     </footer>
 
+    <!-- Countdown JavaScript (Minimal inline script for functionality) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // 7 days from now
+            countDownDate.setHours(countDownDate.getHours() + 12); // Add 12 hours
+            countDownDate.setMinutes(countDownDate.getMinutes() + 30); // Add 30 minutes
+            countDownDate.setSeconds(countDownDate.getSeconds() + 45); // Add 45 seconds
+
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate.getTime() - now;
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<p class='text-red-500 font-bold text-xl'>Offer Expired!</p>";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
