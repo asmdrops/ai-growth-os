@@ -3,129 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galaxy Z Fold 8 Savings Masterclass & Deal Tracker</title>
+    <title>The European Tech Guest Accelerator - Limited Time Offer</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for dark overlay and hero background */
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        /* Custom styles for modern aesthetic, dark mode, and font */
+        body {
+            font-family: 'Inter', sans-serif; /* A popular modern sans-serif font */
+        }
+        /* Gradient for CTA button to make it pop and feel premium */
+        .btn-gradient {
+            background-image: linear-gradient(to right, #6366f1, #8b5cf6); /* Indigo to Purple */
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-gradient:hover {
+            background-image: linear-gradient(to right, #8b5cf6, #6366f1); /* Reverse for hover effect */
+            transform: scale(1.03); /* Slight scale for interaction */
+            box-shadow: 0 10px 20px rgba(139, 92, 246, 0.4); /* Enhanced shadow */
+        }
+        /* Gradient for text */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .gradient-purple-indigo {
+            background-image: linear-gradient(to right, #a78bfa, #818cf8); /* Light purple to light indigo */
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-200 font-sans antialiased">
+<body class="bg-gray-950 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative hero-background min-h-screen flex items-center justify-center p-4">
-        <!-- Dark Overlay -->
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-
-        <div class="relative z-10 text-center max-w-4xl mx-auto py-16 px-6 sm:px-8 lg:px-12">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-4 drop-shadow-lg">
-                Unlock Your Galaxy Z Fold 8 for as low as <span class="text-blue-400">$599!</span>
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://source.unsplash.com/1600x900/?A,tech" alt="Dynamic European Tech Scene" class="w-full h-full object-cover object-center brightness-50">
+        </div>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <p class="text-indigo-400 text-lg md:text-xl font-semibold mb-3 tracking-wide uppercase">As Featured on TechCrunch: Europe's New Tech Stage is LIVE!</p>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-gradient gradient-purple-indigo">
+                Dominate Europe's Tech Media: Secure Your Guest Spot
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto drop-shadow-md">
-                The ultimate digital guide to navigating trade-ins, carrier contracts, and pre-order bonuses to secure the absolute lowest price on Samsung's next flagship.
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                The premium digital guide and template pack for individuals and companies to land coveted guest appearances on ETN and other prominent European tech shows. Unlock actionable strategies, proven pitch frameworks, and insider insights.
             </p>
 
-            <!-- Limited Time Countdown & CTA -->
-            <div class="bg-gradient-to-r from-blue-600 to-purple-600 p-6 rounded-xl shadow-2xl mx-auto max-w-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                <p class="text-lg sm:text-xl font-bold text-white mb-3 uppercase tracking-wide">Limited Time Offer Ends In:</p>
-                <div class="flex justify-center items-center space-x-4 mb-6">
-                    <div class="bg-white text-gray-900 py-3 px-4 sm:py-4 sm:px-5 rounded-lg font-bold text-xl sm:text-2xl shadow-md">
-                        <span>03</span><span class="block text-xs sm:text-sm font-normal mt-1">Days</span>
+            <!-- Limited Time Offer & Countdown -->
+            <div class="bg-gradient-to-r from-purple-900 to-indigo-900 p-6 rounded-xl shadow-2xl mb-8 border border-purple-700 max-w-sm mx-auto">
+                <p class="text-xl md:text-2xl font-bold text-yellow-300 mb-4">Limited Time Offer Ends In:</p>
+                <div class="flex justify-center items-center space-x-4 mb-6" id="countdown-timer">
+                    <!-- Placeholder for countdown values. These would be dynamically updated via JavaScript. -->
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl md:text-5xl font-extrabold text-white" data-days>07</span>
+                        <span class="text-sm text-gray-300">Days</span>
                     </div>
-                    <div class="bg-white text-gray-900 py-3 px-4 sm:py-4 sm:px-5 rounded-lg font-bold text-xl sm:text-2xl shadow-md">
-                        <span>12</span><span class="block text-xs sm:text-sm font-normal mt-1">Hours</span>
+                    <span class="text-4xl md:text-5xl font-extrabold text-white">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl md:text-5xl font-extrabold text-white" data-hours>23</span>
+                        <span class="text-sm text-gray-300">Hours</span>
                     </div>
-                    <div class="bg-white text-gray-900 py-3 px-4 sm:py-4 sm:px-5 rounded-lg font-bold text-xl sm:text-2xl shadow-md">
-                        <span>45</span><span class="block text-xs sm:text-sm font-normal mt-1">Mins</span>
+                    <span class="text-4xl md:text-5xl font-extrabold text-white">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl md:text-5xl font-extrabold text-white" data-minutes>59</span>
+                        <span class="text-sm text-gray-300">Minutes</span>
                     </div>
-                    <div class="bg-white text-gray-900 py-3 px-4 sm:py-4 sm:px-5 rounded-lg font-bold text-xl sm:text-2xl shadow-md">
-                        <span>30</span><span class="block text-xs sm:text-sm font-normal mt-1">Secs</span>
+                    <span class="text-4xl md:text-5xl font-extrabold text-white">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl md:text-5xl font-extrabold text-white" data-seconds>59</span>
+                        <span class="text-sm text-gray-300">Seconds</span>
                     </div>
                 </div>
-                <a href="#access-form" class="inline-block bg-white text-blue-700 hover:bg-gray-100 px-10 py-4 rounded-full text-xl sm:text-2xl font-bold uppercase shadow-lg transform hover:scale-105 transition-transform duration-300">
-                    Get Instant Access Now!
+                <a href="#waitlist-form" class="inline-block px-10 py-4 text-lg font-bold rounded-full btn-gradient text-white shadow-lg">
+                    Secure Your Exclusive Pack Now
                 </a>
             </div>
-            <p class="text-sm text-gray-400 mt-6 drop-shadow-sm">Over 1,500 tech enthusiasts have already saved big with our guides.</p>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-20 lg:py-24 bg-gray-800 px-4">
-        <div class="max-w-screen-xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-12">What You'll Discover Inside the Masterclass:</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-                <!-- Feature 1 -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-blue-500 transition-all duration-300">
-                    <div class="text-5xl text-blue-400 mb-4">💰</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Maximize Trade-In Values</h3>
-                    <p class="text-gray-300 leading-relaxed">Uncover hidden strategies to get the absolute most for your old device, transforming it into massive Z Fold 8 savings.</p>
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-16 text-gradient gradient-purple-indigo">
+                What You'll Achieve with The Accelerator
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Feature 1: Actionable Strategies -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.276a1.125 1.125 0 011.205-.19L21.6 7.6a1.125 1.125 0 01-.19 1.205l-10.8 9.9c-.37.33-.86.5-1.37.5h-5.4A1.88 1.88 0 012 18.2V7.8c0-1.03.85-1.88 1.88-1.88h5.4c.51 0 1.00-.17 1.37-.5l10.8-9.9z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Actionable Strategies</h3>
+                    <p class="text-gray-300">Gain step-by-step methodologies to identify, approach, and secure prime media placements. Cut through the noise with proven tactics used by top guests.</p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-blue-500 transition-all duration-300">
-                    <div class="text-5xl text-purple-400 mb-4">🕵️‍♀️</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Carrier Contract Loopholes</h3>
-                    <p class="text-gray-300 leading-relaxed">Navigate complex carrier plans and discover little-known clauses that unlock incredible discounts and bonuses.</p>
+                <!-- Feature 2: Proven Pitch Frameworks -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M17 16l-4-4-4 4"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Proven Pitch Frameworks</h3>
+                    <p class="text-gray-300">Access ready-to-use templates optimized for European tech media. Save hours of guesswork and significantly increase your success rate in landing interviews.</p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-blue-500 transition-all duration-300">
-                    <div class="text-5xl text-green-400 mb-4">🎁</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Pre-Order Bonus Exploitation</h3>
-                    <p class="text-gray-300 leading-relaxed">Learn how to strategically stack every pre-order incentive, gift, and credit for unparalleled launch day value.</p>
+                <!-- Feature 3: Insider Insights -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2a3 3 0 00-3 2v2m-6-5a4 4 0 118 0 4 4 0 01-8 0zm6 0v2"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Insider Insights</h3>
+                    <p class="text-gray-300">Uncover the secrets of what producers are *really* looking for, direct from media experts. Get an unfair advantage that sets you apart from the crowd.</p>
                 </div>
-                <!-- Feature 4 -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-blue-500 transition-all duration-300">
-                    <div class="text-5xl text-red-400 mb-4">⏱️</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Perfect Timing Strategies</h3>
-                    <p class="text-gray-300 leading-relaxed">Get our proprietary timing calendar for pre-order windows, launch day surges, and post-launch price drops.</p>
+                <!-- Feature 4: Interview Mastery -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.12a2.88 2.88 0 00-.73-2.617A2.88 2.88 0 0012 8c-.628 0-1.25.234-1.722.684a2.88 2.88 0 00-.73 2.617L9 16h6l-1.248-4.88z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Interview Mastery</h3>
+                    <p class="text-gray-300">Master the art of captivating on-air presence. Learn to deliver impactful messages that resonate with audiences and leave a lasting impression.</p>
                 </div>
-                <!-- Feature 5 -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-blue-500 transition-all duration-300">
-                    <div class="text-5xl text-yellow-400 mb-4">🔗</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Exclusive Deal Tracker</h3>
-                    <p class="text-gray-300 leading-relaxed">Access our constantly updated list of the best affiliate links, direct from carriers and trusted retailers, ensuring you never miss a deal.</p>
+                <!-- Feature 5: Post-Appearance Leverage -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h6l3 3v7m-3-10h-6l-3-3v7"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Post-Appearance Leverage</h3>
+                    <p class="text-gray-300">Maximize the impact of every guest spot. Discover how to repurpose content, build authority, and leverage your appearances for long-term growth.</p>
                 </div>
-                <!-- Feature 6 -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-blue-500 transition-all duration-300">
-                    <div class="text-5xl text-pink-400 mb-4">💡</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Future-Proof Your Savings</h3>
-                    <p class="text-gray-300 leading-relaxed">The strategies taught are applicable to future device launches, making you a master of tech savings for years to come.</p>
+                <!-- Feature 6: Comprehensive Toolkit -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.207 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.793 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.793 5 16.5 5c1.707 0 3.332.477 4.5 1.253v13C19.832 18.477 18.207 18 16.5 18c-1.707 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Comprehensive Toolkit</h3>
+                    <p class="text-gray-300">More than just a guide – receive a complete toolkit with checklists, detailed examples, and supplementary resources to ensure your success.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist/Early Access Form Section -->
-    <section id="access-form" class="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-900 to-gray-800 px-4">
-        <div class="max-w-md mx-auto text-center bg-gray-900 p-8 sm:p-10 rounded-xl shadow-2xl border border-gray-700">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">Don't Miss Future Deals!</h2>
-            <p class="text-lg text-gray-300 mb-8">Join our VIP Alert List for exclusive updates, flash sales, and early bird access to our next premium guides.</p>
+    <!-- Waitlist / Call to Action Form -->
+    <section id="waitlist-form" class="py-20 bg-gray-950">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-10 text-gradient gradient-purple-indigo">
+                Don't Miss Out! Secure Your Accelerator Pack
+            </h2>
+            <p class="text-xl text-gray-300 text-center mb-8">
+                Due to high demand and the 'Limited Time' nature, access to "The European Tech Guest Accelerator" is exclusive. Join the waitlist now to guarantee your early access and be notified instantly upon launch.
+            </p>
 
-            <form action="#" method="POST" class="space-y-6">
-                <div>
-                    <label for="email" class="sr-only">Email address</label>
-                    <input type="email" name="email" id="email" autocomplete="email" required class="block w-full px-5 py-3 border border-gray-600 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 bg-gray-800 text-white sm:text-base" placeholder="Enter your email address">
+            <form class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-indigo-700">
+                <div class="mb-6">
+                    <label for="name" class="block text-gray-300 text-lg font-semibold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="w-full px-5 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-400" required>
                 </div>
-                <div>
-                    <button type="submit" class="w-full flex items-center justify-center px-6 py-3 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transform hover:scale-105 transition-transform duration-300">
-                        Get Deal Alerts & Updates
-                    </button>
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-300 text-lg font-semibold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                           class="w-full px-5 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-400" required>
                 </div>
+                <button type="submit" class="w-full px-8 py-4 text-xl font-bold rounded-lg btn-gradient text-white shadow-xl">
+                    Join the Exclusive Waitlist
+                </button>
+                <p class="text-sm text-gray-400 mt-6 text-center">
+                    We value your privacy. Your information will not be shared.
+                </p>
             </form>
-            <p class="mt-6 text-sm text-gray-500">We respect your privacy. No spam, ever.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 px-4 text-center text-gray-500 text-sm">
-        <div class="max-w-screen-xl mx-auto">
-            &copy; 2023 Digital Education Authority. All rights reserved. | <a href="#" class="hover:text-gray-300">Privacy Policy</a> | <a href="#" class="hover:text-gray-300">Terms of Service</a>
+    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2023 The European Tech Guest Accelerator. All rights reserved.</p>
+            <p class="mt-2">A Premium Knowledge Product by Digital Education Authority</p>
         </div>
     </footer>
 
