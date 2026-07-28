@@ -3,133 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Chat Privacy & Security Toolkit - Secure Your Conversations Now!</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>AI Privacy Guardian - Secure Your AI Conversations, Protect Your Data</title>
+    <meta name="description" content="AI Privacy Guardian shields your prompts from exposure, scans for past breaches, and keeps your digital identity secure with an anonymized proxy for Claude, ChatGPT, and more.">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Custom styles for modern premium dark-mode aesthetic */
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', sans-serif; /* A popular modern sans-serif font */
         }
-        .hero-bg {
+        /* Hero background image */
+        .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
+        /* Gradient overlay for hero for optimal text readability on dark background */
+        .hero-overlay {
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.9) 100%);
+        }
+        /* Custom scrollbar for a premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* Matches bg-gray-900 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* Matches bg-gray-600 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096; /* Matches bg-gray-500 */
+        }
     </style>
 </head>
-<body class="bg-gray-900 text-white antialiased">
+<body class="bg-gray-950 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative hero-bg min-h-screen flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for readability -->
-        <div class="relative z-10 text-center max-w-4xl mx-auto py-16 px-4 md:px-8">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-tight">
-                Is Your AI Chat Data Exposed?
-                <span class="block text-indigo-400 mt-2">Secure Your Conversations Now!</span>
+    <section class="hero-background relative h-screen flex items-center justify-center text-center p-4">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-sm sm:text-base md:text-lg text-red-400 font-semibold mb-3 tracking-wide uppercase">
+                🚨 Immediate Threat: Claude Chats Exposed!
+            </p>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                Your Private AI Conversations <br class="hidden sm:inline">Are No Longer Safe.
             </h1>
             <p class="text-base sm:text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Recent BBC reports reveal some Claude AI chats found publicly online, sparking widespread anxiety. Don't wait for your private data to become public. Our exclusive toolkit provides immediate, actionable steps to protect your Claude AI (and other AI) interactions.
+                Introducing <span class="text-blue-400 font-semibold">AI Privacy Guardian</span> – your impenetrable shield against AI data leaks. Anonymize prompts, detect exposure, and regain control.
             </p>
-            <div class="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center items-center">
-                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transform transition duration-300 ease-in-out hover:scale-105 text-lg">
-                    Get Instant Access
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+                <a href="#waitlist" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                    Secure Your AI Now <span class="text-yellow-300 ml-2">🚀</span>
                 </a>
-                <p class="text-sm md:text-base text-gray-400 mt-4 sm:mt-0">
-                    <span class="font-semibold text-red-400">Limited-time launch offer!</span> Act fast to secure your privacy.
+                <a href="#features" class="bg-gray-700 hover:bg-gray-600 text-gray-200 font-medium py-3 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow">
+                    Learn How It Works <span class="ml-2">→</span>
+                </a>
+            </div>
+
+            <!-- Limited Time Offer & Countdown -->
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-700 p-6 rounded-xl shadow-2xl max-w-xl mx-auto border border-purple-500 mt-10">
+                <p class="text-yellow-300 text-xl md:text-2xl font-bold mb-3 uppercase tracking-wide">
+                    ⏳ Exclusive Early Adopter Discount!
                 </p>
+                <p class="text-gray-200 text-lg md:text-xl mb-4">
+                    Be among the first to activate AI Privacy Guardian and get <span class="font-bold">50% OFF</span> your first year's subscription!
+                </p>
+                <div class="flex justify-center items-center space-x-3 md:space-x-6 text-white text-3xl md:text-4xl font-extrabold countdown" id="countdown">
+                    <div class="flex flex-col items-center">
+                        <span id="days" class="bg-gray-800 py-2 px-3 sm:px-4 rounded-lg min-w-[50px]">00</span>
+                        <span class="text-sm md:text-base text-gray-300 mt-1">Days</span>
+                    </div>
+                    <span class="text-2xl sm:text-3xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours" class="bg-gray-800 py-2 px-3 sm:px-4 rounded-lg min-w-[50px]">00</span>
+                        <span class="text-sm md:text-base text-gray-300 mt-1">Hours</span>
+                    </div>
+                    <span class="text-2xl sm:text-3xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes" class="bg-gray-800 py-2 px-3 sm:px-4 rounded-lg min-w-[50px]">00</span>
+                        <span class="text-sm md:text-base text-gray-300 mt-1">Minutes</span>
+                    </div>
+                    <span class="text-2xl sm:text-3xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds" class="bg-gray-800 py-2 px-3 sm:px-4 rounded-lg min-w-[50px]">00</span>
+                        <span class="text-sm md:text-base text-gray-300 mt-1">Seconds</span>
+                    </div>
+                </div>
             </div>
-            <!-- Placeholder for a dynamic countdown timer - implement with JavaScript -->
-            <div id="countdown" class="mt-8 text-2xl sm:text-3xl font-bold text-red-300 tracking-wide bg-gray-800 bg-opacity-50 p-4 rounded-lg inline-block">
-                Offer Ends In: XX Days XX Hours XX Minutes XX Seconds
-            </div>
+
         </div>
-    </header>
+    </section>
+
+    <!-- Problem & Urgency Section -->
+    <section class="py-16 md:py-24 bg-gray-900 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-white">
+                The AI Privacy Catastrophe is Already Here.
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 leading-relaxed mb-8 max-w-3xl mx-auto">
+                The latest shockwave: <span class="text-red-400 font-semibold">Claude chats appearing in Google searches</span>. This isn't an isolated incident; it's a glaring symptom of a larger, systemic vulnerability across AI platforms like ChatGPT, Bard, and more. Your prompts, data, and intellectual property are exposed.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-4xl mx-auto">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700">
+                    <h3 class="text-2xl font-semibold mb-3 text-blue-400">
+                        <span class="mr-2">💣</span> Uncontrolled Data Leaks
+                    </h3>
+                    <p class="text-gray-300 text-lg">
+                        Every interaction with an AI model is a potential data point that can be inadvertently logged, stored, or indexed by third parties – often without your explicit knowledge or consent.
+                    </p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700">
+                    <h3 class="text-2xl font-semibold mb-3 text-emerald-400">
+                        <span class="mr-2">🕵️‍♂️</span> Hidden Data Training
+                    </h3>
+                    <p class="text-gray-300 text-lg">
+                        Many AI providers reserve the right to use your inputs for model training, making your "private" conversations public knowledge within their system, potentially surfacing elsewhere.
+                    </p>
+                </div>
+            </div>
+            <p class="text-lg sm:text-xl text-gray-300 leading-relaxed mt-10 max-w-3xl mx-auto">
+                It's time to build your digital fort. AI Privacy Guardian puts you back in command of your AI interactions.
+            </p>
+        </div>
+    </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 max-w-screen-xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 text-indigo-400">What's Inside Your Premium Toolkit?</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700 transform transition duration-300 ease-in-out hover:scale-105">
-                    <div class="text-indigo-500 mb-4 text-4xl">⚙️</div>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-white">AI Privacy Audit & Security Guide</h3>
-                    <p class="text-gray-300">A step-by-step walkthrough on how to meticulously audit and secure your Claude AI (and other popular AI platforms) chat privacy settings to prevent data leaks.</p>
+    <section id="features" class="py-16 md:py-24 bg-gray-950 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-white">
+                Comprehensive Protection, Uncompromised Privacy.
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+
+                <!-- Feature 1: Privacy Audit Tool -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-blue-600 transition duration-300 ease-in-out hover:scale-105 transform">
+                    <div class="text-5xl text-blue-400 mb-6 mx-auto w-fit">🔍</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">
+                        Privacy Audit Tool
+                    </h3>
+                    <p class="text-gray-300 text-lg">
+                        Scan your digital footprint across popular AI models for past data exposure, revealing where your private prompts might have leaked.
+                    </p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700 transform transition duration-300 ease-in-out hover:scale-105">
-                    <div class="text-indigo-500 mb-4 text-4xl">✅</div>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-white">Best Practices for Safe AI Interaction</h3>
-                    <p class="text-gray-300">Learn the crucial do's and don'ts for interacting with AI, ensuring your sensitive information remains private and protected from unintended exposure.</p>
+
+                <!-- Feature 2: Real-time Alerts -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-purple-600 transition duration-300 ease-in-out hover:scale-105 transform">
+                    <div class="text-5xl text-purple-400 mb-6 mx-auto w-fit">🔔</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">
+                        Real-time Exposure Alerts
+                    </h3>
+                    <p class="text-gray-300 text-lg">
+                        Receive instant notifications if your anonymized AI content or personal data appears publicly online. Act immediately to protect yourself.
+                    </p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700 transform transition duration-300 ease-in-out hover:scale-105">
-                    <div class="text-indigo-500 mb-4 text-4xl">📝</div>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-white">Data Deletion Request Templates</h3>
-                    <p class="text-gray-300">Ready-to-use, legally informed templates to request data deletion and access from AI providers, empowering you to take control of your digital footprint.</p>
+
+                <!-- Feature 3: Privacy Score -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-emerald-600 transition duration-300 ease-in-out hover:scale-105 transform">
+                    <div class="text-5xl text-emerald-400 mb-6 mx-auto w-fit">✅</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">
+                        AI Service Privacy Score
+                    </h3>
+                    <p class="text-gray-300 text-lg">
+                        Get transparent privacy ratings for various AI services (Claude, ChatGPT, etc.). Make informed decisions about which platforms to trust.
+                    </p>
                 </div>
-                <!-- Feature 4 -->
-                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700 transform transition duration-300 ease-in-out hover:scale-105">
-                    <div class="text-indigo-500 mb-4 text-4xl">🎙️</div>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-white">Exclusive Expert Webinar & Q&A</h3>
-                    <p class="text-gray-300">Gain access to a live, interactive session with leading privacy experts, addressing your concerns and providing real-time solutions and insights into AI security.</p>
-                </div>
-                 <!-- Feature 5 -->
-                 <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700 transform transition duration-300 ease-in-out hover:scale-105">
-                    <div class="text-indigo-500 mb-4 text-4xl">🛡️</div>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-white">Future-Proof Your Privacy</h3>
-                    <p class="text-gray-300">Stay ahead of emerging AI privacy threats with ongoing updates and insights into the evolving landscape of AI security, keeping your data secure for tomorrow.</p>
-                </div>
-                 <!-- Feature 6 -->
-                 <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700 transform transition duration-300 ease-in-out hover:scale-105">
-                    <div class="text-indigo-500 mb-4 text-4xl">🌐</div>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-white">Universal AI Privacy Tips</h3>
-                    <p class="text-gray-300">While focused on Claude, many principles and strategies provided are universally applicable across various AI platforms, offering broad protection beyond a single tool.</p>
-                </div>
+            </div>
+
+            <div class="mt-16 bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700 max-w-4xl mx-auto">
+                <h3 class="text-3xl font-bold mb-4 text-white">
+                    How AI Privacy Guardian Works: Your Anonymized Shield
+                </h3>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
+                    AI Privacy Guardian acts as an intelligent, encrypted intermediary. Your prompts are stripped of identifiable information and routed through our secure proxy before reaching the AI model. The AI's responses are then delivered back to you, ensuring complete anonymity and untraceable interactions. Your data never directly touches the AI provider.
+                </p>
+                <a href="#waitlist" class="mt-8 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                    Safeguard My AI Interactions <span class="text-yellow-300 ml-2">🛡️</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / Call to Action Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 max-w-screen-xl text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 text-indigo-400">Don't Be a Statistic. Protect Your Privacy Today!</h2>
-            <p class="text-base sm:text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-                The time to act is now. Join hundreds of proactive users securing their AI conversations. Enter your details below to get instant access to the "AI Chat Privacy & Security Toolkit" and take back control of your digital privacy.
+    <!-- Call to Action / Waitlist Section -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gradient-to-br from-indigo-800 to-purple-900 px-4">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-white">
+                Don't Be The Next Headline. Act Now!
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-200 leading-relaxed mb-10">
+                Join the <span class="font-bold text-yellow-300">AI Privacy Guardian</span> early adopter program to secure your exclusive introductory subscription. Limited slots are filling up fast!
             </p>
-            <div class="max-w-xl mx-auto bg-gray-800 p-8 md:p-10 rounded-lg shadow-2xl border border-gray-700">
-                <form class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-left text-sm font-medium text-gray-300 mb-2">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe"
-                               class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-indigo-500 text-white placeholder-gray-400 focus:outline-none transition duration-200">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-left text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="john.doe@example.com" required
-                               class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-indigo-500 text-white placeholder-gray-400 focus:outline-none transition duration-200">
-                    </div>
-                    <button type="submit"
-                            class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-lg shadow-lg transform transition duration-300 ease-in-out hover:scale-105 text-lg">
-                        Secure My Spot & Get Access
-                    </button>
-                </form>
-                <p class="text-xs text-gray-500 mt-6">
-                    Your privacy is important to us. We will never share your information.
+
+            <form class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-indigo-700 max-w-xl mx-auto" onsubmit="alert('Thank you for joining the waitlist! We will notify you when AI Privacy Guardian launches and your exclusive discount is ready.'); this.reset(); return false;">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-300 text-lg font-medium mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="w-full p-4 rounded-lg bg-gray-800 text-gray-100 border border-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 ease-in-out text-lg" required>
+                </div>
+                <div class="mb-8 text-left">
+                    <label for="email" class="block text-gray-300 text-lg font-medium mb-2">Your Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                           class="w-full p-4 rounded-lg bg-gray-800 text-gray-100 border border-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 ease-in-out text-lg" required>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                    Join Early Adopter Waitlist <span class="ml-2">🔒</span>
+                </button>
+                <p class="text-gray-400 text-sm mt-6">
+                    We value your privacy. Your email will only be used for AI Privacy Guardian updates and your exclusive offer.
                 </p>
-            </div>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-800 py-8 text-center text-gray-500 text-sm">
-        <div class="container mx-auto px-4 max-w-screen-xl">
-            &copy; 2023 Digital Education Authority. All rights reserved.
+    <footer class="bg-gray-950 py-10 text-center text-gray-500 text-sm px-4">
+        <div class="max-w-6xl mx-auto">
+            <p>&copy; 2023 AI Privacy Guardian. All rights reserved. <span class="ml-2">|</span> <a href="#" class="text-blue-400 hover:text-blue-500">Privacy Policy</a> <span class="ml-2">|</span> <a href="#" class="text-blue-400 hover:text-blue-500">Terms of Service</a></p>
         </div>
     </footer>
 
+    <!-- Countdown Timer Script -->
+    <script>
+        function setupCountdown(targetDate) {
+            const daysSpan = document.getElementById('days');
+            const hoursSpan = document.getElementById('hours');
+            const minutesSpan = document.getElementById('minutes');
+            const secondsSpan = document.getElementById('seconds');
+
+            if (!daysSpan || !hoursSpan || !minutesSpan || !secondsSpan) {
+                console.error("Countdown elements not found. Ensure IDs 'days', 'hours', 'minutes', 'seconds' exist.");
+                return;
+            }
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    daysSpan.textContent = "00";
+                    hoursSpan.textContent = "00";
+                    minutesSpan.textContent = "00";
+                    secondsSpan.textContent = "00";
+                    // Update the offer message when time runs out
+                    const offerDiv = document.querySelector('.hero-overlay + .relative .bg-gradient-to-r');
+                    if (offerDiv) {
+                        offerDiv.innerHTML = `
+                            <p class="text-yellow-300 text-xl md:text-2xl font-bold mb-3 uppercase tracking-wide">
+                                Offer Expired! <span class="ml-2">😔</span>
+                            </p>
+                            <p class="text-gray-200 text-lg md:text-xl mb-4">
+                                The exclusive early bird discount has ended. Join our waitlist for future updates and offers!
+                            </p>
+                             <a href="#waitlist" class="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                                Join Waitlist Anyway <span class="ml-2">→</span>
+                            </a>
+                        `;
+                    }
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                daysSpan.textContent = String(days).padStart(2, '0');
+                hoursSpan.textContent = String(hours).padStart(2, '0');
+                minutesSpan.textContent = String(minutes).padStart(2, '0');
+                secondsSpan.textContent = String(seconds).padStart(2, '0');
+            }
+
+            updateCountdown(); // Initial call to display immediately
+            const countdownInterval = setInterval(updateCountdown, 1000);
+        }
+
+        // Set the target date for the countdown (e.g., 7 days from now)
+        const targetDate = new Date();
+        targetDate.setDate(targetDate.getDate() + 7); // Set to 7 days from the current date
+
+        // Call the setup function with the target timestamp
+        setupCountdown(targetDate.getTime());
+    </script>
 </body>
 </html>
