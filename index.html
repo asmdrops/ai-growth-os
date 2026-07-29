@@ -3,254 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Content Verification & Misinformation Resilience Platform</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>The AI Device Frontier - Premium Subscription Newsletter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            @apply bg-gray-900 text-gray-100;
         }
-        /* Hero image overlay for enhanced readability */
+        .hero-section {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-position: center center;
+            background-size: cover;
+            position: relative;
+            min-height: 80vh; /* Responsive height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
         .hero-overlay {
-            background: linear-gradient(to right, rgba(17, 24, 39, 0.8) 0%, rgba(17, 24, 39, 0.6) 50%, rgba(17, 24, 39, 0.4) 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for premium feel */
+            backdrop-filter: blur(2px); /* Subtle blur for depth */
+            z-index: 1;
         }
-        @media (max-width: 768px) {
-            .hero-overlay {
-                background: linear-gradient(to bottom, rgba(17, 24, 39, 0.9) 0%, rgba(17, 24, 39, 0.7) 100%);
-            }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 2rem;
+            @apply text-white;
+        }
+        .countdown-segment {
+            @apply flex flex-col items-center justify-center p-2 mx-1 md:p-4 bg-gray-800 rounded-lg shadow-lg;
+        }
+        .countdown-value {
+            @apply text-3xl md:text-5xl font-extrabold text-blue-400;
+        }
+        .countdown-label {
+            @apply text-xs md:text-sm uppercase text-gray-400;
+        }
+        /* Custom form focus states for a cleaner look */
+        .form-input-field:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* blue-500 with opacity */
+            border-color: #3B82F6; /* blue-500 */
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body>
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <div class="absolute inset-0">
-            <img src="https://source.unsplash.com/1600x900/?A,tech" alt="Abstract tech background with interwoven AI patterns and data streams" class="w-full h-full object-cover">
-            <div class="hero-overlay absolute inset-0"></div>
-        </div>
-
-        <div class="relative z-10 p-4 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white mb-4 drop-shadow-lg">
-                Beyond Watermarks: <span class="text-indigo-400">Verify AI Content, Combat Misinformation</span> at Scale.
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 tracking-tight">
+                The <span class="text-blue-400">AI Device Frontier</span>
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 drop-shadow-md max-w-3xl mx-auto">
-                Google's SynthID is a step, but the real threat demands more. Empower your media organization, brand safety, and legal teams to <span class="font-semibold text-white">detect deepfakes, analyze provenance, and neutralize AI deception</span> with unparalleled accuracy.
+            <p class="text-xl md:text-3xl font-light mb-8 max-w-2xl mx-auto">
+                Unlock OpenAI's Hardware Strategy & Dive Deep into Future Applications
             </p>
-
-            <!-- Limited Time Offer & Countdown -->
-            <div class="bg-gradient-to-r from-indigo-700 to-purple-800 p-6 rounded-lg shadow-xl mb-8 transform hover:scale-105 transition-transform duration-300">
-                <p class="text-xl sm:text-2xl font-bold text-white mb-3">Limited Early Access Opportunity!</p>
-                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 text-white">
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold" id="days">00</span>
-                        <span class="text-sm sm:text-base">Days</span>
-                    </div>
-                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold" id="hours">00</span>
-                        <span class="text-sm sm:text-base">Hours</span>
-                    </div>
-                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold" id="minutes">00</span>
-                        <span class="text-sm sm:text-base">Minutes</span>
-                    </div>
-                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold" id="seconds">00</span>
-                        <span class="text-sm sm:text-base">Seconds</span>
-                    </div>
-                </div>
-                <p class="text-sm text-gray-200 mt-3">Secure your spot before this exclusive offer expires.</p>
-            </div>
-
-            <button onclick="document.getElementById('waitlist-form-section').scrollIntoView({ behavior: 'smooth' });"
-                class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-xl sm:text-2xl shadow-lg
-                       transform hover:scale-105 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
-                Join Early Access Waitlist
-            </button>
+            <p class="text-lg md:text-xl font-semibold mb-6 bg-blue-600/20 text-blue-200 px-6 py-3 rounded-full inline-block border border-blue-500">
+                Limited Time Founder's Rate Available!
+            </p>
+            <a href="#subscribe" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Claim Your Founder's Rate Now!
+            </a>
         </div>
     </section>
 
-    <!-- Problem/Market Trend Section -->
-    <section class="py-16 md:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 max-w-screen-xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-white mb-12">
-                The New Frontier of Deception: <span class="text-indigo-400">Why Watermarks Aren't Enough</span>
+    <!-- Value Proposition / Introduction Section -->
+    <section class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 leading-tight">
+                Navigate the Next Wave of Innovation with Confidence
             </h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                        As highlighted by recent discussions like <a href="https://arstechnica.com/information-technology/2023/11/googles-synthid-watermark-is-hard-to-break-but-it-doesnt-solve-ai-misinformation/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline font-medium">Ars Technica's take on Google's SynthID</a>, the race against AI-generated misinformation is escalating. While tools like watermarks offer a layer of provenance, they fail to address the core challenges of a rapidly evolving threat:
-                    </p>
-                    <ul class="list-disc list-inside text-lg text-gray-300 space-y-3 pl-4">
-                        <li><span class="font-semibold text-white">Sophisticated evasion:</span> Advanced AI can circumvent, mimic, or remove watermarks.</li>
-                        <li><span class="font-semibold text-white">Overwhelming volume:</span> The sheer scale of new content makes manual verification impossible.</li>
-                        <li><span class="font-semibold text-white">Lightning speed:</span> Misinformation spreads faster than traditional human response.</li>
-                        <li><span class="font-semibold text-white">Severe impact:</span> Damage to brand reputation and public trust is immediate and often irreversible.</li>
-                    </ul>
-                </div>
-                <div>
-                    <img src="https://source.unsplash.com/1600x900/?A,misinformation,data" alt="Abstract depiction of misinformation spreading through a network" class="rounded-lg shadow-xl w-full h-auto object-cover max-h-96">
-                </div>
-            </div>
-            <p class="text-xl sm:text-2xl text-center text-indigo-300 font-semibold mt-10">
-                You need a proactive, intelligent defense that works without relying on the creator's good intentions.
+            <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-10">
+                As OpenAI ventures into the hardware domain, the landscape of AI interaction is set to fundamentally change.
+                'The AI Device Frontier' is your essential guide to understanding these shifts, offering unparalleled
+                <strong class="text-blue-400">market trends, strategic insights, and practical applications</strong> – not just product announcements.
+                Stay ahead of the curve, prepare for the future, and identify opportunities before they become mainstream.
             </p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 max-w-screen-xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-white mb-16">
-                Unleash <span class="text-indigo-400">Unprecedented Control</span> Over Your Content Ecosystem
+    <section class="py-16 md:py-24 bg-gray-800 border-t border-b border-gray-700">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 leading-tight">
+                What You'll Get with <span class="text-blue-400">'The AI Device Frontier'</span>
             </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-                <!-- Feature 1: AI Content Provenance & Detection -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:translate-y-[-5px]">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.276a1.125 1.125 0 011.234-1.234c.006-.01.01-.016.015-.021.05-.052.1-.106.148-.16l.006-.006c.048-.047.093-.095.137-.146.044-.052.085-.106.124-.16l.004-.006a.75.75 0 00-.006-.884 1.125 1.125 0 011.234-1.234c.006-.01.01-.016.015-.021.05-.052.1-.106.148-.16l.006-.006c.048-.047.093-.095.137-.146.044-.052.085-.106.124-.16l.004-.006a.75.75 0 00-.006-.884 1.125 1.125 0 011.234-1.234c.006-.01.01-.016.015-.021.05-.052.1-.106.148-.16l.006-.006c.048-.047.093-.095.137-.146.044-.052.085-.106.124-.16l.004-.006a.75.75 0 00-.006-.884 1.125 1.125 0 011.234-1.234c.006-.01.01-.016.015-.021.05-.052.1-.106.148-.16l.006-.006c.048-.047.093-.095.137-.146.044-.052.085-.106.124-.16l.004-.006a.75.75 0 00-.006-.884 1.125 1.125 0 011.234-1.234c.006-.01.01-.016.015-.021.05-.052.1-.106.148-.16l.006-.006c.048-.047.093-.095.137-.146.044-.052.085-.106.124-.16l.004-.006a.75.75 0 00-.006-.884"></path><circle cx="12" cy="12" r="10"></circle></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">AI Content Provenance & Detection</h3>
-                    <p class="text-gray-300">Advanced AI analyzes content origin, deepfake signatures in video/audio, and distinguishes AI-generated text and images from human creation, even without reliance on watermarks.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-600">
+                    <div class="text-4xl mb-4 text-blue-400">🔬</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Weekly Deep-Dive Analyses</h3>
+                    <p class="text-gray-300 text-lg">
+                        Exclusive insights into OpenAI's hardware strategy, partner ecosystems, and competitive landscape.
+                        Uncover the 'why' behind every move.
+                    </p>
                 </div>
-
-                <!-- Feature 2: Misinformation Risk Assessment -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:translate-y-[-5px]">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Misinformation Risk Assessment</h3>
-                    <p class="text-gray-300">Get real-time risk scores for potential misinformation spread, identifying emerging narratives, deceptive themes, and amplification networks. Proactive threat intelligence at your fingertips.</p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-600">
+                    <div class="text-4xl mb-4 text-green-400">📈</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Critical Market Trend Comparisons</h3>
+                    <p class="text-gray-300 text-lg">
+                        Understand how new AI devices stack up against existing tech giants and emerging players.
+                        Identify key differentiators and market impacts.
+                    </p>
                 </div>
-
-                <!-- Feature 3: Automated Verification Workflows -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:translate-y-[-5px]">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Automated Verification Workflows</h3>
-                    <p class="text-gray-300">Streamline your content verification process with customizable automated workflows. Integrate seamlessly with existing systems for rapid content flagging, expert review, and swift incident response.</p>
+                <!-- Feature 3 -->
+                <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-600">
+                    <div class="text-4xl mb-4 text-purple-400">🔗</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Potential API Integrations</h3>
+                    <p class="text-gray-300 text-lg">
+                        Explore how future devices could leverage OpenAI's APIs, creating new opportunities for developers and businesses.
+                        Practical guidance for integration.
+                    </p>
                 </div>
-
-                <!-- Feature 4: Incident Response & Tracking -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:translate-y-[-5px]">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.592 1L19.79 12l-2.428-1.5C14.735 12.81 12.75 14 10.5 14c-2.485 0-4.5-2.239-4.5-5s2.015-5 4.5-5c1.61 0 3.097.747 4.032 1.907L16.208 4.792c.594-.962 1.629-1.528 2.792-1.528 1.954 0 3.535 1.579 3.535 3.535 0 1.954-1.581 3.535-3.535 3.535h-3.535c-.94 0-1.706-.757-1.706-1.696 0-.94.766-1.697 1.706-1.697h.848"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Incident Response & Tracking</h3>
-                    <p class="text-gray-300">Monitor misinformation campaigns in real-time, track the propagation of specific content across platforms, and manage incident responses centrally. Get actionable intelligence to mitigate damage swiftly.</p>
+                <!-- Feature 4 -->
+                <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-600">
+                    <div class="text-4xl mb-4 text-yellow-400">🛠️</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Practical Guides & Future Applications</h3>
+                    <p class="text-gray-300 text-lg">
+                        Actionable advice on how to prepare for, and capitalize on, the next generation of AI-powered devices.
+                        From strategy to implementation.
+                    </p>
                 </div>
-
-                <!-- Feature 5: Enterprise-Grade Scalability -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:translate-y-[-5px]">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v11m0 5l4-4m-4 4l-4-4m8-11v4m-2-2h4"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Enterprise-Grade Scalability</h3>
-                    <p class="text-gray-300">Designed for the demands of leading media organizations, large brands, and legal entities. Our platform scales effortlessly to handle massive content volumes and complex verification needs without compromise.</p>
+                <!-- Feature 5 -->
+                <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-600">
+                    <div class="text-4xl mb-4 text-red-400">🔒</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Exclusive Community Access</h3>
+                    <p class="text-gray-300 text-lg">
+                        Connect with fellow innovators, entrepreneurs, and strategists in a private forum.
+                        Share insights and forge powerful connections.
+                    </p>
                 </div>
-
-                <!-- Feature 6: Custom Integrations & APIs -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:translate-y-[-5px]">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Custom Integrations & APIs</h3>
-                    <p class="text-gray-300">Seamlessly integrate our advanced verification capabilities into your existing CMS, content pipelines, or proprietary systems using our robust API. Maintain full control and flexibility over your data flow.</p>
+                <!-- Feature 6 -->
+                <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-600">
+                    <div class="text-4xl mb-4 text-blue-400">🧠</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Strategic Foresight & Preparedness</h3>
+                    <p class="text-gray-300 text-lg">
+                        Don't just react to the future – anticipate it. Our analyses provide the foresight you need
+                        to make informed decisions and build for tomorrow.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist-form-section" class="py-16 md:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 max-w-2xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-white mb-10">
-                Secure Your Organization. <span class="text-indigo-400">Join the Waitlist!</span>
+    <!-- Subscription Form / Waitlist Section -->
+    <section id="subscribe" class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+                Secure Your Place on the Frontier
             </h2>
-            <p class="text-lg text-gray-300 text-center mb-8">
-                Be among the first to experience the future of AI content verification. Get early access, exclusive updates, and a competitive edge in the fight against misinformation. Don't let AI deception undermine your credibility.
+            <p class="text-xl md:text-2xl text-blue-400 font-bold mb-8">
+                Exclusive Founder's Rate Ending Soon!
             </p>
 
-            <form class="bg-gray-900 p-8 rounded-lg shadow-2xl space-y-6">
-                <div>
-                    <label for="name" class="block text-gray-200 text-sm font-bold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" required
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700 placeholder-gray-400">
+            <!-- Countdown Timer (Requires JavaScript to be functional) -->
+            <div class="flex justify-center mb-10 text-white">
+                <div class="countdown-segment">
+                    <div id="days" class="countdown-value">00</div>
+                    <div class="countdown-label">Days</div>
                 </div>
-                <div>
-                    <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Work Email</label>
-                    <input type="email" id="email" name="email" required
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700 placeholder-gray-400">
+                <div class="countdown-segment">
+                    <div id="hours" class="countdown-value">00</div>
+                    <div class="countdown-label">Hours</div>
                 </div>
-                <div>
-                    <label for="organization" class="block text-gray-200 text-sm font-bold mb-2">Organization</label>
-                    <input type="text" id="organization" name="organization" required
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700 placeholder-gray-400">
+                <div class="countdown-segment">
+                    <div id="minutes" class="countdown-value">00</div>
+                    <div class="countdown-label">Minutes</div>
                 </div>
-                <div>
-                    <label for="role" class="block text-gray-200 text-sm font-bold mb-2">Your Role (Optional)</label>
-                    <input type="text" id="role" name="role"
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700 placeholder-gray-400">
+                <div class="countdown-segment">
+                    <div id="seconds" class="countdown-value">00</div>
+                    <div class="countdown-label">Seconds</div>
                 </div>
-                <button type="submit"
-                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg
-                               transform hover:scale-105 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
-                    Get Early Access
+            </div>
+            <!-- End Countdown Timer Placeholder -->
+
+            <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                Don't miss out on critical intelligence that will shape the next era of AI. Subscribe now to lock in your special founder's rate and gain immediate access to our premium content and community.
+            </p>
+
+            <form action="#" method="POST" class="w-full max-w-md mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700">
+                <div class="mb-6">
+                    <label for="name" class="block text-gray-300 text-sm font-semibold mb-2 text-left">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" class="form-input-field w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500 transition duration-200" required>
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-300 text-sm font-semibold mb-2 text-left">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" class="form-input-field w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500 transition duration-200" required>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                    Get Founder's Rate & Subscribe
                 </button>
-                <p class="text-xs text-gray-400 text-center mt-4">We respect your privacy. Your data will not be shared and will only be used for platform updates.</p>
+                <p class="text-sm text-gray-400 mt-4">Your data is safe with us. We hate spam too!</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 border-t border-gray-700">
-        <div class="container mx-auto px-4 text-center text-gray-400 text-sm">
-            <p>&copy; 2023 [Your Company Name]. All rights reserved. <a href="#" class="text-indigo-400 hover:text-indigo-300 underline">Privacy Policy</a> | <a href="#" class="text-indigo-400 hover:text-indigo-300 underline">Terms of Service</a></p>
+    <footer class="py-10 bg-gray-800 border-t border-gray-700">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            <p>&copy; 2024 The AI Device Frontier. All rights reserved.</p>
+            <p class="mt-2 text-sm">
+                <a href="#" class="text-blue-400 hover:underline">Privacy Policy</a> |
+                <a href="#" class="text-blue-400 hover:underline">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
-    <!-- Countdown Timer JavaScript -->
+    <!-- Placeholder for Countdown JavaScript (This part would be JS in a real application) -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (7 days from when the page loads)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Sets it to 7 days from now
+        // Placeholder JavaScript for the countdown timer
+        // In a real application, this would dynamically update the countdown.
+        const countdownDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000); // 7 days from now
 
-            // Update the count down every 1 second
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate - now;
+        const updateCountdown = () => {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
 
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<span class='text-red-400 font-bold'>Offer Expired!</span>";
-                    document.getElementById("countdown").parentElement.classList.remove('bg-gradient-to-r');
-                    document.getElementById("countdown").parentElement.classList.add('bg-gray-700');
-                    return;
-                }
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Time calculations for days, hours, minutes and seconds
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
 
-                // Display the result in the corresponding elements
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-            }, 1000);
-        });
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "EXPIRED"; // Or hide it
+                // Logic to update CTA, e.g., remove founder's rate
+            }
+        };
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call to display immediately
     </script>
+
 </body>
 </html>
