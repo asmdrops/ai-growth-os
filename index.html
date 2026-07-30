@@ -3,247 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SonicPace: Adaptive Music for Runners | Elevate Your Run</title>
-    <meta name="description" content="Hyper-personalized adaptive music experiences for runners, integrating with Spotify and popular running trackers. Optimize your performance with real-time music and coaching.">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%238B5CF6' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15h2v-6h-2v6zm4 0h2v-6h-2v6zm-2-9c0-.55.45-1 1-1s1 .45 1 1v1c0 .55-.45 1-1 1s-1-.45-1-1v-1z'/%3E%3C/svg%3E" type="image/svg+xml">
+    <title>LinkedIn AuthentiScore - Beat the AI Slop Detector & Boost Your Authentic Voice</title>
+    <meta name="description" content="Stop your LinkedIn posts from being flagged as 'AI slop'. AuthentiScore analyzes your content, provides an authenticity score, and gives human-centric suggestions to make your posts more engaging and personal. Join the waitlist for early access!">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for dark mode and premium feel */
-        @import url('https://rsms.me/inter/inter.css'); /* Importing Inter font for a modern feel */
-        :root {
-            --font-inter: 'Inter', sans-serif;
-        }
-        body {
-            font-family: var(--font-inter);
-        }
-        .gradient-text {
-            background: linear-gradient(90deg, #a78bfa, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        /* Custom styles for hero background and text shadow */
         .hero-bg {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-image: url('https://source.unsplash.com/1600x900/?Develop,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            position: relative;
         }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for premium feel */
-        }
-        .btn-primary {
-            @apply inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1;
-        }
-        .btn-secondary {
-            @apply inline-flex items-center justify-center px-6 py-3 border border-purple-500 text-base font-medium rounded-full text-purple-200 hover:bg-purple-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 ease-in-out;
-        }
-        .input-field {
-            @apply appearance-none block w-full px-5 py-3 border border-gray-700 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm bg-gray-800 text-white;
-        }
-        /* Countdown specific styling */
-        .countdown-segment {
-            @apply flex flex-col items-center justify-center bg-gray-800 p-4 rounded-lg shadow-md min-w-[70px] md:min-w-[90px];
-        }
-        .countdown-value {
-            @apply text-4xl md:text-5xl font-extrabold text-purple-400;
-        }
-        .countdown-label {
-            @apply text-xs md:text-sm text-gray-400 uppercase tracking-wide mt-1;
-        }
-        /* Scroll reveal animation */
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .scroll-reveal.active {
-            opacity: 1;
-            transform: translateY(0);
+        .text-shadow-lg {
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white antialiased">
+<body class="bg-gray-900 text-white font-sans antialiased">
 
     <!-- Hero Section -->
-    <section class="hero-bg min-h-screen flex items-center justify-center text-center px-4 py-16">
-        <div class="hero-overlay absolute inset-0 z-0"></div>
-        <div class="relative z-10 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-6 animate-fade-in-up">
-                Beyond Spotify's Running Mode: <span class="gradient-text">Unlock Your Ultimate Performance Playlist.</span>
-            </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 animate-fade-in-up delay-100">
-                Hyper-personalized adaptive music and coaching, powered by your real-time performance. <br class="hidden md:block"> Feel the rhythm of your run like never before.
+    <header class="relative h-screen flex items-center justify-center hero-bg">
+        <div class="absolute inset-0 bg-black opacity-70 z-0"></div> <!-- Dark overlay for text readability -->
+        <div class="container mx-auto px-4 text-center relative z-10 py-16 md:py-20 lg:py-24">
+            <p class="text-indigo-400 uppercase tracking-wide text-sm md:text-base mb-4 font-semibold text-shadow-lg">
+                Stay Ahead of the Trend: LinkedIn's New 'Seems Like AI Slop' Button!
             </p>
-            <div class="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center animate-fade-in-up delay-200">
-                <a href="#waitlist" class="btn-primary">
-                    Join Early Access
-                </a>
-                <a href="#features" class="btn-secondary">
-                    Learn More
-                </a>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-shadow-lg">
+                Don't Let AI Dim Your Spark.<br>
+                Amplify Your <span class="text-indigo-400">Authenticity</span> on LinkedIn.
+            </h1>
+            <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto text-shadow-lg">
+                Introducing <span class="font-bold text-white">LinkedIn AuthentiScore</span> – the essential tool for creators
+                to refine posts, avoid the 'AI slop' flag, and skyrocket genuine engagement.
+            </p>
+            <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Join the Waitlist & Secure Your Authentic Voice
+            </a>
+        </div>
+    </header>
+
+    <!-- Problem/Solution Section -->
+    <section class="py-16 md:py-24 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white">
+                    Is Your Content Accidentally "Slop"? Don't Risk It.
+                </h2>
+                <p class="text-lg md:text-xl text-gray-300 mb-12">
+                    With LinkedIn's new 'Seems Like AI Slop' button, generic, uninspired content is
+                    more likely to be penalized. Your hard work could be losing visibility and impact.
+                    <span class="block mt-4 font-semibold text-indigo-400">AuthentiScore ensures your unique voice always cuts through the noise.</span>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mt-12">
+                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700">
+                    <h3 class="text-2xl font-bold mb-4 text-white flex items-center">
+                        <svg class="w-7 h-7 text-red-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        The Growing Problem
+                    </h3>
+                    <ul class="space-y-4 text-gray-300 text-lg">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span><span class="font-semibold text-white">AI Slop Button:</span> Direct user flagging impacts your credibility and reach.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 0012 9V0a9 9 0 016.364 18.364z"></path></svg>
+                            <span><span class="font-semibold text-white">Algorithm Penalties:</span> Generic posts get downranked, losing precious impressions.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></path></svg>
+                            <span><span class="font-semibold text-white">Engagement Decay:</span> Your audience craves genuine connection, not canned responses.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-indigo-900 bg-opacity-30 rounded-lg p-8 shadow-xl border border-indigo-700">
+                    <h3 class="text-2xl font-bold mb-4 text-white flex items-center">
+                        <svg class="w-7 h-7 text-indigo-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        The AuthentiScore Solution
+                    </h3>
+                    <ul class="space-y-4 text-indigo-200 text-lg">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-400 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span><span class="font-semibold text-white">Intelligent Analysis:</span> Instantly scan for AI 'slop' indicators like buzzwords and clichés.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-400 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span><span class="font-semibold text-white">Actionable Suggestions:</span> Get concrete, human-centric tips to refine your posts.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-400 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span><span class="font-semibold text-white">Boost Engagement:</span> Craft posts that truly resonate, build trust, and drive results.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-white">Your Path to Authenticity in 3 Simple Steps</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="p-6 bg-gray-800 rounded-lg shadow-lg border border-gray-700 flex flex-col items-center transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="flex items-center justify-center w-16 h-16 bg-indigo-600 rounded-full mb-6 text-3xl font-bold text-white">1</div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Create Your Draft</h3>
+                    <p class="text-gray-300 text-center">Write your LinkedIn post as you normally would – whether from scratch or with AI assistance.</p>
+                </div>
+                <div class="p-6 bg-gray-800 rounded-lg shadow-lg border border-gray-700 flex flex-col items-center transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="flex items-center justify-center w-16 h-16 bg-indigo-600 rounded-full mb-6 text-3xl font-bold text-white">2</div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Score & Refine</h3>
+                    <p class="text-gray-300 text-center">Paste into AuthentiScore (or use our extension) to get an immediate 'Authenticity Score' and targeted feedback.</p>
+                </div>
+                <div class="p-6 bg-gray-800 rounded-lg shadow-lg border border-gray-700 flex flex-col items-center transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="flex items-center justify-center w-16 h-16 bg-indigo-600 rounded-full mb-6 text-3xl font-bold text-white">3</div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Publish with Confidence</h3>
+                    <p class="text-gray-300 text-center">Apply the suggestions, ensure your unique voice is heard, and publish posts that truly connect.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 bg-gray-950 px-4 scroll-reveal">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-16 leading-tight">
-                Transform Your Run, <span class="gradient-text">One Beat at a Time.</span>
-            </h2>
+    <section class="py-16 md:py-24 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Designed for Genuine LinkedIn Growth</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center justify-center w-16 h-16 bg-indigo-600 rounded-full mb-6 text-white text-3xl">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Real-time AI Slop Detection</h3>
+                    <p class="text-gray-300">Our intelligent engine meticulously scans your drafted posts for common AI patterns: generic phrasing, buzzword overload, and unoriginal structures, providing an instant Authenticity Score.</p>
+                </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-                <div class="p-6 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group scroll-reveal delay-100">
-                    <div class="text-purple-400 text-5xl mb-4 group-hover:text-purple-300 transition-colors duration-300">🎵</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-purple-200 transition-colors duration-300">Dynamic Music Adaptation</h3>
-                    <p class="text-gray-300 text-lg">
-                        Music genre, intensity, and tempo adjust in real-time to your heart rate, cadence, and interval goals. Beyond basic tempo matching, feel the perfect beat.
-                    </p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center justify-center w-16 h-16 bg-indigo-600 rounded-full mb-6 text-white text-3xl">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Actionable Human-Centric Feedback</h3>
+                    <p class="text-gray-300">Don't just get a score, get solutions. AuthentiScore offers precise, easy-to-implement suggestions to inject personality, unique insights, and compelling narratives into your content.</p>
                 </div>
-                <div class="p-6 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group scroll-reveal delay-200">
-                    <div class="text-purple-400 text-5xl mb-4 group-hover:text-purple-300 transition-colors duration-300">🗣️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-purple-200 transition-colors duration-300">Smart Coaching Integration</h3>
-                    <p class="text-gray-300 text-lg">
-                        Motivational audio cues guide you through zones and transitions, keeping you focused and pushing your limits. Your personal running mentor.
-                    </p>
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center justify-center w-16 h-16 bg-indigo-600 rounded-full mb-6 text-white text-3xl">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Seamless Browser Extension</h3>
+                    <p class="text-gray-300">Integrate AuthentiScore directly into your LinkedIn workflow. Get live authenticity checks and suggestions without ever leaving the LinkedIn editor.</p>
                 </div>
-                <div class="p-6 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group scroll-reveal delay-300">
-                    <div class="text-purple-400 text-5xl mb-4 group-hover:text-purple-300 transition-colors duration-300">⚙️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-purple-200 transition-colors duration-300">Custom Workout Architect</h3>
-                    <p class="text-gray-300 text-lg">
-                        Define specific HR zones, cadence targets, and complex interval structures. Your music responds instantly, no manual adjustments needed.
-                    </p>
+
+                <!-- Premium Feature 1 -->
+                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-indigo-700 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 relative">
+                    <span class="absolute top-3 right-3 bg-indigo-500 text-white text-xs font-bold px-3 py-1 rounded-full">Premium</span>
+                    <div class="flex items-center justify-center w-16 h-16 bg-indigo-700 rounded-full mb-6 text-white text-3xl">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3 3 7-7M5 12h2M12 5v2M12 17v2M17 12h2M12 12a5 5 0 110-10 5 5 0 010 10zm-5 4a2 2 0 01-2 2H5M19 16a2 2 0 01-2 2h-1"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">A/B Testing for Authenticity</h3>
+                    <p class="text-gray-300">Test different variations of your posts to identify which resonates most powerfully and authentically with your audience before you hit publish. Maximize impact, minimize risk.</p>
                 </div>
-                <div class="p-6 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group scroll-reveal delay-400">
-                    <div class="text-purple-400 text-5xl mb-4 group-hover:text-purple-300 transition-colors duration-300">📈</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-purple-200 transition-colors duration-300">Performance Analytics</h3>
-                    <p class="text-gray-300 text-lg">
-                        Understand how different music styles and intensities impact your pace, endurance, and recovery. Visualize your progress and optimize future runs.
-                    </p>
+
+                <!-- Premium Feature 2 -->
+                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-indigo-700 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 relative">
+                    <span class="absolute top-3 right-3 bg-indigo-500 text-white text-xs font-bold px-3 py-1 rounded-full">Premium</span>
+                    <div class="flex items-center justify-center w-16 h-16 bg-indigo-700 rounded-full mb-6 text-white text-3xl">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Personalized Prompt Generation</h3>
+                    <p class="text-gray-300">Go beyond generic. Get AI-powered prompt suggestions tailored to your LinkedIn profile, professional niche, and past successful content to spark truly original ideas.</p>
                 </div>
-                <div class="p-6 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group scroll-reveal delay-500">
-                    <div class="text-purple-400 text-5xl mb-4 group-hover:text-purple-300 transition-colors duration-300">🔗</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-purple-200 transition-colors duration-300">Seamless Connectivity</h3>
-                    <p class="text-gray-300 text-lg">
-                        Integrates with Spotify, Strava, Garmin Connect, and more, for a unified experience that brings all your data and music together.
-                    </p>
-                </div>
-                <div class="p-6 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group scroll-reveal delay-600">
-                    <div class="text-purple-400 text-5xl mb-4 group-hover:text-purple-300 transition-colors duration-300">🧠</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-purple-200 transition-colors duration-300">Personalized Preferences</h3>
-                    <p class="text-gray-300 text-lg">
-                        AI learns your musical tastes and workout styles, curating the perfect soundtrack for every run, adapting as you evolve.
-                    </p>
+
+                <!-- Premium Feature 3 -->
+                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-indigo-700 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 relative">
+                    <span class="absolute top-3 right-3 bg-indigo-500 text-white text-xs font-bold px-3 py-1 rounded-full">Premium</span>
+                    <div class="flex items-center justify-center w-16 h-16 bg-indigo-700 rounded-full mb-6 text-white text-3xl">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Integrated LinkedIn Analytics</h3>
+                    <p class="text-gray-300">Track the real-world performance of your 'AuthentiScored' posts. See how your refined content drives higher engagement, views, and interactions directly within your dashboard.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gray-900 px-4 scroll-reveal">
-        <div class="container mx-auto max-w-3xl text-center p-8 bg-gray-950 rounded-2xl shadow-2xl border border-purple-800/50">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
-                Don't Just Run, <span class="gradient-text">Evolve Your Run.</span>
+    <!-- Waitlist Section with Countdown -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gray-900 relative overflow-hidden">
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-indigo-400">
+                🚀 Limited-Time Opportunity: Join the AuthentiScore Waitlist!
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10">
-                Join the waitlist for <strong class="text-purple-400">SonicPace</strong> and be among the first to transform your training experience.
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                Be among the first to experience AuthentiScore and elevate your LinkedIn presence.
+                Sign up now for early access and exclusive launch benefits.
             </p>
 
             <!-- Countdown Timer -->
-            <div class="bg-gray-800 p-6 rounded-xl mb-10 border border-purple-700/30 shadow-inner">
-                <p class="text-xl sm:text-2xl font-semibold text-purple-300 mb-6">Early Access Spots Are Closing In:</p>
-                <div id="countdown" class="flex justify-center space-x-4 sm:space-x-6">
-                    <div class="countdown-segment">
-                        <div id="days" class="countdown-value">00</div>
-                        <div class="countdown-label">Days</div>
+            <div class="bg-indigo-900 bg-opacity-40 border border-indigo-700 rounded-xl p-8 mb-12 max-w-lg mx-auto shadow-2xl">
+                <p class="text-indigo-200 text-lg mb-4 font-semibold">Special Offer Closes In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 md:space-x-6 lg:space-x-8 text-white text-4xl md:text-5xl lg:text-6xl font-bold">
+                    <div>
+                        <span id="days" class="block">00</span>
+                        <span class="text-sm md:text-base text-indigo-300 font-normal">Days</span>
                     </div>
-                    <div class="countdown-segment">
-                        <div id="hours" class="countdown-value">00</div>
-                        <div class="countdown-label">Hours</div>
+                    <div>
+                        <span id="hours" class="block">00</span>
+                        <span class="text-sm md:text-base text-indigo-300 font-normal">Hours</span>
                     </div>
-                    <div class="countdown-segment">
-                        <div id="minutes" class="countdown-value">00</div>
-                        <div class="countdown-label">Minutes</div>
+                    <div>
+                        <span id="minutes" class="block">00</span>
+                        <span class="text-sm md:text-base text-indigo-300 font-normal">Minutes</span>
                     </div>
-                    <div class="countdown-segment">
-                        <div id="seconds" class="countdown-value">00</div>
-                        <div class="countdown-label">Seconds</div>
+                    <div>
+                        <span id="seconds" class="block">00</span>
+                        <span class="text-sm md:text-base text-indigo-300 font-normal">Seconds</span>
                     </div>
                 </div>
             </div>
 
-            <form action="#" method="POST" class="max-w-md mx-auto">
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <label for="email" class="sr-only">Email address</label>
-                    <input id="email" name="email" type="email" autocomplete="email" required class="input-field flex-grow" placeholder="Enter your email">
-                    <button type="submit" class="btn-primary flex-shrink-0 w-full sm:w-auto">
-                        Get Early Access
-                    </button>
+            <!-- Waitlist Form -->
+            <form action="#" method="POST" class="max-w-xl mx-auto bg-gray-800 p-8 rounded-lg shadow-2xl border border-gray-700">
+                <div class="mb-6">
+                    <label for="name" class="block text-left text-lg font-medium text-white mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white placeholder-gray-400 outline-none" required>
                 </div>
-                <p class="mt-4 text-sm text-gray-400">
-                    We respect your privacy. No spam, ever.
-                </p>
+                <div class="mb-8">
+                    <label for="email" class="block text-left text-lg font-medium text-white mb-2">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white placeholder-gray-400 outline-none" required>
+                </div>
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                    Join the AuthentiScore Waitlist
+                </button>
+                <p class="text-gray-400 text-sm mt-4">We respect your privacy. No spam, ever. Your email will only be used for AuthentiScore updates.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 px-4 border-t border-gray-800">
-        <div class="container mx-auto max-w-6xl text-center text-gray-500 text-sm">
-            <p>&copy; 2023 SonicPace. All rights reserved. Integrating with Spotify&trade;, Strava&trade;, and Garmin Connect&trade;.</p>
+    <footer class="bg-gray-900 py-10 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            <p>&copy; 2023 LinkedIn AuthentiScore. All rights reserved.</p>
+            <p class="mt-2 text-sm">
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 transition duration-200">Privacy Policy</a>
+                <span class="mx-2">|</span>
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 transition duration-200">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer and Scroll Reveal -->
+    <!-- JavaScript for Countdown Timer -->
     <script>
-        // Countdown Timer
-        // Set countdown for 7 days from the current date/time
-        const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 7);
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const endDate = new Date();
+            endDate.setDate(endDate.getDate() + 7); // Set to 7 days from today for "Limited Time" offer
 
-        const x = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
+            const daysElement = document.getElementById('days');
+            const hoursElement = document.getElementById('hours');
+            const minutesElement = document.getElementById('minutes');
+            const secondsElement = document.getElementById('seconds');
+            const countdownContainer = document.getElementById('countdown');
+            const waitlistButton = document.querySelector('#waitlist form button');
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = endDate.getTime() - now;
 
-            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "<div class='text-xl md:text-2xl font-bold text-red-500'>Waitlist Closed!</div>";
-                // Optionally disable the form
-                document.querySelector('#waitlist form button').disabled = true;
-                document.querySelector('#waitlist form button').classList.add('opacity-50', 'cursor-not-allowed');
-                document.getElementById('email').disabled = true;
-            }
-        }, 1000);
-
-        // Scroll Reveal Animation
-        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-
-        const observerOptions = {
-            root: null, // viewport
-            rootMargin: '0px',
-            threshold: 0.1 // Trigger when 10% of the element is visible
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target); // Stop observing once animated
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    countdownContainer.innerHTML = "<span class='text-red-500 text-3xl md:text-4xl font-bold'>Waitlist Closed!</span>";
+                    if (waitlistButton) {
+                        waitlistButton.disabled = true;
+                        waitlistButton.innerText = "Waitlist Closed";
+                        waitlistButton.classList.add('bg-gray-600', 'cursor-not-allowed');
+                        waitlistButton.classList.remove('bg-indigo-600', 'hover:bg-indigo-700', 'transform', 'hover:scale-105');
+                    }
+                    return;
                 }
-            });
-        }, observerOptions);
 
-        scrollRevealElements.forEach(el => observer.observe(el));
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                daysElement.innerHTML = String(days).padStart(2, '0');
+                hoursElement.innerHTML = String(hours).padStart(2, '0');
+                minutesElement.innerHTML = String(minutes).padStart(2, '0');
+                secondsElement.innerHTML = String(seconds).padStart(2, '0');
+            }
+
+            const countdownInterval = setInterval(updateCountdown, 1000);
+            updateCountdown(); // Call immediately to avoid initial flicker
+        });
     </script>
 </body>
 </html>
