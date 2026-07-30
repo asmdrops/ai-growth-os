@@ -3,221 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple Upgrade Decoder: Is It Truly Your Best Option?</title>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>SonicPace: Adaptive Music for Runners | Elevate Your Run</title>
+    <meta name="description" content="Hyper-personalized adaptive music experiences for runners, integrating with Spotify and popular running trackers. Optimize your performance with real-time music and coaching.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%238B5CF6' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15h2v-6h-2v6zm4 0h2v-6h-2v6zm-2-9c0-.55.45-1 1-1s1 .45 1 1v1c0 .55-.45 1-1 1s-1-.45-1-1v-1z'/%3E%3C/svg%3E" type="image/svg+xml">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for hero background image and overlay */
-        .hero-background {
+        /* Custom styles for dark mode and premium feel */
+        @import url('https://rsms.me/inter/inter.css'); /* Importing Inter font for a modern feel */
+        :root {
+            --font-inter: 'Inter', sans-serif;
+        }
+        body {
+            font-family: var(--font-inter);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #a78bfa, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            position: relative;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for premium feel */
+        }
+        .btn-primary {
+            @apply inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1;
+        }
+        .btn-secondary {
+            @apply inline-flex items-center justify-center px-6 py-3 border border-purple-500 text-base font-medium rounded-full text-purple-200 hover:bg-purple-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 ease-in-out;
+        }
+        .input-field {
+            @apply appearance-none block w-full px-5 py-3 border border-gray-700 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm bg-gray-800 text-white;
+        }
+        /* Countdown specific styling */
+        .countdown-segment {
+            @apply flex flex-col items-center justify-center bg-gray-800 p-4 rounded-lg shadow-md min-w-[70px] md:min-w-[90px];
+        }
+        .countdown-value {
+            @apply text-4xl md:text-5xl font-extrabold text-purple-400;
+        }
+        .countdown-label {
+            @apply text-xs md:text-sm text-gray-400 uppercase tracking-wide mt-1;
+        }
+        /* Scroll reveal animation */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white font-sans antialiased">
+<body class="bg-gray-900 text-white antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-background relative min-h-screen flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for readability -->
-        <div class="relative z-10 text-center max-w-3xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 tracking-tight">
-                Apple Upgrade Decoder: Is It Truly Your Best Option?
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center px-4 py-16">
+        <div class="hero-overlay absolute inset-0 z-0"></div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-6 animate-fade-in-up">
+                Beyond Spotify's Running Mode: <span class="gradient-text">Unlock Your Ultimate Performance Playlist.</span>
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8">
-                Unmask the True Costs & Discover Your Smartest iPhone Upgrade Path.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 animate-fade-in-up delay-100">
+                Hyper-personalized adaptive music and coaching, powered by your real-time performance. <br class="hidden md:block"> Feel the rhythm of your run like never before.
             </p>
-            <p class="text-xl sm:text-2xl text-yellow-400 font-semibold mb-4 animate-pulse">
-                LIMITED-TIME OFFER: Get 30% OFF for the next
-            </p>
-            <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 text-3xl sm:text-4xl lg:text-5xl font-bold mb-10">
-                <div class="flex flex-col items-center">
-                    <span id="days" class="bg-gray-800 text-blue-400 p-2 sm:p-3 rounded-lg shadow-md min-w-[55px] sm:min-w-[70px]">00</span>
-                    <span class="text-xs sm:text-sm text-gray-400 mt-1">Days</span>
-                </div>
-                <span class="text-gray-500">:</span>
-                <div class="flex flex-col items-center">
-                    <span id="hours" class="bg-gray-800 text-blue-400 p-2 sm:p-3 rounded-lg shadow-md min-w-[55px] sm:min-w-[70px]">00</span>
-                    <span class="text-xs sm:text-sm text-gray-400 mt-1">Hours</span>
-                </div>
-                <span class="text-gray-500">:</span>
-                <div class="flex flex-col items-center">
-                    <span id="minutes" class="bg-gray-800 text-blue-400 p-2 sm:p-3 rounded-lg shadow-md min-w-[55px] sm:min-w-[70px]">00</span>
-                    <span class="text-xs sm:text-sm text-gray-400 mt-1">Minutes</span>
-                </div>
-                <span class="text-gray-500">:</span>
-                <div class="flex flex-col items-center">
-                    <span id="seconds" class="bg-gray-800 text-blue-400 p-2 sm:p-3 rounded-lg shadow-md min-w-[55px] sm:min-w-[70px]">00</span>
-                    <span class="text-xs sm:text-sm text-gray-400 mt-1">Seconds</span>
-                </div>
+            <div class="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center animate-fade-in-up delay-200">
+                <a href="#waitlist" class="btn-primary">
+                    Join Early Access
+                </a>
+                <a href="#features" class="btn-secondary">
+                    Learn More
+                </a>
             </div>
-            <a href="#purchase" class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 sm:px-10 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out text-xl sm:text-2xl">
-                Get Your Personalized Analysis Now & Save!
-            </a>
-            <p class="text-sm text-gray-400 mt-4">One-time purchase. Instant access.</p>
-        </div>
-    </header>
-
-    <!-- Problem / Introduction Section -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white">
-                "What’s the catch with the Apple Upgrade program?"
-            </h2>
-            <p class="text-lg sm:text-xl text-gray-300 leading-relaxed mb-8">
-                The internet is buzzing with this question, and for good reason. Apple, carriers, and retailers all want you to think their deal is best. But in a maze of financing terms, trade-ins, and upgrade cycles, how do you truly know you're making the smartest financial choice for your next iPhone?
-            </p>
-            <p class="text-lg sm:text-xl text-gray-300 leading-relaxed">
-                Stop guessing. Start knowing. Our "Apple Upgrade Decoder" is your definitive tool to cut through the noise and unlock real savings.
-            </p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">
-                What You'll Get Inside the Decoder
+    <section id="features" class="py-16 md:py-24 bg-gray-950 px-4 scroll-reveal">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-16 leading-tight">
+                Transform Your Run, <span class="gradient-text">One Beat at a Time.</span>
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1: Dynamic Comparison Calculator -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-500 transition-all duration-300">
-                    <div class="text-blue-400 text-5xl mb-4 text-center">📊</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white text-center">Dynamic Comparison Calculator</h3>
-                    <p class="text-gray-300 text-center">
-                        Input your desired device, upgrade frequency, and credit score to instantly compare Apple Upgrade, carrier deals, traditional buying, and financing options.
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <div class="p-6 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group scroll-reveal delay-100">
+                    <div class="text-purple-400 text-5xl mb-4 group-hover:text-purple-300 transition-colors duration-300">🎵</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-purple-200 transition-colors duration-300">Dynamic Music Adaptation</h3>
+                    <p class="text-gray-300 text-lg">
+                        Music genre, intensity, and tempo adjust in real-time to your heart rate, cadence, and interval goals. Beyond basic tempo matching, feel the perfect beat.
                     </p>
                 </div>
-                <!-- Feature 2: Personalized Cost-Benefit Analysis -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-500 transition-all duration-300">
-                    <div class="text-blue-400 text-5xl mb-4 text-center">💰</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white text-center">Personalized Cost-Benefit Analysis</h3>
-                    <p class="text-gray-300 text-center">
-                        Receive a customized report detailing the total cost of ownership, hidden fees, and long-term savings for each option, specific to YOUR situation.
+                <div class="p-6 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group scroll-reveal delay-200">
+                    <div class="text-purple-400 text-5xl mb-4 group-hover:text-purple-300 transition-colors duration-300">🗣️</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-purple-200 transition-colors duration-300">Smart Coaching Integration</h3>
+                    <p class="text-gray-300 text-lg">
+                        Motivational audio cues guide you through zones and transitions, keeping you focused and pushing your limits. Your personal running mentor.
                     </p>
                 </div>
-                <!-- Feature 3: Unbiased Expert Insights -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-500 transition-all duration-300">
-                    <div class="text-blue-400 text-5xl mb-4 text-center">💡</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white text-center">Unbiased Expert Insights</h3>
-                    <p class="text-gray-300 text-center">
-                        Cut through marketing jargon with clear, objective breakdowns of how each program works, its pros, cons, and who it's truly designed for.
+                <div class="p-6 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group scroll-reveal delay-300">
+                    <div class="text-purple-400 text-5xl mb-4 group-hover:text-purple-300 transition-colors duration-300">⚙️</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-purple-200 transition-colors duration-300">Custom Workout Architect</h3>
+                    <p class="text-gray-300 text-lg">
+                        Define specific HR zones, cadence targets, and complex interval structures. Your music responds instantly, no manual adjustments needed.
                     </p>
                 </div>
-                <!-- Feature 4: Tailored Recommendations -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-500 transition-all duration-300">
-                    <div class="text-blue-400 text-5xl mb-4 text-center">✅</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white text-center">Tailored Recommendations</h3>
-                    <p class="text-gray-300 text-center">
-                        Beyond just numbers, get actionable advice on the best upgrade strategy based on your financial goals and upgrade habits.
+                <div class="p-6 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group scroll-reveal delay-400">
+                    <div class="text-purple-400 text-5xl mb-4 group-hover:text-purple-300 transition-colors duration-300">📈</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-purple-200 transition-colors duration-300">Performance Analytics</h3>
+                    <p class="text-gray-300 text-lg">
+                        Understand how different music styles and intensities impact your pace, endurance, and recovery. Visualize your progress and optimize future runs.
                     </p>
                 </div>
-                <!-- Feature 5: Instant, Secure Access -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-500 transition-all duration-300">
-                    <div class="text-blue-400 text-5xl mb-4 text-center">🔒</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white text-center">Instant, Secure Access</h3>
-                    <p class="text-gray-300 text-center">
-                        No subscriptions, no recurring fees. Purchase once, own the guide and calculator forever. Get instant access to start saving today.
+                <div class="p-6 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group scroll-reveal delay-500">
+                    <div class="text-purple-400 text-5xl mb-4 group-hover:text-purple-300 transition-colors duration-300">🔗</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-purple-200 transition-colors duration-300">Seamless Connectivity</h3>
+                    <p class="text-gray-300 text-lg">
+                        Integrates with Spotify, Strava, Garmin Connect, and more, for a unified experience that brings all your data and music together.
                     </p>
                 </div>
-                <!-- Feature 6: Future-Proofed Updates -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-500 transition-all duration-300">
-                    <div class="text-blue-400 text-5xl mb-4 text-center">📱</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white text-center">Future-Proofed Updates</h3>
-                    <p class="text-gray-300 text-center">
-                        Stay ahead with complimentary updates to the guide and calculator as Apple's programs and market conditions evolve.
+                <div class="p-6 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group scroll-reveal delay-600">
+                    <div class="text-purple-400 text-5xl mb-4 group-hover:text-purple-300 transition-colors duration-300">🧠</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white group-hover:text-purple-200 transition-colors duration-300">Personalized Preferences</h3>
+                    <p class="text-gray-300 text-lg">
+                        AI learns your musical tastes and workout styles, curating the perfect soundtrack for every run, adapting as you evolve.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action / Purchase Form Section -->
-    <section id="purchase" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900">
-        <div class="max-w-3xl mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-6 text-white">
-                Unlock Your Smartest Upgrade Decision
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gray-900 px-4 scroll-reveal">
+        <div class="container mx-auto max-w-3xl text-center p-8 bg-gray-950 rounded-2xl shadow-2xl border border-purple-800/50">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+                Don't Just Run, <span class="gradient-text">Evolve Your Run.</span>
             </h2>
-            <p class="text-lg text-gray-300 text-center mb-8">
-                Don't miss out on the limited-time 30% discount! Get instant access to the "Apple Upgrade Decoder" guide and interactive calculator.
+            <p class="text-lg sm:text-xl text-gray-300 mb-10">
+                Join the waitlist for <strong class="text-purple-400">SonicPace</strong> and be among the first to transform your training experience.
             </p>
-            <form class="space-y-6">
-                <div>
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="shadow-sm appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-700">
+
+            <!-- Countdown Timer -->
+            <div class="bg-gray-800 p-6 rounded-xl mb-10 border border-purple-700/30 shadow-inner">
+                <p class="text-xl sm:text-2xl font-semibold text-purple-300 mb-6">Early Access Spots Are Closing In:</p>
+                <div id="countdown" class="flex justify-center space-x-4 sm:space-x-6">
+                    <div class="countdown-segment">
+                        <div id="days" class="countdown-value">00</div>
+                        <div class="countdown-label">Days</div>
+                    </div>
+                    <div class="countdown-segment">
+                        <div id="hours" class="countdown-value">00</div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    <div class="countdown-segment">
+                        <div id="minutes" class="countdown-value">00</div>
+                        <div class="countdown-label">Minutes</div>
+                    </div>
+                    <div class="countdown-segment">
+                        <div id="seconds" class="countdown-value">00</div>
+                        <div class="countdown-label">Seconds</div>
+                    </div>
                 </div>
-                <div>
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" required
-                           class="shadow-sm appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-700">
+            </div>
+
+            <form action="#" method="POST" class="max-w-md mx-auto">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <label for="email" class="sr-only">Email address</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required class="input-field flex-grow" placeholder="Enter your email">
+                    <button type="submit" class="btn-primary flex-shrink-0 w-full sm:w-auto">
+                        Get Early Access
+                    </button>
                 </div>
-                <!-- For a real site, this button would submit to a payment gateway. -->
-                <button type="submit"
-                        class="w-full bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-bold py-4 px-4 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out text-xl">
-                    Secure My Guide & Calculator Now (Save 30%!)
-                </button>
-                <p class="text-xs text-gray-400 text-center mt-4">
-                    Your information is 100% secure and will not be shared.
+                <p class="mt-4 text-sm text-gray-400">
+                    We respect your privacy. No spam, ever.
                 </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
-        <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-        <p class="mt-2">Disclaimer: This guide provides financial education and comparison tools. Consult a financial advisor for personalized advice.</p>
+    <footer class="bg-gray-950 py-8 px-4 border-t border-gray-800">
+        <div class="container mx-auto max-w-6xl text-center text-gray-500 text-sm">
+            <p>&copy; 2023 SonicPace. All rights reserved. Integrating with Spotify&trade;, Strava&trade;, and Garmin Connect&trade;.</p>
+        </div>
     </footer>
 
-    <!-- Countdown Timer Script -->
+    <!-- JavaScript for Countdown Timer and Scroll Reveal -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the date we're counting down to (e.g., 2 days from now)
-            const endDate = new Date();
-            endDate.setDate(endDate.getDate() + 2); // Offer expires in 2 days from page load
+        // Countdown Timer
+        // Set countdown for 7 days from the current date/time
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 7);
 
-            const countdownFunction = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = endDate - now;
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
 
-                // If the countdown is over, write some text
-                if (distance < 0) {
-                    clearInterval(countdownFunction);
-                    document.getElementById("countdown").innerHTML = "<span class='text-red-500'>OFFER EXPIRED!</span>";
-                    // Disable and change text of CTA buttons
-                    const heroPurchaseButton = document.querySelector('header a');
-                    if (heroPurchaseButton) {
-                        heroPurchaseButton.textContent = "Offer Expired. Purchase at Full Price";
-                        heroPurchaseButton.classList.remove('from-blue-600', 'to-purple-600', 'hover:from-blue-700', 'hover:to-purple-700', 'transform', 'hover:scale-105');
-                        heroPurchaseButton.classList.add('bg-gray-600', 'cursor-not-allowed');
-                        heroPurchaseButton.removeAttribute('href'); // Remove link
-                    }
-                    const formPurchaseButton = document.querySelector('#purchase button[type="submit"]');
-                    if (formPurchaseButton) {
-                        formPurchaseButton.textContent = "Offer Expired. Purchase at Full Price";
-                        formPurchaseButton.classList.remove('from-green-500', 'to-teal-500', 'hover:from-green-600', 'hover:to-teal-600', 'transform', 'hover:scale-105');
-                        formPurchaseButton.classList.add('bg-gray-600', 'cursor-not-allowed');
-                        formPurchaseButton.setAttribute('disabled', 'true');
-                    }
-                    return;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "<div class='text-xl md:text-2xl font-bold text-red-500'>Waitlist Closed!</div>";
+                // Optionally disable the form
+                document.querySelector('#waitlist form button').disabled = true;
+                document.querySelector('#waitlist form button').classList.add('opacity-50', 'cursor-not-allowed');
+                document.getElementById('email').disabled = true;
+            }
+        }, 1000);
+
+        // Scroll Reveal Animation
+        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+
+        const observerOptions = {
+            root: null, // viewport
+            rootMargin: '0px',
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Stop observing once animated
                 }
+            });
+        }, observerOptions);
 
-                // Calculate days, hours, minutes, seconds
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                // Display the result in the corresponding elements
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-            }, 1000); // Update the count every 1 second
-        });
+        scrollRevealElements.forEach(el => observer.observe(el));
     </script>
-
 </body>
 </html>
