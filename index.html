@@ -1,144 +1,284 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unlock iCloud+ AI Power: Exclusive Guide & Newsletter Waitlist</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>The Painless Ink Handbook: Your Complete Guide to Microneedle Tattoos</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for dark overlay and font styling */
-        .hero-overlay {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.8) 100%); /* Darker gradient overlay */
+        /* Custom styles for dark mode aesthetic and specific elements */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* GitHub Dark Mode background */
+            color: #c9d1d9; /* GitHub Dark Mode text */
         }
-        .countdown-timer span {
-            font-variant-numeric: tabular-nums; /* Ensures numbers align nicely */
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?The,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            display: flex; /* Ensures content is centered with flex properties */
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1rem; /* Add some padding for small screens */
         }
-        /* Custom scroll-behavior for smooth anchor links */
-        html {
-            scroll-behavior: smooth;
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.75); /* Darker overlay for better text readability */
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 90%; /* Fluid width for content */
+            margin: auto; /* Center content horizontally */
+        }
+        /* Countdown Timer Styles */
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(31, 41, 55, 0.8); /* bg-gray-800 with opacity */
+            border-radius: 0.5rem; /* rounded-lg */
+            padding: 0.75rem; /* p-3 */
+            color: #fff; /* text-white */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+        }
+        .countdown-item span.value {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 800; /* font-extrabold */
+            line-height: 1; /* Adjust line height for better display */
+        }
+        .countdown-item span.label {
+            font-size: 0.875rem; /* text-sm */
+            text-transform: uppercase; /* uppercase */
+            letter-spacing: 0.05em; /* tracking-wider */
+            color: #9ca3af; /* text-gray-400 */
+        }
+
+        /* Responsive adjustments for countdown */
+        @media (min-width: 640px) { /* sm breakpoint */
+            .countdown-item span.value {
+                font-size: 3rem; /* text-5xl */
+            }
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .countdown-item {
+                padding: 1rem; /* p-4 */
+            }
+            .countdown-item span.value {
+                font-size: 3.75rem; /* text-6xl */
+            }
+            .countdown-item span.label {
+                font-size: 1rem; /* text-base */
+            }
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 font-sans antialiased">
+<body class="bg-[#0d1117] text-[#c9d1d9] antialiased">
 
     <!-- Hero Section -->
-    <header class="relative bg-cover bg-center h-screen flex items-center justify-center p-4" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-        <div class="absolute inset-0 hero-overlay"></div>
-        <div class="relative z-10 text-center max-w-5xl mx-auto px-4">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
-                <span class="text-indigo-400">Tim Cook Hints:</span> Supercharge Your iCloud+ with AI
+    <section class="hero-background min-h-screen py-16">
+        <div class="hero-content max-w-4xl mx-auto px-6">
+            <p class="text-indigo-400 text-lg md:text-xl font-semibold mb-4 tracking-wide uppercase">
+                The Future of Personal Expression Is Here
+            </p>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                The Painless Ink Handbook
             </h1>
-            <p class="text-lg md:text-2xl mb-8 text-gray-200 leading-relaxed max-w-3xl mx-auto">
-                As Apple's AI ecosystem expands, power users demand more. Master new features, optimize workflows, and enhance privacy with our exclusive <span class="font-semibold text-purple-300">Ultimate Guide & Premium Newsletter.</span>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Your Complete Guide to Microneedle Tattoos – Unlock the secrets of permanent, pain-free ink,
+                <span class="font-bold text-yellow-300">now accessible to everyone.</span>
+            </p>
+            <p class="text-gray-400 italic mb-10 text-base md:text-lg">
+                As seen in The Verge: "This tattoo is permanent, pain-free, and might soon come in the mail."
             </p>
 
-            <!-- Limited Time Countdown -->
-            <div class="bg-gradient-to-r from-purple-700 to-indigo-700 text-white p-5 md:p-8 rounded-xl shadow-2xl mb-12 border-4 border-indigo-400 max-w-2xl mx-auto animate-pulse-slow">
-                <p class="text-xl md:text-3xl font-bold mb-4 uppercase tracking-wide">
-                    Limited Time Early Access Offer!
-                </p>
-                <div id="countdown" class="countdown-timer text-3xl md:text-5xl lg:text-6xl font-extrabold flex justify-center space-x-3 md:space-x-6">
-                    <div><span id="days">00</span><p class="text-base md:text-lg font-normal mt-1">Days</p></div>
-                    <div><span id="hours">00</span><p class="text-base md:text-lg font-normal mt-1">Hours</p></div>
-                    <div><span id="minutes">00</span><p class="text-base md:text-lg font-normal mt-1">Minutes</p></div>
-                    <div><span id="seconds">00</span><p class="text-base md:text-lg font-normal mt-1">Seconds</p></div>
-                </div>
-            </div>
+            <!-- Limited Time Offer -->
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-700 p-6 md:p-8 rounded-xl shadow-2xl mb-10 transform hover:scale-105 transition-transform duration-300 ease-in-out border border-indigo-500">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">Limited-Time Launch Offer!</h2>
+                <p class="text-xl md:text-2xl text-yellow-300 mb-5">Get <span class="text-red-400 line-through mr-2">$199</span>
+                    <span class="text-green-300 font-extrabold text-4xl md:text-5xl">$99</span> – Save 50%!</p>
 
-            <a href="#waitlist-form" class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl shadow-lg transform hover:scale-105 transition duration-300 ease-in-out uppercase tracking-wider">
-                Secure Your VIP Waitlist Spot!
-            </a>
-        </div>
-    </header>
+                <div class="flex flex-wrap justify-center items-center gap-4 mb-6" id="countdown">
+                    <div class="countdown-item">
+                        <span class="value" id="days">00</span>
+                        <span class="label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="value" id="hours">00</span>
+                        <span class="label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="value" id="minutes">00</span>
+                        <span class="label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="value" id="seconds">00</span>
+                        <span class="label">Seconds</span>
+                    </div>
+                </div>
 
-    <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 bg-gray-950">
-        <div class="container mx-auto px-4 max-w-7xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-16 text-white">
-                What You'll Uncover: The Ultimate Advantage in Apple's AI Future
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1: Advanced Workflows -->
-                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl transform hover:scale-105 transition duration-300 border border-gray-800 hover:border-purple-600">
-                    <div class="text-5xl mb-4 text-purple-400">🚀</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Unlock Advanced AI Workflows</h3>
-                    <p class="text-gray-300 leading-relaxed">Discover game-changing iCloud+ AI features and workflow automations to redefine your productivity across all Apple devices.</p>
-                </div>
-                <!-- Feature 2: Privacy Best Practices -->
-                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl transform hover:scale-105 transition duration-300 border border-gray-800 hover:border-emerald-600">
-                    <div class="text-5xl mb-4 text-emerald-400">🔒</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Master Privacy & Security</h3>
-                    <p class="text-gray-300 leading-relaxed">Navigate Apple's intelligent landscape with confidence. Implement robust privacy best practices and secure your cutting-edge AI integrations.</p>
-                </div>
-                <!-- Feature 3: Optimize Investment -->
-                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl transform hover:scale-105 transition duration-300 border border-gray-800 hover:border-yellow-600">
-                    <div class="text-5xl mb-4 text-yellow-400">📈</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Optimize Your Apple Investment</h3>
-                    <p class="text-gray-300 leading-relaxed">Ensure you extract maximum value from your iCloud+ subscription and leverage every nuanced AI enhancement Apple rolls out, boosting your ROI.</p>
-                </div>
-                <!-- Feature 4: Exclusive Newsletter -->
-                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl transform hover:scale-105 transition duration-300 border border-gray-800 hover:border-red-600">
-                    <div class="text-5xl mb-4 text-red-400">💡</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Exclusive Premium Newsletter</h3>
-                    <p class="text-gray-300 leading-relaxed">Stay relentlessly ahead with weekly expert analysis of Apple's AI ecosystem, curated tips, and early insights directly to your inbox.</p>
-                </div>
-                <!-- Feature 5: AI Tool Comparisons -->
-                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl transform hover:scale-105 transition duration-300 border border-gray-800 hover:border-blue-600">
-                    <div class="text-5xl mb-4 text-blue-400">🆚</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Strategic AI Tool Comparisons</h3>
-                    <p class="text-gray-300 leading-relaxed">Gain clarity on how Apple's AI capabilities compare to leading third-party tools and discover seamless integration strategies for maximum synergy.</p>
-                </div>
-                <!-- Feature 6: Optional Masterclass -->
-                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl transform hover:scale-105 transition duration-300 border border-gray-800 hover:border-orange-600">
-                    <div class="text-5xl mb-4 text-orange-400">🎓</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Optional Masterclass Deep Dive</h3>
-                    <p class="text-gray-300 leading-relaxed">Elevate your expertise with live, interactive masterclass sessions, direct Q&A with experts, and personalized guidance to master Apple AI.</p>
-                </div>
+                <a href="#get-access" class="inline-block bg-yellow-400 text-gray-900 font-bold text-lg md:text-xl py-4 px-8 rounded-full shadow-lg hover:bg-yellow-300 transform hover:scale-105 transition duration-300 ease-in-out uppercase tracking-wide">
+                    Secure Your Discount Now!
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 md:py-24 bg-gradient-to-br from-gray-900 to-gray-800">
-        <div class="container mx-auto px-4 max-w-xl text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 text-white">
-                Don't Be Left Behind! Join the Elite Waitlist.
+    <!-- Features Section -->
+    <section class="py-16 md:py-24 bg-[#161b22] text-[#c9d1d9] px-4">
+        <div class="container mx-auto max-w-7xl">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center text-white mb-12">
+                What You'll Unlock with The Painless Ink Handbook
             </h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
-                This is your exclusive invitation to be among the very first to access the "Ultimate Guide to Maximizing Your iCloud+ AI Features" and our premium insights newsletter. Due to high demand, spaces are strictly limited!
-            </p>
-            <form class="bg-gray-800 p-8 md:p-10 rounded-2xl shadow-2xl border-2 border-purple-600">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-200 text-lg font-semibold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" class="w-full px-5 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50 outline-none transition duration-200 placeholder-gray-400" placeholder="John Appleseed" required>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Consumer-Focused -->
+                <div class="bg-[#0d1117] p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300">
+                    <h3 class="text-2xl font-bold text-indigo-400 mb-4">✨ Master At-Home Microneedling</h3>
+                    <ul class="space-y-4 text-lg">
+                        <li class="flex items-start">
+                            <span class="text-green-400 mr-3 text-2xl">✔️</span>
+                            <span><strong>Safety First:</strong> Comprehensive protocols for using at-home kits without risk.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-400 mr-3 text-2xl">🎨</span>
+                            <span><strong>Design Excellence:</strong> Principles for choosing and applying stunning designs.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-400 mr-3 text-2xl">💧</span>
+                            <span><strong>Flawless Aftercare:</strong> Expert routines to ensure vibrant, long-lasting results.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-400 mr-3 text-2xl">🔧</span>
+                            <span><strong>Kit & Tool Guide:</strong> Selecting the best microneedle devices and pigments.</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-200 text-lg font-semibold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" class="w-full px-5 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50 outline-none transition duration-200 placeholder-gray-400" placeholder="your.apple.id@example.com" required>
+
+                <!-- Professional Insights -->
+                <div class="bg-[#0d1117] p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300">
+                    <h3 class="text-2xl font-bold text-purple-400 mb-4">🚀 Elevate Your Studio & Skills</h3>
+                    <ul class="space-y-4 text-lg">
+                        <li class="flex items-start">
+                            <span class="text-green-400 mr-3 text-2xl">💼</span>
+                            <span><strong>Studio Integration:</strong> Seamlessly incorporate microneedle tech into your existing services.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-400 mr-3 text-2xl">🎓</span>
+                            <span><strong>Advanced Training:</strong> Resources and best practices for professional-grade application.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-400 mr-3 text-2xl">📈</span>
+                            <span><strong>Marketing Mastery:</strong> Strategies to attract clients and position yourself as a pioneer.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-400 mr-3 text-2xl">⚖️</span>
+                            <span><strong>Regulatory Compliance:</strong> Navigating health and safety standards for professionals.</span>
+                        </li>
+                    </ul>
                 </div>
-                <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transform hover:scale-105 transition duration-300 ease-in-out uppercase tracking-wider">
-                    Join The Exclusive Waitlist Now!
-                </button>
-            </form>
-            <p class="mt-8 text-gray-400 text-sm">
-                We value your trust. Your information is secure and will only be used for updates regarding this launch.
+
+                <!-- General Benefits -->
+                <div class="bg-[#0d1117] p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300">
+                    <h3 class="text-2xl font-bold text-cyan-400 mb-4">💡 Why Microneedle Tattoos?</h3>
+                    <ul class="space-y-4 text-lg">
+                        <li class="flex items-start">
+                            <span class="text-green-400 mr-3 text-2xl">💖</span>
+                            <span><strong>Pain-Free Experience:</strong> Discover why this method is revolutionizing permanent ink.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-400 mr-3 text-2xl">⏳</span>
+                            <span><strong>Permanent Results:</strong> Achieve beautiful, lasting tattoos with cutting-edge science.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-400 mr-3 text-2xl">🌍</span>
+                            <span><strong>Global Trend:</strong> Stay ahead of the curve in the rapidly evolving tattoo industry.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-400 mr-3 text-2xl">🔓</span>
+                            <span><strong>Democratizing Ink:</strong> Learn how this technology makes tattoos more accessible.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="#get-access" class="inline-block bg-yellow-400 text-gray-900 font-bold text-lg md:text-xl py-4 px-8 rounded-full shadow-lg hover:bg-yellow-300 transform hover:scale-105 transition duration-300 ease-in-out uppercase tracking-wide">
+                    Claim Your Copy & Transform Your Ink Journey!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Access Form Section -->
+    <section id="get-access" class="py-16 md:py-24 bg-[#0d1117] text-[#c9d1d9] px-4">
+        <div class="container mx-auto max-w-2xl text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">
+                Don't Miss Out on This Revolution!
+            </h2>
+            <p class="text-xl text-gray-400 mb-10">
+                Secure your copy of The Painless Ink Handbook now at the <span class="text-yellow-300 font-bold">special launch price</span>.
+                This offer won't last forever!
             </p>
+
+            <div class="bg-[#161b22] p-8 md:p-10 rounded-xl shadow-2xl border border-gray-700">
+                <h3 class="text-3xl font-bold text-indigo-400 mb-6">
+                    Enroll in the Future of Tattooing Today
+                </h3>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="sr-only">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" required
+                               class="w-full px-5 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition-all duration-200 placeholder-gray-500">
+                    </div>
+                    <div>
+                        <label for="email" class="sr-only">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
+                               class="w-full px-5 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition-all duration-200 placeholder-gray-500">
+                    </div>
+                    <button type="submit"
+                            class="w-full bg-yellow-400 text-gray-900 font-bold text-xl py-4 rounded-lg shadow-lg hover:bg-yellow-300 transform hover:scale-105 transition duration-300 ease-in-out uppercase tracking-wide" id="buyButton">
+                        Get Instant Access for $99 (50% Off!)
+                    </button>
+                    <p class="text-sm text-gray-500 mt-4">
+                        Your information is 100% secure and will not be shared.
+                    </p>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm">
-        <div class="container mx-auto px-4">
-            &copy; 2023 Digital Education Authority. All rights reserved.
+    <footer class="bg-[#0d1117] py-8 text-center text-gray-500 border-t border-gray-800">
+        <div class="container mx-auto max-w-7xl px-4">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2 text-sm">
+                <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a> |
+                <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
     <!-- Countdown Timer JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 7 days from now for a "Limited Time" offer)
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the date we're counting down to (e.g., 7 days from now)
             const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Offer valid for 7 days from page load
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from today
+            countDownDate.setHours(23, 59, 59, 999); // End of the 7th day
 
             const x = setInterval(function() {
                 const now = new Date().getTime();
@@ -149,19 +289,35 @@
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+                const getElement = (id) => document.getElementById(id);
+
+                if (getElement("days")) getElement("days").innerHTML = String(days).padStart(2, '0');
+                if (getElement("hours")) getElement("hours").innerHTML = String(hours).padStart(2, '0');
+                if (getElement("minutes")) getElement("minutes").innerHTML = String(minutes).padStart(2, '0');
+                if (getElement("seconds")) getElement("seconds").innerHTML = String(seconds).padStart(2, '0');
+
                 if (distance < 0) {
                     clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "OFFER EXPIRED!";
-                    // Optionally disable the form or change CTA
-                    document.getElementById("waitlist-form").querySelector('button').disabled = true;
-                    document.getElementById("waitlist-form").querySelector('button').innerText = "Offer Expired";
-                    document.getElementById("waitlist-form").querySelector('button').classList.remove('hover:from-purple-700', 'hover:to-indigo-700', 'transform', 'hover:scale-105');
-                    document.getElementById("waitlist-form").querySelector('button').classList.add('bg-gray-600', 'cursor-not-allowed');
-                } else {
-                    document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                    document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                    document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                    document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                    const countdownElement = getElement("countdown");
+                    if (countdownElement) {
+                        countdownElement.innerHTML = "<p class='text-xl text-red-400 font-bold'>Offer Expired!</p>";
+                    }
+                    
+                    // Disable and update CTA buttons
+                    const ctaButtons = document.querySelectorAll('a[href="#get-access"], #buyButton');
+                    ctaButtons.forEach(button => {
+                        button.classList.add('opacity-50', 'cursor-not-allowed');
+                        button.classList.remove('hover:scale-105', 'hover:bg-yellow-300');
+                        button.removeAttribute('href');
+                        button.textContent = 'Offer Expired';
+                        button.disabled = true; // For form buttons
+                    });
+
+                    // Update price display if present in other elements
+                    const priceDisplays = document.querySelectorAll('.line-through, .font-extrabold.text-green-300');
+                    priceDisplays.forEach(el => el.style.display = 'none');
+                    const regularPriceDisplay = document.querySelector('.text-xl.md\\:text-2xl.text-yellow-300 span.text-red-400.line-through');
+                    if (regularPriceDisplay) regularPriceDisplay.textContent = '$199'; // Show original price
                 }
             }, 1000);
         });
