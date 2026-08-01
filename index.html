@@ -3,240 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geo-Truth: Navigating AI Deepfakes in Satellite and Spatial Data</title>
+    <title>AI Content Governance & Risk Mitigation Suite - Protect Your Brand</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for premium dark mode aesthetics */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .hero-bg {
+        /* Custom styles for dark overlay and hero text positioning */
+        .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             position: relative;
         }
         .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for contrast */
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for text readability */
         }
-        .gradient-text {
-            background: linear-gradient(90deg, #1D4ED8, #7C3AED); /* Blue to Purple gradient */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .hero-content {
+            position: relative;
+            z-index: 10;
         }
-        .btn-primary {
-            background-image: linear-gradient(90deg, #1D4ED8, #7C3AED);
-            transition: transform 0.2s ease-in-out;
+        /* For the countdown timer styling */
+        .countdown-item {
+            @apply flex flex-col items-center justify-center bg-gray-700 text-white rounded-lg p-3 text-2xl md:text-3xl font-bold;
+            min-width: 80px; /* Ensure consistent width for responsiveness */
         }
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
-        }
-        .form-input {
-            background-color: #2D3748; /* Darker input background */
-            border-color: #4A5568; /* Subtle border */
-        }
-        .form-input:focus {
-            border-color: #7C3AED;
-            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.4);
+        .countdown-label {
+            @apply text-sm md:text-base font-medium text-gray-300 mt-1;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-bg min-h-screen flex items-center justify-center text-center py-20 px-4">
+    <header class="hero-background min-h-screen flex items-center justify-center text-center py-20 px-4">
         <div class="hero-overlay"></div>
-        <div class="relative z-10 max-w-5xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 gradient-text">
-                Geo-Truth: Navigating AI Deepfakes in Satellite & Spatial Data
+        <div class="hero-content max-w-4xl mx-auto">
+            <p class="text-indigo-400 text-lg md:text-xl uppercase tracking-wider mb-3">The Future of Responsible AI is Here</p>
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-white">
+                Guard Your Brand. Govern Your AI. <br class="hidden sm:inline">Prevent Catastrophe.
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto">
-                The AI era is here. But with new tools like Google Earth AI, the threat of sophisticated deepfakes in geospatial information is skyrocketing. Don't fall victim to misinformation – secure your insights.
+            <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                In an era of generative AI, the risks of deepfakes, misinformation, and copyright infringement are skyrocketing.
+                <span class="font-semibold text-white">Remember Google Earth's AI deepfake fiasco?</span> Your brand could be next.
             </p>
-
-            <div class="bg-gray-800 bg-opacity-70 border border-gray-700 rounded-lg p-6 sm:p-8 mb-12 shadow-2xl">
-                <h2 class="text-2xl sm:text-3xl font-bold text-red-400 mb-4">
-                    Early Access Closes In:
-                </h2>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-6 text-gray-50">
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-5xl md:text-6xl font-extrabold" id="days">00</span>
-                        <span class="text-sm sm:text-base text-gray-400">Days</span>
-                    </div>
-                    <span class="text-3xl sm:text-5xl md:text-6xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-5xl md:text-6xl font-extrabold" id="hours">00</span>
-                        <span class="text-sm sm:text-base text-gray-400">Hours</span>
-                    </div>
-                    <span class="text-3xl sm:text-5xl md:text-6xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-5xl md:text-6xl font-extrabold" id="minutes">00</span>
-                        <span class="text-sm sm:text-base text-gray-400">Minutes</span>
-                    </div>
-                    <span class="text-3xl sm:text-5xl md:text-6xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-5xl md:text-6xl font-extrabold" id="seconds">00</span>
-                        <span class="text-sm sm:text-base text-gray-400">Seconds</span>
-                    </div>
-                </div>
-                <p class="text-md text-gray-400 mt-4">Don't miss out on exclusive launch offers and critical intelligence.</p>
-            </div>
-            
-            <a href="#waitlist" class="btn-primary inline-block px-12 py-4 text-xl font-bold rounded-full shadow-lg">
-                Join the Waitlist Now <i class="fas fa-arrow-right ml-3"></i>
+            <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105">
+                Secure Early Access & Protect Your Business
             </a>
-            <p class="mt-4 text-gray-400 text-sm">Limited spots for early bird access.</p>
         </div>
     </header>
 
-    <!-- Problem/Urgency Section -->
-    <section class="py-16 sm:py-20 md:py-24 px-4 bg-gray-900 border-b border-gray-800">
-        <div class="container mx-auto max-w-4xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold mb-8 text-gray-50">
-                The Geo-Misinformation Crisis is Here. Are You Prepared?
-            </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-6 leading-relaxed">
-                From fabricated satellite imagery influencing global markets to manipulated spatial data shaping public opinion, AI deepfakes are rapidly eroding trust in verifiable information. As the <strong class="text-red-400">BBC reports, "New Google Earth AI tool could fuel misinformation,"</strong> making it harder than ever to distinguish reality from sophisticated illusion.
-            </p>
-            <p class="text-lg sm:text-xl text-gray-300 leading-relaxed">
-                Journalists, researchers, and analysts are on the front lines, but without specialized knowledge, you're vulnerable. <span class="font-semibold text-purple-400">Geo-Truth equips you with the tools to fight back.</span>
-            </p>
-        </div>
-    </section>
-
     <!-- Features Section -->
-    <section class="py-16 sm:py-20 md:py-24 px-4 bg-gray-800 border-b border-gray-700">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-12 text-gray-50">
-                What You'll Gain from Geo-Truth
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-purple-500 transition duration-300 ease-in-out">
-                    <div class="text-5xl text-purple-500 mb-4"><i class="fas fa-shield-alt"></i></div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-50">Cutting-Edge Verification Techniques</h3>
-                    <p class="text-gray-300">Learn proprietary methods and tools to authenticate satellite images and spatial data, developed by leading experts.</p>
+    <section id="features" class="py-20 px-4 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-12 text-white">Unparalleled AI Content Governance</h2>
+            <p class="text-center text-xl md:text-2xl text-gray-300 mb-16 max-w-3xl mx-auto">
+                Our AI Content Governance & Risk Mitigation Suite provides the essential tools to ensure ethical AI usage, compliance, and brand safety.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Feature 1: Policy Enforcement -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-5xl mb-4">⚙️</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Policy Enforcement & Customization</h3>
+                    <p class="text-gray-300 text-lg">
+                        Define and enforce custom ethical AI usage policies specific to your organization's values and industry regulations. Set clear boundaries for content generation.
+                    </p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 ease-in-out">
-                    <div class="text-5xl text-blue-500 mb-4"><i class="fas fa-brain"></i></div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-50">Actionable AI Insights</h3>
-                    <p class="text-gray-300">Understand the latest AI models generating deepfakes, how they work, and their tell-tale signs, ensuring you stay ahead.</p>
+
+                <!-- Feature 2: Automated Content Scanning -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-5xl mb-4">👁️‍🗨️</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Automated Content Scanning & Flagging</h3>
+                    <p class="text-gray-300 text-lg">
+                        Our advanced AI scans all generated content in real-time, instantly identifying and flagging violations like deepfakes, hate speech, sensitive PII, or copyrighted material.
+                    </p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-green-500 transition duration-300 ease-in-out">
-                    <div class="text-5xl text-green-500 mb-4"><i class="fas fa-chart-line"></i></div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-50">Real-World Case Studies</h3>
-                    <p class="text-gray-300">Analyze current and historical deepfake incidents, learning directly from successes and failures in identification.</p>
+
+                <!-- Feature 3: Content Provenance Tracking -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-5xl mb-4">🔗</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Content Provenance Tracking</h3>
+                    <p class="text-gray-300 text-lg">
+                        Maintain a clear, immutable record of where content originated, who generated it, and what modifications were made. Essential for transparency and accountability.
+                    </p>
                 </div>
-                <!-- Feature 4 -->
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-yellow-500 transition duration-300 ease-in-out">
-                    <div class="text-5xl text-yellow-500 mb-4"><i class="fas fa-broadcast-tower"></i></div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-50">Weekly Intelligence Briefs</h3>
-                    <p class="text-gray-300">Receive a concise, actionable newsletter delivered straight to your inbox, keeping you updated on breaking trends.</p>
+
+                <!-- Feature 4: Comprehensive Audit Trails -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-5xl mb-4">📝</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Comprehensive Audit Trails</h3>
+                    <p class="text-gray-300 text-lg">
+                        Generate detailed, tamper-proof audit trails for all AI-generated content and policy enforcements, simplifying compliance reporting and internal investigations.
+                    </p>
                 </div>
-                <!-- Feature 5 -->
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-red-500 transition duration-300 ease-in-out">
-                    <div class="text-5xl text-red-500 mb-4"><i class="fas fa-user-secret"></i></div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-50">Protect Your Reputation</h3>
-                    <p class="text-gray-300">Safeguard your journalistic integrity, research credibility, and analytical precision in an age of pervasive deception.</p>
+
+                <!-- Feature 5: Brand Reputation Protection -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-5xl mb-4">🛡️</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Brand Reputation Protection</h3>
+                    <p class="text-gray-300 text-lg">
+                        Proactively prevent the creation and dissemination of damaging content that could harm your brand's image, legal standing, or public trust.
+                    </p>
                 </div>
-                <!-- Feature 6 -->
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-pink-500 transition duration-300 ease-in-out">
-                    <div class="text-5xl text-pink-500 mb-4"><i class="fas fa-tools"></i></div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-50">Exclusive Tool Access & Reviews</h3>
-                    <p class="text-gray-300">Get insights into, and sometimes access to, specialized tools and software designed for deepfake detection.</p>
+
+                <!-- Feature 6: Regulatory Compliance Assurance -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-5xl mb-4">⚖️</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Regulatory Compliance Assurance</h3>
+                    <p class="text-gray-300 text-lg">
+                        Stay ahead of evolving AI regulations and industry standards. Our platform helps you meet compliance requirements with ease and confidence.
+                    </p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-20 md:py-24 px-4 bg-gray-900">
-        <div class="container mx-auto max-w-2xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold mb-8 text-gray-50">
-                Join the Geo-Truth Waitlist
-            </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10">
-                Be among the first to receive critical intelligence and protect your work from the growing threat of AI deepfakes in geospatial data. Limited early bird offers will be available only to waitlist members.
+    <!-- Call to Action / Waitlist Form -->
+    <section id="waitlist" class="py-20 px-4 bg-gray-800">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">Limited Time Early Access Offer!</h2>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10">
+                Don't let unchecked AI risk your brand. Join our exclusive waitlist today and be among the first to deploy the most comprehensive AI content governance solution.
             </p>
 
-            <form action="#" method="POST" class="bg-gray-800 p-8 rounded-lg shadow-2xl border border-gray-700">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="form-input shadow appearance-none border rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:shadow-outline" required>
+            <!-- Countdown Timer -->
+            <div class="flex justify-center space-x-2 sm:space-x-4 mb-12" id="countdown">
+                <div class="countdown-item">
+                    <span id="days">00</span>
+                    <span class="countdown-label">Days</span>
                 </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="form-input shadow appearance-none border rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:shadow-outline" required>
+                <div class="countdown-item">
+                    <span id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="profession" class="block text-gray-300 text-sm font-bold mb-2">Your Profession</label>
-                    <select id="profession" name="profession"
-                            class="form-input shadow appearance-none border rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:shadow-outline" required>
-                        <option value="">Select your profession...</option>
-                        <option value="Journalist">Journalist</option>
-                        <option value="Researcher">Researcher</option>
-                        <option value="Analyst">Analyst</option>
-                        <option value="Policy Maker">Policy Maker</option>
-                        <option value="Other">Other</option>
-                    </select>
+                <div class="countdown-item">
+                    <span id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
                 </div>
-                <button type="submit" class="btn-primary w-full px-8 py-3 text-lg font-bold rounded-md shadow-md">
-                    Secure My Early Access <i class="fas fa-unlock-alt ml-3"></i>
+                <div class="countdown-item">
+                    <span id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+
+            <form class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-2xl space-y-6">
+                <div>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required
+                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white text-lg placeholder-gray-400">
+                </div>
+                <div>
+                    <input type="email" id="email" name="email" placeholder="Work Email" required
+                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white text-lg placeholder-gray-400">
+                </div>
+                <div>
+                    <input type="text" id="company" name="company" placeholder="Company Name" required
+                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white text-lg placeholder-gray-400">
+                </div>
+                <button type="submit"
+                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105">
+                    Join the Waitlist Now!
                 </button>
-                <p class="text-gray-500 text-xs mt-6">
-                    We respect your privacy. Your email will only be used for Geo-Truth updates and special offers.
+                <p class="text-gray-400 text-sm mt-4">
+                    We respect your privacy. Your information will not be shared.
                 </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-500 py-8 px-4 border-t border-gray-800">
-        <div class="container mx-auto text-center text-sm">
-            &copy; 2023 Geo-Truth. All rights reserved. | Powered by Digital Education Authority
+    <footer class="py-10 px-4 bg-gray-900 text-center text-gray-500 text-sm">
+        <div class="max-w-6xl mx-auto">
+            &copy; 2024 AI Content Governance Suite. All rights reserved.
+            <div class="mt-2 space-x-4">
+                <a href="#" class="hover:text-gray-300 transition-colors duration-200">Privacy Policy</a>
+                <a href="#" class="hover:text-gray-300 transition-colors duration-200">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
+    <!-- JavaScript for Countdown Timer -->
     <script>
-        // Countdown Timer Script
-        const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 30); // Set countdown for 30 days from now
-        // For testing, you can set a specific date like:
-        // const countdownDate = new Date("December 31, 2023 23:59:59").getTime();
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the target date for the countdown (e.g., 7 days from when the user visits the page)
+            const now = new Date();
+            const countDownDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 days from now
 
-        const x = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
+            const x = setInterval(function() {
+                const currentTime = new Date().getTime();
+                const distance = countDownDate.getTime() - currentTime;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = `<p class="text-xl text-red-400 font-semibold">Offer Expired!</p>`;
+                    return;
+                }
 
-            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "<span class='text-red-500 text-2xl'>Waitlist Closed!</span>";
-                document.querySelector('.btn-primary').innerHTML = "Waitlist Closed";
-                document.querySelector('.btn-primary').disabled = true;
-                document.querySelector('.btn-primary').classList.add('opacity-50', 'cursor-not-allowed');
-            }
-        }, 1000);
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+            }, 1000);
+        });
     </script>
+
 </body>
 </html>
