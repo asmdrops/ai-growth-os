@@ -1,281 +1,209 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TerraVision AI - Precision Geo-AI Visualization Studio</title>
-    <meta name="description" content="TerraVision AI is a Geo-AI Visualization Studio that empowers professionals to generate hyper-realistic or stylized transformations of real-world locations with validated, quality-controlled AI models. Combat 'AI slop' and ensure practical decision-making utility.">
+    <title>MacBook Pro Battery Health & Optimization Masterclass</title>
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class', // Enable dark mode based on 'dark' class on HTML tag
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#6366f1', // Indigo 500
-                        secondary: '#a78bfa', // Violet 400
-                        darkbg: '#1a1a2e', // Deep Space Blue / Dark Purple
-                        darkerbg: '#0f0e1a', // Even darker background
-                        textlight: '#e0e0e0', // Light Gray for main text
-                        textmuted: '#b0b0b0', // Gray for secondary text
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'], // Premium-feeling font
-                    },
-                    backgroundImage: {
-                        'hero-pattern': "url('https://source.unsplash.com/1600x900/?A,tech')",
-                    }
-                }
-            }
-        }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom scrollbar for dark mode aesthetic */
-        body::-webkit-scrollbar {
-            width: 8px;
+        /* Custom styles for dark mode and hero image */
+        body {
+            font-family: 'Inter', sans-serif; /* A modern font choice */
         }
-        body::-webkit-scrollbar-track {
-            background: #2a2a3f;
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?The,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
         }
-        body::-webkit-scrollbar-thumb {
-            background-color: #6366f1;
-            border-radius: 4px;
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for text contrast */
         }
-        html {
-            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+        /* Custom scrollbar for a premium feel */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* Dark track */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* Grey thumb */
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096; /* Lighter on hover */
         }
     </style>
 </head>
-<body class="dark bg-darkerbg text-textlight font-sans antialiased overflow-x-hidden">
-
-    <!-- Navbar -->
-    <nav class="fixed top-0 left-0 w-full z-50 bg-darkerbg bg-opacity-80 backdrop-blur-sm shadow-lg p-4">
-        <div class="max-w-screen-xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
-            <a href="#" class="flex items-center space-x-2">
-                <!-- Geo-AI Icon -->
-                <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21.25V2.75M4.75 12H19.25M7 17.75l-2.25-2.25M17 17.75l2.25-2.25M7 6.25l-2.25 2.25M17 6.25l2.25 2.25M12 1.5l-4.5 4.5M12 1.5l4.5 4.5M6 12l-4.5 4.5M6 12l4.5-4.5M18 12l4.5 4.5M18 12l-4.5-4.5"></path></svg>
-                <span class="text-2xl font-extrabold text-textlight">TerraVision AI</span>
-            </a>
-            <a href="#waitlist" class="bg-primary hover:bg-secondary text-white font-medium py-2 px-5 rounded-full transition duration-300 ease-in-out text-sm md:text-base">
-                Join Waitlist
-            </a>
-        </div>
-    </nav>
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative h-screen flex items-center justify-center text-center overflow-hidden bg-darkerbg">
-        <!-- Hero Image with overlay -->
-        <div class="absolute inset-0 bg-hero-pattern bg-cover bg-center filter brightness-75"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-darkerbg via-darkerbg/60 to-transparent"></div>
-        
-        <div class="relative z-10 max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 text-textlight drop-shadow-lg">
-                <span class="text-primary block sm:inline">Transform Reality</span> with Precision Geo-AI Visualizations.
+    <header class="hero-background min-h-screen flex items-center justify-center text-center py-16 px-4 md:px-8 lg:px-16 relative">
+        <div class="hero-overlay absolute inset-0 z-0"></div>
+        <div class="relative z-10 max-w-4xl mx-auto space-y-8">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+                Unlock Unprecedented Battery Life for Your MacBook Pro 🚀
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-textmuted mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
-                Combat 'AI Slop'. Our Geo-AI Studio delivers validated, hyper-realistic, or stylized transformations of real-world locations for professional decision-making.
+            <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
+                Tired of your MacBook Pro dying too soon? Discover the proven secrets to extended battery health, peak performance, and lasting power.
             </p>
-            <a href="#waitlist" class="inline-block bg-primary hover:bg-secondary text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
-                Get Early Access & Learn More
+
+            <!-- Limited Time Countdown -->
+            <div class="bg-gradient-to-r from-purple-600 to-blue-600 p-6 rounded-lg shadow-2xl mx-auto max-w-md md:max-w-lg lg:max-w-xl">
+                <p class="text-lg md:text-xl font-semibold uppercase tracking-wide mb-3 text-white">Limited Time Offer! Secure Your Spot In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 md:space-x-6 text-white text-3xl md:text-4xl lg:text-5xl font-bold">
+                    <div class="flex flex-col items-center">
+                        <span id="days">00</span>
+                        <span class="text-sm md:text-base font-medium text-gray-200 uppercase mt-1">Days</span>
+                    </div>
+                    <span class="text-3xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours">00</span>
+                        <span class="text-sm md:text-base font-medium text-gray-200 uppercase mt-1">Hours</span>
+                    </div>
+                    <span class="text-3xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes">00</span>
+                        <span class="text-sm md:text-base font-medium text-gray-200 uppercase mt-1">Minutes</span>
+                    </div>
+                    <span class="text-3xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds">00</span>
+                        <span class="text-sm md:text-base font-medium text-gray-200 uppercase mt-1">Seconds</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#waitlist-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Join The Waitlist & Get Early Bird Access! ✨
             </a>
         </div>
     </header>
 
-    <main class="relative z-20">
-        <!-- Problem / Solution Section -->
-        <section class="py-16 md:py-24 bg-darkerbg text-center px-4 sm:px-6 lg:px-8">
-            <div class="max-w-screen-lg mx-auto">
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-textlight mb-6">
-                    Tired of AI Visualizations Lacking Integrity?
-                </h2>
-                <p class="text-lg sm:text-xl text-textmuted leading-relaxed mb-12">
-                    In an era where AI can quickly generate impressive visuals, the challenge lies in its reliability. From "AI Slop" to questionable data sources, current tools often fall short for professional applications.
-                    <span class="block mt-4 italic text-sm">(A problem highlighted by recent incidents, like Google Earth's brief venture into unreliable AI.)</span>
+    <!-- Features Section -->
+    <section id="features" class="py-16 px-4 md:px-8 lg:px-16 bg-gray-900 text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-12 text-white">
+            What You'll Get Inside The Masterclass 🛠️
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+
+            <!-- Feature 1: Detailed E-book -->
+            <div class="bg-gray-800 rounded-lg p-8 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                <div class="text-5xl mb-4 text-purple-400">📚</div>
+                <h3 class="text-2xl font-bold mb-3 text-white">Advanced Optimization E-book</h3>
+                <p class="text-gray-300">
+                    Dive deep into every setting, preference, and hidden trick to squeeze maximum life out of your MacBook Pro's battery.
                 </p>
-                <p class="text-xl sm:text-2xl font-semibold text-primary mb-8">
-                    TerraVision AI redefines geospatial visualization by prioritizing precision, validation, and actionable insights.
+            </div>
+
+            <!-- Feature 2: Video Tutorials -->
+            <div class="bg-gray-800 rounded-lg p-8 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                <div class="text-5xl mb-4 text-red-400">🎬</div>
+                <h3 class="text-2xl font-bold mb-3 text-white">Step-by-Step Video Guides</h3>
+                <p class="text-gray-300">
+                    Follow along with clear, concise video demonstrations for every optimization technique and maintenance routine.
                 </p>
-                <div class="flex flex-col md:flex-row justify-center gap-8 mt-12">
-                    <div class="bg-darkbg p-6 rounded-lg shadow-xl border border-gray-700">
-                        <h3 class="text-2xl font-semibold text-textlight mb-3">The Problem: Unreliable AI</h3>
-                        <p class="text-textmuted">Generic AI models often lack geospatial accuracy, data integrity, and clear source attribution, leading to misleading or unusable visualizations for critical decisions.</p>
-                    </div>
-                    <div class="bg-darkbg p-6 rounded-lg shadow-xl border border-gray-700">
-                        <h3 class="text-2xl font-semibold text-textlight mb-3">Our Solution: Validated Geo-AI</h3>
-                        <p class="text-textmuted">TerraVision AI utilizes validated, pre-trained models, ensuring data integrity, source attribution, and quality control for visualizations you can trust.</p>
-                    </div>
-                </div>
             </div>
-        </section>
 
-        <!-- Features Section -->
-        <section class="py-16 md:py-24 bg-darkbg px-4 sm:px-6 lg:px-8">
-            <div class="max-w-screen-xl mx-auto">
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-textlight mb-16">
-                    Unleash the Power of Precise Geo-AI
-                </h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <!-- Feature 1: Validated AI Models -->
-                    <div class="bg-darkerbg p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition-all duration-300">
-                        <div class="flex items-center justify-center w-16 h-16 bg-primary/20 rounded-full mb-6 mx-auto">
-                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.12 2-2.5 2S4 20.105 4 19s1.12-2 2.5-2C7.88 17 9 17.895 9 19zm0 0l-5-2.5M18.5 13C17.12 13 16 12.105 16 11s1.12-2 2.5-2 2.5 1.105 2.5 2-1.12 2-2.5 2z"></path></svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-textlight mb-4 text-center">Validated AI Models</h3>
-                        <p class="text-textmuted text-center leading-relaxed">
-                            Apply pre-trained, professionally validated AI models ensuring accuracy and reliability for critical decision-making across urban planning, environmental assessment, and more.
-                        </p>
-                    </div>
-                    <!-- Feature 2: Hyper-Realistic or Stylized -->
-                    <div class="bg-darkerbg p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition-all duration-300">
-                        <div class="flex items-center justify-center w-16 h-16 bg-primary/20 rounded-full mb-6 mx-auto">
-                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h.01M6 16h.01M12 10h.01M4 20h.01M4 12h.01M10 4h.01M10 20h.01M16 4h.01M16 20h.01"></path></svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-textlight mb-4 text-center">Hyper-Realistic or Stylized</h3>
-                        <p class="text-textmuted text-center leading-relaxed">
-                            Generate breathtaking visualizations, from photorealistic urban redesigns to artistic historical reconstructions, tailored to your project's aesthetic and functional needs.
-                        </p>
-                    </div>
-                    <!-- Feature 3: Real-World Location Input -->
-                    <div class="bg-darkerbg p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition-all duration-300">
-                        <div class="flex items-center justify-center w-16 h-16 bg-primary/20 rounded-full mb-6 mx-auto">
-                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-textlight mb-4 text-center">Real-World Location Input</h3>
-                        <p class="text-textmuted text-center leading-relaxed">
-                            Upload your geospatial data or select locations directly to instantly visualize scenarios like sustainable architecture, flood impact, or historical site transformations.
-                        </p>
-                    </div>
-                    <!-- Feature 4: Data Integrity & Attribution -->
-                    <div class="bg-darkerbg p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition-all duration-300">
-                        <div class="flex items-center justify-center w-16 h-16 bg-primary/20 rounded-full mb-6 mx-auto">
-                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.01 12.01 0 003 12c0 2.685.927 5.143 2.43 7.039M12 21a9 9 0 009-9M3 12a9 9 0 019-9"></path></svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-textlight mb-4 text-center">Data Integrity & Attribution</h3>
-                        <p class="text-textmuted text-center leading-relaxed">
-                            Every output comes with clear source attribution and a robust data integrity framework, preventing 'AI slop' and ensuring transparent, trustworthy results.
-                        </p>
-                    </div>
-                    <!-- Feature 5: Professional Grade Output -->
-                    <div class="bg-darkerbg p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition-all duration-300">
-                        <div class="flex items-center justify-center w-16 h-16 bg-primary/20 rounded-full mb-6 mx-auto">
-                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m7 0V5a2 2 0 012-2h2a2 2 0 012 2v6m-6 0V5a2 2 0 00-2-2H7a2 2 0 00-2 2v6"></path></svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-textlight mb-4 text-center">Professional Grade Output</h3>
-                        <p class="text-textmuted text-center leading-relaxed">
-                            Generate high-resolution visualizations optimized for presentations, reports, and public engagement, designed for practical, decision-making utility.
-                        </p>
-                    </div>
-                    <!-- Feature 6: Seamless Collaboration (Future Feature) -->
-                    <div class="bg-darkerbg p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition-all duration-300">
-                        <div class="flex items-center justify-center w-16 h-16 bg-primary/20 rounded-full mb-6 mx-auto">
-                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-textlight mb-4 text-center">Seamless Collaboration</h3>
-                        <p class="text-textmuted text-center leading-relaxed">
-                            (Future feature) Share projects and collaborate with your team, streamlining workflows for urban planners, architects, and environmental consultants.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Call to Action / Waitlist Form -->
-        <section id="waitlist" class="py-16 md:py-24 bg-darkerbg text-center px-4 sm:px-6 lg:px-8">
-            <div class="max-w-xl mx-auto bg-darkbg p-8 md:p-12 rounded-2xl shadow-2xl border border-gray-700">
-                <h2 class="text-3xl sm:text-4xl font-bold text-textlight mb-6">
-                    Be Among the First. Join the Waitlist!
-                </h2>
-                <p class="text-lg text-textmuted leading-relaxed mb-8">
-                    Get exclusive early access, product updates, and special launch offers. Don't miss out!
+            <!-- Feature 3: Daily Checklist -->
+            <div class="bg-gray-800 rounded-lg p-8 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                <div class="text-5xl mb-4 text-green-400">✅</div>
+                <h3 class="text-2xl font-bold mb-3 text-white">Downloadable Battery Care Checklist</h3>
+                <p class="text-gray-300">
+                    Never miss a beat with our actionable daily, weekly, and monthly checklist to ensure peak battery health.
                 </p>
-
-                <!-- Limited Time Countdown (Performance Strategy Applied) -->
-                <div class="bg-gradient-to-r from-primary to-secondary p-4 rounded-lg mb-8 shadow-inner flex flex-col items-center">
-                    <p class="text-white text-xl md:text-2xl font-bold mb-2">Limited-Time Early Access Window Ends In:</p>
-                    <div id="countdown" class="flex space-x-4 text-white">
-                        <div class="flex flex-col items-center">
-                            <span id="days" class="text-4xl md:text-5xl font-extrabold">00</span>
-                            <span class="text-sm">Days</span>
-                        </div>
-                        <div class="text-4xl md:text-5xl font-extrabold">:</div>
-                        <div class="flex flex-col items-center">
-                            <span id="hours" class="text-4xl md:text-5xl font-extrabold">00</span>
-                            <span class="text-sm">Hours</span>
-                        </div>
-                        <div class="text-4xl md:text-5xl font-extrabold">:</div>
-                        <div class="flex flex-col items-center">
-                            <span id="minutes" class="text-4xl md:text-5xl font-extrabold">00</span>
-                            <span class="text-sm">Minutes</span>
-                        </div>
-                        <div class="text-4xl md:text-5xl font-extrabold">:</div>
-                        <div class="flex flex-col items-center">
-                            <span id="seconds" class="text-4xl md:text-5xl font-extrabold">00</span>
-                            <span class="text-sm">Seconds</span>
-                        </div>
-                    </div>
-                </div>
-
-                <form class="space-y-6">
-                    <div>
-                        <input type="text" id="name" name="name" placeholder="Your Name (Optional)" class="w-full p-4 rounded-lg bg-darkerbg border border-gray-600 text-textlight placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-transparent transition duration-200 text-lg">
-                    </div>
-                    <div>
-                        <input type="email" id="email" name="email" placeholder="Your Professional Email" required class="w-full p-4 rounded-lg bg-darkerbg border border-gray-600 text-textlight placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-transparent transition duration-200 text-lg">
-                    </div>
-                    <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-bold py-4 px-6 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                        Secure Your Spot Now!
-                    </button>
-                    <p class="text-textmuted text-sm mt-4">
-                        We respect your privacy. Your email will only be used for TerraVision AI updates.
-                    </p>
-                </form>
             </div>
-        </section>
-    </main>
+
+            <!-- Feature 4: Curated Software & Accessories -->
+            <div class="bg-gray-800 rounded-lg p-8 shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                <div class="text-5xl mb-4 text-yellow-400">🔗</div>
+                <h3 class="text-2xl font-bold mb-3 text-white">Recommended Tools & Affiliates</h3>
+                <p class="text-gray-300">
+                    Access a vetted list of third-party software and essential accessories to boost your battery longevity and performance.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Call to Action / Waitlist Form Section -->
+    <section id="waitlist-form" class="py-20 px-4 md:px-8 lg:px-16 bg-gray-800 text-center">
+        <div class="max-w-2xl mx-auto bg-gray-900 p-8 md:p-12 rounded-lg shadow-2xl border border-gray-700">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-white">
+                Don't Let Your MacBook Pro Fade Away! ⏳
+            </h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-8">
+                Join our exclusive waitlist now to be the first to know when the Masterclass launches and secure your early bird discount. Spots are limited!
+            </p>
+
+            <form class="space-y-6">
+                <div>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required
+                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200">
+                </div>
+                <div>
+                    <input type="email" id="email" name="email" placeholder="Your Best Email" required
+                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200">
+                </div>
+                <button type="submit"
+                        class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                    Get Early Access & Notifications! 🚀
+                </button>
+            </form>
+            <p class="text-sm text-gray-500 mt-6">
+                We respect your privacy. Your email will only be used for masterclass updates.
+            </p>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-darkerbg py-10 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
-        <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center text-textmuted text-sm space-y-4 md:space-y-0">
-            <p>&copy; 2023 TerraVision AI. All rights reserved.</p>
-            <div class="flex space-x-6">
-                <a href="#" class="hover:text-primary transition duration-200">Privacy Policy</a>
-                <a href="#" class="hover:text-primary transition duration-200">Terms of Service</a>
-                <a href="#" class="hover:text-primary transition duration-200">Contact Us</a>
-            </div>
-        </div>
+    <footer class="bg-gray-900 py-8 px-4 md:px-8 lg:px-16 text-center text-gray-500">
+        <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+        <p class="mt-2 text-sm">
+            <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-200">Privacy Policy</a> |
+            <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-200">Terms of Service</a>
+        </p>
     </footer>
 
-    <!-- Countdown Script -->
+    <!-- Countdown Timer JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        function setupCountdown() {
             // Set the date we're counting down to (e.g., 7 days from now)
             const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from today
 
+            // Update the count down every 1 second
             const x = setInterval(function() {
+                // Get today's date and time
                 const now = new Date().getTime();
+
+                // Find the distance between now and the count down date
                 const distance = countDownDate.getTime() - now;
 
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<p class='text-xl md:text-2xl font-bold'>Early Access Closed!</p>";
-                    return;
-                }
-
+                // Time calculations for days, hours, minutes and seconds
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Display the result in the corresponding elements, ensure two digits
+                // Display the result in the corresponding elements
                 document.getElementById("days").innerHTML = String(days).padStart(2, '0');
                 document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
                 document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
                 document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+                // If the count down is finished, write some text
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<p class='text-xl md:text-2xl text-red-400'>Offer Expired! Join the regular waitlist.</p>";
+                }
             }, 1000);
-        });
+        }
+
+        document.addEventListener('DOMContentLoaded', setupCountdown);
     </script>
+
 </body>
 </html>
