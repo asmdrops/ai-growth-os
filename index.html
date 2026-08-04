@@ -3,192 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FluidBoost - Make Windows 11 Suck Less on Your PC</title>
+    <title>Clipboard Catalyst Pro - Unlock Seamless Cross-Platform Workflow</title>
+    <meta name="description" content="Clipboard Catalyst Pro: Advanced, encrypted, intelligent clipboard manager for iPhone & Windows. Unlimited history, AI Smart Paste, secure sync, productivity integrations.">
+    <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Favicon (SVG Data URI) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M18 6v-3c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v3h-2v11c0 1.11.89 2 2 2h8c1.11 0 2-.89 2-2v-11h-2zM10 4h4v2h-4v-2zM4 9h6v9h-6c-1.11 0-2-.89-2-2v-5c0-1.11.89-2 2-2z'%3E%3C/path%3E%3C/svg%3E" type="image/svg+xml">
+    
+    <!-- Custom styles for dark mode, premium feel, and fluid typography -->
     <style>
-        /* Custom styles for dark mode and hero image overlay */
         body {
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            background-color: #0f172a; /* Tailwind slate-900 */
-            color: #e2e8f0; /* Tailwind slate-200 */
+            font-family: 'Inter', sans-serif; /* A modern font choice for a premium feel */
         }
-        .hero-bg {
-            background-image: url('https://source.unsplash.com/1600x900/?Develop,tech');
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             position: relative;
         }
-        .hero-bg::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for better text contrast */
-            z-index: 1;
+        .gradient-overlay {
+            background: linear-gradient(to bottom, rgba(17, 24, 39, 0.7) 0%, rgba(17, 24, 39, 0.95) 100%);
         }
-        .hero-content {
-            position: relative;
-            z-index: 2;
+        /* Fluid typography: auto-resize text based on viewport width */
+        .fluid-text-xl {
+            font-size: clamp(2.5rem, 6vw, 4.5rem); /* Min 2.5rem, preferred 6vw, max 4.5rem */
+            line-height: 1.1;
         }
-        /* Gradient text utility */
-        .text-gradient {
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
+        .fluid-text-lg {
+            font-size: clamp(1.25rem, 2.5vw, 2rem);
+            line-height: 1.25;
+        }
+        .fluid-text-base {
+            font-size: clamp(1rem, 1.5vw, 1.125rem);
+            line-height: 1.5;
+        }
+        /* Animation for button hover */
+        .btn-hover-effect:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-bg min-h-screen flex items-center justify-center text-center">
-        <div class="hero-content px-4 py-16 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-gradient bg-gradient-to-r from-purple-400 to-pink-600">
-                Finally, Make Windows 11 Suck Less on Your PC.
+    <section class="hero-background h-screen min-h-[600px] flex items-center justify-center text-center">
+        <div class="gradient-overlay absolute inset-0"></div>
+        <div class="relative z-10 p-6 max-w-5xl mx-auto">
+            <h1 class="fluid-text-xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 mb-6 drop-shadow-lg">
+                The Future of Flow: Seamless iPhone & Windows Clipboard, Now Possible.
             </h1>
-            <p class="text-xl sm:text-2xl lg:text-3xl text-gray-200 mb-8 max-w-2xl mx-auto">
-                Unleash blazing-fast responsiveness and peak productivity, even on 8GB machines.
+            <p class="fluid-text-lg text-gray-200 mb-8 font-light max-w-3xl mx-auto">
+                Leveraging the latest cross-platform innovations, Clipboard Catalyst Pro is your advanced, encrypted, and intelligent clipboard manager designed for peak productivity.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-10">
-                <a href="#waitlist" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-lg">
-                    Join Waitlist & Get Early Access!
-                </a>
-            </div>
-
-            <!-- Limited Time Countdown -->
-            <div class="countdown-container bg-gray-800 bg-opacity-70 border border-purple-500 rounded-lg p-6 max-w-md mx-auto shadow-xl">
-                <p class="text-lg font-semibold text-purple-300 mb-3">Limited Spots & Discount Available!</p>
-                <div class="flex justify-center items-center space-x-4 text-purple-200">
-                    <div class="flex flex-col items-center">
-                        <span id="countdown-days" class="text-4xl font-bold">00</span>
-                        <span class="text-sm uppercase">Days</span>
+            
+            <!-- LIMITED TIME OFFER & Countdown -->
+            <div class="bg-gradient-to-r from-red-800 to-pink-800 p-5 md:p-6 rounded-xl shadow-2xl mb-10 border-2 border-red-600 animate-pulse-fade">
+                <p class="text-xl md:text-3xl font-bold uppercase tracking-wide mb-3 text-yellow-300">
+                    ⚡ LIMITED TIME FOUNDING MEMBER ACCESS ⚡
+                </p>
+                <p class="text-lg md:text-xl text-white mb-4">
+                    Secure your spot today and unlock exclusive launch benefits + special lifetime pricing!
+                </p>
+                <div id="countdown" class="flex justify-center items-center space-x-3 md:space-x-6 text-white font-mono text-3xl md:text-6xl font-extrabold">
+                    <!-- Placeholder for JavaScript-driven Countdown Timer (JS not included as per output requirements) -->
+                    <div class="block bg-gray-900 bg-opacity-70 p-3 md:p-4 rounded-lg shadow-inner border border-gray-700">
+                        <span id="days">07</span><span class="block text-sm md:text-base font-normal mt-1">Days</span>
                     </div>
-                    <span class="text-4xl font-bold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="countdown-hours" class="text-4xl font-bold">00</span>
-                        <span class="text-sm uppercase">Hours</span>
+                    <div class="block bg-gray-900 bg-opacity-70 p-3 md:p-4 rounded-lg shadow-inner border border-gray-700">
+                        <span id="hours">23</span><span class="block text-sm md:text-base font-normal mt-1">Hours</span>
                     </div>
-                    <span class="text-4xl font-bold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="countdown-minutes" class="text-4xl font-bold">00</span>
-                        <span class="text-sm uppercase">Minutes</span>
+                    <div class="block bg-gray-900 bg-opacity-70 p-3 md:p-4 rounded-lg shadow-inner border border-gray-700">
+                        <span id="minutes">59</span><span class="block text-sm md:text-base font-normal mt-1">Mins</span>
                     </div>
-                    <span class="text-4xl font-bold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="countdown-seconds" class="text-4xl font-bold">00</span>
-                        <span class="text-sm uppercase">Seconds</span>
+                    <div class="block bg-gray-900 bg-opacity-70 p-3 md:p-4 rounded-lg shadow-inner border border-gray-700">
+                        <span id="seconds">59</span><span class="block text-sm md:text-base font-normal mt-1">Secs</span>
                     </div>
                 </div>
-                <p class="text-sm mt-4 text-gray-400">Secure your exclusive early bird discount before this offer expires!</p>
+                <p class="text-sm md:text-base text-gray-200 mt-3">Waitlist for this exclusive offer closes soon!</p>
             </div>
+
+            <a href="#waitlist-form" class="inline-block bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-bold py-4 px-12 rounded-full text-lg md:text-xl shadow-xl transform transition duration-300 btn-hover-effect">
+                Join Waitlist & Get Early Access!
+            </a>
+            <p class="text-sm text-gray-300 mt-4">No credit card required. Cancel anytime after launch.</p>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900 text-center">
-        <div class="max-w-screen-xl mx-auto px-6">
-            <h2 class="text-4xl sm:text-5xl font-extrabold mb-12 text-gradient bg-gradient-to-r from-pink-500 to-red-500">
-                Reclaim Your PC's Peak Performance with FluidBoost
+    <section id="features" class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-screen-xl">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-center mb-16 text-gray-50 leading-tight">
+                Supercharge Your Workflow. Beyond Copy & Paste.
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-16 max-w-3xl mx-auto">
-                FluidBoost is the essential subscription-based tool for Windows 11, designed to intelligently optimize, debloat, and accelerate your system without complex settings or technical know-how.
+            <p class="text-xl md:text-2xl text-center text-gray-300 mb-16 max-w-3xl mx-auto fluid-text-lg">
+                Clipboard Catalyst Pro isn't just a clipboard. It's an intelligent content hub designed to integrate seamlessly into the demanding workflows of professionals and content creators.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-                <!-- Feature 1: Smart Resource Monitoring -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-5xl mb-6">⚙️</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Proactive Monitoring</h3>
-                    <p class="text-gray-300">FluidBoost intelligently monitors your system in the background, identifying resource hogs before they can slow you down.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-102 transition duration-300 hover:shadow-2xl">
+                    <div class="text-purple-400 text-5xl mb-6">📝</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Unlimited, Searchable History</h3>
+                    <p class="text-gray-300 fluid-text-base">Never lose a crucial snippet again. Access an infinite, encrypted history of copied items, instantly searchable across both iPhone and Windows.</p>
                 </div>
-                <!-- Feature 2: One-Click Optimization -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-5xl mb-6">⚡</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">One-Click Optimization</h3>
-                    <p class="text-gray-300">Instantly switch between 'Performance Mode' for intense productivity or 'Eco Mode' for minimal background usage. Optimized for your needs.</p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-102 transition duration-300 hover:shadow-2xl">
+                    <div class="text-pink-400 text-5xl mb-6">🖼️</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Rich Media & Files Support</h3>
+                    <p class="text-gray-300 fluid-text-base">Copy and paste more than just text. Images, files, and perfectly formatted rich text move effortlessly between all your connected devices.</p>
                 </div>
-                <!-- Feature 3: Intelligent Debloating -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-5xl mb-6">🛡️</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Intelligent Debloating</h3>
-                    <p class="text-gray-300">Automatically identifies and disables non-essential background processes and services, reclaiming valuable RAM and CPU.</p>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-102 transition duration-300 hover:shadow-2xl">
+                    <div class="text-blue-400 text-5xl mb-6">🧠</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">'Smart Paste' with AI</h3>
+                    <p class="text-gray-300 fluid-text-base">Revolutionize pasting. Our AI intelligently re-formats, summarizes, or expands copied content to fit any context, saving you hours of manual adjustments.</p>
                 </div>
-                <!-- Feature 4: Intuitive Dashboard -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-5xl mb-6">✨</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Intuitive Control</h3>
-                    <p class="text-gray-300">Easily debloat Windows 11 settings with our user-friendly dashboard. Full control, zero complexity.</p>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-102 transition duration-300 hover:shadow-2xl">
+                    <div class="text-green-400 text-5xl mb-6">🔗</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Seamless Productivity Integrations</h3>
+                    <p class="text-gray-300 fluid-text-base">Connect directly with your essential apps like Notion, Obsidian, and Salesforce, streamlining your data flow and eliminating friction.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-102 transition duration-300 hover:shadow-2xl">
+                    <div class="text-yellow-400 text-5xl mb-6">🔒</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Secure Cloud Sync & Encryption</h3>
+                    <p class="text-gray-300 fluid-text-base">Your data, your privacy. Enjoy end-to-end encrypted cloud synchronization, ensuring your sensitive information stays private and instantly accessible.</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-102 transition duration-300 hover:shadow-2xl">
+                    <div class="text-red-400 text-5xl mb-6">⚙️</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Custom Automation Rules</h3>
+                    <p class="text-gray-300 fluid-text-base">Define intelligent rules based on clipboard content to automate repetitive tasks, trigger specific actions, or organize information effortlessly.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gray-800">
-        <div class="max-w-xl mx-auto px-6 text-center">
-            <h2 class="text-4xl sm:text-5xl font-extrabold mb-8 text-gradient bg-gradient-to-r from-green-400 to-blue-500">
-                Don't Let Your PC Hold You Back.
+    <section id="waitlist-form" class="py-20 md:py-32 bg-gradient-to-br from-gray-900 to-gray-800">
+        <div class="container mx-auto px-4 max-w-2xl text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+                Ready for a Smarter Clipboard?
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10">
-                Join our exclusive waitlist for FluidBoost and be among the first to experience a truly optimized Windows 11. Limited spots available for early bird discounts!
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-xl mx-auto fluid-text-lg">
+                The future of cross-platform productivity is here. Join our exclusive waitlist for Clipboard Catalyst Pro and secure early bird pricing with foundational access.
             </p>
-
-            <form action="#" method="POST" class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700">
-                <div class="mb-6">
-                    <label for="name" class="block text-left text-sm font-medium text-gray-400 mb-2">Your Name (Optional)</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200">
+            
+            <form class="bg-gray-800 p-8 md:p-10 rounded-xl shadow-2xl border border-gray-700">
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-300 text-lg font-semibold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required 
+                           class="w-full p-4 rounded-lg bg-gray-700 text-white border border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg transition duration-200">
                 </div>
-                <div class="mb-8">
-                    <label for="email" class="block text-left text-sm font-medium text-gray-400 mb-2">Your Email <span class="text-red-500">*</span></label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" required class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200">
+                <div class="mb-8 text-left">
+                    <label for="use_case" class="block text-gray-300 text-lg font-semibold mb-2">How do you primarily use your clipboard?</label>
+                    <select id="use_case" name="use_case" 
+                            class="w-full p-4 rounded-lg bg-gray-700 text-white border border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg transition duration-200 appearance-none bg-no-repeat bg-right-center pr-10"
+                            style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 20%27 fill=%27%23a0aec0%27%3E%3Cpath fill-rule=%27evenodd%27 d=%27M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z%27 clip-rule=%27evenodd%27/%3E%3C/svg%3E');">
+                        <option value="">Select an option</option>
+                        <option value="content_creator">Content Creation & Marketing</option>
+                        <option value="developer">Software Development & Coding</option>
+                        <option value="data_analyst">Data Analysis & Research</option>
+                        <option value="writer">Writing & Editing</option>
+                        <option value="project_manager">Project Management & Admin</option>
+                        <option value="other_pro">Other Professional Use</option>
+                    </select>
                 </div>
-                <button type="submit" class="w-full bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-lg">
-                    Get Early Access & Discount!
+                <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-bold py-4 px-8 rounded-full text-xl shadow-xl transform transition duration-300 btn-hover-effect">
+                    Join the Priority Waitlist Now!
                 </button>
-                <p class="text-xs text-gray-400 mt-4">We respect your privacy. No spam, ever.</p>
+                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, just valuable updates and early access notifications.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 text-center text-gray-500 text-sm">
-        <div class="max-w-screen-xl mx-auto px-6">
-            <p>&copy; 2023 FluidBoost. All rights reserved.</p>
-            <p class="mt-2">Made with ⚡ for a faster Windows 11.</p>
+    <footer class="bg-gray-900 py-10 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-gray-500">
+            <p>&copy; 2023 Clipboard Catalyst Pro. All rights reserved.</p>
+            <div class="mt-4 space-x-4 text-sm md:text-base">
+                <a href="#" class="hover:text-white transition duration-200">Privacy Policy</a>
+                <span class="text-gray-600">|</span>
+                <a href="#" class="hover:text-white transition duration-200">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the date we're counting down to: 7 days, 12 hours, 30 minutes, 45 seconds from now
-            const now = new Date();
-            const countDownDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000) + (12 * 60 * 60 * 1000) + (30 * 60 * 1000) + (45 * 1000));
+    <!--
+        NOTE: JavaScript for the countdown timer is omitted as per the "Return ONLY raw HTML" requirement.
+        In a live deployment, a script would update the 'days', 'hours', 'minutes', 'seconds' span elements dynamically.
+        Example (would be in a <script> tag, not included in final output):
+        <script>
+            function startCountdown() {
+                const countdownDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000); // 7 days from now, for demonstration
 
-            const x = setInterval(function() {
-                const current = new Date().getTime();
-                const distance = countDownDate.getTime() - current;
+                const x = setInterval(function() {
+                    const now = new Date().getTime();
+                    const distance = countdownDate - now;
 
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.querySelector('.countdown-container').innerHTML = "<p class='text-red-500 font-bold text-center'>Offer Expired! But you can still join the waitlist below.</p>";
-                    return;
-                }
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                document.getElementById("countdown-days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("countdown-hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("countdown-minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("countdown-seconds").innerHTML = String(seconds).padStart(2, '0');
-            }, 1000);
-        });
-    </script>
-
+                    if (document.getElementById("days")) {
+                        document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                        document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                        document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                        document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                    }
+                    
+                    if (distance < 0) {
+                        clearInterval(x);
+                        if (document.getElementById("countdown")) {
+                            document.getElementById("countdown").innerHTML = "<p class='text-red-300 text-lg'>OFFER EXPIRED! But you can still join the regular waitlist below.</p>";
+                        }
+                    }
+                }, 1000);
+            }
+            // Uncomment the line below to activate the countdown in a live HTML environment with JS
+            // window.onload = startCountdown;
+        </script>
+    -->
 </body>
 </html>
