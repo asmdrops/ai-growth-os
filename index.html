@@ -3,192 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xbox Legacy Unlocked: The Ultimate Guide to Every Xbox Game</title>
+    <title>Beast of Reincarnation: Early-Game Mastery Guide</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for the hero background image and overlay */
+        /* Custom styles for dark mode and responsiveness */
+        body {
+            font-family: 'Inter', sans-serif; /* A modern, clean font */
+        }
         .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             position: relative;
-            display: flex; /* Ensure flex behavior */
-            align-items: center; /* Center content vertically */
-            justify-content: center; /* Center content horizontally */
+            z-index: 0;
         }
         .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for contrast */
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for strong text readability */
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+        .container-content {
+            position: relative;
+            z-index: 2;
+        }
+        .countdown-segment {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 64px; /* Ensure segments have minimum width */
+        }
+        .countdown-number {
+            font-size: 2.5rem; /* Large numbers */
+            line-height: 1;
+        }
+        .countdown-label {
+            font-size: 0.875rem; /* Small label */
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 4px;
+        }
+
+        /* Basic form styling for better appearance */
+        .input-field {
+            @apply w-full px-4 py-3 bg-gray-700 text-gray-100 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-background min-h-screen p-4">
+    <header class="hero-background min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8">
         <div class="hero-overlay"></div>
-        <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-tight">
-                <span class="block text-blue-400">Xbox Legacy Unlocked:</span>
-                The Ultimate Guide to Playing Every Xbox Game Ever Made
+        <div class="container-content max-w-4xl mx-auto text-center py-20">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white drop-shadow-lg">
+                Dominate <span class="text-indigo-400">Beast of Reincarnation</span> From Day One.
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-300">
-                The future of game preservation is here. With the next Xbox rumored to play <em class="font-semibold text-blue-300">every single Xbox game ever made</em>, are you truly ready to leverage your entire gaming history? Master your collection, unlock hidden gems, and future-proof your passion.
+            <p class="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-200 font-light max-w-2xl mx-auto">
+                Go beyond generic tips. Unlock the secrets to rapid progression, flawless combat, and ultimate resource management with your essential 'Early-Game Mastery Guide'.
             </p>
-            <div id="countdown" class="text-3xl sm:text-4xl font-bold mb-8 text-red-500">
-                Special Launch Discount Ends In: <span id="time-left" class="block mt-2 text-red-400"></span>
+
+            <!-- Limited Time Countdown -->
+            <div class="bg-indigo-700 bg-opacity-80 rounded-xl p-6 sm:p-8 inline-block shadow-2xl mb-10 border border-indigo-600">
+                <p class="text-sm sm:text-base font-semibold uppercase tracking-wide text-indigo-200 mb-4">Launch Discount Ends In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 sm:space-x-6 text-white">
+                    <div class="countdown-segment">
+                        <span class="countdown-number" id="days">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <span class="text-3xl font-bold">:</span>
+                    <div class="countdown-segment">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <span class="text-3xl font-bold">:</span>
+                    <div class="countdown-segment">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <span class="text-3xl font-bold">:</span>
+                    <div class="countdown-segment">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
             </div>
-            <a href="#waitlist" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl transition duration-300 transform hover:scale-105 shadow-lg">
-                Secure Your 20% Early Access Discount Now!
+
+            <a href="#purchase" class="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition-all duration-300 transform hover:scale-105 shadow-xl">
+                Secure Your Copy Now & Save 20%!
             </a>
+            <p class="mt-4 text-gray-400 text-sm italic">Normally $29.99, get it today for just <span class="font-bold text-green-400">$23.99!</span></p>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-20 lg:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 sm:mb-16 tracking-tight">
-                What You'll Discover Inside <span class="text-blue-400">'Xbox Legacy Unlocked'</span>
+    <section class="py-16 sm:py-20 lg:py-24 bg-gray-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 text-white">
+                What You'll Achieve with This Guide:
             </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-                <!-- Feature 1: Comprehensive Compatibility Lists -->
-                <div class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 flex flex-col items-start text-left">
-                    <div class="text-blue-400 mb-4 text-4xl">🎮</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3">Comprehensive Compatibility Lists</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">Navigate the vast Xbox library with ease. Our guide provides meticulously researched lists for every console generation, ensuring you know exactly what plays where.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300">
+                    <div class="text-4xl mb-4 text-indigo-400">🚀</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Rapid Character Progression</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Learn optimal build paths, stat allocations, and early-game gear farming routes to outpace other beginners. Level up faster, unlock powerful abilities sooner.
+                    </p>
                 </div>
-                <!-- Feature 2: Optimal Settings for New Hardware -->
-                <div class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 flex flex-col items-start text-left">
-                    <div class="text-blue-400 mb-4 text-4xl">⚙️</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3">Optimal Settings for New Hardware</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">Unlock the best visual and performance settings. Learn how to make your cherished retro games look and play stunningly on modern screens and consoles.</p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300">
+                    <div class="text-4xl mb-4 text-green-400">⚔️</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Master In-Depth Combat (Parrying Focus!)</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Demystify the parry system. Our guide breaks down every parry window, enemy attack pattern, and counter-attack strategy for effortless boss fights.
+                    </p>
                 </div>
-                <!-- Feature 3: Mastering Physical vs. Digital Libraries -->
-                <div class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 flex flex-col items-start text-left">
-                    <div class="text-blue-400 mb-4 text-4xl">📚</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3">Mastering Physical vs. Digital Libraries</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">Seamlessly manage your expanding game collection. Our expert tips guide you through optimizing both your physical disc library and ever-growing digital titles.</p>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300">
+                    <div class="text-4xl mb-4 text-yellow-400">💰</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Efficient Resource Management</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Stop wasting precious early-game currency and rare materials. Discover the most profitable farming spots and smart spending strategies.
+                    </p>
                 </div>
-                <!-- Feature 4: Strategies for the 'Disc to Digital' Program -->
-                <div class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 flex flex-col items-start text-left">
-                    <div class="text-blue-400 mb-4 text-4xl">💿➡️☁️</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3">Strategies for the 'Disc to Digital' Program</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">Learn insider strategies to maximize the 'disc to digital' program. Convert your physical collection into a convenient digital library and future-proof your games.</p>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300">
+                    <div class="text-4xl mb-4 text-blue-400">🗺️</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Hidden Secrets & Essential Tips</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Uncover crucial early-game secrets, hidden items, and time-saving shortcuts that most players miss, giving you a distinct advantage.
+                    </p>
                 </div>
-                <!-- Feature 5: Curated Retro Game Recommendations -->
-                <div class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 flex flex-col items-start text-left">
-                    <div class="text-blue-400 mb-4 text-4xl">💎</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3">Curated Retro Game Recommendations</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">Beyond the obvious classics, discover hidden gems and overlooked masterpieces. Our curated lists will expand your gaming horizons and re-ignite your passion.</p>
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300">
+                    <div class="text-4xl mb-4 text-red-400">🚫</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Avoid Common Beginner Mistakes</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Learn what NOT to do! This guide points out pitfalls and bad habits that can cripple your progress, ensuring a smooth, frustration-free start.
+                    </p>
                 </div>
-                <!-- Feature 6: Future-Proof Your Gaming Legacy -->
-                <div class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 flex flex-col items-start text-left">
-                    <div class="text-blue-400 mb-4 text-4xl">🌟</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3">Future-Proof Your Gaming Legacy</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">With constant hardware evolution, ensure your treasured games remain playable for years to come. This guide is your essential investment in enduring gaming joy and preservation.</p>
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300">
+                    <div class="text-4xl mb-4 text-purple-400">📈</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Build a Strong Foundation</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Establish strong game habits and understanding from the start, setting you up for true mastery as you delve deeper into Beast of Reincarnation.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / Call to Action Form Section -->
-    <section id="waitlist" class="py-16 sm:py-20 lg:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 max-w-3xl text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-8 tracking-tight">
-                Secure Your Legacy. Claim Your <span class="text-red-500">Limited-Time Discount</span>.
+    <!-- Call to Action / Purchase Form Section -->
+    <section id="purchase" class="py-16 sm:py-20 lg:py-24 bg-gray-900">
+        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-gray-800 p-8 sm:p-10 lg:p-12 rounded-2xl shadow-2xl border border-gray-700">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 text-white">
+                Unlock Your Mastery Today!
             </h2>
-            <p class="text-lg sm:text-xl mb-10 text-gray-300">
-                Be among the first to receive <span class="font-semibold text-blue-300">'Xbox Legacy Unlocked'</span> and save <strong class="text-red-400">20%</strong> with our exclusive launch offer. Don't miss out on mastering your complete Xbox universe. This offer won't last forever!
+            <p class="text-lg text-gray-300 mb-8">
+                Don't miss out on the <span class="font-bold text-green-400">limited-time 20% launch discount!</span> Get instant access to the guide that will transform your early-game experience.
             </p>
-            <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-2xl border border-gray-700">
-                <form class="space-y-6">
-                    <div>
-                        <label for="name" class="sr-only">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required
-                               class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-base sm:text-lg">
-                    </div>
-                    <div>
-                        <label for="email" class="sr-only">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email Address" required
-                               class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-base sm:text-lg">
-                    </div>
-                    <button type="submit"
-                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg sm:text-xl transition duration-300 transform hover:scale-105 shadow-md">
-                        Get Instant Access & 20% Off!
-                    </button>
-                    <p class="text-sm text-gray-400 mt-4"><em>No spam, just pure Xbox preservation knowledge directly to your inbox.</em></p>
-                </form>
-            </div>
+
+            <form class="space-y-6">
+                <div>
+                    <label for="name" class="sr-only">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required class="input-field">
+                </div>
+                <div>
+                    <label for="email" class="sr-only">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required class="input-field">
+                </div>
+                
+                <div class="bg-gray-700 p-4 rounded-lg flex justify-between items-center">
+                    <span class="text-gray-300 text-lg sm:text-xl font-medium">Original Price: <s class="text-red-400">$29.99</s></span>
+                    <span class="text-white text-2xl sm:text-3xl font-bold">Today Only: <span class="text-green-400">$23.99</span></span>
+                </div>
+
+                <button type="submit" class="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-4 rounded-full text-xl transition-all duration-300 transform hover:scale-105 shadow-xl">
+                    Secure My Copy & Save 20%!
+                </button>
+                <p class="text-sm text-gray-500 mt-4">
+                    Instant digital download upon purchase. Your journey to mastery begins now.
+                </p>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 border-t border-gray-800">
-        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
-            &copy; 2023 Xbox Legacy Unlocked. All rights reserved. | Powered by Digital Education Authority
+    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">Disclaimer: 'Beast of Reincarnation' is a fictional game for demonstration purposes.</p>
         </div>
     </footer>
 
-    <!-- Countdown JavaScript -->
+    <!-- JavaScript for Countdown Timer (Placeholder) -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 7 days from now)
-            // For a live product, this would be a specific future date, e.g., new Date("Dec 25, 2023 15:37:25").getTime();
-            const sevenDaysFromNow = new Date();
-            sevenDaysFromNow.setDate(sevenDaysFromNow.getDate() + 7); // Sets countdown for 7 days from page load
-            const countDownDate = sevenDaysFromNow.getTime();
+        // Note: This is a client-side JavaScript placeholder. 
+        // For a real application, ensure your dates are handled robustly (e.g., fetching end date from server).
 
-            // Update the count down every 1 second
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate - now;
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 7); // Set countdown for 7 days from now
 
-                // Time calculations for days, hours, minutes and seconds
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        const daysSpan = document.getElementById('days');
+        const hoursSpan = document.getElementById('hours');
+        const minutesSpan = document.getElementById('minutes');
+        const secondsSpan = document.getElementById('seconds');
 
-                // Display the result
-                const timeLeftElement = document.getElementById("time-left");
-                if (timeLeftElement) {
-                    timeLeftElement.innerHTML = days + "d " + hours + "h " +
-                                                minutes + "m " + seconds + "s ";
-                }
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
 
-                // If the count down is finished
-                if (distance < 0) {
-                    clearInterval(x);
-                    if (timeLeftElement) {
-                        timeLeftElement.innerHTML = "OFFER EXPIRED";
-                    }
-                    // Optionally disable the button or change its text
-                    const ctaButton = document.querySelector('.hero-background a');
-                    if(ctaButton) {
-                        ctaButton.textContent = "Learn More About the Guide";
-                        ctaButton.classList.remove('bg-blue-600', 'hover:bg-blue-700', 'transform', 'hover:scale-105');
-                        ctaButton.classList.add('bg-gray-600', 'cursor-not-allowed', 'opacity-75');
-                        ctaButton.href = "#waitlist"; // Still leads to form, but implies full price or no discount.
-                    }
-                     const formButton = document.querySelector('#waitlist button[type="submit"]');
-                     if(formButton) {
-                        formButton.textContent = "Join the Waitlist (Full Price)";
-                        formButton.classList.remove('bg-blue-600', 'hover:bg-blue-700');
-                        formButton.classList.add('bg-gray-600', 'hover:bg-gray-700');
-                     }
-                     const discountTexts = document.querySelectorAll('.text-red-500, .text-red-400');
-                     discountTexts.forEach(el => el.style.textDecoration = 'line-through'); // Visually indicate offer is gone
-                     const discountParagraph = document.querySelector('#waitlist p strong.text-red-400');
-                     if(discountParagraph) discountParagraph.textContent = "regular price";
+            if (distance < 0) {
+                clearInterval(interval);
+                document.getElementById("countdown").innerHTML = "<p class='text-red-400 font-bold text-xl'>Offer Expired!</p>";
+                // Optionally disable the purchase button or adjust pricing here
+                return;
+            }
 
-                }
-            }, 1000);
-        });
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            daysSpan.innerHTML = String(days).padStart(2, '0');
+            hoursSpan.innerHTML = String(hours).padStart(2, '0');
+            minutesSpan.innerHTML = String(minutes).padStart(2, '0');
+            secondsSpan.innerHTML = String(seconds).padStart(2, '0');
+        }
+
+        const interval = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Call immediately to avoid initial flicker
     </script>
 </body>
 </html>
