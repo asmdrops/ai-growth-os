@@ -3,199 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenAI Smart Speaker: The Definitive Early Adopter's Guide</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>OpenAI Smart Speaker: Advanced User's Blueprint - Limited Time Offer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for dark overlay and backdrop */
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
-        }
-        .text-gradient {
-            background-image: linear-gradient(to right, #6366f1, #a855f7); /* Indigo to Purple */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         .countdown-segment {
-            @apply flex flex-col items-center justify-center p-4 bg-gray-800 rounded-lg shadow-lg;
+            @apply flex flex-col items-center justify-center bg-gray-800 p-4 rounded-lg shadow-lg;
         }
-        .countdown-number {
+        .countdown-value {
             @apply text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-400;
         }
         .countdown-label {
-            @apply text-sm md:text-base lg:text-lg text-gray-400 mt-2;
-        }
-        /* Animation for the hero headline */
-        @keyframes pulse-effect {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.02); opacity: 0.95; }
-        }
-        .animate-pulse {
-            animation: pulse-effect 2s infinite ease-in-out;
+            @apply text-sm md:text-base text-gray-400 mt-2 uppercase tracking-wide;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased overflow-x-hidden">
 
     <!-- Hero Section -->
-    <header class="relative h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-        <div class="absolute inset-0 hero-overlay"></div>
-        <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 animate-pulse">
-                Unlock the Future: <span class="text-gradient">OpenAI Smart Speaker</span> Mastery
+    <section class="relative bg-gray-900 min-h-screen flex items-center justify-center text-center py-16 px-4 overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+            <div class="absolute inset-0 bg-black opacity-75"></div> <!-- Dark overlay -->
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-indigo-400 leading-tight mb-6 animate-pulse">
+                Unlock the Future: Master Your OpenAI Smart Speaker
             </h1>
-            <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto">
-                Be an early adopter, not just a user. Discover hidden productivity hacks, seamless smart home integrations, and advanced prompt engineering for OpenAI's revolutionary device.
+            <p class="text-xl sm:text-2xl md:text-3xl text-gray-200 mb-10 max-w-3xl mx-auto">
+                Be among the first to fully leverage cutting-edge AI. Get the definitive blueprint to setting up, customizing, and integrating your new OpenAI Smart Speaker.
             </p>
-            
-            <!-- Limited Time Countdown -->
-            <div class="mb-12">
-                <p class="text-xl md:text-2xl lg:text-3xl font-semibold text-indigo-300 mb-4">Exclusive Early Adopter Window Closes In:</p>
-                <div id="countdown" class="flex justify-center space-x-4 md:space-x-6 lg:space-x-8">
+
+            <!-- Limited Time Offer Countdown -->
+            <div class="bg-gradient-to-r from-indigo-700 to-purple-800 p-6 sm:p-8 rounded-xl shadow-2xl mb-12 transform hover:scale-105 transition-transform duration-300">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Limited Time Offer Ends In:</h2>
+                <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-8 justify-center">
                     <div class="countdown-segment">
-                        <span id="days" class="countdown-number">00</span>
-                        <span class="countdown-label">Days</span>
+                        <div class="countdown-value" id="days">00</div>
+                        <div class="countdown-label">Days</div>
                     </div>
                     <div class="countdown-segment">
-                        <span id="hours" class="countdown-number">00</span>
-                        <span class="countdown-label">Hours</span>
+                        <div class="countdown-value" id="hours">00</div>
+                        <div class="countdown-label">Hours</div>
                     </div>
                     <div class="countdown-segment">
-                        <span id="minutes" class="countdown-number">00</span>
-                        <span class="countdown-label">Minutes</span>
+                        <div class="countdown-value" id="minutes">00</div>
+                        <div class="countdown-label">Minutes</div>
                     </div>
                     <div class="countdown-segment">
-                        <span id="seconds" class="countdown-number">00</span>
-                        <span class="countdown-label">Seconds</span>
+                        <div class="countdown-value" id="seconds">00</div>
+                        <div class="countdown-label">Seconds</div>
                     </div>
                 </div>
             </div>
-
-            <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl transition duration-300 transform hover:scale-105 shadow-xl">
-                Secure Your Early Access Now!
+            
+            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl uppercase tracking-wide transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
+                Secure Your Advanced Blueprint Now
             </a>
         </div>
-    </header>
+    </section>
 
-    <main class="container mx-auto px-4 py-16 md:py-24 max-w-7xl">
-
-        <!-- Market Trend / Why This Guide Section -->
-        <section class="text-center mb-20 md:mb-32">
-            <h2 class="text-3xl md:text-5xl font-extrabold mb-8 leading-tight">
-                The AI Revolution is About to Speak Your Language.
+    <!-- Features Section -->
+    <section class="py-20 px-4 bg-gray-800">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center text-purple-400 mb-16">
+                What You'll Discover Inside This Blueprint
             </h2>
-            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-6">
-                TechCrunch reports OpenAI's AI smart speaker will reportedly sell for $300-$400. This isn't just another gadget; it's a paradigm shift in how we interact with technology, demanding a deeper understanding to truly harness its power.
-            </p>
-            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-                Don't get left behind. Our premium guide ensures you're not just an owner, but a <span class="text-indigo-400 font-semibold">master</span> of this revolutionary device from day one.
-            </p>
-        </section>
 
-        <!-- Features Section -->
-        <section class="mb-20 md:mb-32">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-12">What You'll Master Inside:</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-3xl mr-4 text-indigo-400">🚀</span>
-                        <h3 class="text-2xl font-bold">Effortless Setup & Configuration</h3>
-                    </div>
-                    <p class="text-gray-300">Breeze through the initial setup process with our step-by-step video tutorials and configuration checklists.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Feature 1 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-indigo-400">⚙️</div>
+                    <h3 class="text-2xl font-bold text-gray-100 mb-4">Seamless Setup & Optimization</h3>
+                    <p class="text-gray-300">
+                        Detailed, step-by-step instructions to get your OpenAI Smart Speaker up and running, ensuring optimal performance from day one. Avoid common pitfalls and maximize its potential effortlessly.
+                    </p>
                 </div>
-
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-3xl mr-4 text-purple-400">🧠</span>
-                        <h3 class="text-2xl font-bold">Advanced Prompt Engineering</h3>
-                    </div>
-                    <p class="text-gray-300">Go beyond basic commands. Learn the secrets to crafting prompts that unlock the speaker's true AI potential for powerful results.</p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-purple-400">🛠️</div>
+                    <h3 class="text-2xl font-bold text-gray-100 mb-4">Custom Skills & Ecosystem Integrations</h3>
+                    <p class="text-gray-300">
+                        Learn how to develop and integrate custom skills and connect your speaker with existing smart home devices as the ecosystem evolves. Future-proof your smart living experience.
+                    </p>
                 </div>
-
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-3xl mr-4 text-green-400">🏠</span>
-                        <h3 class="text-2xl font-bold">Seamless Smart Home Integration</h3>
-                    </div>
-                    <p class="text-gray-300">Connect your OpenAI Smart Speaker with your existing smart home devices for a truly unified and intelligent ecosystem.</p>
+                <!-- Feature 3 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-indigo-400">📊</div>
+                    <h3 class="text-2xl font-bold text-gray-100 mb-4">Intelligent AI Comparison</h3>
+                    <p class="text-gray-300">
+                        An in-depth analysis comparing the OpenAI Smart Speaker's capabilities against current market leaders. Understand its unique advantages and how it redefines smart home AI.
+                    </p>
                 </div>
-
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-3xl mr-4 text-yellow-400">✨</span>
-                        <h3 class="text-2xl font-bold">Hidden Productivity Hacks</h3>
-                    </div>
-                    <p class="text-gray-300">Uncover undocumented features and innovative workflows to supercharge your daily productivity and efficiency.</p>
+                <!-- Feature 4 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-purple-400">🏡</div>
+                    <h3 class="text-2xl font-bold text-gray-100 mb-4">Advanced Home Automation</h3>
+                    <p class="text-gray-300">
+                        Discover sophisticated automation routines and best practices to transform your home into a truly intelligent environment powered by cutting-edge OpenAI technology.
+                    </p>
                 </div>
-
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-3xl mr-4 text-red-400">🎬</span>
-                        <h3 class="text-2xl font-bold">Exclusive Video Tutorials</h3>
-                    </div>
-                    <p class="text-gray-300">Visual learners rejoice! Comprehensive video guides accompany key sections for hands-on learning and clarity.</p>
+                <!-- Feature 5 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-indigo-400">✨</div>
+                    <h3 class="text-2xl font-bold text-gray-100 mb-4">Productivity & Lifestyle Hacks</h3>
+                    <p class="text-gray-300">
+                        Unleash the full potential of your speaker beyond basic commands. Explore productivity-boosting features, personalized routines, and lifestyle enhancements.
+                    </p>
                 </div>
-
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-3xl mr-4 text-blue-400">🔄</span>
-                        <h3 class="text-2xl font-bold">Regular Updates & Community Access</h3>
-                    </div>
-                    <p class="text-gray-300">Stay ahead with ongoing updates as new features roll out, plus access to an exclusive early adopter community.</p>
+                <!-- Feature 6 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4 text-purple-400">🚀</div>
+                    <h3 class="text-2xl font-bold text-gray-100 mb-4">Stay Ahead of the Curve</h3>
+                    <p class="text-gray-300">
+                        This guide keeps you updated with emerging trends and potential future updates for your OpenAI Smart Speaker, ensuring you're always at the forefront of innovation.
+                    </p>
                 </div>
-
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Waitlist Form Section -->
-        <section id="waitlist" class="bg-gray-800 p-8 md:p-12 lg:p-16 rounded-3xl shadow-2xl text-center max-w-3xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
-                Don't Miss Out. <span class="text-gradient">Join the Exclusive Waitlist.</span>
+    <!-- Waitlist / Call to Action Section -->
+    <section id="waitlist" class="py-20 px-4 bg-gray-900 text-center">
+        <div class="container mx-auto max-w-2xl bg-gray-800 p-8 sm:p-10 rounded-2xl shadow-2xl border border-indigo-700">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-indigo-400 mb-6">
+                Don't Miss Out!
             </h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                This premium guide will be released to a limited number of early adopters first. Secure your spot now to be notified immediately upon launch and receive exclusive early bird offers.
+            <p class="text-xl text-gray-300 mb-8">
+                The OpenAI Smart Speaker is set to redefine smart homes. Be prepared to master it from day one.
+                Sign up for early access to the "Advanced User's Blueprint" and get exclusive updates!
             </p>
+
             <form class="space-y-6">
                 <div>
-                    <label for="name" class="sr-only">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required
-                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 text-lg md:text-xl">
+                    <input type="text" id="name" name="name" placeholder="Your Full Name"
+                           class="w-full p-4 rounded-lg bg-gray-700 text-gray-100 border border-gray-600 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 transition-all duration-200 text-lg"
+                           required>
                 </div>
                 <div>
-                    <label for="email" class="sr-only">Your Best Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Best Email" required
-                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 text-lg md:text-xl">
+                    <input type="email" id="email" name="email" placeholder="Your Best Email Address"
+                           class="w-full p-4 rounded-lg bg-gray-700 text-gray-100 border border-gray-600 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 transition-all duration-200 text-lg"
+                           required>
                 </div>
-                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full text-xl md:text-2xl transition duration-300 transform hover:scale-105 shadow-xl">
-                    Get Early Access Now!
+                <button type="submit"
+                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg text-2xl uppercase tracking-wider transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
+                    Join the Exclusive Waitlist
                 </button>
             </form>
-        </section>
+            <p class="text-gray-500 text-sm mt-4">We respect your privacy. No spam, ever.</p>
+        </div>
+    </section>
 
-    </main>
-
-    <footer class="text-center py-12 text-gray-500 text-sm">
-        <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-8 px-4 text-center text-gray-500 text-sm">
+        <div class="container mx-auto">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">Disclaimer: "OpenAI Smart Speaker" is a speculative product based on current market trends and news reports. This guide is designed to prepare users for its potential release.</p>
+        </div>
     </footer>
 
-    <!-- Countdown JavaScript -->
+    <!-- JavaScript for Countdown Timer -->
     <script>
-        function setupCountdown(targetDate) {
-            const countdownElement = document.getElementById('countdown');
-            if (!countdownElement) return;
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // 7 days from now for example
+            
+            // For a specific date, uncomment and modify:
+            // const countDownDate = new Date("Dec 25, 2023 00:00:00").getTime();
 
-            const daysElement = document.getElementById('days');
-            const hoursElement = document.getElementById('hours');
-            const minutesElement = document.getElementById('minutes');
-            const secondsElement = document.getElementById('seconds');
-
-            function updateCountdown() {
+            const x = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = targetDate - now;
+                const distance = countDownDate - now;
 
                 if (distance < 0) {
-                    clearInterval(countdownInterval);
-                    countdownElement.innerHTML = '<span class="text-indigo-400 text-2xl md:text-3xl lg:text-4xl font-bold">Access Closed!</span>';
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<div class='text-white text-3xl md:text-4xl lg:text-5xl font-bold col-span-2 sm:col-span-4'>OFFER EXPIRED!</div>";
+                    // Optionally disable the CTA button here
+                    const ctaButton = document.querySelector('a[href="#waitlist"]');
+                    if (ctaButton) {
+                        ctaButton.classList.add('opacity-50', 'cursor-not-allowed');
+                        ctaButton.removeAttribute('href');
+                        ctaButton.innerText = 'Offer Expired';
+                    }
                     return;
                 }
 
@@ -204,24 +201,13 @@
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                daysElement.innerHTML = String(days).padStart(2, '0');
-                hoursElement.innerHTML = String(hours).padStart(2, '0');
-                minutesElement.innerHTML = String(minutes).padStart(2, '0');
-                secondsElement.innerHTML = String(seconds).padStart(2, '0');
-            }
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-            // Set the countdown to update every 1 second
-            const countdownInterval = setInterval(updateCountdown, 1000);
-            updateCountdown(); // Initial call to display immediately
-        }
-
-        // --- Set the target date for the countdown ---
-        // For demonstration, setting it to 7 days from now.
-        // In a real application, this would be a specific release date or close-off date.
-        const targetDate = new Date();
-        targetDate.setDate(targetDate.getDate() + 7); // 7 days from today
-        
-        setupCountdown(targetDate.getTime());
+            }, 1000);
+        });
     </script>
 </body>
 </html>
