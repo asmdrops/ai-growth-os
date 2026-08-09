@@ -3,189 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Readiness & Adoption Platform for SMBs | Future-Proof Your Business</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>AI Camouflage Studio - Disappear from AI Surveillance</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for the hero background image and overlay */
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        /* Custom Scrollbar for a premium dark-mode aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        .dark-overlay {
-            background-color: rgba(17, 24, 39, 0.75); /* Equivalent to bg-gray-900 with 75% opacity */
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* bg-gray-900 */
         }
-        /* Animation for the "Limited Time" badge to increase urgency */
-        .limited-time-badge {
-            animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* bg-gray-600 */
+            border-radius: 4px;
         }
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096; /* bg-gray-500 */
+        }
+
+        /* Custom Keyframes for smooth animations */
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
                 opacity: 1;
-            }
-            50% {
-                transform: scale(1.03);
-                opacity: 0.9;
+                transform: translateY(0);
             }
         }
+        .animate-fade-in-up {
+            animation: fade-in-up 0.6s ease-out forwards;
+            opacity: 0; /* Hidden by default */
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
-
-    <!-- Header (Simple for focused landing page) -->
-    <header class="relative z-20 py-4 px-6 md:px-8">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-white tracking-tight">AI<span class="text-purple-400">Ready</span></a>
-            <!-- Nav links intentionally omitted to keep focus on conversion, typical for landing pages -->
-        </div>
-    </header>
+<body class="bg-gray-900 text-white font-sans antialiased overflow-x-hidden">
 
     <!-- Hero Section -->
-    <section class="relative hero-background h-screen flex items-center justify-center text-center py-16 md:py-24 overflow-hidden">
-        <!-- Dark Overlay for Readability -->
-        <div class="absolute inset-0 dark-overlay"></div>
-        <div class="relative z-10 container mx-auto px-6 max-w-4xl">
-            <!-- Limited Time Countdown / Urgency Element -->
-            <span class="inline-block bg-purple-600 text-white text-xs sm:text-sm font-semibold px-5 py-2 rounded-full mb-4 uppercase tracking-wide limited-time-badge shadow-lg">
-                🚀 Early Access: Limited Spots Available! ⏳
-            </span>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
-                <span class="text-purple-400">&quot;Move 37 Is the Moment AI Changes Everything.&quot;</span><br class="hidden sm:inline">
-                Unlock AI for Your Business, Today.
+    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+        <!-- Hero Image -->
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');"></div>
+        <!-- Dark Overlay for Text Readability -->
+        <div class="absolute inset-0 bg-black opacity-70"></div> 
+
+        <div class="relative z-10 px-4 max-w-4xl mx-auto flex flex-col items-center justify-center h-full">
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-up">
+                Become Invisible to AI Surveillance
             </h1>
-            <p class="text-lg sm:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-                Our AI Readiness Platform empowers small to medium-sized businesses to audit operations, identify immediate AI value, recommend tools, and build a tailored implementation roadmap – ensuring measurable ROI.
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-10 max-w-2xl animate-fade-in-up delay-200">
+                Generate custom, print-ready adversarial patterns optimized to disrupt facial recognition and AI monitoring systems. 
+                <br class="hidden sm:block">Inspired by the trend: "<a href="https://techcrunch.com/2023/10/26/this-adversarial-pattern-can-prevent-surveillance-cameras-from-detecting-you/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">This ‘adversarial’ pattern can prevent surveillance cameras from detecting you</a>".
             </p>
-            <a href="#waitlist" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
-                Get Early Access Now
-            </a>
-            <p class="text-sm text-gray-400 mt-4">Join our waitlist and secure your competitive edge.</p>
+
+            <!-- Limited Time Offer & Countdown -->
+            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 rounded-lg shadow-xl mb-12 animate-fade-in-up delay-400 max-w-md w-full">
+                <p class="text-2xl font-bold mb-4">Limited Time Introductory Offer!</p>
+                <div id="countdown" class="flex justify-around items-center text-3xl sm:text-4xl font-mono mb-4 text-white">
+                    <div class="text-center"><span id="days" class="block">00</span><span class="text-sm">Days</span></div>
+                    <div class="text-center"><span id="hours" class="block">00</span><span class="text-sm">Hours</span></div>
+                    <div class="text-center"><span id="minutes" class="block">00</span><span class="text-sm">Minutes</span></div>
+                    <div class="text-center"><span id="seconds" class="block">00</span><span class="text-sm">Seconds</span></div>
+                </div>
+                <button onclick="document.getElementById('waitlist-form').scrollIntoView({ behavior: 'smooth' });"
+                        class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-xl transition duration-300 transform hover:scale-105 shadow-lg w-full">
+                    Secure Early Access Now!
+                </button>
+            </div>
+
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-6 max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 text-white">
-                Your Guided Path to AI Adoption & ROI
+    <section class="py-20 px-4 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-16 animate-fade-in-up">
+                Your Privacy, Redefined: Key Features
             </h2>
-            <p class="text-lg text-gray-300 text-center mb-16 max-w-3xl mx-auto">
-                Navigate the AI landscape with confidence. Our platform simplifies complex AI integration, tailored precisely to your business needs and budget.
-            </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-                <!-- Feature 1: Operations Audit -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-purple-400 text-4xl mb-4">
-                        <span class="inline-block align-middle">&#x1F50E;</span> <!-- Magnifying Glass -->
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Intelligent Operations Audit</h3>
-                    <p class="text-gray-300">
-                        Automatically analyze your current operations to uncover inefficiencies and pinpoint prime opportunities for AI-driven improvements.
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Feature 1: Upload & Customize -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up delay-100">
+                    <div class="text-blue-400 mb-4 text-5xl">📸</div>
+                    <h3 class="text-2xl font-bold mb-4">Upload & Customize</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Effortlessly upload images of clothing or objects. Select from diverse, AI-disrupting pattern styles like 'Urban Disguise' or 'Nature Blend' for perfect concealment.
                     </p>
                 </div>
 
-                <!-- Feature 2: Value Identification -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-purple-400 text-4xl mb-4">
-                        <span class="inline-block align-middle">&#x1F4A1;</span> <!-- Lightbulb -->
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Immediate Value Identification</h3>
-                    <p class="text-gray-300">
-                        Quickly discover where AI can deliver the most impactful and rapid gains across automation, data analysis, and customer service.
+                <!-- Feature 2: AI Compatibility Testing -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up delay-200">
+                    <div class="text-green-400 mb-4 text-5xl">🕵️‍♀️</div>
+                    <h3 class="text-2xl font-bold mb-4">AI Compatibility Testing</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Test your generated patterns against common camera types and AI surveillance systems. Receive a detailed "disruption score" for guaranteed effectiveness.
                     </p>
                 </div>
 
-                <!-- Feature 3: Tailored AI Tool Recommendations -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-purple-400 text-4xl mb-4">
-                        <span class="inline-block align-middle">&#x1F6E0;&#xFE0F;</span> <!-- Hammer & Wrench -->
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Tailored AI Tool Recommendations</h3>
-                    <p class="text-gray-300">
-                        Receive personalized suggestions for cutting-edge AI tools and technologies, specifically curated for your industry and budget.
+                <!-- Feature 3: Print-Ready Output -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up delay-300">
+                    <div class="text-red-400 mb-4 text-5xl">🖨️</div>
+                    <h3 class="text-2xl font-bold mb-4">Print-Ready Output</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Download high-resolution, print-ready files. Apply your custom adversarial patterns to fabric, vinyl, or any desired material to craft your personal shield.
                     </p>
                 </div>
 
-                <!-- Feature 4: Step-by-Step Implementation Roadmap -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-purple-400 text-4xl mb-4">
-                        <span class="inline-block align-middle">&#x1F4C8;</span> <!-- Chart with Upwards Trend -->
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Step-by-Step Implementation Roadmap</h3>
-                    <p class="text-gray-300">
-                        Get a clear, actionable roadmap with concrete steps, timelines, and budget considerations for seamless AI integration.
+                <!-- Feature 4: Pattern Evolution Subscription Tier -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up delay-400">
+                    <div class="text-purple-400 mb-4 text-5xl">🚀</div>
+                    <h3 class="text-2xl font-bold mb-4">Pattern Evolution Tier</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Stay perpetually ahead with our premium subscription. Get continuously updated and optimized adversarial patterns as AI detection technologies evolve and improve.
                     </p>
                 </div>
 
-                <!-- Feature 5: Progress & ROI Tracking -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-purple-400 text-4xl mb-4">
-                        <span class="inline-block align-middle">&#x1F4B8;</span> <!-- Money Bag -->
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Track Progress & Maximize ROI</h3>
-                    <p class="text-gray-300">
-                        Monitor your AI adoption journey, understand its impact, and clearly visualize the tangible return on your AI investments.
+                <!-- Feature 5: Privacy-First Design -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up delay-500">
+                    <div class="text-yellow-400 mb-4 text-5xl">🛡️</div>
+                    <h3 class="text-2xl font-bold mb-4">Privacy-First Design</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Your data and creations are handled with utmost security and privacy. Our platform is built to empower your individual control over personal visibility.
                     </p>
                 </div>
 
-                <!-- Feature 6: Best Practices & Latest Advancements -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-purple-400 text-4xl mb-4">
-                        <span class="inline-block align-middle">&#x1F4D6;</span> <!-- Open Book -->
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Curated Best Practices & Insights</h3>
-                    <p class="text-gray-300">
-                        Access a continually updated library of AI best practices, industry benchmarks, and insights into the latest advancements.
+                <!-- Feature 6: Intuitive User Experience -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up delay-600">
+                    <div class="text-orange-400 mb-4 text-5xl">✨</div>
+                    <h3 class="text-2xl font-bold mb-4">Intuitive User Experience</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Designed for ease of use, the AI Camouflage Studio allows anyone to generate complex adversarial patterns without needing technical expertise.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / Call to Action Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gray-800 text-center">
-        <div class="container mx-auto px-6 max-w-2xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8">
-                Ready to Lead with AI? Join Our Waitlist!
+    <!-- Waitlist Form Section -->
+    <section id="waitlist-form" class="py-20 px-4 bg-gray-950">
+        <div class="container mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-8 animate-fade-in-up">
+                Ready to Reclaim Your Privacy?
             </h2>
-            <p class="text-lg text-gray-300 mb-10">
-                Secure your early access to the AI Readiness & Adoption Platform. Don't let your competitors get ahead – transform your business today.
+            <p class="text-lg sm:text-xl text-gray-300 mb-10 animate-fade-in-up delay-100">
+                Join our exclusive waitlist for early access to the AI Camouflage Studio and take advantage of our
+                <span class="font-bold text-green-400">Limited Time Introductory Offer!</span>
             </p>
 
-            <form class="w-full max-w-md mx-auto bg-gray-700 p-8 rounded-xl shadow-2xl border border-gray-600">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-200 text-sm font-semibold mb-2">Your Name (Optional)</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-gray-200">
+            <form class="bg-gray-800 p-8 rounded-lg shadow-2xl animate-fade-in-up delay-200">
+                <div class="mb-6">
+                    <label for="email" class="sr-only">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
+                           class="w-full px-6 py-4 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg transition duration-300">
                 </div>
-                <div class="mb-6 text-left">
-                    <label for="company" class="block text-gray-200 text-sm font-semibold mb-2">Company Name (Optional)</label>
-                    <input type="text" id="company" name="company" placeholder="Acme Corp." class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-gray-200">
-                </div>
-                <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-200 text-sm font-semibold mb-2">Work Email <span class="text-red-400">*</span></label>
-                    <input type="email" id="email" name="email" placeholder="you@yourcompany.com" required class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-gray-200">
-                </div>
-                <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
-                    Join Early Access Waitlist
+                <button type="submit"
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-xl transition duration-300 transform hover:scale-105 shadow-xl">
+                    Join the Waitlist
                 </button>
-                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, ever.</p>
+                <p class="text-gray-400 text-sm mt-6">
+                    We respect your privacy. No spam, ever.
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 bg-gray-900 text-gray-400 text-center text-sm px-6">
+    <footer class="bg-gray-800 py-8 px-4 text-center text-gray-500 text-sm">
         <div class="container mx-auto">
-            <p>&copy; 2023 AIReady. All rights reserved.</p>
-            <nav class="mt-4 space-x-4">
-                <a href="#" class="hover:text-white transition duration-200">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition duration-200">Terms of Service</a>
-            </nav>
+            &copy; 2023 AI Camouflage Studio. All rights reserved.
         </div>
     </footer>
 
+    <!-- JavaScript for Countdown Timer -->
+    <script>
+        const countdown = () => {
+            // Set the target date to 7 days from the current time
+            const targetDate = new Date();
+            targetDate.setDate(targetDate.getDate() + 7); 
+
+            const x = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = targetDate.getTime() - now;
+
+                // If the countdown is over
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<p class='text-red-400 font-bold'>OFFER EXPIRED</p>";
+                    return;
+                }
+
+                // Calculate time units
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result
+                document.getElementById("days").innerText = String(days).padStart(2, '0');
+                document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+            }, 1000);
+        };
+
+        // Initialize the countdown
+        countdown();
+    </script>
 </body>
 </html>
