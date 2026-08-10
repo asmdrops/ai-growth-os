@@ -3,225 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Retro Game Fortune Finder - Unlock Vintage Nintendo Value</title>
+    <title>Steam Data Breach Recovery Kit - Limited Time Offer</title>
     <!-- Tailwind CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Google Fonts for premium typography -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
+        /* Custom Dark Mode scrollbar for premium feel */
+        ::-webkit-scrollbar {
+            width: 10px;
         }
-        .font-mono-code {
-            font-family: 'Roboto Mono', monospace;
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* Darker background */
         }
-        /* Custom scrollbar for a premium dark-mode aesthetic */
-        body::-webkit-scrollbar {
-            width: 12px;
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* Slightly lighter gray */
+            border-radius: 5px;
         }
-        body::-webkit-scrollbar-track {
-            background: #1a202c; /* bg-gray-900 */
-        }
-        body::-webkit-scrollbar-thumb {
-            background-color: #4a5568; /* bg-gray-700 */
-            border-radius: 6px;
-            border: 3px solid #1a202c;
-        }
-        body::-webkit-scrollbar-thumb:hover {
-            background-color: #646b7e; /* bg-gray-600 */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280; /* Even lighter on hover */
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-            <div class="absolute inset-0 bg-gray-900 opacity-80"></div> <!-- Dark overlay for text readability -->
-        </div>
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Hero Image -->
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');"></div>
+        <!-- Overlay for readability -->
+        <div class="absolute inset-0 bg-black opacity-70"></div>
 
-        <div class="relative z-10 max-w-4xl mx-auto px-4 py-8 md:py-16">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4 drop-shadow-lg">
-                <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">Unlock Hidden Fortunes:</span> The Waukesha Discovery Proves Vintage Nintendo Is Gold.
+        <div class="relative z-10 text-center p-4 max-w-4xl mx-auto">
+            <span class="inline-block bg-red-600 text-white text-sm md:text-base px-4 py-2 rounded-full mb-4 font-bold animate-pulse">URGENT: Steam Data Breach Alert!</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">
+                Recover & Re-Secure Your Steam Account After the Cyber Attack
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto drop-shadow">
-                From Garage Sales to Golden Opportunities: Your Definitive Blueprint for Identifying, Grading, and Monetizing Rare Vintage Nintendo Cartridges.
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Don't become another victim. Get your comprehensive step-by-step digital guide to protect your identity, data, and gaming life NOW.
             </p>
-
-            <!-- Countdown Timer (Limited Time Offer) -->
-            <div class="bg-gray-800 bg-opacity-70 rounded-xl p-4 sm:p-6 mb-8 inline-block shadow-2xl border border-gray-700">
-                <p class="text-green-400 text-sm sm:text-base md:text-lg font-bold uppercase tracking-wider mb-2">Limited Early Access Offer Ends In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 text-white">
-                    <div class="text-center">
-                        <span class="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono-code font-bold" id="days">00</span>
-                        <span class="block text-xs sm:text-sm text-gray-400 uppercase">Days</span>
+            
+            <!-- Limited Time Offer Countdown -->
+            <div class="bg-gray-800 bg-opacity-80 border border-red-600 p-6 rounded-lg shadow-xl mb-8 mx-auto max-w-md">
+                <p class="text-red-400 text-lg md:text-xl font-semibold mb-3">Limited Time Offer Ends In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-white text-4xl md:text-5xl font-bold">
+                    <div class="flex flex-col items-center">
+                        <span id="days">00</span>
+                        <span class="text-sm md:text-base font-normal text-gray-400">Days</span>
                     </div>
-                    <span class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono-code font-bold">:</span>
-                    <div class="text-center">
-                        <span class="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono-code font-bold" id="hours">00</span>
-                        <span class="block text-xs sm:text-sm text-gray-400 uppercase">Hours</span>
+                    <span class="text-gray-500">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours">00</span>
+                        <span class="text-sm md:text-base font-normal text-gray-400">Hours</span>
                     </div>
-                    <span class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono-code font-bold">:</span>
-                    <div class="text-center">
-                        <span class="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono-code font-bold" id="minutes">00</span>
-                        <span class="block text-xs sm:text-sm text-gray-400 uppercase">Minutes</span>
+                    <span class="text-gray-500">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes">00</span>
+                        <span class="text-sm md:text-base font-normal text-gray-400">Minutes</span>
                     </div>
-                    <span class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono-code font-bold">:</span>
-                    <div class="text-center">
-                        <span class="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono-code font-bold" id="seconds">00</span>
-                        <span class="block text-xs sm:text-sm text-gray-400 uppercase">Seconds</span>
+                    <span class="text-gray-500">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds">00</span>
+                        <span class="text-sm md:text-base font-normal text-gray-400">Seconds</span>
                     </div>
                 </div>
+                <a href="#get-kit" id="heroCtaButton" class="mt-8 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-xl md:text-2xl transition duration-300 transform hover:scale-105 shadow-lg">
+                    Get Instant Access Now!
+                </a>
             </div>
-
-            <a href="#waitlist" class="inline-block bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl md:text-2xl shadow-lg transform transition-transform duration-300 hover:scale-105">
-                Secure Your Early Access Now!
-            </a>
-            <p class="mt-4 text-sm text-gray-400">Join 1,000+ enthusiasts transforming their passion into profit.</p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-20 bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white text-center mb-12 leading-tight">
-                What You'll Discover Inside <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500">'The Retro Game Fortune Finder'</span>
+    <section class="py-16 md:py-24 bg-gray-950 text-gray-100">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-12 bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text">
+                What's Inside Your Essential Security Kit?
             </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-
-                <!-- Feature 1: Identify Rare Gems -->
-                <div class="bg-gray-900 rounded-xl p-6 sm:p-8 shadow-2xl border border-gray-700 transform hover:scale-105 transition duration-300 group">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4 group-hover:animate-bounce">🔍</span>
-                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Identify Rare Gems</h3>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed">
-                        Learn to spot the difference between common finds and six-figure treasures. Our comprehensive database and visual guides will turn you into an expert artifact hunter.
-                    </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-400 mb-4 text-5xl">✅</div>
+                    <h3 class="text-2xl font-bold mb-3">Step-by-Step Action Plan</h3>
+                    <p class="text-gray-300 text-lg">A clear, concise guide to navigate the immediate aftermath of a data breach. No tech jargon, just actionable steps.</p>
                 </div>
-
-                <!-- Feature 2: Master Professional Grading -->
-                <div class="bg-gray-900 rounded-xl p-6 sm:p-8 shadow-2xl border border-gray-700 transform hover:scale-105 transition duration-300 group">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4 group-hover:animate-bounce">💯</span>
-                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Master Professional Grading</h3>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed">
-                        Master professional grading techniques that maximize your sale value and authenticate your finds. Learn how condition impacts price and how to preserve your collection.
-                    </p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-purple-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-purple-400 mb-4 text-5xl">📄</div>
+                    <h3 class="text-2xl font-bold mb-3">Printable Security Checklist</h3>
+                    <p class="text-gray-300 text-lg">A physical checklist of essential security measures to ensure you don't miss a single critical step in securing your accounts.</p>
                 </div>
-
-                <!-- Feature 3: Monetize Your Collection -->
-                <div class="bg-gray-900 rounded-xl p-6 sm:p-8 shadow-2xl border border-gray-700 transform hover:scale-105 transition duration-300 group">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4 group-hover:animate-bounce">💰</span>
-                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Monetize Your Collection</h3>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed">
-                        Access exclusive strategies for selling on eBay, specialized forums, auction houses, and private sales to ensure you get top dollar for your vintage cartridges.
-                    </p>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-pink-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-pink-400 mb-4 text-5xl">🔒</div>
+                    <h3 class="text-2xl font-bold mb-3">Identity Theft Protection Advice</h3>
+                    <p class="text-gray-300 text-lg">Expert recommendations and affiliate links to trusted services that can monitor and protect your identity proactively.</p>
                 </div>
-
-                <!-- Feature 4: Stay Ahead with Market Trends -->
-                <div class="bg-gray-900 rounded-xl p-6 sm:p-8 shadow-2xl border border-gray-700 transform hover:scale-105 transition duration-300 group">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4 group-hover:animate-bounce">📈</span>
-                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Stay Ahead with Market Trends</h3>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed">
-                        Receive weekly insights from our premium newsletter on surging market trends, hot finds, upcoming auctions, and insider tips from industry experts.
-                    </p>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-green-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-green-400 mb-4 text-5xl">🎮</div>
+                    <h3 class="text-2xl font-bold mb-3">Gaming Account Best Practices</h3>
+                    <p class="text-gray-300 text-lg">Secure your Steam, Epic, Battle.net, and other gaming accounts with advanced tips to prevent future breaches.</p>
                 </div>
-
-                <!-- Feature 5: Avoid Costly Pitfalls -->
-                <div class="bg-gray-900 rounded-xl p-6 sm:p-8 shadow-2xl border border-gray-700 transform hover:scale-105 transition duration-300 group">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4 group-hover:animate-bounce">🛡️</span>
-                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Avoid Costly Pitfalls</h3>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed">
-                        Protect yourself from common rookie mistakes, deceptive fakes, and scams that plague the retro gaming market. Invest smart, not hard.
-                    </p>
-                </div>
-
-                <!-- Feature 6: Exclusive Community Access -->
-                <div class="bg-gray-900 rounded-xl p-6 sm:p-8 shadow-2xl border border-gray-700 transform hover:scale-105 transition duration-300 group">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4 group-hover:animate-bounce">🤝</span>
-                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Exclusive Community Access</h3>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed">
-                        Join an exclusive network of savvy collectors, investors, and fellow enthusiasts. Share finds, get real-time advice, and build valuable connections.
-                    </p>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-20 bg-gray-900">
-        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
-                Don't Miss Out! <span class="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-yellow-500">Join the Waitlist</span>
+    <!-- Conversion Form Section -->
+    <section id="get-kit" class="py-16 md:py-24 bg-gray-900 text-gray-100">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-8 bg-gradient-to-r from-red-400 to-yellow-400 text-transparent bg-clip-text">
+                Don't Wait Until It's Too Late!
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-xl mx-auto">
-                Be the first to get access to 'The Retro Game Fortune Finder' guide and our premium newsletter. Limited spots available for early bird pricing and exclusive bonuses!
+            <p class="text-lg md:text-xl text-gray-300 mb-10">
+                Secure your digital life now. Get your Steam Data Breach Recovery & Security Kit at this special limited-time price.
             </p>
-
-            <form action="#" method="POST" class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-2xl border border-gray-700">
-                <div class="mb-6">
-                    <label for="name" class="block text-left text-sm font-medium text-gray-300 mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 outline-none transition-all duration-200"
-                           required>
-                </div>
-                <div class="mb-8">
-                    <label for="email" class="block text-left text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 outline-none transition-all duration-200"
-                           required>
-                </div>
-                <button type="submit"
-                        class="w-full bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
-                    Sign Me Up for Early Access!
-                </button>
-                <p class="mt-4 text-xs text-gray-400">
-                    We respect your privacy. Your information will not be shared.
-                </p>
-            </form>
+            
+            <div class="bg-gray-800 p-8 rounded-lg shadow-2xl border border-red-600 max-w-xl mx-auto">
+                <p class="text-2xl md:text-3xl font-bold text-red-400 mb-4">Limited Offer: <span class="line-through text-gray-500">$99</span> <span class="text-green-400">$39</span></p>
+                <p class="text-md md:text-lg text-gray-400 mb-6">Enter your email below to claim your kit and protect your peace of mind.</p>
+                <form class="space-y-6">
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Your Email Address" required 
+                               class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 text-white text-lg placeholder-gray-400">
+                    </div>
+                    <div>
+                        <button type="submit" 
+                                class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-lg text-xl md:text-2xl transition duration-300 transform hover:scale-105 shadow-xl">
+                            Claim Your Kit Now & Secure Your Accounts!
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-4">🔒 100% Secure. Your data is safe with us.</p>
+                </form>
+            </div>
+            
+            <p class="mt-12 text-gray-400 text-md">
+                "The Digital Education Authority is committed to providing timely, high-value knowledge products to protect our community."
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-8 text-center text-gray-400 text-sm">
-        <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+    <footer class="bg-gray-950 py-10 text-gray-400 text-center text-sm border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="hover:text-gray-100 transition duration-300">Privacy Policy</a> | 
+                <a href="#" class="hover:text-gray-100 transition duration-300">Terms of Service</a>
+            </p>
+        </div>
     </footer>
 
     <!-- Countdown JavaScript -->
     <script>
-        function setupCountdown(endDate) {
-            const countdownElement = document.getElementById('countdown');
-            if (!countdownElement) return;
+        document.addEventListener('DOMContentLoaded', function () {
+            const daysElement = document.getElementById('days');
+            const hoursElement = document.getElementById('hours');
+            const minutesElement = document.getElementById('minutes');
+            const secondsElement = document.getElementById('seconds');
+            const countdownContainer = document.getElementById('countdown');
+            const heroCtaButton = document.getElementById('heroCtaButton');
 
-            const daysSpan = document.getElementById('days');
-            const hoursSpan = document.getElementById('hours');
-            const minutesSpan = document.getElementById('minutes');
-            const secondsSpan = document.getElementById('seconds');
+            // Set the date we're counting down to (e.g., 72 hours from page load)
+            const countdownDate = new Date();
+            countdownDate.setHours(countdownDate.getHours() + 72); // 3 days from now for demonstration
 
-            function updateCountdown() {
+            const x = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = endDate - now;
+                const distance = countdownDate.getTime() - now;
 
                 if (distance < 0) {
-                    clearInterval(interval);
-                    countdownElement.innerHTML = "<p class='text-lg font-bold text-red-500'>Offer Expired!</p>";
-                    // Optionally disable the waitlist button here
-                    const waitlistButton = document.querySelector('a[href="#waitlist"]');
-                    if (waitlistButton) waitlistButton.classList.add('opacity-50', 'cursor-not-allowed');
+                    clearInterval(x);
+                    countdownContainer.innerHTML = "<p class='text-xl text-red-500 font-bold'>OFFER EXPIRED!</p>";
+                    if (heroCtaButton) {
+                        heroCtaButton.classList.remove('bg-blue-600', 'hover:bg-blue-700', 'transform', 'hover:scale-105');
+                        heroCtaButton.classList.add('bg-gray-500', 'cursor-not-allowed', 'opacity-70');
+                        heroCtaButton.href = '#'; 
+                        heroCtaButton.textContent = 'Offer Expired';
+                        heroCtaButton.setAttribute('disabled', 'true');
+                    }
                     return;
                 }
 
@@ -230,21 +188,12 @@
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                daysSpan.innerHTML = String(days).padStart(2, '0');
-                hoursSpan.innerHTML = String(hours).padStart(2, '0');
-                minutesSpan.innerHTML = String(minutes).padStart(2, '0');
-                secondsSpan.innerHTML = String(seconds).padStart(2, '0');
-            }
-
-            // Update countdown immediately and then every second
-            updateCountdown();
-            const interval = setInterval(updateCountdown, 1000);
-        }
-
-        // Set the end date for the countdown (e.g., 7 days from when the page is loaded)
-        const sevenDaysFromNow = new Date();
-        sevenDaysFromNow.setDate(sevenDaysFromNow.getDate() + 7); // Set to 7 days in the future
-        setupCountdown(sevenDaysFromNow.getTime());
+                daysElement.innerHTML = String(days).padStart(2, '0');
+                hoursElement.innerHTML = String(hours).padStart(2, '0');
+                minutesElement.innerHTML = String(minutes).padStart(2, '0');
+                secondsElement.innerHTML = String(seconds).padStart(2, '0');
+            }, 1000);
+        });
     </script>
 </body>
 </html>
