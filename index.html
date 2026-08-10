@@ -1,197 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steam Data Breach Recovery Kit - Limited Time Offer</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Multi-Store DevHub: Conquer the New Android Frontier</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom Dark Mode scrollbar for premium feel */
-        ::-webkit-scrollbar {
-            width: 10px;
+        /* Custom styles for dark mode */
+        body {
+            background-color: #0d1117; /* GitHub Dark default background */
+            color: #c9d1d9; /* Light text for dark mode */
+            font-family: 'Inter', sans-serif;
         }
-        ::-webkit-scrollbar-track {
-            background: #1a202c; /* Darker background */
+        .text-gradient {
+            background: linear-gradient(to right, #a78bfa, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        ::-webkit-scrollbar-thumb {
-            background: #4a5568; /* Slightly lighter gray */
-            border-radius: 5px;
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for text readability */
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #6b7280; /* Even lighter on hover */
+        .countdown-digit {
+            background-color: rgba(30, 41, 59, 0.8); /* Dark slate blue for digits */
+            color: #ffffff;
+            font-size: 2.5rem;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            min-width: 60px; /* Ensures consistent width */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .countdown-label {
+            color: #9ca3af;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            margin-top: 0.25rem;
+        }
+        @media (max-width: 768px) {
+            .countdown-digit {
+                font-size: 1.5rem;
+                padding: 0.25rem 0.5rem;
+                min-width: 45px;
+            }
+            .countdown-label {
+                font-size: 0.75rem;
+            }
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
-
+<body>
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <!-- Hero Image -->
-        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');"></div>
-        <!-- Overlay for readability -->
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-
-        <div class="relative z-10 text-center p-4 max-w-4xl mx-auto">
-            <span class="inline-block bg-red-600 text-white text-sm md:text-base px-4 py-2 rounded-full mb-4 font-bold animate-pulse">URGENT: Steam Data Breach Alert!</span>
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">
-                Recover & Re-Secure Your Steam Account After the Cyber Attack
+    <section class="relative h-screen bg-cover bg-center flex items-center justify-center p-4" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                <span class="text-gradient">Unify & Dominate</span> the New Android App Frontier
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Don't become another victim. Get your comprehensive step-by-step digital guide to protect your identity, data, and gaming life NOW.
+            <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+                The app store landscape is changing. With new rival stores emerging, managing your Android apps is more complex than ever. <br class="hidden md:block">
+                Our platform provides the unified dashboard you need to seamlessly deploy, update, analyze, and optimize across <strong class="text-white">Google Play and all emerging rival app stores.</strong>
             </p>
-            
-            <!-- Limited Time Offer Countdown -->
-            <div class="bg-gray-800 bg-opacity-80 border border-red-600 p-6 rounded-lg shadow-xl mb-8 mx-auto max-w-md">
-                <p class="text-red-400 text-lg md:text-xl font-semibold mb-3">Limited Time Offer Ends In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-white text-4xl md:text-5xl font-bold">
-                    <div class="flex flex-col items-center">
-                        <span id="days">00</span>
-                        <span class="text-sm md:text-base font-normal text-gray-400">Days</span>
-                    </div>
-                    <span class="text-gray-500">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours">00</span>
-                        <span class="text-sm md:text-base font-normal text-gray-400">Hours</span>
-                    </div>
-                    <span class="text-gray-500">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes">00</span>
-                        <span class="text-sm md:text-base font-normal text-gray-400">Minutes</span>
-                    </div>
-                    <span class="text-gray-500">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds">00</span>
-                        <span class="text-sm md:text-base font-normal text-gray-400">Seconds</span>
-                    </div>
+            <a href="#waitlist-form" class="inline-block bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white font-bold py-4 px-10 rounded-full text-lg md:text-xl shadow-lg transform transition-all duration-300 hover:scale-105">
+                Secure Early Access Now!
+            </a>
+        </div>
+    </section>
+
+    <!-- Problem/Trend Section -->
+    <section class="bg-gray-900 py-16 px-4 md:px-8">
+        <div class="container mx-auto max-w-screen-xl text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">
+                The App Store Game Just Changed. Are You Ready?
+            </h2>
+            <p class="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+                "The first rival Android app store just arrived in the US Play Store" — <span class="text-purple-400 font-semibold">The Verge</span>. This isn't just a headline; it's a monumental shift. Fragmented ecosystems mean manual headaches, missed opportunities, and wasted time for Android developers. Our platform turns this challenge into your competitive advantage.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-400 text-4xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">New Market, New Rules</h3>
+                    <p class="text-gray-300">Emerging app stores unlock vast new user bases but introduce complex new deployment and management hurdles.</p>
                 </div>
-                <a href="#get-kit" id="heroCtaButton" class="mt-8 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-xl md:text-2xl transition duration-300 transform hover:scale-105 shadow-lg">
-                    Get Instant Access Now!
-                </a>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-green-400 text-4xl mb-4">🤯</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Fragmented & Frustrating</h3>
+                    <p class="text-gray-300">Managing multiple app store accounts, separate deployments, and disparate analytics manually is a developer's nightmare.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-red-400 text-4xl mb-4">⏳</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Time-Consuming & Costly</h3>
+                    <p class="text-gray-300">Wasting precious development cycles on administrative tasks means less innovation and higher operational costs.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-950 text-gray-100">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-5xl font-extrabold mb-12 bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text">
-                What's Inside Your Essential Security Kit?
+    <section class="bg-gray-950 py-16 px-4 md:px-8">
+        <div class="container mx-auto max-w-screen-xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-center text-white mb-12">
+                Your All-in-One Solution for <span class="text-gradient">Multi-Store Mastery</span>
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-blue-400 mb-4 text-5xl">✅</div>
-                    <h3 class="text-2xl font-bold mb-3">Step-by-Step Action Plan</h3>
-                    <p class="text-gray-300 text-lg">A clear, concise guide to navigate the immediate aftermath of a data breach. No tech jargon, just actionable steps.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="flex flex-col items-start bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-[1.02] transition-transform duration-300 border-l-4 border-purple-500">
+                    <div class="text-5xl mb-4">📊</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Unified Dashboard</h3>
+                    <p class="text-gray-300 leading-relaxed">Manage all your apps across Google Play, Aptoide, and more from a single, intuitive interface. Say goodbye to tab-hopping.</p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-purple-500 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-purple-400 mb-4 text-5xl">📄</div>
-                    <h3 class="text-2xl font-bold mb-3">Printable Security Checklist</h3>
-                    <p class="text-gray-300 text-lg">A physical checklist of essential security measures to ensure you don't miss a single critical step in securing your accounts.</p>
+                <div class="flex flex-col items-start bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-[1.02] transition-transform duration-300 border-l-4 border-blue-500">
+                    <div class="text-5xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Seamless Deployment</h3>
+                    <p class="text-gray-300 leading-relaxed">Automate app releases and updates to multiple stores simultaneously, ensuring consistent versions and saving hours.</p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-pink-500 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-pink-400 mb-4 text-5xl">🔒</div>
-                    <h3 class="text-2xl font-bold mb-3">Identity Theft Protection Advice</h3>
-                    <p class="text-gray-300 text-lg">Expert recommendations and affiliate links to trusted services that can monitor and protect your identity proactively.</p>
+                <div class="flex flex-col items-start bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-[1.02] transition-transform duration-300 border-l-4 border-green-500">
+                    <div class="text-5xl mb-4">📈</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Centralized Analytics</h3>
+                    <p class="text-gray-300 leading-relaxed">Get comprehensive performance insights, downloads, revenue, and user engagement across all your stores in real-time.</p>
                 </div>
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-green-500 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-green-400 mb-4 text-5xl">🎮</div>
-                    <h3 class="text-2xl font-bold mb-3">Gaming Account Best Practices</h3>
-                    <p class="text-gray-300 text-lg">Secure your Steam, Epic, Battle.net, and other gaming accounts with advanced tips to prevent future breaches.</p>
+                <div class="flex flex-col items-start bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-[1.02] transition-transform duration-300 border-l-4 border-yellow-500">
+                    <div class="text-5xl mb-4">⭐</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Advanced ASO Tools</h3>
+                    <p class="text-gray-300 leading-relaxed">Optimize your app listings for discoverability and conversion with AI-driven suggestions tailored for each store's algorithm.</p>
+                </div>
+                <div class="flex flex-col items-start bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-[1.02] transition-transform duration-300 border-l-4 border-red-500">
+                    <div class="text-5xl mb-4">⚙️</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Automated Updates</h3>
+                    <p class="text-gray-300 leading-relaxed">Schedule and push updates across all selected stores with a single click, reducing manual error and maintenance overhead.</p>
+                </div>
+                <div class="flex flex-col items-start bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-[1.02] transition-transform duration-300 border-l-4 border-teal-500">
+                    <div class="text-5xl mb-4">🛡️</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Robust Security</h3>
+                    <p class="text-gray-300 leading-relaxed">Your data and intellectual property are protected with enterprise-grade security protocols across all integrations.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Conversion Form Section -->
-    <section id="get-kit" class="py-16 md:py-24 bg-gray-900 text-gray-100">
-        <div class="max-w-3xl mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-5xl font-extrabold mb-8 bg-gradient-to-r from-red-400 to-yellow-400 text-transparent bg-clip-text">
-                Don't Wait Until It's Too Late!
+    <!-- Waitlist Form Section with Countdown -->
+    <section id="waitlist-form" class="bg-gray-900 py-20 px-4 md:px-8">
+        <div class="container mx-auto max-w-2xl text-center bg-gray-950 p-8 md:p-12 rounded-2xl shadow-2xl border border-gray-800">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
+                Limited Time Early Access
             </h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-10">
-                Secure your digital life now. Get your Steam Data Breach Recovery & Security Kit at this special limited-time price.
+            <p class="text-lg md:text-xl text-gray-300 mb-8">
+                Be among the first Android developers to gain a competitive edge in the evolving app store ecosystem. This exclusive opportunity won't last forever!
             </p>
-            
-            <div class="bg-gray-800 p-8 rounded-lg shadow-2xl border border-red-600 max-w-xl mx-auto">
-                <p class="text-2xl md:text-3xl font-bold text-red-400 mb-4">Limited Offer: <span class="line-through text-gray-500">$99</span> <span class="text-green-400">$39</span></p>
-                <p class="text-md md:text-lg text-gray-400 mb-6">Enter your email below to claim your kit and protect your peace of mind.</p>
-                <form class="space-y-6">
-                    <div>
-                        <input type="email" id="email" name="email" placeholder="Your Email Address" required 
-                               class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 text-white text-lg placeholder-gray-400">
-                    </div>
-                    <div>
-                        <button type="submit" 
-                                class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-lg text-xl md:text-2xl transition duration-300 transform hover:scale-105 shadow-xl">
-                            Claim Your Kit Now & Secure Your Accounts!
-                        </button>
-                    </div>
-                    <p class="text-sm text-gray-500 mt-4">🔒 100% Secure. Your data is safe with us.</p>
-                </form>
+
+            <!-- Countdown Timer -->
+            <div class="flex justify-center items-center space-x-4 mb-12">
+                <div>
+                    <div id="days" class="countdown-digit">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div>
+                    <div id="hours" class="countdown-digit">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div>
+                    <div id="minutes" class="countdown-digit">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div>
+                    <div id="seconds" class="countdown-digit">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
             </div>
-            
-            <p class="mt-12 text-gray-400 text-md">
-                "The Digital Education Authority is committed to providing timely, high-value knowledge products to protect our community."
-            </p>
+
+            <!-- Waitlist Form -->
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label for="name" class="sr-only">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required
+                           class="w-full p-4 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500 text-lg">
+                </div>
+                <div>
+                    <label for="email" class="sr-only">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Professional Email" required
+                           class="w-full p-4 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500 text-lg">
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white font-bold py-4 rounded-lg text-xl shadow-lg transform transition-all duration-300 hover:scale-[1.02]">
+                    Join the Exclusive Waitlist!
+                </button>
+                <p class="text-sm text-gray-500 mt-4">No spam, just early access and platform updates.</p>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-10 text-gray-400 text-center text-sm border-t border-gray-800">
-        <div class="max-w-6xl mx-auto px-6">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">
-                <a href="#" class="hover:text-gray-100 transition duration-300">Privacy Policy</a> | 
-                <a href="#" class="hover:text-gray-100 transition duration-300">Terms of Service</a>
-            </p>
+    <footer class="bg-gray-950 py-8 px-4 md:px-8 text-center text-gray-500 text-sm">
+        <div class="container mx-auto max-w-screen-xl">
+            &copy; 2023 Multi-Store DevHub. All rights reserved.
         </div>
     </footer>
 
     <!-- Countdown JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const daysElement = document.getElementById('days');
-            const hoursElement = document.getElementById('hours');
-            const minutesElement = document.getElementById('minutes');
-            const secondsElement = document.getElementById('seconds');
-            const countdownContainer = document.getElementById('countdown');
-            const heroCtaButton = document.getElementById('heroCtaButton');
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now
+            countDownDate.setHours(countDownDate.getHours() + 12); // Add some hours for variation
 
-            // Set the date we're counting down to (e.g., 72 hours from page load)
-            const countdownDate = new Date();
-            countdownDate.setHours(countdownDate.getHours() + 72); // 3 days from now for demonstration
-
+            // Update the count down every 1 second
             const x = setInterval(function() {
+
+                // Get today's date and time
                 const now = new Date().getTime();
-                const distance = countdownDate.getTime() - now;
 
-                if (distance < 0) {
-                    clearInterval(x);
-                    countdownContainer.innerHTML = "<p class='text-xl text-red-500 font-bold'>OFFER EXPIRED!</p>";
-                    if (heroCtaButton) {
-                        heroCtaButton.classList.remove('bg-blue-600', 'hover:bg-blue-700', 'transform', 'hover:scale-105');
-                        heroCtaButton.classList.add('bg-gray-500', 'cursor-not-allowed', 'opacity-70');
-                        heroCtaButton.href = '#'; 
-                        heroCtaButton.textContent = 'Offer Expired';
-                        heroCtaButton.setAttribute('disabled', 'true');
-                    }
-                    return;
-                }
+                // Find the distance between now and the count down date
+                const distance = countDownDate.getTime() - now;
 
+                // Time calculations for days, hours, minutes and seconds
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                daysElement.innerHTML = String(days).padStart(2, '0');
-                hoursElement.innerHTML = String(hours).padStart(2, '0');
-                minutesElement.innerHTML = String(minutes).padStart(2, '0');
-                secondsElement.innerHTML = String(seconds).padStart(2, '0');
+                // Display the result in the respective elements
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+                // If the count down is finished, write some text
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("days").innerHTML = "00";
+                    document.getElementById("hours").innerHTML = "00";
+                    document.getElementById("minutes").innerHTML = "00";
+                    document.getElementById("seconds").innerHTML = "00";
+                    // Optionally disable the form or change the CTA
+                    const formButton = document.querySelector("#waitlist-form button[type='submit']");
+                    if (formButton) {
+                        formButton.textContent = "Waitlist Closed";
+                        formButton.disabled = true;
+                        formButton.classList.remove("bg-gradient-to-r");
+                        formButton.classList.add("bg-gray-600");
+                        formButton.classList.add("cursor-not-allowed");
+                    }
+                }
             }, 1000);
         });
     </script>
