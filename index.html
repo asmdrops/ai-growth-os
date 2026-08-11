@@ -3,251 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Windows 11 Price Hike Survival Guide - Limited Time Offer!</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Verified Asset Integrity – Tamper-Proof Photo Authentication for B2B</title>
+    <meta name="description" content="Secure your critical visual evidence with Verified Asset Integrity. Leverage emerging Apple authentication for tamper-proof iPhone photo verification, secure cloud storage, and seamless API integration. Limited-time introductory offer!">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for modern premium dark mode aesthetic */
         body {
-            font-family: 'Inter', sans-serif; /* A modern, clean sans-serif font */
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            font-family: 'Inter', sans-serif;
         }
-
-        /* Hero image background */
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        /* Custom scrollbar for dark mode */
+        body::-webkit-scrollbar {
+            width: 8px;
         }
-
-        /* Countdown specific styles for tabular numbers */
-        #countdown-timer .digit {
-            font-variant-numeric: tabular-nums; /* Ensures fixed width digits for better visual alignment */
+        body::-webkit-scrollbar-track {
+            background: #1a202c; /* dark gray background */
         }
-
-        /* Simple Animations for a premium feel */
-        @keyframes fadeInUpp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        body::-webkit-scrollbar-thumb {
+            background-color: #4a5568; /* slightly lighter gray for thumb */
+            border-radius: 4px;
         }
-        .animate-fade-in-up {
-            animation: fadeInUpp 0.8s ease-out forwards;
-            opacity: 0; /* Hidden by default */
+        body::-webkit-scrollbar-thumb:hover {
+            background-color: #6c7a8f; /* even lighter on hover */
         }
-        .animate-fade-in-up.delay-100 { animation-delay: 0.1s; }
-        .animate-fade-in-up.delay-200 { animation-delay: 0.2s; }
-        .animate-fade-in-up.delay-300 { animation-delay: 0.3s; }
-        .animate-fade-in-up.delay-400 { animation-delay: 0.4s; }
-        .animate-fade-in-up.delay-500 { animation-delay: 0.5s; }
     </style>
-    <script>
-        // JavaScript for the Limited Time Countdown Timer
-        document.addEventListener('DOMContentLoaded', function() {
-            const countdownElement = document.getElementById('countdown-timer');
-            if (countdownElement) {
-                // Set the end date for the countdown (e.g., 7 days from now for a "Limited Time" offer)
-                const endDate = new Date();
-                endDate.setDate(endDate.getDate() + 7); // Offer valid for 7 days
-
-                function updateCountdown() {
-                    const now = new Date().getTime();
-                    const distance = endDate - now;
-
-                    if (distance < 0) {
-                        countdownElement.innerHTML = `<span class="text-red-500 font-bold text-xl md:text-3xl">Offer Expired!</span>`;
-                        // Optionally disable the CTA button here
-                        const ctaButton = document.querySelector('a[href="#enroll-form"]');
-                        if (ctaButton) ctaButton.remove();
-                        const enrollFormButton = document.querySelector('#enroll-form button[type="submit"]');
-                        if (enrollFormButton) {
-                            enrollFormButton.disabled = true;
-                            enrollFormButton.textContent = 'Offer Expired';
-                            enrollFormButton.classList.remove('bg-blue-600', 'hover:bg-blue-700');
-                            enrollFormButton.classList.add('bg-gray-600', 'cursor-not-allowed');
-                        }
-                        return;
-                    }
-
-                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                    countdownElement.innerHTML = `
-                        <div class="flex flex-col items-center mx-1 md:mx-2 p-2 bg-gray-700 rounded-lg min-w-[70px] md:min-w-[100px]">
-                            <span class="text-3xl md:text-5xl font-extrabold digit">${days < 10 ? '0' + days : days}</span>
-                            <span class="text-xs md:text-sm text-gray-300 uppercase mt-1">Days</span>
-                        </div>
-                        <div class="text-3xl md:text-5xl font-extrabold mx-1">:</div>
-                        <div class="flex flex-col items-center mx-1 md:mx-2 p-2 bg-gray-700 rounded-lg min-w-[70px] md:min-w-[100px]">
-                            <span class="text-3xl md:text-5xl font-extrabold digit">${hours < 10 ? '0' + hours : hours}</span>
-                            <span class="text-xs md:text-sm text-gray-300 uppercase mt-1">Hours</span>
-                        </div>
-                        <div class="text-3xl md:text-5xl font-extrabold mx-1">:</div>
-                        <div class="flex flex-col items-center mx-1 md:mx-2 p-2 bg-gray-700 rounded-lg min-w-[70px] md:min-w-[100px]">
-                            <span class="text-3xl md:text-5xl font-extrabold digit">${minutes < 10 ? '0' + minutes : minutes}</span>
-                            <span class="text-xs md:text-sm text-gray-300 uppercase mt-1">Minutes</span>
-                        </div>
-                        <div class="text-3xl md:text-5xl font-extrabold mx-1">:</div>
-                        <div class="flex flex-col items-center mx-1 md:mx-2 p-2 bg-gray-700 rounded-lg min-w-[70px] md:min-w-[100px]">
-                            <span class="text-3xl md:text-5xl font-extrabold digit">${seconds < 10 ? '0' + seconds : seconds}</span>
-                            <span class="text-xs md:text-sm text-gray-300 uppercase mt-1">Seconds</span>
-                        </div>
-                    `;
-                }
-
-                updateCountdown();
-                setInterval(updateCountdown, 1000);
-            }
-        });
-    </script>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased leading-normal tracking-tight">
+<body class="bg-gray-950 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <section class="hero-background relative h-screen flex items-center justify-center text-center p-4">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
-        <div class="relative z-10 max-w-4xl mx-auto space-y-8">
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight drop-shadow-lg animate-fade-in-up">
-                Don't Get Priced Out: <br>Your <span class="text-red-500">Windows 11 Price Hike</span> Survival Guide
-            </h1>
-            <p class="text-lg md:text-xl text-gray-300 mt-4 max-w-2xl mx-auto animate-fade-in-up delay-100">
-                Unlock actionable strategies to navigate rising laptop costs, explore powerful alternatives, and optimize your current hardware.
-            </p>
-            
-            <!-- Limited Time Offer Countdown -->
-            <div class="mt-8 bg-gradient-to-r from-purple-700 to-blue-700 p-6 rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out animate-fade-in-up delay-200">
-                <p class="text-xl md:text-3xl font-bold text-white mb-4">Limited Time Offer Ends In:</p>
-                <div id="countdown-timer" class="flex justify-center items-center text-white flex-wrap">
-                    <!-- Countdown digits will be injected here by JavaScript -->
-                    <div class="flex flex-col items-center mx-1 md:mx-2 p-2 bg-gray-800 rounded-lg min-w-[70px] md:min-w-[100px]">
-                        <span class="text-3xl md:text-5xl font-extrabold digit">07</span>
-                        <span class="text-xs md:text-sm text-gray-300 uppercase mt-1">Days</span>
-                    </div>
-                    <div class="text-3xl md:text-5xl font-extrabold mx-1 md:mx-2">:</div>
-                    <div class="flex flex-col items-center mx-1 md:mx-2 p-2 bg-gray-800 rounded-lg min-w-[70px] md:min-w-[100px]">
-                        <span class="text-3xl md:text-5xl font-extrabold digit">23</span>
-                        <span class="text-xs md:text-sm text-gray-300 uppercase mt-1">Hours</span>
-                    </div>
-                    <div class="text-3xl md:text-5xl font-extrabold mx-1 md:mx-2">:</div>
-                    <div class="flex flex-col items-center mx-1 md:mx-2 p-2 bg-gray-800 rounded-lg min-w-[70px] md:min-w-[100px]">
-                        <span class="text-3xl md:text-5xl font-extrabold digit">59</span>
-                        <span class="text-xs md:text-sm text-gray-300 uppercase mt-1">Minutes</span>
-                    </div>
-                    <div class="text-3xl md:text-5xl font-extrabold mx-1 md:mx-2">:</div>
-                    <div class="flex flex-col items-center mx-1 md:mx-2 p-2 bg-gray-800 rounded-lg min-w-[70px] md:min-w-[100px]">
-                        <span class="text-3xl md:text-5xl font-extrabold digit">59</span>
-                        <span class="text-xs md:text-sm text-gray-300 uppercase mt-1">Seconds</span>
-                    </div>
-                </div>
-            </div>
-
-            <a href="#enroll-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-extrabold py-4 px-10 rounded-full text-xl uppercase tracking-wider transition-all duration-300 transform hover:scale-105 shadow-lg mt-8 animate-fade-in-up delay-300">
-                Get Your Survival Guide Now!
-            </a>
+    <header class="relative h-screen min-h-[600px] flex items-center justify-center p-4 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-cover bg-center"
+             style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
         </div>
-    </section>
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-br from-black to-blue-950 opacity-80"></div>
+
+        <div class="relative z-10 text-center max-w-4xl mx-auto space-y-6 lg:space-y-8 px-4 sm:px-6">
+            <p class="text-blue-400 text-sm sm:text-base font-semibold uppercase tracking-wider mb-2 animate-pulse">
+                Leveraging Emerging Apple Technology (iOS 27 Hints)
+            </p>
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white leading-tight">
+                Instantly <span class="text-blue-500">Verify Asset Integrity</span> with Tamper-Proof Photo Authentication
+            </h1>
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-2xl mx-auto">
+                Secure your claims, property records, and legal evidence. Our platform generates an unalterable certificate of authenticity for every iPhone-sourced image.
+            </p>
+
+            <div class="mt-8 flex flex-col items-center space-y-4">
+                <a href="#waitlist" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                    Join Our Limited-Time Introductory Offer!
+                </a>
+                <p class="text-yellow-400 text-base sm:text-lg mt-3 font-semibold flex items-center justify-center">
+                    Offer ends in: <span id="countdown" class="font-mono ml-3 px-3 py-1 bg-gray-800 rounded-md shadow-inner"></span>
+                </p>
+            </div>
+        </div>
+    </header>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-800 text-center px-4">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-bold text-white mb-12 animate-fade-in-up">What You'll Discover Inside This Essential Guide</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1: Budget-Friendly Laptops -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out animate-fade-in-up">
-                    <div class="text-blue-500 mb-4">
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+    <section class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white text-center mb-12 sm:mb-16 leading-tight">
+                Unprecedented Trust for Your Critical Visual Evidence
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+
+                <!-- Feature 1: Tamper-Proof Verification -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-700 hover:border-blue-500 flex flex-col">
+                    <div class="text-blue-400 text-4xl mb-4 flex-shrink-0">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.275a1.125 1.125 0 011.234 1.234L19.5 19.5H12"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Master Budget-Friendly Laptop Hunting</h3>
-                    <p class="text-gray-300">Uncover insider strategies and hidden gems to find powerful laptops that won't break the bank, even with rising prices.</p>
+                    <h3 class="text-2xl font-bold text-white mb-3">Tamper-Proof Verification</h3>
+                    <p class="text-gray-300 flex-grow">
+                        Leverage Apple's future 'Reference Image' authentication to generate unalterable certificates for iPhone-sourced photos, including metadata, timestamp, and origin. Ensure every image is legitimate.
+                    </p>
+                    <ul class="mt-4 text-gray-400 text-sm space-y-2">
+                        <li><span class="text-blue-400 mr-2">&#10003;</span> Forensic-grade evidence</li>
+                        <li><span class="text-blue-400 mr-2">&#10003;</span> Automated integrity checks</li>
+                    </ul>
                 </div>
-                <!-- Feature 2: OS Alternatives -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out animate-fade-in-up delay-100">
-                    <div class="text-green-500 mb-4">
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+
+                <!-- Feature 2: Secure Cloud Storage -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-700 hover:border-blue-500 flex flex-col">
+                    <div class="text-blue-400 text-4xl mb-4 flex-shrink-0">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Explore Powerful OS Alternatives</h3>
-                    <p class="text-gray-300">Dive deep into Linux distributions and ChromeOS, understanding which alternative operating systems genuinely fit your specific needs.</p>
+                    <h3 class="text-2xl font-bold text-white mb-3">Secure Cloud Storage</h3>
+                    <p class="text-gray-300 flex-grow">
+                        Reliably store all verified images and their certificates in our encrypted, compliant cloud infrastructure. Access your critical assets anytime, anywhere.
+                    </p>
+                    <ul class="mt-4 text-gray-400 text-sm space-y-2">
+                        <li><span class="text-blue-400 mr-2">&#10003;</span> Redundant backups</li>
+                        <li><span class="text-blue-400 mr-2">&#10003;</span> Role-based access control</li>
+                    </ul>
                 </div>
-                <!-- Feature 3: Hardware Optimization -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out animate-fade-in-up delay-200">
-                    <div class="text-purple-500 mb-4">
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+
+                <!-- Feature 3: Seamless System Integration -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-700 hover:border-blue-500 flex flex-col">
+                    <div class="text-blue-400 text-4xl mb-4 flex-shrink-0">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.25 7.5l.45-1.8A2.25 2.25 0 0110.61 3h3.778a2.25 2.25 0 012.152 2.7l-.45 1.8m-8.625.045c.414-.156.886-.285 1.394-.372C10.164 7.206 11.286 7 12 7c.714 0 1.836.206 2.76.473a1.75 1.75 0 001.394.372M3.75 9.75v4.5c0 1.087.466 2.108 1.22 2.805M18.75 9.75v4.5c0 1.087-.466 2.108-1.22 2.805m-1.751-.264A2.25 2.25 0 0013.5 18H12m-2.25-1.5H5.75m1.5-4.5H5.75m1.5-4.5H5.75m-3.75 9h16.5"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Optimize & Extend Your Current Hardware</h3>
-                    <p class="text-gray-300">Learn professional tips and tricks to breathe new life into your existing laptop, delaying costly upgrades and maximizing performance.</p>
+                    <h3 class="text-2xl font-bold text-white mb-3">Seamless System Integration</h3>
+                    <p class="text-gray-300 flex-grow">
+                        Our robust API allows for effortless integration with your existing CRM, claims management software, or other internal systems. Streamline your workflow.
+                    </p>
+                    <ul class="mt-4 text-gray-400 text-sm space-y-2">
+                        <li><span class="text-blue-400 mr-2">&#10003;</span> Developer-friendly documentation</li>
+                        <li><span class="text-blue-400 mr-2">&#10003;</span> Custom integration support</li>
+                    </ul>
                 </div>
-                <!-- Feature 4: Future-Proof Decisions -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out animate-fade-in-up delay-300">
-                    <div class="text-yellow-500 mb-4">
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+
+                <!-- Feature 4: Public Verification Badge -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-700 hover:border-blue-500 flex flex-col">
+                    <div class="text-blue-400 text-4xl mb-4 flex-shrink-0">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12a.75.75 0 110-1.5.75.75 0 010 1.5zM12 17.25a.75.75 0 110-1.5.75.75 0 010 1.5z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Future-Proof Your Laptop Decisions</h3>
-                    <p class="text-gray-300">Gain insights into market trends and future-proofing strategies to make smart, informed laptop purchasing decisions for years to come.</p>
+                    <h3 class="text-2xl font-bold text-white mb-3">Public Verification Badge</h3>
+                    <p class="text-gray-300 flex-grow">
+                        Display a trusted 'Verified Asset Integrity' badge on your authenticated images for external sharing, increasing transparency and stakeholder confidence.
+                    </p>
+                    <ul class="mt-4 text-gray-400 text-sm space-y-2">
+                        <li><span class="text-blue-400 mr-2">&#10003;</span> Enhance public trust</li>
+                        <li><span class="text-blue-400 mr-2">&#10003;</span> Deter fraud attempts</li>
+                    </ul>
                 </div>
-                <!-- Feature 5: Avoid Pricing Traps -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out animate-fade-in-up delay-400">
-                    <div class="text-red-500 mb-4">
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002.92 12c0 3.072 1.578 5.762 3.915 7.319A11.955 11.955 0 0112 21.055c3.541-.937 6.467-3.692 8.25-7.086 1.354-2.585 1.76-5.467 1.056-8.337"></path></svg>
+
+                <!-- Feature 5: Real Estate Compliance -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-700 hover:border-blue-500 flex flex-col">
+                    <div class="text-blue-400 text-4xl mb-4 flex-shrink-0">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.25 21h19.5m-19.5 0A2.25 2.25 0 0021 18.75v-2.25c0-1.036-.465-1.996-1.22-2.642l-1.997-1.897A4.475 4.475 0 0015 9.75v-1.5A2.25 2.25 0 0012.75 6H10.5a2.25 2.25 0 00-2.25 2.25v1.5c0 .72-.257 1.416-.747 1.973L3.47 16.108V18.75A2.25 2.25 0 004.5 21z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Avoid Common Pricing Traps</h3>
-                    <p class="text-gray-300">Identify and bypass common marketing ploys and pricing traps that lead to overspending on new hardware.</p>
+                    <h3 class="text-2xl font-bold text-white mb-3">Real Estate Compliance</h3>
+                    <p class="text-gray-300 flex-grow">
+                        From property inspections to condition reports, ensure every visual record for real estate transactions is beyond dispute. Protect buyers, sellers, and agents.
+                    </p>
+                    <ul class="mt-4 text-gray-400 text-sm space-y-2">
+                        <li><span class="text-blue-400 mr-2">&#10003;</span> Proof of condition</li>
+                        <li><span class="text-blue-400 mr-2">&#10003;</span> Streamlined auditing</li>
+                    </ul>
                 </div>
-                <!-- Feature 6: Expert Resources -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out animate-fade-in-up delay-500">
-                    <div class="text-indigo-500 mb-4">
-                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path></svg>
+
+                <!-- Feature 6: Insurance Claims Evidence -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-700 hover:border-blue-500 flex flex-col">
+                    <div class="text-blue-400 text-4xl mb-4 flex-shrink-0">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 009-9H3a9 9 0 009 9z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Expert Recommendations & Resources</h3>
-                    <p class="text-gray-300">Access curated lists of recommended tools, software, and resources to implement the guide's strategies effectively.</p>
+                    <h3 class="text-2xl font-bold text-white mb-3">Insurance Claims Evidence</h3>
+                    <p class="text-gray-300 flex-grow">
+                        Expedite claims processing and prevent fraud with irrefutable visual evidence of damages, assets, and incidents. Build trust with policyholders and adjusters.
+                    </p>
+                    <ul class="mt-4 text-gray-400 text-sm space-y-2">
+                        <li><span class="text-blue-400 mr-2">&#10003;</span> Fraud reduction</li>
+                        <li><span class="text-blue-400 mr-2">&#10003;</span> Faster payout cycles</li>
+                    </ul>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Call to Action / Enrollment Form Section -->
-    <section id="enroll-form" class="py-16 md:py-24 bg-gray-900 text-center px-4">
-        <div class="max-w-3xl mx-auto bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl border border-gray-700">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Secure Your Future. Get The Guide Now!</h2>
-            <p class="text-lg text-gray-300 mb-8">
-                Don't let rising Windows 11 costs dictate your tech future. Arm yourself with knowledge and make smarter, more economical decisions today.
+    <!-- Call to Action / Waitlist Section -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gradient-to-br from-gray-950 to-gray-800">
+        <div class="container mx-auto px-4 max-w-2xl text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
+                Be Among the First to Secure Your Visual Evidence
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                Join our waitlist for early access to Verified Asset Integrity. Take advantage of our
+                <span class="font-bold text-blue-400">Limited-Time Introductory Offer</span> and gain a competitive edge in verifiable documentation.
             </p>
-            <form action="#" method="POST" class="space-y-6">
-                <div>
-                    <input type="email" id="email" name="email" placeholder="Enter your best email address" required
-                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring-blue-500 text-white placeholder-gray-400 text-lg">
-                </div>
-                <div>
-                    <button type="submit"
-                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-extrabold py-4 rounded-lg text-xl uppercase tracking-wider transition-all duration-300 transform hover:scale-105 shadow-lg">
-                        Access The Full Guide Instantly
-                    </button>
-                </div>
-                <p class="text-sm text-gray-400 mt-4">
-                    By clicking "Access The Full Guide Instantly", you agree to receive email updates and promotional offers.
+
+            <div class="bg-gray-800 p-8 sm:p-10 rounded-xl shadow-xl border border-gray-700">
+                <p class="text-yellow-400 text-xl sm:text-2xl font-semibold mb-6 animate-pulse flex items-center justify-center">
+                    Offer Expires In: <span id="countdown-form" class="font-mono ml-3 px-4 py-2 bg-gray-900 rounded-lg shadow-inner"></span>
                 </p>
-            </form>
+                <form class="space-y-6 sm:space-y-8">
+                    <div>
+                        <input type="text" placeholder="Your Name" class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-300 text-base sm:text-lg" required>
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Work Email" class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-300 text-base sm:text-lg" required>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Company Name" class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-300 text-base sm:text-lg">
+                    </div>
+                    <div>
+                        <select class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-300 text-base sm:text-lg appearance-none cursor-pointer" style="background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%239CA3AF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1em;">
+                            <option value="">Your Role / Industry (Optional)</option>
+                            <option value="real_estate">Real Estate Agent / Broker</option>
+                            <option value="insurance_adjuster">Insurance Adjuster</option>
+                            <option value="legal_firm">Legal Professional</option>
+                            <option value="developer">Software Developer</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-md hover:shadow-lg">
+                        Secure My Early Access & Discount
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm border-t border-gray-800">
-        <div class="max-w-6xl mx-auto px-4">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <div class="mt-4 space-x-4">
-                <a href="#" class="hover:text-gray-300 transition-colors duration-200">Privacy Policy</a>
-                <a href="#" class="hover:text-gray-300 transition-colors duration-200">Terms of Service</a>
+    <footer class="bg-gray-900 py-10">
+        <div class="container mx-auto px-4 text-center text-gray-500">
+            <p>&copy; 2024 Verified Asset Integrity. All rights reserved.</p>
+            <p class="mt-2 text-sm">Powered by cutting-edge Apple authentication (pending API availability).</p>
+            <div class="mt-4 flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
+                <a href="#" class="hover:text-blue-500 transition-colors duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-blue-500 transition-colors duration-300">Terms of Service</a>
             </div>
         </div>
     </footer>
 
+    <!-- Countdown Script -->
+    <script>
+        // Set the date we're counting down to (e.g., 30 days from now for a limited offer)
+        const endDate = new Date();
+        endDate.setDate(endDate.getDate() + 30); // 30 days from now
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = endDate.getTime() - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            const countdownElements = document.querySelectorAll('#countdown, #countdown-form');
+
+            if (distance < 0) {
+                countdownElements.forEach(el => el.innerHTML = "EXPIRED!");
+                clearInterval(interval);
+                // Optionally disable the form or change the offer message
+                const ctaButton = document.querySelector('#waitlist button[type="submit"]');
+                if (ctaButton) {
+                    ctaButton.disabled = true;
+                    ctaButton.textContent = "Offer Expired";
+                    ctaButton.classList.remove('bg-blue-600', 'hover:bg-blue-700', 'hover:scale-105');
+                    ctaButton.classList.add('bg-gray-500', 'cursor-not-allowed');
+                }
+            } else {
+                const countdownString = `${days.toString().padStart(2, '0')}d ${hours.toString().padStart(2, '0')}h ${minutes.toString().padStart(2, '0')}m ${seconds.toString().padStart(2, '0')}s`;
+                countdownElements.forEach(el => el.innerHTML = countdownString);
+            }
+        }
+
+        const interval = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call to display immediately
+    </script>
 </body>
 </html>
