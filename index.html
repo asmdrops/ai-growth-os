@@ -3,162 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creator Content Guardian - Protect Your Legacy. Opt-Out, Monitor, Control.</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>AI Content Protection Toolkit for Streamers - Secure Your Legacy</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
     <style>
-        /* Custom scrollbar for a premium feel */
-        ::-webkit-scrollbar {
-            width: 8px;
+        /* Custom styles for dark mode and premium feel */
+        body {
+            font-family: 'Inter', sans-serif; /* Or any modern sans-serif font */
         }
-        ::-webkit-scrollbar-track {
-            background: #1f2937; /* dark gray */
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-position: center center;
+            background-size: cover;
         }
-        ::-webkit-scrollbar-thumb {
-            background: #8b5cf6; /* purple-500 */
-            border-radius: 4px;
+        .gradient-overlay {
+            background-image: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.8) 100%);
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #a78bfa; /* purple-400 */
+        .btn-primary {
+            background: linear-gradient(to right, #6366f1, #9333ea); /* Indigo to Purple */
+            transition: all 0.3s ease;
         }
-
-        /* CSS for simple fade-in animations on Hero text */
-        @keyframes fadeInMoveUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .btn-primary:hover {
+            background: linear-gradient(to right, #4f46e5, #7e22ce);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4);
         }
-        .animate-fade-in-up {
-            animation: fadeInMoveUp 0.8s ease-out forwards;
-            opacity: 0; /* Start invisible */
+        .feature-card {
+            background-color: rgba(30, 41, 59, 0.7); /* slate-800 with transparency */
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(71, 85, 105, 0.5); /* slate-600 with transparency */
+            transition: all 0.3s ease;
         }
-        .animate-fade-in-up.delay-200 { animation-delay: 0.2s; }
-        .animate-fade-in-up.delay-400 { animation-delay: 0.4s; }
-        .animate-fade-in-up.delay-500 { animation-delay: 0.5s; }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            border-color: #6366f1; /* Indigo hover border */
+        }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans leading-normal tracking-normal overflow-x-hidden">
+<body class="bg-gray-900 text-gray-100 antialiased leading-normal tracking-tight">
 
     <!-- Hero Section -->
-    <header class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-            <div class="absolute inset-0 bg-black opacity-75"></div> <!-- Dark overlay for readability -->
-        </div>
-
-        <div class="relative z-10 p-4 md:p-8 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 text-white drop-shadow-lg animate-fade-in-up">
-                Reclaim Your Content. Protect Your Legacy.
+    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden hero-bg">
+        <div class="absolute inset-0 gradient-overlay z-10"></div>
+        <div class="relative z-20 p-6 sm:p-8 md:p-12 lg:p-16 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4 text-white drop-shadow-lg">
+                <span class="block animate-pulse">PROTECT YOUR LEGACY:</span> <span class="text-indigo-400">Stop AI Training</span> on Your Twitch Content
             </h1>
-            <p class="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-200">
-                The unified dashboard for streamers to effortlessly manage AI training opt-out across Twitch and beyond.
+            <p class="text-lg sm:text-xl md:text-2xl mb-8 text-gray-200 font-light max-w-3xl mx-auto">
+                The recent <span class="font-semibold text-red-400">Twitch AI backlash (BBC)</span> is just the beginning. Secure your valuable content, identity, and future with our comprehensive AI Content Protection Toolkit.
             </p>
-            <a href="#waitlist" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 ease-in-out hover:scale-105 animate-fade-in-up delay-400">
-                Join the Waitlist - Secure Your Content
-            </a>
-            <p class="mt-4 text-gray-400 text-sm animate-fade-in-up delay-500">
-                Tired of defaulting to AI training? We've got you covered.
-            </p>
+            <div class="mb-8">
+                <a href="#waitlist-form" class="btn-primary text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl inline-block shadow-lg focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
+                    Join the Waitlist & Secure Early Access!
+                </a>
+            </div>
+
+            <!-- Limited Time Countdown -->
+            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-4 sm:p-6 rounded-lg shadow-xl inline-block mt-8 animate-pulse">
+                <p class="text-sm sm:text-base font-semibold mb-2">Offer Ends In:</p>
+                <div id="countdown" class="flex justify-center space-x-2 sm:space-x-4 text-2xl sm:text-3xl md:text-4xl font-bold">
+                    <div class="flex flex-col items-center">
+                        <span id="days">00</span>
+                        <span class="text-xs sm:text-sm font-normal">Days</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span id="hours">00</span>
+                        <span class="text-xs sm:text-sm font-normal">Hours</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes">00</span>
+                        <span class="text-xs sm:text-sm font-normal">Minutes</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds">00</span>
+                        <span class="text-xs sm:text-sm font-normal">Seconds</span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
+    </section>
 
     <!-- Problem/Trend Section -->
-    <section class="py-16 md:py-24 bg-gray-900 text-center">
-        <div class="container mx-auto px-6 max-w-5xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-8">
-                The Looming Threat: Your Content, Their AI.
+    <section class="py-16 sm:py-20 md:py-24 bg-gray-900 text-center px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 text-white">
+                The AI Revolution is Here. Is Your Content Safe?
             </h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
-                <span class="font-semibold text-purple-400">"Amazon will train on Twitch streamers’ content by default, unless they opt out."</span>
-                – TechCrunch. This isn't just about Twitch. More platforms are adopting similar policies, turning your hard-earned content into free training data for AI models.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed">
+                <span class="font-bold text-red-400">Your content is your livelihood.</span> Recent reports, including BBC's exposé on Twitch and Amazon, confirm that vast amounts of creator content are being used to train AI models, often without explicit consent or compensation. This isn't just a privacy concern; it's an existential threat to your brand, intellectual property, and future earnings.
             </p>
-            <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
-                Managing opt-outs across multiple platforms is a nightmare. Keeping up with ever-changing terms of service is impossible. Your creative work deserves better protection.
+            <p class="text-md sm:text-lg text-gray-400 max-w-2xl mx-auto">
+                Don't let your creativity become a data point for someone else's profit. It's time to take control.
             </p>
-            <div class="border-t border-purple-800 pt-8 mt-8">
-                <p class="text-2xl font-semibold text-purple-300">
-                    Creator Content Guardian is your shield.
-                </p>
-            </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-800" id="features">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl sm:text-5xl font-extrabold text-center text-white mb-16">
-                Unmatched Control for Every Creator
+    <section class="py-16 sm:py-20 md:py-24 bg-gray-800 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 text-white">
+                Your Comprehensive AI Content Protection Toolkit Includes:
             </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12">
-
-                <!-- Feature 1 -->
-                <div class="bg-gray-900 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-transparent hover:border-purple-600">
-                    <div class="flex items-center mb-6">
-                        <span class="text-5xl mr-4 text-purple-400">✅</span>
-                        <h3 class="text-2xl font-bold text-white">Centralized Opt-Out Management</h3>
-                    </div>
-                    <p class="text-gray-300 text-lg leading-relaxed">
-                        Effortlessly manage your AI training opt-out status across Twitch, YouTube, Kick, and more, all from one intuitive dashboard. No more platform-hopping.
+                <div class="feature-card p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                    <span class="text-5xl mb-4">🛡️</span>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Opt-Out Guides</h3>
+                    <p class="text-gray-300 text-base">
+                        Clear, step-by-step instructions to remove your content from AI training pools on Twitch and other major streaming platforms. Reclaim ownership instantly.
                     </p>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="bg-gray-900 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-transparent hover:border-purple-600">
-                    <div class="flex items-center mb-6">
-                        <span class="text-5xl mr-4 text-purple-400">🚨</span>
-                        <h3 class="text-2xl font-bold text-white">Automated Policy Change Alerts</h3>
-                    </div>
-                    <p class="text-gray-300 text-lg leading-relaxed">
-                        Stay ahead of the curve. Our system monitors platform terms of service and alerts you instantly to changes that could impact your content's AI usage.
+                <div class="feature-card p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                    <span class="text-5xl mb-4">📜</span>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Customizable Legal Disclaimers</h3>
+                    <p class="text-gray-300 text-base">
+                        Easily deployable legal text templates for your channel pages, asserting your IP rights and explicitly prohibiting AI scraping of your creative work.
                     </p>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="bg-gray-900 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-transparent hover:border-purple-600">
-                    <div class="flex items-center mb-6">
-                        <span class="text-5xl mr-4 text-purple-400">📝</span>
-                        <h3 class="text-2xl font-bold text-white">Custom Content Licensing Templates</h3>
-                    </div>
-                    <p class="text-gray-300 text-lg leading-relaxed">
-                        Generate and manage custom licensing templates for your content, defining exactly how your work can (or cannot) be used for AI training or other purposes.
+                <div class="feature-card p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                    <span class="text-5xl mb-4">✅</span>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">IP Protection Checklist</h3>
+                    <p class="text-gray-300 text-base">
+                        A robust, actionable checklist for ongoing vigilance and proactive measures to safeguard your intellectual property in an evolving digital landscape.
                     </p>
                 </div>
 
-                <!-- Feature 4 -->
-                <div class="bg-gray-900 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-transparent hover:border-purple-600">
-                    <div class="flex items-center mb-6">
-                        <span class="text-5xl mr-4 text-purple-400">🔍</span>
-                        <h3 class="text-2xl font-bold text-white">Content Usage Monitoring (Beta)</h3>
-                    </div>
-                    <p class="text-gray-300 text-lg leading-relaxed">
-                        (If detectable) We'll provide tools to help you identify if your content is being used in ways you haven't authorized, offering insights and actionable steps.
-                    </p>
-                </div>
-
-                <!-- Feature 5 -->
-                <div class="bg-gray-900 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-transparent hover:border-purple-600">
-                    <div class="flex items-center mb-6">
-                        <span class="text-5xl mr-4 text-purple-400">🛡️</span>
-                        <h3 class="text-2xl font-bold text-white">Advanced Data Privacy</h3>
-                    </div>
-                    <p class="text-gray-300 text-lg leading-relaxed">
-                        Your privacy is our priority. We employ robust security measures to ensure your data and preferences remain secure and confidential.
-                    </p>
-                </div>
-
-                <!-- Feature 6 -->
-                <div class="bg-gray-900 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-transparent hover:border-purple-600">
-                    <div class="flex items-center mb-6">
-                        <span class="text-5xl mr-4 text-purple-400">🛠️</span>
-                        <h3 class="text-2xl font-bold text-white">Creator-First Design</h3>
-                    </div>
-                    <p class="text-gray-300 text-lg leading-relaxed">
-                        Built by creators, for creators. Our interface is designed to be intuitive and powerful, letting you focus on what you do best: creating.
+                <div class="feature-card p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                    <span class="text-5xl mb-4">📰</span>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Exclusive Policy Updates</h3>
+                    <p class="text-gray-300 text-base">
+                        An exclusive monthly newsletter keeping you ahead of critical platform changes, AI legislation, and new protection strategies relevant to creators.
                     </p>
                 </div>
 
@@ -166,110 +143,74 @@
         </div>
     </section>
 
-    <!-- Waitlist Section with Countdown -->
-    <section class="py-16 md:py-24 bg-gray-900" id="waitlist">
-        <div class="container mx-auto px-6 max-w-3xl">
-            <div class="bg-gray-800 rounded-xl shadow-2xl p-8 md:p-12 border-2 border-purple-600">
-                <h2 class="text-4xl sm:text-5xl font-extrabold text-center text-white mb-6">
-                    Be Among the First. Get Early Access!
-                </h2>
-                <p class="text-lg md:text-xl text-gray-300 text-center mb-8 leading-relaxed">
-                    Spaces are limited for our exclusive early access program. Don't miss out on securing your content's future.
-                </p>
-
-                <!-- Countdown Timer -->
-                <div class="bg-purple-900 bg-opacity-30 rounded-lg p-6 mb-8 text-center border border-purple-700">
-                    <p class="text-lg font-semibold text-purple-300 mb-4">Limited spots closing in:</p>
-                    <div class="flex justify-center items-center space-x-4 text-white">
-                        <div class="flex flex-col items-center">
-                            <span id="days" class="text-5xl md:text-6xl font-bold">00</span>
-                            <span class="text-lg md:text-xl text-gray-300">Days</span>
-                        </div>
-                        <span class="text-5xl md:text-6xl text-purple-400">:</span>
-                        <div class="flex flex-col items-center">
-                            <span id="hours" class="text-5xl md:text-6xl font-bold">00</span>
-                            <span class="text-lg md:text-xl text-gray-300">Hours</span>
-                        </div>
-                        <span class="text-5xl md:text-6xl text-purple-400">:</span>
-                        <div class="flex flex-col items-center">
-                            <span id="minutes" class="text-5xl md:text-6xl font-bold">00</span>
-                            <span class="text-lg md:text-xl text-gray-300">Minutes</span>
-                        </div>
-                        <span class="text-5xl md:text-6xl text-purple-400">:</span>
-                        <div class="flex flex-col items-center">
-                            <span id="seconds" class="text-5xl md:text-6xl font-bold">00</span>
-                            <span class="text-lg md:text-xl text-gray-300">Seconds</span>
-                        </div>
-                    </div>
+    <!-- Waitlist Form Section -->
+    <section id="waitlist-form" class="py-16 sm:py-20 md:py-24 bg-gray-900 px-6">
+        <div class="max-w-3xl mx-auto text-center bg-gray-800 p-8 sm:p-10 md:p-12 rounded-2xl shadow-2xl border border-indigo-700">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 text-white leading-tight">
+                Don't Wait Until It's Too Late. <br><span class="text-indigo-400">Secure Your Digital Future.</span>
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                Join our exclusive waitlist for the 'AI Content Protection Toolkit for Streamers' and be the first to gain access, plus receive special early-bird pricing.
+            </p>
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <input type="text" id="name" name="name" placeholder="Your Full Name" required
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-base sm:text-lg">
                 </div>
-
-                <form class="space-y-6">
-                    <div>
-                        <label for="name" class="sr-only">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Full Name" required
-                               class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-white placeholder-gray-400 text-lg transition duration-200">
-                    </div>
-                    <div>
-                        <label for="email" class="sr-only">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email Address" required
-                               class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-white placeholder-gray-400 text-lg transition duration-200">
-                    </div>
-                    <div>
-                        <button type="submit"
-                                class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-lg text-xl shadow-xl transform transition duration-300 ease-in-out hover:scale-105">
-                            Join Early Access Waitlist
-                        </button>
-                    </div>
-                </form>
-                <p class="text-sm text-gray-400 text-center mt-6">
-                    We respect your privacy. Your email will only be used for Creator Content Guardian updates.
-                </p>
-            </div>
+                <div>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-base sm:text-lg">
+                </div>
+                <div>
+                    <button type="submit" class="btn-primary w-full py-4 rounded-lg text-white font-bold text-lg sm:text-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
+                        Join the Waitlist Now
+                    </button>
+                </div>
+                <p class="text-sm text-gray-500 mt-4">We respect your privacy. No spam, ever.</p>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 border-t border-gray-700">
-        <div class="container mx-auto px-6 text-center text-gray-400">
-            <p>&copy; 2024 Creator Content Guardian. All rights reserved.</p>
-            <div class="mt-4 text-sm">
-                <a href="#" class="hover:text-purple-400 mx-2">Privacy Policy</a> |
-                <a href="#" class="hover:text-purple-400 mx-2">Terms of Service</a>
-            </div>
+    <footer class="bg-gray-900 py-10 border-t border-gray-800 text-center text-gray-500 text-sm">
+        <p>&copy; 2023 AI Content Protection Toolkit. All rights reserved.</p>
+        <div class="mt-4 space-x-4">
+            <a href="#" class="hover:text-white transition-colors duration-300">Privacy Policy</a>
+            <a href="#" class="hover:text-white transition-colors duration-300">Terms of Service</a>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
     <script>
-        const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 7); // Set countdown for 7 days from now
+        // Countdown Timer Script
+        const countdown = () => {
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const now = new Date();
+            const futureDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 days from now
+            // For testing a fixed date: const futureDate = new Date("Dec 31, 2023 23:59:59").getTime();
 
-        const x = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
+            const x = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = futureDate - now;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("days").innerHTML = "00";
-                document.getElementById("hours").innerHTML = "00";
-                document.getElementById("minutes").innerHTML = "00";
-                document.getElementById("seconds").innerHTML = "00";
-                document.querySelector('#waitlist h2').innerText = "Early Access Closed. Stay Tuned!";
-                document.querySelector('#waitlist p:nth-of-type(1)').innerText = "Follow us for future announcements.";
-                document.querySelector('#waitlist form').innerHTML = '<p class="text-center text-purple-300 text-xl">Thank you for your interest!</p>';
-                document.querySelector('#waitlist .bg-purple-900').style.display = 'none'; // Hide countdown box
-            }
-        }, 1000);
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "EXPIRED";
+                    document.getElementById("countdown").classList.remove('animate-pulse'); // Stop pulse when expired
+                }
+            }, 1000);
+        }
+
+        countdown();
     </script>
 </body>
 </html>
