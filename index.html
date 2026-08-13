@@ -3,261 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ultimate Pixel Tag & Android Tracking Guide</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Creator Content Guardian - Protect Your Legacy. Opt-Out, Monitor, Control.</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
     <style>
-        /* Custom styles for premium dark mode aesthetics and responsiveness */
-        body {
-            font-family: 'Inter', sans-serif; /* A modern sans-serif font */
+        /* Custom scrollbar for a premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?The,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
+        ::-webkit-scrollbar-track {
+            background: #1f2937; /* dark gray */
         }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+        ::-webkit-scrollbar-thumb {
+            background: #8b5cf6; /* purple-500 */
+            border-radius: 4px;
         }
-        .gradient-button {
-            background-image: linear-gradient(to right, #6D28D9, #8B5CF6, #EC4899); /* Deeper Purple to Pink */
-            transition: all 0.3s ease;
-        }
-        .gradient-button:hover {
-            background-image: linear-gradient(to right, #5B21B6, #7C3AED, #DB2777);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-        }
-        .feature-icon {
-            width: 3.5rem; /* 56px */
-            height: 3.5rem; /* 56px */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 9999px; /* Full circle */
-            background-color: rgba(139, 92, 246, 0.2); /* Light purple tint */
-            color: #C4B5FD; /* Lighter purple icon color */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a78bfa; /* purple-400 */
         }
 
-        /* Responsive typography for Hero section */
-        .text-hero-headline {
-            font-size: 2.5rem; /* Default for small screens */
-            line-height: 1.2;
-        }
-        .text-hero-subheadline {
-            font-size: 1.125rem; /* Default for small screens */
-        }
-
-        @media (min-width: 640px) { /* sm breakpoint */
-            .text-hero-headline {
-                font-size: 3.5rem; /* 56px */
+        /* CSS for simple fade-in animations on Hero text */
+        @keyframes fadeInMoveUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
             }
-            .text-hero-subheadline {
-                font-size: 1.25rem; /* 20px */
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
-        @media (min-width: 1024px) { /* lg breakpoint */
-            .text-hero-headline {
-                font-size: 4.5rem; /* 72px */
-                line-height: 1.1;
-            }
-            .text-hero-subheadline {
-                font-size: 1.5rem; /* 24px */
-            }
+        .animate-fade-in-up {
+            animation: fadeInMoveUp 0.8s ease-out forwards;
+            opacity: 0; /* Start invisible */
         }
-        @media (min-width: 1536px) { /* 2xl breakpoint */
-            .text-hero-headline {
-                font-size: 5.5rem; /* 88px */
-                line-height: 1.05;
-            }
-            .text-hero-subheadline {
-                font-size: 1.75rem; /* 28px */
-            }
-        }
+        .animate-fade-in-up.delay-200 { animation-delay: 0.2s; }
+        .animate-fade-in-up.delay-400 { animation-delay: 0.4s; }
+        .animate-fade-in-up.delay-500 { animation-delay: 0.5s; }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 antialiased leading-relaxed">
+<body class="bg-gray-900 text-gray-100 font-sans leading-normal tracking-normal overflow-x-hidden">
 
     <!-- Hero Section -->
-    <header class="hero-background relative min-h-screen flex items-center justify-center text-center py-16 px-4">
-        <div class="hero-overlay absolute inset-0 w-full h-full"></div>
-        <div class="relative z-10 w-full max-w-screen-2xl mx-auto flex flex-col items-center">
-            <h1 class="text-hero-headline font-extrabold text-white mb-6 animate-fade-in-up drop-shadow-lg">
-                The Ultimate Pixel Tag & Android Tracking Guide
-            </h1>
-            <p class="text-hero-subheadline text-gray-300 max-w-4xl mb-10 animate-fade-in-up delay-200 drop-shadow-md">
-                Secure Your Valuables, Master Ecosystem Integration, and Enhance Your Digital Life. Unlock the full potential of Google's revolutionary tracking tech.
-            </p>
+    <header class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+            <div class="absolute inset-0 bg-black opacity-75"></div> <!-- Dark overlay for readability -->
+        </div>
 
-            <!-- Limited Time Offer & Countdown -->
-            <div class="bg-gradient-to-r from-purple-700 to-pink-600 p-6 sm:p-8 rounded-xl shadow-2xl mb-12 transform hover:scale-105 transition-transform duration-300 ease-in-out w-full max-w-md sm:max-w-xl animate-fade-in-up delay-400 border border-purple-500">
-                <p class="text-2xl sm:text-3xl font-bold text-white mb-4">Limited Time Offer!</p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-6 text-white">
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl sm:text-5xl font-bold" id="days">00</span>
-                        <span class="text-sm sm:text-base">Days</span>
-                    </div>
-                    <span class="text-4xl sm:text-5xl font-bold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl sm:text-5xl font-bold" id="hours">00</span>
-                        <span class="text-sm sm:text-base">Hours</span>
-                    </div>
-                    <span class="text-4xl sm:text-5xl font-bold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl sm:text-5xl font-bold" id="minutes">00</span>
-                        <span class="text-sm sm:text-base">Minutes</span>
-                    </div>
-                    <span class="text-4xl sm:text-5xl font-bold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl sm:text-5xl font-bold" id="seconds">00</span>
-                        <span class="text-sm sm:text-base">Seconds</span>
-                    </div>
-                </div>
-                <p class="text-lg text-gray-200 mt-4">This exclusive launch price won't last!</p>
-            </div>
-            
-            <a href="#waitlist-form-section" class="gradient-button text-white font-bold py-4 px-12 rounded-full text-xl sm:text-2xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out animate-fade-in-up delay-600 uppercase tracking-wide">
-                Get Instant Access Now!
+        <div class="relative z-10 p-4 md:p-8 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 text-white drop-shadow-lg animate-fade-in-up">
+                Reclaim Your Content. Protect Your Legacy.
+            </h1>
+            <p class="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-200">
+                The unified dashboard for streamers to effortlessly manage AI training opt-out across Twitch and beyond.
+            </p>
+            <a href="#waitlist" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 ease-in-out hover:scale-105 animate-fade-in-up delay-400">
+                Join the Waitlist - Secure Your Content
             </a>
+            <p class="mt-4 text-gray-400 text-sm animate-fade-in-up delay-500">
+                Tired of defaulting to AI training? We've got you covered.
+            </p>
         </div>
     </header>
 
-    <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 bg-gray-900 text-center">
-        <div class="container mx-auto px-4 max-w-7xl">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-16 leading-tight">What You'll Master Inside This Guide</h2>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:translate-y-[-8px] transition-all duration-300 border border-gray-700 hover:border-purple-500">
-                    <div class="feature-icon mx-auto mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944c-1.382 0-2.73.197-4.016.592a11.955 11.955 0 01-4.016 4.016c-.395 1.286-.592 2.634-.592 4.016s.197 2.73.592 4.016a11.955 11.955 0 014.016 4.016c1.286.395 2.634.592 4.016.592s2.73-.197 4.016-.592a11.955 11.955 0 014.016-4.016c.395-1.286.592-2.634.592-4.016s-.197-2.73-.592-4.016a11.955 11.955 0 01-4.016-4.016z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Unrivaled Security & Recovery</h3>
-                    <p class="text-gray-300 text-lg">Harness the full power of Pixel Tag to prevent loss, recover lost items, and enhance the physical security of your most valuable possessions with step-by-step strategies.</p>
-                </div>
-                
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:translate-y-[-8px] transition-all duration-300 border border-gray-700 hover:border-purple-500">
-                    <div class="feature-icon mx-auto mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Seamless Android Ecosystem Integration</h3>
-                    <p class="text-gray-300 text-lg">Discover expert techniques to integrate Pixel Tags flawlessly with your Android devices, Google Home, and other smart gadgets for a truly connected experience.</p>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:translate-y-[-8px] transition-all duration-300 border border-gray-700 hover:border-purple-500">
-                    <div class="feature-icon mx-auto mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Boost Productivity & Peace of Mind</h3>
-                    <p class="text-gray-300 text-lg">From automating routines to quick-finding everyday items, learn how Pixel Tag tracking can save you time, reduce stress, and enhance your daily digital workflow.</p>
-                </div>
-
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:translate-y-[-8px] transition-all duration-300 border border-gray-700 hover:border-purple-500">
-                    <div class="feature-icon mx-auto mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Master Privacy Controls & Best Practices</h3>
-                    <p class="text-gray-300 text-lg">Navigate the complexities of location data with confidence. Our guide provides clear insights into privacy settings, permissions, and ethical tracking for ultimate control.</p>
-                </div>
-
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:translate-y-[-8px] transition-all duration-300 border border-gray-700 hover:border-purple-500">
-                    <div class="feature-icon mx-auto mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37a1.724 1.724 0 002.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Advanced Tips, Tricks & Hacks</h3>
-                    <p class="text-gray-300 text-lg">Go beyond the basics with power-user configurations, hidden features, and creative ways to leverage Pixel Tags you won't find anywhere else.</p>
-                </div>
-
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:translate-y-[-8px] transition-all duration-300 border border-gray-700 hover:border-purple-500">
-                    <div class="feature-icon mx-auto mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Future-Proof Your Digital Tracking</h3>
-                    <p class="text-gray-300 text-lg">Stay ahead of the curve with insights into upcoming features, ecosystem expansions, and how to adapt your tracking strategies for Google's evolving smart device landscape.</p>
-                </div>
+    <!-- Problem/Trend Section -->
+    <section class="py-16 md:py-24 bg-gray-900 text-center">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-8">
+                The Looming Threat: Your Content, Their AI.
+            </h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
+                <span class="font-semibold text-purple-400">"Amazon will train on Twitch streamers’ content by default, unless they opt out."</span>
+                – TechCrunch. This isn't just about Twitch. More platforms are adopting similar policies, turning your hard-earned content into free training data for AI models.
+            </p>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
+                Managing opt-outs across multiple platforms is a nightmare. Keeping up with ever-changing terms of service is impossible. Your creative work deserves better protection.
+            </p>
+            <div class="border-t border-purple-800 pt-8 mt-8">
+                <p class="text-2xl font-semibold text-purple-300">
+                    Creator Content Guardian is your shield.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / Call to Action Form Section -->
-    <section id="waitlist-form-section" class="py-16 md:py-24 bg-gray-950 text-center border-t border-gray-800">
-        <div class="container mx-auto px-4 max-w-2xl">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-8 leading-tight">Ready to Master Your Digital World?</h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-xl mx-auto">
-                Don't miss out on this limited-time offer. Get the comprehensive guide that puts you in control of your valuables and enhances your entire Android experience.
-            </p>
-            
-            <form action="#" method="POST" class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700">
-                <div class="mb-6">
-                    <label for="email" class="sr-only">Email address</label>
-                    <input type="email" id="email" name="email" required 
-                           class="w-full p-4 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:ring-purple-500 focus:border-purple-500 transition duration-200 text-lg"
-                           placeholder="Enter your email address for instant access">
+    <!-- Features Section -->
+    <section class="py-16 md:py-24 bg-gray-800" id="features">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-center text-white mb-16">
+                Unmatched Control for Every Creator
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12">
+
+                <!-- Feature 1 -->
+                <div class="bg-gray-900 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-transparent hover:border-purple-600">
+                    <div class="flex items-center mb-6">
+                        <span class="text-5xl mr-4 text-purple-400">✅</span>
+                        <h3 class="text-2xl font-bold text-white">Centralized Opt-Out Management</h3>
+                    </div>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Effortlessly manage your AI training opt-out status across Twitch, YouTube, Kick, and more, all from one intuitive dashboard. No more platform-hopping.
+                    </p>
                 </div>
-                <button type="submit" class="gradient-button text-white font-bold py-4 px-10 rounded-full text-xl sm:text-2xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out w-full uppercase tracking-wide">
-                    Secure Your Early Access Now!
-                </button>
-                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, ever.</p>
-            </form>
+
+                <!-- Feature 2 -->
+                <div class="bg-gray-900 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-transparent hover:border-purple-600">
+                    <div class="flex items-center mb-6">
+                        <span class="text-5xl mr-4 text-purple-400">🚨</span>
+                        <h3 class="text-2xl font-bold text-white">Automated Policy Change Alerts</h3>
+                    </div>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Stay ahead of the curve. Our system monitors platform terms of service and alerts you instantly to changes that could impact your content's AI usage.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-900 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-transparent hover:border-purple-600">
+                    <div class="flex items-center mb-6">
+                        <span class="text-5xl mr-4 text-purple-400">📝</span>
+                        <h3 class="text-2xl font-bold text-white">Custom Content Licensing Templates</h3>
+                    </div>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Generate and manage custom licensing templates for your content, defining exactly how your work can (or cannot) be used for AI training or other purposes.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-gray-900 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-transparent hover:border-purple-600">
+                    <div class="flex items-center mb-6">
+                        <span class="text-5xl mr-4 text-purple-400">🔍</span>
+                        <h3 class="text-2xl font-bold text-white">Content Usage Monitoring (Beta)</h3>
+                    </div>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        (If detectable) We'll provide tools to help you identify if your content is being used in ways you haven't authorized, offering insights and actionable steps.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-gray-900 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-transparent hover:border-purple-600">
+                    <div class="flex items-center mb-6">
+                        <span class="text-5xl mr-4 text-purple-400">🛡️</span>
+                        <h3 class="text-2xl font-bold text-white">Advanced Data Privacy</h3>
+                    </div>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Your privacy is our priority. We employ robust security measures to ensure your data and preferences remain secure and confidential.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-gray-900 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-transparent hover:border-purple-600">
+                    <div class="flex items-center mb-6">
+                        <span class="text-5xl mr-4 text-purple-400">🛠️</span>
+                        <h3 class="text-2xl font-bold text-white">Creator-First Design</h3>
+                    </div>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Built by creators, for creators. Our interface is designed to be intuitive and powerful, letting you focus on what you do best: creating.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist Section with Countdown -->
+    <section class="py-16 md:py-24 bg-gray-900" id="waitlist">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="bg-gray-800 rounded-xl shadow-2xl p-8 md:p-12 border-2 border-purple-600">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-center text-white mb-6">
+                    Be Among the First. Get Early Access!
+                </h2>
+                <p class="text-lg md:text-xl text-gray-300 text-center mb-8 leading-relaxed">
+                    Spaces are limited for our exclusive early access program. Don't miss out on securing your content's future.
+                </p>
+
+                <!-- Countdown Timer -->
+                <div class="bg-purple-900 bg-opacity-30 rounded-lg p-6 mb-8 text-center border border-purple-700">
+                    <p class="text-lg font-semibold text-purple-300 mb-4">Limited spots closing in:</p>
+                    <div class="flex justify-center items-center space-x-4 text-white">
+                        <div class="flex flex-col items-center">
+                            <span id="days" class="text-5xl md:text-6xl font-bold">00</span>
+                            <span class="text-lg md:text-xl text-gray-300">Days</span>
+                        </div>
+                        <span class="text-5xl md:text-6xl text-purple-400">:</span>
+                        <div class="flex flex-col items-center">
+                            <span id="hours" class="text-5xl md:text-6xl font-bold">00</span>
+                            <span class="text-lg md:text-xl text-gray-300">Hours</span>
+                        </div>
+                        <span class="text-5xl md:text-6xl text-purple-400">:</span>
+                        <div class="flex flex-col items-center">
+                            <span id="minutes" class="text-5xl md:text-6xl font-bold">00</span>
+                            <span class="text-lg md:text-xl text-gray-300">Minutes</span>
+                        </div>
+                        <span class="text-5xl md:text-6xl text-purple-400">:</span>
+                        <div class="flex flex-col items-center">
+                            <span id="seconds" class="text-5xl md:text-6xl font-bold">00</span>
+                            <span class="text-lg md:text-xl text-gray-300">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="sr-only">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" required
+                               class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-white placeholder-gray-400 text-lg transition duration-200">
+                    </div>
+                    <div>
+                        <label for="email" class="sr-only">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email Address" required
+                               class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-white placeholder-gray-400 text-lg transition duration-200">
+                    </div>
+                    <div>
+                        <button type="submit"
+                                class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-lg text-xl shadow-xl transform transition duration-300 ease-in-out hover:scale-105">
+                            Join Early Access Waitlist
+                        </button>
+                    </div>
+                </form>
+                <p class="text-sm text-gray-400 text-center mt-6">
+                    We respect your privacy. Your email will only be used for Creator Content Guardian updates.
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-10 text-center text-gray-500 border-t border-gray-800">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2 text-sm">
-                <a href="#" class="hover:text-gray-300 transition duration-200 mx-2">Privacy Policy</a> | 
-                <a href="#" class="hover:text-gray-300 transition duration-200 mx-2">Terms of Service</a>
-            </p>
+    <footer class="bg-gray-900 py-10 border-t border-gray-700">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2024 Creator Content Guardian. All rights reserved.</p>
+            <div class="mt-4 text-sm">
+                <a href="#" class="hover:text-purple-400 mx-2">Privacy Policy</a> |
+                <a href="#" class="hover:text-purple-400 mx-2">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
-    <!-- Countdown Timer JavaScript -->
+    <!-- JavaScript for Countdown Timer -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 3 days, 12 hours, 30 minutes from now)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 3); 
-            countDownDate.setHours(countDownDate.getHours() + 12); 
-            countDownDate.setMinutes(countDownDate.getMinutes() + 30); 
-            
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 7); // Set countdown for 7 days from now
 
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<p class='text-xl sm:text-2xl'>Offer Expired!</p>";
-                    const ctaButtons = document.querySelectorAll('.gradient-button');
-                    ctaButtons.forEach(button => {
-                        button.textContent = 'Guide Available at Full Price';
-                        button.classList.remove('gradient-button');
-                        button.classList.add('bg-gray-600', 'cursor-not-allowed', 'opacity-75');
-                        button.disabled = true;
-                    });
-                    return;
-                }
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
 
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-            }, 1000);
-        });
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+                document.querySelector('#waitlist h2').innerText = "Early Access Closed. Stay Tuned!";
+                document.querySelector('#waitlist p:nth-of-type(1)').innerText = "Follow us for future announcements.";
+                document.querySelector('#waitlist form').innerHTML = '<p class="text-center text-purple-300 text-xl">Thank you for your interest!</p>';
+                document.querySelector('#waitlist .bg-purple-900').style.display = 'none'; // Hide countdown box
+            }
+        }, 1000);
     </script>
 </body>
 </html>
