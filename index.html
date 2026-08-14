@@ -1,195 +1,264 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twitch Creator AI Privacy & Content Rights Toolkit - Limited Time Offer</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Cognitive Co-pilot - Your Enhanced Augmented Memory System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
+        /* Custom styles for dark mode and hero image overlay */
+        .dark {
+            color-scheme: dark;
+        }
         .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
         }
-        /* Hide scrollbar for aesthetic purposes, but allow scrolling */
-        body {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
         }
-        body::-webkit-scrollbar {
-            display: none;  /* Chrome, Safari, Opera */
+        
+        /* Custom scrollbar for dark theme (optional but good for premium feel) */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* bg-gray-900 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* bg-gray-600 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280; /* bg-gray-500 */
+        }
+
+        /* Custom animation for pulse-slow */
+        @keyframes pulse-slow {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 3s infinite ease-in-out;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="dark bg-gray-900 text-gray-100 font-sans leading-relaxed">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center px-4 overflow-hidden hero-background bg-cover bg-center bg-no-repeat">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Overlay for text readability -->
-        <div class="relative z-10 max-w-4xl mx-auto py-16 md:py-24">
-            <p class="text-sm md:text-base text-purple-400 uppercase font-semibold mb-4 tracking-wider">
-                🚨 Urgent Creator Alert: As seen on Forbes 🚨
-            </p>
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 drop-shadow-lg">
-                Twitch Admits 'Nobody Would Opt-In' to AI Training.<br class="hidden md:inline"> Protect Your Content.
+    <header class="hero-background min-h-screen flex items-center justify-center text-center py-16 md:py-24 relative overflow-hidden">
+        <div class="hero-overlay"></div>
+        <div class="container mx-auto px-4 z-10 relative max-w-4xl">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
+                Unlock Your Personal <span class="text-indigo-400">Cognitive Co-pilot</span>
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Don't let your creative work become AI training data. This comprehensive toolkit empowers you to opt-out, audit your privacy, and future-proof your Twitch & Amazon-linked assets.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+                An enhanced, privacy-centric augmented memory system for professionals and teams.
+                Capture, recall, and contextualize every piece of your work activity—securely and cross-platform.
+                <br class="hidden sm:inline">
+                Go beyond what a single platform's AI offers.
             </p>
-
-            <div class="bg-gray-800 bg-opacity-80 rounded-lg p-6 mb-8 shadow-xl border border-purple-700">
-                <p class="text-purple-300 text-xl md:text-2xl font-bold mb-4">Limited Time Offer:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-white text-3xl md:text-5xl font-bold">
-                    <div><span id="days">00</span><p class="text-sm md:text-base font-normal text-gray-400 mt-1">Days</p></div>
-                    <span>:</span>
-                    <div><span id="hours">00</span><p class="text-sm md:text-base font-normal text-gray-400 mt-1">Hours</p></div>
-                    <span>:</span>
-                    <div><span id="minutes">00</span><p class="text-sm md:text-base font-normal text-gray-400 mt-1">Minutes</p></div>
-                    <span>:</span>
-                    <div><span id="seconds">00</span><p class="text-sm md:text-base font-normal text-gray-400 mt-1">Seconds</p></div>
-                </div>
-            </div>
-
-            <a href="#waitlist-form" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                Secure Your Assets Now
-            </a>
-            <p class="text-gray-400 text-sm mt-4">Immediate Download upon purchase.</p>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-950 px-4">
-        <div class="container mx-auto max-w-5xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-purple-400">What You Get With This Essential Toolkit:</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-
-                <!-- Feature 1: Step-by-Step Opt-Out Guide -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:border-purple-600 transition duration-300 ease-in-out">
-                    <div class="flex items-center mb-4">
-                        <span class="text-purple-500 text-3xl mr-4">⚙️</span>
-                        <h3 class="text-xl md:text-2xl font-semibold">Step-by-Step Opt-Out Guide</h3>
-                    </div>
-                    <p class="text-gray-300">An interactive, crystal-clear guide that walks you through every click and setting required to formally opt-out of Twitch's AI content training, safeguarding your past and future content.</p>
-                </div>
-
-                <!-- Feature 2: Privacy Settings Audit Checklist -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:border-purple-600 transition duration-300 ease-in-out">
-                    <div class="flex items-center mb-4">
-                        <span class="text-purple-500 text-3xl mr-4">🔎</span>
-                        <h3 class="text-xl md:text-2xl font-semibold">Privacy Settings Audit Checklist</h3>
-                    </div>
-                    <p class="text-gray-300">A comprehensive checklist to audit and secure your privacy settings across all Amazon-linked services (Twitch, Prime, etc.) ensuring no hidden backdoors for data collection.</p>
-                </div>
-
-                <!-- Feature 3: Future-Proofing Content Strategy -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:border-purple-600 transition duration-300 ease-in-out">
-                    <div class="flex items-center mb-4">
-                        <span class="text-purple-500 text-3xl mr-4">🔮</span>
-                        <h3 class="text-xl md:text-2xl font-semibold">Future-Proofing Content Strategy</h3>
-                    </div>
-                    <p class="text-gray-300">Beyond just opting out, learn proactive strategies and best practices to protect your intellectual property against evolving platform policies and future AI data grabs.</p>
-                </div>
-
-                <!-- Feature 4: Templated Objection Communications -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:border-purple-600 transition duration-300 ease-in-out">
-                    <div class="flex items-center mb-4">
-                        <span class="text-purple-500 text-3xl mr-4">📝</span>
-                        <h3 class="text-xl md:text-2xl font-semibold">Templated Objection Communications</h3>
-                    </div>
-                    <p class="text-gray-300">Ready-to-use, legally informed templates to formally object to Twitch and Amazon regarding their AI policies, giving you a powerful voice without the legal hassle.</p>
-                </div>
-
-            </div>
-            <div class="text-center mt-12">
-                <a href="#waitlist-form" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                    Don't Wait, Secure Your Future Now!
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl transition duration-300 transform hover:scale-105 shadow-lg">
+                    Get Early Access
+                </a>
+                <a href="#features" class="bg-gray-700 hover:bg-gray-600 text-gray-200 font-bold py-3 px-8 rounded-full text-lg sm:text-xl transition duration-300 transform hover:scale-105 shadow-lg">
+                    Learn More
                 </a>
             </div>
+
+            <!-- Limited Time Countdown -->
+            <div class="bg-gradient-to-r from-indigo-800 to-purple-800 text-white p-4 rounded-lg shadow-xl mx-auto max-w-md md:max-w-xl flex flex-col sm:flex-row items-center justify-center gap-4 animate-pulse-slow">
+                <p class="text-base sm:text-lg font-semibold">Special Offer Ends In:</p>
+                <div id="countdown" class="flex items-center text-2xl sm:text-3xl font-bold gap-2">
+                    <span id="days">00</span>D
+                    <span id="hours">00</span>H
+                    <span id="minutes">00</span>M
+                    <span id="seconds">00</span>S
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 md:py-24 bg-gray-900 text-gray-100">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 text-white">
+                Your <span class="text-indigo-400">Augmented Memory</span>: Key Capabilities
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+
+                <!-- Feature 1: Truly Cross-Platform -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-5xl mb-6 flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1-3m-6.938-9h13.856c1.54 0 2.502 1.667 1.732 3L13.732 17A3 3 0 0110.27 17L2.928 9c-.77-1.333.192-3 1.732-3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Cross-Platform Freedom</h3>
+                    <p class="text-gray-300 text-center">
+                        Seamlessly capture activity on Mac & Windows. Your cognitive data, available wherever you work, without silos.
+                    </p>
+                </div>
+
+                <!-- Feature 2: Privacy-First Local Processing -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-5xl mb-6 flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Privacy-Centric Control</h3>
+                    <p class="text-gray-300 text-center">
+                        Process sensitive data locally on your device. You retain full ownership and control over your information.
+                    </p>
+                </div>
+
+                <!-- Feature 3: AI-Powered Summaries -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-5xl mb-6 flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3 3h3m-6-6h.01M9 17h.01"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Intelligent Summaries</h3>
+                    <p class="text-gray-300 text-center">
+                        Get AI-powered summaries of your past work, communications, and projects, saving hours of review.
+                    </p>
+                </div>
+
+                <!-- Feature 4: Proactive Context Suggestions -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-5xl mb-6 flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Proactive Context</h3>
+                    <p class="text-gray-300 text-center">
+                        Receive timely, intelligent suggestions based on your current activity to keep you focused and efficient.
+                    </p>
+                </div>
+
+                <!-- Feature 5: Deep Productivity Integrations -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-5xl mb-6 flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Seamless Integrations</h3>
+                    <p class="text-gray-300 text-center">
+                        Connect with your favorite productivity tools for a truly unified and intelligent augmented memory.
+                    </p>
+                </div>
+
+                <!-- Feature 6: Effortless Intelligent Recall -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-5xl mb-6 flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2zm2-7v4m0 0l-3-3m3 3l3-3"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Effortless Recall</h3>
+                    <p class="text-gray-300 text-center">
+                        Intelligently search and instantly recall past activities, documents, and conversations with precision.
+                    </p>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <!-- Waitlist/Purchase Form Section -->
-    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-900 px-4">
-        <div class="container mx-auto max-w-md bg-gray-800 p-8 md:p-10 rounded-xl shadow-2xl border-2 border-purple-800">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6 text-purple-400">Get Instant Access to Your Toolkit</h2>
-            <p class="text-gray-300 text-center mb-8 text-lg">
-                This 'Twitch Creator AI Privacy & Content Rights Toolkit' is available for a <span class="text-purple-300 font-bold">limited time only</span>. Don't risk your content – act now!
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gray-900 text-gray-100 border-t border-gray-800">
+        <div class="container mx-auto px-4 max-w-2xl text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8">
+                Be Among The First. <span class="text-indigo-400">Join The Waitlist!</span>
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                Sign up for early access and exclusive updates on your new Cognitive Co-pilot. Limited spots available!
             </p>
-            <form action="#" method="POST" class="space-y-6">
-                <div>
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name:</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent bg-gray-700" required>
+
+            <form class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 max-w-lg mx-auto">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name (Optional)</label>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="John Doe">
                 </div>
-                <div>
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address:</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent bg-gray-700" required>
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" required class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="you@example.com">
                 </div>
-                <div>
-                    <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                        Download Now & Protect My Content!
-                    </button>
-                </div>
+                <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 w-full shadow-lg">
+                    Secure My Spot
+                </button>
+                <p class="text-xs text-gray-500 mt-4">
+                    We respect your privacy. Your email will only be used for updates on Cognitive Co-pilot.
+                </p>
             </form>
-            <p class="text-gray-500 text-xs text-center mt-6">
-                Your privacy is important to us. We will never share your information.
-            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 px-4 text-center text-gray-500 text-sm">
-        <div class="container mx-auto">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved. | <a href="#" class="text-purple-400 hover:text-purple-300">Privacy Policy</a> | <a href="#" class="text-purple-400 hover:text-purple-300">Terms of Service</a></p>
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <p>&copy; <span id="currentYear"></span> Cognitive Co-pilot. All rights reserved.</p>
+            <div class="mt-4 text-sm">
+                <a href="#" class="text-gray-400 hover:text-indigo-400 mx-2">Privacy Policy</a>
+                <span class="text-gray-600">|</span>
+                <a href="#" class="text-gray-400 hover:text-indigo-400 mx-2">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
+    <!-- JavaScript for Countdown Timer and Current Year -->
     <script>
-        // Countdown Timer Logic
-        const countdownElement = document.getElementById('countdown');
-        const daysElement = document.getElementById('days');
-        const hoursElement = document.getElementById('hours');
-        const minutesElement = document.getElementById('minutes');
-        const secondsElement = document.getElementById('seconds');
-
         // Set the date we're counting down to (e.g., 7 days from now)
-        const targetDate = new Date();
-        targetDate.setDate(targetDate.getDate() + 7); // 7 days from today
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 7); // Set 7 days from now for the "Limited Time" offer
 
-        function updateCountdown() {
+        const x = setInterval(function() {
             const now = new Date().getTime();
-            const distance = targetDate.getTime() - now;
+            const distance = countdownDate.getTime() - now;
 
-            // Time calculations for days, hours, minutes and seconds
+            // Calculate days, hours, minutes, seconds
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Display the result
-            daysElement.innerText = String(days).padStart(2, '0');
-            hoursElement.innerText = String(hours).padStart(2, '0');
-            minutesElement.innerText = String(minutes).padStart(2, '0');
-            secondsElement.innerText = String(seconds).padStart(2, '0');
+            // Display the result in the element with id="countdown"
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-            // If the countdown is over, write some text and disable CTAs
+            // If the countdown is finished, write some text
             if (distance < 0) {
-                clearInterval(countdownInterval);
-                countdownElement.innerHTML = "<span class='text-red-500 text-xl md:text-3xl font-bold'>OFFER EXPIRED!</span>";
-                const ctaButtons = document.querySelectorAll('a[href="#waitlist-form"], button[type="submit"]');
-                ctaButtons.forEach(button => {
-                    button.classList.add('pointer-events-none', 'opacity-50', 'cursor-not-allowed');
-                    button.innerText = "Offer Expired";
-                    if (button.tagName === 'A') {
-                        button.removeAttribute('href');
-                    }
-                });
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "Offer Expired!";
+                document.getElementById("countdown").parentElement.classList.remove('animate-pulse-slow');
+                document.getElementById("countdown").parentElement.classList.add('opacity-50');
             }
-        }
+        }, 1000);
 
-        // Update the countdown every 1 second
-        const countdownInterval = setInterval(updateCountdown, 1000);
-
-        // Initial call to display immediately
-        updateCountdown();
+        // Update current year in footer
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
