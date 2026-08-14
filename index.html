@@ -1,183 +1,153 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cognitive Co-pilot - Your Enhanced Augmented Memory System</title>
+    <title>CognitoFlow AI - Transform Your Workflow with AI-Powered Insights</title>
+    <meta name="description" content="Unlock peak productivity with CognitoFlow AI. Securely analyze your computer history to get personalized insights, identify bottlenecks, and automate tasks. Join the waitlist!">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for dark mode and hero image overlay */
-        .dark {
-            color-scheme: dark;
+        /* Custom styles for premium dark mode aesthetics and gradients */
+        .gradient-button {
+            background-image: linear-gradient(to right, #6366f1, #a855f7, #ec4899); /* Indigo, Purple, Pink */
+            transition: all 0.3s ease;
         }
-        .hero-background {
+        .gradient-button:hover {
+            background-image: linear-gradient(to left, #6366f1, #a855f7, #ec4899);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .hero-section {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
             position: relative;
+            z-index: 0;
         }
         .hero-overlay {
+            background-color: rgba(17, 24, 39, 0.85); /* Darker overlay for text readability */
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+            right: 0;
+            bottom: 0;
+            z-index: 1;
         }
-        
-        /* Custom scrollbar for dark theme (optional but good for premium feel) */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
+        .text-gradient {
+            background-image: linear-gradient(45deg, #6366f1, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        ::-webkit-scrollbar-track {
-            background: #1a202c; /* bg-gray-900 */
+        /* Ensure ultra-responsiveness for the countdown timer */
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem; /* Base size */
         }
-        ::-webkit-scrollbar-thumb {
-            background: #4a5568; /* bg-gray-600 */
-            border-radius: 4px;
+        @media (min-width: 768px) { /* md breakpoint */
+            .countdown-item {
+                font-size: 2.5rem;
+            }
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #6b7280; /* bg-gray-500 */
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .countdown-item {
+                font-size: 3.5rem;
+            }
         }
 
-        /* Custom animation for pulse-slow */
-        @keyframes pulse-slow {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.8;
+        .countdown-label {
+            font-size: 0.75rem; /* Base size */
+            margin-top: 0.25rem;
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .countdown-label {
+                font-size: 1rem;
             }
         }
-        .animate-pulse-slow {
-            animation: pulse-slow 3s infinite ease-in-out;
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .countdown-label {
+                font-size: 1.25rem;
+            }
         }
     </style>
 </head>
-<body class="dark bg-gray-900 text-gray-100 font-sans leading-relaxed">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased overflow-x-hidden">
 
     <!-- Hero Section -->
-    <header class="hero-background min-h-screen flex items-center justify-center text-center py-16 md:py-24 relative overflow-hidden">
-        <div class="hero-overlay"></div>
-        <div class="container mx-auto px-4 z-10 relative max-w-4xl">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
-                Unlock Your Personal <span class="text-indigo-400">Cognitive Co-pilot</span>
+    <header class="hero-section min-h-screen flex items-center justify-center text-center py-16 px-4">
+        <div class="hero-overlay z-10"></div>
+        <div class="relative z-20 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-gradient">
+                CognitoFlow AI: Your History, Your Future Workflow.
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-                An enhanced, privacy-centric augmented memory system for professionals and teams.
-                Capture, recall, and contextualize every piece of your work activity—securely and cross-platform.
-                <br class="hidden sm:inline">
-                Go beyond what a single platform's AI offers.
+            <p class="text-xl md:text-2xl lg:text-3xl font-light mb-8 max-w-3xl mx-auto">
+                Transform your digital footprint into <span class="font-semibold text-purple-300">actionable insights</span>. CognitoFlow AI securely leverages your computer history to eliminate bottlenecks and automate repetitive tasks, making you work <span class="font-semibold text-blue-300">smarter, not harder</span>.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl transition duration-300 transform hover:scale-105 shadow-lg">
-                    Get Early Access
-                </a>
-                <a href="#features" class="bg-gray-700 hover:bg-gray-600 text-gray-200 font-bold py-3 px-8 rounded-full text-lg sm:text-xl transition duration-300 transform hover:scale-105 shadow-lg">
-                    Learn More
-                </a>
-            </div>
-
-            <!-- Limited Time Countdown -->
-            <div class="bg-gradient-to-r from-indigo-800 to-purple-800 text-white p-4 rounded-lg shadow-xl mx-auto max-w-md md:max-w-xl flex flex-col sm:flex-row items-center justify-center gap-4 animate-pulse-slow">
-                <p class="text-base sm:text-lg font-semibold">Special Offer Ends In:</p>
-                <div id="countdown" class="flex items-center text-2xl sm:text-3xl font-bold gap-2">
-                    <span id="days">00</span>D
-                    <span id="hours">00</span>H
-                    <span id="minutes">00</span>M
-                    <span id="seconds">00</span>S
-                </div>
-            </div>
+            <p class="text-md md:text-lg text-gray-400 mb-10">
+                Inspired by the latest advancements in personalized computing, like opt-in computer history features, we focus on *actioning* your data.
+            </p>
+            <a href="#waitlist" class="gradient-button inline-block text-white font-bold py-3 px-8 rounded-full text-lg md:text-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50">
+                Join the Exclusive Waitlist
+            </a>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 bg-gray-900 text-gray-100">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 text-white">
-                Your <span class="text-indigo-400">Augmented Memory</span>: Key Capabilities
+    <section class="py-16 md:py-24 px-4 bg-gray-900">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 text-white leading-tight">
+                Unlock Your Peak Productivity with <span class="text-gradient">Intelligent Automation</span>
             </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-                <!-- Feature 1: Truly Cross-Platform -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-5xl mb-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1-3m-6.938-9h13.856c1.54 0 2.502 1.667 1.732 3L13.732 17A3 3 0 0110.27 17L2.928 9c-.77-1.333.192-3 1.732-3z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Cross-Platform Freedom</h3>
-                    <p class="text-gray-300 text-center">
-                        Seamlessly capture activity on Mac & Windows. Your cognitive data, available wherever you work, without silos.
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300">
+                    <div class="text-5xl mb-6 text-purple-400">🧠</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">AI-Powered Personalized Insights</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Beyond simple logs, our advanced AI analyzes your unique digital patterns to uncover *how* you work. Get insights tailored to your habits, not generic advice.
                     </p>
                 </div>
 
-                <!-- Feature 2: Privacy-First Local Processing -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-5xl mb-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Privacy-Centric Control</h3>
-                    <p class="text-gray-300 text-center">
-                        Process sensitive data locally on your device. You retain full ownership and control over your information.
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300">
+                    <div class="text-5xl mb-6 text-indigo-400">🚧</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Identify & Visualize Bottlenecks</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Pinpoint exactly where your workflow lags. CognitoFlow AI precisely identifies and visualizes time-sinks and inefficient processes across applications.
                     </p>
                 </div>
 
-                <!-- Feature 3: AI-Powered Summaries -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-5xl mb-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3 3h3m-6-6h.01M9 17h.01"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Intelligent Summaries</h3>
-                    <p class="text-gray-300 text-center">
-                        Get AI-powered summaries of your past work, communications, and projects, saving hours of review.
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-pink-500 transition-all duration-300">
+                    <div class="text-5xl mb-6 text-pink-400">⚙️</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Custom Automation Scripts</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Receive tailor-made recommendations for Apple Shortcuts, Zapier integrations, and other custom scripts to automate your repetitive tasks. We turn insights into action.
                     </p>
                 </div>
 
-                <!-- Feature 4: Proactive Context Suggestions -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-5xl mb-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Proactive Context</h3>
-                    <p class="text-gray-300 text-center">
-                        Receive timely, intelligent suggestions based on your current activity to keep you focused and efficient.
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-green-500 transition-all duration-300">
+                    <div class="text-5xl mb-6 text-green-400">🔒</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Secure & User Opt-in Data</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Your privacy is paramount. We integrate securely via user opt-in or available APIs, ensuring your data is always under your control and used responsibly.
                     </p>
                 </div>
 
-                <!-- Feature 5: Deep Productivity Integrations -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-5xl mb-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Seamless Integrations</h3>
-                    <p class="text-gray-300 text-center">
-                        Connect with your favorite productivity tools for a truly unified and intelligent augmented memory.
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-red-500 transition-all duration-300">
+                    <div class="text-5xl mb-6 text-red-400">🚀</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Focus on 'Actioning' History</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        We don't just record your history; we transform it. CognitoFlow AI actively turns your past actions into future efficiencies, propelling you forward.
                     </p>
                 </div>
 
-                <!-- Feature 6: Effortless Intelligent Recall -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-5xl mb-6 flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2zm2-7v4m0 0l-3-3m3 3l3-3"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Effortless Recall</h3>
-                    <p class="text-gray-300 text-center">
-                        Intelligently search and instantly recall past activities, documents, and conversations with precision.
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-yellow-500 transition-all duration-300">
+                    <div class="text-5xl mb-6 text-yellow-400">🔗</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Cross-Application Integration</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Seamlessly analyze data across various applications and platforms. Our goal is a holistic view of your productivity, not isolated silos.
                     </p>
                 </div>
 
@@ -185,80 +155,105 @@
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gray-900 text-gray-100 border-t border-gray-800">
-        <div class="container mx-auto px-4 max-w-2xl text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8">
-                Be Among The First. <span class="text-indigo-400">Join The Waitlist!</span>
+    <!-- Waitlist Form Section with Countdown -->
+    <section id="waitlist" class="py-16 md:py-24 px-4 bg-gray-900 relative overflow-hidden">
+        <div class="container mx-auto max-w-3xl bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl border border-gray-700 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                Limited Time Offer: Join the Exclusive Waitlist!
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8">
-                Sign up for early access and exclusive updates on your new Cognitive Co-pilot. Limited spots available!
+            <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                Secure your spot for early access and special launch benefits. Don't miss out on transforming your workflow.
             </p>
 
-            <form class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 max-w-lg mx-auto">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name (Optional)</label>
-                    <input type="text" id="name" name="name" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="John Doe">
+            <!-- Countdown Timer -->
+            <div class="flex justify-center items-center space-x-4 md:space-x-8 lg:space-x-12 mb-10 text-purple-400 font-mono">
+                <div class="countdown-item">
+                    <span id="days" class="font-extrabold">00</span>
+                    <span class="countdown-label text-gray-400">Days</span>
                 </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" required class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="you@example.com">
+                <div class="countdown-item">
+                    <span id="hours" class="font-extrabold">00</span>
+                    <span class="countdown-label text-gray-400">Hours</span>
                 </div>
-                <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 w-full shadow-lg">
-                    Secure My Spot
+                <div class="countdown-item">
+                    <span id="minutes" class="font-extrabold">00</span>
+                    <span class="countdown-label text-gray-400">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds" class="font-extrabold">00</span>
+                    <span class="countdown-label text-gray-400">Seconds</span>
+                </div>
+            </div>
+
+            <!-- Waitlist Form -->
+            <form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto" onsubmit="alert('Thank you for joining the waitlist!'); event.preventDefault();">
+                <input type="email" placeholder="Your Email Address" required 
+                       class="flex-grow p-3 rounded-lg bg-gray-700 text-gray-100 border border-gray-600 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-lg md:text-xl">
+                <button type="submit" 
+                        class="gradient-button text-white font-bold py-3 px-6 rounded-lg text-lg md:text-xl shadow-md focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50">
+                    Sign Up Now
                 </button>
-                <p class="text-xs text-gray-500 mt-4">
-                    We respect your privacy. Your email will only be used for updates on Cognitive Co-pilot.
-                </p>
             </form>
+            <p class="text-sm text-gray-500 mt-6">
+                We respect your privacy. Your data will be used solely for waitlist communications and product updates.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8 text-center border-t border-gray-800">
-        <div class="container mx-auto px-4">
-            <p>&copy; <span id="currentYear"></span> Cognitive Co-pilot. All rights reserved.</p>
-            <div class="mt-4 text-sm">
-                <a href="#" class="text-gray-400 hover:text-indigo-400 mx-2">Privacy Policy</a>
-                <span class="text-gray-600">|</span>
-                <a href="#" class="text-gray-400 hover:text-indigo-400 mx-2">Terms of Service</a>
+    <footer class="bg-gray-900 py-10 px-4 border-t border-gray-800 text-center text-gray-500 text-sm">
+        <div class="container mx-auto">
+            <p>&copy; 2023 CognitoFlow AI. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-gray-300">Privacy Policy</a>
+                <a href="#" class="hover:text-gray-300">Terms of Service</a>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer and Current Year -->
+    <!-- Countdown Script -->
     <script>
-        // Set the date we're counting down to (e.g., 7 days from now)
+        // Set the date we're counting down to (e.g., 14 days from now)
         const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 7); // Set 7 days from now for the "Limited Time" offer
+        countdownDate.setDate(countdownDate.getDate() + 14); 
+        countdownDate.setHours(23, 59, 59, 999); // Set to end of the day 14 days from now
 
         const x = setInterval(function() {
             const now = new Date().getTime();
-            const distance = countdownDate.getTime() - now;
+            const distance = countdownDate - now;
 
-            // Calculate days, hours, minutes, seconds
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Display the result in the element with id="countdown"
+            // Display the result in the corresponding elements
             document.getElementById("days").innerHTML = String(days).padStart(2, '0');
             document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
             document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
             document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-            // If the countdown is finished, write some text
+            // If the count down is finished, write some text
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("countdown").innerHTML = "Offer Expired!";
-                document.getElementById("countdown").parentElement.classList.remove('animate-pulse-slow');
-                document.getElementById("countdown").parentElement.classList.add('opacity-50');
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+                document.querySelector('#waitlist .container').innerHTML = `
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                        The Exclusive Waitlist has Ended!
+                    </h2>
+                    <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                        Thank you for your interest! Stay tuned for our official launch announcement.
+                    </p>
+                    <a href="#" class="gradient-button inline-block text-white font-bold py-3 px-8 rounded-full text-lg md:text-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50">
+                        Learn More About CognitoFlow AI
+                    </a>
+                `;
             }
         }, 1000);
-
-        // Update current year in footer
-        document.getElementById("currentYear").textContent = new Date().getFullYear();
     </script>
+
 </body>
 </html>
