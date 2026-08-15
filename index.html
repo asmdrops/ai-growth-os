@@ -3,235 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twitch Creator's AI Protection Playbook - Secure Your Content</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Creator AI Rights Defender - Protect Your Stream, Your Future</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Google Font - Inter for a modern, premium look -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
     <style>
-        /* Custom styles for dark mode and specific element overrides */
+        /* Modern premium dark-mode aesthetic */
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0d0d0d; /* Very dark background for premium feel */
-            color: #e0e0e0; /* Light text for contrast */
+            font-family: 'Inter', sans-serif; /* A sleek, modern font for digital products */
+            background-color: #0d1117; /* Deep dark background */
+            color: #c9d1d9; /* Soft light text for contrast */
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scroll on small devices */
         }
-        /* Hero section background image */
-        .hero-bg {
+        .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
-        /* Pulse animation for the primary call-to-action button */
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.03); /* Slightly scales up */
-            }
+        .gradient-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.95) 100%);
         }
-        .animate-pulse-once {
-            animation: pulse 1.5s infinite ease-in-out;
+        .countdown-timer span {
+            display: inline-block; /* Keep numbers inline */
+            min-width: 2em; /* Ensure consistent width for digits */
+            text-align: center;
         }
+        /* Fluid containers and flexible grids are handled by Tailwind's responsive classes */
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 antialiased">
+<body>
 
     <!-- Hero Section -->
-    <section class="relative hero-bg bg-fixed bg-cover bg-center min-h-screen flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
-        <!-- Dark overlay for improved text readability against the background image -->
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-
-        <div class="relative z-10 max-w-5xl mx-auto text-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
-                Twitch AI Policy: From "Slap to the Face" to <span class="text-purple-400">Total Control</span>
+    <section class="relative min-h-screen flex items-center justify-center text-center text-white hero-background p-4 md:p-8">
+        <div class="absolute inset-0 gradient-overlay"></div>
+        <div class="relative z-10 max-w-5xl mx-auto space-y-6">
+            <span class="text-sm md:text-base tracking-widest uppercase font-semibold text-purple-400">
+                🚨 TREND ALERT: Streamers Under Threat from AI Scraping! 🚨
+            </span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mb-4">
+                Reclaim Your Rights.<br class="sm:hidden"> Protect Your Content.
+                <span class="block text-purple-300 mt-2">Stop AI From Stealing Your Stream.</span>
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl mb-10 text-gray-200 max-w-3xl mx-auto">
-                Secure your content, protect your brand, and navigate Twitch's new Gen AI policies with the ultimate <span class="font-bold text-purple-300">AI Protection Playbook</span>.
-                Don't wait until it's too late.
+            <p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+                Join 'Creator AI Rights Defender' – The definitive toolkit and community empowering streamers to fight back against unauthorized generative AI training.
             </p>
 
-            <!-- Limited Time Offer Countdown - Designed for High Conversion -->
-            <div class="bg-gradient-to-r from-purple-700 to-indigo-600 p-6 rounded-lg shadow-xl mb-12 transform hover:scale-105 transition-transform duration-300">
-                <h3 class="text-3xl font-bold mb-4 text-white">Limited Early Access Offer Ends In:</h3>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-white">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="text-5xl sm:text-6xl font-bold">00</span>
-                        <span class="text-sm uppercase">Days</span>
-                    </div>
-                    <span class="text-5xl sm:text-6xl font-bold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="text-5xl sm:text-6xl font-bold">00</span>
-                        <span class="text-sm uppercase">Hours</span>
-                    </div>
-                    <span class="text-5xl sm:text-6xl font-bold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="text-5xl sm:text-6xl font-bold">00</span>
-                        <span class="text-sm uppercase">Minutes</span>
-                    </div>
-                    <span class="text-5xl sm:text-6xl font-bold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="text-5xl sm:text-6xl font-bold">00</span>
-                        <span class="text-sm uppercase">Seconds</span>
-                    </div>
-                </div>
-                <p class="text-lg mt-4 text-gray-200">Exclusive savings for our first wave of creators.</p>
+            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#waitlist" class="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50">
+                    Secure Your Spot on the Waitlist <span class="ml-2">🚀</span>
+                </a>
             </div>
 
-            <!-- Main Call to Action Button with pulse animation -->
-            <a href="#waitlist" class="inline-block px-10 py-5 bg-purple-600 text-white text-xl font-bold rounded-full shadow-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 animate-pulse-once">
-                Get Your AI Protection Playbook Now!
-            </a>
-            <p class="mt-4 text-gray-300 text-sm">Join 1,000+ creators taking back control.</p>
+            <!-- Limited Time Countdown - Conversion Booster! -->
+            <div class="mt-12 p-4 md:p-6 bg-gray-900 bg-opacity-70 rounded-xl shadow-xl border border-pink-500 inline-block w-full sm:w-auto">
+                <p class="text-lg md:text-xl font-bold text-yellow-300 flex items-center justify-center mb-2">
+                    <span class="animate-pulse mr-3 text-2xl">⚡️</span> Early Access & Exclusive Bonuses End In:
+                </p>
+                <div id="countdown" class="countdown-timer text-3xl md:text-5xl font-extrabold text-white flex justify-center gap-x-2 md:gap-x-4">
+                    <div class="flex flex-col items-center">
+                        <span class="days">00</span>
+                        <span class="text-xs text-gray-400 uppercase">Days</span>
+                    </div>
+                    <span class="text-gray-500 text-2xl md:text-4xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="hours">00</span>
+                        <span class="text-xs text-gray-400 uppercase">Hours</span>
+                    </div>
+                    <span class="text-gray-500 text-2xl md:text-4xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="minutes">00</span>
+                        <span class="text-xs text-gray-400 uppercase">Minutes</span>
+                    </div>
+                    <span class="text-gray-500 text-2xl md:text-4xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="seconds">00</span>
+                        <span class="text-xs text-gray-400 uppercase">Seconds</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-16 text-white">
-                What's Inside Your <span class="text-purple-400">Protection Playbook</span>?
+    <section class="py-16 md:py-24 bg-gray-900 text-white">
+        <div class="container mx-auto px-4 md:px-8 max-w-6xl">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-12 text-purple-300">
+                Your Arsenal Against AI Scraping
             </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <!-- Feature 1: Actionable Checklists -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
-                    <div class="text-5xl mb-6 text-purple-400">🛡️</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Actionable Opt-Out Checklists</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-purple-600">
+                    <div class="text-purple-400 text-5xl mb-4">📚</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Comprehensive Legal Guide</h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Step-by-step guides to effectively opt out of Twitch's data usage policies. Ensure your content remains yours.
+                        Navigate the complex landscape of AI and copyright. Our continuously updated guide provides actionable insights into your rights and how to defend them.
                     </p>
                 </div>
-
-                <!-- Feature 2: Legal Explainer -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
-                    <div class="text-5xl mb-6 text-purple-400">⚖️</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Legal Explainer: New Terms Decoded</h3>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-pink-500">
+                    <div class="text-pink-400 text-5xl mb-4">📝</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Updated Legal Templates</h3>
                     <p class="text-gray-300 leading-relaxed">
-                        A jargon-free breakdown of Twitch's updated terms of service, highlighting exactly what's changed and what it means for you.
+                        Access battle-tested cease & desist letters, DMCA takedown notices, and more, professionally crafted and ready to deploy against infringers.
                     </p>
                 </div>
-
-                <!-- Feature 3: Safeguarding Future Content -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
-                    <div class="text-5xl mb-6 text-purple-400">🔒</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Safeguarding Future Content</h3>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-blue-500">
+                    <div class="text-blue-400 text-5xl mb-4">⚙️</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Platform Opt-Out Strategies</h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Best practices and proactive strategies to protect your streams, VODs, and clips from unauthorized AI training in the long term.
+                        Get precise, step-by-step instructions and proven methods to opt-out or minimize AI training on major streaming platforms like Twitch and YouTube.
                     </p>
                 </div>
-
-                <!-- Feature 4: Communication Templates -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
-                    <div class="text-5xl mb-6 text-purple-400">✍️</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Creator Communication Templates</h3>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-green-500">
+                    <div class="text-green-400 text-5xl mb-4">🤝</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Private Community Forum</h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Pre-written templates for communicating with Twitch support, asserting your rights, and informing your community.
-                    </p>
-                </div>
-
-                <!-- Feature 5: Proactive Strategy Guide -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
-                    <div class="text-5xl mb-6 text-purple-400">💡</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Proactive Strategy Guide</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Learn how to stay ahead of platform policy changes and maintain control over your intellectual property in a rapidly evolving digital landscape.
-                    </p>
-                </div>
-
-                <!-- Feature 6: Community & Updates Access -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
-                    <div class="text-5xl mb-6 text-purple-400">🚀</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Community & Updates Access</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Get access to future updates of the playbook and an exclusive community forum to discuss evolving policies and share strategies.
+                        Connect with a dedicated network of fellow streamers. Share strategies, report new threats, and unite to fight AI exploitation together.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / Call to Action Form Section -->
-    <section id="waitlist" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-950">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 text-white">
-                Don't Be Left Exposed. <span class="text-purple-400">Join the Waitlist Now!</span>
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gray-800 text-white">
+        <div class="container mx-auto px-4 md:px-8 max-w-xl">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-8 text-pink-300">
+                Join the Exclusive Waitlist Today!
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10">
-                Secure your early access to the "Twitch Creator's AI Protection Playbook" and be among the first to gain complete peace of mind.
-                Exclusive bonuses for early adopters!
+            <p class="text-lg text-center text-gray-300 mb-10 leading-relaxed">
+                Don't miss out on early bird access and special launch bonuses. Equip yourself before it's too late.
             </p>
 
-            <form class="bg-gray-800 p-8 rounded-lg shadow-2xl border border-gray-700">
-                <div class="mb-6">
-                    <label for="name" class="block text-left text-gray-300 text-sm font-medium mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name"
-                           class="w-full p-4 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-400 transition-colors duration-200"
-                           required>
+            <form class="bg-gray-900 p-8 md:p-10 rounded-xl shadow-2xl space-y-6 border border-purple-700">
+                <div>
+                    <label for="name" class="block text-gray-200 text-sm font-semibold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter Your Name" required
+                           class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-purple-500 focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-400 transition-all duration-200">
                 </div>
-                <div class="mb-6">
-                    <label for="email" class="block text-left text-gray-300 text-sm font-medium mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="your@email.com"
-                           class="w-full p-4 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-400 transition-colors duration-200"
-                           required>
+                <div>
+                    <label for="email" class="block text-gray-200 text-sm font-semibold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required
+                           class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-purple-500 focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-400 transition-all duration-200">
                 </div>
                 <button type="submit"
-                        class="w-full py-4 bg-purple-600 text-white font-bold rounded-md text-xl hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                    Secure My Early Access!
+                        class="w-full bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
+                    Join Waitlist Now! <span class="ml-2">🔒</span>
                 </button>
+                <p class="text-xs text-gray-400 text-center mt-4">
+                    Your privacy is our priority. We will never share your information.
+                </p>
             </form>
-            <p class="mt-8 text-gray-400 text-sm">
-                We respect your privacy. Your email will only be used for product updates and early access notifications.
-            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 px-4 sm:px-6 lg:px-8 bg-black text-center text-gray-500">
-        <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-        <p class="mt-2 text-xs">A premium knowledge product for Twitch Creators.</p>
+    <footer class="py-8 bg-gray-950 text-gray-500 text-center text-sm px-4">
+        <p>&copy; 2023 Creator AI Rights Defender. All rights reserved.</p>
+        <p class="mt-2">A product of the Digital Education Authority.</p>
     </footer>
 
-    <!-- JavaScript for Countdown Timer Functionality -->
+    <!-- JavaScript for Countdown Timer -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the target date for the countdown (e.g., 7 days from now)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Sets the countdown to expire in 7 days
+        document.addEventListener('DOMContentLoaded', () => {
+            const countdownElement = document.getElementById('countdown');
+            const daysSpan = countdownElement.querySelector('.days');
+            const hoursSpan = countdownElement.querySelector('.hours');
+            const minutesSpan = countdownElement.querySelector('.minutes');
+            const secondsSpan = countdownElement.querySelector('.seconds');
 
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const now = new Date();
+            const countDownDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 days from current time
 
-                // If the countdown is over, display an "OFFER EXPIRED!" message
+            const updateCountdown = () => {
+                const currentTime = new Date().getTime();
+                const distance = countDownDate.getTime() - currentTime;
+
                 if (distance < 0) {
                     clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<span class='text-2xl sm:text-3xl lg:text-4xl font-bold'>OFFER EXPIRED!</span>";
-                    const ctaButton = document.querySelector('.animate-pulse-once');
-                    if (ctaButton) {
-                        ctaButton.classList.remove('animate-pulse-once'); // Stop the pulse animation
-                        ctaButton.textContent = "Join the Waitlist"; // Change button text to reflect expired offer
-                        // Optionally, you could disable the button or change its target URL here
-                    }
+                    countdownElement.innerHTML = "<p class='text-red-500 text-xl md:text-2xl font-bold'>OFFER EXPIRED!</p>";
                     return;
                 }
 
-                // Time calculations for days, hours, minutes and seconds
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Display the result in the corresponding elements, ensuring two digits
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                daysSpan.innerHTML = String(days).padStart(2, '0');
+                hoursSpan.innerHTML = String(hours).padStart(2, '0');
+                minutesSpan.innerHTML = String(minutes).padStart(2, '0');
+                secondsSpan.innerHTML = String(seconds).padStart(2, '0');
+            };
 
-            }, 1000); // Update every 1 second
+            updateCountdown(); // Initial call to display immediately
+            const x = setInterval(updateCountdown, 1000); // Update every second
         });
     </script>
 </body>
