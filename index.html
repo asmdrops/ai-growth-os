@@ -1,265 +1,238 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Threat Intel Pro: Advanced iPhone Security for Targeted Users</title>
+    <title>Twitch Creator's AI Protection Playbook - Secure Your Content</title>
+    <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Google Font - Inter for a modern, premium look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for dark mode */
+        /* Custom styles for dark mode and specific element overrides */
         body {
-            @apply bg-gray-900 text-gray-100;
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0d; /* Very dark background for premium feel */
+            color: #e0e0e0; /* Light text for contrast */
         }
-        .hero-background {
+        /* Hero section background image */
+        .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            position: relative;
         }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for strong contrast */
-        }
-        .countdown-timer span {
-            @apply text-4xl sm:text-5xl md:text-6xl font-extrabold text-red-500 mx-1 sm:mx-2;
-            line-height: 1; /* Adjust line height for better alignment */
-        }
-        .countdown-timer .label {
-            @apply text-base sm:text-lg text-gray-400 font-medium;
-            display: block;
-            margin-top: 4px;
-        }
-        @keyframes pulse-once {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.03); /* Subtle pulse */
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-        .animate-subtle-pulse {
-            animation: pulse-once 2s infinite ease-in-out;
-        }
-        @keyframes strong-pulse {
+        /* Pulse animation for the primary call-to-action button */
+        @keyframes pulse {
             0%, 100% {
                 transform: scale(1);
             }
             50% {
-                transform: scale(1.05); /* Stronger pulse for CTAs */
+                transform: scale(1.03); /* Slightly scales up */
             }
         }
-        .animate-strong-pulse {
-            animation: strong-pulse 2s infinite;
+        .animate-pulse-once {
+            animation: pulse 1.5s infinite ease-in-out;
         }
     </style>
 </head>
-<body class="font-sans antialiased">
+<body class="bg-gray-950 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <section class="hero-background min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-8">
-        <div class="hero-overlay absolute inset-0"></div>
-        <div class="relative z-10 text-center max-w-4xl mx-auto p-6 md:p-12 bg-gray-800 bg-opacity-90 rounded-xl shadow-2xl border border-gray-700">
-            <p class="text-red-500 uppercase tracking-widest text-sm sm:text-base mb-4 font-semibold">URGENT SECURITY ALERT</p>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6">
-                Apple Warns: Are <span class="text-blue-400">YOU</span> a Target?
-                <br> Secure Your iPhone Against <span class="text-red-500">Mercenary Spyware</span>.
-            </h1>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Global threats are escalating. High-risk individuals like journalists, activists, and executives are prime targets.
-                <br>It's time for proactive, advanced defense.
-            </p>
-            <a href="#waitlist-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg animate-strong-pulse">
-                Join the Private Waitlist
-            </a>
-            <p class="text-sm text-gray-400 mt-4">Limited enrollment. Act now to safeguard your digital life.</p>
-        </div>
-    </section>
+    <section class="relative hero-bg bg-fixed bg-cover bg-center min-h-screen flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
+        <!-- Dark overlay for improved text readability against the background image -->
+        <div class="absolute inset-0 bg-black opacity-70"></div>
 
-    <!-- Problem/Trend Section -->
-    <section class="py-16 md:py-24 bg-gray-900 text-gray-100">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-white">The Rising Tide of Digital Espionage</h2>
-            <p class="text-lg sm:text-xl leading-relaxed text-gray-300 mb-12">
-                "Apple Warns Users in 110 Countries They May Be Targets of Mercenary Spyware." The headlines are stark.
-                This isn't just about general cybercrime; it's about sophisticated, state-sponsored or commercial spyware
-                designed to infiltrate the devices of specific, high-value targets. Your iPhone, a vital tool for communication
-                and work, could be compromised without your knowledge.
+        <div class="relative z-10 max-w-5xl mx-auto text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                Twitch AI Policy: From "Slap to the Face" to <span class="text-purple-400">Total Control</span>
+            </h1>
+            <p class="text-lg sm:text-xl lg:text-2xl mb-10 text-gray-200 max-w-3xl mx-auto">
+                Secure your content, protect your brand, and navigate Twitch's new Gen AI policies with the ultimate <span class="font-bold text-purple-300">AI Protection Playbook</span>.
+                Don't wait until it's too late.
             </p>
-            <div class="grid md:grid-cols-2 gap-8 text-left">
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 animate-subtle-pulse">
-                    <h3 class="text-2xl font-semibold mb-4 text-red-400 flex items-center"><span class="mr-3 text-3xl">⚠️</span> Unseen Threats</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Traditional security measures are often inadequate against zero-day exploits and advanced persistent threats (APTs).
-                        These attacks are designed to be undetectable, silently extracting your most sensitive data.
-                    </p>
+
+            <!-- Limited Time Offer Countdown - Designed for High Conversion -->
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-600 p-6 rounded-lg shadow-xl mb-12 transform hover:scale-105 transition-transform duration-300">
+                <h3 class="text-3xl font-bold mb-4 text-white">Limited Early Access Offer Ends In:</h3>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-white">
+                    <div class="flex flex-col items-center">
+                        <span id="days" class="text-5xl sm:text-6xl font-bold">00</span>
+                        <span class="text-sm uppercase">Days</span>
+                    </div>
+                    <span class="text-5xl sm:text-6xl font-bold">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours" class="text-5xl sm:text-6xl font-bold">00</span>
+                        <span class="text-sm uppercase">Hours</span>
+                    </div>
+                    <span class="text-5xl sm:text-6xl font-bold">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes" class="text-5xl sm:text-6xl font-bold">00</span>
+                        <span class="text-sm uppercase">Minutes</span>
+                    </div>
+                    <span class="text-5xl sm:text-6xl font-bold">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds" class="text-5xl sm:text-6xl font-bold">00</span>
+                        <span class="text-sm uppercase">Seconds</span>
+                    </div>
                 </div>
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 animate-subtle-pulse">
-                    <h3 class="text-2xl font-semibold mb-4 text-blue-400 flex items-center"><span class="mr-3 text-3xl">🎯</span> Targeted Vulnerabilities</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        If you're a journalist exposing corruption, an activist challenging power, or an executive handling critical information,
-                        you are explicitly in the crosshairs. Your digital footprint is being analyzed for weaknesses.
-                    </p>
-                </div>
+                <p class="text-lg mt-4 text-gray-200">Exclusive savings for our first wave of creators.</p>
             </div>
+
+            <!-- Main Call to Action Button with pulse animation -->
+            <a href="#waitlist" class="inline-block px-10 py-5 bg-purple-600 text-white text-xl font-bold rounded-full shadow-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 animate-pulse-once">
+                Get Your AI Protection Playbook Now!
+            </a>
+            <p class="mt-4 text-gray-300 text-sm">Join 1,000+ creators taking back control.</p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-800 text-gray-100">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-white">Your Essential Shield: Threat Intel Pro</h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-                Threat Intel Pro is more than just a newsletter; it's a comprehensive defense system tailored for individuals
-                who cannot afford to be compromised. We provide the intelligence and tools you need to stay ahead.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-                <!-- Feature 1 -->
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-2xl font-semibold mb-4 text-blue-400 flex items-center">
-                        <span class="mr-3 text-3xl">🚨</span> Real-Time Threat Intelligence
-                    </h3>
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-16 text-white">
+                What's Inside Your <span class="text-purple-400">Protection Playbook</span>?
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Feature 1: Actionable Checklists -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-5xl mb-6 text-purple-400">🛡️</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Actionable Opt-Out Checklists</h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Get instant alerts and detailed breakdowns of emerging mercenary spyware tactics, zero-day exploits,
-                        and new attack vectors specifically targeting iPhones. Stay informed, stay safe.
+                        Step-by-step guides to effectively opt out of Twitch's data usage policies. Ensure your content remains yours.
                     </p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-2xl font-semibold mb-4 text-red-400 flex items-center">
-                        <span class="mr-3 text-3xl">🔬</span> Deep-Dive Analyses
-                    </h3>
+
+                <!-- Feature 2: Legal Explainer -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-5xl mb-6 text-purple-400">⚖️</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Legal Explainer: New Terms Decoded</h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Our experts dissect sophisticated attacks, providing you with an unparalleled understanding of
-                        how these threats operate and what makes you vulnerable. Knowledge is your first line of defense.
+                        A jargon-free breakdown of Twitch's updated terms of service, highlighting exactly what's changed and what it means for you.
                     </p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-2xl font-semibold mb-4 text-green-400 flex items-center">
-                        <span class="mr-3 text-3xl">🛡️</span> Actionable Security Guides
-                    </h3>
+
+                <!-- Feature 3: Safeguarding Future Content -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-5xl mb-6 text-purple-400">🔒</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Safeguarding Future Content</h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Beyond warnings, we provide step-by-step, practical guides to fortify your iPhone. From privacy settings
-                        to advanced configurations, learn exactly how to enhance your device's defenses.
+                        Best practices and proactive strategies to protect your streams, VODs, and clips from unauthorized AI training in the long term.
                     </p>
                 </div>
-                <!-- Feature 4 -->
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-2xl font-semibold mb-4 text-yellow-400 flex items-center">
-                        <span class="mr-3 text-3xl">✅</span> Recommended Secure Tools & Practices
-                    </h3>
+
+                <!-- Feature 4: Communication Templates -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-5xl mb-6 text-purple-400">✍️</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Creator Communication Templates</h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Navigate the complex landscape of security tools with confidence. We recommend vetted software,
-                        hardware, and methodologies to safeguard your communications and data effectively.
+                        Pre-written templates for communicating with Twitch support, asserting your rights, and informing your community.
                     </p>
                 </div>
-                <!-- Feature 5 -->
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-2xl font-semibold mb-4 text-purple-400 flex items-center">
-                        <span class="mr-3 text-3xl">🤝</span> Private Community Forum
-                    </h3>
+
+                <!-- Feature 5: Proactive Strategy Guide -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-5xl mb-6 text-purple-400">💡</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Proactive Strategy Guide</h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Connect with a vetted network of high-risk individuals. Share insights, strategies, and experiences
-                        in a secure, moderated environment. Peer support for those on the digital front lines.
+                        Learn how to stay ahead of platform policy changes and maintain control over your intellectual property in a rapidly evolving digital landscape.
                     </p>
                 </div>
-                <!-- Feature 6 -->
-                 <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-2xl font-semibold mb-4 text-orange-400 flex items-center">
-                        <span class="mr-3 text-3xl">💡</span> Expert Q&A Sessions
-                    </h3>
+
+                <!-- Feature 6: Community & Updates Access -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-5xl mb-6 text-purple-400">🚀</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Community & Updates Access</h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Access exclusive sessions with leading cybersecurity experts. Get your pressing questions answered
-                        directly and gain deeper clarity on complex security challenges.
+                        Get access to future updates of the playbook and an exclusive community forum to discuss evolving policies and share strategies.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action / Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 md:py-24 bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100 relative">
-        <div class="max-w-3xl mx-auto px-6 text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-white">Secure Your Spot: Limited Enrollment</h2>
+    <!-- Waitlist / Call to Action Form Section -->
+    <section id="waitlist" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-950">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 text-white">
+                Don't Be Left Exposed. <span class="text-purple-400">Join the Waitlist Now!</span>
+            </h2>
             <p class="text-lg sm:text-xl text-gray-300 mb-10">
-                Due to the sensitive nature of the intelligence shared and the exclusivity of our community,
-                access to Threat Intel Pro is strictly limited. Join our private waitlist now.
+                Secure your early access to the "Twitch Creator's AI Protection Playbook" and be among the first to gain complete peace of mind.
+                Exclusive bonuses for early adopters!
             </p>
 
-            <!-- Limited Time Countdown -->
-            <div class="bg-red-900 bg-opacity-70 border border-red-700 p-6 rounded-lg shadow-xl mb-10 animate-strong-pulse">
-                <p class="text-red-300 text-lg sm:text-xl font-semibold mb-4">Waitlist Closes In:</p>
-                <div class="flex justify-center items-baseline countdown-timer" id="countdown">
-                    <div><span id="days">07</span><span class="label">Days</span></div>
-                    <span class="text-gray-300 text-2xl mx-2 sm:mx-4">:</span>
-                    <div><span id="hours">23</span><span class="label">Hours</span></div>
-                    <span class="text-gray-300 text-2xl mx-2 sm:mx-4">:</span>
-                    <div><span id="minutes">59</span><span class="label">Minutes</span></div>
-                    <span class="text-gray-300 text-2xl mx-2 sm:mx-4">:</span>
-                    <div><span id="seconds">59</span><span class="label">Seconds</span></div>
+            <form class="bg-gray-800 p-8 rounded-lg shadow-2xl border border-gray-700">
+                <div class="mb-6">
+                    <label for="name" class="block text-left text-gray-300 text-sm font-medium mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name"
+                           class="w-full p-4 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-400 transition-colors duration-200"
+                           required>
                 </div>
-                <p class="text-red-300 text-sm sm:text-base mt-4">Spots are allocated on a first-come, first-served basis once enrollment opens.</p>
-                <!-- NOTE: For a functional countdown, JavaScript would be required here to update the span contents dynamically.
-                     This HTML provides a static visual representation for demonstration purposes, as only raw HTML was requested.
-                     A basic JS implementation would look something like:
-                     <script>
-                         const countdownDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000); // Example: 7 days from now
-                         const x = setInterval(function() {
-                             const now = new Date().getTime();
-                             const distance = countdownDate - now;
-                             if (distance < 0) { clearInterval(x); document.getElementById("countdown").innerHTML = "<p class='text-xl'>Waitlist Closed!</p>"; return; }
-                             document.getElementById("days").innerHTML = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, '0');
-                             document.getElementById("hours").innerHTML = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
-                             document.getElementById("minutes").innerHTML = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
-                             document.getElementById("seconds").innerHTML = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
-                         }, 1000);
-                     </script>
-                -->
-            </div>
-
-            <!-- Waitlist Form -->
-            <form action="#" method="POST" class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700 space-y-6">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-gray-300 text-left mb-2">Full Name</label>
-                        <input type="text" id="name" name="name" required
-                               class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md focus:ring-blue-500 focus:border-blue-500 text-gray-100 placeholder-gray-400">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-300 text-left mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" required
-                               class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md focus:ring-blue-500 focus:border-blue-500 text-gray-100 placeholder-gray-400">
-                    </div>
-                </div>
-                <div>
-                    <label for="organization" class="block text-sm font-medium text-gray-300 text-left mb-2">Organization/Role (Optional)</label>
-                    <input type="text" id="organization" name="organization"
-                           class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md focus:ring-blue-500 focus:border-blue-500 text-gray-100 placeholder-gray-400">
-                </div>
-                <div>
-                    <label for="reason" class="block text-sm font-medium text-gray-300 text-left mb-2">Why are you interested? (Optional)</label>
-                    <textarea id="reason" name="reason" rows="4"
-                              class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md focus:ring-blue-500 focus:border-blue-500 text-gray-100 placeholder-gray-400"></textarea>
+                <div class="mb-6">
+                    <label for="email" class="block text-left text-gray-300 text-sm font-medium mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com"
+                           class="w-full p-4 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-400 transition-colors duration-200"
+                           required>
                 </div>
                 <button type="submit"
-                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-md text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-xl animate-strong-pulse">
-                    Get On The Waitlist Now
+                        class="w-full py-4 bg-purple-600 text-white font-bold rounded-md text-xl hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    Secure My Early Access!
                 </button>
-                <p class="text-xs text-gray-400 mt-4">Your information is handled with the utmost security and confidentiality.</p>
             </form>
+            <p class="mt-8 text-gray-400 text-sm">
+                We respect your privacy. Your email will only be used for product updates and early access notifications.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm">
-        <div class="max-w-6xl mx-auto px-6">
-            <p>&copy; 2024 Threat Intel Pro. All rights reserved.</p>
-            <p class="mt-2">Protecting those who matter most in a compromised digital world.</p>
-        </div>
+    <footer class="py-8 px-4 sm:px-6 lg:px-8 bg-black text-center text-gray-500">
+        <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+        <p class="mt-2 text-xs">A premium knowledge product for Twitch Creators.</p>
     </footer>
 
+    <!-- JavaScript for Countdown Timer Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the target date for the countdown (e.g., 7 days from now)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Sets the countdown to expire in 7 days
+
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate.getTime() - now;
+
+                // If the countdown is over, display an "OFFER EXPIRED!" message
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<span class='text-2xl sm:text-3xl lg:text-4xl font-bold'>OFFER EXPIRED!</span>";
+                    const ctaButton = document.querySelector('.animate-pulse-once');
+                    if (ctaButton) {
+                        ctaButton.classList.remove('animate-pulse-once'); // Stop the pulse animation
+                        ctaButton.textContent = "Join the Waitlist"; // Change button text to reflect expired offer
+                        // Optionally, you could disable the button or change its target URL here
+                    }
+                    return;
+                }
+
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the corresponding elements, ensuring two digits
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+            }, 1000); // Update every 1 second
+        });
+    </script>
 </body>
 </html>
