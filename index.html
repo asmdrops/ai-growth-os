@@ -3,180 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple HomeKit Pro: Master Your Smart Home Ecosystem</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Pixel 11 Ultimate Guide & AI Productivity Handbook - Limited Time Offer!</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for the countdown timer and image overlay */
+        /* Custom styles for premium feel and responsiveness */
         .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
+            background-attachment: fixed; /* Provides a subtle parallax effect */
         }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for text readability */
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        /* Fluid typography using clamp for ultra-responsiveness */
+        h1 { font-size: clamp(2rem, 5vw, 4rem); }
+        h2 { font-size: clamp(1.75rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.25rem, 2.5vw, 2.25rem); }
+        p, li, button, input { font-size: clamp(1rem, 2vw, 1.25rem); }
+
+        /* Countdown specific styles (visual only for HTML, requires JS for functionality) */
+        .countdown-segment {
+            @apply flex flex-col items-center justify-center p-2 sm:p-4 bg-gray-800 bg-opacity-70 rounded-lg shadow-lg;
+        }
+        .countdown-value {
+            @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-400;
+        }
+        .countdown-label {
+            @apply text-xs sm:text-sm md:text-base lg:text-lg text-gray-300 uppercase mt-1;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white font-sans antialiased">
+<body class="bg-gray-900 text-gray-50 font-sans antialiased overflow-x-hidden">
 
     <!-- Hero Section -->
-    <header class="relative hero-background min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-8 lg:p-12">
-        <div class="hero-overlay"></div>
-        <div class="relative z-10 text-center max-w-4xl mx-auto space-y-6">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white mb-4">
-                Unlock the Full Potential of Your Apple Smart Home
+    <header class="relative hero-background min-h-screen flex items-center justify-center text-center p-4">
+        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark Overlay for readability -->
+        <div class="relative z-10 max-w-5xl mx-auto space-y-6 md:space-y-8 lg:space-y-10">
+            <h1 class="font-extrabold text-white leading-tight">
+                Unlock the Future: <br class="sm:hidden">Google Pixel 11 Ultimate Buyer's Guide & <span class="text-indigo-400">AI Productivity Handbook</span>
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 mb-8 font-light">
-                Master HomeKit, Automations, Security, and Siri AI with <span class="font-semibold text-blue-400">Apple HomeKit Pro</span>.
+            <p class="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-3xl mx-auto">
+                Discover every detail of the Pixel 11 models, outsmart competitors, and master Gemini AI for unparalleled productivity.
             </p>
-            <p class="text-md sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10">
-                With Apple's smart home roadmap expanding rapidly, now's the time to go beyond the basics and build a truly intelligent, secure, and intuitive ecosystem.
-            </p>
-            <a href="#waitlist" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
-                Join the Exclusive Waitlist Now!
+
+            <!-- Limited Time Offer Banner with Countdown -->
+            <div class="bg-indigo-600 bg-opacity-90 p-4 sm:p-6 rounded-lg shadow-xl animate-pulse max-w-2xl mx-auto">
+                <p class="text-white text-lg sm:text-xl md:text-2xl font-bold">
+                    <span class="block mb-2">LIMITED-TIME INTRODUCTORY DISCOUNT!</span>
+                    <span class="block">SAVE 40% Today – Only <span class="text-yellow-300 line-through">$99</span> <span class="text-emerald-300 font-extrabold">$59!</span></span>
+                </p>
+                <!-- Countdown Timer (visual placeholder - functionality requires JS) -->
+                <div class="flex justify-center items-center mt-4 space-x-2 sm:space-x-4 countdown">
+                    <div class="countdown-segment">
+                        <span class="countdown-value" id="days">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-segment">
+                        <span class="countdown-value" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-segment">
+                        <span class="countdown-value" id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-segment">
+                        <span class="countdown-value" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+                <p class="text-gray-200 text-sm sm:text-base mt-3">Offer ends soon. Don't miss out on ultimate Pixel 11 mastery!</p>
+            </div>
+
+            <a href="#purchase" class="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                Secure Your Guide Now for $59!
             </a>
+            <p class="text-sm text-gray-400 mt-2">Instant digital download. 100% Satisfaction Guarantee.</p>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-20 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white mb-12 sm:mb-16">
-                What You'll Achieve with <span class="text-blue-500">Apple HomeKit Pro</span>
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-700 transform hover:-translate-y-1">
-                    <div class="text-blue-400 text-4xl mb-4">💡</div>
-                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-3">Master Initial Setup & Beyond</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">Step-by-step video tutorials from unboxing to advanced configuration, ensuring a smooth start and powerful expansion.</p>
+    <section id="features" class="py-16 md:py-20 lg:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-center font-extrabold text-white mb-12">What You'll Discover Inside <span class="text-indigo-400">Your Ultimate Guide</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Feature 1: Model Comparisons -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+                    <div class="text-indigo-400 text-4xl mb-4">🔬</div>
+                    <h3 class="font-bold text-white mb-3">In-Depth Pixel 11 Model Comparisons</h3>
+                    <p class="text-gray-300">Get an exhaustive breakdown of the Standard, Pro, and Fold models. We compare specs, features, camera capabilities, and value to help you choose perfectly.</p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-700 transform hover:-translate-y-1">
-                    <div class="text-blue-400 text-4xl mb-4">⚙️</div>
-                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-3">Advanced HomeKit Automations</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">Craft sophisticated scenes and automations that truly make your home intelligent and responsive to your life.</p>
+
+                <!-- Feature 2: Competitor Analysis -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+                    <div class="text-indigo-400 text-4xl mb-4">⚔️</div>
+                    <h3 class="font-bold text-white mb-3">Side-by-Side Competitor Analysis</h3>
+                    <p class="text-gray-300">See how the Pixel 11 stacks up against the Galaxy S26 and Z Fold 8. Understand its strengths and weaknesses to make an informed decision.</p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-700 transform hover:-translate-y-1">
-                    <div class="text-blue-400 text-4xl mb-4">👁️</div>
-                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-3">Seamless Security Camera Integration</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">Secure your home with confidence. Learn how to integrate and manage all your HomeKit-compatible cameras.</p>
+
+                <!-- Feature 3: Gemini AI Productivity -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+                    <div class="text-indigo-400 text-4xl mb-4">🧠</div>
+                    <h3 class="font-bold text-white mb-3">Master Gemini AI for Productivity</h3>
+                    <p class="text-gray-300">Unlock the full potential of Google's advanced AI. Learn practical hacks and strategies to integrate Gemini into your daily workflow for enhanced efficiency.</p>
                 </div>
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-700 transform hover:-translate-y-1">
-                    <div class="text-blue-400 text-4xl mb-4">🗣️</div>
-                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-3">Maximize Siri AI Potential</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">Unlock Siri's full capabilities across all your Apple devices for intuitive voice control and smart home management.</p>
+
+                <!-- Feature 4: Camera Deep Dive -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+                    <div class="text-indigo-400 text-4xl mb-4">📸</div>
+                    <h3 class="font-bold text-white mb-3">Camera Deep Dive & Pro Tips</h3>
+                    <p class="text-gray-300">From computational photography to advanced settings, understand every aspect of the Pixel 11 camera system. Capture stunning photos like a pro.</p>
                 </div>
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-700 transform hover:-translate-y-1">
-                    <div class="text-blue-400 text-4xl mb-4">📄</div>
-                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-3">Downloadable Checklists & Resources</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">Essential checklists, setup guides, and quick reference sheets to keep you on track and simplify complex tasks.</p>
+
+                <!-- Feature 5: Battery Optimization -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+                    <div class="text-indigo-400 text-4xl mb-4">🔋</div>
+                    <h3 class="font-bold text-white mb-3">Battery Life & Charging Optimizations</h3>
+                    <p class="text-gray-300">Maximize your Pixel 11's battery life with expert tips and learn the fastest, safest ways to charge and maintain your device's longevity.</p>
                 </div>
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out border border-gray-700 transform hover:-translate-y-1">
-                    <div class="text-blue-400 text-4xl mb-4">➕</div>
-                    <h3 class="text-xl sm:text-2xl font-semibold text-white mb-3">Continuously Updated Content & Community</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">Stay ahead with content updated for every new Apple smart home announcement and engage in our private expert community.</p>
+
+                <!-- Feature 6: Security & Privacy -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+                    <div class="text-indigo-400 text-4xl mb-4">🔒</div>
+                    <h3 class="font-bold text-white mb-3">Security & Privacy Best Practices</h3>
+                    <p class="text-gray-300">Navigate the Pixel 11's robust security features. Protect your data and privacy with our comprehensive guide to settings and recommendations.</p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section with Countdown -->
-    <section id="waitlist" class="py-16 sm:py-20 md:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8">
-                Be the First to Master Your Apple Smart Home
-            </h2>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10">
-                Join our exclusive waitlist for early access, special launch discounts, and bonus content!
+    <!-- Call to Action / Purchase & Secondary Waitlist Form Section -->
+    <section id="purchase" class="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-gray-900 to-gray-800 text-center">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="font-extrabold text-white mb-6">Don't Miss Out on This <span class="text-emerald-400">Exclusive Offer!</span></h2>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                The future of mobile productivity is at your fingertips. Get instant access to the guide that will transform your Pixel 11 experience.
             </p>
-
-            <!-- Countdown Timer -->
-            <div class="bg-blue-600 text-white p-4 sm:p-6 rounded-lg mb-10 shadow-lg border-2 border-blue-500">
-                <p class="text-xl sm:text-2xl font-bold mb-2">Limited-Time Early Bird Access Ends In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 sm:space-x-6 text-3xl sm:text-4xl md:text-5xl font-extrabold">
-                    <div><span id="days">00</span><span class="block text-sm sm:text-base font-medium">Days</span></div>
-                    <div><span id="hours">00</span><span class="block text-sm sm:text-base font-medium">Hours</span></div>
-                    <div><span id="minutes">00</span><span class="block text-sm sm:text-base font-medium">Minutes</span></div>
-                    <div><span id="seconds">00</span><span class="block text-sm sm:text-base font-medium">Seconds</span></div>
-                </div>
+            <div class="bg-indigo-700 bg-opacity-80 p-8 rounded-xl shadow-2xl border border-indigo-600">
+                <p class="text-white text-3xl md:text-4xl font-bold mb-4">
+                    Special Launch Price: <span class="line-through text-yellow-200">$99</span> <span class="text-emerald-300">$59</span>
+                </p>
+                <p class="text-gray-200 text-lg mb-6">This incredible 40% discount is available for a limited time only!</p>
+                <a href="#" class="inline-block bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-5 px-10 rounded-full shadow-xl transform hover:scale-105 transition duration-300 ease-in-out text-2xl">
+                    Get Your Ultimate Guide Instantly!
+                </a>
+                <p class="text-gray-300 text-sm mt-4">100% Satisfaction Guarantee. Secure checkout (e.g., powered by Stripe).</p>
             </div>
 
-            <form class="space-y-6">
-                <div>
-                    <label for="name" class="sr-only">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Full Name" required
-                           class="w-full p-3 sm:p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base sm:text-lg transition duration-200">
-                </div>
-                <div>
-                    <label for="email" class="sr-only">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
-                           class="w-full p-3 sm:p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base sm:text-lg transition duration-200">
-                </div>
-                <button type="submit"
-                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-lg text-lg sm:text-xl shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
-                    Join the Waitlist
-                </button>
-            </form>
+            <!-- Secondary Waitlist/Updates Form -->
+            <div class="mt-12 p-8 bg-gray-700 rounded-xl shadow-inner border border-gray-600">
+                <h3 class="font-bold text-white mb-4">Stay Ahead: Join Our VIP List for Future Updates!</h3>
+                <p class="text-gray-300 mb-6">
+                    Be the first to know about new Pixel guides, AI productivity tips, and exclusive offers.
+                </p>
+                <form class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-xl mx-auto">
+                    <input type="email" placeholder="Your best email address" class="p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none w-full flex-grow" required>
+                    <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out w-full sm:w-auto">
+                        Join VIP List
+                    </button>
+                </form>
+                <p class="text-gray-400 text-xs mt-3">We respect your privacy. No spam, ever.</p>
+            </div>
+
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 sm:py-10 text-center text-gray-500 text-sm">
+    <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm">
         <div class="container mx-auto px-4">
-            <p>&copy; 2023 Apple HomeKit Pro. All rights reserved.</p>
-            <p class="mt-2">Disclaimer: This course is independently developed and not affiliated with Apple Inc. HomeKit is a trademark of Apple Inc.</p>
+            <p>&copy; 2023 Digital Education Authority. All rights reserved. | <a href="#" class="hover:text-indigo-400">Privacy Policy</a> | <a href="#" class="hover:text-indigo-400">Terms of Service</a></p>
         </div>
     </footer>
 
-    <!-- Countdown Script -->
+    <!-- Placeholder for Countdown JavaScript - for functionality in a live environment -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the date we're counting down to (e.g., 7 days from now for early bird access)
-            // You can replace this with a specific date: new Date("Dec 31, 2023 23:59:59").getTime();
-            const now = new Date();
-            const countdownDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 days from now
+        // This script provides client-side countdown functionality.
+        // For a pure raw HTML output, the visual elements above are sufficient,
+        // but this demonstrates how the countdown would be made interactive.
+        function updateCountdown() {
+            const countdownElement = document.querySelector('.countdown');
+            if (!countdownElement) return;
 
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const endDate = new Date();
+            endDate.setDate(endDate.getDate() + 7); // Example: Offer ends 7 days from page load
+
+            // Update the count down every 1 second
             const x = setInterval(function() {
-                const currentNow = new Date().getTime();
-                const distance = countdownDate - currentNow;
+                const now = new Date().getTime();
+                const distance = endDate - now;
 
+                // Time calculations for days, hours, minutes and seconds
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                // Display the result in the corresponding elements
+                document.getElementById("days").innerText = days < 10 ? '0' + days : days;
+                document.getElementById("hours").innerText = hours < 10 ? '0' + hours : hours;
+                document.getElementById("minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
+                document.getElementById("seconds").innerText = seconds < 10 ? '0' + seconds : seconds;
 
+                // If the count down is finished, write some text
                 if (distance < 0) {
                     clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<span class='text-xl sm:text-2xl md:text-3xl font-bold'>OFFER EXPIRED!</span>";
-                    // Optionally disable the form here or change button text
-                    const waitlistButton = document.querySelector("#waitlist button[type='submit']");
-                    if(waitlistButton) {
-                        waitlistButton.disabled = true;
-                        waitlistButton.textContent = "Waitlist Closed";
-                        waitlistButton.classList.add('bg-gray-500', 'hover:bg-gray-500', 'cursor-not-allowed');
-                        waitlistButton.classList.remove('bg-blue-600', 'hover:bg-blue-700', 'transform', 'hover:scale-105');
+                    countdownElement.innerHTML = "<p class='text-red-400 font-bold text-xl'>OFFER EXPIRED!</p>";
+                    const purchaseButton = document.querySelector('#purchase a');
+                    if (purchaseButton) {
+                        purchaseButton.classList.add('opacity-50', 'cursor-not-allowed', 'bg-gray-500', 'hover:bg-gray-500');
+                        purchaseButton.classList.remove('bg-emerald-500', 'hover:bg-emerald-600', 'transform', 'hover:scale-105');
+                        purchaseButton.innerText = "Offer Expired";
+                        purchaseButton.href = "#"; // Prevent navigation
                     }
                 }
             }, 1000);
-        });
+        }
+
+        // Initialize countdown on page load
+        document.addEventListener('DOMContentLoaded', updateCountdown);
     </script>
 </body>
 </html>
