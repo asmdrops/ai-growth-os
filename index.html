@@ -3,185 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iPhone 18 Pro Launch Navigator - Premium Access</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuGWX4UtAuK0jG48eT+n1/V1b6B/N4Z1sXgWjV4X6A5aA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>AI Privacy & Security Watchdog - Exclusive Newsletter</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Google Fonts for a modern premium feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Modern font for a premium feel */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+        /* Custom styles for dark mode and hero image overlay */
         body {
             font-family: 'Inter', sans-serif;
         }
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?The,tech');
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            position: relative;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for strong text readability */
+        }
+        /* Gradient for primary buttons/highlights */
+        .btn-gradient {
+            background: linear-gradient(to right, #6366f1, #a855f7);
+            transition: all 0.3s ease;
+        }
+        .btn-gradient:hover {
+            background: linear-gradient(to right, #4f46e5, #9333ea);
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        }
+        /* Custom scrollbar for premium aesthetics */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937; /* Darker track */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4b5563; /* Gray thumb */
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280; /* Lighter on hover */
         }
     </style>
 </head>
-<body class="bg-zinc-900 text-gray-100 antialiased">
+<body class="bg-gray-900 text-gray-200 antialiased overflow-x-hidden">
 
     <!-- Hero Section -->
-    <header class="hero-background relative min-h-screen flex items-center justify-center p-4 md:p-8">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
-        <div class="relative z-10 text-center max-w-4xl mx-auto">
-            <p class="text-blue-400 text-sm md:text-base font-semibold uppercase tracking-wider mb-2">Exclusive Premium Access</p>
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mb-6 drop-shadow-lg">
-                Master the iPhone 18 Pro Launch. Secure Yours First.
+    <section class="hero-bg relative min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8">
+        <div class="hero-overlay absolute inset-0 w-full h-full"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 py-16 sm:py-20 lg:py-24">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6 animate-fade-in-up">
+                🚨 ChatGPT's Computer History is Watching. <br class="hidden sm:inline">Are YOU Protected? 🚨
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Transform speculative news into actionable, value-driven insights. Get real-time alerts, expert analysis, and a winning strategy for the iPhone 18 Pro launch.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-200">
+                The Verge confirms: ChatGPT tracks your clicks and keystrokes. Don't let your data be compromised.
+                Join the exclusive 'AI Privacy & Security Watchdog' to stay secure.
             </p>
-
-            <!-- Limited Time Countdown - Strategy Adjustment -->
-            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 p-4 md:p-6 rounded-lg shadow-xl inline-block mb-8 animate-pulse">
-                <p class="text-white text-md md:text-lg font-bold uppercase mb-2">Pre-Launch Offer Ends In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 md:space-x-4 text-white font-mono text-2xl md:text-4xl">
-                    <div><span id="days">00</span><span class="block text-sm">Days</span></div>
-                    <div><span id="hours">00</span><span class="block text-sm">Hours</span></div>
-                    <div><span id="minutes">00</span><span class="block text-sm">Minutes</span></div>
-                    <div><span id="seconds">00</span><span class="block text-sm">Seconds</span></div>
+            
+            <!-- CTA Button & Limited Time Countdown -->
+            <div class="space-y-6 sm:space-y-8 animate-fade-in-up delay-400">
+                <a href="#waitlist-form" class="inline-block px-10 py-4 text-lg sm:text-xl font-bold rounded-full btn-gradient text-white shadow-lg transition-all duration-300">
+                    Secure Your AI Privacy Now!
+                </a>
+                
+                <div class="mt-8 bg-gray-800 bg-opacity-70 backdrop-blur-sm rounded-xl p-6 sm:p-8 border border-gray-700 max-w-md mx-auto transform hover:scale-105 transition-transform duration-300">
+                    <p class="text-indigo-400 text-sm sm:text-base font-semibold uppercase mb-3">Early Bird Access & Founding Member Benefits Close In:</p>
+                    <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-5 text-white">
+                        <div class="flex flex-col items-center">
+                            <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold" id="days">00</span>
+                            <span class="text-xs sm:text-sm text-gray-400 uppercase">Days</span>
+                        </div>
+                        <span class="text-3xl sm:text-4xl md:text-5xl font-light">:</span>
+                        <div class="flex flex-col items-center">
+                            <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold" id="hours">00</span>
+                            <span class="text-xs sm:text-sm text-gray-400 uppercase">Hours</span>
+                        </div>
+                        <span class="text-3xl sm:text-4xl md:text-5xl font-light">:</span>
+                        <div class="flex flex-col items-center">
+                            <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold" id="minutes">00</span>
+                            <span class="text-xs sm:text-sm text-gray-400 uppercase">Minutes</span>
+                        </div>
+                        <span class="text-3xl sm:text-4xl md:text-5xl font-light">:</span>
+                        <div class="flex flex-col items-center">
+                            <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold" id="seconds">00</span>
+                            <span class="text-xs sm:text-sm text-gray-400 uppercase">Seconds</span>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-gray-400 mt-4">Limited spots available for founding members. Don't miss out on exclusive benefits!</p>
                 </div>
             </div>
-
-            <a href="#waitlist" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 md:py-4 md:px-10 rounded-full text-lg md:text-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out inline-block">
-                Join the VIP Waitlist Now
-            </a>
         </div>
-    </header>
+    </section>
+
+    <!-- Problem/Pain Point Introduction -->
+    <section class="py-16 sm:py-20 bg-gray-900 px-4">
+        <div class="container mx-auto max-w-5xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">The AI Revolution Comes With Hidden Costs.</h2>
+            <p class="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+                As AI becomes integrated into every aspect of our digital lives, understanding and protecting your privacy and security has never been more critical.
+                Default settings, hidden features, and evolving terms of service can expose your data without you even knowing.
+            </p>
+            <p class="text-xl sm:text-2xl font-semibold text-indigo-400">
+                You need a watchdog. You need a guide. You need real-time intelligence.
+            </p>
+        </div>
+    </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-zinc-800">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-center text-white mb-12">What You Get with Launch Navigator</h2>
+    <section class="py-16 sm:py-20 bg-gray-800 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">What You'll Get With Your Membership</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1: Real-time Alerts -->
-                <div class="bg-zinc-700 p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-zinc-600">
-                    <div class="text-blue-400 text-4xl mb-4"><i class="fas fa-bell"></i></div>
-                    <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Real-Time Alerts & Insider Info</h3>
-                    <p class="text-gray-300">
-                        Get instant notifications for official announcements, pre-order windows, and exclusive early-bird deals. Never miss out.
-                    </p>
+                <!-- Feature 1 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-4 text-indigo-400">🚨</span>
+                        <h3 class="text-xl font-bold text-white">Real-Time AI Privacy Updates</h3>
+                    </div>
+                    <p class="text-gray-300">Stay informed with weekly intelligence on new AI privacy features, vulnerabilities, and policy changes across all major platforms.</p>
                 </div>
-                <!-- Feature 2: Comparative Analysis -->
-                <div class="bg-zinc-700 p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-zinc-600">
-                    <div class="text-blue-400 text-4xl mb-4"><i class="fas fa-chart-line"></i></div>
-                    <h3 class="text-xl md:text-2xl font-bold text-white mb-3">In-Depth Comparative Analysis</h3>
-                    <p class="text-gray-300">
-                        Detailed breakdowns of predicted models (Pro Max vs. Pro) to help you choose the perfect device for your needs.
-                    </p>
+
+                <!-- Feature 2 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-4 text-indigo-400">🛠️</span>
+                        <h3 class="text-xl font-bold text-white">Step-by-Step Security Guides</h3>
+                    </div>
+                    <p class="text-gray-300">Practical, easy-to-follow guides, like disabling ChatGPT's Computer History, to configure your AI settings for maximum privacy.</p>
                 </div>
-                <!-- Feature 3: Smart Buyer's Toolkit -->
-                <div class="bg-zinc-700 p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-zinc-600">
-                    <div class="text-blue-400 text-4xl mb-4"><i class="fas fa-toolbox"></i></div>
-                    <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Smart Buyer's Toolkit</h3>
-                    <p class="text-gray-300">
-                        Expert advice on carrier deals, trade-in strategies, and accessory bundles to maximize your savings and value.
-                    </p>
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-4 text-indigo-400">🔍</span>
+                        <h3 class="text-xl font-bold text-white">Privacy-Focused AI Alternatives</h3>
+                    </div>
+                    <p class="text-gray-300">Detailed reviews and recommendations for AI tools that prioritize user data protection over everything else.</p>
                 </div>
-                <!-- Feature 4: Private Community -->
-                <div class="bg-zinc-700 p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-zinc-600">
-                    <div class="text-blue-400 text-4xl mb-4"><i class="fas fa-users"></i></div>
-                    <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Exclusive Community Forum</h3>
-                    <p class="text-gray-300">
-                        Connect with fellow enthusiasts, share insights, and get your questions answered in our private, moderated forum.
-                    </p>
+
+                <!-- Feature 4 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-4 text-indigo-400">🔒</span>
+                        <h3 class="text-xl font-bold text-white">Secure Prompt Engineering Templates</h3>
+                    </div>
+                    <p class="text-gray-300">Leverage AI effectively without compromising your sensitive information with our expert-crafted prompt templates.</p>
                 </div>
-                <!-- Feature 5: Release Date Confirmation (Market Trends focus) -->
-                <div class="bg-zinc-700 p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-zinc-600">
-                    <div class="text-blue-400 text-4xl mb-4"><i class="fas fa-calendar-check"></i></div>
-                    <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Timely Release Date Confirmation</h3>
-                    <p class="text-gray-300">
-                        Leverage insights from 'Market Trends' like the "Discounted Day Re-Enters The September Schedule" to pinpoint launch timings.
-                    </p>
+
+                <!-- Feature 5 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-4 text-indigo-400">✅</span>
+                        <h3 class="text-xl font-bold text-white">Actionable Data Protection Tips</h3>
+                    </div>
+                    <p class="text-gray-300">Receive regular, actionable strategies to safeguard your personal and professional data while using AI tools.</p>
                 </div>
-                <!-- Feature 6: Actionable Insights -->
-                <div class="bg-zinc-700 p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-zinc-600">
-                    <div class="text-blue-400 text-4xl mb-4"><i class="fas fa-lightbulb"></i></div>
-                    <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Actionable, Value-Driven Insights</h3>
-                    <p class="text-gray-300">
-                        Move beyond speculation. Our service provides clear, actionable advice to help high-intent buyers make smart, confident decisions.
-                    </p>
+
+                <!-- Feature 6 (Community) -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-4 text-indigo-400">🤝</span>
+                        <h3 class="text-xl font-bold text-white">Exclusive Member Community & Q&A</h3>
+                    </div>
+                    <p class="text-gray-300">Engage with privacy experts and a like-minded community in our forum, plus participate in member-only Q&A sessions.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-zinc-900">
-        <div class="container mx-auto px-4 max-w-3xl">
-            <div class="bg-zinc-800 p-8 md:p-12 rounded-lg shadow-2xl border border-zinc-700">
-                <h2 class="text-3xl md:text-5xl font-extrabold text-center text-white mb-6">Join the VIP Waitlist</h2>
-                <p class="text-lg md:text-xl text-center text-gray-300 mb-8">
-                    Be among the first to get access to "The 'iPhone 18 Pro Launch Navigator'" and secure your device with unparalleled confidence.
-                    <strong>Limited slots are available for our premium service.</strong>
-                </p>
-                <form class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-gray-200 text-sm md:text-base font-medium mb-2">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe"
-                               class="w-full p-3 md:p-4 bg-zinc-700 border border-zinc-600 rounded-md text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200" required>
-                    </div>
-                    <div>
-                        <label for="email" class="block text-gray-200 text-sm md:text-base font-medium mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                               class="w-full p-3 md:p-4 bg-zinc-700 border border-zinc-600 rounded-md text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200" required>
-                    </div>
-                    <button type="submit"
-                            class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-md text-lg md:text-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-                        Secure My Spot Now
-                    </button>
-                </form>
-            </div>
+    <section id="waitlist-form" class="py-16 sm:py-20 bg-gray-900 px-4">
+        <div class="container mx-auto max-w-2xl text-center bg-gray-800 p-8 sm:p-12 rounded-xl shadow-xl border border-gray-700">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Don't Get Left Exposed.</h2>
+            <p class="text-lg text-gray-300 mb-8">
+                Protect your digital footprint in the age of AI. Join our waitlist today to be among the first to gain access
+                to the most comprehensive AI privacy and security resource available.
+            </p>
+            <form class="space-y-6">
+                <div>
+                    <input type="text" id="name" name="name" placeholder="Your Name"
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 text-white placeholder-gray-400 transition duration-300 ease-in-out">
+                </div>
+                <div>
+                    <input type="email" id="email" name="email" placeholder="Your Best Email" required
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 text-white placeholder-gray-400 transition duration-300 ease-in-out">
+                </div>
+                <button type="submit" class="w-full px-8 py-4 text-lg font-bold rounded-full btn-gradient text-white shadow-md transition-all duration-300">
+                    Join the Exclusive Waitlist
+                </button>
+            </form>
+            <p class="text-sm text-gray-400 mt-6">We respect your privacy. Your data is safe with us.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-zinc-950 py-8 text-center text-gray-500 text-sm">
-        <p>&copy; 2024 iPhone 18 Pro Launch Navigator. All rights reserved.</p>
-        <p class="mt-2">Disclaimer: This service provides insights and predictions. Official details and specifications will be confirmed by Apple Inc.</p>
+    <footer class="py-10 bg-gray-900 text-center text-gray-500 text-sm border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2023 AI Privacy & Security Watchdog. All rights reserved.</p>
+            <p class="mt-2">Built for a smarter, safer AI future.</p>
+        </div>
     </footer>
 
+    <!-- Countdown JavaScript -->
     <script>
-        // Countdown Timer Script for "Limited Time" offer
+        const countdownElement = document.getElementById('countdown');
+        const daysElement = document.getElementById('days');
+        const hoursElement = document.getElementById('hours');
+        const minutesElement = document.getElementById('minutes');
+        const secondsElement = document.getElementById('seconds');
+
+        // Set the date we're counting down to (e.g., 7 days from now for early bird access)
         const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 7); // Set countdown for 7 days from now
+        countdownDate.setDate(countdownDate.getDate() + 7); // Set to 7 days from now
 
-        const x = setInterval(function() {
+        const updateCountdown = () => {
             const now = new Date().getTime();
-            const distance = countdownDate - now;
+            const distance = countdownDate.getTime() - now;
 
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "<div class='text-red-400'>Offer Expired!</div>";
-                // Optionally disable the join button or change its text
-                const joinButton = document.querySelector('a[href="#waitlist"]');
-                if (joinButton) {
-                    joinButton.textContent = "Opportunity Closed";
-                    joinButton.classList.add('opacity-50', 'cursor-not-allowed');
-                    joinButton.removeAttribute('href');
-                }
-                const submitButton = document.querySelector('#waitlist button[type="submit"]');
-                if (submitButton) {
-                    submitButton.textContent = "Waitlist Closed";
-                    submitButton.classList.add('opacity-50', 'cursor-not-allowed');
-                    submitButton.setAttribute('disabled', 'true');
-                }
-                return;
-            }
-
+            // Time calculations for days, hours, minutes and seconds
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+            // Display the result, ensuring two digits
+            daysElement.innerHTML = String(days).padStart(2, '0');
+            hoursElement.innerHTML = String(hours).padStart(2, '0');
+            minutesElement.innerHTML = String(minutes).padStart(2, '0');
+            secondsElement.innerHTML = String(seconds).padStart(2, '0');
 
-        }, 1000);
+            // If the countdown is over
+            if (distance < 0) {
+                clearInterval(interval);
+                countdownElement.innerHTML = "<span class='text-xl text-red-400 font-bold'>Early Bird Access Closed!</span>";
+                const ctaButton = document.querySelector('.hero-bg .btn-gradient');
+                if(ctaButton) {
+                    ctaButton.innerText = "Join Standard Waitlist"; // Change button text
+                    ctaButton.classList.remove('btn-gradient'); // Remove gradient
+                    ctaButton.classList.add('bg-gray-600', 'hover:bg-gray-700', 'shadow-none'); // Change button style
+                    ctaButton.classList.remove('transform', 'hover:scale-105'); // Remove hover scale
+                }
+                const foundingMemberText = document.querySelector('.mt-8 p:last-child');
+                if (foundingMemberText) {
+                    foundingMemberText.textContent = "Standard waitlist signup is still available.";
+                }
+                const earlyBirdText = document.querySelector('.mt-8 p:first-child');
+                if (earlyBirdText) {
+                    earlyBirdText.textContent = "Sign up for standard access:";
+                }
+            }
+        };
+
+        // Update the countdown every 1 second
+        updateCountdown(); // Call immediately to avoid initial flicker
+        const interval = setInterval(updateCountdown, 1000);
     </script>
+
 </body>
 </html>
