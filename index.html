@@ -1,186 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastering New YouTube Metrics: Adapt & Conquer</title>
+    <title>ReddiReel AI | Turn Viral Reddit Threads into Engaging Content Instantly</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for dark overlay and premium feel */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
         .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Creates a parallax effect */
+            background-repeat: no-repeat;
+            position: relative;
         }
         .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
-        }
-        /* Fluid typography for larger screens for ultra-responsiveness */
-        @media (min-width: 1024px) {
-            .fluid-heading {
-                font-size: clamp(3rem, 6vw, 5.5rem); /* Min 3rem, max 5.5rem, scales with viewport width */
-            }
-            .fluid-subheading {
-                font-size: clamp(1.5rem, 2.5vw, 2.25rem);
-            }
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for strong text readability */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased overflow-x-hidden">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-bg relative min-h-screen flex items-center justify-center p-4">
-        <div class="absolute inset-0 hero-overlay"></div>
-        <div class="relative z-10 text-center max-w-5xl mx-auto py-16 px-6 sm:px-8 lg:px-12">
-            <h1 class="fluid-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight">
-                Mastering the New YouTube Metrics
-                <span class="block text-purple-400 mt-2">Adapt Your Strategy for Increased Visibility & Revenue</span>
+    <section class="hero-bg h-screen flex items-center justify-center text-center relative overflow-hidden">
+        <div class="hero-overlay"></div>
+        <div class="relative z-10 max-w-5xl mx-auto p-4 md:p-8">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4 text-white drop-shadow-lg">
+                Unleash <span class="text-red-500">Viral Reddit Content</span>. Instantly.
             </h1>
-            <p class="fluid-subheading text-lg sm:text-xl md:text-2xl mb-10 opacity-90 leading-relaxed max-w-4xl mx-auto">
-                YouTube's view count changes demand a new approach. This premium guide and live workshop empower creators and brands to navigate these shifts, optimize performance, and unlock unprecedented growth.
+            <p class="text-lg sm:text-xl md:text-2xl mb-8 text-gray-200 font-light drop-shadow">
+                Harness AI to transform Reddit's hottest discussions into engaging, short-form videos & podcasts.
+                <span class="block mt-2 text-sm md:text-base opacity-80 italic">Capitalize on Reddit’s new media formats – inspired by "Reddit’s AI is turning posts into podcasts and short videos."</span>
             </p>
 
             <!-- Limited Time Offer & Countdown -->
-            <div class="bg-gradient-to-br from-purple-700 to-indigo-700 p-6 rounded-xl shadow-2xl mb-12 transform hover:scale-[1.01] transition-transform duration-300 border-2 border-purple-500">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-white">Exclusive Limited Time Offer!</h2>
-                <p class="text-xl sm:text-2xl mb-4 text-purple-100">Access to the premium digital guide & live workshop closes in:</p>
-                <div id="countdown" class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 mb-8">
-                    <div class="bg-white text-gray-900 p-4 sm:p-6 rounded-lg shadow-md min-w-[80px] sm:min-w-[100px] flex-grow sm:flex-grow-0">
-                        <span class="block text-4xl sm:text-5xl font-extrabold" id="days">00</span>
-                        <span class="block text-xs sm:text-sm uppercase font-medium mt-1">Days</span>
+            <div class="bg-red-700 bg-opacity-90 p-4 sm:p-6 rounded-lg shadow-2xl mb-8 border border-red-600">
+                <p class="text-xl sm:text-2xl font-bold mb-2 text-white">🔥 Limited Early Bird Access! 🔥</p>
+                <p class="text-md sm:text-lg text-gray-200 mb-4">Secure your spot and lock in exclusive launch pricing.</p>
+                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 text-white text-3xl sm:text-4xl md:text-5xl font-extrabold">
+                    <div class="flex flex-col items-center">
+                        <span id="days">00</span>
+                        <span class="text-sm sm:text-base font-medium">DAYS</span>
                     </div>
-                    <div class="bg-white text-gray-900 p-4 sm:p-6 rounded-lg shadow-md min-w-[80px] sm:min-w-[100px] flex-grow sm:flex-grow-0">
-                        <span class="block text-4xl sm:text-5xl font-extrabold" id="hours">00</span>
-                        <span class="block text-xs sm:text-sm uppercase font-medium mt-1">Hours</span>
+                    <span>:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours">00</span>
+                        <span class="text-sm sm:text-base font-medium">HOURS</span>
                     </div>
-                    <div class="bg-white text-gray-900 p-4 sm:p-6 rounded-lg shadow-md min-w-[80px] sm:min-w-[100px] flex-grow sm:flex-grow-0">
-                        <span class="block text-4xl sm:text-5xl font-extrabold" id="minutes">00</span>
-                        <span class="block text-xs sm:text-sm uppercase font-medium mt-1">Minutes</span>
+                    <span>:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes">00</span>
+                        <span class="text-sm sm:text-base font-medium">MINS</span>
                     </div>
-                    <div class="bg-white text-gray-900 p-4 sm:p-6 rounded-lg shadow-md min-w-[80px] sm:min-w-[100px] flex-grow sm:flex-grow-0">
-                        <span class="block text-4xl sm:text-5xl font-extrabold" id="seconds">00</span>
-                        <span class="block text-xs sm:text-sm uppercase font-medium mt-1">Seconds</span>
+                    <span>:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds">00</span>
+                        <span class="text-sm sm:text-base font-medium">SECS</span>
                     </div>
                 </div>
-                <a href="#register" class="inline-block bg-white text-purple-700 hover:bg-purple-100 text-xl sm:text-2xl font-bold py-4 px-8 sm:px-10 rounded-full transition duration-300 transform hover:-translate-y-1 shadow-lg border-2 border-transparent hover:border-purple-300">
-                    Secure Your Spot & Guide Now!
-                </a>
             </div>
+
+            <a href="#waitlist" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl transition duration-300 transform hover:scale-105 shadow-xl">
+                Join the Waitlist Now!
+            </a>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-4xl sm:text-5xl font-extrabold mb-16 text-gray-50 tracking-tight">What You'll Discover Inside</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
-                <!-- Feature 1: Deep Dive into New Metrics -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center">
-                    <!-- Icon: Chart / Analytics -->
-                    <svg class="w-16 h-16 text-purple-400 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Unpack YouTube's Metric Shift</h3>
-                    <p class="text-lg text-gray-300 leading-relaxed">Gain absolute clarity on the precise changes to YouTube's view count algorithm and their real-world impact on your channel's analytics.</p>
+    <section class="py-16 md:py-24 bg-gray-900 text-gray-100">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 text-white">
+                Transform Technical Pain Points into <span class="text-red-500">Content Creation Superpowers</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+
+                <!-- Feature 1: Viral Thread Identification -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-red-500/30 transition duration-300 ease-in-out">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl text-red-500 mr-4">🔍</span>
+                        <h3 class="text-2xl font-semibold text-white">AI-Powered Viral Thread Discovery</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Say goodbye to endless scrolling. ReddiReel AI intelligently identifies viral Reddit threads primed for audio/video conversion, delivering high-potential content directly to you.
+                    </p>
                 </div>
-                <!-- Feature 2: Actionable Strategy Adaptation -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center">
-                    <!-- Icon: Lightbulb / Idea -->
-                    <svg class="w-16 h-16 text-purple-400 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Revitalize Your Content Strategy</h3>
-                    <p class="text-lg text-gray-300 leading-relaxed">Discover step-by-step actionable blueprints to adapt your content creation, optimization, and promotion for the new YouTube landscape.</p>
+
+                <!-- Feature 2: Automated Script Generation -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-red-500/30 transition duration-300 ease-in-out">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl text-red-500 mr-4">✍️</span>
+                        <h3 class="text-2xl font-semibold text-white">Concise Script & Storyboard Automation</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Overcome content bottlenecks. Our AI converts long Reddit posts into engaging, concise scripts and storyboards, perfectly optimized for short-form attention spans.
+                    </p>
                 </div>
-                <!-- Feature 3: Boost Visibility & Revenue -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 flex flex-col items-center text-center">
-                    <!-- Icon: Money / Growth -->
-                    <svg class="w-16 h-16 text-purple-400 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1L21 6.872m-1.4 6.01L21 17.872m-7.5-6H2.924m7.341 4H2.924m7.341-8H2.924m2.81 2.81L5 3m13.4 3L19 3m0 0l-5 5m5-5l-5 5M12 11c1.657 0 3 .895 3 2s-1.343 2-3 2m0-4c1.11 0 2.08.402 2.599 1L21 10.872m-1.4 6.01L21 21.872m-7.5-6H2.924m7.341 4H2.924m7.341-8H2.924"></path></svg>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Maximize Visibility & Revenue</h3>
-                    <p class="text-lg text-gray-300 leading-relaxed">Learn expert-level tactics to increase your content's discoverability, engagement, and ultimately, drive significantly higher ad revenue and brand deals.</p>
+
+                <!-- Feature 3: Integrated AI Media Production -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-red-500/30 transition duration-300 ease-in-out">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl text-red-500 mr-4">🎙️</span>
+                        <h3 class="text-2xl font-semibold text-white">Seamless AI Voiceover & Text-to-Video</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Streamline your production. With integrated AI voiceover and text-to-video tools, you can generate polished content without ever leaving the platform.
+                    </p>
                 </div>
+
+                <!-- Feature 4: Performance Analytics for Reddit -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-red-500/30 transition duration-300 ease-in-out">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl text-red-500 mr-4">📈</span>
+                        <h3 class="text-2xl font-semibold text-white">Granular Reddit Content Analytics</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Stop guessing what works. Track your content's performance within Reddit’s new formats with detailed analytics, giving you clear insights into engagement.
+                    </p>
+                </div>
+
+                <!-- Feature 5: A/B Testing for Optimization -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-red-500/30 transition duration-300 ease-in-out">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl text-red-500 mr-4">🧪</span>
+                        <h3 class="text-2xl font-semibold text-white">Data-Driven A/B Testing Capabilities</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Refine for peak performance. A/B test different audio and video approaches to continually optimize your content strategy and maximize viral potential.
+                    </p>
+                </div>
+
+                <!-- Feature 6: Scalable Content Production -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-red-500/30 transition duration-300 ease-in-out">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl text-red-500 mr-4">⚡</span>
+                        <h3 class="text-2xl font-semibold text-white">Scalable & Recurring Content Engine</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Build a consistent content pipeline. ReddiReel AI provides a scalable solution to keep your audience engaged with a continuous flow of fresh, relevant content.
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / Registration Form Section -->
-    <section id="register" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
-        <div class="max-w-3xl mx-auto text-center bg-gray-900 p-8 sm:p-12 rounded-xl shadow-2xl border border-purple-700">
-            <h2 class="text-4xl sm:text-5xl font-extrabold mb-6 text-white tracking-tight">Don't Miss This Limited Opportunity!</h2>
-            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                This exclusive digital guide and live workshop offer is strictly limited by the countdown timer. Secure your instant access and your workshop seat before this chance is gone forever!
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gray-800 text-gray-100">
+        <div class="container mx-auto px-4 md:px-8 max-w-2xl text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 text-white">
+                Don't Miss Out! Secure Your <span class="text-red-500">Limited Early Bird Access</span>.
+            </h2>
+            <p class="text-lg sm:text-xl mb-10 text-gray-300 font-light">
+                Join our exclusive waitlist for ReddiReel AI and be among the first to transform your content strategy.
+                Limited spots available at special launch pricing!
             </p>
-            <form action="#" method="POST" class="space-y-6">
-                <div>
-                    <label for="name" class="sr-only">Full Name</label>
-                    <input type="text" name="name" id="name" autocomplete="name" required
-                        class="block w-full px-5 py-3 border border-gray-700 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 bg-gray-700 text-white text-lg"
-                        placeholder="Your Full Name">
+
+            <form class="bg-gray-900 p-6 md:p-8 rounded-xl shadow-2xl border border-gray-700">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent bg-gray-700 transition duration-300"
+                           required>
                 </div>
-                <div>
-                    <label for="email" class="sr-only">Email Address</label>
-                    <input type="email" name="email" id="email" autocomplete="email" required
-                        class="block w-full px-5 py-3 border border-gray-700 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 bg-gray-700 text-white text-lg"
-                        placeholder="Your Best Email Address">
+                <div class="mb-8 text-left">
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com"
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent bg-gray-700 transition duration-300"
+                           required>
                 </div>
                 <button type="submit"
-                    class="w-full sm:w-auto inline-flex justify-center py-4 px-12 border border-transparent rounded-full shadow-lg text-xl font-semibold text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition duration-300 transform hover:-translate-y-1 hover:scale-105">
-                    Get Instant Access & Register
+                        class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-12 rounded-full text-xl transition duration-300 transform hover:scale-105 shadow-lg">
+                    Get Early Access!
                 </button>
+                <p class="text-xs text-gray-400 mt-4">
+                    We value your privacy. Your information will not be shared with third parties.
+                </p>
             </form>
-            <p class="text-sm text-gray-400 mt-8">Your privacy is important to us. We will never share your information.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm border-t border-gray-800">
-        <div class="max-w-7xl mx-auto">
-            &copy; 2023 Digital Education Authority. All rights reserved.
+    <footer class="bg-gray-900 py-8 text-center text-gray-400 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2023 ReddiReel AI. All rights reserved.</p>
+            <div class="mt-4 text-sm">
+                <a href="#" class="text-gray-400 hover:text-red-500 mx-2">Privacy Policy</a>
+                <span class="text-gray-600">|</span>
+                <a href="#" class="text-gray-400 hover:text-red-500 mx-2">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
+    <!-- Countdown JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 7 days from now)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now at the current time
-            
-            // For testing, you can uncomment and set a specific future date:
-            // const countDownDate = new Date("Dec 25, 2023 10:00:00").getTime(); // Example specific date
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the launch date to 7 days from when the page is loaded for demonstration purposes.
+            // In a real application, this would be a specific, fixed date/time.
+            const launchDate = new Date();
+            launchDate.setDate(launchDate.getDate() + 7); 
 
-            const x = setInterval(function() {
+            const countdownFunction = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = countDownDate - now;
-
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<span class='text-red-400 text-2xl sm:text-3xl font-bold'>OFFER EXPIRED!</span>";
-                    // Optionally disable the CTA button or change its text
-                    const ctaButton = document.querySelector('.hero-overlay a');
-                    if(ctaButton) {
-                        ctaButton.textContent = 'Offer Expired';
-                        ctaButton.classList.add('opacity-50', 'cursor-not-allowed', 'pointer-events-none');
-                        ctaButton.removeAttribute('href');
-                    }
-                    const registerButton = document.querySelector('#register button[type="submit"]');
-                    if(registerButton) {
-                        registerButton.textContent = 'Offer Expired';
-                        registerButton.classList.add('opacity-50', 'cursor-not-allowed', 'pointer-events-none');
-                        registerButton.disabled = true;
-                    }
-                    return; // Stop function execution
-                }
+                const distance = launchDate - now;
 
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                if (document.getElementById("days")) {
+                    document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                    document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                    document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                    document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                }
 
+                if (distance < 0) {
+                    clearInterval(countdownFunction);
+                    if (document.getElementById("countdown")) {
+                        document.getElementById("countdown").innerHTML = "<p class='text-xl text-white'>Offer Expired! Join the waitlist for standard access.</p>";
+                    }
+                    // Optionally change the CTA button
+                    const ctaButton = document.querySelector('#waitlist button');
+                    if (ctaButton) {
+                        ctaButton.textContent = 'Join Waitlist (Standard Access)';
+                        ctaButton.classList.remove('bg-red-600', 'hover:bg-red-700');
+                        ctaButton.classList.add('bg-gray-600', 'hover:bg-gray-700');
+                    }
+                }
             }, 1000);
         });
     </script>
+
 </body>
 </html>
