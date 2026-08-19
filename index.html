@@ -1,232 +1,297 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CognitoFlow - AI-Powered Workflow Automation for Your Browser</title>
+    <title>Master Alexa+ on Fire TV - The Ultimate Digital Guide (Limited Time Offer!)</title>
+    <meta name="description" content="Amazon just made Alexa+ FREE on Fire TV, no Prime required! Unlock its full potential with our comprehensive digital guide on advanced commands, smart home, entertainment, productivity, and troubleshooting. Join the waitlist for exclusive early access and a limited-time discount.">
+    
+    <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Favicon using a simple emoji SVG -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    
+    <!-- Google Fonts: Inter for a modern premium feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
     <style>
-        /* Custom styles for dark mode and responsive adjustments */
         body {
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-family: 'Inter', sans-serif;
+            /* Default to dark mode aesthetic */
+            @apply bg-gray-900 text-gray-200; 
         }
-        /* Hero image overlay for better text readability */
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
         .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Slightly darker overlay for premium feel */
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability on image */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
-        /* Countdown styling */
-        .countdown-item {
-            @apply flex flex-col items-center p-2 bg-gray-700/50 rounded-lg mx-1 sm:mx-2 backdrop-filter backdrop-blur-sm;
-            min-width: 60px; /* Ensure consistent width for items */
+        /* Countdown specific styles */
+        .countdown-segment {
+            @apply flex flex-col items-center justify-center p-3 sm:p-4 bg-gray-800 rounded-lg shadow-lg mx-1 sm:mx-2 flex-grow min-w-min;
         }
-        .countdown-value {
-            @apply text-3xl sm:text-4xl font-extrabold text-white;
+        .countdown-number {
+            @apply text-3xl sm:text-5xl font-extrabold text-white leading-none;
         }
         .countdown-label {
-            @apply text-xs sm:text-sm text-gray-300 uppercase mt-1;
+            @apply text-xs sm:text-sm text-gray-400 uppercase tracking-wider mt-1 whitespace-nowrap;
+        }
+
+        /* Animation for pulse effect on headline */
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.9;
+            }
+        }
+        .animate-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="antialiased">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-white overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="https://source.unsplash.com/1600x900/?Develop,tech" alt="CognitoFlow Hero Background: Modern technology and development" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/70 hero-overlay"></div>
-        </div>
-
-        <div class="relative z-10 container mx-auto px-4 py-16 text-center max-w-4xl">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-tight animate-fade-in-up">
-                CognitoFlow: Your AI Brain for a Smarter Browser
+    <header class="hero-background h-screen flex items-center justify-center text-center relative overflow-hidden">
+        <div class="hero-overlay"></div>
+        <div class="container mx-auto px-4 z-10 max-w-4xl">
+            <p class="text-indigo-400 text-sm md:text-base font-bold mb-3 tracking-wide uppercase">
+                🚀 BREAKING TECH NEWS: Alexa+ is now FREE on Fire TV!
+            </p>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mb-6 animate-pulse">
+                Unlock the <span class="text-indigo-400">FULL Power</span> of Alexa+ on Fire TV – <br class="hidden sm:inline">No Prime Required!
             </h1>
-            <p class="text-xl sm:text-2xl lg:text-3xl font-light mb-8 opacity-90 animate-fade-in delay-200">
-                Go beyond basic tab management. CognitoFlow intelligently automates your browser tasks,
-                summarizes information, and connects directly to your projects.
-            </p>
-            <p class="text-lg sm:text-xl font-medium mb-10 text-blue-300 animate-fade-in delay-400">
-                Leveraging the power of next-gen AI, deeply integrated with <span class="font-bold">Firefox's Smart Window</span> and other major browsers.
-                <br> <em class="text-sm opacity-80 mt-2 block">"Firefox’s Smart Window promises a better AI browser - The Verge"</em>
+            <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Amazon just changed the game, making AI-powered Alexa+ free for everyone on Fire TV. But are you ready to master the advanced voice commands, smart home integrations, and productivity hacks that most users miss?
             </p>
 
-            <!-- Limited Time Countdown Offer -->
-            <div class="bg-gradient-to-r from-purple-600 to-indigo-700 p-6 sm:p-8 rounded-xl shadow-2xl mb-12 transform hover:scale-105 transition-transform duration-300 ease-in-out border border-indigo-500 animate-pop-in delay-600">
-                <h3 class="text-2xl sm:text-3xl font-bold mb-4">Limited Time Offer: Exclusive Beta Access & Discount!</h3>
-                <p class="text-lg sm:text-xl mb-6">
-                    Join our private waitlist now and secure a <span class="font-extrabold text-yellow-300">50% discount</span> on premium features for life!
-                    Offer ends in:
+            <!-- Limited Time Offer & Countdown -->
+            <div class="bg-gradient-to-r from-indigo-600 to-purple-700 p-6 md:p-8 rounded-xl shadow-2xl mb-12 transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <p class="text-white text-2xl md:text-3xl font-bold mb-4">
+                    🎉 Limited Time Early Access Offer! 🎉
                 </p>
-                <div id="countdown" class="flex justify-center text-center mb-8">
-                    <div class="countdown-item">
-                        <div class="countdown-value">00</div>
-                        <div class="countdown-label">Days</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div class="countdown-value">00</div>
-                        <div class="countdown-label">Hours</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div class="countdown-value">00</div>
-                        <div class="countdown-label">Minutes</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div class="countdown-value">00</div>
-                        <div class="countdown-label">Seconds</div>
-                    </div>
-                    <!-- Note: In a live environment, this countdown would be powered by JavaScript -->
+                <div id="countdown" class="flex justify-center items-stretch mb-6">
+                    <!-- Countdown segments will be injected here by JavaScript -->
                 </div>
-                <a href="#waitlist" class="inline-block bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-white font-bold py-4 px-10 rounded-full text-xl sm:text-2xl shadow-lg transform hover:scale-105 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-green-300">
-                    Secure My Exclusive Beta Spot!
-                </a>
+                <p class="text-white text-lg md:text-xl mb-6">
+                    Join the exclusive waitlist before this special pricing vanishes forever!
+                </p>
+                <button onclick="document.getElementById('waitlist-form-section').scrollIntoView({ behavior: 'smooth' });"
+                    class="bg-white text-indigo-700 hover:bg-gray-100 px-8 sm:px-10 py-3 sm:py-4 rounded-full text-xl md:text-2xl font-bold uppercase shadow-lg transform hover:-translate-y-1 transition duration-300 ease-in-out">
+                    🔥 Join the Waitlist Now! 🔥
+                </button>
             </div>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 bg-gray-800 text-gray-100">
+    <section class="py-16 md:py-24 bg-gray-800">
         <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-4xl sm:text-5xl font-extrabold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-                Unlock Unprecedented Browser Productivity
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white text-center mb-12">
+                What You'll Master with This Comprehensive Guide:
             </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Feature 1: Intelligent Tab Grouping -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-2 group">
-                    <div class="text-blue-400 mb-4 text-5xl group-hover:scale-110 transition-transform duration-300">🧠</div>
-                    <h3 class="text-2xl font-bold mb-4">Intelligent Tab Grouping</h3>
-                    <p class="text-lg text-gray-300">
-                        AI-powered organization automatically groups your tabs by project context, keeping your workspace clutter-free and focused.
+                <!-- Feature Card 1 -->
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-indigo-400 text-5xl mb-4">
+                        💡
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Advanced Voice Commands</h3>
+                    <p class="text-gray-400 text-lg">
+                        Go beyond the basics. Learn secret commands and complex queries to control your Fire TV and smart home with unparalleled precision.
                     </p>
                 </div>
 
-                <!-- Feature 2: AI Summarization & Key Takeaways -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-purple-500 transition duration-300 transform hover:-translate-y-2 group">
-                    <div class="text-purple-400 mb-4 text-5xl group-hover:scale-110 transition-transform duration-300">📄</div>
-                    <h3 class="text-2xl font-bold mb-4">AI Summarization & Key Takeaways</h3>
-                    <p class="text-lg text-gray-300">
-                        Effortlessly digest entire tab groups into concise summaries and extract crucial insights with a single click.
+                <!-- Feature Card 2 -->
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-indigo-400 text-5xl mb-4">
+                        🏠
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Seamless Smart Home Integration</h3>
+                    <p class="text-gray-400 text-lg">
+                        Connect and control all your smart devices directly from your Fire TV. Build routines, manage scenes, and automate your home effortlessly.
                     </p>
                 </div>
 
-                <!-- Feature 3: Proactive Resource Suggestions -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-green-500 transition duration-300 transform hover:-translate-y-2 group">
-                    <div class="text-green-400 mb-4 text-5xl group-hover:scale-110 transition-transform duration-300">💡</div>
-                    <h3 class="text-2xl font-bold mb-4">Proactive Resource Suggestions</h3>
-                    <p class="text-lg text-gray-300">
-                        Never miss a beat. CognitoFlow proactively suggests relevant resources and information based on your active tasks.
+                <!-- Feature Card 3 -->
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-indigo-400 text-5xl mb-4">
+                        🎬
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Entertainment & Media Hacks</h3>
+                    <p class="text-gray-400 text-lg">
+                        Discover hidden features for streaming, music, and gaming. Optimize your media consumption and unlock new levels of enjoyment.
                     </p>
                 </div>
 
-                <!-- Feature 4: Seamless PM Tool Integration -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-yellow-500 transition duration-300 transform hover:-translate-y-2 group">
-                    <div class="text-yellow-400 mb-4 text-5xl group-hover:scale-110 transition-transform duration-300">🔗</div>
-                    <h3 class="text-2xl font-bold mb-4">Seamless PM Tool Integration</h3>
-                    <p class="text-lg text-gray-300">
-                        Link browser activity, summaries, and resources directly to your tasks in Notion, Asana, ClickUp, and more.
+                <!-- Feature Card 4 -->
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-indigo-400 text-5xl mb-4">
+                        📈
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Productivity Power-Ups</h3>
+                    <p class="text-gray-400 text-lg">
+                        Turn your Fire TV into a productivity hub. Manage calendars, set reminders, get news updates, and stay organized with advanced Alexa+ skills.
                     </p>
                 </div>
 
-                <!-- Feature 5 (Premium): Advanced AI Analytics -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-pink-500 transition duration-300 transform hover:-translate-y-2 group">
-                    <div class="text-pink-400 mb-4 text-5xl group-hover:scale-110 transition-transform duration-300">📊</div>
-                    <h3 class="text-2xl font-bold mb-4">Advanced AI Analytics <span class="text-sm text-yellow-500 font-normal ml-2">(Premium)</span></h3>
-                    <p class="text-lg text-gray-300">
-                        Gain deep, personalized insights into your browsing habits and workflow patterns to optimize your productivity.
+                <!-- Feature Card 5 -->
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-indigo-400 text-5xl mb-4">
+                        🛠️
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Expert Troubleshooting & Tips</h3>
+                    <p class="text-gray-400 text-lg">
+                        Solve common issues like a pro. Our guide provides clear solutions and optimization tips to ensure a smooth, frustration-free experience.
                     </p>
                 </div>
 
-                <!-- Feature 6 (Premium): Team Collaboration Tools -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-red-500 transition duration-300 transform hover:-translate-y-2 group">
-                    <div class="text-red-400 mb-4 text-5xl group-hover:scale-110 transition-transform duration-300">🤝</div>
-                    <h3 class="text-2xl font-bold mb-4">Team Collaboration Tools <span class="text-sm text-yellow-500 font-normal ml-2">(Premium)</span></h3>
-                    <p class="text-lg text-gray-300">
-                        Share context, tasks, and intelligent summaries with your team, fostering seamless collaborative workflows.
+                <!-- Feature Card 6 -->
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-indigo-400 text-5xl mb-4">
+                        💸
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Optimize Without Prime</h3>
+                    <p class="text-gray-400 text-lg">
+                        Leverage the full capabilities of Alexa+ even without a Prime subscription. Get exclusive strategies to maximize your free experience.
                     </p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Section -->
-    <section id="waitlist" class="py-20 bg-gray-900 text-gray-100">
-        <div class="container mx-auto px-4 max-w-2xl text-center">
-            <h2 class="text-4xl sm:text-5xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
-                Ready to Revolutionize Your Browser Workflow?
+    <!-- Waitlist Form Section -->
+    <section id="waitlist-form-section" class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white text-center mb-8">
+                Ready to Be an Alexa+ Master?
             </h2>
-            <p class="text-xl sm:text-2xl text-gray-300 mb-10">
-                Join the CognitoFlow waitlist for early access to our private beta and unlock exclusive launch benefits!
+            <p class="text-lg md:text-xl text-gray-300 text-center mb-10">
+                Join our exclusive waitlist for early access to "Mastering Alexa+ on Fire TV" and claim your limited-time discount!
             </p>
 
-            <div class="bg-gray-800 p-8 sm:p-10 rounded-xl shadow-2xl border border-gray-700">
-                <form class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-lg font-medium text-gray-200 text-left mb-2">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe"
-                               class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white text-lg transition duration-200" required>
-                    </div>
-                    <div>
-                        <label for="email" class="block text-lg font-medium text-gray-200 text-left mb-2">Your Email</label>
-                        <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                               class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white text-lg transition duration-200" required>
-                    </div>
-                    <button type="submit" class="w-full bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-white font-bold py-4 rounded-lg text-xl shadow-lg transform hover:scale-105 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-green-300">
-                        Secure My Spot & Get Early Access!
-                    </button>
-                </form>
-                <p class="text-sm text-gray-400 mt-6">
-                    By joining, you agree to receive updates about CognitoFlow. We respect your privacy.
+            <form action="#" method="POST" class="bg-gray-800 p-8 md:p-10 rounded-xl shadow-2xl border border-indigo-700">
+                <div class="mb-6">
+                    <label for="name" class="block text-gray-300 text-lg font-medium mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                        class="w-full px-5 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200"
+                        required>
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-300 text-lg font-medium mb-2">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com"
+                        class="w-full px-5 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200"
+                        required>
+                </div>
+                <div class="mb-8">
+                    <label for="platform" class="block text-gray-300 text-lg font-medium mb-2">Which Fire TV device do you primarily use?</label>
+                    <select id="platform" name="platform"
+                        class="w-full px-5 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200">
+                        <option value="firestick">Fire TV Stick (any model)</option>
+                        <option value="firetv-cube">Fire TV Cube</option>
+                        <option value="firetv-edition-tv">Fire TV Edition TV</option>
+                        <option value="other">Other/Unsure</option>
+                    </select>
+                </div>
+                <button type="submit"
+                    class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-lg text-xl md:text-2xl font-bold uppercase shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    🚀 Secure My Spot & Discount! 🚀
+                </button>
+                <p class="text-gray-500 text-sm mt-6 text-center">
+                    We value your privacy. Your email will only be used for updates regarding this course.
                 </p>
-            </div>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 text-gray-400 text-center border-t border-gray-800">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2023 CognitoFlow. All rights reserved.</p>
-            <p class="mt-2 text-sm">Made with 🧠 and 🚀</p>
+    <footer class="bg-gray-900 py-10 border-t border-gray-700">
+        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved. | <a href="#" class="text-indigo-400 hover:underline">Privacy Policy</a> | <a href="#" class="text-indigo-400 hover:underline">Terms of Service</a></p>
         </div>
     </footer>
 
-    <!-- Placeholder for JavaScript to power the countdown -->
+    <!-- Countdown Timer JavaScript -->
     <script>
-        // In a real implementation, this script would calculate and update the countdown dynamically.
-        // For example, to set a countdown for 7 days from page load:
-        // const addDays = (date, days) => {
-        //     const result = new Date(date);
-        //     result.setDate(result.getDate() + days);
-        //     return result;
-        // }
-        // const countdownDate = addDays(new Date(), 7).getTime(); // 7 days from now
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the date we're counting down to: 7 days from when the user loads the page
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); 
+            // For testing purposes, uncomment the line below to set a shorter countdown (e.g., 5 minutes)
+            // countDownDate.setMinutes(countDownDate.getMinutes() + 5); 
 
-        // const x = setInterval(function() {
-        //   const now = new Date().getTime();
-        //   const distance = countdownDate - now;
+            const countdownElement = document.getElementById('countdown');
 
-        //   // Calculate times for days, hours, minutes and seconds
-        //   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        //   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        //   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        //   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Update the count down every 1 second
+            const x = setInterval(function() {
+                // Get today's date and time
+                const now = new Date().getTime();
 
-        //   // Display the result in the corresponding elements
-        //   document.querySelector("#countdown .countdown-item:nth-child(1) .countdown-value").innerHTML = days < 10 ? "0" + days : days;
-        //   document.querySelector("#countdown .countdown-item:nth-child(2) .countdown-value").innerHTML = hours < 10 ? "0" + hours : hours;
-        //   document.querySelector("#countdown .countdown-item:nth-child(3) .countdown-value").innerHTML = minutes < 10 ? "0" + minutes : minutes;
-        //   document.querySelector("#countdown .countdown-item:nth-child(4) .countdown-value").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+                // Find the distance between now and the count down date
+                const distance = countDownDate - now;
 
-        //   // If the count down is finished, write some text
-        //   if (distance < 0) {
-        //     clearInterval(x);
-        //     document.getElementById("countdown").innerHTML = "<div class='text-red-500 text-xl font-bold'>OFFER EXPIRED!</div>";
-        //     // Optionally disable the signup button or change its text
-        //     document.querySelector("#waitlist button[type='submit']").innerText = "Waitlist Closed";
-        //     document.querySelector("#waitlist button[type='submit']").classList.add("opacity-50", "cursor-not-allowed");
-        //     document.querySelector("#waitlist button[type='submit']").disabled = true;
-        //   }
-        // }, 1000);
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the countdown element
+                countdownElement.innerHTML = `
+                    <div class="countdown-segment">
+                        <span class="countdown-number">${days < 10 ? '0' + days : days}</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-segment">
+                        <span class="countdown-number">${hours < 10 ? '0' + hours : hours}</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-segment">
+                        <span class="countdown-number">${minutes < 10 ? '0' + minutes : minutes}</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-segment">
+                        <span class="countdown-number">${seconds < 10 ? '0' + seconds : seconds}</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                `;
+
+                // If the count down is finished, display a message and disable form interaction
+                if (distance < 0) {
+                    clearInterval(x);
+                    countdownElement.innerHTML = `<span class="text-red-500 text-2xl font-bold">Offer Expired!</span>`;
+                    
+                    const heroWaitlistButton = document.querySelector('button[onclick*="waitlist-form-section"]');
+                    if (heroWaitlistButton) {
+                        heroWaitlistButton.innerText = 'Offer Expired. Join Regular Waitlist.';
+                        heroWaitlistButton.classList.remove('bg-white', 'text-indigo-700', 'hover:bg-gray-100', 'transform', 'hover:-translate-y-1');
+                        heroWaitlistButton.classList.add('bg-gray-600', 'text-gray-300', 'cursor-not-allowed');
+                        heroWaitlistButton.disabled = true;
+                    }
+                    
+                    const submitButton = document.querySelector('form button[type="submit"]');
+                    if (submitButton) {
+                        submitButton.innerText = 'Join Regular Waitlist (Discount Expired)';
+                        submitButton.classList.remove('bg-indigo-600', 'hover:bg-indigo-700', 'transform', 'hover:scale-105');
+                        submitButton.classList.add('bg-gray-600', 'hover:bg-gray-600', 'cursor-not-allowed');
+                        submitButton.disabled = true;
+                    }
+                }
+            }, 1000);
+        });
     </script>
 </body>
 </html>
