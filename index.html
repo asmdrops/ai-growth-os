@@ -3,234 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Modular Drone Advantage - Master Regulation-Ready Flying Cameras</title>
+    <title>Unlock Laser Focus: Replicate Pixel 11's Distraction-Killer on ANY Android Phone</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom dark-mode aesthetic */
         body {
-            background-color: #121212; /* Very dark background */
-            color: #e0e0e0; /* Light text for contrast */
-            font-family: 'Inter', sans-serif; /* Modern, clean font */
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        /* Premium gradient background for sections */
-        .premium-gradient-bg {
-            background: linear-gradient(135deg, #1a202c 0%, #0f172a 100%);
+        /* Custom gradient for CTA button */
+        .btn-gradient {
+            background-image: linear-gradient(to right, #6366f1, #8b5cf6);
+            transition: all 0.3s ease;
         }
-        /* Specific styling for hero background image */
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        .btn-gradient:hover {
+            background-image: linear-gradient(to right, #8b5cf6, #6366f1);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
         }
-        /* Form input styling for dark mode */
-        .form-input {
-            background-color: #2d3748; /* Darker input background */
-            border: 1px solid #4a5568; /* Subtle border */
-            color: #e0e0e0; /* Light text for input */
-            transition: all 0.2s ease-in-out;
+        /* Overlay for hero image */
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.6); /* Darker overlay for text readability */
         }
-        .form-input::placeholder {
-            color: #a0aec0; /* Lighter placeholder */
+        /* Countdown styles */
+        .countdown-item {
+            @apply flex flex-col items-center justify-center bg-gray-800 p-4 rounded-lg shadow-inner;
         }
-        .form-input:focus {
-            border-color: #6366f1; /* Indigo border on focus */
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.5); /* Subtle focus ring */
-            outline: none;
+        .countdown-value {
+            @apply text-4xl sm:text-5xl md:text-6xl font-extrabold text-indigo-400;
         }
-        /* Form button styling */
-        .form-button {
-            background-color: #6366f1; /* Primary indigo button */
-            color: #ffffff;
-            transition: all 0.3s ease-in-out;
-        }
-        .form-button:hover {
-            background-color: #4f46e5; /* Darker indigo on hover */
-            transform: translateY(-2px); /* Slight lift */
-            box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+        .countdown-label {
+            @apply text-xs sm:text-sm md:text-base font-semibold text-gray-400 mt-2 uppercase;
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="bg-gray-900 text-gray-100">
 
     <!-- Hero Section -->
-    <header class="hero-background relative min-h-screen flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black opacity-80"></div> <!-- Dark overlay for readability -->
-        <div class="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6 animate-fade-in-up">
-                Master <span class="text-indigo-400">The Modular Drone Advantage</span>
+    <section class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-6 py-12">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white drop-shadow-lg">
+                Unlock Laser Focus: Replicate Pixel 11's Distraction-Killer on ANY Android Phone
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Discover how modular design, like China's HoverAir Versa, revolutionizes compact, regulation-ready flying cameras for hobbyists, content creators, and small businesses.
+            <p class="mt-6 text-xl sm:text-2xl text-gray-200 leading-relaxed drop-shadow-md">
+                Don't get left behind. Google's exclusive Android 17 feature is now within your grasp, regardless of your device. Master true digital tranquility.
             </p>
-            
-            <!-- Countdown Timer - Strategic Adjustment: Limited Time Offer -->
-            <div class="bg-gradient-to-r from-purple-700 to-indigo-700 text-white p-5 rounded-xl shadow-2xl mb-10 mx-auto max-w-lg">
-                <p class="text-xl font-semibold mb-3">Early Bird Access & Discount Ends In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-3xl sm:text-5xl font-bold">
-                    <div><span id="days">00</span><p class="text-sm font-normal text-gray-200">Days</p></div>
-                    <div>:</div>
-                    <div><span id="hours">00</span><p class="text-sm font-normal text-gray-200">Hours</p></div>
-                    <div>:</div>
-                    <div><span id="minutes">00</span><p class="text-sm font-normal text-gray-200">Minutes</p></div>
-                    <div>:</div>
-                    <div><span id="seconds">00</span><p class="text-sm font-normal text-gray-200">Seconds</p></div>
+
+            <!-- Countdown Timer -->
+            <div class="mt-12 mb-8 bg-gray-800/70 backdrop-blur-sm p-6 rounded-xl shadow-2xl border border-indigo-600">
+                <p class="text-xl sm:text-2xl font-bold text-indigo-300 mb-6">Early Bird Access Ends In:</p>
+                <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-8">
+                    <div class="countdown-item">
+                        <span id="days" class="countdown-value">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours" class="countdown-value">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes" class="countdown-value">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds" class="countdown-value">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
                 </div>
             </div>
 
-            <a href="#waitlist-form" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                Join The Waitlist - Secure Your Spot!
+            <a href="#waitlist-form" class="mt-10 inline-block px-10 py-5 text-lg sm:text-xl font-bold rounded-full btn-gradient text-white shadow-xl hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 transition duration-300 ease-in-out">
+                Secure Your Early Access Now!
             </a>
-            <p class="text-sm text-gray-400 mt-4">Don't miss out on pioneering the next wave of drone technology.</p>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 premium-gradient-bg px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-white mb-12">
-                What You'll Achieve with This Comprehensive Guide:
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1: Building Mastery -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <h3 class="text-2xl font-bold text-indigo-400 mb-4 flex items-center">
-                        ⚙️ Build Your Own Modular Flying Camera
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Learn hands-on modular component selection, assembly, and customization. Understand the core principles behind designs like the HoverAir Versa to build tailored drones.
-                    </p>
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-12">What You'll Achieve with 'Unlock Laser Focus':</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 flex flex-col items-center text-left">
+                    <p class="text-2xl font-semibold text-indigo-400 mb-4">🚀 Bypass Exclusivity</p>
+                    <p class="text-gray-300 leading-relaxed">Implement Pixel 11's powerful distraction-killing features on *any* Android device, no root required.</p>
                 </div>
-                <!-- Feature 2: Regulatory Compliance -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <h3 class="text-2xl font-bold text-indigo-400 mb-4 flex items-center">
-                        ✅ Navigate Complex Drone Regulations
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Master the ins and outs of FCC, FAA, and international drone laws. Discover how modularity offers a strategic advantage in achieving compliance effortlessly.
-                    </p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 flex flex-col items-center text-left">
+                    <p class="text-2xl font-semibold text-indigo-400 mb-4">🎯 Pinpoint Focus</p>
+                    <p class="text-gray-300 leading-relaxed">Discover proven strategies to eliminate digital noise and reclaim your concentration with precision.</p>
                 </div>
-                <!-- Feature 3: Content Creation -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <h3 class="text-2xl font-bold text-indigo-400 mb-4 flex items-center">
-                        📸 Elevate Your Aerial Photography & Videography
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Unlock cinematic flight techniques, camera settings, and post-production tips to capture stunning visuals that stand out, whether for hobby or professional projects.
-                    </p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 flex flex-col items-center text-left">
+                    <p class="text-2xl font-semibold text-indigo-400 mb-4">⚙️ Custom Configuration</p>
+                    <p class="text-gray-300 leading-relaxed">Step-by-step guides to optimize your phone settings and recommended apps for peak productivity.</p>
                 </div>
-                <!-- Feature 4: Business Application -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <h3 class="text-2xl font-bold text-indigo-400 mb-4 flex items-center">
-                        📈 Integrate Drones for Small Business Success
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Explore profitable use-cases in real estate, inspections, marketing, and more. Learn to provide professional drone services that enhance your business offerings.
-                    </p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 flex flex-col items-center text-left">
+                    <p class="text-2xl font-semibold text-indigo-400 mb-4">🧠 Deep Work Mastery</p>
+                    <p class="text-gray-300 leading-relaxed">Transition from constant interruptions to extended periods of uninterrupted, high-value work.</p>
                 </div>
-                <!-- Feature 5: Maintenance & Longevity -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <h3 class="text-2xl font-bold text-indigo-400 mb-4 flex items-center">
-                        🛠️ Expert Troubleshooting & Maintenance
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Gain the practical skills to diagnose, repair, and maintain your modular drone fleet, ensuring longevity and consistent performance without costly external repairs.
-                    </p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 flex flex-col items-center text-left">
+                    <p class="text-2xl font-semibold text-indigo-400 mb-4">📈 Productivity Boost</p>
+                    <p class="text-gray-300 leading-relaxed">Experience a significant uplift in your daily output and mental clarity, directly impacting your results.</p>
                 </div>
-                <!-- Feature 6: Market Foresight - Strategic Adjustment: Focus on Market Trends -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <h3 class="text-2xl font-bold text-indigo-400 mb-4 flex items-center">
-                        📊 Stay Ahead of the Evolving Drone Market
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Understand the current and future trends of modular drone technology, regulatory changes, and market opportunities to future-proof your skills and investments.
-                    </p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 flex flex-col items-center text-left">
+                    <p class="text-2xl font-semibold text-indigo-400 mb-4">💡 Future-Proof Your Focus</p>
+                    <p class="text-gray-300 leading-relaxed">Learn principles that adapt to future Android updates, keeping you ahead of the curve in distraction management.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-900 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-8">
-                Ready to Fly into the Future of Drones?
-            </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10">
-                Join our exclusive waitlist for "The Modular Drone Advantage" and be the first to receive early access, significant launch discounts, and expert insights delivered directly to your inbox.
+    <section id="waitlist-form" class="py-20 bg-gray-800">
+        <div class="max-w-2xl mx-auto px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">Be the First to Achieve Unprecedented Focus.</h2>
+            <p class="text-xl text-gray-300 mb-10 leading-relaxed">
+                Join the exclusive waitlist for 'Unlock Laser Focus' and get notified instantly upon launch, plus special early bird bonuses!
             </p>
-            
-            <form class="max-w-md mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl">
-                <div class="mb-6">
-                    <label for="name" class="block text-left text-gray-200 text-sm font-bold mb-2">Full Name:</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" 
-                           class="form-input shadow-sm rounded w-full py-3 px-4 leading-tight"
-                           required>
+            <form action="#" method="POST" class="bg-gray-900 p-8 sm:p-10 rounded-xl shadow-2xl border border-indigo-700">
+                <div class="mb-6 text-left">
+                    <label for="full-name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="John Doe" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-900 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-200 border-gray-600" required>
                 </div>
-                <div class="mb-8">
-                    <label for="email" class="block text-left text-gray-200 text-sm font-bold mb-2">Email Address:</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="form-input shadow-sm rounded w-full py-3 px-4 leading-tight"
-                           required>
+                <div class="mb-8 text-left">
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-900 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-200 border-gray-600" required>
                 </div>
-                <button type="submit" class="form-button w-full font-bold py-3 px-4 rounded-full text-lg shadow-lg">
-                    Join The Exclusive Waitlist Now!
+                <button type="submit" class="w-full px-8 py-4 text-lg font-bold rounded-full btn-gradient text-white shadow-xl hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 transition duration-300 ease-in-out">
+                    Join the Waitlist & Get Early Access
                 </button>
-                <p class="text-xs text-gray-400 mt-4">We respect your privacy. Your email will never be shared or sold.</p>
+                <p class="text-xs text-gray-500 mt-6">We respect your privacy. Your email will only be used for updates regarding this course.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-8 text-center text-gray-400 text-sm px-4">
-        <div class="max-w-7xl mx-auto">
-            <p>&copy; 2023 The Modular Drone Advantage. All rights reserved.</p>
-            <p class="mt-2">
-                <a href="#" class="text-indigo-400 hover:text-indigo-300 transition duration-200">Privacy Policy</a> | 
-                <a href="#" class="text-indigo-400 hover:text-indigo-300 transition duration-200">Terms of Service</a>
-            </p>
-        </div>
+    <footer class="bg-gray-900 py-10 text-center text-gray-500 text-sm">
+        <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const daysSpan = document.getElementById('days');
-            const hoursSpan = document.getElementById('hours');
-            const minutesSpan = document.getElementById('minutes');
-            const secondsSpan = document.getElementById('seconds');
-            const countdownContainer = document.getElementById('countdown');
+        // Set the date we're counting down to (e.g., 7 days from now for a limited-time offer)
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 7); // 7 days from now
 
-            // Set the target date for the countdown (e.g., 7 days from now)
-            const offerDurationDays = 7; 
-            const endDate = new Date();
-            endDate.setDate(endDate.getDate() + offerDurationDays);
-            const targetTime = endDate.getTime();
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
 
-            function updateCountdown() {
-                const now = new Date().getTime();
-                const distance = targetTime - now;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                if (distance < 0) {
-                    clearInterval(countdownInterval);
-                    countdownContainer.innerHTML = "<p class='text-xl text-red-400'>Offer Expired!</p>";
-                    return;
-                }
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                daysSpan.textContent = String(days).padStart(2, '0');
-                hoursSpan.textContent = String(hours).padStart(2, '0');
-                minutesSpan.textContent = String(minutes).padStart(2, '0');
-                secondsSpan.textContent = String(seconds).padStart(2, '0');
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "<p class='text-xl sm:text-2xl font-bold text-red-500'>Offer Expired!</p>";
+                // Optionally disable the waitlist button or change its text
             }
-
-            const countdownInterval = setInterval(updateCountdown, 1000);
-            updateCountdown(); // Initial call to display immediately
-        });
+        }, 1000);
     </script>
 </body>
 </html>
