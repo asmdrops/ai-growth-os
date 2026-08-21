@@ -3,185 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google AI Publisher Adaptation Toolkit - Early Access</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>iMessage Co-pilot: Your AI-Powered Messaging Assistant for Mac</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        /* Custom styles for dark overlay on hero image and animations */
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
         }
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?Develop,tech');
-            background-size: cover;
-            background-position: center;
+
+        /* Simple fade-in-up animation for hero elements */
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        .countdown-segment {
-            @apply flex flex-col items-center justify-center p-4 bg-gray-800 bg-opacity-70 rounded-lg shadow-lg;
+        .animate-fade-in-up {
+            animation: fade-in-up 1s ease-out forwards;
+            opacity: 0; /* Start hidden */
         }
-        .countdown-value {
-            @apply text-4xl sm:text-5xl font-extrabold text-teal-400;
-        }
-        .countdown-label {
-            @apply text-xs sm:text-sm uppercase mt-2 text-gray-300;
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+
+        /* Ensure smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
-<body class="bg-gray-950 text-white antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="py-4 px-4 sm:px-6 lg:px-8 bg-gray-900 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-extrabold text-white tracking-tight">iMessage Co-pilot</a>
+            <div>
+                <a href="#waitlist" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-md transition duration-300 transform hover:scale-105">Join Waitlist</a>
+            </div>
+        </div>
+    </header>
 
     <!-- Hero Section -->
-    <header class="hero-background relative min-h-screen flex items-center justify-center py-16 px-4">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Overlay for readability -->
-        <div class="container mx-auto text-center z-10 max-w-4xl">
-            <span class="inline-block bg-teal-600 text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider">
-                Limited Early Access Launch
-            </span>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">
-                Unlock AI-Proof Traffic: Your Essential Google Publisher Adaptation Toolkit
+    <section class="relative h-screen bg-cover bg-center flex items-center justify-center text-center p-4 sm:p-6 lg:p-8" style="background-image: url('https://source.unsplash.com/1600x900/?An,tech');">
+        <div class="absolute inset-0 hero-overlay"></div> <!-- Dark overlay -->
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight text-white mb-6 animate-fade-in-up">
+                iMessage Co-pilot: AI That Understands Your Conversations
             </h1>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Actionable strategies, content optimization templates, and best practices tailored to Google's new AI-driven search and Discover personalization features.
+            <p class="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-3xl mx-auto animate-fade-in-up delay-100">
+                Transform your Mac's iMessage with intelligent AI assistance, personalized communication styles, and smart productivity features.
             </p>
-            
-            <!-- Countdown Timer -->
-            <div class="bg-gray-800 bg-opacity-70 p-6 rounded-lg shadow-xl mb-8 border border-teal-700">
-                <p class="text-xl sm:text-2xl font-semibold mb-4 text-teal-400">Special Early Bird Offer Ends In:</p>
-                <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-center">
-                    <div class="countdown-segment">
-                        <span id="days" class="countdown-value">00</span>
-                        <span class="countdown-label">Days</span>
+
+            <!-- Countdown Timer - CRITICAL FOR CONVERSION -->
+            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-4 px-6 rounded-lg shadow-xl inline-block mb-8 animate-fade-in-up delay-200 border-2 border-indigo-400">
+                <p class="text-sm sm:text-base font-semibold uppercase tracking-wider mb-2">Limited-Time Offer: Early Bird Access Ends In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-3xl sm:text-4xl lg:text-5xl font-bold">
+                    <div class="flex flex-col items-center">
+                        <span id="days">00</span>
+                        <span class="text-sm sm:text-base font-normal">Days</span>
                     </div>
-                    <div class="countdown-segment">
-                        <span id="hours" class="countdown-value">00</span>
-                        <span class="countdown-label">Hours</span>
+                    <span class="text-gray-200">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours">00</span>
+                        <span class="text-sm sm:text-base font-normal">Hours</span>
                     </div>
-                    <div class="countdown-segment">
-                        <span id="minutes" class="countdown-value">00</span>
-                        <span class="countdown-label">Minutes</span>
+                    <span class="text-gray-200">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes">00</span>
+                        <span class="text-sm sm:text-base font-normal">Minutes</span>
                     </div>
-                    <div class="countdown-segment">
-                        <span id="seconds" class="countdown-value">00</span>
-                        <span class="countdown-label">Seconds</span>
+                    <span class="text-gray-200">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds">00</span>
+                        <span class="text-sm sm:text-base font-normal">Seconds</span>
                     </div>
                 </div>
             </div>
 
-            <a href="#waitlist-form" class="bg-gradient-to-r from-teal-500 to-teal-700 hover:from-teal-600 hover:to-teal-800 text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                Secure Your Early Access Now!
+            <a href="#waitlist" class="inline-block bg-white text-gray-900 hover:bg-gray-200 px-10 py-4 rounded-full text-lg sm:text-xl font-bold shadow-lg transform transition duration-300 hover:scale-105 animate-fade-in-up delay-300 border-2 border-white">
+                Secure Your Early Access Spot
             </a>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-24 bg-gray-900">
-        <div class="container mx-auto px-6 max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-12 text-teal-400">
-                What You'll Achieve with the Toolkit
+    <section class="py-16 sm:py-20 lg:py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-center text-white mb-12 sm:mb-16">
+                Unleash the Full Potential of Your iMessage
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-teal-500 transition duration-300">
-                    <div class="text-4xl mb-4 text-teal-400">🤖</div>
-                    <h3 class="text-2xl font-bold mb-3">AI Search Optimization</h3>
-                    <p class="text-gray-300">
-                        Tailor your content to thrive in Google's rapidly evolving AI-driven search and Discover feeds, ensuring maximum visibility.
-                    </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+
+                <!-- Feature 1: Customizable AI Personas -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 border border-gray-700">
+                    <div class="text-indigo-400 text-5xl mb-4">✨</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Customizable AI Personas</h3>
+                    <p class="text-gray-300 leading-relaxed">Craft unique AI personalities for every conversation style – professional, casual, supportive, and more. Adapt your messaging on the fly.</p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-teal-500 transition duration-300">
-                    <div class="text-4xl mb-4 text-teal-400">🎯</div>
-                    <h3 class="text-2xl font-bold mb-3">Leverage 'Favorite Sources'</h3>
-                    <p class="text-gray-300">
-                        Gain specific, actionable strategies to encourage users to mark your site as a trusted and 'favorite' source for sustained traffic.
-                    </p>
+
+                <!-- Feature 2: Intelligent Contextual Replies -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 border border-gray-700">
+                    <div class="text-indigo-400 text-5xl mb-4">🧠</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Intelligent Contextual Replies</h3>
+                    <p class="text-gray-300 leading-relaxed">AI that understands your schedule and tasks, suggesting relevant responses based on your calendar and to-do list. Never miss a beat.</p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-teal-500 transition duration-300">
-                    <div class="text-4xl mb-4 text-teal-400">🛠️</div>
-                    <h3 class="text-2xl font-bold mb-3">Plug-and-Play Templates</h3>
-                    <p class="text-gray-300">
-                        Access ready-to-use content optimization templates meticulously designed for Google's new AI understanding and ranking factors.
-                    </p>
+
+                <!-- Feature 3: Sentiment Analysis -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 border border-gray-700">
+                    <div class="text-indigo-400 text-5xl mb-4">😌</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Real-time Sentiment Analysis</h3>
+                    <p class="text-gray-300 leading-relaxed">Instantly gauge the emotional tone of incoming messages to respond with empathy and precision, fostering better communication.</p>
                 </div>
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-teal-500 transition duration-300">
-                    <div class="text-4xl mb-4 text-teal-400">📈</div>
-                    <h3 class="text-2xl font-bold mb-3">Traffic Retention Strategies</h3>
-                    <p class="text-gray-300">
-                        Implement proven methods to combat potential AI-driven traffic losses and maintain your audience engagement.
-                    </p>
+
+                <!-- Feature 4: One-Click Thread Summarization -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 border border-gray-700">
+                    <div class="text-indigo-400 text-5xl mb-4">📖</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">One-Click Thread Summarization</h3>
+                    <p class="text-gray-300 leading-relaxed">Overwhelmed by long chats? Get a concise, AI-generated summary of any conversation with a single click.</p>
                 </div>
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-teal-500 transition duration-300">
-                    <div class="text-4xl mb-4 text-teal-400">💬</div>
-                    <h3 class="text-2xl font-bold mb-3">Chatbot Feed Mastery</h3>
-                    <p class="text-gray-300">
-                        Learn to optimize your content for maximum visibility and engagement within the new AI chatbot-tuned feeds.
-                    </p>
+
+                <!-- Feature 5: Focus Mode & Urgency Prioritization -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 border border-gray-700">
+                    <div class="text-indigo-400 text-5xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Focus Mode & Urgency Prioritization</h3>
+                    <p class="text-gray-300 leading-relaxed">Silence the noise. Prioritize AI-assisted replies for urgent messages, ensuring you stay productive and responsive.</p>
                 </div>
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-teal-500 transition duration-300">
-                    <div class="text-4xl mb-4 text-teal-400">🌟</div>
-                    <h3 class="text-2xl font-bold mb-3">Future-Proof Your Revenue</h3>
-                    <p class="text-gray-300">
-                        Ensure sustained success and recurring revenue in an increasingly complex and AI-dominated digital publishing landscape.
-                    </p>
+
+                <!-- Feature 6: Polished UI & Premium Integrations -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 border border-gray-700">
+                    <div class="text-indigo-400 text-5xl mb-4">💎</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Polished UI & Premium Features</h3>
+                    <p class="text-gray-300 leading-relaxed">Experience a beautifully designed Mac-native app with seamless functionality and access to premium AI features via subscription.</p>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 sm:py-24 bg-gray-950">
-        <div class="container mx-auto px-6 max-w-2xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 text-white">
-                Don't Miss Out: Join the Early Access List!
+    <section id="waitlist" class="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-900 to-gray-800">
+        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-white mb-8">
+                Be Among the First to Experience iMessage Co-pilot
             </h2>
-            <p class="text-lg text-gray-300 mb-8">
-                Be among the first to receive the Google AI Publisher Adaptation Toolkit and secure exclusive early bird pricing. Limited spots available!
+            <p class="text-xl text-gray-300 mb-10">
+                Join our exclusive waitlist for early access, product updates, and special launch offers. Don't miss out!
             </p>
-            <form action="#" method="POST" class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-semibold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 text-white placeholder-gray-400 outline-none transition duration-200" placeholder="John Doe" required>
+            <form action="#" method="POST" class="bg-gray-700 p-8 rounded-lg shadow-xl border border-gray-600">
+                <div class="mb-6">
+                    <label for="email" class="sr-only">Email address</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required 
+                           class="w-full px-5 py-3 border border-transparent placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 rounded-md bg-gray-800 text-white text-lg transition duration-300" 
+                           placeholder="Enter your email address">
                 </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-semibold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 text-white placeholder-gray-400 outline-none transition duration-200" placeholder="you@example.com" required>
+                <div>
+                    <button type="submit" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 transition duration-300 shadow-lg transform hover:scale-105">
+                        Join the Waitlist
+                    </button>
                 </div>
-                <button type="submit" class="w-full bg-gradient-to-r from-teal-500 to-teal-700 hover:from-teal-600 hover:to-teal-800 text-white font-bold py-4 px-6 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                    Get Early Access & Updates
-                </button>
-                <p class="text-xs text-gray-500 mt-4">We respect your privacy. No spam, ever.</p>
+                <p class="mt-6 text-sm text-gray-400">
+                    By joining, you agree to receive product updates and promotional emails. You can unsubscribe at any time.
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 text-center text-gray-500 text-sm">
-        <div class="container mx-auto px-6">
-            <p>&copy; <span id="current-year"></span> Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">
-                <a href="#" class="hover:text-teal-400 transition duration-200">Privacy Policy</a> | 
-                <a href="#" class="hover:text-teal-400 transition duration-200">Terms of Service</a>
-            </p>
-        </div>
+    <footer class="py-10 bg-gray-900 text-center text-gray-500 text-sm">
+        <p>&copy; 2023 iMessage Co-pilot. All rights reserved.</p>
+        <p class="mt-2">Made with 💜 for Mac users.</p>
     </footer>
 
-    <!-- Countdown Script -->
+    <!-- Countdown Timer JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the date we're counting down to (7 days from now)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from today
-            // For a specific fixed date, use: const countDownDate = new Date("Dec 31, 2024 23:59:59").getTime();
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (e.g., 7 days from now)
+            // You can replace this with a specific future date if preferred:
+            // const countDownDate = new Date("Dec 25, 2023 23:59:59").getTime();
+            const futureDate = new Date();
+            futureDate.setDate(futureDate.getDate() + 7); // Set to 7 days from now for demonstration
+            const countDownDate = futureDate.getTime();
 
             const x = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
+                const distance = countDownDate - now;
 
                 if (distance < 0) {
                     clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<p class='text-xl sm:text-2xl text-red-400 font-bold'>Offer Expired!</p>";
+                    document.getElementById("countdown").innerHTML = "OFFER EXPIRED!";
+                    document.getElementById("countdown").classList.add("text-red-400", "text-xl", "sm:text-2xl");
+                    document.getElementById("countdown").classList.remove("space-x-4", "text-3xl", "sm:text-4xl", "lg:text-5xl");
+                    // Optionally disable the waitlist button
+                    const waitlistButton = document.querySelector('a[href="#waitlist"]');
+                    if (waitlistButton) {
+                        waitlistButton.classList.add("opacity-50", "cursor-not-allowed");
+                        waitlistButton.removeAttribute("href");
+                        waitlistButton.innerText = "Offer Expired";
+                    }
                     return;
                 }
 
@@ -194,11 +217,10 @@
                 document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
                 document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
                 document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-            }, 1000);
 
-            // Update current year for footer
-            document.getElementById('current-year').textContent = new Date().getFullYear();
+            }, 1000);
         });
     </script>
+
 </body>
 </html>
