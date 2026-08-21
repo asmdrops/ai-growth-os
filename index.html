@@ -1,259 +1,203 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publisher AI Adaptation Suite - Optimize for AI Search & Discover Feeds</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Optional: Add a favicon link here -->
-    <!-- <link rel="icon" type="image/x-icon" href="/favicon.ico"> -->
+    <title>Google AI Publisher Adaptation Toolkit - Early Access</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        html {
-            scroll-behavior: smooth;
+        body {
+            font-family: 'Inter', sans-serif;
         }
-        /* Custom scrollbar for dark mode */
-        body::-webkit-scrollbar {
-            width: 12px;
-        }
-        body::-webkit-scrollbar-track {
-            background: #1a202c; /* gray-900 */
-        }
-        body::-webkit-scrollbar-thumb {
-            background-color: #4a5568; /* gray-600 */
-            border-radius: 20px;
-            border: 3px solid #1a202c; /* gray-900 */
-        }
-
-        /* Hero Background with Overlay */
         .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-image: url('https://source.unsplash.com/1600x900/?Develop,tech');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
-            z-index: 0;
         }
-        .hero-background::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for better text contrast */
-            z-index: 1;
+        .countdown-segment {
+            @apply flex flex-col items-center justify-center p-4 bg-gray-800 bg-opacity-70 rounded-lg shadow-lg;
         }
-
-        /* Basic Fade-in-up animation for hero elements */
-        @keyframes fadeInMoveUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .countdown-value {
+            @apply text-4xl sm:text-5xl font-extrabold text-teal-400;
         }
-        .animate-fade-in-up {
-            animation: fadeInMoveUp 0.7s ease-out forwards;
-            opacity: 0; /* ensure it starts hidden */
+        .countdown-label {
+            @apply text-xs sm:text-sm uppercase mt-2 text-gray-300;
         }
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-300 { animation-delay: 0.3s; }
     </style>
 </head>
-<body class="bg-gray-900 text-white font-sans antialiased">
+<body class="bg-gray-950 text-white antialiased">
 
     <!-- Hero Section -->
-    <section class="hero-background min-h-screen flex items-center justify-center relative">
-        <div class="relative z-20 container mx-auto px-4 py-16 text-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up">
-                Reclaim Your Traffic: <span class="text-indigo-400">Master Google's AI Search</span> & Discover Feeds
+    <header class="hero-background relative min-h-screen flex items-center justify-center py-16 px-4">
+        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Overlay for readability -->
+        <div class="container mx-auto text-center z-10 max-w-4xl">
+            <span class="inline-block bg-teal-600 text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wider">
+                Limited Early Access Launch
+            </span>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">
+                Unlock AI-Proof Traffic: Your Essential Google Publisher Adaptation Toolkit
             </h1>
-            <p class="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto mb-10 animate-fade-in-up delay-100">
-                The only suite empowering publishers to analyze AI-driven content visibility, identify gaps, and optimize strategy for increased engagement and mitigated traffic losses.
+            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Actionable strategies, content optimization templates, and best practices tailored to Google's new AI-driven search and Discover personalization features.
             </p>
             
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12 animate-fade-in-up delay-200">
-                <a href="#waitlist-form" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg shadow-xl transition duration-300 ease-in-out transform hover:scale-105 text-lg">
-                    Join the Early Access Waitlist
-                </a>
-                <a href="#features" class="bg-transparent border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white font-bold py-3 px-8 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg">
-                    Learn How It Works
-                </a>
-            </div>
-
-            <!-- Limited Time Countdown -->
-            <div class="bg-gradient-to-r from-indigo-800 to-purple-900 p-6 rounded-lg shadow-2xl max-w-xl mx-auto animate-fade-in-up delay-300 border border-indigo-700">
-                <p class="text-2xl font-semibold text-white mb-4">Limited Early Access Offer Ends In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-indigo-300">
-                    <div class="flex flex-col items-center">
-                        <span id="days">00</span>
-                        <span class="text-base font-normal text-gray-400">Days</span>
+            <!-- Countdown Timer -->
+            <div class="bg-gray-800 bg-opacity-70 p-6 rounded-lg shadow-xl mb-8 border border-teal-700">
+                <p class="text-xl sm:text-2xl font-semibold mb-4 text-teal-400">Special Early Bird Offer Ends In:</p>
+                <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-center">
+                    <div class="countdown-segment">
+                        <span id="days" class="countdown-value">00</span>
+                        <span class="countdown-label">Days</span>
                     </div>
-                    <span class="text-gray-600">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours">00</span>
-                        <span class="text-base font-normal text-gray-400">Hours</span>
+                    <div class="countdown-segment">
+                        <span id="hours" class="countdown-value">00</span>
+                        <span class="countdown-label">Hours</span>
                     </div>
-                    <span class="text-gray-600">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes">00</span>
-                        <span class="text-base font-normal text-gray-400">Minutes</span>
+                    <div class="countdown-segment">
+                        <span id="minutes" class="countdown-value">00</span>
+                        <span class="countdown-label">Minutes</span>
                     </div>
-                    <span class="text-gray-600">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds">00</span>
-                        <span class="text-base font-normal text-gray-400">Seconds</span>
+                    <div class="countdown-segment">
+                        <span id="seconds" class="countdown-value">00</span>
+                        <span class="countdown-label">Seconds</span>
                     </div>
                 </div>
             </div>
+
+            <a href="#waitlist-form" class="bg-gradient-to-r from-teal-500 to-teal-700 hover:from-teal-600 hover:to-teal-800 text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Secure Your Early Access Now!
+            </a>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 bg-gray-800 border-t border-gray-700">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-16">
-                Unleash Your Content's Potential in the <span class="text-indigo-400">AI-First Web</span>
+    <section id="features" class="py-16 sm:py-24 bg-gray-900">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-12 text-teal-400">
+                What You'll Achieve with the Toolkit
             </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Feature 1: AI Visibility Analytics -->
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-indigo-400 mb-4 text-4xl">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">AI Visibility Analytics</h3>
-                    <p class="text-gray-300">Gain deep insights into how your content performs in Google's evolving AI-driven Search and Discover feeds. Understand what works and what doesn't.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-teal-500 transition duration-300">
+                    <div class="text-4xl mb-4 text-teal-400">🤖</div>
+                    <h3 class="text-2xl font-bold mb-3">AI Search Optimization</h3>
+                    <p class="text-gray-300">
+                        Tailor your content to thrive in Google's rapidly evolving AI-driven search and Discover feeds, ensuring maximum visibility.
+                    </p>
                 </div>
-                
-                <!-- Feature 2: Content Gap & Opportunity Detection -->
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-indigo-400 mb-4 text-4xl">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897m-3.34 1.014L9.778 21.49M7.188 2.239l-3.339 1.014m0 0l1.981 9.346m-1.981-9.346l-2.587-8.77m17.584 12.637l1.044-3.339m0 0l-1.981-9.346m1.981 9.346l2.587-8.77m-17.584 12.637L10.778 21.49m0 0L7.188 2.239"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Content Gap & Opportunity Detection</h3>
-                    <p class="text-gray-300">Identify unmet user needs and personalization algorithm opportunities. Discover new niches and content types to dominate the AI landscape.</p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-teal-500 transition duration-300">
+                    <div class="text-4xl mb-4 text-teal-400">🎯</div>
+                    <h3 class="text-2xl font-bold mb-3">Leverage 'Favorite Sources'</h3>
+                    <p class="text-gray-300">
+                        Gain specific, actionable strategies to encourage users to mark your site as a trusted and 'favorite' source for sustained traffic.
+                    </p>
                 </div>
-
-                <!-- Feature 3: Real-time Optimization Recommendations -->
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-indigo-400 mb-4 text-4xl">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Real-time Optimization Recommendations</h3>
-                    <p class="text-gray-300">Receive actionable, real-time advice on content adjustments, semantic enrichment, and strategic shifts to improve AI feed performance.</p>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-teal-500 transition duration-300">
+                    <div class="text-4xl mb-4 text-teal-400">🛠️</div>
+                    <h3 class="text-2xl font-bold mb-3">Plug-and-Play Templates</h3>
+                    <p class="text-gray-300">
+                        Access ready-to-use content optimization templates meticulously designed for Google's new AI understanding and ranking factors.
+                    </p>
                 </div>
-
-                <!-- Feature 4: Traffic Loss Mitigation -->
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-indigo-400 mb-4 text-4xl">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Traffic Loss Mitigation</h3>
-                    <p class="text-gray-300">Proactively identify and address factors leading to AI-driven traffic declines. Protect your audience and revenue streams in the new era.</p>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-teal-500 transition duration-300">
+                    <div class="text-4xl mb-4 text-teal-400">📈</div>
+                    <h3 class="text-2xl font-bold mb-3">Traffic Retention Strategies</h3>
+                    <p class="text-gray-300">
+                        Implement proven methods to combat potential AI-driven traffic losses and maintain your audience engagement.
+                    </p>
                 </div>
-
-                <!-- Feature 5: Leverage Personalization Algorithms -->
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-indigo-400 mb-4 text-4xl">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.592 1L21 12m-6-2v2m-3-2v2m-8-2v2m2.592-8A9.962 9.962 0 0112 2c5.523 0 10 4.477 10 10a9.962 9.962 0 01-2.592 6l-2.592 2L12 22l-2.592-2L9.408 18A9.962 9.962 0 012 12C2 6.477 6.477 2 12 2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Leverage Personalization Algorithms</h3>
-                    <p class="text-gray-300">Discover and exploit new engagement features driven by advanced AI personalization, pushing your content to the right audience at the right time.</p>
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-teal-500 transition duration-300">
+                    <div class="text-4xl mb-4 text-teal-400">💬</div>
+                    <h3 class="text-2xl font-bold mb-3">Chatbot Feed Mastery</h3>
+                    <p class="text-gray-300">
+                        Learn to optimize your content for maximum visibility and engagement within the new AI chatbot-tuned feeds.
+                    </p>
                 </div>
-
-                <!-- Feature 6: Seamless Integration & Reporting -->
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-indigo-400 mb-4 text-4xl">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37a1.724 1.724 0 002.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Seamless Integration & Reporting</h3>
-                    <p class="text-gray-300">Connects directly with your existing analytics and content management systems for effortless data flow and comprehensive performance reporting.</p>
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-teal-500 transition duration-300">
+                    <div class="text-4xl mb-4 text-teal-400">🌟</div>
+                    <h3 class="text-2xl font-bold mb-3">Future-Proof Your Revenue</h3>
+                    <p class="text-gray-300">
+                        Ensure sustained success and recurring revenue in an increasingly complex and AI-dominated digital publishing landscape.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action / Waitlist Form Section -->
-    <section id="waitlist-form" class="py-20 bg-gray-900 border-t border-gray-700">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Be Among the First to Adapt & Win with AI
+    <!-- Waitlist Form Section -->
+    <section id="waitlist-form" class="py-16 sm:py-24 bg-gray-950">
+        <div class="container mx-auto px-6 max-w-2xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 text-white">
+                Don't Miss Out: Join the Early Access List!
             </h2>
-            <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-10">
-                Don't let AI innovations leave you behind. Join our exclusive early access waitlist to secure your competitive edge and gain early access to our Publisher AI Adaptation & Optimization Suite.
+            <p class="text-lg text-gray-300 mb-8">
+                Be among the first to receive the Google AI Publisher Adaptation Toolkit and secure exclusive early bird pricing. Limited spots available!
             </p>
-            
-            <div class="max-w-md mx-auto bg-gray-800 p-8 rounded-lg shadow-2xl border border-gray-700">
-                <form action="#" method="POST" class="space-y-6">
-                    <div>
-                        <label for="email" class="sr-only">Email address</label>
-                        <input type="email" name="email" id="email" autocomplete="email" required class="block w-full p-4 border border-gray-600 rounded-lg shadow-sm bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg" placeholder="Enter your email address">
-                    </div>
-                    <div>
-                        <button type="submit" class="w-full flex justify-center items-center py-4 px-6 border border-transparent rounded-lg shadow-sm text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300 ease-in-out transform hover:scale-105">
-                            Join the Waitlist Now!
-                            <svg class="ml-2 -mr-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                                <path fill-rule="evenodd" d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                            </svg>
-                        </button>
-                    </div>
-                </form>
-                <p class="mt-6 text-sm text-gray-500">
-                    We respect your privacy. Your email will only be used for waitlist updates.
-                </p>
-            </div>
+            <form action="#" method="POST" class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-300 text-sm font-semibold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 text-white placeholder-gray-400 outline-none transition duration-200" placeholder="John Doe" required>
+                </div>
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-300 text-sm font-semibold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 text-white placeholder-gray-400 outline-none transition duration-200" placeholder="you@example.com" required>
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-teal-500 to-teal-700 hover:from-teal-600 hover:to-teal-800 text-white font-bold py-4 px-6 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                    Get Early Access & Updates
+                </button>
+                <p class="text-xs text-gray-500 mt-4">We respect your privacy. No spam, ever.</p>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 border-t border-gray-800">
-        <div class="container mx-auto px-4 text-center text-gray-500">
-            <p>&copy; 2024 Publisher AI Adaptation Suite. All rights reserved.</p>
-            <div class="mt-4 flex justify-center space-x-6">
-                <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
-                <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
-            </div>
+    <footer class="bg-gray-900 py-10 text-center text-gray-500 text-sm">
+        <div class="container mx-auto px-6">
+            <p>&copy; <span id="current-year"></span> Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="hover:text-teal-400 transition duration-200">Privacy Policy</a> | 
+                <a href="#" class="hover:text-teal-400 transition duration-200">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
+    <!-- Countdown Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 7 days from now for a limited-time offer)
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the date we're counting down to (7 days from now)
             const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Sets the countdown to expire 7 days from the current date.
-            // For a specific fixed date, you could use:
-            // const countDownDate = new Date("Dec 25, 2024 00:00:00").getTime();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from today
+            // For a specific fixed date, use: const countDownDate = new Date("Dec 31, 2024 23:59:59").getTime();
 
             const x = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = countDownDate - now;
+                const distance = countDownDate.getTime() - now;
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<p class='text-xl sm:text-2xl text-red-400 font-bold'>Offer Expired!</p>";
+                    return;
+                }
 
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Display the result with leading zeros
                 document.getElementById("days").innerHTML = String(days).padStart(2, '0');
                 document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
                 document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
                 document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-                // If the countdown is finished, write some text
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "Offer Expired!";
-                    document.getElementById("countdown").classList.remove("text-indigo-300");
-                    document.getElementById("countdown").classList.add("text-red-500", "text-3xl"); // Make expired text stand out
-                }
             }, 1000);
+
+            // Update current year for footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
         });
     </script>
 </body>
