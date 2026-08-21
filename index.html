@@ -1,228 +1,259 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iMessage Co-pilot - Supercharge Your Mac Messaging with AI</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Publisher AI Adaptation Suite - Optimize for AI Search & Discover Feeds</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Optional: Add a favicon link here -->
+    <!-- <link rel="icon" type="image/x-icon" href="/favicon.ico"> -->
     <style>
-        /* Modern Premium Dark Mode Base */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0F172A; /* Deeper dark blue-gray */
-            color: #E2E8F0; /* Light gray for text */
+        html {
+            scroll-behavior: smooth;
         }
-        
-        /* ULTRA-RESPONSIVE Fluid Typography & Spacing */
-        h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; }
-        h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.2; }
-        h3 { font-size: clamp(1.5rem, 3vw, 2.5rem); line-height: 1.3; }
-        p { font-size: clamp(1rem, 2vw, 1.25rem); line-height: 1.6; }
-        .btn {
-            padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
-            font-size: clamp(1rem, 2vw, 1.125rem);
-            line-height: 1; /* Ensure button text aligns well */
+        /* Custom scrollbar for dark mode */
+        body::-webkit-scrollbar {
+            width: 12px;
         }
-        .container {
-            max-width: 1280px; /* Max width for larger screens */
+        body::-webkit-scrollbar-track {
+            background: #1a202c; /* gray-900 */
         }
+        body::-webkit-scrollbar-thumb {
+            background-color: #4a5568; /* gray-600 */
+            border-radius: 20px;
+            border: 3px solid #1a202c; /* gray-900 */
+        }
+
+        /* Hero Background with Overlay */
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            z-index: 0;
+        }
+        .hero-background::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for better text contrast */
+            z-index: 1;
+        }
+
+        /* Basic Fade-in-up animation for hero elements */
+        @keyframes fadeInMoveUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fadeInMoveUp 0.7s ease-out forwards;
+            opacity: 0; /* ensure it starts hidden */
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
     </style>
 </head>
-<body>
+<body class="bg-gray-900 text-white font-sans antialiased">
+
     <!-- Hero Section -->
-    <header class="relative bg-cover bg-center min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8"
-            style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-        <div class="absolute inset-0 bg-gradient-to-br from-black/80 to-indigo-900/70 z-0"></div> <!-- Enhanced Overlay -->
-        <div class="relative z-10 text-center max-w-4xl mx-auto">
-            <h1 class="text-white font-extrabold tracking-tight mb-4 drop-shadow-lg leading-tight">
-                <span class="text-indigo-400">iMessage Co-pilot</span>: Your Mac Messages, Supercharged with AI
+    <section class="hero-background min-h-screen flex items-center justify-center relative">
+        <div class="relative z-20 container mx-auto px-4 py-16 text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up">
+                Reclaim Your Traffic: <span class="text-indigo-400">Master Google's AI Search</span> & Discover Feeds
             </h1>
-            <p class="text-gray-200 mb-8 font-light text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-relaxed drop-shadow-md">
-                Leverage the groundbreaking ChatGPT Apple Messages integration to automate, summarize, and prioritize your conversations like never before, natively on Mac.
+            <p class="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto mb-10 animate-fade-in-up delay-100">
+                The only suite empowering publishers to analyze AI-driven content visibility, identify gaps, and optimize strategy for increased engagement and mitigated traffic losses.
             </p>
-            <div class="space-y-4 sm:space-x-4 sm:space-y-0 flex flex-col sm:flex-row justify-center mb-12">
-                <a href="#waitlist" class="btn bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
-                    Join the Waitlist - Get Early Access!
-                </a>
-                <a href="#features" class="btn bg-transparent border-2 border-indigo-600 text-indigo-300 hover:border-indigo-400 hover:text-indigo-100 font-semibold rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
-                    Discover Features
-                </a>
-            </div>
             
-            <!-- Limited Time Countdown -->
-            <div class="mt-8 p-6 bg-indigo-900 bg-opacity-70 backdrop-blur-sm rounded-xl max-w-md mx-auto shadow-2xl border border-indigo-700">
-                <p class="text-indigo-200 text-lg font-semibold mb-3">Waitlist for Exclusive Beta Access Closes In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="w-16 sm:w-20 lg:w-24 text-center">00</span>
-                        <span class="text-xs sm:text-sm text-indigo-300 font-normal mt-1">Days</span>
-                    </div>
-                    <span class="text-indigo-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="w-16 sm:w-20 lg:w-24 text-center">00</span>
-                        <span class="text-xs sm:text-sm text-indigo-300 font-normal mt-1">Hours</span>
-                    </div>
-                    <span class="text-indigo-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="w-16 sm:w-20 lg:w-24 text-center">00</span>
-                        <span class="text-xs sm:text-sm text-indigo-300 font-normal mt-1">Minutes</span>
-                    </div>
-                    <span class="text-indigo-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="w-16 sm:w-20 lg:w-24 text-center">00</span>
-                        <span class="text-xs sm:text-sm text-indigo-300 font-normal mt-1">Seconds</span>
-                    </div>
-                </div>
-                <p class="text-indigo-200 text-sm sm:text-base mt-4 font-medium">Don't miss your chance for exclusive early bird pricing and beta access!</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12 animate-fade-in-up delay-200">
+                <a href="#waitlist-form" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg shadow-xl transition duration-300 ease-in-out transform hover:scale-105 text-lg">
+                    Join the Early Access Waitlist
+                </a>
+                <a href="#features" class="bg-transparent border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white font-bold py-3 px-8 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg">
+                    Learn How It Works
+                </a>
             </div>
-        </div>
-    </header>
 
-    <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-center font-bold mb-6 text-indigo-400">Unlock a New Era of Professional Productivity</h2>
-            <p class="text-center text-gray-300 max-w-3xl mx-auto mb-16 text-lg sm:text-xl">
-                iMessage Co-pilot integrates powerful AI directly into your Mac messages, transforming casual chats into actionable insights and streamlined professional workflows.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Feature 1: AI-Driven Message Summarization -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-indigo-500 mb-4 text-5xl">💡</div>
-                    <h3 class="font-semibold text-white mb-3">AI-Driven Message Summarization</h3>
-                    <p class="text-gray-300 text-base lg:text-lg">
-                        Never get lost in long threads again. Co-pilot instantly condenses lengthy conversations into concise, digestible summaries, saving you precious time and focus.
-                    </p>
+            <!-- Limited Time Countdown -->
+            <div class="bg-gradient-to-r from-indigo-800 to-purple-900 p-6 rounded-lg shadow-2xl max-w-xl mx-auto animate-fade-in-up delay-300 border border-indigo-700">
+                <p class="text-2xl font-semibold text-white mb-4">Limited Early Access Offer Ends In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-indigo-300">
+                    <div class="flex flex-col items-center">
+                        <span id="days">00</span>
+                        <span class="text-base font-normal text-gray-400">Days</span>
+                    </div>
+                    <span class="text-gray-600">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours">00</span>
+                        <span class="text-base font-normal text-gray-400">Hours</span>
+                    </div>
+                    <span class="text-gray-600">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes">00</span>
+                        <span class="text-base font-normal text-gray-400">Minutes</span>
+                    </div>
+                    <span class="text-gray-600">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds">00</span>
+                        <span class="text-base font-normal text-gray-400">Seconds</span>
+                    </div>
                 </div>
-
-                <!-- Feature 2: Contextual Reply Suggestions -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-indigo-500 mb-4 text-5xl">💬</div>
-                    <h3 class="font-semibold text-white mb-3">Contextual Reply Suggestions</h3>
-                    <p class="text-gray-300 text-base lg:text-lg">
-                        Respond smarter, faster. Get AI-generated reply suggestions tailored to the conversation history and your predefined personas, ensuring consistent and professional communication.
-                    </p>
-                </div>
-
-                <!-- Feature 3: Scheduled AI-Drafted Messages -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-indigo-500 mb-4 text-5xl">⏰</div>
-                    <h3 class="font-semibold text-white mb-3">Scheduled AI-Drafted Messages</h3>
-                    <p class="text-gray-300 text-base lg:text-lg">
-                        Draft messages with AI assistance and schedule them to send at the perfect time. Maintain flow and ensure timely communication without being tied to your desk.
-                    </p>
-                </div>
-
-                <!-- Feature 4: Smart Conversation Filters -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-indigo-500 mb-4 text-5xl">🔍</div>
-                    <h3 class="font-semibold text-white mb-3">Smart Conversation Filters</h3>
-                    <p class="text-gray-300 text-base lg:text-lg">
-                        Cut through the noise. Intelligently prioritize and filter important conversations based on content, contacts, and urgency, ensuring you focus on what truly matters.
-                    </p>
-                </div>
-
-                <!-- Feature 5: Seamless Task Manager Integration -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-indigo-500 mb-4 text-5xl">✅</div>
-                    <h3 class="font-semibold text-white mb-3">Seamless Task Manager Integration</h3>
-                    <p class="text-gray-300 text-base lg:text-lg">
-                        Turn conversations into immediate action. Easily convert messages into actionable tasks in popular task managers like Things and Todoist, boosting workflow efficiency.
-                    </p>
-                </div>
-
-                <!-- Feature 6: Mac-Native Power -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-center items-start">
-                    <div class="text-indigo-500 mb-4 text-5xl">💻</div>
-                    <h3 class="font-semibold text-white mb-3">Mac-Native Performance</h3>
-                    <p class="text-gray-300 text-base lg:text-lg">
-                        Built from the ground up for macOS, iMessage Co-pilot delivers a fluid, fast, and integrated experience that feels perfectly at home within your Apple ecosystem.
-                    </p>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gray-950">
-        <div class="container mx-auto px-4 max-w-2xl text-center">
-            <h2 class="text-indigo-400 font-bold mb-6">Join the Waitlist & Be First to Experience the Future!</h2>
-            <p class="text-gray-300 text-lg sm:text-xl mb-10">
-                Don't miss out on transforming your iMessage experience. Sign up now for product updates, early beta access, and exclusive launch offers.
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-800 border-t border-gray-700">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-16">
+                Unleash Your Content's Potential in the <span class="text-indigo-400">AI-First Web</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Feature 1: AI Visibility Analytics -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-indigo-400 mb-4 text-4xl">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">AI Visibility Analytics</h3>
+                    <p class="text-gray-300">Gain deep insights into how your content performs in Google's evolving AI-driven Search and Discover feeds. Understand what works and what doesn't.</p>
+                </div>
+                
+                <!-- Feature 2: Content Gap & Opportunity Detection -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-indigo-400 mb-4 text-4xl">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897m-3.34 1.014L9.778 21.49M7.188 2.239l-3.339 1.014m0 0l1.981 9.346m-1.981-9.346l-2.587-8.77m17.584 12.637l1.044-3.339m0 0l-1.981-9.346m1.981 9.346l2.587-8.77m-17.584 12.637L10.778 21.49m0 0L7.188 2.239"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Content Gap & Opportunity Detection</h3>
+                    <p class="text-gray-300">Identify unmet user needs and personalization algorithm opportunities. Discover new niches and content types to dominate the AI landscape.</p>
+                </div>
+
+                <!-- Feature 3: Real-time Optimization Recommendations -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-indigo-400 mb-4 text-4xl">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Real-time Optimization Recommendations</h3>
+                    <p class="text-gray-300">Receive actionable, real-time advice on content adjustments, semantic enrichment, and strategic shifts to improve AI feed performance.</p>
+                </div>
+
+                <!-- Feature 4: Traffic Loss Mitigation -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-indigo-400 mb-4 text-4xl">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Traffic Loss Mitigation</h3>
+                    <p class="text-gray-300">Proactively identify and address factors leading to AI-driven traffic declines. Protect your audience and revenue streams in the new era.</p>
+                </div>
+
+                <!-- Feature 5: Leverage Personalization Algorithms -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-indigo-400 mb-4 text-4xl">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.592 1L21 12m-6-2v2m-3-2v2m-8-2v2m2.592-8A9.962 9.962 0 0112 2c5.523 0 10 4.477 10 10a9.962 9.962 0 01-2.592 6l-2.592 2L12 22l-2.592-2L9.408 18A9.962 9.962 0 012 12C2 6.477 6.477 2 12 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Leverage Personalization Algorithms</h3>
+                    <p class="text-gray-300">Discover and exploit new engagement features driven by advanced AI personalization, pushing your content to the right audience at the right time.</p>
+                </div>
+
+                <!-- Feature 6: Seamless Integration & Reporting -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-indigo-400 mb-4 text-4xl">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37a1.724 1.724 0 002.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Seamless Integration & Reporting</h3>
+                    <p class="text-gray-300">Connects directly with your existing analytics and content management systems for effortless data flow and comprehensive performance reporting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Waitlist Form Section -->
+    <section id="waitlist-form" class="py-20 bg-gray-900 border-t border-gray-700">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                Be Among the First to Adapt & Win with AI
+            </h2>
+            <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-10">
+                Don't let AI innovations leave you behind. Join our exclusive early access waitlist to secure your competitive edge and gain early access to our Publisher AI Adaptation & Optimization Suite.
             </p>
-            <form class="bg-gray-800 p-8 sm:p-10 rounded-xl shadow-2xl border border-indigo-700 space-y-6">
-                <div>
-                    <label for="name" class="sr-only">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name"
-                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 text-white text-lg placeholder-gray-400 outline-none transition-all duration-200">
-                </div>
-                <div>
-                    <label for="email" class="sr-only">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
-                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 text-white text-lg placeholder-gray-400 outline-none transition-all duration-200">
-                </div>
-                <div>
-                    <button type="submit"
-                            class="w-full btn bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105">
-                        Secure Your Spot Now!
-                    </button>
-                </div>
-                <p class="text-gray-400 text-sm">We respect your privacy. No spam, only valuable updates.</p>
-            </form>
+            
+            <div class="max-w-md mx-auto bg-gray-800 p-8 rounded-lg shadow-2xl border border-gray-700">
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label for="email" class="sr-only">Email address</label>
+                        <input type="email" name="email" id="email" autocomplete="email" required class="block w-full p-4 border border-gray-600 rounded-lg shadow-sm bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg" placeholder="Enter your email address">
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full flex justify-center items-center py-4 px-6 border border-transparent rounded-lg shadow-sm text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300 ease-in-out transform hover:scale-105">
+                            Join the Waitlist Now!
+                            <svg class="ml-2 -mr-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                <path fill-rule="evenodd" d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                <p class="mt-6 text-sm text-gray-500">
+                    We respect your privacy. Your email will only be used for waitlist updates.
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2023 iMessage Co-pilot. All rights reserved.</p>
-            <p class="mt-2 text-gray-500">Made for Mac users who demand more from their communication.</p>
+    <footer class="bg-gray-900 py-10 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-gray-500">
+            <p>&copy; 2024 Publisher AI Adaptation Suite. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
     <!-- JavaScript for Countdown Timer -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const countdownElement = document.getElementById('countdown');
-            if (!countdownElement) return;
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (e.g., 7 days from now for a limited-time offer)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Sets the countdown to expire 7 days from the current date.
+            // For a specific fixed date, you could use:
+            // const countDownDate = new Date("Dec 25, 2024 00:00:00").getTime();
 
-            const daysSpan = document.getElementById('days');
-            const hoursSpan = document.getElementById('hours');
-            const minutesSpan = document.getElementById('minutes');
-            const secondsSpan = document.getElementById('seconds');
-
-            // Set the target date for 7 days from now
-            const targetDate = new Date();
-            targetDate.setDate(targetDate.getDate() + 7);
-            targetDate.setHours(23, 59, 59, 999); // Set to end of the day
-
-            function updateCountdown() {
+            const x = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = targetDate.getTime() - now;
-
-                if (distance < 0) {
-                    clearInterval(interval);
-                    countdownElement.innerHTML = '<div class="text-red-400 text-3xl sm:text-4xl font-bold">Waitlist Closed!</div><p class="text-indigo-200 text-sm sm:text-base mt-2">Stay tuned for future announcements.</p>';
-                    return;
-                }
+                const distance = countDownDate - now;
 
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                daysSpan.textContent = String(days).padStart(2, '0');
-                hoursSpan.textContent = String(hours).padStart(2, '0');
-                minutesSpan.textContent = String(minutes).padStart(2, '0');
-                secondsSpan.textContent = String(seconds).padStart(2, '0');
-            }
+                // Display the result with leading zeros
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-            updateCountdown(); // Initial call to display immediately
-            const interval = setInterval(updateCountdown, 1000);
+                // If the countdown is finished, write some text
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "Offer Expired!";
+                    document.getElementById("countdown").classList.remove("text-indigo-300");
+                    document.getElementById("countdown").classList.add("text-red-500", "text-3xl"); // Make expired text stand out
+                }
+            }, 1000);
         });
     </script>
 </body>
