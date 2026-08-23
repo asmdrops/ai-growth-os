@@ -3,237 +3,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple's AI Future: Decoding Camera-Equipped AirPods & Wearable Tech</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <title>Workplace Policy & Privacy Toolkit for Camera-Equipped AirPods | Secure Your Future</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
     <style>
+        /* Custom styles for dark mode elegance and subtle animations */
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0f172a; /* Tailwind slate-900 */
-            color: #f8fafc; /* Tailwind slate-50 */
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            font-family: 'Inter', sans-serif; /* A modern, clean font */
         }
-        /* Custom styles for countdown segments */
-        .countdown-segment {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            padding: 0.5rem 1rem;
-            min-width: 70px; /* Ensure segments have minimum width */
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
         }
-        .countdown-value {
-            font-size: 2rem;
-            font-weight: bold;
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #a78bfa, #8b5cf6); /* Light purple to deep purple */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border-color: #8b5cf6; /* Highlight border on hover */
+        }
+        input[type="text"], input[type="email"] {
+            background-color: rgba(255, 255, 255, 0.08); /* Slightly visible in dark mode */
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #e2e8f0;
+        }
+        input[type="text"]:focus, input[type="email"]:focus {
+            border-color: #8b5cf6;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+        }
+        .btn-primary {
+            background-color: #8b5cf6; /* Indigo-500 equivalent */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-primary:hover {
+            background-color: #7c3aed; /* Darker indigo */
+            transform: translateY(-1px);
+        }
+
+        /* Countdown specific styling */
+        .countdown-item {
+            font-size: 2.5rem; /* Large numbers */
+            font-weight: 700;
+            color: #a78bfa; /* Lighter purple accent */
             line-height: 1;
+            display: block; /* Ensure block for vertical stacking with label */
         }
         .countdown-label {
-            font-size: 0.75rem;
+            font-size: 0.875rem; /* Small label */
+            color: #cbd5e0;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            opacity: 0.8;
-            margin-top: 0.25rem;
+            margin-top: 0.5rem;
         }
-        @media (min-width: 768px) {
-            .countdown-value {
-                font-size: 2.5rem;
+        /* Fluid Typography and Responsive Adjustments */
+        html {
+            font-size: 16px; /* Base for rem units */
+        }
+        @media (max-width: 1024px) { /* Laptops and smaller */
+            .countdown-item { font-size: 2rem; }
+            .hero-background h1 { font-size: 3.5rem; }
+            .hero-background p { font-size: 1.75rem; }
+        }
+        @media (max-width: 768px) { /* Tablets and smaller */
+            html { font-size: 14px; }
+            .countdown-item { font-size: 1.8rem; }
+            .hero-background h1 { font-size: 2.8rem; }
+            .hero-background p { font-size: 1.5rem; }
+            .hero-background .btn-primary { font-size: 1.1rem; padding: 0.8rem 2.5rem; }
+            .feature-card { padding: 1.5rem; }
+        }
+        @media (max-width: 480px) { /* Phones */
+            html { font-size: 12px; }
+            .countdown-item { font-size: 1.5rem; }
+            .hero-background h1 { font-size: 2.2rem; }
+            .hero-background p { font-size: 1.25rem; }
+            .hero-background .btn-primary { font-size: 1rem; padding: 0.7rem 2rem; }
+            .countdown-item, .countdown-label { margin-top: 0; } /* Adjust spacing for smaller screens */
+            .countdown #days, .countdown #hours, .countdown #minutes, .countdown #seconds {
+                margin-bottom: 0.25rem; /* Add some space between number and label */
             }
-            .countdown-segment {
-                min-width: 90px;
-            }
-        }
-        /* Gradient for CTA button */
-        .btn-gradient {
-            background-image: linear-gradient(to right, var(--tw-gradient-stops));
-        }
-        .btn-gradient:hover {
-            background-image: linear-gradient(to right, var(--tw-gradient-stops));
         }
     </style>
 </head>
-<body class="bg-slate-900 text-slate-50">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative h-screen flex items-center justify-center text-center overflow-hidden p-4">
-        <div class="absolute inset-0">
-            <img src="https://source.unsplash.com/1600x900/?A,tech" alt="Apple AI Future Tech" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-70"></div> <!-- Dark overlay for readability -->
-        </div>
-        <div class="relative z-10 max-w-4xl mx-auto py-8">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-4 drop-shadow-lg">
-                Apple's AI Future: Decoding Camera-Equipped AirPods & Wearable Tech
+    <header class="hero-background min-h-screen flex items-center justify-center relative py-16 px-4 sm:px-6 lg:px-8">
+        <div class="hero-overlay absolute inset-0 z-0"></div>
+        <div class="container mx-auto text-center relative z-10 max-w-4xl">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-white">
+                <span class="gradient-text block">Apple's Camera-Equipped AirPods Are Coming.</span>
+                <span class="block mt-2">Is Your Workplace Policy Ready?</span>
             </h1>
-            <p class="text-lg md:text-xl text-slate-200 mb-8 max-w-3xl mx-auto drop-shadow-md">
-                Uncover exclusive analysis on leaked features, privacy implications, and market shifts that will redefine your digital world.
-                Gain actionable insights for early adoption, strategic business moves, and privacy-conscious living.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                Future-proof your business with the essential <span class="font-semibold text-white">Workplace Policy & Privacy Toolkit</span> for navigating new device challenges.
             </p>
-            <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 sm:p-6 rounded-lg shadow-xl mb-8 transform hover:scale-105 transition duration-300 ease-in-out border border-transparent hover:border-blue-300">
-                <p class="text-sm sm:text-base font-semibold mb-3 uppercase tracking-wide">Limited Time Introductory Offer Ends In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 text-white">
-                    <!-- Countdown segments will be dynamically inserted here -->
+
+            <!-- Limited Time Countdown -->
+            <div class="bg-gray-800 bg-opacity-70 rounded-lg p-6 mb-10 shadow-xl max-w-md mx-auto border border-purple-700">
+                <h3 class="text-xl font-bold text-white mb-4">Exclusive Early Bird Access & 20% Off Ends In:</h3>
+                <div id="countdown" class="flex justify-center space-x-4 sm:space-x-6 text-center">
+                    <div>
+                        <div class="countdown-item" id="days">00</div>
+                        <div class="countdown-label">Days</div>
+                    </div>
+                    <div>
+                        <div class="countdown-item" id="hours">00</div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    <div>
+                        <div class="countdown-item" id="minutes">00</div>
+                        <div class="countdown-label">Minutes</div>
+                    </div>
+                    <div>
+                        <div class="countdown-item" id="seconds">00</div>
+                        <div class="countdown-label">Seconds</div>
+                    </div>
                 </div>
             </div>
-            <a href="#waitlist" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg md:text-xl shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
-                Secure Your Exclusive Analysis Now
+
+            <a href="#waitlist-form" class="btn-primary inline-flex items-center justify-center px-10 py-4 border border-transparent text-xl font-medium rounded-full shadow-lg text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition duration-300 ease-in-out transform hover:scale-105">
+                Join the Exclusive Waitlist Now <span class="ml-2">🚀</span>
             </a>
+            <p class="text-sm text-gray-400 mt-4">For Businesses, HR Departments & IT Managers.</p>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-slate-800">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-white mb-12">What You'll Uncover Inside</h2>
+    <section id="features" class="py-16 sm:py-20 bg-gray-900 px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-12 text-white">
+                Equip Your Organization with Unparalleled Clarity
+            </h2>
+            <p class="text-lg text-gray-300 text-center mb-16 max-w-3xl mx-auto">
+                The rapid evolution of personal tech demands proactive policy adjustments. Our toolkit provides everything you need to confidently manage camera-equipped AirPods in your professional environment.
+            </p>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
                 <!-- Feature 1 -->
-                <div class="bg-slate-900 p-8 rounded-lg shadow-xl border border-slate-700 hover:border-blue-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-blue-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Exclusive Leaks & Deep-Dive Analysis</h3>
-                    <p class="text-slate-300">Get ahead with our profound analysis of the latest credible leaks for Apple's camera-equipped AirPods and other next-gen wearable tech. Understand the "what" and "why" behind these game-changing features.</p>
+                <div class="feature-card bg-gray-800 rounded-lg p-8 shadow-lg border border-gray-700 hover:border-purple-600">
+                    <div class="text-5xl mb-4 text-purple-400">🛡️</div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Comprehensive Policy Templates</h3>
+                    <p class="text-gray-300">
+                        Ready-to-use, customizable templates for acceptable use, data handling, and device management specific to camera-equipped audio devices.
+                    </p>
                 </div>
-
                 <!-- Feature 2 -->
-                <div class="bg-slate-900 p-8 rounded-lg shadow-xl border border-slate-700 hover:border-blue-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-blue-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.007 12.007 0 002.944 12c0 2.893 1.196 5.584 3.04 7.561M12 21.056c-2.893 0-5.584-1.196-7.561-3.04M12 21.056V12"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Critical Privacy Implications Explored</h3>
-                    <p class="text-slate-300">Navigate the intricate privacy landscape. Our guide rigorously dissects potential data collection, security challenges, and the profound implications for your personal data.</p>
+                <div class="feature-card bg-gray-800 rounded-lg p-8 shadow-lg border border-gray-700 hover:border-purple-600">
+                    <div class="text-5xl mb-4 text-green-400">🔒</div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Privacy Impact Assessment Guides</h3>
+                    <p class="text-gray-300">
+                        Step-by-step guidance to identify and mitigate potential privacy risks posed by wearable camera technology in the workplace.
+                    </p>
                 </div>
-
                 <!-- Feature 3 -->
-                <div class="bg-slate-900 p-8 rounded-lg shadow-xl border border-slate-700 hover:border-blue-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-blue-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M18 21v-4m0 0l3 3m-3-3l-3 3M12 21V10"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Market Trends & Strategic Opportunities</h3>
-                    <p class="text-slate-300">Pinpoint how these Apple innovations will dramatically reshape the tech industry, forge new market segments, and impact existing players. Indispensable for businesses and savvy investors.</p>
+                <div class="feature-card bg-gray-800 rounded-lg p-8 shadow-lg border border-gray-700 hover:border-purple-600">
+                    <div class="text-5xl mb-4 text-blue-400">⚖️</div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Legal & Ethical Usage Frameworks</h3>
+                    <p class="text-gray-300">
+                        Navigate the complex legal landscape and establish ethical guidelines for employee and company-owned device usage.
+                    </p>
                 </div>
-
                 <!-- Feature 4 -->
-                <div class="bg-slate-900 p-8 rounded-lg shadow-xl border border-slate-700 hover:border-blue-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-blue-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m12.728 0l-.707.707M12 21v-1M5.343 17.657l-.707.707M17.657 17.657l.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Speculative Use-Cases & Visionary Future</h3>
-                    <p class="text-slate-300">From revolutionary augmented reality interactions to advanced health monitoring, explore expert-backed speculative use-cases and grasp the revolutionary potential.</p>
+                <div class="feature-card bg-gray-800 rounded-lg p-8 shadow-lg border border-gray-700 hover:border-purple-600">
+                    <div class="text-5xl mb-4 text-yellow-400">📈</div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Productivity & Distraction Management</h3>
+                    <p class="text-gray-300">
+                        Strategies to maximize the benefits of new tech while minimizing distractions and ensuring sustained employee focus.
+                    </p>
                 </div>
-
                 <!-- Feature 5 -->
-                <div class="bg-slate-900 p-8 rounded-lg shadow-xl border border-slate-700 hover:border-blue-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-blue-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">'How-To' Prepare Guides for Readiness</h3>
-                    <p class="text-slate-300">Practical, step-by-step guides for early adopters and forward-thinking businesses. Learn precisely how to leverage these new technologies and prepare your ecosystem for the imminent shift.</p>
+                <div class="feature-card bg-gray-800 rounded-lg p-8 shadow-lg border border-gray-700 hover:border-purple-600">
+                    <div class="text-5xl mb-4 text-red-400">⚠️</div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Incident Response & Compliance Checklists</h3>
+                    <p class="text-gray-300">
+                        Prepare for potential breaches or misuse with clear protocols and ensure your policies meet current regulatory standards.
+                    </p>
                 </div>
-
                 <!-- Feature 6 -->
-                <div class="bg-slate-900 p-8 rounded-lg shadow-xl border border-slate-700 hover:border-blue-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-blue-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9.971a4.75 4.75 0 004.582 2.528c5.448-.094 9.17-5.023 9.17-5.023s-4.621-5.023-9.17-5.023c-2.073 0-4.048.835-5.467 2.254l-4.721 4.721 4.721 4.721c1.419 1.419 3.394 2.254 5.467 2.254z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Actionable Insights Tailored for You</h3>
-                    <p class="text-slate-300">Whether you're an individual eager to adopt, a strategic business leader, or a privacy-conscious user, get precisely tailored insights to navigate this exhilarating new era.</p>
+                <div class="feature-card bg-gray-800 rounded-lg p-8 shadow-lg border border-gray-700 hover:border-purple-600">
+                    <div class="text-5xl mb-4 text-indigo-400">📚</div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Training Materials & Employee Communication</h3>
+                    <p class="text-gray-300">
+                        Resources to effectively communicate new policies to your team and facilitate smooth adoption and understanding.
+                    </p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / CTA Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-slate-900 text-center px-4">
-        <div class="container mx-auto max-w-xl">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Don't Miss Out on Apple's Next Revolution</h2>
-            <p class="text-lg text-slate-300 mb-8">
-                Be among the first to receive this critical analysis and actionable guide. Our exclusive 'Limited Time' introductory offer is ending soon. Secure your access now and transform your understanding!
+    <!-- Waitlist Form Section -->
+    <section id="waitlist-form" class="py-16 sm:py-20 bg-gradient-to-r from-gray-900 to-gray-800 px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">
+                Don't Be Caught Off Guard. Secure Your Toolkit.
+            </h2>
+            <p class="text-lg text-gray-300 mb-10">
+                Join our exclusive waitlist today to receive instant updates, pre-launch content, and claim your limited-time 20% discount on the full Workplace Policy & Privacy Toolkit.
             </p>
-            <form class="bg-slate-800 p-8 rounded-lg shadow-2xl border border-slate-700">
+            <form class="bg-gray-800 rounded-lg p-8 shadow-xl border border-purple-700">
                 <div class="mb-6 text-left">
-                    <label for="name" class="block text-slate-200 text-sm font-bold mb-2">Full Name:</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="shadow appearance-none border border-slate-600 rounded w-full py-3 px-4 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-slate-700 text-white placeholder-slate-400" required>
+                    <label for="name" class="block text-gray-200 text-sm font-bold mb-2">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" class="shadow appearance-none border rounded w-full py-3 px-4 leading-tight focus:outline-none focus:shadow-outline text-gray-100" required>
                 </div>
                 <div class="mb-6 text-left">
-                    <label for="email" class="block text-slate-200 text-sm font-bold mb-2">Email Address:</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="shadow appearance-none border border-slate-600 rounded w-full py-3 px-4 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-slate-700 text-white placeholder-slate-400" required>
+                    <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Work Email:</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@yourcompany.com" class="shadow appearance-none border rounded w-full py-3 px-4 leading-tight focus:outline-none focus:shadow-outline text-gray-100" required>
                 </div>
-                <button type="submit" class="btn-gradient bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg w-full transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                    Get Early Access & Save Now
+                <div class="mb-6 text-left">
+                    <label for="company" class="block text-gray-200 text-sm font-bold mb-2">Company Name (Optional):</label>
+                    <input type="text" id="company" name="company" placeholder="Acme Corp" class="shadow appearance-none border rounded w-full py-3 px-4 leading-tight focus:outline-none focus:shadow-outline text-gray-100">
+                </div>
+                <button type="submit" class="btn-primary w-full px-8 py-3 text-lg font-semibold rounded-full shadow-lg text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition duration-300 ease-in-out transform hover:scale-105">
+                    Secure My Early Access & Discount <span class="ml-2">👉</span>
                 </button>
-                <p class="text-xs text-slate-400 mt-4">We respect your privacy. No spam, ever. Unsubscribe at any time.</p>
+                <p class="text-sm text-gray-400 mt-4">Your privacy is our priority. We'll only send relevant updates.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 py-8 text-center text-slate-500 text-sm px-4">
+    <footer class="bg-gray-900 py-8 px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
         <div class="container mx-auto">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">Disclaimer: This analysis is based on available leaks and expert speculation. Features and timelines are subject to change by Apple.</p>
+            &copy; 2023 Digital Education Authority. All rights reserved. | <a href="#" class="hover:text-purple-500">Privacy Policy</a> | <a href="#" class="hover:text-purple-500">Terms of Service</a>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
+    <!-- Countdown Timer Script -->
     <script>
-        function updateCountdown() {
-            const now = new Date();
-            // Set target date for the offer to expire (e.g., 7 days from page load)
-            // For a production environment, set a specific fixed date for consistency.
-            const targetDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 days from now
-            // Example for a fixed date: const targetDate = new Date("2023-12-31T23:59:59");
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (e.g., 3 days, 12 hours, 30 minutes from now)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 3); 
+            countDownDate.setHours(countDownDate.getHours() + 12); 
+            countDownDate.setMinutes(countDownDate.getMinutes() + 30); 
 
-            const timeLeft = targetDate - now;
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate.getTime() - now;
 
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<div class='text-xl text-red-400 font-bold'>OFFER EXPIRED!</div>";
+                    // Optionally disable the waitlist form or change CTA here
+                    const waitlistButton = document.querySelector('.btn-primary');
+                    if (waitlistButton) {
+                        waitlistButton.textContent = "Join Regular Waitlist";
+                        waitlistButton.classList.remove('btn-primary');
+                        waitlistButton.classList.add('bg-gray-600', 'cursor-not-allowed');
+                        waitlistButton.disabled = true;
+                    }
+                    return;
+                }
 
-            const countdownElement = document.getElementById('countdown');
-            if (timeLeft < 0) {
-                countdownElement.innerHTML = '<span class="text-red-400 text-xl font-bold">Offer Expired!</span>';
-                clearInterval(countdownInterval);
-                const ctaButtons = document.querySelectorAll('a[href="#waitlist"], button[type="submit"]');
-                ctaButtons.forEach(button => {
-                    button.classList.add('opacity-50', 'cursor-not-allowed');
-                    button.setAttribute('disabled', 'true');
-                    button.textContent = 'Offer Expired';
-                });
-                return;
-            }
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            const formatTime = (time) => time < 10 ? '0' + time : time;
-
-            countdownElement.innerHTML = `
-                <div class="countdown-segment">
-                    <span class="countdown-value">${formatTime(days)}</span>
-                    <span class="countdown-label">Days</span>
-                </div>
-                <div class="countdown-segment">
-                    <span class="countdown-value">${formatTime(hours)}</span>
-                    <span class="countdown-label">Hours</span>
-                </div>
-                <div class="countdown-segment">
-                    <span class="countdown-value">${formatTime(minutes)}</span>
-                    <span class="countdown-label">Minutes</span>
-                </div>
-                <div class="countdown-segment">
-                    <span class="countdown-value">${formatTime(seconds)}</span>
-                    <span class="countdown-label">Seconds</span>
-                </div>
-            `;
-        }
-
-        updateCountdown(); // Initial call
-        const countdownInterval = setInterval(updateCountdown, 1000);
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+            }, 1000);
+        });
     </script>
-
 </body>
 </html>
