@@ -1,227 +1,272 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate Digital Game Ownership & Rights Guide</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Motion Sickness Navigator: Beyond Android 17 – Master Your Journey</title>
+    <meta name="description" content="Leverage AI and smartphone sensors to log, analyze, and predict your unique motion sickness triggers. Go beyond Android 17's visual aids with personalized prevention and real-time alerts. Join the waitlist for premium access!">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for modern typography and specific components */
-        body {
-            font-family: 'Inter', sans-serif; /* A modern, clean font choice */
-        }
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap');
-
-        /* Countdown segment styling */
-        .countdown-segment {
-            @apply flex flex-col items-center justify-center p-4 bg-gray-800 rounded-lg shadow-lg border border-gray-700;
-        }
-        .countdown-value {
-            @apply text-4xl sm:text-5xl font-extrabold text-indigo-400;
-        }
-        .countdown-label {
-            @apply text-sm sm:text-base text-gray-400 mt-1 uppercase tracking-wider;
+        /* Custom styles for background image and overlay */
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex; /* Make it a flex container */
+            align-items: center; /* Center content vertically */
+            justify-content: center; /* Center content horizontally */
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="relative bg-black min-h-screen flex items-center justify-center overflow-hidden">
-        <!-- Background Image with Dark Overlay -->
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?An,tech');">
-            <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
-        </div>
-
-        <!-- Hero Content -->
-        <div class="relative z-10 text-center p-6 md:p-10 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white mb-4 drop-shadow-lg">
-                Are Your Digital Games Truly Yours to Keep?
+    <header class="hero-bg relative min-h-screen p-4">
+        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
+        <div class="relative z-10 text-center max-w-5xl mx-auto py-16 sm:py-20 lg:py-24">
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                Beyond Android 17: Master Motion Sickness with AI Precision
             </h1>
-            <p class="text-xl sm:text-2xl text-indigo-300 mb-8 drop-shadow-md max-w-2xl mx-auto">
-                Uncover the hidden truths of platform TOS and empower your gaming future.
+            <p class="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Google's tackling visual discomfort. We're building the <span class="text-indigo-400 font-semibold">personalized, data-driven solution</span> that predicts, prevents, and conquers your unique motion sickness triggers. Reclaim your travels.
             </p>
+            <div class="space-y-6 sm:space-y-0 sm:space-x-6 mb-12 flex flex-col sm:flex-row justify-center items-center">
+                <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 text-lg whitespace-nowrap">
+                    Join the Exclusive Waitlist
+                </a>
+                <a href="#features" class="inline-block bg-transparent border-2 border-indigo-400 text-indigo-200 hover:border-indigo-500 hover:text-indigo-100 font-bold py-3 px-8 rounded-full shadow-md transform hover:scale-105 transition-all duration-300 text-lg whitespace-nowrap">
+                    Discover Features
+                </a>
+            </div>
 
-            <!-- Limited Time Offer with Countdown -->
-            <div class="bg-gray-800 bg-opacity-80 p-6 md:p-8 rounded-xl shadow-2xl border border-indigo-600 mb-8 max-w-2xl mx-auto">
-                <h2 class="text-3xl font-bold text-indigo-400 mb-4">Limited Time Launch Offer!</h2>
-                <p class="text-lg text-gray-200 mb-6">
-                    Be an early adopter of the "Ultimate Digital Game Ownership & Rights Guide" at an exclusive discounted rate. This offer vanishes soon!
-                </p>
-                <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-                    <div class="countdown-segment">
-                        <span class="countdown-value" id="days">00</span>
-                        <span class="countdown-label">Days</span>
+            <!-- Limited Time Countdown -->
+            <div class="bg-indigo-800 bg-opacity-80 rounded-xl p-6 sm:p-8 max-w-md mx-auto shadow-2xl border-t-4 border-indigo-500">
+                <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-white">Limited Time Offer!</h3>
+                <p class="text-indigo-200 text-md sm:text-lg mb-4">Secure your spot for exclusive early access and a lifetime discount on premium features.</p>
+                <div id="countdown" class="flex justify-center space-x-3 sm:space-x-4 text-white text-3xl sm:text-5xl font-extrabold">
+                    <div class="flex flex-col items-center">
+                        <span id="days">00</span>
+                        <span class="block text-sm sm:text-base font-normal text-indigo-300">Days</span>
                     </div>
-                    <div class="countdown-segment">
-                        <span class="countdown-value" id="hours">00</span>
-                        <span class="countdown-label">Hours</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours">00</span>
+                        <span class="block text-sm sm:text-base font-normal text-indigo-300">Hours</span>
                     </div>
-                    <div class="countdown-segment">
-                        <span class="countdown-value" id="minutes">00</span>
-                        <span class="countdown-label">Minutes</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes">00</span>
+                        <span class="block text-sm sm:text-base font-normal text-indigo-300">Minutes</span>
                     </div>
-                    <div class="countdown-segment">
-                        <span class="countdown-value" id="seconds">00</span>
-                        <span class="countdown-label">Seconds</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds">00</span>
+                        <span class="block text-sm sm:text-base font-normal text-indigo-300">Seconds</span>
                     </div>
                 </div>
-                <a href="#waitlist-form" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hero-cta">
-                    Secure Your Future Library Now!
-                </a>
             </div>
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-16">
-
-        <!-- Introduction/Problem Section -->
-        <section class="text-center mb-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-                The Digital Wild West: Control Over Your Games is Slipping
+    <!-- Market Trend & Problem Section -->
+    <section class="py-16 md:py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-indigo-500 font-semibold uppercase tracking-wide text-sm mb-2 block">Leveraging Innovation, Solving Pain Points</span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6">
+                Google's Acknowledged the Problem. We're Providing the <span class="text-indigo-400">Personalized Answer.</span>
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                In an era where platforms dictate access, accounts are banned, and beloved titles vanish overnight, the concept of "owning" a digital game is a myth. Recent player protests highlight a growing frustration: the fragile nature of digital libraries. This guide equips you with the knowledge to reclaim control.
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-12">
+                The recent rollout of Android 17's motion sickness feature is a significant step, validating a widespread technical pain point. While visual aids offer relief, true freedom from motion sickness demands a deeper, personalized, data-driven approach.
             </p>
-        </section>
-
-        <!-- Features Section -->
-        <section class="mb-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">
-                What You'll Master in This Ultimate Guide
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1: Decipher Platform TOS -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-4xl mb-4 text-center">🎮</div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Master Platform TOS</h3>
-                    <p class="text-gray-300 text-center">
-                        Navigate the complex Terms of Service agreements from major gaming platforms. Understand your agreements and identify crucial clauses impacting your digital ownership.
-                    </p>
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12 text-left mt-12">
+                <div class="p-6 bg-gray-800 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 border-l-4 border-blue-600">
+                    <h3 class="text-2xl font-bold text-blue-400 mb-3 flex items-center">
+                        <svg class="w-7 h-7 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z" />
+                        </svg>
+                        The Android 17 Advantage: A Foundational Step
+                    </h3>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2 text-md">
+                        <li><span class="font-semibold">Visual Comfort:</span> Reduces screen-induced discomfort during travel.</li>
+                        <li><span class="font-semibold">Industry Recognition:</span> Highlights a critical user need for solutions.</li>
+                        <li><span class="font-semibold">User Awareness:</span> Educates millions on available motion sickness aids.</li>
+                    </ul>
                 </div>
-                <!-- Feature 2: Assert Your Consumer Rights -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-4xl mb-4 text-center">⚖️</div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Empower Your Consumer Rights</h3>
-                    <p class="text-gray-300 text-center">
-                        Discover your digital consumer rights across different regions. Learn how to assert them effectively when platforms falter in their commitments.
-                    </p>
-                </div>
-                <!-- Feature 3: Explore Alternative Ecosystems -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-4xl mb-4 text-center">🌐</div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Future-Proof Your Collection</h3>
-                    <p class="text-gray-300 text-center">
-                        Explore the world of DRM-free gaming, open-source alternatives, and emerging blockchain gaming models for true digital asset ownership.
-                    </p>
-                </div>
-                <!-- Feature 4: Safeguard Your Digital Library -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-4xl mb-4 text-center">🔒</div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Protect Your Digital Library</h3>
-                    <p class="text-gray-300 text-center">
-                        Implement actionable strategies and best practices to safeguard your purchased games and ensure long-term access, even as platforms evolve.
-                    </p>
-                </div>
-                <!-- Feature 5: Actionable eBook & Video Course -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-4xl mb-4 text-center">📚</div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Choose Your Learning Path</h3>
-                    <p class="text-gray-300 text-center">
-                        Available as an in-depth eBook or an engaging video course series, choose the format that best suits your learning preferences for maximum impact.
-                    </p>
-                </div>
-                <!-- Feature 6: Empower Your Gaming Future -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-4xl mb-4 text-center">🚀</div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Become an Empowered Gamer</h3>
-                    <p class="text-gray-300 text-center">
-                        Move beyond frustration and uncertainty. Equip yourself with the knowledge to make informed decisions and truly control your digital gaming experience.
-                    </p>
+                <div class="p-6 bg-gray-800 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 border-l-4 border-green-600">
+                    <h3 class="text-2xl font-bold text-green-400 mb-3 flex items-center">
+                        <svg class="w-7 h-7 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        Our Comprehensive Approach: Personalized Mastery
+                    </h3>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2 text-md">
+                        <li><span class="font-semibold">Personalized Analysis:</span> Understand *your* unique biological triggers.</li>
+                        <li><span class="font-semibold">Predictive Power:</span> Know high-risk scenarios *before* they happen.</li>
+                        <li><span class="font-semibold">Real-time Prevention:</span> Receive actionable advice and alerts mid-journey.</li>
+                        <li><span class="font-semibold">Data-Driven Freedom:</span> Reclaim all modes of travel with unwavering confidence.</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Waitlist Form Section -->
-        <section id="waitlist-form" class="bg-indigo-700 p-8 sm:p-12 rounded-xl shadow-2xl text-center max-w-2xl mx-auto border border-indigo-500">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Don't Let Your Digital Library Disappear!
+    <!-- Features Section -->
+    <section id="features" class="py-16 md:py-24 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-indigo-500 font-semibold uppercase tracking-wide text-sm mb-2 block">Core Capabilities & Premium Analytics</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
+                    Intelligent Features Designed for Your Unparalleled Comfort
+                </h2>
+                <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
+                    The Motion Sickness Navigator harnesses cutting-edge mobile technology and AI to provide a bespoke solution to a universal problem.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="p-6 bg-gray-900 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 border-t-4 border-indigo-600">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-10 w-10 text-indigo-400 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3 .895-3 2 1.343 2 3 2m0-8V9m0 3v2m0 3.97l.86.86a3 3 0 004.243 0L20.8 19.2a1 1 0 001.414 0l1.414-1.414a1 1 0 000-1.414l-1.414-1.414a1 1 0 00-1.414 0L17.2 16.8a3 3 0 00-4.243 0l-.86.86m-4.243-4.243l-.86-.86a3 3 0 00-4.243 0L3.2 11.2a1 1 0 00-1.414 0l-1.414 1.414a1 1 0 000 1.414l1.414 1.414a1 1 0 001.414 0L6.8 14.2a3 3 0 004.243 0l.86-.86"/>
+                        </svg>
+                        <h3 class="text-xl font-bold text-white">Sensor-Driven Trigger Analysis</h3>
+                    </div>
+                    <p class="text-gray-300">Utilize your smartphone's accelerometer, gyroscope, and GPS to log and understand your body's unique reactions to motion profiles across various modes of transport.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-6 bg-gray-900 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 border-t-4 border-indigo-600">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-10 w-10 text-indigo-400 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6m3-3h.01M9 19H7a2 2 0 01-2-2V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V19a2 2 0 01-2 2h-2m-7 0v-5a2 2 0 012-2h2m-4 0h6"/>
+                        </svg>
+                        <h3 class="text-xl font-bold text-white">Personalized Prediction Engine</h3>
+                    </div>
+                    <p class="text-gray-300">Our AI-powered engine analyzes your unique historical data, planned routes, and external factors to predict high-risk scenarios *before* you even start your journey.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-6 bg-gray-900 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 border-t-4 border-indigo-600">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-10 w-10 text-indigo-400 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                        </svg>
+                        <h3 class="text-xl font-bold text-white">Real-time Alerts & Advice</h3>
+                    </div>
+                    <p class="text-gray-300">Receive timely nudges and context-aware preventative tips during your journey, empowering you to mitigate symptoms before they become debilitating. </p>
+                </div>
+
+                <!-- Feature 4 (Premium) -->
+                <div class="p-6 bg-gray-900 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 border-t-4 border-yellow-500">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-10 w-10 text-yellow-400 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 2v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        <h3 class="text-xl font-bold text-white">Advanced Analytics & Dashboards <span class="text-sm font-normal text-yellow-400 ml-2">(Premium)</span></h3>
+                    </div>
+                    <p class="text-gray-300">Deep dive into your motion sickness patterns with comprehensive charts, granular travel-specific insights, and historical reports to truly understand and manage your condition.</p>
+                </div>
+
+                <!-- Feature 5 (Premium) -->
+                <div class="p-6 bg-gray-900 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 border-t-4 border-yellow-500">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-10 w-10 text-yellow-400 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <h3 class="text-xl font-bold text-white">Smart Wearable Integration <span class="text-sm font-normal text-yellow-400 ml-2">(Premium)</span></h3>
+                    </div>
+                    <p class="text-gray-300">Seamlessly connect with smartwatches and other health wearables for even more granular biometric data collection, enhancing predictive accuracy and personalized feedback loops.</p>
+                </div>
+
+                <!-- Feature 6 (Android 17 integration) -->
+                <div class="p-6 bg-gray-900 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 border-t-4 border-blue-600">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-10 w-10 text-blue-400 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8-4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+                        </svg>
+                        <h3 class="text-xl font-bold text-white">Seamless Android 17 Integration</h3>
+                    </div>
+                    <p class="text-gray-300">The Navigator integrates with Android 17's visual aids, providing a harmonized, comprehensive prevention strategy that combines visual comfort with deep, data-driven personal insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist / CTA Section -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gray-900">
+        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-gray-800 p-8 sm:p-10 rounded-xl shadow-2xl border-t-4 border-indigo-700">
+            <span class="text-indigo-500 font-semibold uppercase tracking-wide text-sm mb-2 block">Don't Miss Out on the Future of Travel</span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6">
+                Be Among the First to Master Motion Sickness
             </h2>
-            <p class="text-lg text-indigo-100 mb-8">
-                The limited-time launch offer is your golden opportunity to secure early access and a special discount. Join our exclusive waitlist now to guarantee your spot!
+            <p class="text-lg text-gray-300 mb-8 max-w-lg mx-auto">
+                Join our exclusive waitlist today for early access to the Motion Sickness Navigator, special launch discounts, and priority updates on features designed to revolutionize your travel comfort.
             </p>
-            <form action="#" method="POST" class="space-y-6">
-                <div>
-                    <input type="text" id="name" name="name" placeholder="Your Full Name"
-                           class="w-full p-4 rounded-lg bg-indigo-800 text-white placeholder-indigo-300 border border-indigo-600 focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition duration-200"
-                           required>
-                </div>
-                <div>
-                    <input type="email" id="email" name="email" placeholder="Your Best Email Address"
-                           class="w-full p-4 rounded-lg bg-indigo-800 text-white placeholder-indigo-300 border border-indigo-600 focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition duration-200"
-                           required>
-                </div>
+
+            <!-- Waitlist Form -->
+            <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                <input type="email" placeholder="Your Best Email Address" required
+                       class="flex-grow p-4 rounded-lg bg-gray-700 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-400 text-lg">
                 <button type="submit"
-                        class="w-full bg-white text-indigo-800 font-bold py-4 px-8 rounded-full text-xl hover:bg-gray-100 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                    Join The Exclusive Waitlist
+                        class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 text-lg whitespace-nowrap">
+                    Join the Waitlist Now
                 </button>
             </form>
-            <p class="text-sm text-indigo-200 mt-6">
-                We respect your privacy. No spam, ever.
-            </p>
-        </section>
 
-    </main>
+            <p class="mt-6 text-sm text-gray-400">We respect your privacy. Your email is safe with us, no spam ever.</p>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-500 text-center py-8 border-t border-gray-800 mt-16">
-        <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-        <p class="mt-2 text-sm">
-            <a href="#" class="hover:text-white transition duration-200 mx-2">Privacy Policy</a> |
-            <a href="#" class="hover:text-white transition duration-200 mx-2">Terms of Service</a>
-        </p>
+    <footer class="bg-gray-900 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500">
+            <p>&copy; <span id="current-year"></span> Motion Sickness Navigator. All rights reserved.</p>
+            <p class="mt-2 text-xs">A SaaS solution for technical pain points, powered by AI & Advanced Sensor Technology.</p>
+        </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer (You would typically place this in a separate .js file for larger projects) -->
     <script>
-        // Set the date we're counting down to (e.g., 7 days from the current date)
-        const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 7); // Sets the countdown for 7 days from now
+        // Countdown Timer Logic
+        const countdown = () => {
+            // Set the date we're counting down to: 7 days from page load
+            const now = new Date();
+            const futureDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 days from now
 
-        const x = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
+            const x = setInterval(() => {
+                const currentTime = new Date().getTime();
+                const distance = futureDate - currentTime;
 
-            // Calculate time segments
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                // Calculate days, hours, minutes, seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Display the results in the elements
-            if (document.getElementById("days")) document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-            if (document.getElementById("hours")) document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-            if (document.getElementById("minutes")) document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-            if (document.getElementById("seconds")) document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                // Display the result in the elements
+                const getElement = (id) => document.getElementById(id);
+                if (getElement("days")) getElement("days").innerHTML = String(days).padStart(2, '0');
+                if (getElement("hours")) getElement("hours").innerHTML = String(hours).padStart(2, '0');
+                if (getElement("minutes")) getElement("minutes").innerHTML = String(minutes).padStart(2, '0');
+                if (getElement("seconds")) getElement("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-            // If the countdown is over, display expired message
-            if (distance < 0) {
-                clearInterval(x);
-                if (document.getElementById("countdown")) {
-                    document.getElementById("countdown").innerHTML = "<div class='text-2xl text-red-400 font-bold col-span-full'>Offer Expired!</div>";
-                    document.getElementById("countdown").classList.remove('grid'); // Remove grid layout if needed
-                    document.getElementById("countdown").classList.add('flex', 'justify-center');
+                // If the count down is finished, write some text
+                if (distance < 0) {
+                    clearInterval(x);
+                    const countdownContainer = getElement("countdown");
+                    if (countdownContainer) countdownContainer.innerHTML = "OFFER EXPIRED!";
+                    countdownContainer.classList.add("text-red-400", "text-xl", "font-bold");
                 }
-                const ctaButton = document.querySelector('.hero-cta');
-                if (ctaButton) {
-                    ctaButton.innerText = 'Offer Expired - Join Waitlist for Future Updates';
-                    ctaButton.classList.add('opacity-50', 'cursor-not-allowed', 'bg-gray-600', 'hover:bg-gray-600');
-                    ctaButton.classList.remove('bg-indigo-600', 'hover:bg-indigo-700', 'transform', 'hover:scale-105');
-                    ctaButton.href = '#waitlist-form'; // Still allow joining waitlist
-                }
+            }, 1000);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            countdown();
+            // Set current year in footer
+            const currentYearSpan = document.getElementById('current-year');
+            if (currentYearSpan) {
+                currentYearSpan.textContent = new Date().getFullYear();
             }
-        }, 1000);
+        });
     </script>
+
 </body>
 </html>
