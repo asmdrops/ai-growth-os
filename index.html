@@ -3,257 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FluentFlow AI - Intelligent Transcripts for Content Creators</title>
-    <meta name="description" content="Unlock superior content quality and efficiency with FluentFlow AI. Leveraging advanced AI like Gemini 3.5, we provide intelligently edited transcripts, key insights, summaries, and social media snippets for podcasters, YouTubers, and educators.">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236D28D9'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z'/%3E%3C/svg%3E">
+    <title>The Vice City Hustle: Master GTA VI's Economy, Fashion & Social Dynamics</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom Tailwind Configuration (optional, for specific colors or fonts) */
-        :root {
-            --primary-purple: #8B5CF6; /* Accent color */
-            --dark-bg: #1A202C; /* Dark background */
-            --dark-card: #2D3748; /* Darker card background */
-            --text-light: #E2E8F0; /* Light text */
-            --text-secondary: #CBD5E0; /* Secondary text */
-        }
-
-        body {
-            font-family: 'Inter', sans-serif; /* A clean modern font */
-            background-color: var(--dark-bg);
-            color: var(--text-light);
-        }
-
-        /* Hero image specific styles */
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
-        }
-
+        /* Custom styles for dark mode gradient overlay and text shadow for readability over image */
         .hero-overlay {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.8) 100%);
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
         }
-
-        /* Countdown timer styling */
+        .text-shadow-outline {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        /* Custom styles for countdown segments */
         .countdown-segment {
-            background-color: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            border-radius: 0.5rem;
-            padding: 0.75rem 1.25rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-width: 4rem; /* Ensure segments have a minimum width */
+            @apply flex flex-col items-center justify-center p-3 sm:p-4 bg-gray-800 rounded-lg shadow-lg;
+            flex-shrink: 1; /* Allow segments to shrink on smaller screens */
         }
-        .countdown-segment .value {
-            font-size: 2.5rem;
-            font-weight: 700;
-            line-height: 1;
-            color: var(--primary-purple);
+        .countdown-value {
+            @apply text-3xl sm:text-5xl font-extrabold text-purple-400;
         }
-        .countdown-segment .label {
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--text-secondary);
-            margin-top: 0.25rem;
-        }
-
-        /* Custom scrollbar for dark mode (optional, but nice touch) */
-        ::-webkit-scrollbar {
-            width: 8px;
-            background-color: var(--dark-bg);
-        }
-        ::-webkit-scrollbar-thumb {
-            background-color: var(--primary-purple);
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background-color: #7c3aed;
+        .countdown-label {
+            @apply text-xs sm:text-base font-semibold text-gray-300 uppercase mt-1 sm:mt-2;
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="font-sans antialiased bg-gray-950 text-gray-100">
 
     <!-- Hero Section -->
-    <section class="hero-background min-h-screen flex items-center justify-center text-center relative py-16 px-4 md:px-8">
-        <div class="hero-overlay"></div>
-        <div class="relative z-10 max-w-7xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
-                <span class="bg-gradient-to-r from-purple-400 to-indigo-500 text-transparent bg-clip-text">FluentFlow AI:</span> <br class="sm:hidden"> Beyond Transcription. Intelligent Content Creation.
+    <header class="relative bg-cover bg-center min-h-screen flex items-center justify-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="relative z-10 text-center px-4 py-16 md:py-24 max-w-4xl mx-auto">
+            <p class="text-purple-400 text-lg sm:text-xl font-semibold mb-4 uppercase tracking-wider text-shadow-outline">Unlock GTA VI's Full Potential</p>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white mb-6 text-shadow-outline">
+                The Vice City Hustle: <br class="sm:hidden"> Mastering GTA VI's Economy, Fashion & Social Dynamics
             </h1>
-            <p class="text-xl sm:text-2xl lg:text-3xl text-gray-200 mb-10 max-w-4xl mx-auto drop-shadow-md">
-                Leveraging advanced AI like <span class="font-semibold text-purple-300">Gemini 3.5 Transcribe</span>, we transform your audio/video into <span class="font-bold text-white">intelligently edited, optimized, and ready-to-share content</span>.
+            <p class="text-xl sm:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto text-shadow-outline">
+                Dominate the virtual world with exclusive strategies for wealth generation, optimal character customization, and navigating complex in-game relationships.
             </p>
-
-            <!-- Limited Time Offer Countdown -->
-            <div class="bg-gradient-to-r from-purple-700 to-indigo-700 p-6 rounded-lg shadow-2xl mb-12 transform hover:scale-105 transition-all duration-300 ease-in-out">
-                <h3 class="text-2xl md:text-3xl font-bold mb-4 text-white">🔥 Early Adopter Offer Ends Soon! 🔥</h3>
-                <p class="text-lg text-gray-200 mb-6">Join our waitlist now to secure exclusive launch pricing!</p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 md:space-x-6 text-white mb-8">
-                    <div class="countdown-segment">
-                        <span id="days" class="value">00</span>
-                        <span class="label">Days</span>
-                    </div>
-                    <div class="countdown-segment">
-                        <span id="hours" class="value">00</span>
-                        <span class="label">Hours</span>
-                    </div>
-                    <div class="countdown-segment">
-                        <span id="minutes" class="value">00</span>
-                        <span class="label">Minutes</span>
-                    </div>
-                    <div class="countdown-segment">
-                        <span id="seconds" class="value">00</span>
-                        <span class="label">Seconds</span>
-                    </div>
-                </div>
-                <a href="#waitlist-form" class="inline-block bg-purple-500 hover:bg-purple-600 focus:ring-4 focus:ring-purple-300 text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 shadow-lg">
-                    Join Early Access & Save Big!
+            <div class="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center">
+                <a href="#waitlist-form" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105 shadow-lg text-lg">
+                    Get Early Access Now
+                </a>
+                <a href="#features" class="inline-block bg-transparent border-2 border-purple-600 hover:border-purple-700 text-purple-200 hover:text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105 shadow-lg text-lg">
+                    Discover What's Inside
                 </a>
             </div>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 px-4 md:px-8 bg-gray-900 text-center">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6 text-white">
-                Transform Your Content Workflow
-            </h2>
-            <p class="text-lg sm:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
-                FluentFlow AI goes beyond simple transcription. We empower podcasters, YouTubers, and online educators to achieve unparalleled content quality and efficiency.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-purple-400 mb-4 text-5xl flex justify-start items-center">
-                        ✨
-                        <span class="ml-3 text-2xl font-semibold text-white">Intelligent Editing & Polish</span>
-                    </div>
-                    <p class="text-gray-300 text-lg">
-                        Our advanced AI doesn't just transcribe; it intelligently refines. We automatically remove filler words like 'ums,' 'ahs,' and stutters, ensuring a perfectly smooth and professional transcript.
+    <section id="features" class="py-16 md:py-24 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-12">What You'll Master with The Vice City Hustle</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: Economy -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-purple-400 mb-4 text-5xl">💰</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">GTA VI Wealth Generation</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Uncover the most lucrative heists, investments, and side hustles. Learn to manipulate market dynamics and build an empire from the ground up, ensuring financial dominance.
                     </p>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-purple-400 mb-4 text-5xl flex justify-start items-center">
-                        🧠
-                        <span class="ml-3 text-2xl font-semibold text-white">Key Insight Extraction</span>
-                    </div>
-                    <p class="text-gray-300 text-lg">
-                        Don't manually search for golden nuggets. FluentFlow AI identifies and highlights the most crucial points and actionable insights from your long-form content.
+                <!-- Feature 2: Fashion & Customization -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-purple-400 mb-4 text-5xl">👗</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Style & Status Optimization</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Leverage "real-world professional" insights to curate an unparalleled wardrobe and vehicle collection. Master the art of fashion to boost your reputation and influence.
                     </p>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-purple-400 mb-4 text-5xl flex justify-start items-center">
-                        📝
-                        <span class="ml-3 text-2xl font-semibold text-white">Concise Summaries & Chapters</span>
-                    </div>
-                    <p class="text-gray-300 text-lg">
-                        Get instant, high-quality summaries of your content, perfect for show notes, blog posts, or episode descriptions. Automatically generate chapter markers for easy navigation.
+                <!-- Feature 3: Social Dynamics -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-purple-400 mb-4 text-5xl">🤝</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Navigating Vice City Relationships</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Understand and manipulate complex in-game relationships and reputation systems. Build alliances, betray enemies, and establish your dominance in every social circle.
                     </p>
                 </div>
 
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-purple-400 mb-4 text-5xl flex justify-start items-center">
-                        🚀
-                        <span class="ml-3 text-2xl font-semibold text-white">Engaging Social Media Snippets</span>
-                    </div>
-                    <p class="text-gray-300 text-lg">
-                        Boost your reach with AI-generated, optimized social media snippets, complete with relevant hashtags and emojis, ready for Twitter, LinkedIn, and more!
+                <!-- Feature 4: Strategic Planning -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-purple-400 mb-4 text-5xl">🧠</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Strategic Mission Play</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Go beyond basic walkthroughs. Learn advanced tactics for mission completion, minimizing risk, and maximizing rewards across all game modes and challenges.
                     </p>
                 </div>
 
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-purple-400 mb-4 text-5xl flex justify-start items-center">
-                        🔍
-                        <span class="ml-3 text-2xl font-semibold text-white">SEO-Friendly Transcripts</span>
-                    </div>
-                    <p class="text-gray-300 text-lg">
-                        Receive polished transcripts optimized for search engines, improving your content's visibility and discoverability across platforms.
+                <!-- Feature 5: Hidden Secrets -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-purple-400 mb-4 text-5xl">🕵️‍♀️</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Exclusive Easter Eggs & Exploits</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Discover hidden Easter eggs, secret locations, and ethical exploits that give you an edge without breaking the game's spirit. Be the first to uncover Vice City's deepest secrets.
                     </p>
                 </div>
 
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-purple-400 mb-4 text-5xl flex justify-start items-center">
-                        ⚡
-                        <span class="ml-3 text-2xl font-semibold text-white">Rapid Workflow Integration</span>
-                    </div>
-                    <p class="text-gray-300 text-lg">
-                        Upload your audio/video and receive a comprehensive package of polished transcripts and promotional assets quickly. Streamline your content pipeline effortlessly.
+                <!-- Feature 6: Future Updates & Community -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-purple-400 mb-4 text-5xl">🚀</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Continuous Updates & Insights</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        As GTA VI evolves, so does your guide. Get regular updates, new strategies, and access to a private community of elite players dedicated to mastering Vice City.
                     </p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / CTA Form Section -->
-    <section id="waitlist-form" class="py-20 px-4 md:px-8 bg-gradient-to-br from-gray-800 to-black text-center">
-        <div class="max-w-2xl mx-auto bg-gray-900 p-10 md:p-12 rounded-xl shadow-2xl border border-purple-800">
-            <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 text-white">
-                Ready to Supercharge Your Content?
-            </h2>
-            <p class="text-lg text-gray-300 mb-8 max-w-xl mx-auto">
-                Join our exclusive waitlist for early access and lock in special introductory pricing. Be among the first to experience the future of content creation.
+    <!-- Waitlist Form Section with Countdown -->
+    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-950">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">Secure Your Early Access Now!</h2>
+            <p class="text-xl text-gray-300 mb-8">
+                This premium guide will launch soon. Join the exclusive waitlist to be notified first and secure a special early-bird discount.
             </p>
 
-            <form class="space-y-6">
+            <!-- Limited Time Countdown -->
+            <div class="bg-purple-900 bg-opacity-30 p-6 rounded-lg mb-10 shadow-inner border border-purple-800">
+                <p class="text-purple-200 text-lg font-semibold mb-4">Limited Time Offer:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 lg:space-x-8">
+                    <div class="countdown-segment">
+                        <span id="days" class="countdown-value">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-segment">
+                        <span id="hours" class="countdown-value">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-segment">
+                        <span id="minutes" class="countdown-value">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-segment">
+                        <span id="seconds" class="countdown-value">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Waitlist Form -->
+            <form class="space-y-6 text-left bg-gray-800 p-8 rounded-lg shadow-2xl border border-gray-700">
                 <div>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required
-                           class="w-full px-5 py-4 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 placeholder-gray-400 text-lg">
+                    <label for="name" class="block text-gray-200 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" class="shadow-sm appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent bg-gray-700 border-gray-600 placeholder-gray-400 text-white" placeholder="John Doe" required>
                 </div>
                 <div>
-                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
-                           class="w-full px-5 py-4 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 placeholder-gray-400 text-lg">
+                    <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" class="shadow-sm appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent bg-gray-700 border-gray-600 placeholder-gray-400 text-white" placeholder="you@example.com" required>
                 </div>
-                <div>
-                    <button type="submit"
-                            class="w-full bg-purple-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-300 text-white font-bold py-4 px-6 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                        Join the FluentFlow AI Waitlist
-                    </button>
-                </div>
-                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, ever.</p>
+                <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 shadow-lg text-lg">
+                    Join The Exclusive Waitlist
+                </button>
+                <p class="text-sm text-gray-400 mt-4">We respect your privacy. Your information will not be shared.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 px-4 md:px-8 text-center text-gray-500">
-        <div class="max-w-7xl mx-auto">
-            <p class="text-sm">&copy; 2023 FluentFlow AI. All rights reserved. | <a href="#" class="hover:text-purple-400 transition-colors">Privacy Policy</a> | <a href="#" class="hover:text-purple-400 transition-colors">Terms of Service</a></p>
+    <footer class="bg-gray-800 py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
+            <p>&copy; 2024 The Vice City Hustle. All rights reserved.</p>
+            <p class="mt-2">Disclaimer: This is an unofficial fan guide and is not endorsed by or affiliated with Rockstar Games or Take-Two Interactive.</p>
         </div>
     </footer>
 
-    <!-- Countdown Timer Script -->
+    <!-- Countdown Timer JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Set the date we're counting down to (e.g., 7 days from now)
-            const endDate = new Date();
-            endDate.setDate(endDate.getDate() + 7); // 7 days from now
+            // Set the date we're counting down to (e.g., 30 days from now)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 30); // 30 days from now
+            // To set a specific date, uncomment and modify the line below:
+            // const countDownDate = new Date("Dec 31, 2024 23:59:59").getTime();
 
-            const countdownFunction = setInterval(function() {
+            const x = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = endDate.getTime() - now;
+                const distance = countDownDate - now;
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<p class='text-xl font-bold text-red-500'>Offer Expired!</p>";
+                    return;
+                }
 
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -265,10 +200,6 @@
                 document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
                 document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-                if (distance < 0) {
-                    clearInterval(countdownFunction);
-                    document.getElementById("countdown").innerHTML = "<p class='text-xl text-red-400 font-bold'>Offer Expired!</p>";
-                }
             }, 1000);
         });
     </script>
