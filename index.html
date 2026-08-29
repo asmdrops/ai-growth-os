@@ -3,243 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DLSS 5: Unofficial AI Power-Up Guide - Limited Time Offer!</title>
+    <title>DreamOptimize AI - Master Hyper-Personalized Feeds with AI</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        /* Custom styles for premium dark mode aesthetics and specific elements */
-        body {
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-        }
-        .hero-section {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for optimal text readability */
-        }
-        .gradient-text {
-            background: linear-gradient(90deg, #a78bfa, #f472b6); /* Soft Purple to Pink gradient */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .btn-primary {
-            background-color: #f472b6; /* Pink */
-            transition: background-color 0.3s ease;
-        }
-        .btn-primary:hover {
-            background-color: #ec4899; /* Darker Pink */
-        }
-        .input-field {
-            background-color: #1f2937; /* Gray-800 */
-            border-color: #4b5563; /* Gray-600 */
-        }
-        .input-field:focus {
-            outline: none;
-            border-color: #a78bfa; /* Purple focus */
-            box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.5); /* Matching purple glow */
-        }
-    </style>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%238B5CF6' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15H9v-2h2v2zm0-4H9v-2h2v2zm0-4H9V7h2v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z'/%3E%3C/svg%3E" />
 </head>
-<body class="bg-gray-900 text-white leading-relaxed antialiased">
+<body class="bg-gray-950 text-gray-100 antialiased font-sans">
+
+    <!-- Header (Simple, Clean, Brand-Focused) -->
+    <header class="absolute top-0 left-0 right-0 z-20 p-4 sm:p-6 bg-transparent">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight drop-shadow-md">
+                DreamOptimize AI
+            </a>
+            <!-- <button class="px-5 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors duration-300 shadow-md">Login</button> -->
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero-section min-h-screen flex items-center justify-center text-center p-4 md:p-8">
-        <div class="hero-overlay absolute inset-0"></div>
-        <div class="relative z-10 max-w-4xl mx-auto py-16 px-4 md:px-8 bg-gray-800 bg-opacity-70 rounded-lg shadow-2xl backdrop-filter backdrop-blur-md border border-gray-700">
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 gradient-text animate-pulse">
-                DLSS 5: Unofficial AI Power-Up Guide
+    <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?An,tech');">
+            <!-- Dark Overlay with Gradient for Text Readability -->
+            <div class="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-900/70 to-purple-900/60"></div>
+        </div>
+        <div class="relative z-10 text-center max-w-5xl px-4 sm:px-6 lg:px-8 py-16">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mb-6 drop-shadow-xl">
+                Dominate Google Dreambeans: <br class="hidden sm:inline"> AI-Powered Content for Hyper-Personalized Feeds
             </h1>
-            <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">
-                Unlock <span class="font-bold text-green-400">Next-Gen AI Performance</span> in Your Favorite Games, Today.
-                Experience <span class="font-bold text-yellow-300">Unprecedented Frame Rates</span> and Visual Fidelity.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-10 max-w-4xl mx-auto drop-shadow-lg">
+                Unleash unprecedented engagement and visibility. Get real-time, AI-driven recommendations to make your content perform flawlessly in the new era of inferred personalization algorithms.
             </p>
-
-            <div class="bg-purple-800 bg-opacity-70 p-6 rounded-lg mb-10 shadow-lg border-2 border-purple-500">
-                <h3 class="text-2xl md:text-3xl font-bold mb-4 text-yellow-300">
-                    🚀 Limited Time Launch Discount! 🚀
-                </h3>
-                <p class="text-lg md:text-xl text-white mb-4">
-                    Don't miss out on <span class="font-bold text-red-400">50% OFF</span> for the next:
-                </p>
-                <div id="countdown" class="flex flex-wrap justify-center items-center gap-4 text-white text-3xl md:text-5xl font-extrabold">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="bg-gray-900 px-4 py-2 rounded-lg">00</span>
-                        <span class="text-sm mt-2 text-gray-300">Days</span>
-                    </div>
-                    <span class="text-gray-400 hidden sm:block">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="bg-gray-900 px-4 py-2 rounded-lg">00</span>
-                        <span class="text-sm mt-2 text-gray-300">Hours</span>
-                    </div>
-                    <span class="text-gray-400 hidden sm:block">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="bg-gray-900 px-4 py-2 rounded-lg">00</span>
-                        <span class="text-sm mt-2 text-gray-300">Minutes</span>
-                    </div>
-                    <span class="text-gray-400 hidden sm:block">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="bg-gray-900 px-4 py-2 rounded-lg">00</span>
-                        <span class="text-sm mt-2 text-gray-300">Seconds</span>
-                    </div>
-                </div>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#waitlist" class="w-full sm:w-auto bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-10 rounded-full shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out text-xl">
+                    Get Early Access Now!
+                </a>
+                <a href="#features" class="w-full sm:w-auto bg-transparent border-2 border-white text-white font-bold py-4 px-10 rounded-full shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out text-xl">
+                    Discover Features
+                </a>
             </div>
-
-            <a href="#waitlist-form" class="btn-primary inline-block text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl shadow-lg hover:shadow-xl transform hover:scale-105 duration-300 focus:outline-none focus:ring-4 focus:ring-pink-500 focus:ring-opacity-50">
-                🚀 Get Instant Access & Claim Your Discount!
-            </a>
+            <!-- Urgency Element (Limited Time) -->
+            <div class="mt-12 text-white bg-purple-800/30 backdrop-blur-sm inline-block px-8 py-4 rounded-full shadow-2xl border border-purple-700">
+                <p class="text-lg sm:text-xl font-semibold animate-pulse">
+                    🚨 Limited Early Access Slots Remaining! Join the Waitlist Today!
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900 text-center px-4">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl md:text-5xl font-extrabold mb-12 gradient-text">
-                What's Inside Your AI Power-Up Guide?
+    <section id="features" class="py-16 sm:py-24 bg-gradient-to-br from-gray-950 to-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-white mb-16 leading-tight">
+                Revolutionize Your Content Strategy <br> for the Personalized Web
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+            <div class="grid gap-8 xl:gap-12 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+
                 <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <h3 class="text-2xl font-bold mb-4 text-purple-400">
-                        ⚡ Step-by-Step Installation & Optimization
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Follow our easy, comprehensive guides to flawlessly install and optimize leaked DLSS 5 files across a wide range of popular games. No technical jargon, just clear instructions.
+                <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out group flex flex-col items-start">
+                    <div class="text-6xl text-purple-400 mb-6 group-hover:animate-spin-slow">✨</div>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">Hyper-Personalization AI Engine</h3>
+                    <p class="text-gray-300 text-lg sm:text-xl leading-relaxed">
+                        Our cutting-edge AI analyzes your content against inferred user preferences, tailoring it specifically for dynamic, hyper-personalized feeds like Google Dreambeans.
                     </p>
                 </div>
+
                 <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <h3 class="text-2xl font-bold mb-4 text-green-400">
-                        ✅ Curated & Vetted Mod Binaries
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Access a secure library of hand-picked and thoroughly tested mod binaries, ensuring compatibility, stability, and maximum performance gains without risk.
+                <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out group flex flex-col items-start">
+                    <div class="text-6xl text-blue-400 mb-6 group-hover:animate-bounce-slow">🚀</div>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">Real-Time Optimization & Feedback</h3>
+                    <p class="text-gray-300 text-lg sm:text-xl leading-relaxed">
+                        Get instant, actionable recommendations as you write. See exactly how to adjust your headlines, CTAs, and structure to capture maximum attention and engagement.
                     </p>
                 </div>
+
                 <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <h3 class="text-2xl font-bold mb-4 text-red-400">
-                        🛠️ Comprehensive Troubleshooting Guides
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Encounter a hitch? Our in-depth troubleshooting section covers common issues, providing quick and effective solutions to get you back to gaming faster.
+                <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out group flex flex-col items-start">
+                    <div class="text-6xl text-green-400 mb-6 group-hover:animate-wiggle">📈</div>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">Massive Engagement & Visibility Boost</h3>
+                    <p class="text-gray-300 text-lg sm:text-xl leading-relaxed">
+                        Unlock unprecedented reach by aligning your content with individual user interests. Drive higher click-through rates, shares, and conversions on every platform.
                     </p>
                 </div>
+
                 <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <h3 class="text-2xl font-bold mb-4 text-yellow-400">
-                        🌟 Exclusive Early Access to Updates
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Be the first to receive future guide updates, new mod discoveries, and advanced optimization techniques. Stay ahead of the curve!
+                <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out group flex flex-col items-start">
+                    <div class="text-6xl text-yellow-400 mb-6 group-hover:animate-heartbeat">💡</div>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">Multi-Platform Content Adaptability</h3>
+                    <p class="text-gray-300 text-lg sm:text-xl leading-relaxed">
+                        While perfected for Dreambeans, our AI principles apply to all major social media platforms, blogs, and content feeds, ensuring peak performance everywhere.
                     </p>
                 </div>
+
                 <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-400">
-                        💬 Private Community Forum Access
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Connect with fellow enthusiasts, share tips, ask questions, and get direct support from experts in our exclusive, private community.
+                <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out group flex flex-col items-start">
+                    <div class="text-6xl text-red-400 mb-6 group-hover:animate-tada">🎯</div>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">Audience Understanding & Insights</h3>
+                    <p class="text-gray-300 text-lg sm:text-xl leading-relaxed">
+                        Gain deeper insights into what resonates with different segments of your audience, allowing you to craft more impactful and targeted content over time.
                     </p>
                 </div>
-                 <!-- Feature 6 (Framing gaming tech as productivity) -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <h3 class="text-2xl font-bold mb-4 text-orange-400">
-                        📈 Maximize Your Hardware's Potential
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Transform your gaming experience by leveraging advanced AI upscaling to squeeze every frame out of your current setup, effectively boosting its 'productivity' and lifespan.
+
+                <!-- Feature 6 -->
+                <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl border border-gray-700 transform hover:scale-105 transition-transform duration-300 ease-in-out group flex flex-col items-start">
+                    <div class="text-6xl text-indigo-400 mb-6 group-hover:animate-spin-fast">⚡</div>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">Streamlined Workflow Integration</h3>
+                    <p class="text-gray-300 text-lg sm:text-xl leading-relaxed">
+                        Seamlessly integrate DreamOptimize AI into your existing content creation workflow. Spend less time guessing and more time creating high-performing content.
                     </p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / Enrollment Form Section -->
-    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-800 px-4 text-center">
-        <div class="container mx-auto max-w-2xl bg-gray-900 p-8 md:p-12 rounded-lg shadow-2xl border-2 border-purple-600">
-            <h2 class="text-3xl md:text-5xl font-extrabold mb-6 gradient-text">
-                Secure Your DLSS 5 Power-Up Now!
+    <!-- Waitlist / Call to Action Section -->
+    <section id="waitlist" class="py-16 sm:py-24 bg-gradient-to-tr from-gray-900 to-purple-950 relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239B59B6' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zm0 16v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 16v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 16v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zm0 16v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 16v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 16v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 50v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 18v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM50 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM50 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM50-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zm0 16v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 16v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 16v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM18 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM18-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zm0 16v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 16v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 16v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM34 18v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM34-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zm0 16v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM34 16v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM34 50v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-2xl relative z-10">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
+                Ready to Supercharge Your Content?
             </h2>
-            <p class="text-xl md:text-2xl text-gray-300 mb-8">
-                Don't miss out on the <span class="font-bold text-red-400">limited-time launch discount!</span> Enroll today and revolutionize your gaming.
+            <p class="text-lg sm:text-xl text-gray-200 mb-10">
+                Join our exclusive waitlist for early access to DreamOptimize AI. Be among the first to master hyper-personalized content and elevate your marketing strategy.
             </p>
-            <form action="#" method="POST" class="space-y-6">
+            <form class="space-y-6 bg-gray-900/70 backdrop-blur-md p-8 sm:p-10 rounded-3xl shadow-2xl border border-gray-700">
                 <div>
-                    <label for="name" class="sr-only">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Full Name" required
-                           class="input-field w-full px-5 py-3 rounded-lg border-2 text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-500 transition-all duration-200">
+                    <label for="name" class="sr-only">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name (Optional)"
+                           class="w-full p-4 rounded-xl bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 text-lg sm:text-xl transition-colors duration-200">
                 </div>
                 <div>
-                    <label for="email" class="sr-only">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
-                           class="input-field w-full px-5 py-3 rounded-lg border-2 text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-500 transition-all duration-200">
+                    <label for="email" class="sr-only">Your Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
+                           class="w-full p-4 rounded-xl bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 text-lg sm:text-xl transition-colors duration-200">
                 </div>
-                <button type="submit" class="btn-primary w-full text-white font-bold py-4 rounded-lg text-xl md:text-2xl shadow-lg hover:shadow-xl transform hover:scale-105 duration-300 focus:outline-none focus:ring-4 focus:ring-pink-500 focus:ring-opacity-50">
-                    🎉 Claim My DLSS 5 Guide & Discount!
+                <button type="submit"
+                        class="w-full sm:w-auto bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-12 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out text-xl sm:text-2xl">
+                    Join the Waitlist Now!
                 </button>
             </form>
-            <p class="text-sm text-gray-500 mt-6">
-                Your information is 100% secure and will never be shared.
+            <p class="text-sm text-gray-400 mt-6">
+                No spam, just exclusive updates, early access opportunities, and a faster path to content domination.
             </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-500 text-center py-8 text-sm px-4">
-        <div class="container mx-auto">
-            <p>&copy; 2023 DLSS 5: Unofficial AI Power-Up Guide. All rights reserved. | <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a> | <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a></p>
-            <p class="mt-2 max-w-2xl mx-auto">Disclaimer: This is an unofficial guide leveraging leaked DLSS 5 files and community mods. Compatibility and performance may vary based on hardware and software configurations. Not affiliated with or endorsed by NVIDIA.</p>
+    <footer class="bg-gray-950 py-10 text-center border-t border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-gray-500 text-base">&copy; 2023 DreamOptimize AI. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
-    <!-- Countdown Timer JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 7 days from now)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from today
-            // For specific testing: const countDownDate = new Date("Jan 1, 2024 00:00:00").getTime();
+    <!-- Custom CSS for subtle animations (can be included in a style tag or external file) -->
+    <style>
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 2s infinite ease-in-out;
+        }
 
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate - now;
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .group-hover\\:animate-spin-slow:hover {
+            animation: spin-slow 3s linear infinite;
+        }
 
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        @keyframes bounce-slow {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        .group-hover\\:animate-bounce-slow:hover {
+            animation: bounce-slow 1.5s ease-in-out infinite;
+        }
 
-                const getPadded = (num) => String(num).padStart(2, '0');
+        @keyframes wiggle {
+            0%, 7% { transform: rotateZ(0); }
+            15% { transform: rotateZ(-15deg); }
+            20% { transform: rotateZ(10deg); }
+            25% { transform: rotateZ(-10deg); }
+            30% { transform: rotateZ(6deg); }
+            35% { transform: rotateZ(-4deg); }
+            40%, 100% { transform: rotateZ(0); }
+        }
+        .group-hover\\:animate-wiggle:hover {
+            animation: wiggle 1.5s ease-in-out infinite;
+        }
 
-                if (document.getElementById("days")) document.getElementById("days").innerHTML = getPadded(days);
-                if (document.getElementById("hours")) document.getElementById("hours").innerHTML = getPadded(hours);
-                if (document.getElementById("minutes")) document.getElementById("minutes").innerHTML = getPadded(minutes);
-                if (document.getElementById("seconds")) document.getElementById("seconds").innerHTML = getPadded(seconds);
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            14% { transform: scale(1.05); }
+            28% { transform: scale(1); }
+            42% { transform: scale(1.05); }
+            70% { transform: scale(1); }
+        }
+        .group-hover\\:animate-heartbeat:hover {
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
 
-                if (distance < 0) {
-                    clearInterval(x);
-                    const countdownElement = document.getElementById("countdown");
-                    if (countdownElement) {
-                        countdownElement.innerHTML = "<span class='text-red-500 text-2xl md:text-3xl'>🚨 Discount Ended! 🚨</span>";
-                    }
-                    const ctaButton = document.querySelector('.btn-primary');
-                    if (ctaButton) {
-                        ctaButton.textContent = "Enroll Now (Discount Ended)";
-                        ctaButton.classList.add('bg-gray-600', 'hover:bg-gray-700', 'cursor-not-allowed');
-                        ctaButton.classList.remove('btn-primary', 'hover:scale-105', 'focus:ring-pink-500');
-                        ctaButton.disabled = true; // Disable button
-                    }
-                    const discountText = document.querySelector('.text-red-400');
-                    if (discountText) {
-                        discountText.textContent = "regular price!";
-                    }
-                }
-            }, 1000);
-        });
-    </script>
+        @keyframes tada {
+            0% { transform: scale(1); }
+            10%, 20% { transform: scale(0.9) rotate(-3deg); }
+            30%, 50%, 70%, 90% { transform: scale(1.1) rotate(3deg); }
+            40%, 60%, 80% { transform: scale(1.1) rotate(-3deg); }
+            100% { transform: scale(1) rotate(0); }
+        }
+        .group-hover\\:animate-tada:hover {
+            animation: tada 1.5s ease-in-out infinite;
+        }
+
+        @keyframes spin-fast {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .group-hover\\:animate-spin-fast:hover {
+            animation: spin-fast 0.8s linear infinite;
+        }
+    </style>
 
 </body>
 </html>
