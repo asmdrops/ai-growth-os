@@ -3,246 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The DLSS 5 Modding & Optimization Kit - Unleash Next-Gen Graphics Now</title>
+    <title>DLSS 5: Unofficial AI Power-Up Guide - Limited Time Offer!</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for dark mode and responsive adjustments not directly covered by Tailwind defaults */
+        /* Custom styles for premium dark mode aesthetics and specific elements */
         body {
-            font-family: 'Inter', sans-serif; /* Preferred modern font, falls back to system sans-serif */
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         }
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?The,tech');
+        .hero-section {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            position: relative;
         }
         .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for optimal text readability */
         }
-        .btn-gradient {
-            background: linear-gradient(90deg, #6366F1 0%, #A855F7 100%); /* Indigo to Purple */
+        .gradient-text {
+            background: linear-gradient(90deg, #a78bfa, #f472b6); /* Soft Purple to Pink gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        .btn-gradient:hover {
-            background: linear-gradient(90deg, #4F46E5 0%, #9333EA 100%); /* Slightly darker on hover */
+        .btn-primary {
+            background-color: #f472b6; /* Pink */
+            transition: background-color 0.3s ease;
         }
-        .countdown-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 0.5rem 0.75rem;
-            background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent dark background */
-            border-radius: 0.5rem;
-            min-width: 60px; /* Ensure a minimum width */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        .btn-primary:hover {
+            background-color: #ec4899; /* Darker Pink */
         }
-        .countdown-value {
-            font-size: 1.8rem; /* Larger for desktop */
-            font-weight: bold;
-            color: #fff;
-            line-height: 1;
+        .input-field {
+            background-color: #1f2937; /* Gray-800 */
+            border-color: #4b5563; /* Gray-600 */
         }
-        .countdown-label {
-            font-size: 0.7rem; /* Smaller for desktop */
-            color: #ccc;
-            text-transform: uppercase;
-            margin-top: 0.25rem;
-        }
-
-        /* Responsive adjustments for countdown */
-        @media (max-width: 768px) {
-            .countdown-value {
-                font-size: 1.5rem;
-            }
-            .countdown-label {
-                font-size: 0.65rem;
-            }
-            .countdown-item {
-                min-width: 50px;
-                padding: 0.4rem 0.6rem;
-            }
+        .input-field:focus {
+            outline: none;
+            border-color: #a78bfa; /* Purple focus */
+            box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.5); /* Matching purple glow */
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white antialiased">
+<body class="bg-gray-900 text-white leading-relaxed antialiased">
+
     <!-- Hero Section -->
-    <header class="hero-background relative h-screen flex items-center justify-center text-center p-4">
+    <section class="hero-section min-h-screen flex items-center justify-center text-center p-4 md:p-8">
         <div class="hero-overlay absolute inset-0"></div>
-        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">
-                🚀 Unlock DLSS 5: Beyond Official Support
+        <div class="relative z-10 max-w-4xl mx-auto py-16 px-4 md:px-8 bg-gray-800 bg-opacity-70 rounded-lg shadow-2xl backdrop-filter backdrop-blur-md border border-gray-700">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 gradient-text animate-pulse">
+                DLSS 5: Unofficial AI Power-Up Guide
             </h1>
-            <p class="text-xl sm:text-2xl lg:text-3xl text-gray-200 mb-8 max-w-3xl mx-auto drop-shadow-md">
-                Be among the first to safely implement leaked DLSS 5 power on *any* compatible system,
-                even if officially unsupported.
+            <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">
+                Unlock <span class="font-bold text-green-400">Next-Gen AI Performance</span> in Your Favorite Games, Today.
+                Experience <span class="font-bold text-yellow-300">Unprecedented Frame Rates</span> and Visual Fidelity.
             </p>
-            <div class="mb-10 p-4 bg-gradient-to-r from-purple-700 to-indigo-700 rounded-xl shadow-xl border border-purple-600">
-                <p class="text-lg sm:text-xl font-semibold mb-3 text-yellow-300">
-                    Limited Time Exclusive Access – Don't Miss This Opportunity!
+
+            <div class="bg-purple-800 bg-opacity-70 p-6 rounded-lg mb-10 shadow-lg border-2 border-purple-500">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4 text-yellow-300">
+                    🚀 Limited Time Launch Discount! 🚀
+                </h3>
+                <p class="text-lg md:text-xl text-white mb-4">
+                    Don't miss out on <span class="font-bold text-red-400">50% OFF</span> for the next:
                 </p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-6 text-white">
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="days">00</span>
-                        <span class="countdown-label">Days</span>
+                <div id="countdown" class="flex flex-wrap justify-center items-center gap-4 text-white text-3xl md:text-5xl font-extrabold">
+                    <div class="flex flex-col items-center">
+                        <span id="days" class="bg-gray-900 px-4 py-2 rounded-lg">00</span>
+                        <span class="text-sm mt-2 text-gray-300">Days</span>
                     </div>
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="hours">00</span>
-                        <span class="countdown-label">Hours</span>
+                    <span class="text-gray-400 hidden sm:block">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours" class="bg-gray-900 px-4 py-2 rounded-lg">00</span>
+                        <span class="text-sm mt-2 text-gray-300">Hours</span>
                     </div>
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="minutes">00</span>
-                        <span class="countdown-label">Minutes</span>
+                    <span class="text-gray-400 hidden sm:block">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes" class="bg-gray-900 px-4 py-2 rounded-lg">00</span>
+                        <span class="text-sm mt-2 text-gray-300">Minutes</span>
                     </div>
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="seconds">00</span>
-                        <span class="countdown-label">Seconds</span>
+                    <span class="text-gray-400 hidden sm:block">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds" class="bg-gray-900 px-4 py-2 rounded-lg">00</span>
+                        <span class="text-sm mt-2 text-gray-300">Seconds</span>
                     </div>
                 </div>
             </div>
-            <a href="#waitlist" class="inline-block btn-gradient text-white text-xl sm:text-2xl font-bold py-4 px-8 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-70">
-                Join the Exclusive Waitlist Now! ✨
+
+            <a href="#waitlist-form" class="btn-primary inline-block text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl shadow-lg hover:shadow-xl transform hover:scale-105 duration-300 focus:outline-none focus:ring-4 focus:ring-pink-500 focus:ring-opacity-50">
+                🚀 Get Instant Access & Claim Your Discount!
             </a>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-20 lg:py-24 bg-gray-900 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 leading-tight">
-                What You Get: Your Ultimate DLSS 5 Modding Arsenal 🛠️
+    <section class="py-16 md:py-24 bg-gray-900 text-center px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-12 gradient-text">
+                What's Inside Your AI Power-Up Guide?
             </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">📹</span>
-                        <h3 class="text-xl sm:text-2xl font-bold text-white">Step-by-Step Video Tutorials</h3>
-                    </div>
-                    <p class="text-gray-300 text-lg">
-                        Dive deep with easy-to-follow videos guiding you through every step of DLSS 5 implementation. From installation to advanced tweaks, we've got you covered. No tech jargon, just results!
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <h3 class="text-2xl font-bold mb-4 text-purple-400">
+                        ⚡ Step-by-Step Installation & Optimization
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Follow our easy, comprehensive guides to flawlessly install and optimize leaked DLSS 5 files across a wide range of popular games. No technical jargon, just clear instructions.
                     </p>
                 </div>
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">🔧</span>
-                        <h3 class="text-xl sm:text-2xl font-bold text-white">Pre-Configured Modding Tools</h3>
-                    </div>
-                    <p class="text-gray-300 text-lg">
-                        Forget tedious setup! Our kit includes ready-to-use tools specifically configured for DLSS 5, ensuring a smooth and safe modding experience right out of the box.
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <h3 class="text-2xl font-bold mb-4 text-green-400">
+                        ✅ Curated & Vetted Mod Binaries
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Access a secure library of hand-picked and thoroughly tested mod binaries, ensuring compatibility, stability, and maximum performance gains without risk.
                     </p>
                 </div>
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">⚡</span>
-                        <h3 class="text-xl sm:text-2xl font-bold text-white">Optimized Performance Profiles</h3>
-                    </div>
-                    <p class="text-gray-300 text-lg">
-                        Get instant performance boosts with expertly crafted profiles for popular games. Maximize your frames per second and visual fidelity without hours of tweaking.
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <h3 class="text-2xl font-bold mb-4 text-red-400">
+                        🛠️ Comprehensive Troubleshooting Guides
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Encounter a hitch? Our in-depth troubleshooting section covers common issues, providing quick and effective solutions to get you back to gaming faster.
                     </p>
                 </div>
-                 <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">🛡️</span>
-                        <h3 class="text-xl sm:text-2xl font-bold text-white">Safe & Reversible Procedures</h3>
-                    </div>
-                    <p class="text-gray-300 text-lg">
-                        Mod with confidence! Our methods are designed for safety, with clear instructions on how to backup and restore, ensuring no permanent changes to your system.
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <h3 class="text-2xl font-bold mb-4 text-yellow-400">
+                        🌟 Exclusive Early Access to Updates
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Be the first to receive future guide updates, new mod discoveries, and advanced optimization techniques. Stay ahead of the curve!
                     </p>
                 </div>
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">🎮</span>
-                        <h3 class="text-xl sm:text-2xl font-bold text-white">Wide Game Compatibility</h3>
-                    </div>
-                    <p class="text-gray-300 text-lg">
-                        Unlock DLSS 5 for a broad range of games, extending its benefits beyond official support. Transform your entire gaming library with cutting-edge AI upscaling.
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-400">
+                        💬 Private Community Forum Access
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Connect with fellow enthusiasts, share tips, ask questions, and get direct support from experts in our exclusive, private community.
                     </p>
                 </div>
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">🧑‍💻</span>
-                        <h3 class="text-xl sm:text-2xl font-bold text-white">Community & Support Access</h3>
-                    </div>
-                    <p class="text-gray-300 text-lg">
-                        Join a dedicated community of enthusiasts. Get answers to your questions and share your optimized setups with fellow gamers leveraging DLSS 5.
+                 <!-- Feature 6 (Framing gaming tech as productivity) -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <h3 class="text-2xl font-bold mb-4 text-orange-400">
+                        📈 Maximize Your Hardware's Potential
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Transform your gaming experience by leveraging advanced AI upscaling to squeeze every frame out of your current setup, effectively boosting its 'productivity' and lifespan.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-800 to-gray-900 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-2xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6 leading-tight text-white">
-                Ready to Experience DLSS 5? Don't Miss Out! 🚀
+    <!-- Waitlist / Enrollment Form Section -->
+    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-800 px-4 text-center">
+        <div class="container mx-auto max-w-2xl bg-gray-900 p-8 md:p-12 rounded-lg shadow-2xl border-2 border-purple-600">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-6 gradient-text">
+                Secure Your DLSS 5 Power-Up Now!
             </h2>
-            <p class="text-xl sm:text-2xl text-gray-300 mb-8">
-                The future of gaming performance is here. Join our exclusive waitlist for early access, special launch discounts, and updates.
+            <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                Don't miss out on the <span class="font-bold text-red-400">limited-time launch discount!</span> Enroll today and revolutionize your gaming.
             </p>
-            <form action="#" method="POST" class="w-full max-w-lg mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl border border-purple-700">
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-200 text-lg font-semibold mb-2">
-                        Enter Your Email for Early Access:
-                    </label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="your@email.com"
-                        required
-                        class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-purple-500 focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 text-white text-lg placeholder-gray-400 outline-none transition-all duration-200"
-                    >
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label for="name" class="sr-only">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Full Name" required
+                           class="input-field w-full px-5 py-3 rounded-lg border-2 text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-500 transition-all duration-200">
                 </div>
-                <button type="submit" class="w-full btn-gradient text-white text-xl font-bold py-4 px-8 rounded-lg shadow-xl transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50">
-                    Join the Waitlist & Get Updates! 🔥
+                <div>
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
+                           class="input-field w-full px-5 py-3 rounded-lg border-2 text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-500 transition-all duration-200">
+                </div>
+                <button type="submit" class="btn-primary w-full text-white font-bold py-4 rounded-lg text-xl md:text-2xl shadow-lg hover:shadow-xl transform hover:scale-105 duration-300 focus:outline-none focus:ring-4 focus:ring-pink-500 focus:ring-opacity-50">
+                    🎉 Claim My DLSS 5 Guide & Discount!
                 </button>
-                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, ever. Unsubscribe anytime.</p>
             </form>
+            <p class="text-sm text-gray-500 mt-6">
+                Your information is 100% secure and will never be shared.
+            </p>
         </div>
     </section>
 
-    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p>&copy; 2023 DLSS 5 Modding & Optimization Kit. All rights reserved.</p>
-            <p class="mt-2">Disclaimer: This product is designed for enthusiasts to explore advanced graphics technologies. Use at your own risk. Not officially endorsed or supported by NVIDIA.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-500 text-center py-8 text-sm px-4">
+        <div class="container mx-auto">
+            <p>&copy; 2023 DLSS 5: Unofficial AI Power-Up Guide. All rights reserved. | <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a> | <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a></p>
+            <p class="mt-2 max-w-2xl mx-auto">Disclaimer: This is an unofficial guide leveraging leaked DLSS 5 files and community mods. Compatibility and performance may vary based on hardware and software configurations. Not affiliated with or endorsed by NVIDIA.</p>
         </div>
     </footer>
 
+    <!-- Countdown Timer JavaScript -->
     <script>
-        // Countdown Logic
-        const countdownElement = document.getElementById('countdown');
-        const daysElement = document.getElementById('days');
-        const hoursElement = document.getElementById('hours');
-        const minutesElement = document.getElementById('minutes');
-        const secondsElement = document.getElementById('seconds');
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from today
+            // For specific testing: const countDownDate = new Date("Jan 1, 2024 00:00:00").getTime();
 
-        // Set the date we're counting down to (e.g., 7 days from now)
-        const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 7); // Set to 7 days from the current date
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate - now;
 
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            if (distance < 0) {
-                clearInterval(interval);
-                countdownElement.innerHTML = "<p class='text-xl font-bold text-red-400'>This exclusive offer has ended!</p>";
-                return;
-            }
+                const getPadded = (num) => String(num).padStart(2, '0');
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                if (document.getElementById("days")) document.getElementById("days").innerHTML = getPadded(days);
+                if (document.getElementById("hours")) document.getElementById("hours").innerHTML = getPadded(hours);
+                if (document.getElementById("minutes")) document.getElementById("minutes").innerHTML = getPadded(minutes);
+                if (document.getElementById("seconds")) document.getElementById("seconds").innerHTML = getPadded(seconds);
 
-            daysElement.textContent = String(days).padStart(2, '0');
-            hoursElement.textContent = String(hours).padStart(2, '0');
-            minutesElement.textContent = String(minutes).padStart(2, '0');
-            secondsElement.textContent = String(seconds).padStart(2, '0');
-        }
-
-        const interval = setInterval(updateCountdown, 1000);
-        updateCountdown(); // Initial call to display immediately
+                if (distance < 0) {
+                    clearInterval(x);
+                    const countdownElement = document.getElementById("countdown");
+                    if (countdownElement) {
+                        countdownElement.innerHTML = "<span class='text-red-500 text-2xl md:text-3xl'>🚨 Discount Ended! 🚨</span>";
+                    }
+                    const ctaButton = document.querySelector('.btn-primary');
+                    if (ctaButton) {
+                        ctaButton.textContent = "Enroll Now (Discount Ended)";
+                        ctaButton.classList.add('bg-gray-600', 'hover:bg-gray-700', 'cursor-not-allowed');
+                        ctaButton.classList.remove('btn-primary', 'hover:scale-105', 'focus:ring-pink-500');
+                        ctaButton.disabled = true; // Disable button
+                    }
+                    const discountText = document.querySelector('.text-red-400');
+                    if (discountText) {
+                        discountText.textContent = "regular price!";
+                    }
+                }
+            }, 1000);
+        });
     </script>
+
 </body>
 </html>
