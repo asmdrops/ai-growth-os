@@ -1,219 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InfluenceGuard AI - Geopolitical Threat Intelligence Platform</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts for Inter (modern, premium feel) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>PixelForge AI - Empowering Indie Game Devs with Unrivaled Control & AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
     <style>
+        /* Custom styles for dark mode and responsive adjustments */
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', sans-serif; /* A modern, clean font */
         }
-        /* Custom animations for enhanced conversion */
-        @keyframes pulse-fade {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.95; transform: scale(1.01); }
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-        .animate-pulse-fade {
-            animation: pulse-fade 2s infinite ease-in-out;
+        /* Custom countdown styles for premium look */
+        .countdown-segment {
+            @apply flex flex-col items-center justify-center text-3xl md:text-5xl font-extrabold text-white;
         }
-        @keyframes fade-in-up {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .countdown-label {
+            @apply text-sm md:text-base font-medium text-gray-300 uppercase mt-1;
         }
-        .animate-fade-in-up {
-            animation: fade-in-up 0.7s ease-out forwards;
-            opacity: 0; /* Hidden by default */
+        /* Gradient button for a premium feel */
+        .gradient-button {
+            background-image: linear-gradient(to right, #6366f1, #a855f7, #ec4899); /* Indigo, Purple, Pink */
+            @apply text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl;
         }
-        /* Delay utility classes for staggered animation */
-        .animate-fade-in-up.delay-100 { animation-delay: 0.1s; }
-        .animate-fade-in-up.delay-200 { animation-delay: 0.2s; }
-        .animate-fade-in-up.delay-300 { animation-delay: 0.3s; }
+        /* Gradient text for headlines */
+        .gradient-text {
+            background: linear-gradient(to right, #6366f1, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
-<body class="bg-gray-950 text-white antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <!-- Background Image -->
-        <div class="absolute inset-0">
-            <img src="https://source.unsplash.com/1600x900/?An,tech" alt="AI-powered geopolitical intelligence dashboard" class="w-full h-full object-cover object-center">
-            <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
-        </div>
+    <section class="relative hero-background min-h-screen flex items-center justify-center text-center">
+        <!-- Overlay for readability -->
+        <div class="absolute inset-0 bg-black opacity-70"></div>
 
-        <!-- Hero Content -->
-        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto py-16">
-            <p class="text-indigo-400 uppercase tracking-widest text-sm sm:text-base mb-4 animate-fade-in-up">
-                Market Trend: AI encounters foreign propaganda. What's next?
-            </p>
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-up delay-100">
-                InfluenceGuard AI: <br class="hidden sm:inline"> Master the Geopolitical Narrative
+        <div class="relative z-10 p-4 md:p-8 max-w-5xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 gradient-text">
+                Unleash Your Game Vision. <br class="hidden sm:inline">Own Every Pixel.
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto animate-fade-in-up delay-200">
-                Leverage cutting-edge AI to gain real-time intelligence on foreign propaganda, attribute sources, predict sentiment shifts, and secure national interests.
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                PixelForge AI empowers independent game developers with AI-powered tools to rapidly generate concepts, assets, and logic.
+                <span class="block mt-2 font-semibold">Complete ownership, seamless export to Unity, Unreal, Godot. Your creativity, your control – always.</span>
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up delay-300">
-                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 text-lg">
-                    Secure Early Access <span class="ml-2">🚀</span>
-                </a>
-                <a href="#features" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 text-lg">
-                    Explore Capabilities <span class="ml-2">💡</span>
+
+            <!-- Limited Time Founder's Pass Call to Action & Countdown -->
+            <div class="bg-purple-800 bg-opacity-40 border border-purple-700 rounded-lg p-6 md:p-8 mb-12 shadow-lg max-w-2xl mx-auto">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4 text-white">
+                    Limited Time Founder's Pass!
+                </h3>
+                <p class="text-md md:text-lg text-gray-200 mb-6">
+                    Secure lifetime discounts, priority access, and exclusive features as an early adopter. Don't miss out on this unique opportunity to shape the future of indie dev!
+                </p>
+
+                <div class="flex justify-center space-x-4 md:space-x-8 mb-8" id="countdown">
+                    <div class="countdown-segment">
+                        <span id="days">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-segment">
+                        <span id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-segment">
+                        <span id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-segment">
+                        <span id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+
+                <a href="#waitlist" class="gradient-button text-lg md:text-xl">
+                    Claim Your Founder's Pass Now
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-24 bg-gray-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 text-white">
-                Unprecedented Clarity in a Complex World
+    <section class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 gradient-text">
+                Revolutionize Your Game Development Workflow
             </h2>
-            <p class="text-lg sm:text-xl text-center text-gray-300 mb-16 max-w-3xl mx-auto">
-                InfluenceGuard AI delivers actionable intelligence for national security, corporate risk management, and strategic decision-making.
+            <p class="text-lg text-gray-300 mb-16 max-w-3xl mx-auto">
+                PixelForge AI is built for creators who demand speed, flexibility, and absolute control.
+                Stop wasting time on repetitive tasks and focus on what truly matters: your game's unique vision.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
-
-                <!-- Feature 1: Real-time Propaganda Analysis -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Real-time Propaganda Detection</h3>
-                    <p class="text-gray-400 text-lg">
-                        Instantly identify and analyze foreign propaganda campaigns across global media and social networks.
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Feature 1: Instant Concept Generation -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-purple-400 text-5xl mb-4">✨</div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Instant Concept Generation</h3>
+                    <p class="text-gray-300">
+                        From a simple prompt, generate diverse game concepts, plot outlines, and mechanics. Spark new ideas faster than ever before.
                     </p>
                 </div>
-
-                <!-- Feature 2: Deep Source Attribution -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414a1 1 0 00-.707-.293H7a2 2 0 00-2 2v11a2 2 0 002 2h2m.138-16.999l4.797 4.798M9 10v3.75m9-.75V10m-3 10h3a2 2 0 002-2v-3a2 2 0 00-2-2H9a2 2 0 00-2 2v3a2 2 0 002 2h3"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Deep Source Attribution</h3>
-                    <p class="text-gray-400 text-lg">
-                        Unmask the actors and networks behind disinformation, from state-sponsored entities to covert influence groups.
+                <!-- Feature 2: Dynamic Asset Creation -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-green-400 text-5xl mb-4">🎨</div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Dynamic Asset Creation</h3>
+                    <p class="text-gray-300">
+                        Generate unique character sprites, environmental elements, textures, and even 3D asset bases with granular control.
                     </p>
                 </div>
-
-                <!-- Feature 3: Sentiment & Narrative Shifts -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h6l3 3v8h-4l-4 4H4a2 2 0 01-2-2v-6a2 2 0 012-2h2"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Sentiment & Narrative Shifts</h3>
-                    <p class="text-gray-400 text-lg">
-                        Monitor subtle shifts in public sentiment and emerging narratives, understanding their potential impact.
+                <!-- Feature 3: Basic Game Logic & Scripting -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-blue-400 text-5xl mb-4">⚙️</div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Basic Game Logic & Scripting</h3>
+                    <p class="text-gray-300">
+                        Kickstart development with AI-generated snippets of game logic and basic scripts, tailored for popular engines.
                     </p>
                 </div>
-
-                <!-- Feature 4: Predictive Threat Modeling -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 13v-2.5a2.5 2.5 0 115 0V13m-5 4v-2.5a2.5 2.5 0 115 0V17m-5 3v-2.5a2.5 2.5 0 115 0V20m0 0a2 2 0 100-4h-3a2 2 0 100-4h-3a2 2 0 100-4m1.5-3.5L7.5 7.5m5.5 0L17.5 7.5"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Predictive Threat Modeling</h3>
-                    <p class="text-gray-400 text-lg">
-                        Anticipate future geopolitical shifts and disinformation campaigns before they fully materialize.
+                <!-- Feature 4: 100% Ownership & Royalty-Free -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-yellow-400 text-5xl mb-4">🔓</div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">100% Ownership & Royalty-Free</h3>
+                    <p class="text-gray-300">
+                        Unlike platforms that restrict your creative freedom, every asset and idea you generate is yours, completely royalty-free. True creative control.
                     </p>
                 </div>
-
-                <!-- Feature 5: Customizable Dashboards -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 1.343 3 3v4c0 1.657-1.343 3-3 3s-3-1.343-3-3v-4c0-1.657 1.343-3 3-3z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Customizable Intelligence Dashboards</h3>
-                    <p class="text-gray-400 text-lg">
-                        Tailor your intelligence view to focus on regions, actors, or specific narratives critical to your mission.
+                <!-- Feature 5: Seamless Engine Export -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-red-400 text-5xl mb-4">🚀</div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Seamless Engine Export</h3>
+                    <p class="text-gray-300">
+                        Directly export your generated assets and logic into Unity, Unreal Engine, Godot, and more, streamlining your workflow.
                     </p>
                 </div>
-
-                <!-- Feature 6: Secure & Scalable Infrastructure -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.279a11.971 11.971 0 013.58 3.011M2.707 5.021A11.975 11.975 0 001 7.5c0 4.198 3.195 7.584 7.228 8.016m1.06 1.06a8.003 8.003 0 008.8-8.8m-1.554-1.554a.81.81 0 00-.28-.28"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Secure & Scalable Infrastructure</h3>
-                    <p class="text-gray-400 text-lg">
-                        Built for mission-critical operations with robust security protocols and unparalleled scalability.
+                <!-- Feature 6: Collaborative Tooling (Coming Soon) -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-teal-400 text-5xl mb-4">🤝</div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Collaborative Tooling (Coming Soon)</h3>
+                    <p class="text-gray-300">
+                        Work with your team in real-time on shared concepts and assets, fostering creativity and efficiency together.
                     </p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / CTA Section -->
-    <section id="waitlist" class="py-16 sm:py-24 bg-gray-950">
-        <div class="container mx-auto px-4 max-w-2xl text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6">
-                Ready for Decisive Intelligence?
+    <!-- Waitlist / Founder's Pass Form Section -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center max-w-3xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 gradient-text">
+                Join the PixelForge AI Revolution
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8">
-                Join our exclusive waitlist for early access to InfluenceGuard AI and transform your strategic capabilities.
+            <p class="text-lg text-gray-300 mb-12">
+                Be among the first to experience the future of game development. Sign up for our waitlist and secure your
+                <span class="font-bold text-purple-400">Limited Time Founder's Pass</span>, unlocking exclusive benefits and priority access!
             </p>
 
-            <!-- Limited Time Countdown Banner (simulated with text & animation) -->
-            <div class="bg-gradient-to-r from-indigo-700 to-purple-800 text-white p-4 sm:p-6 rounded-lg shadow-2xl mb-12 inline-block animate-pulse-fade border border-indigo-500">
-                <p class="font-bold text-xl sm:text-2xl leading-tight">⏳ Limited Early Access Window! Secure Your Advantage! ⏳</p>
-                <p class="text-sm sm:text-base mt-2">Special onboarding and preferential pricing available for our founding clients.</p>
-            </div>
-
-            <form class="bg-gray-800 p-8 md:p-10 rounded-xl shadow-xl border border-gray-700">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-900 transition-all duration-200" required>
+            <form class="bg-gray-800 p-8 rounded-lg shadow-2xl space-y-6">
+                <div>
+                    <label for="name" class="sr-only">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name"
+                           class="w-full p-4 rounded-md bg-gray-700 border border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50 text-white placeholder-gray-400 text-lg"
+                           required>
                 </div>
-                <div class="mb-6 text-left">
-                    <label for="organization" class="block text-gray-300 text-sm font-bold mb-2">Organization (Optional):</label>
-                    <input type="text" id="organization" name="organization" placeholder="Your Organization (e.g., DOD, State Dept., Global Corp.)" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-900 transition-all duration-200">
+                <div>
+                    <label for="email" class="sr-only">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address"
+                           class="w-full p-4 rounded-md bg-gray-700 border border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50 text-white placeholder-gray-400 text-lg"
+                           required>
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Work Email Address:</label>
-                    <input type="email" id="email" name="email" placeholder="you@agency.gov or you@corp.com" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-900 transition-all duration-200" required>
-                </div>
-                <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg shadow-xl transition-all duration-300 transform hover:scale-105 text-lg w-full">
-                    Join the Elite Waitlist <span class="ml-2">✨</span>
+                <button type="submit" class="gradient-button w-full text-xl py-4">
+                    Get Early Access & Founder's Pass
                 </button>
-                <p class="text-gray-400 text-sm mt-4">We respect your privacy. No spam. Just intelligence.</p>
+                <p class="text-sm text-gray-400 mt-4">
+                    We respect your privacy. No spam, ever.
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm">
+    <footer class="bg-gray-950 py-8 text-gray-500 text-center text-sm border-t border-gray-800">
         <div class="container mx-auto px-4">
-            <p>&copy; 2023 InfluenceGuard AI. All rights reserved.</p>
+            <p>&copy; 2023 PixelForge AI. All rights reserved.</p>
             <p class="mt-2">
-                <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a> |
-                <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a>
+                <a href="#" class="hover:text-purple-400 transition-colors">Privacy Policy</a> |
+                <a href="#" class="hover:text-purple-400 transition-colors">Terms of Service</a>
             </p>
         </div>
     </footer>
 
-    <!-- Simple JS for Smooth Scrolling -->
+    <!-- JavaScript for Countdown Timer -->
     <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+        // Set the target date for the countdown (e.g., 30 days from page load)
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 30); // Founder's Pass offer valid for 30 days
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate.getTime() - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the results with leading zeros
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+            // If the countdown is over, display expired message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "<p class='text-red-500 text-xl font-bold'>OFFER EXPIRED!</p>";
+                // Optionally disable the CTA button or change its text
+                const ctaButton = document.querySelector('.gradient-button');
+                if (ctaButton) {
+                    ctaButton.innerText = "Join Waitlist";
+                    ctaButton.removeAttribute('href');
+                    ctaButton.setAttribute('disabled', 'true');
+                    ctaButton.classList.add('opacity-50', 'cursor-not-allowed');
+                }
+            }
+        }, 1000);
     </script>
 
 </body>
