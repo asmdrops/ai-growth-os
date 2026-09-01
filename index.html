@@ -3,142 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microsoft 365 Outage Preparedness & Business Continuity Toolkit</title>
+    <title>The Digital Ownership Playbook - Reclaim Your Digital Rights</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom CSS for the hero background image for easier URL management */
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
         .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-image: url('https://source.unsplash.com/1600x900/?The,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            position: relative;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for readability */
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #6366f1, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Custom scroll-behavior for smooth scrolling to sections */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative hero-background min-h-screen flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
-        <div class="relative z-10 text-center max-w-4xl mx-auto py-16 px-6 sm:px-8 lg:px-12">
-            <span class="inline-block bg-red-600 text-white text-xs sm:text-sm font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
-                Leveraging Recent Microsoft Outage Pain
-            </span>
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-                Never Be Offline Again: <br class="sm:hidden"> Your Business Continuity Plan for the Next Microsoft 365 Outage
+    <section class="hero-background min-h-screen flex items-center justify-center relative py-16 px-4">
+        <div class="hero-overlay absolute inset-0 w-full h-full"></div>
+        <div class="container mx-auto relative z-10 text-center max-w-4xl">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 gradient-text">
+                Sony Says You Don't Own It.<br class="hidden md:block"> We Say, You Can.
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-                Secure your SMB's operations. Act now: Get the comprehensive toolkit that keeps you running, even when Microsoft isn't. Avoid downtime, maintain critical communications, and protect your data.
+            <p class="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                In a world where 'digital ownership' is constantly challenged, don't just accept the fine print.
+                <br class="hidden sm:block"> Empower yourself with <span class="font-bold text-indigo-400">The Digital Ownership Playbook</span>.
             </p>
-
-            <!-- Limited Time Countdown -->
-            <div class="bg-blue-800 bg-opacity-70 border border-blue-700 rounded-lg p-4 mb-10 shadow-lg inline-block">
-                <p class="text-lg sm:text-xl font-bold uppercase tracking-wide text-blue-100 mb-2">Early Bird Access & Special Launch Offer Ends In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
-                    <!-- Placeholder for dynamic countdown. Actual implementation requires JavaScript. -->
-                    <span class="flex flex-col items-center bg-blue-900 px-4 py-2 rounded-md shadow-md">00<span class="text-sm font-normal">Days</span></span>
-                    <span class="flex flex-col items-center bg-blue-900 px-4 py-2 rounded-md shadow-md">00<span class="text-sm font-normal">Hours</span></span>
-                    <span class="flex flex-col items-center bg-blue-900 px-4 py-2 rounded-md shadow-md">00<span class="text-sm font-normal">Mins</span></span>
-                    <span class="flex flex-col items-center bg-blue-900 px-4 py-2 rounded-md shadow-md">00<span class="text-sm font-normal">Secs</span></span>
-                </div>
-            </div>
-
-            <a href="#waitlist-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
-                Get Instant Access to the Toolkit!
+            <p class="text-lg sm:text-xl text-indigo-300 font-semibold mb-10">
+                Unlock your rights, manage your digital assets, and challenge the status quo.
+            </p>
+            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Get Early Access & Exclusive Bonuses!
             </a>
-            <p class="mt-4 text-sm text-gray-400">Join 1,200+ SMBs already securing their operations.</p>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-20 bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-12 text-blue-400">
-                What's Inside Your Outage Preparedness & Business Continuity Toolkit?
+    <section id="features" class="py-16 sm:py-24 bg-gray-950 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 gradient-text">
+                What You'll Discover Inside
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <p class="text-lg sm:text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto">
+                The Digital Ownership Playbook isn't just a guide; it's your definitive resource to navigate the complex world of digital licensing, consumer rights, and asset management across all platforms.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
                 <!-- Feature 1 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">🛡️</span>
-                        <h3 class="text-xl font-semibold text-white">Actionable Step-by-Step Recovery Guides</h3>
-                    </div>
-                    <p class="text-gray-300">Detailed, easy-to-follow instructions to quickly restore critical operations during and after a Microsoft 365 outage. Minimize downtime and get your business back online faster.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl flex flex-col items-start transform hover:scale-105 transition duration-300">
+                    <span class="text-4xl mb-4">⚖️</span>
+                    <h3 class="text-2xl font-bold text-gray-50 mb-3">Licensing vs. Ownership Decoded</h3>
+                    <p class="text-gray-300 text-lg">
+                        Get plain-language explanations of the legal nuances between owning a physical product and licensing a digital download. Understand what you *actually* possess.
+                    </p>
                 </div>
                 <!-- Feature 2 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">🗣️</span>
-                        <h3 class="text-xl font-semibold text-white">Pre-built Internal & External Communication Templates</h3>
-                    </div>
-                    <p class="text-gray-300">Keep internal teams, external clients, and stakeholders informed with ready-to-use email and social media templates. Maintain transparency and build trust, even during chaos.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl flex flex-col items-start transform hover:scale-105 transition duration-300">
+                    <span class="text-4xl mb-4">🛡️</span>
+                    <h3 class="text-2xl font-bold text-gray-50 mb-3">Your Unassailable Consumer Rights</h3>
+                    <p class="text-gray-300 text-lg">
+                        Learn about your fundamental consumer rights in the digital realm, how to assert them, and where platform policies fall short. Protect your purchases.
+                    </p>
                 </div>
                 <!-- Feature 3 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">✅</span>
-                        <h3 class="text-xl font-semibold text-white">Data Backup Verification Checklists</h3>
-                    </div>
-                    <p class="text-gray-300">Ensure your critical business data is always secure, accessible, and recoverable. Comprehensive checklists guide you through verifying backups and robust recovery procedures.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl flex flex-col items-start transform hover:scale-105 transition duration-300">
+                    <span class="text-4xl mb-4">📚</span>
+                    <h3 class="text-2xl font-bold text-gray-50 mb-3">Mastering Your Digital Library</h3>
+                    <p class="text-gray-300 text-lg">
+                        Strategies for effectively managing your gaming, movie, software, and ebook collections. Future-proof your digital assets against platform changes.
+                    </p>
                 </div>
                 <!-- Feature 4 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">🚀</span>
-                        <h3 class="text-xl font-semibold text-white">Essential Alternative Communication Tools</h3>
-                    </div>
-                    <p class="text-gray-300">Discover vetted and reliable alternatives to Outlook, Teams, and SharePoint, complete with quick setup guides to keep your team connected and productive when M365 fails.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl flex flex-col items-start transform hover:scale-105 transition duration-300">
+                    <span class="text-4xl mb-4">✍️</span>
+                    <h3 class="text-2xl font-bold text-gray-50 mb-3">Templates to Challenge Unjust Policies</h3>
+                    <p class="text-gray-300 text-lg">
+                        Access ready-to-use templates and scripts to challenge unfair EULAs, policy changes, or account terminations. Stand up for yourself with confidence.
+                    </p>
                 </div>
                 <!-- Feature 5 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">⚡️</span>
-                        <h3 class="text-xl font-semibold text-white">Rapid Response Playbooks for SMBs</h3>
-                    </div>
-                    <p class="text-gray-300">Tailored playbooks designed specifically for small to medium-sized businesses to quickly enact contingency plans, delegate responsibilities, and minimize the impact of outages.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl flex flex-col items-start transform hover:scale-105 transition duration-300">
+                    <span class="text-4xl mb-4">🧐</span>
+                    <h3 class="text-2xl font-bold text-gray-50 mb-3">Demystifying EULAs & TOS</h3>
+                    <p class="text-gray-300 text-lg">
+                        Stop blindly agreeing. We break down the jargon of End-User License Agreements and Terms of Service, showing you what to look out for.
+                    </p>
                 </div>
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">📈</span>
-                        <h3 class="text-xl font-semibold text-white">Post-Outage Review & Improvement Guides</h3>
-                    </div>
-                    <p class="text-gray-300">Learn how to effectively analyze outage impacts, identify vulnerabilities, and continuously improve your business continuity strategy for enhanced future resilience.</p>
+                <!-- Feature 6 (Subscription Value Prop) -->
+                <div class="bg-indigo-700 bg-opacity-40 p-8 rounded-xl shadow-2xl flex flex-col items-start transform hover:scale-105 transition duration-300 border-2 border-indigo-500">
+                    <span class="text-4xl mb-4">✨</span>
+                    <h3 class="text-2xl font-bold text-indigo-100 mb-3">Future-Proof Your Knowledge</h3>
+                    <p class="text-indigo-200 text-lg">
+                        Optional annual subscription for continuous updates on legal developments, platform policy shifts, and emerging digital ownership strategies. Stay ahead of the curve.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist/Call to Action Form Section -->
-    <section id="waitlist-form" class="py-16 sm:py-20 bg-gray-800">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-blue-400 mb-6">
-                Ready to Safeguard Your Business from the Next Outage?
+    <!-- Waitlist / CTA Section with Countdown -->
+    <section id="waitlist" class="py-16 sm:py-24 bg-gray-900 px-4">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
+                Limited-Time Early Bird Access & Bonuses!
             </h2>
-            <p class="text-lg text-gray-200 mb-8">
-                Don't wait for the next Microsoft 365 outage to hit. Join our exclusive early access list now and be among the first to secure your copy of the "Microsoft 365 Outage Preparedness & Business Continuity Toolkit."
+            <p class="text-xl sm:text-2xl text-indigo-300 mb-8 font-semibold">
+                Be among the first to gain access and receive exclusive launch benefits.
             </p>
-            <form action="#" method="POST" class="w-full max-w-lg mx-auto bg-gray-700 p-8 rounded-lg shadow-xl border border-gray-600">
-                <div class="mb-6">
-                    <label for="email" class="block text-gray-300 text-left text-sm font-bold mb-2">Your Professional Email Address:</label>
-                    <input type="email" id="email" name="email" placeholder="you@yourbusiness.com" required
-                           class="shadow appearance-none border border-gray-500 rounded w-full py-3 px-4 text-gray-900 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-200">
+
+            <!-- Countdown Timer -->
+            <div class="bg-indigo-800 bg-opacity-30 border border-indigo-600 rounded-lg p-6 mb-12 shadow-inner">
+                <p class="text-white text-lg sm:text-xl font-bold mb-4">Offer Ends In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 sm:space-x-8 text-white">
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl sm:text-5xl md:text-6xl font-extrabold" id="days">00</span>
+                        <span class="text-base sm:text-lg">Days</span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl md:text-6xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl sm:text-5xl md:text-6xl font-extrabold" id="hours">00</span>
+                        <span class="text-base sm:text-lg">Hours</span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl md:text-6xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl sm:text-5xl md:text-6xl font-extrabold" id="minutes">00</span>
+                        <span class="text-base sm:text-lg">Minutes</span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl md:text-6xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl sm:text-5xl md:text-6xl font-extrabold" id="seconds">00</span>
+                        <span class="text-base sm:text-lg">Seconds</span>
+                    </div>
                 </div>
-                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg w-full transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
-                    Join the Early Access Waitlist Now!
+            </div>
+
+            <!-- Waitlist Form -->
+            <form class="max-w-md mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl border border-indigo-700">
+                <p class="text-gray-200 text-lg mb-6">Enter your details below to join the exclusive waitlist:</p>
+                <div class="mb-6">
+                    <label for="name" class="sr-only">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required
+                           class="w-full px-6 py-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg">
+                </div>
+                <div class="mb-8">
+                    <label for="email" class="sr-only">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Best Email" required
+                           class="w-full px-6 py-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg">
+                </div>
+                <button type="submit"
+                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                    Join the Waitlist Now!
                 </button>
-                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, ever. Your data is safe with us.</p>
+                <p class="text-gray-400 text-sm mt-4">We respect your privacy and will never spam you.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">Disclaimer: This toolkit provides general guidance and templates. Specific results may vary. Microsoft 365 is a registered trademark of Microsoft Corporation.</p>
+    <footer class="bg-gray-950 py-10 px-4 text-center text-gray-500 text-sm">
+        <div class="container mx-auto">
+            &copy; <span id="currentYear"></span> The Digital Ownership Playbook. All rights reserved.
         </div>
     </footer>
+
+    <!-- Countdown Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the date we're counting down to (e.g., 7 days from now for an early bird offer)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now
+            countDownDate.setHours(countDownDate.getHours() + 12); // Add some hours for a more specific time
+            countDownDate.setMinutes(countDownDate.getMinutes() + 30); // Add some minutes
+            countDownDate.setSeconds(countDownDate.getSeconds() + 45); // Add some seconds
+
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate.getTime() - now;
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    const countdownElement = document.getElementById("countdown");
+                    if (countdownElement) {
+                        countdownElement.innerHTML = "<p class='text-2xl font-bold text-red-400'>OFFER EXPIRED!</p>";
+                    }
+                    // Optionally disable the form or change the CTA
+                    const submitButton = document.querySelector("#waitlist button[type='submit']");
+                    if (submitButton) {
+                        submitButton.disabled = true;
+                        submitButton.classList.remove('bg-indigo-600', 'hover:bg-indigo-700', 'hover:scale-105');
+                        submitButton.classList.add('bg-gray-600', 'cursor-not-allowed');
+                        submitButton.textContent = "Offer Expired";
+                    }
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+            }, 1000);
+
+            // Set current year for footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        });
+    </script>
 
 </body>
 </html>
