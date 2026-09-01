@@ -1,238 +1,223 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PixelForge AI - Empowering Indie Game Devs with Unrivaled Control & AI</title>
+    <title>ClawGuard: Enterprise AI Governance & Orchestration</title>
+    <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+    <!-- Optional: Google Fonts for a modern look if desired, though system sans-serif is default -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet"> -->
     <style>
-        /* Custom styles for dark mode and responsive adjustments */
+        /* Custom styles for dark mode and hero image overlay */
         body {
-            font-family: 'Inter', sans-serif; /* A modern, clean font */
+            font-family: 'Inter', sans-serif; /* Fallback to system sans-serif */
         }
-        .hero-background {
+        .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            position: relative;
+            /* Ensure it covers full screen on height */
+            min-height: 100vh;
         }
-        /* Custom countdown styles for premium look */
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+        }
         .countdown-segment {
-            @apply flex flex-col items-center justify-center text-3xl md:text-5xl font-extrabold text-white;
+            @apply flex flex-col items-center justify-center bg-gray-800 p-4 sm:p-6 rounded-lg shadow-inner;
+            min-width: 80px; /* Ensure segments don't shrink too much */
+        }
+        .countdown-value {
+            @apply text-4xl sm:text-5xl font-extrabold text-purple-400;
         }
         .countdown-label {
-            @apply text-sm md:text-base font-medium text-gray-300 uppercase mt-1;
-        }
-        /* Gradient button for a premium feel */
-        .gradient-button {
-            background-image: linear-gradient(to right, #6366f1, #a855f7, #ec4899); /* Indigo, Purple, Pink */
-            @apply text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl;
-        }
-        /* Gradient text for headlines */
-        .gradient-text {
-            background: linear-gradient(to right, #6366f1, #a855f7, #ec4899);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            @apply text-sm sm:text-base text-gray-400 uppercase tracking-wider mt-1;
         }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <section class="relative hero-background min-h-screen flex items-center justify-center text-center">
-        <!-- Overlay for readability -->
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-
-        <div class="relative z-10 p-4 md:p-8 max-w-5xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 gradient-text">
-                Unleash Your Game Vision. <br class="hidden sm:inline">Own Every Pixel.
+    <section class="hero-bg flex items-center justify-center text-center">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative z-10 container mx-auto px-4 py-16 md:py-24 lg:py-32">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                Tame the <span class="text-purple-400">OpenClaw 2.0</span> Chaos:<br>Secure & Orchestrate Your Enterprise AI
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                PixelForge AI empowers independent game developers with AI-powered tools to rapidly generate concepts, assets, and logic.
-                <span class="block mt-2 font-semibold">Complete ownership, seamless export to Unity, Unreal, Godot. Your creativity, your control – always.</span>
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-200 max-w-3xl mx-auto mb-10 drop-shadow-md">
+                Don't let "glitter on a dumpster fire" define your AI strategy. ClawGuard transforms the multi-player AI development chaos into trusted, transparent, and controlled innovation.
             </p>
+            <a href="#waitlist" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                Get Early Access & Lock In Security
+            </a>
+        </div>
+    </section>
 
-            <!-- Limited Time Founder's Pass Call to Action & Countdown -->
-            <div class="bg-purple-800 bg-opacity-40 border border-purple-700 rounded-lg p-6 md:p-8 mb-12 shadow-lg max-w-2xl mx-auto">
-                <h3 class="text-2xl md:text-3xl font-bold mb-4 text-white">
-                    Limited Time Founder's Pass!
-                </h3>
-                <p class="text-md md:text-lg text-gray-200 mb-6">
-                    Secure lifetime discounts, priority access, and exclusive features as an early adopter. Don't miss out on this unique opportunity to shape the future of indie dev!
-                </p>
-
-                <div class="flex justify-center space-x-4 md:space-x-8 mb-8" id="countdown">
-                    <div class="countdown-segment">
-                        <span id="days">00</span>
-                        <span class="countdown-label">Days</span>
-                    </div>
-                    <div class="countdown-segment">
-                        <span id="hours">00</span>
-                        <span class="countdown-label">Hours</span>
-                    </div>
-                    <div class="countdown-segment">
-                        <span id="minutes">00</span>
-                        <span class="countdown-label">Minutes</span>
-                    </div>
-                    <div class="countdown-segment">
-                        <span id="seconds">00</span>
-                        <span class="countdown-label">Seconds</span>
-                    </div>
-                </div>
-
-                <a href="#waitlist" class="gradient-button text-lg md:text-xl">
-                    Claim Your Founder's Pass Now
-                </a>
-            </div>
+    <!-- Problem/Market Trend Section -->
+    <section class="py-16 md:py-20 bg-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-4 text-white">
+                The Reality of "Multiplayer" AI Development
+            </h2>
+            <p class="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto">
+                As The Register highlighted, the rapid pace of innovation in environments like OpenClaw 2.0 often outpaces robust security and compliance. Without proper governance, your enterprise AI initiatives risk becoming a "slow-burning security dumpster fire" – compromising data, violating regulations, and eroding trust. ClawGuard provides the missing foundation.
+            </p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 gradient-text">
-                Revolutionize Your Game Development Workflow
+    <section class="py-20 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-extrabold text-center mb-12 md:mb-16 text-white">
+                Unmatched Control for Your AI Future
             </h2>
-            <p class="text-lg text-gray-300 mb-16 max-w-3xl mx-auto">
-                PixelForge AI is built for creators who demand speed, flexibility, and absolute control.
-                Stop wasting time on repetitive tasks and focus on what truly matters: your game's unique vision.
-            </p>
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+                <!-- Feature 1: Enhanced Security Protocols -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-4xl sm:text-5xl text-purple-400 mb-4">🔒</div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Enhanced Security Protocols</h3>
+                    <p class="text-gray-300 text-sm sm:text-base">Implement advanced encryption, threat detection, and secure coding standards across all your AI models and development workflows, protecting your most valuable assets.</p>
+                </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-                <!-- Feature 1: Instant Concept Generation -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-purple-400 text-5xl mb-4">✨</div>
-                    <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Instant Concept Generation</h3>
-                    <p class="text-gray-300">
-                        From a simple prompt, generate diverse game concepts, plot outlines, and mechanics. Spark new ideas faster than ever before.
-                    </p>
+                <!-- Feature 2: Automated Compliance Checks -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-4xl sm:text-5xl text-purple-400 mb-4">✅</div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Automated Compliance Checks</h3>
+                    <p class="text-gray-300 text-sm sm:text-base">Stay ahead of regulations like GDPR, HIPAA, and industry-specific mandates with real-time, automated auditing, reporting, and policy enforcement.</p>
                 </div>
-                <!-- Feature 2: Dynamic Asset Creation -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-green-400 text-5xl mb-4">🎨</div>
-                    <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Dynamic Asset Creation</h3>
-                    <p class="text-gray-300">
-                        Generate unique character sprites, environmental elements, textures, and even 3D asset bases with granular control.
-                    </p>
+
+                <!-- Feature 3: Granular Access Controls -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-4xl sm:text-5xl text-purple-400 mb-4">🔑</div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Granular Access Controls</h3>
+                    <p class="text-gray-300 text-sm sm:text-base">Define precise roles and permissions for every team member and every AI asset, ensuring only authorized personnel access sensitive models and data.</p>
                 </div>
-                <!-- Feature 3: Basic Game Logic & Scripting -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-blue-400 text-5xl mb-4">⚙️</div>
-                    <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Basic Game Logic & Scripting</h3>
-                    <p class="text-gray-300">
-                        Kickstart development with AI-generated snippets of game logic and basic scripts, tailored for popular engines.
-                    </p>
-                </div>
-                <!-- Feature 4: 100% Ownership & Royalty-Free -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-yellow-400 text-5xl mb-4">🔓</div>
-                    <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">100% Ownership & Royalty-Free</h3>
-                    <p class="text-gray-300">
-                        Unlike platforms that restrict your creative freedom, every asset and idea you generate is yours, completely royalty-free. True creative control.
-                    </p>
-                </div>
-                <!-- Feature 5: Seamless Engine Export -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-red-400 text-5xl mb-4">🚀</div>
-                    <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Seamless Engine Export</h3>
-                    <p class="text-gray-300">
-                        Directly export your generated assets and logic into Unity, Unreal Engine, Godot, and more, streamlining your workflow.
-                    </p>
-                </div>
-                <!-- Feature 6: Collaborative Tooling (Coming Soon) -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-teal-400 text-5xl mb-4">🤝</div>
-                    <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Collaborative Tooling (Coming Soon)</h3>
-                    <p class="text-gray-300">
-                        Work with your team in real-time on shared concepts and assets, fostering creativity and efficiency together.
-                    </p>
+
+                <!-- Feature 4: AI Model Lifecycle Management -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-4xl sm:text-5xl text-purple-400 mb-4">🔄</div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">AI Model Lifecycle Management</h3>
+                    <p class="text-gray-300 text-sm sm:text-base">Gain complete visibility with robust versioning, immutable auditing trails, and one-click rollback capabilities for every AI model iteration.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / Founder's Pass Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gray-900 border-t border-gray-800">
-        <div class="container mx-auto px-4 text-center max-w-3xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 gradient-text">
-                Join the PixelForge AI Revolution
+    <!-- Waitlist Section with Countdown -->
+    <section id="waitlist" class="py-20 md:py-24 bg-gray-800 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('https://source.unsplash.com/1600x900/?AI,network'); background-size: cover; background-position: center;"></div>
+        <div class="relative z-10 container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-extrabold text-white mb-6">
+                Limited Time Early Access
             </h2>
-            <p class="text-lg text-gray-300 mb-12">
-                Be among the first to experience the future of game development. Sign up for our waitlist and secure your
-                <span class="font-bold text-purple-400">Limited Time Founder's Pass</span>, unlocking exclusive benefits and priority access!
+            <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-10">
+                Join our exclusive waitlist for early access to ClawGuard and receive special onboarding perks. Don't miss your chance to secure your AI future before this offer expires!
             </p>
 
-            <form class="bg-gray-800 p-8 rounded-lg shadow-2xl space-y-6">
-                <div>
-                    <label for="name" class="sr-only">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name"
-                           class="w-full p-4 rounded-md bg-gray-700 border border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50 text-white placeholder-gray-400 text-lg"
-                           required>
+            <!-- Countdown Timer -->
+            <div class="flex justify-center space-x-2 sm:space-x-4 mb-12">
+                <div class="countdown-segment">
+                    <div id="days" class="countdown-value">00</div>
+                    <div class="countdown-label">Days</div>
                 </div>
-                <div>
-                    <label for="email" class="sr-only">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email Address"
-                           class="w-full p-4 rounded-md bg-gray-700 border border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50 text-white placeholder-gray-400 text-lg"
-                           required>
+                <div class="countdown-segment">
+                    <div id="hours" class="countdown-value">00</div>
+                    <div class="countdown-label">Hours</div>
                 </div>
-                <button type="submit" class="gradient-button w-full text-xl py-4">
-                    Get Early Access & Founder's Pass
-                </button>
-                <p class="text-sm text-gray-400 mt-4">
-                    We respect your privacy. No spam, ever.
-                </p>
-            </form>
+                <div class="countdown-segment">
+                    <div id="minutes" class="countdown-value">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-segment">
+                    <div id="seconds" class="countdown-value">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+
+            <!-- Waitlist Form -->
+            <div class="max-w-xl mx-auto bg-gray-900 p-6 sm:p-8 rounded-lg shadow-2xl">
+                <form class="space-y-4 sm:space-y-6">
+                    <div>
+                        <label for="name" class="sr-only">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Full Name" class="w-full p-3 sm:p-4 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200" required>
+                    </div>
+                    <div>
+                        <label for="email" class="sr-only">Work Email</label>
+                        <input type="email" id="email" name="email" placeholder="Work Email Address" class="w-full p-3 sm:p-4 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200" required>
+                    </div>
+                    <div>
+                        <label for="company" class="sr-only">Company Name</label>
+                        <input type="text" id="company" name="company" placeholder="Company Name" class="w-full p-3 sm:p-4 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200" required>
+                    </div>
+                    <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 sm:py-4 px-8 rounded-md text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                        Secure My Spot Now
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 text-gray-500 text-center text-sm border-t border-gray-800">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2023 PixelForge AI. All rights reserved.</p>
-            <p class="mt-2">
-                <a href="#" class="hover:text-purple-400 transition-colors">Privacy Policy</a> |
-                <a href="#" class="hover:text-purple-400 transition-colors">Terms of Service</a>
-            </p>
+    <footer class="bg-gray-900 py-10">
+        <div class="container mx-auto px-4 text-center text-gray-400 text-sm">
+            <p>&copy; 2023 ClawGuard. All rights reserved. Built to master your enterprise AI.</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
+    <!-- Countdown Script -->
     <script>
-        // Set the target date for the countdown (e.g., 30 days from page load)
-        const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 30); // Founder's Pass offer valid for 30 days
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // 7 days from now
+            countDownDate.setHours(23, 59, 59, 0); // End of the 7th day
 
-        const x = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countdownDate.getTime() - now;
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate.getTime() - now;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the results with leading zeros
-            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-            // If the countdown is over, display expired message
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "<p class='text-red-500 text-xl font-bold'>OFFER EXPIRED!</p>";
-                // Optionally disable the CTA button or change its text
-                const ctaButton = document.querySelector('.gradient-button');
-                if (ctaButton) {
-                    ctaButton.innerText = "Join Waitlist";
-                    ctaButton.removeAttribute('href');
-                    ctaButton.setAttribute('disabled', 'true');
-                    ctaButton.classList.add('opacity-50', 'cursor-not-allowed');
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("waitlist").innerHTML = `
+                        <div class="relative z-10 container mx-auto px-4 text-center py-20 md:py-24">
+                            <h2 class="text-4xl font-extrabold text-white mb-6">
+                                Early Access Period Ended!
+                            </h2>
+                            <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-10">
+                                Thank you for your interest! The exclusive early access period has concluded. Please sign up below to be notified when ClawGuard becomes generally available.
+                            </p>
+                            <div class="max-w-xl mx-auto bg-gray-900 p-6 sm:p-8 rounded-lg shadow-2xl">
+                                <form class="space-y-4 sm:space-y-6">
+                                    <div>
+                                        <label for="name_expired" class="sr-only">Full Name</label>
+                                        <input type="text" id="name_expired" name="name" placeholder="Full Name" class="w-full p-3 sm:p-4 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200" required>
+                                    </div>
+                                    <div>
+                                        <label for="email_expired" class="sr-only">Work Email</label>
+                                        <input type="email" id="email_expired" name="email" placeholder="Work Email Address" class="w-full p-3 sm:p-4 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200" required>
+                                    </div>
+                                    <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 sm:py-4 px-8 rounded-md text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                                        Notify Me
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    `;
+                    return;
                 }
-            }
-        }, 1000);
-    </script>
 
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
