@@ -3,236 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Sleep Architect | Blueprint for Rest</title>
+    <title>Cloud Gaming Economist: Master Xbox's New Limits</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles for premium aesthetics not easily achievable with only utility classes */
-        .premium-gradient-text {
-            background: linear-gradient(90deg, #667EEA 0%, #764BA2 100%); /* Blue to Purple gradient */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        /* Custom styles for dark mode and premium feel */
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-900 text-gray-100;
         }
-        .countdown-digit {
-            @apply text-5xl font-bold text-white;
-            @apply bg-gray-800 p-4 rounded-lg shadow-lg;
-            @apply min-w-[70px] text-center; /* Ensure digits have a consistent width */
-            line-height: 1; /* Adjust line height for better vertical centering */
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
         }
-        .countdown-label {
-            @apply text-sm text-gray-400 mt-2 uppercase tracking-wide;
-        }
+        /* Fluid Typography - Tailwind doesn't have native fluid type, but we use responsive classes */
+        h1 { @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl; }
+        h2 { @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl; }
+        h3 { @apply text-xl sm:text-2xl md:text-3xl; }
+        p { @apply text-base sm:text-lg; }
     </style>
 </head>
-<body class="bg-gray-950 text-white font-sans antialiased">
-
+<body>
     <!-- Hero Section -->
-    <header class="relative h-screen bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 md:px-8 lg:px-16">
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight mb-6 premium-gradient-text">
-                Unlock Peak Performance Through Optimized Sleep
+    <section class="hero-bg relative min-h-screen flex items-center justify-center text-center p-4 md:p-8 lg:p-12">
+        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark Overlay -->
+        <div class="relative z-10 max-w-screen-xl mx-auto text-white space-y-6">
+            <h1 class="font-extrabold leading-tight tracking-tight drop-shadow-lg">
+                Xbox Cloud Gaming Has New Limits. <span class="text-emerald-400">Master Them.</span>
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-200 max-w-4xl mb-10">
-                Discover the future of rest with <span class="font-bold text-indigo-400">'The Sleep Architect'</span> premium newsletter and master your sleep with the <span class="font-bold text-teal-400">'Blueprint for Rest'</span> advanced course.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="#newsletter-waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 text-lg shadow-md">
-                    Join Newsletter Waitlist
-                </a>
-                <a href="#course-enroll" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 text-lg shadow-md">
-                    Enroll in Advanced Course
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Newsletter Features Section -->
-    <section class="py-20 px-4 md:px-8 lg:px-16 bg-gray-900">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-indigo-400">
-                'The Sleep Architect': Your Weekly Deep Dive
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-                    <div class="text-indigo-500 mb-4 text-4xl">🔬</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Scientific Breakthroughs</h3>
-                    <p class="text-gray-300">Stay ahead with digestible summaries of the latest peer-reviewed sleep research, translating complex science into actionable insights for your daily life.</p>
-                </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-                    <div class="text-indigo-500 mb-4 text-4xl">🔌</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Emerging Sleep Tech</h3>
-                    <p class="text-gray-300">Exclusive insights into cutting-edge gadgets like Anker's radar speaker, smart mattresses, and biofeedback devices. We review, analyze, and tell you what works.</p>
-                </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-                    <div class="text-indigo-500 mb-4 text-4xl">🚀</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Expert-Curated Strategies</h3>
-                    <p class="text-gray-300">Receive actionable, step-by-step guides developed by sleep scientists and technologists to optimize your sleep environment and daily routines for maximum rest.</p>
-                </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-                    <div class="text-indigo-500 mb-4 text-4xl">📈</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Performance Enhancement</h3>
-                    <p class="text-gray-300">Learn how superior sleep directly translates to improved cognitive function, physical recovery, and overall productivity, giving you a competitive edge.</p>
-                </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-                    <div class="text-indigo-500 mb-4 text-4xl">🌐</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Global Market Trends</h3>
-                    <p class="text-gray-300">Understand the shifts in the sleep industry, from consumer behavior to investment opportunities, keeping you informed on the broader landscape.</p>
-                </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-                    <div class="text-indigo-500 mb-4 text-4xl">💡</div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Exclusive Interviews</h3>
-                    <p class="text-gray-300">Gain access to insights from leading sleep researchers, tech innovators, and wellness experts through exclusive Q&As and thought pieces.</p>
-                </div>
-            </div>
-            <div class="text-center mt-12">
-                <a href="#newsletter-waitlist" class="bg-indigo-700 hover:bg-indigo-800 text-white font-bold py-4 px-10 rounded-full transition duration-300 transform hover:scale-105 text-xl shadow-lg">
-                    Get Early Access to 'The Sleep Architect'
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Course Introduction Section -->
-    <section class="py-20 px-4 md:px-8 lg:px-16 bg-gray-950">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-teal-400">
-                'Blueprint for Rest': Mastering Sleep with Smart Tech & Natural Methods
-            </h2>
-            <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-                Go beyond surface-level tips. This advanced digital course provides a comprehensive framework to fundamentally transform your sleep, integrating cutting-edge technology with proven natural strategies for lasting restorative rest.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                <div>
-                    <img src="https://source.unsplash.com/800x600/?sleep,tech,data" alt="Course Blueprint for Rest" class="rounded-xl shadow-2xl object-cover w-full h-auto max-h-96 md:max-h-full">
-                </div>
-                <div class="text-left">
-                    <h3 class="text-2xl font-semibold mb-4 text-white">What You'll Achieve:</h3>
-                    <ul class="space-y-4 text-gray-300 text-lg">
-                        <li class="flex items-start">
-                            <span class="text-teal-500 text-2xl mr-3">✅</span>
-                            <span>Personalized Sleep Protocols: Develop a sleep plan tailored to your unique biology and lifestyle.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-teal-500 text-2xl mr-3">✅</span>
-                            <span>Tech Integration Mastery: Learn to effectively use sleep trackers, smart lighting, sound machines, and more to enhance your sleep quality.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-teal-500 text-2xl mr-3">✅</span>
-                            <span>Natural Rhythm Optimization: Harness the power of chronobiology, diet, exercise, and mindfulness for profound sleep improvements.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-teal-500 text-2xl mr-3">✅</span>
-                            <span>Sustainable Habits: Build long-term habits that ensure consistent, high-quality sleep for years to come.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Limited Time Offer Section (Course) -->
-    <section id="course-enroll" class="py-20 px-4 md:px-8 lg:px-16 bg-gradient-to-r from-gray-800 to-gray-900 border-t border-b border-gray-700">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-4xl sm:text-5xl font-extrabold mb-8 premium-gradient-text">
-                Limited-Time Enrollment: 'Blueprint for Rest'
-            </h2>
-            <p class="text-xl sm:text-2xl text-red-400 font-semibold mb-10">
-                This exclusive pricing ends soon. Don't miss your chance to master your sleep!
+            <p class="text-xl sm:text-2xl lg:text-3xl font-light max-w-3xl mx-auto leading-relaxed">
+                Unlock the <span class="font-semibold text-indigo-300">Cloud Gaming Economist</span> guide and navigate Xbox's upcoming monthly hour limits & pay-as-you-go system like a pro. Save money, maximize playtime.
             </p>
 
-            <!-- Countdown Timer Structure -->
-            <div id="countdown" class="flex justify-center items-center space-x-4 sm:space-x-6 mb-12 flex-wrap gap-y-4">
-                <div class="flex flex-col items-center">
-                    <span class="countdown-digit" id="days">07</span>
-                    <span class="countdown-label">Days</span>
+            <!-- Limited Time Offer & Countdown -->
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-600 rounded-lg p-6 sm:p-8 md:p-10 shadow-2xl max-w-2xl mx-auto my-8">
+                <h3 class="text-white text-2xl sm:text-3xl font-bold mb-4">Early Bird Access Ending Soon!</h3>
+                <div id="countdown-timer" class="flex justify-center items-center space-x-4 md:space-x-6 text-white font-mono text-3xl sm:text-4xl lg:text-5xl">
+                    <div class="flex flex-col items-center">
+                        <span class="block font-extrabold" id="days">00</span>
+                        <span class="block text-base sm:text-lg font-light">Days</span>
+                    </div>
+                    <span class="text-indigo-200">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="block font-extrabold" id="hours">00</span>
+                        <span class="block text-base sm:text-lg font-light">Hours</span>
+                    </div>
+                    <span class="text-indigo-200">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="block font-extrabold" id="minutes">00</span>
+                        <span class="block text-base sm:text-lg font-light">Minutes</span>
+                    </div>
+                    <span class="text-indigo-200">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="block font-extrabold" id="seconds">00</span>
+                        <span class="block text-base sm:text-lg font-light">Seconds</span>
+                    </div>
                 </div>
-                <span class="text-4xl font-bold text-gray-400 hidden sm:block">:</span>
-                <div class="flex flex-col items-center">
-                    <span class="countdown-digit" id="hours">00</span>
-                    <span class="countdown-label">Hours</span>
-                </div>
-                <span class="text-4xl font-bold text-gray-400 hidden sm:block">:</span>
-                <div class="flex flex-col items-center">
-                    <span class="countdown-digit" id="minutes">00</span>
-                    <span class="countdown-label">Minutes</span>
-                </div>
-                <span class="text-4xl font-bold text-gray-400 hidden sm:block">:</span>
-                <div class="flex flex-col items-center">
-                    <span class="countdown-digit" id="seconds">00</span>
-                    <span class="countdown-label">Seconds</span>
-                </div>
+                <p class="text-xs text-center text-indigo-100 mt-4">*(Countdown functionality requires JavaScript to be added.)</p>
             </div>
-            <!--
-                NOTE: The actual countdown functionality requires JavaScript.
-                Since the request is for raw HTML only, the timer values above are placeholders.
-                A basic JS implementation would look like this (to be added in a <script> tag at the end of <body>):
 
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        const endDate = new Date();
-                        endDate.setDate(endDate.getDate() + 7); // Example: 7 days from now
-
-                        const countdownFunction = setInterval(function() {
-                            const now = new Date().getTime();
-                            const distance = endDate - now;
-
-                            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-                            if (distance < 0) {
-                                clearInterval(countdownFunction);
-                                document.getElementById("countdown").innerHTML = "<div class='text-xl text-red-500'>Offer Expired!</div>";
-                                // Optional: disable enrollment button
-                            }
-                        }, 1000);
-                    });
-                </script>
-            -->
-
-            <a href="#" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 px-12 rounded-full transition duration-300 transform hover:scale-105 text-2xl shadow-lg">
-                Secure Your Spot Now!
+            <a href="#waitlist" class="inline-block bg-emerald-500 hover:bg-emerald-600 text-gray-900 font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Secure Your Early Access Now!
             </a>
-            <p class="text-md text-gray-400 mt-6">Only a limited number of enrollments available at this price.</p>
         </div>
     </section>
 
-    <!-- Newsletter Waitlist Form Section -->
-    <section id="newsletter-waitlist" class="py-20 px-4 md:px-8 lg:px-16 bg-gray-900">
-        <div class="max-w-xl mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl">
-            <h2 class="text-3xl font-bold text-center mb-6 text-indigo-400">
-                Join 'The Sleep Architect' Waitlist
+    <!-- Features Section -->
+    <section class="py-16 md:py-20 lg:py-24 bg-gray-900 text-gray-100 px-4">
+        <div class="max-w-screen-xl mx-auto">
+            <h2 class="text-center font-extrabold text-emerald-400 mb-12 sm:mb-16 tracking-tight">
+                What You'll Master in the Guide:
             </h2>
-            <p class="text-lg text-gray-300 text-center mb-8">
-                Be among the first to receive weekly deep dives into sleep tech, science, and strategies.
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-white">📈 Precise Usage Tracking</h3>
+                    <p class="text-gray-300 leading-relaxed">Learn exact methods to monitor your cloud gaming hours across all devices, ensuring you never hit an unexpected limit.</p>
+                </div>
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-white">🎮 Optimized Play Sessions</h3>
+                    <p class="text-gray-300 leading-relaxed">Discover advanced techniques to maximize enjoyment and progress within your allotted hours, making every minute count.</p>
+                </div>
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-white">💰 Cost-Effective Alternatives</h3>
+                    <p class="text-gray-300 leading-relaxed">Explore and compare viable alternatives to traditional cloud gaming, finding options that fit your budget and playstyle.</p>
+                </div>
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-white">📊 Smart Budgeting Strategies</h3>
+                    <p class="text-gray-300 leading-relaxed">Implement a tailored budgeting system for the new pay-as-you-go model, preventing overspending and financial surprises.</p>
+                </div>
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-white">🔄 Seamless System Transitions</h3>
+                    <p class="text-gray-300 leading-relaxed">Get step-by-step guidance on smoothly adapting to Xbox's evolving cloud gaming infrastructure without interruption to your fun.</p>
+                </div>
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-4 text-white">🔮 Future-Proof Your Gaming</h3>
+                    <p class="text-gray-300 leading-relaxed">Stay ahead of the curve with insights into potential future changes and how to continuously adapt your gaming habits efficiently.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 md:py-20 lg:py-24 bg-gray-800 text-gray-100 px-4">
+        <div class="max-w-xl mx-auto text-center">
+            <h2 class="text-center font-extrabold text-indigo-400 mb-8 sm:mb-10 tracking-tight">
+                Don't Miss Out on Savings & Strategies!
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                Join our exclusive waitlist for the 'Cloud Gaming Economist' guide and be among the first to get access and early bird pricing.
             </p>
-            <form class="space-y-6">
+            <form class="space-y-6 bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700">
                 <div>
-                    <label for="name" class="block text-gray-300 text-sm font-semibold mb-2">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 text-white" required>
+                    <label for="name" class="block text-left text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required
+                           class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:ring-emerald-500 focus:border-emerald-500 text-white placeholder-gray-400 focus:outline-none transition duration-200">
                 </div>
                 <div>
-                    <label for="email" class="block text-gray-300 text-sm font-semibold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 text-white" required>
+                    <label for="email" class="block text-left text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required
+                           class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:ring-emerald-500 focus:border-emerald-500 text-white placeholder-gray-400 focus:outline-none transition duration-200">
                 </div>
-                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-lg transition duration-300 transform hover:scale-105 text-lg shadow-md">
-                    Sign Up for Early Access
+                <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-gray-900 font-bold py-3 px-6 rounded-md text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                    Join the Waitlist
                 </button>
+                <p class="text-xs text-gray-400 mt-4">
+                    Your information is safe with us. We hate spam too!
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-10 px-4 md:px-8 lg:px-16 text-center text-gray-500 text-sm">
-        <p>&copy; 2023 The Sleep Architect. All rights reserved.</p>
-        <p class="mt-2">Disclaimer: This content is for informational purposes only and not medical advice.</p>
+    <footer class="bg-gray-950 py-8 text-center text-gray-400 text-sm px-4">
+        <div class="max-w-screen-xl mx-auto">
+            <p>&copy; 2023 Cloud Gaming Economist. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 transition duration-200">Privacy Policy</a>
+                <span class="mx-2">|</span>
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 transition duration-200">Terms of Service</a>
+            </p>
+        </div>
     </footer>
 
+    <!-- Placeholder for Countdown JavaScript (would be external or in a <script> tag) -->
+    <script>
+        // NOTE: This script is a placeholder and should be included for the countdown to function.
+        // As per instructions, only raw HTML is returned, so this would typically be in a separate .js file or inline in a live scenario.
+        document.addEventListener('DOMContentLoaded', function() {
+            const countdownElement = document.getElementById('countdown-timer');
+            const daysSpan = document.getElementById('days');
+            const hoursSpan = document.getElementById('hours');
+            const minutesSpan = document.getElementById('minutes');
+            const secondsSpan = document.getElementById('seconds');
+
+            // Set the date we're counting down to (e.g., 7 days from now for a "Limited Time" offer)
+            // For a real scenario, this would be a specific date/time.
+            const countdownDate = new Date();
+            countdownDate.setDate(countdownDate.getDate() + 7); // 7 days from now
+
+            const updateCountdown = () => {
+                const now = new Date().getTime();
+                const distance = countdownDate - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result
+                daysSpan.textContent = String(days).padStart(2, '0');
+                hoursSpan.textContent = String(hours).padStart(2, '0');
+                minutesSpan.textContent = String(minutes).padStart(2, '0');
+                secondsSpan.textContent = String(seconds).padStart(2, '0');
+
+                // If the countdown is over, write some text
+                if (distance < 0) {
+                    clearInterval(interval);
+                    countdownElement.innerHTML = "<span class='text-xl sm:text-2xl'>Offer Expired!</span>";
+                }
+            };
+
+            const interval = setInterval(updateCountdown, 1000);
+            updateCountdown(); // Call immediately to avoid initial delay
+        });
+    </script>
 </body>
 </html>
