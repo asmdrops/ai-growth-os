@@ -1,247 +1,224 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLM LocalOps - Automated Deployment & Management for AMD Ryzen AI MAX+</title>
+    <title>iPhone Ultra Playbook - Limited Time Early Bird Access</title>
+    <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Custom Styles for a modern premium dark-mode aesthetic -->
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', sans-serif; /* A modern, clean font */
         }
-        .hero-background {
+        .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
         }
-        /* Custom scrollbar for a premium feel (optional but nice touch for dark mode) */
-        ::-webkit-scrollbar {
-            width: 8px;
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for strong text contrast */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
         }
-        ::-webkit-scrollbar-track {
-            background: #1a202c; /* gray-900 */
+        .countdown-digit {
+            @apply text-5xl md:text-6xl lg:text-7xl font-extrabold text-indigo-400;
         }
-        ::-webkit-scrollbar-thumb {
-            background: #4a5568; /* gray-700 */
-            border-radius: 4px;
+        .countdown-label {
+            @apply text-sm md:text-base text-gray-400 uppercase tracking-wider mt-2;
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #6b7280; /* gray-600 */
-        }
-
-        /* Custom animation for the countdown timer pulse */
-        @keyframes pulse-light {
-            0%, 100% {
-                box-shadow: 0 0 0px 0px rgba(124, 58, 237, 0.7);
-            }
-            50% {
-                box-shadow: 0 0 15px 8px rgba(124, 58, 237, 0.7); /* Stronger pulse */
-            }
-        }
-        .animate-pulse-light {
-            animation: pulse-light 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        /* Custom scroll-behavior for smooth anchor links */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased overflow-x-hidden">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative hero-background min-h-screen flex items-center justify-center p-4 sm:p-8 lg:p-12 overflow-hidden">
-        <div class="absolute inset-0 bg-gray-900 bg-opacity-70 backdrop-blur-sm"></div>
-        <div class="relative z-10 max-w-5xl text-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight text-white mb-6 animate-fade-in-up">
-                Unleash 300B+ LLMs Locally. <span class="text-indigo-400">Effortlessly.</span>
+    <header class="hero-bg min-h-screen flex items-center justify-center text-center py-16 px-4">
+        <div class="hero-overlay"></div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 text-white drop-shadow-lg">
+                Master Your iPhone Ultra: <br class="hidden md:inline">The Essential Pre-Order & Ownership Playbook
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto animate-fade-in delay-200">
-                Automated Deployment, Optimization, and Management for <span class="text-indigo-300 font-semibold">AMD Ryzen AI MAX+ PRO 495</span> powered mini-PCs.
-                Experience truly private and performant AI, without the cloud.
+            <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">
+                Unlock exclusive insights to maximize pre-order benefits, navigate financing, and optimize your $2000+ device from day one.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-10 animate-fade-in delay-400">
-                <a href="#waitlist" class="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-lg">
-                    Join Early Access Waitlist
-                </a>
-                <a href="#features" class="bg-transparent border border-indigo-400 hover:border-indigo-600 text-indigo-300 hover:text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-lg">
-                    Discover Features
-                </a>
-            </div>
-
-            <!-- Limited Time Countdown -->
-            <div class="bg-gradient-to-r from-indigo-800 to-purple-800 p-6 rounded-lg shadow-xl max-w-md mx-auto transform -translate-y-8 sm:-translate-y-12 animate-pulse-light animate-fade-in delay-600">
-                <p class="text-lg sm:text-xl font-semibold text-white mb-3">Limited Early Access Window Closing Soon!</p>
-                <div id="countdown" class="flex justify-center items-center text-4xl sm:text-5xl font-extrabold text-indigo-200 gap-x-4">
-                    <span id="days">00</span><span class="text-gray-400">:</span>
-                    <span id="hours">00</span><span class="text-gray-400">:</span>
-                    <span id="minutes">00</span><span class="text-gray-400">:</span>
-                    <span id="seconds">00</span>
-                </div>
-                <p class="text-sm text-gray-300 mt-2">Secure your spot for exclusive beta access & introductory pricing.</p>
-            </div>
+            <a href="#early-bird" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-lg md:text-xl transition duration-300 transform hover:scale-105 shadow-xl">
+                Get Early Bird Access Now!
+            </a>
+            <p class="text-sm md:text-base text-gray-300 mt-4">Limited Time Offer. Don't Miss Out!</p>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-20 lg:py-24 bg-gray-900 relative overflow-hidden">
-        <div class="absolute inset-0 z-0 opacity-10" style="background-image: radial-gradient(circle at center, rgba(124, 58, 237, 0.1) 0%, transparent 70%);"></div>
-
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-white mb-12 lg:mb-16">
-                Revolutionize Your Local LLM Operations
+    <section id="features" class="py-20 px-4 bg-gray-950">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center mb-12 leading-tight">
+                What You'll Discover Inside the Playbook
             </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-
-                <!-- Feature 1: Automated Deployment -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-5xl mb-6 flex items-center justify-center w-16 h-16 bg-gray-700 rounded-full">⚙️</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Automated Deployment</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold mb-3 text-indigo-400 flex items-center">
+                        <span class="mr-3 text-3xl">🚀</span> Maximizing Pre-Order Benefits
+                    </h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Say goodbye to complex setups. Our platform handles one-click deployment of 300B+ LLM models specifically tuned for your AMD Ryzen AI MAX+ PRO 495 mini-PCs.
+                        Get verified strategies to secure the best pre-order deals, exclusive bundles, and early delivery slots. Be first in line for the iPhone Ultra!
                     </p>
                 </div>
-
-                <!-- Feature 2: Peak Performance Optimization -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-5xl mb-6 flex items-center justify-center w-16 h-16 bg-gray-700 rounded-full">⚡</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Peak Performance Optimization</h3>
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold mb-3 text-indigo-400 flex items-center">
+                        <span class="mr-3 text-3xl">💡</span> Comprehensive Accessory Buyer's Guide
+                    </h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Leverage proprietary optimizations to squeeze maximum performance out of your hardware, ensuring lightning-fast inference and reduced latency.
+                        Don't waste money on subpar accessories. Our curated guide helps you choose the perfect cases, chargers, audio gear, and more for your premium device.
                     </p>
                 </div>
-
-                <!-- Feature 3: Secure & Private AI -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-5xl mb-6 flex items-center justify-center w-16 h-16 bg-gray-700 rounded-full">🛡️</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Secure & Private AI</h3>
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold mb-3 text-indigo-400 flex items-center">
+                        <span class="mr-3 text-3xl">💰</span> Smart Financial Considerations
+                    </h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Keep your sensitive data on-premise. Our platform provides secure API endpoints for seamless local application integration, ensuring unparalleled privacy.
+                        Navigate trade-in values, understand financing options, and uncover strategies to manage the investment of a $2000+ device. Make financially savvy choices.
                     </p>
                 </div>
-
-                <!-- Feature 4: Real-time Performance Monitoring -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-5xl mb-6 flex items-center justify-center w-16 h-16 bg-gray-700 rounded-full">🔬</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Real-time Performance Monitoring</h3>
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold mb-3 text-indigo-400 flex items-center">
+                        <span class="mr-3 text-3xl">⚡</span> Day One Setup & Optimization Strategy
+                    </h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Gain deep insights into your LLM's performance with intuitive dashboards, monitoring usage, resource consumption, and model health in real-time.
+                        Hit the ground running with a step-by-step plan for setting up, personalizing, and optimizing your iPhone Ultra for peak performance, privacy, and productivity.
                     </p>
                 </div>
-
-                <!-- Feature 5: Pre-configured Environments -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-5xl mb-6 flex items-center justify-center w-16 h-16 bg-gray-700 rounded-full">📚</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Pre-configured Environments</h3>
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1 col-span-1 md:col-span-2 text-center">
+                    <h3 class="text-2xl font-bold mb-3 text-indigo-400 flex items-center justify-center">
+                        <span class="mr-3 text-3xl">✨</span> Plus, Advanced Tips & Tricks!
+                    </h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Jumpstart your projects with battle-tested, pre-configured LLM environments. Focus on innovation, not infrastructure headaches.
+                        Discover hidden features, master shortcuts, enhance your ecosystem integration, and ensure your iPhone Ultra truly elevates your digital life.
                     </p>
                 </div>
-
-                <!-- Feature 6: Seamless Updates & Management -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-5xl mb-6 flex items-center justify-center w-16 h-16 bg-gray-700 rounded-full">🚀</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Seamless Updates & Management</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Stay cutting-edge with automated updates and simplified model management, ensuring your local LLMs are always optimized and secure.
-                    </p>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Trend Highlight / Call to Action Section -->
-    <section class="py-16 sm:py-20 lg:py-24 bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-8">
-                The Future of Local AI is Here. <span class="text-purple-400">Are You Ready?</span>
+    <!-- Early Bird Discount & Countdown Section -->
+    <section id="early-bird" class="py-20 px-4 bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 text-white">
+                <span class="text-indigo-400">Limited Time Offer:</span> Don't Miss Your Early Bird Discount!
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-4xl mx-auto">
-                Inspired by groundbreaking advancements like <span class="text-indigo-400 font-semibold">AMD’s Ryzen AI MAX+ PRO 495 powering GMKtec’s EVO-X5 PRO to run 300B+ models locally on 192 GB of Unified Memory</span> (as reported by Wccftech), we're making this monumental power accessible and manageable for your projects.
+            <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                This exclusive discount on the 'iPhone Ultra Pre-Order & Ownership Playbook' will expire soon. Secure your copy now before the price increases!
             </p>
-            <a href="#waitlist" class="bg-gradient-to-r from-purple-600 to-fuchsia-600 hover:from-purple-700 hover:to-fuchsia-700 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-xl">
-                Be a Pioneer. Join the Waitlist!
+
+            <!-- Countdown Timer Placeholder -->
+            <div id="countdown" class="flex justify-center items-center space-x-4 md:space-x-8 mb-12">
+                <div>
+                    <div id="days" class="countdown-digit">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="text-indigo-400 text-5xl md:text-6xl font-extrabold">:</div>
+                <div>
+                    <div id="hours" class="countdown-digit">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="text-indigo-400 text-5xl md:text-6xl font-extrabold">:</div>
+                <div>
+                    <div id="minutes" class="countdown-digit">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="text-indigo-400 text-5xl md:text-6xl font-extrabold">:</div>
+                <div>
+                    <div id="seconds" class="countdown-digit">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+            <!--
+                IMPORTANT: This is placeholder HTML for the countdown.
+                In a live environment, a JavaScript snippet would dynamically
+                update the 'days', 'hours', 'minutes', and 'seconds' elements
+                based on a target end date for the early bird discount.
+                Example JS (not included in output as per 'ONLY raw HTML' rule):
+
+                <script>
+                    const targetDate = new Date("2024-10-26T00:00:00").getTime(); // Set your actual target date here
+                    const countdownFunction = setInterval(() => {
+                        const now = new Date().getTime();
+                        const distance = targetDate - now;
+
+                        if (distance < 0) {
+                            clearInterval(countdownFunction);
+                            document.getElementById("countdown").innerHTML = "<p class='text-red-500 text-2xl font-bold'>OFFER EXPIRED!</p>";
+                            return;
+                        }
+
+                        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                        document.getElementById("days").innerText = String(days).padStart(2, '0');
+                        document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+                        document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+                        document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+                    }, 1000);
+                </script>
+            -->
+
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-10">
+                <p class="text-gray-400 text-2xl line-through">
+                    Regular Price: <span class="font-bold">$97</span>
+                </p>
+                <p class="text-green-400 text-4xl md:text-5xl font-extrabold">
+                    Early Bird Special: <span class="bg-indigo-600 px-5 py-2 rounded-lg ml-2">$47</span>
+                </p>
+            </div>
+
+            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-5 px-12 rounded-full text-xl md:text-2xl transition duration-300 transform hover:scale-105 shadow-xl">
+                Claim Your Discounted Playbook Now!
             </a>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-20 lg:py-24 bg-gray-900 relative">
-        <div class="absolute inset-0 z-0 opacity-5" style="background-image: radial-gradient(circle at top left, rgba(124, 58, 237, 0.15) 0%, transparent 60%);"></div>
-        <div class="absolute inset-0 z-0 opacity-5" style="background-image: radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.15) 0%, transparent 60%);"></div>
-
-        <div class="relative z-10 max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6">
-                Secure Your Spot for Early Access
+    <!-- Waitlist / Opt-in Form Section -->
+    <section id="waitlist" class="py-20 px-4 bg-gray-950 border-t border-gray-800">
+        <div class="container mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-white">
+                Don't Miss Future Updates & Exclusives!
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10">
-                Be among the first to experience seamless local LLM operations. Limited spots available for beta access and exclusive launch pricing. Don't miss out!
+            <p class="text-lg md:text-xl text-gray-300 mb-8">
+                If you miss this early bird window, join our VIP waitlist to be notified instantly about future discounts, bonus content, and more high-value insights.
             </p>
-
-            <form action="#" method="POST" class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700">
-                <div class="mb-6">
-                    <label for="email" class="sr-only">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
-                           class="w-full p-4 rounded-lg bg-gray-700 text-white border border-gray-600 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-lg placeholder-gray-400 transition-all duration-200">
+            <form action="#" method="POST" class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent transition duration-200" required>
                 </div>
-                <div class="mb-6">
-                    <label for="name" class="sr-only">Full Name (Optional)</label>
-                    <input type="text" id="name" name="name" placeholder="Your Full Name (Optional)"
-                           class="w-full p-4 rounded-lg bg-gray-700 text-white border border-gray-600 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-lg placeholder-gray-400 transition-all duration-200">
+                <div class="mb-8 text-left">
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent transition duration-200" required>
                 </div>
-                <button type="submit"
-                        class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-xl">
-                    Join the Waitlist Now!
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-4 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-md">
+                    Join the VIP Waitlist
                 </button>
-                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, ever.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-800 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
-            &copy; <span id="currentYear"></span> LLM LocalOps. All rights reserved. Powered by AMD Ryzen AI MAX+ PRO 495.
+    <footer class="bg-gray-950 py-10 px-4 text-center text-gray-500 text-sm border-t border-gray-800">
+        <div class="container mx-auto">
+            <p>&copy; 2024 Digital Education Authority. All rights reserved. | <a href="#" class="text-indigo-400 hover:text-indigo-500">Privacy Policy</a> | <a href="#" class="text-indigo-400 hover:text-indigo-500">Terms of Service</a></p>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 7 days from now)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Set for 7 days from today
-
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
-
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "EXPIRED";
-                    const countdownWrapper = document.querySelector(".animate-pulse-light");
-                    if (countdownWrapper) {
-                        countdownWrapper.classList.remove('animate-pulse-light'); // Stop pulsing
-                        countdownWrapper.classList.add('opacity-50'); // Dim it
-                    }
-                    return;
-                }
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-            }, 1000);
-
-            // Set current year for footer
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-        });
-    </script>
 </body>
 </html>
