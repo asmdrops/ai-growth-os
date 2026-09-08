@@ -1,223 +1,205 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iPhone Ultra Playbook - Limited Time Early Bird Access</title>
-    <!-- Tailwind CSS CDN -->
+    <title>The Ultimate Dual-GPU DLSS 5 Performance Toolkit - Master Performance & Latency</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Custom Styles for a modern premium dark-mode aesthetic -->
     <style>
-        body {
-            font-family: 'Inter', sans-serif; /* A modern, clean font */
-        }
-        .hero-bg {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+        /* Custom styles for the hero background image for better control */
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?The,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            position: relative;
-        }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for strong text contrast */
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
-        .countdown-digit {
-            @apply text-5xl md:text-6xl lg:text-7xl font-extrabold text-indigo-400;
-        }
-        .countdown-label {
-            @apply text-sm md:text-base text-gray-400 uppercase tracking-wider mt-2;
-        }
-        /* Custom scroll-behavior for smooth anchor links */
-        html {
-            scroll-behavior: smooth;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-bg min-h-screen flex items-center justify-center text-center py-16 px-4">
-        <div class="hero-overlay"></div>
-        <div class="relative z-10 max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 text-white drop-shadow-lg">
-                Master Your iPhone Ultra: <br class="hidden md:inline">The Essential Pre-Order & Ownership Playbook
+    <header class="hero-background relative min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8">
+        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
+        <div class="relative z-10 text-center max-w-screen-xl mx-auto space-y-6 sm:space-y-8">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white drop-shadow-lg">
+                Unleash Dual-GPU DLSS 5: <br> Double Frames, <span class="text-indigo-400">Zero Latency Compromise</span>
             </h1>
-            <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">
-                Unlock exclusive insights to maximize pre-order benefits, navigate financing, and optimize your $2000+ device from day one.
+            <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+                The Digital Foundry trend is undeniable: <span class="font-semibold text-white">DLSS 5 with dual-GPUs can double your framerates.</span> But the accompanying latency can ruin the experience. Our toolkit is the definitive solution to harness raw power while meticulously mitigating every bottleneck.
             </p>
-            <a href="#early-bird" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-lg md:text-xl transition duration-300 transform hover:scale-105 shadow-xl">
-                Get Early Bird Access Now!
-            </a>
-            <p class="text-sm md:text-base text-gray-300 mt-4">Limited Time Offer. Don't Miss Out!</p>
+            <div class="mt-8">
+                <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                    Secure Early Access & Exclusive Bonuses!
+                </a>
+            </div>
+            <!-- Limited Time Countdown -->
+            <div class="mt-8 bg-gray-800 bg-opacity-70 rounded-lg p-4 sm:p-6 max-w-sm mx-auto shadow-xl border border-indigo-700">
+                <p class="text-lg text-white font-semibold mb-2">LIMITED-TIME OFFER:</p>
+                <div id="countdown" class="text-3xl sm:text-4xl font-bold text-indigo-400">
+                    <span id="days">00</span>d : <span id="hours">00</span>h : <span id="minutes">00</span>m : <span id="seconds">00</span>s
+                </div>
+                <p class="text-sm text-gray-400 mt-2">Special launch pricing & bonus content expires soon.</p>
+                <!-- JavaScript for countdown functionality would go here -->
+                <!-- For HTML-only output, this is a placeholder. -->
+                <script>
+                    // Example Countdown JavaScript (not rendered as part of raw HTML output, but for context)
+                    /*
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const countdownElements = {
+                            days: document.getElementById('days'),
+                            hours: document.getElementById('hours'),
+                            minutes: document.getElementById('minutes'),
+                            seconds: document.getElementById('seconds')
+                        };
+
+                        // Set your target date here (e.g., 7 days from now)
+                        const targetDate = new Date();
+                        targetDate.setDate(targetDate.getDate() + 7); // 7 days from today
+
+                        const updateCountdown = () => {
+                            const now = new Date().getTime();
+                            const distance = targetDate.getTime() - now;
+
+                            if (distance < 0) {
+                                clearInterval(countdownInterval);
+                                for (const key in countdownElements) {
+                                    countdownElements[key].innerText = "00";
+                                }
+                                document.getElementById('countdown').innerHTML = "EXPIRED!";
+                                return;
+                            }
+
+                            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                            countdownElements.days.innerText = String(days).padStart(2, '0');
+                            countdownElements.hours.innerText = String(hours).padStart(2, '0');
+                            countdownElements.minutes.innerText = String(minutes).padStart(2, '0');
+                            countdownElements.seconds.innerText = String(seconds).padStart(2, '0');
+                        };
+
+                        const countdownInterval = setInterval(updateCountdown, 1000);
+                        updateCountdown(); // Call once immediately to avoid flicker
+                    });
+                    */
+                </script>
+            </div>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 px-4 bg-gray-950">
-        <div class="container mx-auto max-w-5xl">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center mb-12 leading-tight">
-                What You'll Discover Inside the Playbook
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-2xl font-bold mb-3 text-indigo-400 flex items-center">
-                        <span class="mr-3 text-3xl">🚀</span> Maximizing Pre-Order Benefits
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Get verified strategies to secure the best pre-order deals, exclusive bundles, and early delivery slots. Be first in line for the iPhone Ultra!
-                    </p>
+    <section class="py-16 sm:py-20 px-4 bg-gray-800">
+        <div class="max-w-screen-xl mx-auto text-center space-y-10 sm:space-y-12">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">The Ultimate Toolkit for Unrivaled Performance</h2>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                No more complex setups or frustrating lag. This comprehensive digital product provides everything you need to leverage the full potential of DLSS 5 across two GPUs, ensuring breathtaking framerates without sacrificing responsiveness.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Feature 1: Video Course & Guide -->
+                <div class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-transparent hover:border-indigo-600">
+                    <div class="text-indigo-400 mb-4 flex justify-center">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.555-4.555A1 1 0 0121 6.828V17.172a1 1 0 01-1.445.823L15 14M15 10v4M10 10l-4.555-4.555A1 1 0 013 6.828V17.172a1 1 0 011.445.823L9 14M10 10v4M6 10H4a2 2 0 00-2 2v8a2 2 0 002 2h16a2 2 0 002-2v-8a2 2 0 00-2-2h-2m-8 0V7a2 2 0 00-2-2H8a2 2 0 00-2 2v3" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Comprehensive Video Course & Guide</h3>
+                    <p class="text-gray-400 text-base">Step-by-step video tutorials and a detailed written guide for seamless DLSS 5 setup, optimization, and advanced configuration across two GPUs.</p>
                 </div>
-                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-2xl font-bold mb-3 text-indigo-400 flex items-center">
-                        <span class="mr-3 text-3xl">💡</span> Comprehensive Accessory Buyer's Guide
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Don't waste money on subpar accessories. Our curated guide helps you choose the perfect cases, chargers, audio gear, and more for your premium device.
-                    </p>
+
+                <!-- Feature 2: Advanced Configuration Profiles -->
+                <div class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-transparent hover:border-indigo-600">
+                    <div class="text-indigo-400 mb-4 flex justify-center">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Advanced Configuration Profiles</h3>
+                    <p class="text-gray-400 text-base">Pre-optimized, downloadable profiles for popular games, allowing instant access to peak performance and stunning visuals with minimal effort.</p>
                 </div>
-                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-2xl font-bold mb-3 text-indigo-400 flex items-center">
-                        <span class="mr-3 text-3xl">💰</span> Smart Financial Considerations
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Navigate trade-in values, understand financing options, and uncover strategies to manage the investment of a $2000+ device. Make financially savvy choices.
-                    </p>
+
+                <!-- Feature 3: Custom 'Swapper' Utility -->
+                <div class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-transparent hover:border-indigo-600">
+                    <div class="text-indigo-400 mb-4 flex justify-center">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Exclusive 'Swapper' Utility</h3>
+                    <p class="text-gray-400 text-base">Our custom utility simplifies DLSS 5 mod management, letting you seamlessly swap configurations and ensure optimal compatibility with a single click.</p>
                 </div>
-                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-2xl font-bold mb-3 text-indigo-400 flex items-center">
-                        <span class="mr-3 text-3xl">⚡</span> Day One Setup & Optimization Strategy
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Hit the ground running with a step-by-step plan for setting up, personalizing, and optimizing your iPhone Ultra for peak performance, privacy, and productivity.
-                    </p>
+
+                <!-- Feature 4: Expert Latency Mitigation Strategies -->
+                <div class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-transparent hover:border-indigo-600">
+                    <div class="text-indigo-400 mb-4 flex justify-center">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Expert Latency Mitigation Strategies</h3>
+                    <p class="text-gray-400 text-base">Leverage proven techniques and expert insights to dramatically reduce input lag for specific use cases, ensuring high framerates don't come at a cost.</p>
                 </div>
-                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1 col-span-1 md:col-span-2 text-center">
-                    <h3 class="text-2xl font-bold mb-3 text-indigo-400 flex items-center justify-center">
-                        <span class="mr-3 text-3xl">✨</span> Plus, Advanced Tips & Tricks!
-                    </h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Discover hidden features, master shortcuts, enhance your ecosystem integration, and ensure your iPhone Ultra truly elevates your digital life.
-                    </p>
+
+                 <!-- Feature 5: Future-Proof Your Setup -->
+                 <div class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-transparent hover:border-indigo-600">
+                    <div class="text-indigo-400 mb-4 flex justify-center">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 0012 21a12.001 12.001 0 008.618-3.04c-.423-1.424-.962-2.87-1.637-4.32a11.955 11.955 0 01-3.553-5.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Future-Proof Your Performance</h3>
+                    <p class="text-gray-400 text-base">Understand the core principles to adapt and optimize for future DLSS iterations and GPU advancements, keeping your setup on the bleeding edge.</p>
+                </div>
+
+                 <!-- Feature 6: Dedicated Community & Support -->
+                 <div class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-transparent hover:border-indigo-600">
+                    <div class="text-indigo-400 mb-4 flex justify-center">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H2a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v10a2 0 002 2zm-2-9a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Premium Support & Private Community</h3>
+                    <p class="text-gray-400 text-base">Gain access to an exclusive community of power users and dedicated support channels for personalized assistance and advanced discussions.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Early Bird Discount & Countdown Section -->
-    <section id="early-bird" class="py-20 px-4 bg-gray-900 border-t border-gray-800">
-        <div class="container mx-auto max-w-4xl text-center">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 text-white">
-                <span class="text-indigo-400">Limited Time Offer:</span> Don't Miss Your Early Bird Discount!
-            </h2>
-            <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                This exclusive discount on the 'iPhone Ultra Pre-Order & Ownership Playbook' will expire soon. Secure your copy now before the price increases!
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 sm:py-20 px-4 bg-gray-900">
+        <div class="max-w-xl mx-auto text-center space-y-8 p-6 sm:p-8 rounded-lg bg-gray-800 shadow-2xl border border-indigo-700">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Don't Get Left Behind: Join the Exclusive Waitlist!</h2>
+            <p class="text-lg text-gray-300">
+                Be among the first to gain access to <span class="font-semibold text-white">"The Ultimate Dual-GPU DLSS 5 Performance & Latency Mitigation Toolkit."</span>
+                Early registrants will receive <span class="text-indigo-400 font-semibold">exclusive discounts and bonus content</span> not available to the general public!
             </p>
 
-            <!-- Countdown Timer Placeholder -->
-            <div id="countdown" class="flex justify-center items-center space-x-4 md:space-x-8 mb-12">
+            <form class="space-y-6">
                 <div>
-                    <div id="days" class="countdown-digit">00</div>
-                    <div class="countdown-label">Days</div>
+                    <label for="name" class="sr-only">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required
+                           class="w-full p-4 rounded-md bg-gray-700 border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 transition duration-200 text-base sm:text-lg">
                 </div>
-                <div class="text-indigo-400 text-5xl md:text-6xl font-extrabold">:</div>
                 <div>
-                    <div id="hours" class="countdown-digit">00</div>
-                    <div class="countdown-label">Hours</div>
+                    <label for="email" class="sr-only">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
+                           class="w-full p-4 rounded-md bg-gray-700 border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 transition duration-200 text-base sm:text-lg">
                 </div>
-                <div class="text-indigo-400 text-5xl md:text-6xl font-extrabold">:</div>
-                <div>
-                    <div id="minutes" class="countdown-digit">00</div>
-                    <div class="countdown-label">Minutes</div>
-                </div>
-                <div class="text-indigo-400 text-5xl md:text-6xl font-extrabold">:</div>
-                <div>
-                    <div id="seconds" class="countdown-digit">00</div>
-                    <div class="countdown-label">Seconds</div>
-                </div>
-            </div>
-            <!--
-                IMPORTANT: This is placeholder HTML for the countdown.
-                In a live environment, a JavaScript snippet would dynamically
-                update the 'days', 'hours', 'minutes', and 'seconds' elements
-                based on a target end date for the early bird discount.
-                Example JS (not included in output as per 'ONLY raw HTML' rule):
-
-                <script>
-                    const targetDate = new Date("2024-10-26T00:00:00").getTime(); // Set your actual target date here
-                    const countdownFunction = setInterval(() => {
-                        const now = new Date().getTime();
-                        const distance = targetDate - now;
-
-                        if (distance < 0) {
-                            clearInterval(countdownFunction);
-                            document.getElementById("countdown").innerHTML = "<p class='text-red-500 text-2xl font-bold'>OFFER EXPIRED!</p>";
-                            return;
-                        }
-
-                        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                        document.getElementById("days").innerText = String(days).padStart(2, '0');
-                        document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-                        document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-                        document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
-                    }, 1000);
-                </script>
-            -->
-
-            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-10">
-                <p class="text-gray-400 text-2xl line-through">
-                    Regular Price: <span class="font-bold">$97</span>
-                </p>
-                <p class="text-green-400 text-4xl md:text-5xl font-extrabold">
-                    Early Bird Special: <span class="bg-indigo-600 px-5 py-2 rounded-lg ml-2">$47</span>
-                </p>
-            </div>
-
-            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-5 px-12 rounded-full text-xl md:text-2xl transition duration-300 transform hover:scale-105 shadow-xl">
-                Claim Your Discounted Playbook Now!
-            </a>
-        </div>
-    </section>
-
-    <!-- Waitlist / Opt-in Form Section -->
-    <section id="waitlist" class="py-20 px-4 bg-gray-950 border-t border-gray-800">
-        <div class="container mx-auto max-w-2xl text-center">
-            <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-white">
-                Don't Miss Future Updates & Exclusives!
-            </h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-8">
-                If you miss this early bird window, join our VIP waitlist to be notified instantly about future discounts, bonus content, and more high-value insights.
-            </p>
-            <form action="#" method="POST" class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent transition duration-200" required>
-                </div>
-                <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent transition duration-200" required>
-                </div>
-                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-4 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-md">
-                    Join the VIP Waitlist
+                <button type="submit"
+                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-md text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                    Join the Waitlist Now!
                 </button>
             </form>
+            <p class="text-sm text-gray-400 mt-4">We respect your privacy. Your email will only be used for updates regarding this premium product.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-10 px-4 text-center text-gray-500 text-sm border-t border-gray-800">
-        <div class="container mx-auto">
-            <p>&copy; 2024 Digital Education Authority. All rights reserved. | <a href="#" class="text-indigo-400 hover:text-indigo-500">Privacy Policy</a> | <a href="#" class="text-indigo-400 hover:text-indigo-500">Terms of Service</a></p>
-        </div>
+    <footer class="bg-gray-900 py-8 px-4 text-center text-gray-500 text-xs sm:text-sm">
+        <p>&copy; 2024 Digital Education Authority. All rights reserved.</p>
     </footer>
 
 </body>
