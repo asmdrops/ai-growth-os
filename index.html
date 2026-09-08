@@ -3,223 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DLSS 5 Multi-GPU Modding: Advanced Setup & Optimization Guide - Exclusive Access</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Legend of Zelda 40th Anniversary Collector's Guide & Investment Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for premium dark mode aesthetic and animations */
         body {
-            font-family: 'Inter', sans-serif; /* A modern, clean font */
+            font-family: 'Montserrat', sans-serif;
+            background-color: #1a202c; /* Dark mode base */
+            color: #e2e8f0; /* Light text */
+        }
+        .font-mono {
+            font-family: 'Roboto Mono', monospace;
         }
         .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
         }
-        /* Custom Keyframe Animations for a dynamic feel */
-        @keyframes pulse-light {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.9; }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
         }
-        .animate-pulse-light { animation: pulse-light 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-
-        @keyframes pulse-fast {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
+        /* Custom scrollbar for aesthetic, optional */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        .animate-pulse-fast { animation: pulse-fast 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-
-        @keyframes bounce-subtle {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
+        ::-webkit-scrollbar-track {
+            background: #2d3748;
         }
-        .animate-bounce-subtle { animation: bounce-subtle 3s ease-in-out infinite; }
-
-        /* Ensure smooth scrolling for anchor links */
-        html {
-            scroll-behavior: smooth;
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5a6578;
         }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <section class="relative hero-background bg-cover bg-center min-h-screen flex items-center justify-center px-4 py-16 md:py-24 lg:py-32">
-        <!-- Overlay for text readability -->
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-
-        <div class="relative z-10 text-center max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mb-6 animate-pulse-light">
-                🚀 Unlock Next-Gen FPS: Master DLSS 5 Multi-GPU Modding!
+    <section class="hero-background min-h-screen flex items-center justify-center text-center p-4">
+        <div class="hero-overlay"></div>
+        <div class="relative z-10 max-w-screen-xl mx-auto flex flex-col items-center">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 drop-shadow-lg animate-fade-in-down">
+                Unlock the Ultimate Zelda Legacy:
+                <span class="block text-yellow-500 mt-2">40th Anniversary Collector's Guide & Investment Tracker</span>
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
-                Discover the expert's guide to reviving multi-GPU gaming with dedicated DLSS 5, achieving unprecedented performance gains, and advanced optimization techniques.
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light mb-10 max-w-4xl opacity-0 animate-fade-in-up delay-200">
+                Navigate the vast world of limited editions, remakes, and rare merchandise with precision. Make informed decisions and safeguard your collection's value before it's too late!
             </p>
 
-            <!-- Limited Time Countdown -->
-            <div class="bg-red-700 bg-opacity-90 p-4 sm:p-6 rounded-lg shadow-2xl mb-10 mx-auto max-w-md animate-bounce-subtle">
-                <p class="text-xl sm:text-2xl font-bold text-white mb-2 uppercase">
-                    Early Bird Access Ends In:
-                </p>
-                <div class="flex justify-center items-center space-x-2 sm:space-x-4 text-white font-mono text-2xl sm:text-4xl md:text-5xl">
-                    <span id="days" class="bg-gray-800 rounded-md p-2 sm:p-3">00</span><span class="text-xl sm:text-3xl">:</span>
-                    <span id="hours" class="bg-gray-800 rounded-md p-2 sm:p-3">00</span><span class="text-xl sm:text-3xl">:</span>
-                    <span id="minutes" class="bg-gray-800 rounded-md p-2 sm:p-3">00</span><span class="text-xl sm:text-3xl">:</span>
-                    <span id="seconds" class="bg-gray-800 rounded-md p-2 sm:p-3">00</span>
+            <!-- Countdown Timer -->
+            <div class="mb-10 p-4 bg-gray-800 bg-opacity-70 rounded-xl shadow-2xl border-2 border-yellow-600 animate-pulse-fade opacity-0 animate-fade-in-up delay-400">
+                <p class="text-lg sm:text-xl md:text-2xl font-bold text-yellow-400 mb-3">The Legend of Zelda 40th Anniversary Direct Countdown:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 sm:space-x-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-mono text-gray-50">
+                    <div class="flex flex-col items-center">
+                        <span id="days" class="px-3 sm:px-4 py-2 bg-gray-700 rounded-lg">00</span>
+                        <span class="text-sm sm:text-base mt-1 text-gray-400">Days</span>
+                    </div>
+                    <span class="text-yellow-500">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours" class="px-3 sm:px-4 py-2 bg-gray-700 rounded-lg">00</span>
+                        <span class="text-sm sm:text-base mt-1 text-gray-400">Hours</span>
+                    </div>
+                    <span class="text-yellow-500">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes" class="px-3 sm:px-4 py-2 bg-gray-700 rounded-lg">00</span>
+                        <span class="text-sm sm:text-base mt-1 text-gray-400">Minutes</span>
+                    </div>
+                    <span class="text-yellow-500">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds" class="px-3 sm:px-4 py-2 bg-gray-700 rounded-lg">00</span>
+                        <span class="text-sm sm:text-base mt-1 text-gray-400">Seconds</span>
+                    </div>
                 </div>
-                <p class="text-sm sm:text-base text-gray-200 mt-2">Days : Hours : Minutes : Seconds</p>
-                <!-- JavaScript for countdown functionality -->
-                <script>
-                    const countdownDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000); // 7 days from now
-                    const x = setInterval(function() {
-                        const now = new Date().getTime();
-                        const distance = countdownDate - now;
-
-                        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                        document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
-                        document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
-                        document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
-                        document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
-
-                        if (distance < 0) {
-                            clearInterval(x);
-                            // Hide countdown or display "EXPIRED" message
-                            document.querySelector('.animate-bounce-subtle').innerHTML = '<p class="text-xl sm:text-2xl font-bold text-white uppercase">Offer Expired!</p>';
-                        }
-                    }, 1000);
-                </script>
             </div>
+            <!-- End Countdown Timer -->
 
-            <a href="#waitlist" class="inline-block bg-blue-600 hover:bg-blue-700 transition duration-300 text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl shadow-lg hover:shadow-xl transform hover:scale-105">
-                🔥 Join the Exclusive Waitlist & Get Early Bird Access!
+            <a href="#waitlist" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl animate-bounce-once opacity-0 animate-fade-in-up delay-600">
+                Secure Your Early Access Now!
             </a>
-
-            <!-- Prominent Disclaimers -->
-            <div class="mt-12 p-6 bg-red-800 bg-opacity-80 rounded-lg shadow-xl border border-red-600 max-w-2xl mx-auto text-center animate-pulse-fast">
-                <p class="text-lg font-semibold text-white mb-3 flex items-center justify-center">
-                    ⚠️ IMPORTANT DISCLAIMER:
-                </p>
-                <ul class="list-disc list-inside text-red-200 text-base space-y-2 text-left sm:text-center">
-                    <li>Modding can carry inherent risks, including potential hardware damage. Proceed with caution.</li>
-                    <li>This setup may significantly increase power consumption. Ensure your PSU can handle the demand.</li>
-                    <li>We assume no responsibility for any damage incurred. This guide is for expert users.</li>
-                </ul>
-            </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 px-4 md:px-8 lg:px-16 bg-gray-900">
-        <div class="container mx-auto">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white mb-16">
-                What You'll Master in This Exclusive Guide
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12">
-
+    <section id="features" class="py-16 sm:py-20 bg-gray-900 text-gray-100 border-t border-gray-800">
+        <div class="container mx-auto px-4 max-w-screen-xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 text-yellow-500">What's Inside Your Ultimate Collector's Toolkit?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <h3 class="text-2xl font-bold text-blue-400 mb-4 flex items-center">
-                        ✨ Step-by-Step Implementation
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 flex items-center text-yellow-400">
+                        🎮 Comprehensive Console Breakdown
                     </h3>
-                    <p class="text-gray-300 text-lg">
-                        Dive into meticulously detailed instructions for setting up your multi-GPU DLSS 5 system from scratch, ensuring a flawless integration.
-                    </p>
+                    <p class="text-base sm:text-lg text-gray-300">Detailed insights into every limited edition console and hardware variant. Don't miss a single rare piece!</p>
                 </div>
-
                 <!-- Feature 2 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <h3 class="text-2xl font-bold text-green-400 mb-4 flex items-center">
-                        🛡️ Rigorous Risk Assessment & Mitigation
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 flex items-center text-yellow-400">
+                        🔄 Remake & Re-release Roadmap
                     </h3>
-                    <p class="text-gray-300 text-lg">
-                        Understand and address potential pitfalls. Learn to identify and mitigate risks, safeguarding your valuable hardware investments.
-                    </p>
+                    <p class="text-base sm:text-lg text-gray-300">Stay ahead with a full schedule and analysis of upcoming remakes, remasters, and re-releases. Anticipate market shifts!</p>
                 </div>
-
                 <!-- Feature 3 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <h3 class="text-2xl font-bold text-purple-400 mb-4 flex items-center">
-                        🔌 Specific Hardware Compatibility Matrix
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 flex items-center text-yellow-400">
+                        🎁 Exclusive Merchandise Database
                     </h3>
-                    <p class="text-gray-300 text-lg">
-                        Get definitive answers on what works and what doesn't. Our comprehensive compatibility guide saves you time and avoids costly mistakes.
-                    </p>
+                    <p class="text-base sm:text-lg text-gray-300">A deep dive into physical merchandise, including figurines, art books, and rare collectibles. Identify hidden gems! ✨</p>
                 </div>
-
                 <!-- Feature 4 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <h3 class="text-2xl font-bold text-yellow-400 mb-4 flex items-center">
-                        ⚙️ Advanced Performance Tuning Techniques
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 flex items-center text-yellow-400">
+                        🗓️ Pre-order Window Alerts
                     </h3>
-                    <p class="text-gray-300 text-lg">
-                        Unleash the full potential of your setup with expert-level tips and tricks for maximizing FPS and graphical fidelity.
-                    </p>
+                    <p class="text-base sm:text-lg text-gray-300">Timely notifications and strategies for securing sought-after pre-orders. Never miss a drop again! 🔔</p>
                 </div>
-
                 <!-- Feature 5 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <h3 class="text-2xl font-bold text-red-400 mb-4 flex items-center">
-                        📚 Exclusive E-book & Video Course Format
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 flex items-center text-yellow-400">
+                        📈 Secondary Market Value Analysis
                     </h3>
-                    <p class="text-gray-300 text-lg">
-                        Choose your preferred learning style! Delivered as a downloadable e-book or an immersive video course for ultimate flexibility.
-                    </p>
+                    <p class="text-base sm:text-lg text-gray-300">Expert analysis of historical and projected secondary market values for all items. Turn passion into profit! 💰</p>
                 </div>
-
                 <!-- Feature 6 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <h3 class="text-2xl font-bold text-teal-400 mb-4 flex items-center">
-                        📈 Future-Proof Your Gaming Experience
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 flex items-center text-yellow-400">
+                        🔮 Future-Proof Your Collection
                     </h3>
-                    <p class="text-gray-300 text-lg">
-                        Stay ahead of the curve. Learn how to adapt your setup for future updates and maintain peak performance for years to come.
-                    </p>
+                    <p class="text-base sm:text-lg text-gray-300">Strategies and tips to preserve and enhance the long-term value of your Zelda treasures. A true investment!</p>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-20 px-4 md:px-8 lg:px-16 bg-gray-800">
-        <div class="container mx-auto max-w-2xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white mb-10">
-                Secure Your Spot: Join the Exclusive Waitlist!
-            </h2>
-            <p class="text-lg text-gray-300 text-center mb-12">
-                Don't miss out on early bird pricing and immediate access the moment this guide is released. Limited spots available for the initial launch!
+    <section id="waitlist" class="py-16 sm:py-20 bg-gray-800 text-gray-100 border-t border-gray-700">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 text-yellow-500">Join the Collector's Guild Waitlist</h2>
+            <p class="text-lg sm:text-xl text-center mb-10 text-gray-300 max-w-xl mx-auto">
+                Be among the first to gain access to the 'Legend of Zelda 40th Anniversary Collector's Guide & Investment Tracker' and receive exclusive early bird offers!
             </p>
 
-            <form action="#" method="POST" class="bg-gray-900 p-8 sm:p-10 rounded-xl shadow-2xl border border-gray-700">
+            <form class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-2xl border border-gray-700">
                 <div class="mb-6">
-                    <label for="name" class="block text-gray-300 text-lg font-semibold mb-2">Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="w-full bg-gray-700 text-gray-100 border border-gray-600 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg transition duration-200" required>
+                    <label for="name" class="block text-lg sm:text-xl font-medium text-gray-200 mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Link (or your name)" required
+                           class="w-full p-3 sm:p-4 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-base sm:text-lg">
                 </div>
                 <div class="mb-8">
-                    <label for="email" class="block text-gray-300 text-lg font-semibold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="w-full bg-gray-700 text-gray-100 border border-gray-600 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg transition duration-200" required>
+                    <label for="email" class="block text-lg sm:text-xl font-medium text-gray-200 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="fairy@hyrule.com" required
+                           class="w-full p-3 sm:p-4 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-base sm:text-lg">
                 </div>
                 <button type="submit"
-                        class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 rounded-lg text-xl md:text-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
-                    🚀 Get Notified & Secure My Early Access!
+                        class="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 sm:py-4 rounded-md transition duration-300 transform hover:scale-105 shadow-lg text-lg sm:text-xl">
+                    Get Early Access & Updates
                 </button>
-                <p class="text-center text-gray-400 text-sm mt-6">
-                    We value your privacy. Your email will never be shared.
-                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-10 px-4 text-center text-gray-500 text-sm">
-        <div class="container mx-auto">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">DLSS 5 Multi-GPU Modding Guide - For expert enthusiasts only. Please review disclaimers.</p>
+    <footer class="bg-gray-900 text-gray-400 text-center py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2024 Digital Education Authority. All rights reserved. Not affiliated with Nintendo Co., Ltd.</p>
+            <p class="text-sm mt-2">Crafting knowledge products for discerning collectors and investors.</p>
         </div>
     </footer>
 
+    <script>
+        // Set the date we're counting down to
+        // Assuming "9.8.2026" means September 8, 2026, typical US format for dates with dots in this context
+        const countDownDate = new Date("September 8, 2026 00:00:00").getTime();
+
+        // Update the countdown every 1 second
+        const x = setInterval(function() {
+
+            // Get today's date and time
+            const now = new Date().getTime();
+
+            // Find the distance between now and the countdown date
+            const distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the corresponding elements
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+            // If the countdown is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "The 40th Anniversary Direct has Begun!";
+                document.getElementById("countdown").classList.add("text-yellow-500", "font-bold");
+                document.getElementById("countdown").classList.remove("text-gray-50", "space-x-4", "sm:space-x-6"); // Adjust styling for completion message
+            }
+        }, 1000);
+
+        // Simple Tailwind animation classes (can be more complex with @keyframes in style block)
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector('.animate-fade-in-down').classList.add('fade-in-down-active');
+            document.querySelector('.animate-fade-in-up.delay-200').classList.add('fade-in-up-active');
+            document.querySelector('.animate-fade-in-up.delay-400').classList.add('fade-in-up-active');
+            document.querySelector('.animate-fade-in-up.delay-600').classList.add('fade-in-up-active');
+        });
+    </script>
+    <!-- Simple inline styles for animations (as custom @keyframes can't be in Tailwind config via CDN easily) -->
+    <style>
+        .animate-fade-in-down {
+            animation: fadeInDown 1s ease-out forwards;
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        .animate-bounce-once {
+            animation: bounceOnce 1s ease-in-out forwards;
+        }
+        .animate-pulse-fade {
+            animation: pulseFade 2s infinite alternate ease-in-out;
+        }
+
+        .opacity-0 {
+            opacity: 0;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Adjusted timing for delays */
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-600 { animation-delay: 0.6s; }
+
+        @keyframes bounceOnce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes pulseFade {
+            0% {
+                box-shadow: 0 0 10px rgba(255, 222, 89, 0.4);
+                opacity: 0.9;
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(255, 222, 89, 0.8);
+                opacity: 1;
+            }
+            100% {
+                box-shadow: 0 0 10px rgba(255, 222, 89, 0.4);
+                opacity: 0.9;
+            }
+        }
+    </style>
 </body>
 </html>
