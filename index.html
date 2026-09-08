@@ -3,203 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ultimate Dual-GPU DLSS 5 Performance Toolkit - Master Performance & Latency</title>
+    <title>DLSS 5 Multi-GPU Modding: Advanced Setup & Optimization Guide - Exclusive Access</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for the hero background image for better control */
+        /* Custom styles for premium dark mode aesthetic and animations */
+        body {
+            font-family: 'Inter', sans-serif; /* A modern, clean font */
+        }
         .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?The,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+        }
+        /* Custom Keyframe Animations for a dynamic feel */
+        @keyframes pulse-light {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.9; }
+        }
+        .animate-pulse-light { animation: pulse-light 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+        @keyframes pulse-fast {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        .animate-pulse-fast { animation: pulse-fast 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+        @keyframes bounce-subtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        .animate-bounce-subtle { animation: bounce-subtle 3s ease-in-out infinite; }
+
+        /* Ensure smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-background relative min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
-        <div class="relative z-10 text-center max-w-screen-xl mx-auto space-y-6 sm:space-y-8">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white drop-shadow-lg">
-                Unleash Dual-GPU DLSS 5: <br> Double Frames, <span class="text-indigo-400">Zero Latency Compromise</span>
+    <section class="relative hero-background bg-cover bg-center min-h-screen flex items-center justify-center px-4 py-16 md:py-24 lg:py-32">
+        <!-- Overlay for text readability -->
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+
+        <div class="relative z-10 text-center max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mb-6 animate-pulse-light">
+                🚀 Unlock Next-Gen FPS: Master DLSS 5 Multi-GPU Modding!
             </h1>
-            <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-                The Digital Foundry trend is undeniable: <span class="font-semibold text-white">DLSS 5 with dual-GPUs can double your framerates.</span> But the accompanying latency can ruin the experience. Our toolkit is the definitive solution to harness raw power while meticulously mitigating every bottleneck.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Discover the expert's guide to reviving multi-GPU gaming with dedicated DLSS 5, achieving unprecedented performance gains, and advanced optimization techniques.
             </p>
-            <div class="mt-8">
-                <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                    Secure Early Access & Exclusive Bonuses!
-                </a>
-            </div>
+
             <!-- Limited Time Countdown -->
-            <div class="mt-8 bg-gray-800 bg-opacity-70 rounded-lg p-4 sm:p-6 max-w-sm mx-auto shadow-xl border border-indigo-700">
-                <p class="text-lg text-white font-semibold mb-2">LIMITED-TIME OFFER:</p>
-                <div id="countdown" class="text-3xl sm:text-4xl font-bold text-indigo-400">
-                    <span id="days">00</span>d : <span id="hours">00</span>h : <span id="minutes">00</span>m : <span id="seconds">00</span>s
+            <div class="bg-red-700 bg-opacity-90 p-4 sm:p-6 rounded-lg shadow-2xl mb-10 mx-auto max-w-md animate-bounce-subtle">
+                <p class="text-xl sm:text-2xl font-bold text-white mb-2 uppercase">
+                    Early Bird Access Ends In:
+                </p>
+                <div class="flex justify-center items-center space-x-2 sm:space-x-4 text-white font-mono text-2xl sm:text-4xl md:text-5xl">
+                    <span id="days" class="bg-gray-800 rounded-md p-2 sm:p-3">00</span><span class="text-xl sm:text-3xl">:</span>
+                    <span id="hours" class="bg-gray-800 rounded-md p-2 sm:p-3">00</span><span class="text-xl sm:text-3xl">:</span>
+                    <span id="minutes" class="bg-gray-800 rounded-md p-2 sm:p-3">00</span><span class="text-xl sm:text-3xl">:</span>
+                    <span id="seconds" class="bg-gray-800 rounded-md p-2 sm:p-3">00</span>
                 </div>
-                <p class="text-sm text-gray-400 mt-2">Special launch pricing & bonus content expires soon.</p>
-                <!-- JavaScript for countdown functionality would go here -->
-                <!-- For HTML-only output, this is a placeholder. -->
+                <p class="text-sm sm:text-base text-gray-200 mt-2">Days : Hours : Minutes : Seconds</p>
+                <!-- JavaScript for countdown functionality -->
                 <script>
-                    // Example Countdown JavaScript (not rendered as part of raw HTML output, but for context)
-                    /*
-                    document.addEventListener('DOMContentLoaded', () => {
-                        const countdownElements = {
-                            days: document.getElementById('days'),
-                            hours: document.getElementById('hours'),
-                            minutes: document.getElementById('minutes'),
-                            seconds: document.getElementById('seconds')
-                        };
+                    const countdownDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000); // 7 days from now
+                    const x = setInterval(function() {
+                        const now = new Date().getTime();
+                        const distance = countdownDate - now;
 
-                        // Set your target date here (e.g., 7 days from now)
-                        const targetDate = new Date();
-                        targetDate.setDate(targetDate.getDate() + 7); // 7 days from today
+                        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                        const updateCountdown = () => {
-                            const now = new Date().getTime();
-                            const distance = targetDate.getTime() - now;
+                        document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+                        document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+                        document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+                        document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
 
-                            if (distance < 0) {
-                                clearInterval(countdownInterval);
-                                for (const key in countdownElements) {
-                                    countdownElements[key].innerText = "00";
-                                }
-                                document.getElementById('countdown').innerHTML = "EXPIRED!";
-                                return;
-                            }
-
-                            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                            countdownElements.days.innerText = String(days).padStart(2, '0');
-                            countdownElements.hours.innerText = String(hours).padStart(2, '0');
-                            countdownElements.minutes.innerText = String(minutes).padStart(2, '0');
-                            countdownElements.seconds.innerText = String(seconds).padStart(2, '0');
-                        };
-
-                        const countdownInterval = setInterval(updateCountdown, 1000);
-                        updateCountdown(); // Call once immediately to avoid flicker
-                    });
-                    */
+                        if (distance < 0) {
+                            clearInterval(x);
+                            // Hide countdown or display "EXPIRED" message
+                            document.querySelector('.animate-bounce-subtle').innerHTML = '<p class="text-xl sm:text-2xl font-bold text-white uppercase">Offer Expired!</p>';
+                        }
+                    }, 1000);
                 </script>
             </div>
+
+            <a href="#waitlist" class="inline-block bg-blue-600 hover:bg-blue-700 transition duration-300 text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl shadow-lg hover:shadow-xl transform hover:scale-105">
+                🔥 Join the Exclusive Waitlist & Get Early Bird Access!
+            </a>
+
+            <!-- Prominent Disclaimers -->
+            <div class="mt-12 p-6 bg-red-800 bg-opacity-80 rounded-lg shadow-xl border border-red-600 max-w-2xl mx-auto text-center animate-pulse-fast">
+                <p class="text-lg font-semibold text-white mb-3 flex items-center justify-center">
+                    ⚠️ IMPORTANT DISCLAIMER:
+                </p>
+                <ul class="list-disc list-inside text-red-200 text-base space-y-2 text-left sm:text-center">
+                    <li>Modding can carry inherent risks, including potential hardware damage. Proceed with caution.</li>
+                    <li>This setup may significantly increase power consumption. Ensure your PSU can handle the demand.</li>
+                    <li>We assume no responsibility for any damage incurred. This guide is for expert users.</li>
+                </ul>
+            </div>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-20 px-4 bg-gray-800">
-        <div class="max-w-screen-xl mx-auto text-center space-y-10 sm:space-y-12">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">The Ultimate Toolkit for Unrivaled Performance</h2>
-            <p class="text-lg text-gray-300 max-w-3xl mx-auto">
-                No more complex setups or frustrating lag. This comprehensive digital product provides everything you need to leverage the full potential of DLSS 5 across two GPUs, ensuring breathtaking framerates without sacrificing responsiveness.
-            </p>
+    <section id="features" class="py-20 px-4 md:px-8 lg:px-16 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white mb-16">
+                What You'll Master in This Exclusive Guide
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                <!-- Feature 1: Video Course & Guide -->
-                <div class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-transparent hover:border-indigo-600">
-                    <div class="text-indigo-400 mb-4 flex justify-center">
-                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.555-4.555A1 1 0 0121 6.828V17.172a1 1 0 01-1.445.823L15 14M15 10v4M10 10l-4.555-4.555A1 1 0 013 6.828V17.172a1 1 0 011.445.823L9 14M10 10v4M6 10H4a2 2 0 00-2 2v8a2 2 0 002 2h16a2 2 0 002-2v-8a2 2 0 00-2-2h-2m-8 0V7a2 2 0 00-2-2H8a2 2 0 00-2 2v3" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Comprehensive Video Course & Guide</h3>
-                    <p class="text-gray-400 text-base">Step-by-step video tutorials and a detailed written guide for seamless DLSS 5 setup, optimization, and advanced configuration across two GPUs.</p>
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <h3 class="text-2xl font-bold text-blue-400 mb-4 flex items-center">
+                        ✨ Step-by-Step Implementation
+                    </h3>
+                    <p class="text-gray-300 text-lg">
+                        Dive into meticulously detailed instructions for setting up your multi-GPU DLSS 5 system from scratch, ensuring a flawless integration.
+                    </p>
                 </div>
 
-                <!-- Feature 2: Advanced Configuration Profiles -->
-                <div class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-transparent hover:border-indigo-600">
-                    <div class="text-indigo-400 mb-4 flex justify-center">
-                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Advanced Configuration Profiles</h3>
-                    <p class="text-gray-400 text-base">Pre-optimized, downloadable profiles for popular games, allowing instant access to peak performance and stunning visuals with minimal effort.</p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <h3 class="text-2xl font-bold text-green-400 mb-4 flex items-center">
+                        🛡️ Rigorous Risk Assessment & Mitigation
+                    </h3>
+                    <p class="text-gray-300 text-lg">
+                        Understand and address potential pitfalls. Learn to identify and mitigate risks, safeguarding your valuable hardware investments.
+                    </p>
                 </div>
 
-                <!-- Feature 3: Custom 'Swapper' Utility -->
-                <div class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-transparent hover:border-indigo-600">
-                    <div class="text-indigo-400 mb-4 flex justify-center">
-                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Exclusive 'Swapper' Utility</h3>
-                    <p class="text-gray-400 text-base">Our custom utility simplifies DLSS 5 mod management, letting you seamlessly swap configurations and ensure optimal compatibility with a single click.</p>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <h3 class="text-2xl font-bold text-purple-400 mb-4 flex items-center">
+                        🔌 Specific Hardware Compatibility Matrix
+                    </h3>
+                    <p class="text-gray-300 text-lg">
+                        Get definitive answers on what works and what doesn't. Our comprehensive compatibility guide saves you time and avoids costly mistakes.
+                    </p>
                 </div>
 
-                <!-- Feature 4: Expert Latency Mitigation Strategies -->
-                <div class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-transparent hover:border-indigo-600">
-                    <div class="text-indigo-400 mb-4 flex justify-center">
-                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Expert Latency Mitigation Strategies</h3>
-                    <p class="text-gray-400 text-base">Leverage proven techniques and expert insights to dramatically reduce input lag for specific use cases, ensuring high framerates don't come at a cost.</p>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4 flex items-center">
+                        ⚙️ Advanced Performance Tuning Techniques
+                    </h3>
+                    <p class="text-gray-300 text-lg">
+                        Unleash the full potential of your setup with expert-level tips and tricks for maximizing FPS and graphical fidelity.
+                    </p>
                 </div>
 
-                 <!-- Feature 5: Future-Proof Your Setup -->
-                 <div class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-transparent hover:border-indigo-600">
-                    <div class="text-indigo-400 mb-4 flex justify-center">
-                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 0012 21a12.001 12.001 0 008.618-3.04c-.423-1.424-.962-2.87-1.637-4.32a11.955 11.955 0 01-3.553-5.016z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Future-Proof Your Performance</h3>
-                    <p class="text-gray-400 text-base">Understand the core principles to adapt and optimize for future DLSS iterations and GPU advancements, keeping your setup on the bleeding edge.</p>
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <h3 class="text-2xl font-bold text-red-400 mb-4 flex items-center">
+                        📚 Exclusive E-book & Video Course Format
+                    </h3>
+                    <p class="text-gray-300 text-lg">
+                        Choose your preferred learning style! Delivered as a downloadable e-book or an immersive video course for ultimate flexibility.
+                    </p>
                 </div>
 
-                 <!-- Feature 6: Dedicated Community & Support -->
-                 <div class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-transparent hover:border-indigo-600">
-                    <div class="text-indigo-400 mb-4 flex justify-center">
-                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H2a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v10a2 0 002 2zm-2-9a4 4 0 11-8 0 4 4 0 018 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Premium Support & Private Community</h3>
-                    <p class="text-gray-400 text-base">Gain access to an exclusive community of power users and dedicated support channels for personalized assistance and advanced discussions.</p>
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <h3 class="text-2xl font-bold text-teal-400 mb-4 flex items-center">
+                        📈 Future-Proof Your Gaming Experience
+                    </h3>
+                    <p class="text-gray-300 text-lg">
+                        Stay ahead of the curve. Learn how to adapt your setup for future updates and maintain peak performance for years to come.
+                    </p>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-20 px-4 bg-gray-900">
-        <div class="max-w-xl mx-auto text-center space-y-8 p-6 sm:p-8 rounded-lg bg-gray-800 shadow-2xl border border-indigo-700">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Don't Get Left Behind: Join the Exclusive Waitlist!</h2>
-            <p class="text-lg text-gray-300">
-                Be among the first to gain access to <span class="font-semibold text-white">"The Ultimate Dual-GPU DLSS 5 Performance & Latency Mitigation Toolkit."</span>
-                Early registrants will receive <span class="text-indigo-400 font-semibold">exclusive discounts and bonus content</span> not available to the general public!
+    <section id="waitlist" class="py-20 px-4 md:px-8 lg:px-16 bg-gray-800">
+        <div class="container mx-auto max-w-2xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white mb-10">
+                Secure Your Spot: Join the Exclusive Waitlist!
+            </h2>
+            <p class="text-lg text-gray-300 text-center mb-12">
+                Don't miss out on early bird pricing and immediate access the moment this guide is released. Limited spots available for the initial launch!
             </p>
 
-            <form class="space-y-6">
-                <div>
-                    <label for="name" class="sr-only">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required
-                           class="w-full p-4 rounded-md bg-gray-700 border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 transition duration-200 text-base sm:text-lg">
+            <form action="#" method="POST" class="bg-gray-900 p-8 sm:p-10 rounded-xl shadow-2xl border border-gray-700">
+                <div class="mb-6">
+                    <label for="name" class="block text-gray-300 text-lg font-semibold mb-2">Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="w-full bg-gray-700 text-gray-100 border border-gray-600 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg transition duration-200" required>
                 </div>
-                <div>
-                    <label for="email" class="sr-only">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
-                           class="w-full p-4 rounded-md bg-gray-700 border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 transition duration-200 text-base sm:text-lg">
+                <div class="mb-8">
+                    <label for="email" class="block text-gray-300 text-lg font-semibold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                           class="w-full bg-gray-700 text-gray-100 border border-gray-600 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg transition duration-200" required>
                 </div>
                 <button type="submit"
-                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-md text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                    Join the Waitlist Now!
+                        class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 rounded-lg text-xl md:text-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
+                    🚀 Get Notified & Secure My Early Access!
                 </button>
+                <p class="text-center text-gray-400 text-sm mt-6">
+                    We value your privacy. Your email will never be shared.
+                </p>
             </form>
-            <p class="text-sm text-gray-400 mt-4">We respect your privacy. Your email will only be used for updates regarding this premium product.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 px-4 text-center text-gray-500 text-xs sm:text-sm">
-        <p>&copy; 2024 Digital Education Authority. All rights reserved.</p>
+    <footer class="bg-gray-950 py-10 px-4 text-center text-gray-500 text-sm">
+        <div class="container mx-auto">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">DLSS 5 Multi-GPU Modding Guide - For expert enthusiasts only. Please review disclaimers.</p>
+        </div>
     </footer>
 
 </body>
