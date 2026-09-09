@@ -3,195 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legend of Zelda 40th Anniversary Collector's Guide & Investment Tracker</title>
+    <title>Smart Home Privacy Guardian - Reclaim Your Network Privacy</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #1a202c; /* Dark mode base */
-            color: #e2e8f0; /* Light text */
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         }
-        .font-mono {
-            font-family: 'Roboto Mono', monospace;
+        /* Custom styles for the countdown timer for a premium look */
+        .countdown-segment {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.08); /* Slightly lighter background for contrast */
+            padding: 1rem 1.25rem;
+            border-radius: 0.75rem;
+            min-width: 5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
+        .countdown-value {
+            font-size: 2.8rem; /* Larger font size */
+            font-weight: bold;
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 0.5rem;
         }
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+        .countdown-label {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            color: #ccc;
+            letter-spacing: 0.05em;
         }
-        /* Custom scrollbar for aesthetic, optional */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #2d3748;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #4a5568;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #5a6578;
+        @media (max-width: 640px) {
+            .countdown-value {
+                font-size: 2rem;
+            }
+            .countdown-segment {
+                min-width: 4rem;
+                padding: 0.75rem 1rem;
+            }
         }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <section class="hero-background min-h-screen flex items-center justify-center text-center p-4">
-        <div class="hero-overlay"></div>
-        <div class="relative z-10 max-w-screen-xl mx-auto flex flex-col items-center">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 drop-shadow-lg animate-fade-in-down">
-                Unlock the Ultimate Zelda Legacy:
-                <span class="block text-yellow-500 mt-2">40th Anniversary Collector's Guide & Investment Tracker</span>
+    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');"></div>
+        <div class="absolute inset-0 bg-gray-900 opacity-80"></div> <!-- Dark overlay for text readability -->
+        <div class="relative z-10 p-4 max-w-5xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                Your Smart Home is Exposing You.<br>We Stop It.
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light mb-10 max-w-4xl opacity-0 animate-fade-in-up delay-200">
-                Navigate the vast world of limited editions, remakes, and rare merchandise with precision. Make informed decisions and safeguard your collection's value before it's too late!
+            <p class="text-lg sm:text-xl lg:text-2xl mb-10 text-gray-300 max-w-3xl mx-auto">
+                <span class="font-semibold text-orange-400">The LG TV scandal was just the beginning.</span>
+                Reclaim your digital privacy with the Smart Home Privacy Guardian.
+                Actively monitor, detect, and secure your IoT devices from silent surveillance.
             </p>
-
-            <!-- Countdown Timer -->
-            <div class="mb-10 p-4 bg-gray-800 bg-opacity-70 rounded-xl shadow-2xl border-2 border-yellow-600 animate-pulse-fade opacity-0 animate-fade-in-up delay-400">
-                <p class="text-lg sm:text-xl md:text-2xl font-bold text-yellow-400 mb-3">The Legend of Zelda 40th Anniversary Direct Countdown:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 sm:space-x-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-mono text-gray-50">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="px-3 sm:px-4 py-2 bg-gray-700 rounded-lg">00</span>
-                        <span class="text-sm sm:text-base mt-1 text-gray-400">Days</span>
-                    </div>
-                    <span class="text-yellow-500">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="px-3 sm:px-4 py-2 bg-gray-700 rounded-lg">00</span>
-                        <span class="text-sm sm:text-base mt-1 text-gray-400">Hours</span>
-                    </div>
-                    <span class="text-yellow-500">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="px-3 sm:px-4 py-2 bg-gray-700 rounded-lg">00</span>
-                        <span class="text-sm sm:text-base mt-1 text-gray-400">Minutes</span>
-                    </div>
-                    <span class="text-yellow-500">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="px-3 sm:px-4 py-2 bg-gray-700 rounded-lg">00</span>
-                        <span class="text-sm sm:text-base mt-1 text-gray-400">Seconds</span>
-                    </div>
-                </div>
-            </div>
-            <!-- End Countdown Timer -->
-
-            <a href="#waitlist" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl animate-bounce-once opacity-0 animate-fade-in-up delay-600">
-                Secure Your Early Access Now!
+            <a href="#waitlist" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-700 hover:from-indigo-700 hover:to-purple-800 text-white font-bold py-4 px-8 rounded-full text-xl sm:text-2xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+                Secure My Home - Join the Waitlist
             </a>
         </div>
     </section>
 
+    <!-- Problem/Trend Section - Highlighting the LG TV Scandal -->
+    <section class="py-20 bg-gray-800 text-center">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-white">
+                The Privacy Crisis Hidden in Your Home Network
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-6 leading-relaxed">
+                You trust your smart devices to make life easier, not to compromise your privacy. Yet, recent revelations like the <span class="font-semibold text-orange-400">LG Smart TV scanning your local network for phones and other devices</span> prove that your home network is a Wild West of data collection. Every smart plug, camera, and voice assistant could be a spy.
+            </p>
+            <p class="text-lg sm:text-xl text-gray-300 mb-10 italic">
+                "LG TV shown scanning LAN for third-party phones and other devices" — <a href="https://arstechnica.com/gadgets/2023/11/lg-tv-shown-scanning-lan-for-third-party-phones-and-other-devices/" target="_blank" class="text-indigo-400 hover:text-indigo-300 underline">arstechnica.com</a>
+            </p>
+            <p class="text-xl sm:text-2xl font-semibold text-white">
+                It's time for a guardian that stands between your smart devices and your personal privacy.
+            </p>
+        </div>
+    </section>
+
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-20 bg-gray-900 text-gray-100 border-t border-gray-800">
-        <div class="container mx-auto px-4 max-w-screen-xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 text-yellow-500">What's Inside Your Ultimate Collector's Toolkit?</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 flex items-center text-yellow-400">
-                        🎮 Comprehensive Console Breakdown
-                    </h3>
-                    <p class="text-base sm:text-lg text-gray-300">Detailed insights into every limited edition console and hardware variant. Don't miss a single rare piece!</p>
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-16 text-white">
+                How Guardian Delivers Unrivaled Home Privacy
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Feature 1: Complete Device Discovery -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+                    <div class="text-indigo-400 text-5xl mb-4">🔍</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Uncover Every Device</h3>
+                    <p class="text-gray-300">Automatically identifies every single IoT device connected to your home network, ensuring full visibility and control over your digital perimeter.</p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 flex items-center text-yellow-400">
-                        🔄 Remake & Re-release Roadmap
-                    </h3>
-                    <p class="text-base sm:text-lg text-gray-300">Stay ahead with a full schedule and analysis of upcoming remakes, remasters, and re-releases. Anticipate market shifts!</p>
+                <!-- Feature 2: Suspicious Behavior Detection -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+                    <div class="text-indigo-400 text-5xl mb-4">🚨</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Detect Covert Activities</h3>
+                    <p class="text-gray-300">Flags unauthorized scanning, unusual data uploads, and any anomalous network behavior that signals a potential privacy breach or threat.</p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 flex items-center text-yellow-400">
-                        🎁 Exclusive Merchandise Database
-                    </h3>
-                    <p class="text-base sm:text-lg text-gray-300">A deep dive into physical merchandise, including figurines, art books, and rare collectibles. Identify hidden gems! ✨</p>
+                <!-- Feature 3: Real-time Alerts & Recommendations -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+                    <div class="text-indigo-400 text-5xl mb-4">💬</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Instant Alerts, Actionable Advice</h3>
+                    <p class="text-gray-300">Receive immediate notifications about detected threats, coupled with clear, step-by-step recommendations to secure your devices and privacy settings.</p>
                 </div>
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 flex items-center text-yellow-400">
-                        🗓️ Pre-order Window Alerts
-                    </h3>
-                    <p class="text-base sm:text-lg text-gray-300">Timely notifications and strategies for securing sought-after pre-orders. Never miss a drop again! 🔔</p>
+                <!-- Feature 4: Advanced Threat Detection (Premium) -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+                    <div class="text-orange-400 text-5xl mb-4">🛡️</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Advanced Threat Intelligence <span class="text-sm bg-purple-600 px-2 py-1 rounded-full ml-2">Premium</span></h3>
+                    <p class="text-gray-300">Harness cutting-edge, AI-driven analysis and global threat databases to identify even the most sophisticated attacks and vulnerabilities before they impact you.</p>
                 </div>
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 flex items-center text-yellow-400">
-                        📈 Secondary Market Value Analysis
-                    </h3>
-                    <p class="text-base sm:text-lg text-gray-300">Expert analysis of historical and projected secondary market values for all items. Turn passion into profit! 💰</p>
+                <!-- Feature 5: Guided Remediation Steps (Premium) -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+                    <div class="text-orange-400 text-5xl mb-4">🛠️</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Expert Guided Remediation <span class="text-sm bg-purple-600 px-2 py-1 rounded-full ml-2">Premium</span></h3>
+                    <p class="text-gray-300">Go beyond detection with guided, easy-to-follow steps and direct support to neutralize complex threats and fortify your smart home defenses effectively.</p>
                 </div>
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 flex items-center text-yellow-400">
-                        🔮 Future-Proof Your Collection
-                    </h3>
-                    <p class="text-base sm:text-lg text-gray-300">Strategies and tips to preserve and enhance the long-term value of your Zelda treasures. A true investment!</p>
+                <!-- Feature 6: Peace of Mind -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+                    <div class="text-indigo-400 text-5xl mb-4">🔒</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">True Digital Peace of Mind</h3>
+                    <p class="text-gray-300">Finally, enjoy your smart home without the anxiety. Guardian ensures your network and data are constantly protected, giving you peace of mind.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-20 bg-gray-800 text-gray-100 border-t border-gray-700">
-        <div class="container mx-auto px-4 max-w-2xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 text-yellow-500">Join the Collector's Guild Waitlist</h2>
-            <p class="text-lg sm:text-xl text-center mb-10 text-gray-300 max-w-xl mx-auto">
-                Be among the first to gain access to the 'Legend of Zelda 40th Anniversary Collector's Guide & Investment Tracker' and receive exclusive early bird offers!
+    <!-- Waitlist Section with Countdown -->
+    <section id="waitlist" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4 max-w-2xl text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-10 text-white">
+                Join the Exclusive Early Access Waitlist
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                Be among the first to experience unparalleled smart home privacy. Limited spots are available for early bird access and special launch discounts!
             </p>
 
-            <form class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-2xl border border-gray-700">
-                <div class="mb-6">
-                    <label for="name" class="block text-lg sm:text-xl font-medium text-gray-200 mb-2">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Link (or your name)" required
-                           class="w-full p-3 sm:p-4 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-base sm:text-lg">
+            <!-- Countdown Timer -->
+            <div class="mb-10 p-6 bg-gradient-to-r from-indigo-700 to-purple-800 rounded-xl shadow-xl flex justify-center gap-6 flex-wrap">
+                <div class="countdown-segment">
+                    <div id="days" class="countdown-value">00</div>
+                    <div class="countdown-label">Days</div>
                 </div>
-                <div class="mb-8">
-                    <label for="email" class="block text-lg sm:text-xl font-medium text-gray-200 mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="fairy@hyrule.com" required
-                           class="w-full p-3 sm:p-4 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-base sm:text-lg">
+                <div class="countdown-segment">
+                    <div id="hours" class="countdown-value">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-segment">
+                    <div id="minutes" class="countdown-value">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-segment">
+                    <div id="seconds" class="countdown-value">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+            <p class="text-xl font-semibold text-orange-400 mb-8">Special Founder's Access Closes In!</p>
+
+            <!-- Waitlist Form -->
+            <form class="bg-gray-900 p-8 rounded-xl shadow-2xl space-y-6">
+                <div>
+                    <label for="name" class="sr-only">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required
+                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg transition-colors duration-200">
+                </div>
+                <div>
+                    <label for="email" class="sr-only">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
+                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg transition-colors duration-200">
                 </div>
                 <button type="submit"
-                        class="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 sm:py-4 rounded-md transition duration-300 transform hover:scale-105 shadow-lg text-lg sm:text-xl">
-                    Get Early Access & Updates
+                        class="w-full bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-bold py-4 px-8 rounded-lg text-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+                    Join the Waitlist Now!
                 </button>
+                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, ever. Opt-out at any time.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 text-center py-8 border-t border-gray-800">
+    <footer class="bg-gray-900 py-10 text-center text-gray-500 text-sm">
         <div class="container mx-auto px-4">
-            <p>&copy; 2024 Digital Education Authority. All rights reserved. Not affiliated with Nintendo Co., Ltd.</p>
-            <p class="text-sm mt-2">Crafting knowledge products for discerning collectors and investors.</p>
+            <p>&copy; 2023 Smart Home Privacy Guardian. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Countdown Timer Script -->
     <script>
-        // Set the date we're counting down to
-        // Assuming "9.8.2026" means September 8, 2026, typical US format for dates with dots in this context
-        const countDownDate = new Date("September 8, 2026 00:00:00").getTime();
+        // Set the date we're counting down to (e.g., 30 days from now for a waitlist)
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 30); // Example: Waitlist closes in 30 days
 
-        // Update the countdown every 1 second
         const x = setInterval(function() {
-
-            // Get today's date and time
             const now = new Date().getTime();
-
-            // Find the distance between now and the countdown date
-            const distance = countDownDate - now;
+            const distance = countdownDate.getTime() - now;
 
             // Time calculations for days, hours, minutes and seconds
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -199,101 +206,27 @@
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Display the result in the corresponding elements
+            // Output the result in elements with respective IDs, padding with '0'
             document.getElementById("days").innerHTML = String(days).padStart(2, '0');
             document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
             document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
             document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-            // If the countdown is finished, write some text
+            // If the count down is finished, write some text
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("countdown").innerHTML = "The 40th Anniversary Direct has Begun!";
-                document.getElementById("countdown").classList.add("text-yellow-500", "font-bold");
-                document.getElementById("countdown").classList.remove("text-gray-50", "space-x-4", "sm:space-x-6"); // Adjust styling for completion message
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+                // Optionally change the entire countdown block to a "Waitlist Closed" message
+                const countdownContainer = document.querySelector('.countdown-segment').parentElement;
+                if (countdownContainer) {
+                    countdownContainer.innerHTML = '<p class="text-xl font-semibold text-red-500">Waitlist Closed!</p>';
+                }
+                document.querySelector('#waitlist p.text-xl').innerHTML = 'Stay tuned for launch announcements!';
             }
         }, 1000);
-
-        // Simple Tailwind animation classes (can be more complex with @keyframes in style block)
-        document.addEventListener("DOMContentLoaded", () => {
-            document.querySelector('.animate-fade-in-down').classList.add('fade-in-down-active');
-            document.querySelector('.animate-fade-in-up.delay-200').classList.add('fade-in-up-active');
-            document.querySelector('.animate-fade-in-up.delay-400').classList.add('fade-in-up-active');
-            document.querySelector('.animate-fade-in-up.delay-600').classList.add('fade-in-up-active');
-        });
     </script>
-    <!-- Simple inline styles for animations (as custom @keyframes can't be in Tailwind config via CDN easily) -->
-    <style>
-        .animate-fade-in-down {
-            animation: fadeInDown 1s ease-out forwards;
-        }
-        .animate-fade-in-up {
-            animation: fadeInUp 1s ease-out forwards;
-        }
-        .animate-bounce-once {
-            animation: bounceOnce 1s ease-in-out forwards;
-        }
-        .animate-pulse-fade {
-            animation: pulseFade 2s infinite alternate ease-in-out;
-        }
-
-        .opacity-0 {
-            opacity: 0;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Adjusted timing for delays */
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-400 { animation-delay: 0.4s; }
-        .delay-600 { animation-delay: 0.6s; }
-
-        @keyframes bounceOnce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
-        }
-
-        @keyframes pulseFade {
-            0% {
-                box-shadow: 0 0 10px rgba(255, 222, 89, 0.4);
-                opacity: 0.9;
-            }
-            50% {
-                box-shadow: 0 0 20px rgba(255, 222, 89, 0.8);
-                opacity: 1;
-            }
-            100% {
-                box-shadow: 0 0 10px rgba(255, 222, 89, 0.4);
-                opacity: 0.9;
-            }
-        }
-    </style>
 </body>
 </html>
