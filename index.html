@@ -3,230 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Home Privacy Guardian - Reclaim Your Network Privacy</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Gemini Power-User: Master Your Daily Brief & Unlock AI Productivity</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        /* Custom styles for dark overlay and responsive countdown */
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
         }
-        /* Custom styles for the countdown timer for a premium look */
-        .countdown-segment {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(255, 255, 255, 0.08); /* Slightly lighter background for contrast */
-            padding: 1rem 1.25rem;
-            border-radius: 0.75rem;
-            min-width: 5rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        .dark-overlay {
+            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for text readability */
         }
-        .countdown-value {
-            font-size: 2.8rem; /* Larger font size */
-            font-weight: bold;
-            color: #fff;
-            line-height: 1;
-            margin-bottom: 0.5rem;
+        #countdown span {
+            display: inline-block;
+            margin: 0 0.5rem;
+            padding: 0.5rem 0.75rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 0.375rem; /* Tailwind's rounded-md */
+            font-size: 1.5rem; /* Tailwind's text-2xl */
+            font-weight: 700; /* Tailwind's font-bold */
         }
-        .countdown-label {
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            color: #ccc;
-            letter-spacing: 0.05em;
+        #countdown span small {
+            display: block;
+            font-size: 0.75rem; /* Tailwind's text-sm */
+            font-weight: 400; /* Tailwind's font-normal */
+            margin-top: 0.25rem;
         }
-        @media (max-width: 640px) {
-            .countdown-value {
-                font-size: 2rem;
+        @media (max-width: 640px) { /* sm breakpoint */
+            #countdown span {
+                font-size: 1.25rem; /* Tailwind's text-xl */
+                padding: 0.375rem 0.5rem;
             }
-            .countdown-segment {
-                min-width: 4rem;
-                padding: 0.75rem 1rem;
+            #countdown span small {
+                font-size: 0.625rem; /* Even smaller on mobile */
             }
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans leading-normal tracking-normal">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');"></div>
-        <div class="absolute inset-0 bg-gray-900 opacity-80"></div> <!-- Dark overlay for text readability -->
-        <div class="relative z-10 p-4 max-w-5xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
-                Your Smart Home is Exposing You.<br>We Stop It.
+    <header class="hero-background relative h-screen flex items-center justify-center">
+        <div class="dark-overlay absolute inset-0"></div>
+        <div class="container mx-auto px-4 text-center relative z-10 py-16">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 leading-tight text-white">
+                Gemini Power-User: Master Your Daily Brief & Unlock AI Productivity
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl mb-10 text-gray-300 max-w-3xl mx-auto">
-                <span class="font-semibold text-orange-400">The LG TV scandal was just the beginning.</span>
-                Reclaim your digital privacy with the Smart Home Privacy Guardian.
-                Actively monitor, detect, and secure your IoT devices from silent surveillance.
+            <p class="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-8 font-light text-gray-200">
+                Transform how you interact with AI. Go beyond basic prompts and integrate Gemini into your workflow for unparalleled efficiency and insights.
             </p>
-            <a href="#waitlist" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-700 hover:from-indigo-700 hover:to-purple-800 text-white font-bold py-4 px-8 rounded-full text-xl sm:text-2xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-                Secure My Home - Join the Waitlist
+            <a href="#waitlist" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl md:text-2xl lg:text-3xl inline-block transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Secure Your Spot & Get Early Access!
             </a>
+            <p class="text-sm mt-4 text-gray-300">Limited-time offer for our first cohort.</p>
         </div>
-    </section>
-
-    <!-- Problem/Trend Section - Highlighting the LG TV Scandal -->
-    <section class="py-20 bg-gray-800 text-center">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-white">
-                The Privacy Crisis Hidden in Your Home Network
-            </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-6 leading-relaxed">
-                You trust your smart devices to make life easier, not to compromise your privacy. Yet, recent revelations like the <span class="font-semibold text-orange-400">LG Smart TV scanning your local network for phones and other devices</span> prove that your home network is a Wild West of data collection. Every smart plug, camera, and voice assistant could be a spy.
-            </p>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10 italic">
-                "LG TV shown scanning LAN for third-party phones and other devices" — <a href="https://arstechnica.com/gadgets/2023/11/lg-tv-shown-scanning-lan-for-third-party-phones-and-other-devices/" target="_blank" class="text-indigo-400 hover:text-indigo-300 underline">arstechnica.com</a>
-            </p>
-            <p class="text-xl sm:text-2xl font-semibold text-white">
-                It's time for a guardian that stands between your smart devices and your personal privacy.
-            </p>
-        </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section class="py-20 bg-gray-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-16 text-white">
-                How Guardian Delivers Unrivaled Home Privacy
+    <section id="features" class="py-16 sm:py-20 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-screen-xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 text-white">
+                What You'll Master
             </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Feature 1: Complete Device Discovery -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
-                    <div class="text-indigo-400 text-5xl mb-4">🔍</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Uncover Every Device</h3>
-                    <p class="text-gray-300">Automatically identifies every single IoT device connected to your home network, ensuring full visibility and control over your digital perimeter.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-blue-400 text-4xl mb-4 text-center md:text-left">
+                        <span role="img" aria-label="customization">⚙️</span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white text-center md:text-left">
+                        Daily Brief Deep Dive
+                    </h3>
+                    <p class="text-gray-300 text-base sm:text-lg text-center md:text-left">
+                        Unlock advanced strategies for customizing Gemini's Daily Brief. Learn to filter, prioritize, and extract deeper insights relevant to your professional goals, ensuring you start your day ahead of the curve.
+                    </p>
                 </div>
-                <!-- Feature 2: Suspicious Behavior Detection -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
-                    <div class="text-indigo-400 text-5xl mb-4">🚨</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Detect Covert Activities</h3>
-                    <p class="text-gray-300">Flags unauthorized scanning, unusual data uploads, and any anomalous network behavior that signals a potential privacy breach or threat.</p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-blue-400 text-4xl mb-4 text-center md:text-left">
+                        <span role="img" aria-label="prompt engineering">✍️</span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white text-center md:text-left">
+                        Sophisticated Prompt Crafting
+                    </h3>
+                    <p class="text-gray-300 text-base sm:text-lg text-center md:text-left">
+                        Move beyond basic queries. Discover how to engineer sophisticated prompts tailored for specific professional needs, yielding precise, high-quality, and actionable AI responses every time.
+                    </p>
                 </div>
-                <!-- Feature 3: Real-time Alerts & Recommendations -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
-                    <div class="text-indigo-400 text-5xl mb-4">💬</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Instant Alerts, Actionable Advice</h3>
-                    <p class="text-gray-300">Receive immediate notifications about detected threats, coupled with clear, step-by-step recommendations to secure your devices and privacy settings.</p>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-blue-400 text-4xl mb-4 text-center md:text-left">
+                        <span role="img" aria-label="workflow integration">🔗</span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white text-center md:text-left">
+                        Seamless Workflow Integration
+                    </h3>
+                    <p class="text-gray-300 text-base sm:text-lg text-center md:text-left">
+                        Integrate Gemini directly into your existing productivity workflows. Automate tasks, streamline research, and supercharge your daily routine without ever breaking your stride.
+                    </p>
                 </div>
-                <!-- Feature 4: Advanced Threat Detection (Premium) -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
-                    <div class="text-orange-400 text-5xl mb-4">🛡️</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Advanced Threat Intelligence <span class="text-sm bg-purple-600 px-2 py-1 rounded-full ml-2">Premium</span></h3>
-                    <p class="text-gray-300">Harness cutting-edge, AI-driven analysis and global threat databases to identify even the most sophisticated attacks and vulnerabilities before they impact you.</p>
-                </div>
-                <!-- Feature 5: Guided Remediation Steps (Premium) -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
-                    <div class="text-orange-400 text-5xl mb-4">🛠️</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Expert Guided Remediation <span class="text-sm bg-purple-600 px-2 py-1 rounded-full ml-2">Premium</span></h3>
-                    <p class="text-gray-300">Go beyond detection with guided, easy-to-follow steps and direct support to neutralize complex threats and fortify your smart home defenses effectively.</p>
-                </div>
-                <!-- Feature 6: Peace of Mind -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
-                    <div class="text-indigo-400 text-5xl mb-4">🔒</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">True Digital Peace of Mind</h3>
-                    <p class="text-gray-300">Finally, enjoy your smart home without the anxiety. Guardian ensures your network and data are constantly protected, giving you peace of mind.</p>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-blue-400 text-4xl mb-4 text-center md:text-left">
+                        <span role="img" aria-label="cutting-edge AI">🚀</span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white text-center md:text-left">
+                        Stay Ahead with Cutting-Edge AI
+                    </h3>
+                    <p class="text-gray-300 text-base sm:text-lg text-center md:text-left">
+                        Explore other powerful AI tools and emerging technologies. Maintain a formidable competitive edge by understanding the broader AI landscape and how to leverage it.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Section with Countdown -->
-    <section id="waitlist" class="py-20 bg-gray-800">
-        <div class="container mx-auto px-4 max-w-2xl text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-10 text-white">
-                Join the Exclusive Early Access Waitlist
+    <!-- Waitlist / Limited Time Offer Section -->
+    <section id="waitlist" class="py-16 sm:py-20 md:py-24 bg-gray-800 border-t border-gray-700">
+        <div class="container mx-auto px-4 max-w-screen-xl text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 text-white">
+                Don't Miss Out!
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8">
-                Be among the first to experience unparalleled smart home privacy. Limited spots are available for early bird access and special launch discounts!
+            <p class="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-blue-400">
+                Enrollment for the first cohort opens in:
             </p>
 
             <!-- Countdown Timer -->
-            <div class="mb-10 p-6 bg-gradient-to-r from-indigo-700 to-purple-800 rounded-xl shadow-xl flex justify-center gap-6 flex-wrap">
-                <div class="countdown-segment">
-                    <div id="days" class="countdown-value">00</div>
-                    <div class="countdown-label">Days</div>
-                </div>
-                <div class="countdown-segment">
-                    <div id="hours" class="countdown-value">00</div>
-                    <div class="countdown-label">Hours</div>
-                </div>
-                <div class="countdown-segment">
-                    <div id="minutes" class="countdown-value">00</div>
-                    <div class="countdown-label">Minutes</div>
-                </div>
-                <div class="countdown-segment">
-                    <div id="seconds" class="countdown-value">00</div>
-                    <div class="countdown-label">Seconds</div>
-                </div>
+            <div id="countdown" class="flex justify-center items-center mb-10 text-white flex-wrap">
+                <span class="m-2">00 <small>Days</small></span>
+                <span class="m-2">00 <small>Hours</small></span>
+                <span class="m-2">00 <small>Minutes</small></span>
+                <span class="m-2">00 <small>Seconds</small></span>
             </div>
-            <p class="text-xl font-semibold text-orange-400 mb-8">Special Founder's Access Closes In!</p>
 
-            <!-- Waitlist Form -->
-            <form class="bg-gray-900 p-8 rounded-xl shadow-2xl space-y-6">
-                <div>
-                    <label for="name" class="sr-only">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required
-                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg transition-colors duration-200">
+            <p class="text-lg sm:text-xl md:text-2xl mb-8 text-gray-300">
+                Join our exclusive waitlist now to receive early-bird pricing and priority access.
+            </p>
+            <form class="max-w-xl mx-auto">
+                <div class="flex flex-col sm:flex-row gap-4 mb-4">
+                    <input type="email" placeholder="Enter your best email" class="w-full sm:flex-1 p-3 sm:p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 text-lg sm:text-xl" required>
+                    <button type="submit" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-md text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                        Join The Waitlist
+                    </button>
                 </div>
-                <div>
-                    <label for="email" class="sr-only">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
-                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg transition-colors duration-200">
-                </div>
-                <button type="submit"
-                        class="w-full bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-bold py-4 px-8 rounded-lg text-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-                    Join the Waitlist Now!
-                </button>
-                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, ever. Opt-out at any time.</p>
+                <p class="text-sm text-gray-400 mt-2">We respect your privacy and will never spam you.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 text-center text-gray-500 text-sm">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2023 Smart Home Privacy Guardian. All rights reserved.</p>
+    <footer class="bg-gray-900 py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-gray-400 text-sm">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">Master Your Daily Brief & Unlock AI Productivity</p>
         </div>
     </footer>
 
-    <!-- Countdown Timer Script -->
+    <!-- JavaScript for Countdown -->
     <script>
-        // Set the date we're counting down to (e.g., 30 days from now for a waitlist)
-        const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 30); // Example: Waitlist closes in 30 days
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // 7 days from now
+            // For a specific date, use: const countDownDate = new Date("Jan 5, 2025 15:37:25").getTime();
 
-        const x = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countdownDate.getTime() - now;
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate.getTime() - now;
 
-            // Time calculations for days, hours, minutes and seconds
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Output the result in elements with respective IDs, padding with '0'
-            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-            // If the count down is finished, write some text
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("days").innerHTML = "00";
-                document.getElementById("hours").innerHTML = "00";
-                document.getElementById("minutes").innerHTML = "00";
-                document.getElementById("seconds").innerHTML = "00";
-                // Optionally change the entire countdown block to a "Waitlist Closed" message
-                const countdownContainer = document.querySelector('.countdown-segment').parentElement;
-                if (countdownContainer) {
-                    countdownContainer.innerHTML = '<p class="text-xl font-semibold text-red-500">Waitlist Closed!</p>';
+                const countdownElement = document.getElementById("countdown");
+                if (countdownElement) {
+                    countdownElement.innerHTML =
+                        `<span class="m-2">${days < 10 ? '0' + days : days} <small>Days</small></span>` +
+                        `<span class="m-2">${hours < 10 ? '0' + hours : hours} <small>Hours</small></span>` +
+                        `<span class="m-2">${minutes < 10 ? '0' + minutes : minutes} <small>Minutes</small></span>` +
+                        `<span class="m-2">${seconds < 10 ? '0' + seconds : seconds} <small>Seconds</small></span>`;
                 }
-                document.querySelector('#waitlist p.text-xl').innerHTML = 'Stay tuned for launch announcements!';
-            }
-        }, 1000);
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    if (countdownElement) {
+                        countdownElement.innerHTML = "<span class='text-red-500'>Enrollment Open!</span>";
+                        // Optionally change button text or redirect
+                        const ctaButton = document.querySelector('#waitlist button[type="submit"]');
+                        if(ctaButton) {
+                            ctaButton.textContent = "Enroll Now!";
+                            ctaButton.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+                            ctaButton.classList.add('bg-green-600', 'hover:bg-green-700');
+                        }
+                    }
+                }
+            }, 1000);
+        });
     </script>
 </body>
 </html>
