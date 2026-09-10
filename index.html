@@ -3,220 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foldable Ecosystem Deep Dive: Apple vs. Samsung - Premium Guide</title>
+    <title>AgentShield AI: Next-Gen AI Agent Security & Authentication Platform</title>
+    <meta name="description" content="Secure your platform from advanced bot attacks, data scraping, and rogue AI agents with AgentShield AI's real-time AI-powered security and adaptive authentication.">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23667EEA'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-5.5h-3V7h3v4z'/%3E%3C/svg%3E" type="image/svg+xml">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        /* Optional custom animations for a premium feel */
+        @keyframes pulse-ring {
+            0% { transform: scale(0.33); }
+            80%, 100% { opacity: 0; }
         }
-        h1, h2 {
-            font-family: 'Playfair Display', serif;
+        @keyframes pulse-dot {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
         }
-        .hero-bg {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        /* Ensure elements scale properly for 4K */
-        @media (min-width: 2560px) { /* Adjust breakpoint for larger screens like 4K */
-            .text-7xl { font-size: 8rem; /* Custom larger font size for 4K hero title */ }
-            .text-5xl { font-size: 6rem; } /* Custom larger font size for 4K countdown */
-            .text-2xl { font-size: 2.5rem; } /* Custom larger font size for 4K feature titles */
-        }
+        .animate-pulse-ring { animation: pulse-ring 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
+        .animate-pulse-dot { animation: pulse-dot 1.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite; }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased font-sans">
 
-    <!-- Hero Section -->
-    <header class="relative hero-bg h-screen flex items-center justify-center py-12 md:py-20">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay -->
-        <div class="relative z-10 text-center px-4 md:px-8 max-w-6xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-4 drop-shadow-lg">
-                Unlock the Future: Apple vs. Samsung Foldables Decoded
-            </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto drop-shadow-md">
-                Your Ultimate Buyer's & Optimization Guide to the Evolving Foldable Ecosystem. Stay ahead in a rapidly changing market.
-            </p>
-            
-            <!-- Countdown Timer -->
-            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 sm:p-8 rounded-xl shadow-2xl mb-8 transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                <p class="text-white text-xl md:text-2xl font-semibold mb-3">Limited Time Offer:</p>
-                <div id="countdown" class="flex justify-center space-x-4 md:space-x-6 text-white text-3xl sm:text-4xl md:text-5xl font-extrabold">
-                    <div><span id="days">00</span><p class="text-sm md:text-base font-normal">Days</p></div>
-                    <div><span id="hours">00</span><p class="text-sm md:text-base font-normal">Hours</p></div>
-                    <div><span id="minutes">00</span><p class="text-sm md:text-base font-normal">Minutes</p></div>
-                    <div><span id="seconds">00</span><p class="text-sm md:text-base font-normal">Seconds</p></div>
-                </div>
-            </div>
-
-            <p class="text-gray-200 text-3xl md:text-4xl font-bold mb-6">
-                <span class="line-through opacity-70 mr-3">$199</span>
-                <span class="text-green-400">$99</span>
-            </p>
-            <a href="#purchase" class="inline-block bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-green-300">
-                Get Your Guide Now!
+    <!-- Navbar -->
+    <header class="py-4 bg-gray-900 relative z-10 shadow-lg">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <svg class="h-8 w-8 text-indigo-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-2h2v2h-2zm-1-4h2V7h-2v6z"/>
+                </svg>
+                <span class="text-2xl font-bold tracking-tight">AgentShield AI</span>
             </a>
-            <p class="text-sm text-gray-400 mt-4 italic">Offer expires when the timer hits zero.</p>
+            <!-- Navigation links (e.g., Features, Waitlist) can be added here -->
         </div>
     </header>
 
-    <!-- Features Section -->
-    <section class="py-20 px-4 md:px-8 bg-gray-950">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl md:text-5xl font-bold text-center text-white mb-12">What You'll Discover Inside</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-700">
-                    <div class="text-4xl text-purple-400 mb-4">💡</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">In-Depth Apple vs. Samsung Analysis</h3>
-                    <p class="text-gray-300">Unbiased, comprehensive comparisons of current and anticipated foldable devices from the two industry giants. Understand their philosophies, strengths, and weaknesses.</p>
-                </div>
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-700">
-                    <div class="text-4xl text-blue-400 mb-4">⚙️</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Seamless Software Integration Strategies</h3>
-                    <p class="text-gray-300">Master how to integrate foldables into your existing digital ecosystem, optimizing productivity, workflows, and entertainment across all your devices.</p>
-                </div>
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-700">
-                    <div class="text-4xl text-green-400 mb-4">🚀</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Future-Proofing Your Foldable Investment</h3>
-                    <p class="text-gray-300">Expert advice on choosing a device that will stand the test of time, anticipating future trends and technological advancements in the foldable space.</p>
-                </div>
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-700">
-                    <div class="text-4xl text-yellow-400 mb-4">➕</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Essential Accessory Recommendations</h3>
-                    <p class="text-gray-300">Discover the best cases, styluses, and peripherals designed to enhance your foldable experience and protect your valuable investment.</p>
-                </div>
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-700">
-                    <div class="text-4xl text-red-400 mb-4">📈</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Exclusive Market Trend Analysis</h3>
-                    <p class="text-gray-300">Go beyond the headlines. Understand the 'Welcome to Foldables' trend, the competitive landscape, and what Apple's entry means for the market.</p>
-                </div>
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-700">
-                    <div class="text-4xl text-pink-400 mb-4">🎯</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Optimization Tips & Hidden Features</h3>
-                    <p class="text-gray-300">Unlock the full potential of your foldable with expert tips, productivity hacks, and discover hidden software features to enhance your daily use.</p>
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center h-screen flex items-center justify-center text-center overflow-hidden" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for readability -->
+        <div class="relative z-10 container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-gray-50 drop-shadow-lg">
+                Stop Rogue AI. Elevate Trust. <br class="hidden sm:inline">Next-Gen Security for the AI Era.
+            </h1>
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Tired of CAPTCHAs even rogue AIs mock? Leverage real-time intelligence to differentiate human, legitimate AI, and malicious agents. Adaptive protection designed for tomorrow's digital landscape.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
+                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 text-lg">
+                    Secure Early Access Now
+                </a>
+                <a href="#features" class="bg-transparent border-2 border-indigo-500 text-indigo-300 hover:bg-indigo-500 hover:text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 text-lg">
+                    Learn More
+                </a>
+            </div>
+
+            <!-- Limited Time Countdown -->
+            <div class="bg-gray-800 bg-opacity-80 backdrop-filter backdrop-blur-sm rounded-lg p-6 sm:p-8 mt-12 mx-auto max-w-sm sm:max-w-md shadow-2xl border border-indigo-500 transform hover:scale-105 transition-transform duration-300">
+                <p class="text-indigo-400 text-sm sm:text-base font-semibold mb-3 tracking-wide uppercase">Limited Early Access Offer:</p>
+                <p class="text-2xl sm:text-3xl font-extrabold text-white mb-4">Spots Closing Soon!</p>
+                <div id="countdown" class="flex justify-center space-x-2 sm:space-x-4">
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl sm:text-5xl font-mono font-bold text-green-400" id="days">00</span>
+                        <span class="text-gray-400 text-xs sm:text-sm uppercase">Days</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl sm:text-5xl font-mono font-bold text-green-400">:</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl sm:text-5xl font-mono font-bold text-green-400" id="hours">00</span>
+                        <span class="text-gray-400 text-xs sm:text-sm uppercase">Hours</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl sm:text-5xl font-mono font-bold text-green-400">:</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl sm:text-5xl font-mono font-bold text-green-400" id="minutes">00</span>
+                        <span class="text-gray-400 text-xs sm:text-sm uppercase">Minutes</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl sm:text-5xl font-mono font-bold text-green-400">:</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl sm:text-5xl font-mono font-bold text-green-400" id="seconds">00</span>
+                        <span class="text-gray-400 text-xs sm:text-sm uppercase">Seconds</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action / Purchase Form Section -->
-    <section id="purchase" class="py-20 px-4 md:px-8 bg-gray-900">
-        <div class="container mx-auto max-w-2xl text-center">
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-8">Don't Miss Out! Get Your Guide Now.</h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-10">
-                This exclusive deep dive offers unparalleled insights. Secure your copy at the special limited-time price before it's gone.
+    <!-- Features Section -->
+    <section id="features" class="py-16 sm:py-24 bg-gray-900 relative">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-16 text-white leading-tight">
+                Intelligent Defense for an AI-Driven World
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
+
+                <!-- Feature 1: Real-Time AI Agent Detection -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-indigo-500 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-6">
+                        <div class="relative">
+                            <span class="absolute inline-flex h-full w-full rounded-full bg-indigo-500 opacity-75 animate-pulse-ring"></span>
+                            <div class="relative flex items-center justify-center h-14 w-14 rounded-full bg-indigo-600 text-white shadow-lg animate-pulse-dot">
+                                <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-1.63 1.63c-.5.5-.84.97-.84 1.72h-1.63c0-1.13.4-2.2.86-2.66l2.11-2.11c.45-.45.7-.98.7-1.54 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.33 1.75-.93 2.37z"/></svg>
+                            </div>
+                        </div>
+                        <h3 class="ml-4 text-2xl font-bold text-white">Real-Time AI Agent Detection</h3>
+                    </div>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Our platform intelligently monitors web traffic and user behavior in real-time, leveraging advanced AI to accurately differentiate between humans, legitimate AI agents, and malicious rogue AI activity.
+                    </p>
+                </div>
+
+                <!-- Feature 2: Adaptive Authentication Challenges -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-purple-500 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-6">
+                        <div class="relative flex items-center justify-center h-14 w-14 rounded-full bg-purple-600 text-white shadow-lg">
+                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v2h-2zm0 4h2v6h-2z"/></svg>
+                        </div>
+                        <h3 class="ml-4 text-2xl font-bold text-white">Adaptive Authentication Challenges</h3>
+                    </div>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Move beyond frustrating CAPTCHAs. Our system provides dynamic, adaptive authentication challenges that respond to detected threat levels, ensuring seamless legitimate access while blocking adversaries.
+                    </p>
+                </div>
+
+                <!-- Feature 3: Granular AI Agent Control -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-teal-500 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-6">
+                        <div class="relative flex items-center justify-center h-14 w-14 rounded-full bg-teal-600 text-white shadow-lg">
+                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        </div>
+                        <h3 class="ml-4 text-2xl font-bold text-white">Granular AI Agent Control</h3>
+                    </div>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Gain unprecedented control over how AI agents interact with your platform. Define permissions, rate limits, and access rules to manage legitimate AI while neutralizing threats effectively.
+                    </p>
+                </div>
+
+                <!-- Feature 4: Specialized AI Threat Intelligence -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-cyan-500 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-6">
+                        <div class="relative flex items-center justify-center h-14 w-14 rounded-full bg-cyan-600 text-white shadow-lg">
+                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.51 0-2.92-.49-4.1-.79l-1.4-.35c-.2-.05-.41.02-.55.17l-1.12 1.12c-.2.2-.15.53.11.66 1.63.79 3.4 1.25 5.26 1.25 4.97 0 9-4.03 9-9s-4.03-9-9-9z"/></svg>
+                        </div>
+                        <h3 class="ml-4 text-2xl font-bold text-white">Specialized AI Threat Intelligence</h3>
+                    </div>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Stay ahead of emerging threats with continually updated intelligence on AI agent tactics, vulnerabilities, and attack vectors, integrated directly into your security posture.
+                    </p>
+                </div>
+
+                <!-- Feature 5: Advanced Bot Attack Mitigation -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-red-500 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-6">
+                        <div class="relative flex items-center justify-center h-14 w-14 rounded-full bg-red-600 text-white shadow-lg">
+                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                        </div>
+                        <h3 class="ml-4 text-2xl font-bold text-white">Advanced Bot Attack Mitigation</h3>
+                    </div>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Our platform is engineered to nullify advanced bot attacks, from sophisticated credential stuffing to complex DDoS attempts, ensuring your services remain available and secure.
+                    </p>
+                </div>
+
+                <!-- Feature 6: Data Scraping Prevention -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-lime-500 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-6">
+                        <div class="relative flex items-center justify-center h-14 w-14 rounded-full bg-lime-600 text-white shadow-lg">
+                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M16.5 10c.23.63.36 1.31.36 2s-.13 1.37-.36 2h3.33c.92 0 1.71-.62 1.95-1.52.28-1.09-.09-2.26-1-2.82l-4.28-2.52-1.92 3.86zm-1.74 2c-.08-.34-.14-.68-.14-1s.06-.66.14-1H9.28l1.43 2h4.05zm-.15-4.42l-1.92-3.86-4.28 2.52c-.91.56-1.28 1.73-1 2.82.24.9.99 1.52 1.95 1.52h3.33c.23-.63.36-1.31.36-2s-.13-1.37-.36-2l4.28-2.52zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+                        </div>
+                        <h3 class="ml-4 text-2xl font-bold text-white">Data Scraping Prevention</h3>
+                    </div>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Protect your valuable data and intellectual property from malicious AI-driven scraping operations, ensuring your competitive edge remains intact and your information secure.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 sm:py-24 bg-gray-800 border-t border-gray-700">
+        <div class="container mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6">
+                Be Among the First to Experience True AI Security.
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-10">
+                Join our exclusive waitlist for early access to AgentShield AI. Secure your platform against the next wave of digital threats.
             </p>
 
-            <!-- Price Display -->
-            <div class="flex items-center justify-center mb-8">
-                <p class="text-gray-400 text-3xl md:text-4xl font-semibold line-through mr-4">$199</p>
-                <p class="text-green-400 text-5xl md:text-6xl font-bold">$99</p>
-            </div>
-
-            <!-- Simulated Purchase Form -->
-            <form class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700">
+            <form class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-indigo-600 max-w-md mx-auto transform hover:scale-105 transition-transform duration-300">
                 <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name (Optional)</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" class="shadow-sm appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-200 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-                </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address <span class="text-red-500">*</span></label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" required class="shadow-sm appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-200 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" class="shadow appearance-none border border-gray-700 bg-gray-800 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200" required>
                 </div>
                 <div class="mb-8 text-left">
-                    <label for="payment" class="block text-gray-300 text-sm font-bold mb-2">Payment Method (Simulated)</label>
-                    <select id="payment" name="payment" class="shadow-sm appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-200 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-                        <option value="credit_card">Credit Card (Simulated)</option>
-                        <option value="paypal">PayPal (Simulated)</option>
-                    </select>
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Business Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@yourcompany.com" class="shadow appearance-none border border-gray-700 bg-gray-800 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200" required>
                 </div>
-                <button type="submit" class="w-full bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-green-300">
-                    Secure My Foldable Guide for $99
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 text-lg">
+                    Join the Waitlist
                 </button>
-                <p class="text-xs text-gray-400 mt-6">By clicking "Secure My Guide," you agree to our <a href="#" class="text-purple-400 hover:underline">Terms of Service</a> and <a href="#" class="text-purple-400 hover:underline">Privacy Policy</a>.</p>
+                <p class="text-gray-500 text-sm mt-4">We respect your privacy. No spam, ever.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-10 px-4 md:px-8 text-center text-gray-400 text-sm">
-        <div class="container mx-auto">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <div class="mt-4 space-x-4">
-                <a href="#" class="hover:text-white">Privacy Policy</a>
-                <a href="#" class="hover:text-white">Terms of Service</a>
-                <a href="#" class="hover:text-white">Contact Us</a>
-            </div>
+    <footer class="py-10 bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center text-gray-500">
+            <p>&copy; 2023 AgentShield AI. All rights reserved.</p>
+            <p class="mt-2 text-sm">Built with intelligence, secured by innovation.</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
+    <!-- Countdown JavaScript -->
     <script>
-        // Set the date we're counting down to (e.g., 3 days from now)
-        // For demonstration, setting it to 3 days from the current time.
-        const now = new Date();
-        const countdownDate = new Date(now.getTime() + (3 * 24 * 60 * 60 * 1000) + (1 * 60 * 60 * 1000) + (30 * 60 * 1000)); // 3 days, 1 hour, 30 minutes from now
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (e.g., 7 days from when the page loads)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now
+            countDownDate.setHours(23, 59, 59, 999); // Set to end of the 7th day for the offer
 
-        const x = setInterval(function() {
-            const currentNow = new Date().getTime();
-            const distance = countdownDate - currentNow;
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate.getTime() - now;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            if (document.getElementById("days")) document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-            if (document.getElementById("hours")) document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-            if (document.getElementById("minutes")) document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-            if (document.getElementById("seconds")) document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-            if (distance < 0) {
-                clearInterval(x);
-                const countdownElement = document.getElementById("countdown");
-                if (countdownElement) {
-                    countdownElement.innerHTML = "<div class='text-red-400 text-2xl font-bold'>Offer Expired!</div>";
-                    countdownElement.classList.remove('space-x-4', 'md:space-x-6'); // Clean up spacing
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<div class='text-red-500 text-xl font-bold'>OFFER EXPIRED!</div>";
+                    // Optionally disable the waitlist button or change its text
+                    const waitlistButton = document.querySelector('#waitlist button[type="submit"]');
+                    if (waitlistButton) {
+                        waitlistButton.textContent = "Waitlist Closed";
+                        waitlistButton.disabled = true;
+                        waitlistButton.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
+                        waitlistButton.classList.add('bg-gray-600', 'cursor-not-allowed');
+                    }
+                    return;
                 }
 
-                // Optionally update CTA button or price to full price
-                const heroCtaButton = document.querySelector('header a[href="#purchase"]');
-                if (heroCtaButton) {
-                    heroCtaButton.textContent = 'Purchase Guide (Full Price)';
-                    heroCtaButton.classList.remove('from-green-500', 'to-teal-500', 'hover:from-green-600', 'hover:to-teal-600');
-                    heroCtaButton.classList.add('bg-gray-600', 'cursor-not-allowed');
-                }
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                const purchaseButton = document.querySelector('#purchase button[type="submit"]');
-                if (purchaseButton) {
-                    purchaseButton.textContent = 'Purchase Guide for $199';
-                    purchaseButton.classList.remove('from-green-500', 'to-teal-500', 'hover:from-green-600', 'hover:to-teal-600');
-                    purchaseButton.classList.add('bg-gray-600', 'cursor-not-allowed');
-                    purchaseButton.disabled = true; // Disable the button
-                }
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-                const discountPriceHero = document.querySelector('header .text-green-400');
-                if (discountPriceHero) discountPriceHero.textContent = '$199';
-                const originalPriceHero = document.querySelector('header .line-through');
-                if (originalPriceHero) originalPriceHero.classList.add('hidden'); 
-
-                const discountPriceSection = document.querySelector('#purchase .text-green-400');
-                if (discountPriceSection) discountPriceSection.textContent = '$199';
-                const originalPriceSection = document.querySelector('#purchase .line-through');
-                if (originalPriceSection) originalPriceSection.classList.add('hidden');
-            }
-        }, 1000);
+            }, 1000);
+        });
     </script>
-
 </body>
 </html>
