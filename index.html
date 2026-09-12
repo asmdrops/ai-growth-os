@@ -3,257 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgentShield AI: Next-Gen AI Agent Security & Authentication Platform</title>
-    <meta name="description" content="Secure your platform from advanced bot attacks, data scraping, and rogue AI agents with AgentShield AI's real-time AI-powered security and adaptive authentication.">
+    <title>Smart TV Privacy Playbook: Stop Your Devices From Snooping</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23667EEA'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-5.5h-3V7h3v4z'/%3E%3C/svg%3E" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Optional custom animations for a premium feel */
-        @keyframes pulse-ring {
-            0% { transform: scale(0.33); }
-            80%, 100% { opacity: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
         }
-        @keyframes pulse-dot {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* For a subtle parallax effect */
         }
-        .animate-pulse-ring { animation: pulse-ring 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
-        .animate-pulse-dot { animation: pulse-dot 1.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite; }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased font-sans">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
-    <!-- Navbar -->
-    <header class="py-4 bg-gray-900 relative z-10 shadow-lg">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <a href="#" class="flex items-center space-x-2">
-                <svg class="h-8 w-8 text-indigo-400" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-2h2v2h-2zm-1-4h2V7h-2v6z"/>
-                </svg>
-                <span class="text-2xl font-bold tracking-tight">AgentShield AI</span>
+    <!-- Hero Section -->
+    <header class="relative hero-background min-h-screen flex items-center justify-center py-16">
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <p class="text-indigo-400 uppercase tracking-wide text-sm mb-3 font-semibold">Limited-Time Early Bird Access</p>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white mb-6">
+                Smart TV Privacy Playbook:<br>Stop Your Devices From Snooping. Permanently.
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                With growing concerns about device surveillance, our 'Smart TV Privacy Playbook' provides a comprehensive, step-by-step guide to secure *all* your smart TVs and home network against unwanted data collection.
+            </p>
+
+            <!-- Limited Time Countdown -->
+            <div class="bg-gray-800 bg-opacity-80 backdrop-filter backdrop-blur-sm p-6 rounded-lg shadow-xl inline-block mb-10 border border-indigo-500 transform hover:scale-105 transition-transform duration-300">
+                <p class="text-sm uppercase tracking-wider text-indigo-300 mb-3 font-medium">Offer closes in:</p>
+                <div id="countdown" class="flex justify-center space-x-4">
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl md:text-5xl font-bold text-white" id="days">00</span>
+                        <span class="text-xs uppercase text-gray-400">Days</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl md:text-5xl font-bold text-white" id="hours">00</span>
+                        <span class="text-xs uppercase text-gray-400">Hours</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl md:text-5xl font-bold text-white" id="minutes">00</span>
+                        <span class="text-xs uppercase text-gray-400">Minutes</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl md:text-5xl font-bold text-white" id="seconds">00</span>
+                        <span class="text-xs uppercase text-gray-400">Seconds</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#waitlist-form" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Secure Your Early Bird Access Now!
             </a>
-            <!-- Navigation links (e.g., Features, Waitlist) can be added here -->
+            <p class="text-sm text-gray-400 mt-3">Don't let your smart devices compromise your household privacy.</p>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative bg-cover bg-center h-screen flex items-center justify-center text-center overflow-hidden" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for readability -->
-        <div class="relative z-10 container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-gray-50 drop-shadow-lg">
-                Stop Rogue AI. Elevate Trust. <br class="hidden sm:inline">Next-Gen Security for the AI Era.
-            </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
-                Tired of CAPTCHAs even rogue AIs mock? Leverage real-time intelligence to differentiate human, legitimate AI, and malicious agents. Adaptive protection designed for tomorrow's digital landscape.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
-                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 text-lg">
-                    Secure Early Access Now
-                </a>
-                <a href="#features" class="bg-transparent border-2 border-indigo-500 text-indigo-300 hover:bg-indigo-500 hover:text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 text-lg">
-                    Learn More
-                </a>
-            </div>
-
-            <!-- Limited Time Countdown -->
-            <div class="bg-gray-800 bg-opacity-80 backdrop-filter backdrop-blur-sm rounded-lg p-6 sm:p-8 mt-12 mx-auto max-w-sm sm:max-w-md shadow-2xl border border-indigo-500 transform hover:scale-105 transition-transform duration-300">
-                <p class="text-indigo-400 text-sm sm:text-base font-semibold mb-3 tracking-wide uppercase">Limited Early Access Offer:</p>
-                <p class="text-2xl sm:text-3xl font-extrabold text-white mb-4">Spots Closing Soon!</p>
-                <div id="countdown" class="flex justify-center space-x-2 sm:space-x-4">
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl sm:text-5xl font-mono font-bold text-green-400" id="days">00</span>
-                        <span class="text-gray-400 text-xs sm:text-sm uppercase">Days</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl sm:text-5xl font-mono font-bold text-green-400">:</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl sm:text-5xl font-mono font-bold text-green-400" id="hours">00</span>
-                        <span class="text-gray-400 text-xs sm:text-sm uppercase">Hours</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl sm:text-5xl font-mono font-bold text-green-400">:</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl sm:text-5xl font-mono font-bold text-green-400" id="minutes">00</span>
-                        <span class="text-gray-400 text-xs sm:text-sm uppercase">Minutes</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl sm:text-5xl font-mono font-bold text-green-400">:</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl sm:text-5xl font-mono font-bold text-green-400" id="seconds">00</span>
-                        <span class="text-gray-400 text-xs sm:text-sm uppercase">Seconds</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-24 bg-gray-900 relative">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-16 text-white leading-tight">
-                Intelligent Defense for an AI-Driven World
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
-
-                <!-- Feature 1: Real-Time AI Agent Detection -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-indigo-500 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-6">
-                        <div class="relative">
-                            <span class="absolute inline-flex h-full w-full rounded-full bg-indigo-500 opacity-75 animate-pulse-ring"></span>
-                            <div class="relative flex items-center justify-center h-14 w-14 rounded-full bg-indigo-600 text-white shadow-lg animate-pulse-dot">
-                                <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-1.63 1.63c-.5.5-.84.97-.84 1.72h-1.63c0-1.13.4-2.2.86-2.66l2.11-2.11c.45-.45.7-.98.7-1.54 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.33 1.75-.93 2.37z"/></svg>
-                            </div>
-                        </div>
-                        <h3 class="ml-4 text-2xl font-bold text-white">Real-Time AI Agent Detection</h3>
-                    </div>
-                    <p class="text-gray-300 text-lg leading-relaxed">
-                        Our platform intelligently monitors web traffic and user behavior in real-time, leveraging advanced AI to accurately differentiate between humans, legitimate AI agents, and malicious rogue AI activity.
-                    </p>
+    <section class="py-20 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">Unlock Comprehensive Smart TV Privacy</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-4xl">📺</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Universal Smart TV Security</h3>
+                    <p class="text-gray-300 text-base">Get clear, actionable privacy lockdown instructions for LG, Samsung, Sony, Vizio, and all major smart TV brands.</p>
                 </div>
-
-                <!-- Feature 2: Adaptive Authentication Challenges -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-purple-500 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-6">
-                        <div class="relative flex items-center justify-center h-14 w-14 rounded-full bg-purple-600 text-white shadow-lg">
-                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v2h-2zm0 4h2v6h-2z"/></svg>
-                        </div>
-                        <h3 class="ml-4 text-2xl font-bold text-white">Adaptive Authentication Challenges</h3>
-                    </div>
-                    <p class="text-gray-300 text-lg leading-relaxed">
-                        Move beyond frustrating CAPTCHAs. Our system provides dynamic, adaptive authentication challenges that respond to detected threat levels, ensuring seamless legitimate access while blocking adversaries.
-                    </p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-4xl">🌐</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Fortified Network Settings</h3>
+                    <p class="text-gray-300 text-base">Implement privacy-focused router configurations and network settings to prevent unauthorized data transmission.</p>
                 </div>
-
-                <!-- Feature 3: Granular AI Agent Control -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-teal-500 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-6">
-                        <div class="relative flex items-center justify-center h-14 w-14 rounded-full bg-teal-600 text-white shadow-lg">
-                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                        </div>
-                        <h3 class="ml-4 text-2xl font-bold text-white">Granular AI Agent Control</h3>
-                    </div>
-                    <p class="text-gray-300 text-lg leading-relaxed">
-                        Gain unprecedented control over how AI agents interact with your platform. Define permissions, rate limits, and access rules to manage legitimate AI while neutralizing threats effectively.
-                    </p>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-4xl">🔧</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Privacy Toolkit & Scripts</h3>
+                    <p class="text-gray-300 text-base">Access a curated list of open-source privacy tools and a simple script to monitor suspicious outbound TV traffic.</p>
                 </div>
-
-                <!-- Feature 4: Specialized AI Threat Intelligence -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-cyan-500 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-6">
-                        <div class="relative flex items-center justify-center h-14 w-14 rounded-full bg-cyan-600 text-white shadow-lg">
-                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.51 0-2.92-.49-4.1-.79l-1.4-.35c-.2-.05-.41.02-.55.17l-1.12 1.12c-.2.2-.15.53.11.66 1.63.79 3.4 1.25 5.26 1.25 4.97 0 9-4.03 9-9s-4.03-9-9-9z"/></svg>
-                        </div>
-                        <h3 class="ml-4 text-2xl font-bold text-white">Specialized AI Threat Intelligence</h3>
-                    </div>
-                    <p class="text-gray-300 text-lg leading-relaxed">
-                        Stay ahead of emerging threats with continually updated intelligence on AI agent tactics, vulnerabilities, and attack vectors, integrated directly into your security posture.
-                    </p>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-4xl">🔍</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Identify & Block Snooping</h3>
+                    <p class="text-gray-300 text-base">Precisely detect what information your smart TV is collecting and learn effective methods to block it at the source.</p>
                 </div>
-
-                <!-- Feature 5: Advanced Bot Attack Mitigation -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-red-500 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-6">
-                        <div class="relative flex items-center justify-center h-14 w-14 rounded-full bg-red-600 text-white shadow-lg">
-                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
-                        </div>
-                        <h3 class="ml-4 text-2xl font-bold text-white">Advanced Bot Attack Mitigation</h3>
-                    </div>
-                    <p class="text-gray-300 text-lg leading-relaxed">
-                        Our platform is engineered to nullify advanced bot attacks, from sophisticated credential stuffing to complex DDoS attempts, ensuring your services remain available and secure.
-                    </p>
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-4xl">📖</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Step-by-Step Clarity</h3>
+                    <p class="text-gray-300 text-base">Our guide is free of jargon, providing clear, easy-to-follow instructions suitable for all technical skill levels.</p>
                 </div>
-
-                <!-- Feature 6: Data Scraping Prevention -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-lime-500 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-6">
-                        <div class="relative flex items-center justify-center h-14 w-14 rounded-full bg-lime-600 text-white shadow-lg">
-                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M16.5 10c.23.63.36 1.31.36 2s-.13 1.37-.36 2h3.33c.92 0 1.71-.62 1.95-1.52.28-1.09-.09-2.26-1-2.82l-4.28-2.52-1.92 3.86zm-1.74 2c-.08-.34-.14-.68-.14-1s.06-.66.14-1H9.28l1.43 2h4.05zm-.15-4.42l-1.92-3.86-4.28 2.52c-.91.56-1.28 1.73-1 2.82.24.9.99 1.52 1.95 1.52h3.33c.23-.63.36-1.31.36-2s-.13-1.37-.36-2l4.28-2.52zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
-                        </div>
-                        <h3 class="ml-4 text-2xl font-bold text-white">Data Scraping Prevention</h3>
-                    </div>
-                    <p class="text-gray-300 text-lg leading-relaxed">
-                        Protect your valuable data and intellectual property from malicious AI-driven scraping operations, ensuring your competitive edge remains intact and your information secure.
-                    </p>
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-4xl">🛡️</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Long-Term Privacy Defense</h3>
+                    <p class="text-gray-300 text-base">Equip yourself with strategies to maintain privacy, adapt to new threats, and ensure your smart home stays secure.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-24 bg-gray-800 border-t border-gray-700">
-        <div class="container mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6">
-                Be Among the First to Experience True AI Security.
+    <!-- Waitlist / Call to Action Form Section -->
+    <section id="waitlist-form" class="py-20 px-4 bg-gray-800">
+        <div class="container mx-auto max-w-3xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                Claim Your Early Bird Discount & Secure Your Privacy
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10">
-                Join our exclusive waitlist for early access to AgentShield AI. Secure your platform against the next wave of digital threats.
+            <p class="text-lg text-gray-300 mb-8">
+                The 'Smart TV Privacy Playbook' is launching soon! Join our exclusive early bird list to receive a significant discount and instant notification the moment it's available. Don't miss this limited opportunity to take control of your smart home privacy.
             </p>
-
-            <form class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-indigo-600 max-w-md mx-auto transform hover:scale-105 transition-transform duration-300">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" class="shadow appearance-none border border-gray-700 bg-gray-800 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200" required>
+            
+            <form action="#" method="POST" class="bg-gray-900 p-8 rounded-lg shadow-2xl border border-indigo-600 max-w-xl mx-auto">
+                <div class="mb-6">
+                    <label for="name" class="block text-left text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" class="w-full p-3 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50" required>
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Business Email</label>
-                    <input type="email" id="email" name="email" placeholder="you@yourcompany.com" class="shadow appearance-none border border-gray-700 bg-gray-800 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200" required>
+                <div class="mb-6">
+                    <label for="email" class="block text-left text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="w-full p-3 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50" required>
                 </div>
-                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 text-lg">
-                    Join the Waitlist
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                    Get On The Early Bird List!
                 </button>
-                <p class="text-gray-500 text-sm mt-4">We respect your privacy. No spam, ever.</p>
+                <p class="text-xs text-gray-400 mt-4">We respect your privacy. Your data is safe with us.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 bg-gray-900 border-t border-gray-800">
-        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center text-gray-500">
-            <p>&copy; 2023 AgentShield AI. All rights reserved.</p>
-            <p class="mt-2 text-sm">Built with intelligence, secured by innovation.</p>
+    <footer class="py-8 px-4 text-center text-gray-400 text-sm bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 mx-2">Privacy Policy</a> |
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 mx-2">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
-    <!-- Countdown JavaScript -->
+    <!-- Countdown Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 7 days from when the page loads)
+            // Set the date we're counting down to (e.g., 7 days from now)
             const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now
-            countDownDate.setHours(23, 59, 59, 999); // Set to end of the 7th day for the offer
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from the page load
 
+            // Update the count down every 1 second
             const x = setInterval(function() {
+
+                // Get today's date and time
                 const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
 
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<div class='text-red-500 text-xl font-bold'>OFFER EXPIRED!</div>";
-                    // Optionally disable the waitlist button or change its text
-                    const waitlistButton = document.querySelector('#waitlist button[type="submit"]');
-                    if (waitlistButton) {
-                        waitlistButton.textContent = "Waitlist Closed";
-                        waitlistButton.disabled = true;
-                        waitlistButton.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
-                        waitlistButton.classList.add('bg-gray-600', 'cursor-not-allowed');
-                    }
-                    return;
-                }
+                // Find the distance between now and the count down date
+                const distance = countDownDate - now;
 
+                // Time calculations for days, hours, minutes and seconds
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+                // Display the result in the element with id="countdown"
                 document.getElementById("days").innerHTML = String(days).padStart(2, '0');
                 document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
                 document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
                 document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
+                // If the count down is finished, display a message and disable CTAs
+                if (distance < 0) {
+                    clearInterval(x);
+                    const countdownElement = document.getElementById("countdown");
+                    if(countdownElement) {
+                        countdownElement.innerHTML = "<span class='text-xl text-red-400 font-bold'>OFFER EXPIRED!</span>";
+                        countdownElement.classList.remove('p-6', 'border-indigo-500'); // Clean up styling
+                    }
+                    
+                    const ctaButton = document.querySelector('a[href="#waitlist-form"]');
+                    if(ctaButton) {
+                        ctaButton.classList.add('opacity-50', 'cursor-not-allowed', 'bg-gray-500', 'hover:bg-gray-500');
+                        ctaButton.removeAttribute('href');
+                        ctaButton.innerText = 'Offer Expired';
+                    }
+                    const formButton = document.querySelector('#waitlist-form button[type="submit"]');
+                    if(formButton) {
+                        formButton.classList.add('opacity-50', 'cursor-not-allowed', 'bg-gray-500', 'hover:bg-gray-500');
+                        formButton.disabled = true;
+                        formButton.innerText = 'Offer Expired';
+                    }
+                    const earlyBirdText = document.querySelector('.hero-background > div > p.text-indigo-400');
+                    if (earlyBirdText) {
+                        earlyBirdText.textContent = "Opportunity Closed";
+                    }
+                    const formHeadline = document.querySelector('#waitlist-form h2');
+                    if (formHeadline) {
+                        formHeadline.textContent = "The Early Bird Offer Has Closed.";
+                    }
+                    const formSubheadline = document.querySelector('#waitlist-form p.text-lg');
+                    if (formSubheadline) {
+                        formSubheadline.textContent = "Thank you for your interest. Please check back for future announcements.";
+                    }
+                    const form = document.querySelector('#waitlist-form form');
+                    if (form) {
+                        form.remove(); // Remove the form entirely
+                    }
+                }
             }, 1000);
         });
     </script>
