@@ -3,159 +3,282 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate iPhone Duo & Foldable Tech Buyer's Guide</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Master the Fold: Premium Foldable Phone Buyer's Guide & iPhone Duo Deep Dive</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
+        /* Apply Inter font family and Antialiased rendering for premium look */
         body {
             font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
+
+        /* Hero background with provided image and dark overlay for text readability */
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-bg::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.75); /* Darker overlay for strong contrast */
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2; /* Ensure content is above the overlay */
+        }
+
+        /* Custom scrollbar for a polished dark-mode aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* Dark background */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4f46e5; /* Indigo */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6366f1; /* Lighter indigo on hover */
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 antialiased">
+<body class="bg-gray-950 text-gray-100 min-h-screen">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <!-- Background Image with Dark Overlay -->
-        <div class="absolute inset-0 hero-background z-0"></div>
-        <div class="absolute inset-0 bg-black opacity-75 z-10"></div>
-
-        <div class="relative z-20 p-4 md:p-8 max-w-5xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-4 drop-shadow-lg">
-                Unlock the Future: Your Ultimate iPhone Duo & Foldable Tech Buyer's Guide
+    <header class="hero-bg min-h-screen py-16 px-4">
+        <div class="hero-content container mx-auto text-center flex flex-col items-center">
+            <!-- Strategic Trend Integration -->
+            <p class="text-indigo-400 text-lg md:text-xl font-semibold mb-5 uppercase tracking-wide animate-pulse">
+                🔥 Bloomberg Alert: Apple’s iPhone Duo Set to Redefine Foldables!
+            </p>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-7 text-white drop-shadow-lg max-w-5xl">
+                Navigate the Future: Your Ultimate Guide to Foldable Phones & the iPhone Duo
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto drop-shadow-md">
-                Master the new era of mobile with detailed comparisons, essential accessories, software optimization, and future-proofing insights for Apple's upcoming foldable.
+            <p class="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+                Tired of the "expensive mistake" fear? Cut through the hype and discover the definitive path to choosing your perfect foldable, including an exclusive deep dive into Apple's rumored game-changer.
             </p>
 
-            <!-- Limited Time Countdown & CTA -->
-            <div class="bg-gradient-to-r from-purple-700 to-blue-700 p-6 sm:p-8 rounded-xl shadow-xl mb-8 transform hover:scale-[1.01] transition duration-300 ease-in-out">
-                <p class="text-lg sm:text-xl md:text-2xl font-semibold mb-3">Limited Time Launch Discount!</p>
-                <div class="flex justify-center items-center space-x-2 sm:space-x-4 mb-6">
+            <!-- Limited Time Countdown - High Conversion Element -->
+            <div class="bg-gradient-to-br from-purple-700 to-indigo-700 p-7 rounded-2xl shadow-2xl mb-14 max-w-lg mx-auto transform hover:scale-105 transition-transform duration-500 ease-in-out border border-indigo-500">
+                <h2 class="text-3xl md:text-4xl font-bold mb-5 text-white">Exclusive Early Bird Access Ends In:</h2>
+                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-6 text-white text-4xl sm:text-5xl md:text-6xl font-mono">
                     <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-none">03</span>
-                        <span class="text-xs sm:text-sm uppercase text-gray-200 mt-1">Days</span>
+                        <span id="days" class="w-20 sm:w-24 text-center py-2 bg-indigo-900 bg-opacity-50 rounded-lg">00</span>
+                        <span class="text-base sm:text-lg font-sans mt-2">Days</span>
                     </div>
-                    <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-white">:</span>
+                    <span class="text-4xl sm:text-5xl">:</span>
                     <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-none">12</span>
-                        <span class="text-xs sm:text-sm uppercase text-gray-200 mt-1">Hours</span>
+                        <span id="hours" class="w-20 sm:w-24 text-center py-2 bg-indigo-900 bg-opacity-50 rounded-lg">00</span>
+                        <span class="text-base sm:text-lg font-sans mt-2">Hours</span>
                     </div>
-                    <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-white">:</span>
+                    <span class="text-4xl sm:text-5xl">:</span>
                     <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-none">45</span>
-                        <span class="text-xs sm:text-sm uppercase text-gray-200 mt-1">Minutes</span>
+                        <span id="minutes" class="w-20 sm:w-24 text-center py-2 bg-indigo-900 bg-opacity-50 rounded-lg">00</span>
+                        <span class="text-base sm:text-lg font-sans mt-2">Minutes</span>
                     </div>
-                    <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-white">:</span>
+                    <span class="text-4xl sm:text-5xl">:</span>
                     <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-none">33</span>
-                        <span class="text-xs sm:text-sm uppercase text-gray-200 mt-1">Seconds</span>
+                        <span id="seconds" class="w-20 sm:w-24 text-center py-2 bg-indigo-900 bg-opacity-50 rounded-lg">00</span>
+                        <span class="text-base sm:text-lg font-sans mt-2">Seconds</span>
                     </div>
                 </div>
-                <a href="#waitlist-form" class="inline-block bg-white text-gray-900 font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl uppercase tracking-wide shadow-lg hover:bg-gray-200 transition duration-300 ease-in-out transform hover:scale-105">
-                    Pre-order Your Guide Now!
-                </a>
-                <p class="mt-4 text-sm text-gray-200">Discount disappears when the timer hits zero!</p>
-                <!-- Note: This countdown is static. A functional countdown requires JavaScript. -->
             </div>
+
+            <a href="#waitlist-form" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-5 px-12 rounded-full text-xl md:text-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-75 tracking-wider uppercase">
+                🚀 Secure Your VIP Early Access Now!
+            </a>
+        </div>
+    </header>
+
+    <!-- Problem/Solution/Value Proposition Section -->
+    <section class="py-24 px-4 bg-gray-900">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-8 leading-tight">
+                The Foldable Future is Here: Don't Just Witness It, Master It.
+            </h2>
+            <p class="text-lg md:text-xl text-gray-400 mb-6 leading-relaxed max-w-3xl mx-auto">
+                With Apple poised to launch its groundbreaking iPhone Duo, the smartphone landscape is on the brink of its biggest shift in a decade. This isn't just a trend; it's the new normal. But navigating this innovative wave can be daunting: Which foldable truly fits your lifestyle? Are they durable enough?
+            </p>
+            <p class="text-xl md:text-2xl font-semibold text-indigo-300 leading-relaxed max-w-4xl mx-auto">
+                Our premium 'Foldable Phone Buyer's Guide & iPhone Duo Deep Dive' is your essential toolkit. It's meticulously crafted to arm you with objective insights, empowering you to make a confident, future-proof decision – avoiding buyer's remorse and embracing the foldable revolution with clarity.
+            </p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900 text-center">
-        <div class="container mx-auto px-4 max-w-7xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-12">What You'll Discover Inside</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <section class="py-24 px-4 bg-gray-950">
+        <div class="container mx-auto max-w-7xl">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-center text-white mb-20 leading-snug">
+                Exclusive Insights You'll Gain Inside This Definitive Guide:
+            </h2>
 
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-5xl mb-4 text-purple-400">💡</div>
-                    <h3 class="text-xl font-bold text-white mb-3">In-depth Comparisons</h3>
-                    <p class="text-gray-300 leading-relaxed">Detailed analysis of iPhone Duo vs. other leading foldables. Know the pros, cons, and what truly stands out.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Feature 1: iPhone Duo Deep Dive -->
+                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-3 hover:shadow-2xl">
+                    <div class="text-5xl mb-6 text-indigo-400">🍎</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">iPhone Duo: The Game Changer</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        An unparalleled, data-driven deep dive into Apple's rumored foldable. Anticipate its potential, dissect its features, and understand its impact on the entire smartphone ecosystem.
+                    </p>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-5xl mb-4 text-blue-400">🛡️</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Essential Accessories Guide</h3>
-                    <p class="text-gray-300 leading-relaxed">From protective cases to power banks, discover the must-have accessories that enhance your foldable experience.</p>
+                <!-- Feature 2: Foldable vs. Foldable Comparison -->
+                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-3 hover:shadow-2xl">
+                    <div class="text-5xl mb-6 text-green-400">🆚</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Foldable Wars: Duo vs. The Best</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Comprehensive comparisons pitting the iPhone Duo against leading foldables from Samsung, Google, and others. We reveal true performance, display quality, and value.
+                    </p>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-5xl mb-4 text-green-400">⚙️</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Software Optimization Tips</h3>
-                    <p class="text-gray-300 leading-relaxed">Unlock the full potential of your device with expert tips on software settings, app integration, and multitasking.</p>
+                <!-- Feature 3: Duo vs. Standard Flagships -->
+                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-3 hover:shadow-2xl">
+                    <div class="text-5xl mb-6 text-red-400">🏆</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Flagship Face-Off: Fold vs. Flat</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Should you stick with a traditional flagship or leap to a foldable? We analyze camera performance, battery life, software experience, and long-term investment.
+                    </p>
                 </div>
 
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-5xl mb-4 text-red-400">🔮</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Future-Proofing Advice</h3>
-                    <p class="text-gray-300 leading-relaxed">Invest wisely with insights into future trends, upgrade cycles, and how to make your cutting-edge tech last longer.</p>
+                <!-- Feature 4: Durability & Longevity -->
+                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-3 hover:shadow-2xl">
+                    <div class="text-5xl mb-6 text-orange-400">💪</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Durability Debunked: Protect Your Investment</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Lay your durability fears to rest. We deep-dive into hinge technology, screen resilience, and offer practical, actionable tips to prolong the life of your device.
+                    </p>
                 </div>
 
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-5xl mb-4 text-yellow-400">💰</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Avoid Buyer's Remorse</h3>
-                    <p class="text-gray-300 leading-relaxed">Make an informed decision and confidently choose the tech that truly fits your needs and avoids costly mistakes.</p>
+                <!-- Feature 5: Use-Case Specific Recommendations -->
+                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-3 hover:shadow-2xl">
+                    <div class="text-5xl mb-6 text-blue-400">🎯</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Tailored Recommendations for YOUR Life</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Whether you're a mobile workstation, a media enthusiast, or seeking the ultimate pocketable device, get personalized advice on the perfect foldable for your needs.
+                    </p>
                 </div>
 
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-5xl mb-4 text-indigo-400">🚀</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Maximize Your Investment</h3>
-                    <p class="text-gray-300 leading-relaxed">Get the most value out of your premium device with strategies for longevity, optimal performance, and resale.</p>
+                <!-- Feature 6: Essential Accessories -->
+                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-3 hover:shadow-2xl">
+                    <div class="text-5xl mb-6 text-purple-400">🎁</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Must-Have Accessories & Ecosystem Insights</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Maximize your foldable experience with our curated list of essential accessories, from protective cases to productivity tools, and how they integrate seamlessly.
+                    </p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Waitlist/Pre-order Form Section -->
-    <section id="waitlist-form" class="py-16 md:py-24 bg-gradient-to-br from-gray-950 to-gray-800 text-center">
-        <div class="container mx-auto px-4 max-w-xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8 leading-tight">
-                Secure Your Copy with a Launch Discount!
+    <!-- Call to Action / Waitlist Form Section -->
+    <section id="waitlist-form" class="py-24 px-4 bg-gray-900">
+        <div class="container mx-auto max-w-3xl bg-gray-800 p-10 sm:p-12 rounded-3xl shadow-2xl border border-gray-700 transform hover:scale-[1.01] transition-transform duration-300 ease-in-out">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center text-white mb-8 leading-tight">
+                Claim Your Future: Join the VIP Early Access Waitlist!
             </h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-10">
-                Don't miss out on the ultimate guide to the future of mobile tech. Pre-order now and lock in your exclusive discount.
+            <p class="text-xl text-gray-300 text-center mb-12 max-w-2xl mx-auto">
+                Don't just observe the foldable revolution – lead it. Secure your spot now to get exclusive early bird pricing and be among the first to receive this indispensable guide.
             </p>
 
-            <form action="#" method="POST" class="bg-gray-800 p-6 md:p-10 rounded-xl shadow-2xl border border-gray-700">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-200 text-sm font-semibold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200" required>
+            <form class="space-y-7">
+                <div>
+                    <label for="name" class="block text-gray-300 text-lg font-semibold mb-3">Your Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name"
+                           class="w-full p-4 rounded-xl bg-gray-700 text-white border border-gray-600 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 transition duration-200 shadow-lg text-lg"
+                           required>
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-200 text-sm font-semibold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200" required>
+                <div>
+                    <label for="email" class="block text-gray-300 text-lg font-semibold mb-3">Your Best Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com"
+                           class="w-full p-4 rounded-xl bg-gray-700 text-white border border-gray-600 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 transition duration-200 shadow-lg text-lg"
+                           required>
                 </div>
-                <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg uppercase tracking-wide shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    Pre-order Now & Save!
+                <button type="submit"
+                        class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-5 px-6 rounded-xl text-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-75 uppercase tracking-wide">
+                    🎉 Yes, I Want Instant Early Access & Discounts!
                 </button>
-                <p class="text-sm text-gray-400 mt-6">
-                    We respect your privacy. Your information will only be used to notify you about this guide.
-                </p>
             </form>
+
+            <p class="text-sm text-gray-500 text-center mt-10">
+                🔒 Your privacy is our priority. We will never share your information and you can unsubscribe anytime.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm border-t border-gray-800">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-        </div>
+    <footer class="bg-gray-950 py-12 px-4 text-center text-gray-500 text-sm border-t border-gray-800">
+        <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+        <p class="mt-3 text-gray-600">
+            Disclaimer: "iPhone Duo" is a rumored product name. This guide is based on comprehensive market analysis, industry trends, and expert projections.
+        </p>
     </footer>
+
+    <!-- Countdown Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the date we're counting down to: 7 days from now for a 'Limited Time' effect
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Sets the countdown to end 7 days from page load
+
+            // Update the countdown every 1 second
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate.getTime() - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result with leading zeros
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+                // If the countdown is over
+                if (distance < 0) {
+                    clearInterval(x);
+                    const countdownElement = document.getElementById("countdown");
+                    if (countdownElement) {
+                        countdownElement.innerHTML = "<span class='text-xl sm:text-2xl md:text-3xl font-bold text-white'>Offer Ended! Join the general waitlist.</span>";
+                    }
+                    // Optionally, you might disable the form or change the CTA text here
+                    const ctaButton = document.querySelector('a[href="#waitlist-form"]');
+                    if (ctaButton) {
+                        ctaButton.textContent = "Join General Waitlist";
+                        ctaButton.classList.remove('bg-indigo-600', 'hover:bg-indigo-700', 'focus:ring-indigo-500');
+                        ctaButton.classList.add('bg-gray-600', 'hover:bg-gray-700', 'focus:ring-gray-500');
+                    }
+                    const formButton = document.querySelector('#waitlist-form button[type="submit"]');
+                     if (formButton) {
+                        formButton.textContent = "Join General Waitlist";
+                        formButton.classList.remove('from-indigo-600', 'to-purple-600', 'hover:from-indigo-700', 'hover:to-purple-700');
+                        formButton.classList.add('bg-gray-600', 'hover:bg-gray-700');
+                    }
+                }
+            }, 1000);
+        });
+    </script>
 
 </body>
 </html>
