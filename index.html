@@ -3,282 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Master the Fold: Premium Foldable Phone Buyer's Guide & iPhone Duo Deep Dive</title>
+    <title>Mastering iOS 27's New Siri AI - Limited Time Early Access</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter for modern typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* Apply Inter font family and Antialiased rendering for premium look */
-        body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        /* Hero background with provided image and dark overlay for text readability */
-        .hero-bg {
+        /* Custom styles for hero background and overlay */
+        .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            background-attachment: fixed; /* For a subtle parallax effect */
             position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
-        .hero-bg::before {
-            content: "";
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.75); /* Darker overlay for strong contrast */
-            z-index: 1;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2; /* Ensure content is above the overlay */
-        }
-
-        /* Custom scrollbar for a polished dark-mode aesthetic */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #1a202c; /* Dark background */
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #4f46e5; /* Indigo */
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #6366f1; /* Lighter indigo on hover */
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 min-h-screen">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-bg min-h-screen py-16 px-4">
-        <div class="hero-content container mx-auto text-center flex flex-col items-center">
-            <!-- Strategic Trend Integration -->
-            <p class="text-indigo-400 text-lg md:text-xl font-semibold mb-5 uppercase tracking-wide animate-pulse">
-                🔥 Bloomberg Alert: Apple’s iPhone Duo Set to Redefine Foldables!
-            </p>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-7 text-white drop-shadow-lg max-w-5xl">
-                Navigate the Future: Your Ultimate Guide to Foldable Phones & the iPhone Duo
+    <header class="hero-background flex items-center justify-center min-h-screen">
+        <div class="hero-overlay"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto p-6 md:p-8 lg:p-12">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4 drop-shadow-lg">
+                🚀 Mastering iOS 27's New Siri AI
             </h1>
-            <p class="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-                Tired of the "expensive mistake" fear? Cut through the hype and discover the definitive path to choosing your perfect foldable, including an exclusive deep dive into Apple's rumored game-changer.
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-200 mb-8 font-light max-w-3xl mx-auto drop-shadow-md">
+                Go beyond casual use. Unlock advanced productivity hacks, custom automations, and hidden features leveraging iOS 27's revolutionary Siri AI overhaul.
             </p>
 
-            <!-- Limited Time Countdown - High Conversion Element -->
-            <div class="bg-gradient-to-br from-purple-700 to-indigo-700 p-7 rounded-2xl shadow-2xl mb-14 max-w-lg mx-auto transform hover:scale-105 transition-transform duration-500 ease-in-out border border-indigo-500">
-                <h2 class="text-3xl md:text-4xl font-bold mb-5 text-white">Exclusive Early Bird Access Ends In:</h2>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-6 text-white text-4xl sm:text-5xl md:text-6xl font-mono">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="w-20 sm:w-24 text-center py-2 bg-indigo-900 bg-opacity-50 rounded-lg">00</span>
-                        <span class="text-base sm:text-lg font-sans mt-2">Days</span>
-                    </div>
-                    <span class="text-4xl sm:text-5xl">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="w-20 sm:w-24 text-center py-2 bg-indigo-900 bg-opacity-50 rounded-lg">00</span>
-                        <span class="text-base sm:text-lg font-sans mt-2">Hours</span>
-                    </div>
-                    <span class="text-4xl sm:text-5xl">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="w-20 sm:w-24 text-center py-2 bg-indigo-900 bg-opacity-50 rounded-lg">00</span>
-                        <span class="text-base sm:text-lg font-sans mt-2">Minutes</span>
-                    </div>
-                    <span class="text-4xl sm:text-5xl">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="w-20 sm:w-24 text-center py-2 bg-indigo-900 bg-opacity-50 rounded-lg">00</span>
-                        <span class="text-base sm:text-lg font-sans mt-2">Seconds</span>
-                    </div>
+            <!-- Limited Time Countdown Timer -->
+            <div class="bg-gradient-to-r from-purple-600 to-indigo-700 text-white p-4 rounded-lg shadow-xl mb-8 max-w-md mx-auto transform hover:scale-105 transition-transform duration-300">
+                <p class="text-xl font-semibold mb-2">Early Access Discount Ends In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-3xl sm:text-4xl font-bold">
+                    <div><span id="days">00</span><p class="text-xs sm:text-sm font-normal">Days</p></div>
+                    <div>:</div>
+                    <div><span id="hours">00</span><p class="text-xs sm:text-sm font-normal">Hours</p></div>
+                    <div>:</div>
+                    <div><span id="minutes">00</span><p class="text-xs sm:text-sm font-normal">Minutes</p></div>
+                    <div>:</div>
+                    <div><span id="seconds">00</span><p class="text-xs sm:text-sm font-normal">Seconds</p></div>
                 </div>
             </div>
 
-            <a href="#waitlist-form" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-5 px-12 rounded-full text-xl md:text-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-75 tracking-wider uppercase">
-                🚀 Secure Your VIP Early Access Now!
+            <a href="#waitlist-form" class="inline-block bg-teal-500 hover:bg-teal-600 text-white font-bold py-4 px-8 rounded-full text-lg sm:text-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Get Your Limited-Time Discount Now!
             </a>
+            <p class="text-sm text-gray-400 mt-4">🔥 Featured: "Apple releases iOS 27 with Siri AI overhaul" - The Verge</p>
         </div>
     </header>
 
-    <!-- Problem/Solution/Value Proposition Section -->
-    <section class="py-24 px-4 bg-gray-900">
-        <div class="container mx-auto max-w-6xl text-center">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-8 leading-tight">
-                The Foldable Future is Here: Don't Just Witness It, Master It.
+    <main class="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+
+        <!-- Features Section -->
+        <section id="features" class="mb-20">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-white mb-12 leading-tight">
+                What You'll Master in This Exclusive Course
             </h2>
-            <p class="text-lg md:text-xl text-gray-400 mb-6 leading-relaxed max-w-3xl mx-auto">
-                With Apple poised to launch its groundbreaking iPhone Duo, the smartphone landscape is on the brink of its biggest shift in a decade. This isn't just a trend; it's the new normal. But navigating this innovative wave can be daunting: Which foldable truly fits your lifestyle? Are they durable enough?
-            </p>
-            <p class="text-xl md:text-2xl font-semibold text-indigo-300 leading-relaxed max-w-4xl mx-auto">
-                Our premium 'Foldable Phone Buyer's Guide & iPhone Duo Deep Dive' is your essential toolkit. It's meticulously crafted to arm you with objective insights, empowering you to make a confident, future-proof decision – avoiding buyer's remorse and embracing the foldable revolution with clarity.
-            </p>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="py-24 px-4 bg-gray-950">
-        <div class="container mx-auto max-w-7xl">
-            <h2 class="text-4xl md:text-6xl font-extrabold text-center text-white mb-20 leading-snug">
-                Exclusive Insights You'll Gain Inside This Definitive Guide:
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-                <!-- Feature 1: iPhone Duo Deep Dive -->
-                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-3 hover:shadow-2xl">
-                    <div class="text-5xl mb-6 text-indigo-400">🍎</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">iPhone Duo: The Game Changer</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-teal-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold text-teal-400 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl">⚙️</span> Advanced Custom Automations
+                    </h3>
                     <p class="text-gray-300 leading-relaxed">
-                        An unparalleled, data-driven deep dive into Apple's rumored foldable. Anticipate its potential, dissect its features, and understand its impact on the entire smartphone ecosystem.
+                        Learn to build complex, multi-step Siri Shortcuts that automate your daily routines, integrate with third-party apps, and anticipate your needs.
                     </p>
                 </div>
-
-                <!-- Feature 2: Foldable vs. Foldable Comparison -->
-                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-3 hover:shadow-2xl">
-                    <div class="text-5xl mb-6 text-green-400">🆚</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Foldable Wars: Duo vs. The Best</h3>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-teal-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold text-teal-400 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl">🧠</span> AI-Driven Productivity Hacks
+                    </h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Comprehensive comparisons pitting the iPhone Duo against leading foldables from Samsung, Google, and others. We reveal true performance, display quality, and value.
+                        Leverage Siri's new on-device AI capabilities for intelligent task management, context-aware reminders, and proactive information retrieval.
                     </p>
                 </div>
-
-                <!-- Feature 3: Duo vs. Standard Flagships -->
-                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-3 hover:shadow-2xl">
-                    <div class="text-5xl mb-6 text-red-400">🏆</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Flagship Face-Off: Fold vs. Flat</h3>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-teal-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold text-teal-400 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl">🤫</span> Hidden Features & Pro Tips
+                    </h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Should you stick with a traditional flagship or leap to a foldable? We analyze camera performance, battery life, software experience, and long-term investment.
+                        Uncover Siri's deepest secrets and expert-level configurations that Apple won't tell you about, for unparalleled control and efficiency.
                     </p>
                 </div>
-
-                <!-- Feature 4: Durability & Longevity -->
-                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-3 hover:shadow-2xl">
-                    <div class="text-5xl mb-6 text-orange-400">💪</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Durability Debunked: Protect Your Investment</h3>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-teal-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold text-teal-400 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl">🗣️</span> Natural Language Command Mastery
+                    </h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Lay your durability fears to rest. We deep-dive into hinge technology, screen resilience, and offer practical, actionable tips to prolong the life of your device.
+                        Optimize your interactions with Siri's enhanced natural language processing, making voice commands more powerful and intuitive than ever before.
                     </p>
                 </div>
-
-                <!-- Feature 5: Use-Case Specific Recommendations -->
-                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-3 hover:shadow-2xl">
-                    <div class="text-5xl mb-6 text-blue-400">🎯</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Tailored Recommendations for YOUR Life</h3>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-teal-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold text-teal-400 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl">🌐</span> Seamless Device Integration
+                    </h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Whether you're a mobile workstation, a media enthusiast, or seeking the ultimate pocketable device, get personalized advice on the perfect foldable for your needs.
+                        Integrate Siri's AI across all your Apple devices – iPhone, iPad, Apple Watch, and Mac – for a unified, intelligent workflow that saves you time.
                     </p>
                 </div>
-
-                <!-- Feature 6: Essential Accessories -->
-                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-3 hover:shadow-2xl">
-                    <div class="text-5xl mb-6 text-purple-400">🎁</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Must-Have Accessories & Ecosystem Insights</h3>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-teal-500 transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold text-teal-400 mb-4 flex items-center">
+                        <span class="mr-3 text-3xl">⚡</span> Boost Your Daily Efficiency
+                    </h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Maximize your foldable experience with our curated list of essential accessories, from protective cases to productivity tools, and how they integrate seamlessly.
+                        Save hours each week by automating repetitive tasks and getting instant access to the information you need, exactly when you need it.
                     </p>
                 </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Call to Action / Waitlist Form Section -->
-    <section id="waitlist-form" class="py-24 px-4 bg-gray-900">
-        <div class="container mx-auto max-w-3xl bg-gray-800 p-10 sm:p-12 rounded-3xl shadow-2xl border border-gray-700 transform hover:scale-[1.01] transition-transform duration-300 ease-in-out">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-center text-white mb-8 leading-tight">
-                Claim Your Future: Join the VIP Early Access Waitlist!
+        <!-- Waitlist Form Section -->
+        <section id="waitlist-form" class="bg-gray-800 p-8 sm:p-12 lg:p-16 rounded-xl shadow-2xl max-w-2xl mx-auto border border-gray-700">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-white mb-6">
+                Don't Miss Out! Secure Your Limited-Time Discount
             </h2>
-            <p class="text-xl text-gray-300 text-center mb-12 max-w-2xl mx-auto">
-                Don't just observe the foldable revolution – lead it. Secure your spot now to get exclusive early bird pricing and be among the first to receive this indispensable guide.
+            <p class="text-center text-gray-300 mb-8 text-lg">
+                Enter your details below to get early access to "Mastering iOS 27's New Siri AI" and claim your exclusive introductory pricing before it expires.
             </p>
-
-            <form class="space-y-7">
+            <form action="#" method="POST" class="space-y-6">
                 <div>
-                    <label for="name" class="block text-gray-300 text-lg font-semibold mb-3">Your Full Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name"
-                           class="w-full p-4 rounded-xl bg-gray-700 text-white border border-gray-600 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 transition duration-200 shadow-lg text-lg"
+                    <label for="name" class="block text-gray-200 text-sm font-semibold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent text-white placeholder-gray-400"
                            required>
                 </div>
                 <div>
-                    <label for="email" class="block text-gray-300 text-lg font-semibold mb-3">Your Best Email Address:</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com"
-                           class="w-full p-4 rounded-xl bg-gray-700 text-white border border-gray-600 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 transition duration-200 shadow-lg text-lg"
+                    <label for="email" class="block text-gray-200 text-sm font-semibold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                           class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent text-white placeholder-gray-400"
                            required>
                 </div>
-                <button type="submit"
-                        class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-5 px-6 rounded-xl text-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-75 uppercase tracking-wide">
-                    🎉 Yes, I Want Instant Early Access & Discounts!
+                <button type="submit" class="w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-md text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    Claim My Discount & Get Early Access!
                 </button>
             </form>
-
-            <p class="text-sm text-gray-500 text-center mt-10">
-                🔒 Your privacy is our priority. We will never share your information and you can unsubscribe anytime.
+            <p class="text-xs text-gray-400 mt-6 text-center">
+                By submitting your information, you agree to receive emails about this course and related offers. We respect your privacy.
             </p>
-        </div>
-    </section>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-12 px-4 text-center text-gray-500 text-sm border-t border-gray-800">
-        <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-        <p class="mt-3 text-gray-600">
-            Disclaimer: "iPhone Duo" is a rumored product name. This guide is based on comprehensive market analysis, industry trends, and expert projections.
-        </p>
+    <footer class="bg-gray-900 border-t border-gray-800 text-gray-400 text-center py-8 mt-20">
+        <p>&copy; 2024 Digital Education Authority. All rights reserved.</p>
+        <p class="mt-2 text-sm">Empowering Your Digital Productivity Journey.</p>
     </footer>
 
-    <!-- Countdown Script -->
+    <!-- JavaScript for Countdown Timer -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the date we're counting down to: 7 days from now for a 'Limited Time' effect
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Sets the countdown to end 7 days from page load
+        // Set the date and time the countdown ends (e.g., 7 days from now)
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 7); // 7 days from current date
+        countdownDate.setHours(countdownDate.getHours() + 12); // Add 12 hours
+        countdownDate.setMinutes(countdownDate.getMinutes() + 30); // Add 30 minutes
+        countdownDate.setSeconds(countdownDate.getSeconds() + 45); // Add 45 seconds
+        countdownDate.setMilliseconds(0); // Ensure clean seconds
 
-            // Update the countdown every 1 second
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
 
-                // Time calculations for days, hours, minutes and seconds
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Display the result with leading zeros
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+            // Display the result in the corresponding elements
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-                // If the countdown is over
-                if (distance < 0) {
-                    clearInterval(x);
-                    const countdownElement = document.getElementById("countdown");
-                    if (countdownElement) {
-                        countdownElement.innerHTML = "<span class='text-xl sm:text-2xl md:text-3xl font-bold text-white'>Offer Ended! Join the general waitlist.</span>";
-                    }
-                    // Optionally, you might disable the form or change the CTA text here
-                    const ctaButton = document.querySelector('a[href="#waitlist-form"]');
-                    if (ctaButton) {
-                        ctaButton.textContent = "Join General Waitlist";
-                        ctaButton.classList.remove('bg-indigo-600', 'hover:bg-indigo-700', 'focus:ring-indigo-500');
-                        ctaButton.classList.add('bg-gray-600', 'hover:bg-gray-700', 'focus:ring-gray-500');
-                    }
-                    const formButton = document.querySelector('#waitlist-form button[type="submit"]');
-                     if (formButton) {
-                        formButton.textContent = "Join General Waitlist";
-                        formButton.classList.remove('from-indigo-600', 'to-purple-600', 'hover:from-indigo-700', 'hover:to-purple-700');
-                        formButton.classList.add('bg-gray-600', 'hover:bg-gray-700');
-                    }
+            // If the countdown is over, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "<span>OFFER EXPIRED!</span>";
+                // Optionally, disable the form or change the CTA text
+                const ctaButton = document.querySelector('a[href="#waitlist-form"]');
+                if (ctaButton) {
+                    ctaButton.innerText = "Course Available Soon!";
+                    ctaButton.classList.remove('bg-teal-500', 'hover:bg-teal-600');
+                    ctaButton.classList.add('bg-gray-500', 'cursor-not-allowed');
+                    ctaButton.href = "#"; // Prevent scroll to form
                 }
-            }, 1000);
-        });
+                const formButton = document.querySelector('#waitlist-form button[type="submit"]');
+                if (formButton) {
+                    formButton.innerText = "Offer Expired";
+                    formButton.disabled = true;
+                    formButton.classList.remove('bg-teal-500', 'hover:bg-teal-600');
+                    formButton.classList.add('bg-gray-500', 'cursor-not-allowed');
+                }
+            }
+        }, 1000);
     </script>
-
 </body>
 </html>
