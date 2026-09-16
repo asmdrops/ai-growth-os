@@ -3,138 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>macOS 27 AI Productivity Power-Up Kit - Limited Time Offer</title>
+    <title>Mastering Claude's Superapp: Advanced Document Creation & Agentic Workflows</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
-        .text-gradient {
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+        }
+        /* Dark overlay for hero image */
+        .hero-overlay::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7); /* Adjust darkness as needed */
+            z-index: 1;
+        }
+        .hero-content {
+            z-index: 2;
+            position: relative; /* Ensure content is above overlay */
         }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <section class="relative h-screen bg-cover bg-center flex items-center justify-center p-4" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
-        <div class="z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-gradient bg-gradient-to-r from-purple-400 to-pink-600 mb-6">
-                Unleash macOS 27 Golden Gate's True AI Power
+    <header class="relative bg-cover bg-center h-screen flex items-center justify-center hero-background hero-overlay">
+        <div class="hero-content text-center px-4 max-w-5xl mx-auto py-16">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4 drop-shadow-lg">
+                Unlock Peak Productivity: Master Claude's Agentic Superapp Today.
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-                Transform your workflow with the ultimate 'macOS 27 AI Productivity Power-Up Kit'. Master new Siri capabilities and Golden Gate features for unparalleled efficiency.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 drop-shadow-md">
+                Harness the power of Claude's unified chat and Cowork interface for unparalleled document creation, automation, and workflow efficiency. Your business future starts now.
             </p>
-            <div class="bg-yellow-500 text-gray-900 font-bold py-3 px-6 rounded-lg text-lg md:text-xl mb-8 inline-block shadow-lg animate-pulse">
-                Limited Time Offer Ends In: <span id="countdown" class="ml-2"></span>
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-300 mb-6 drop-shadow-sm">
+                "Mastering Claude's Superapp: Advanced Document Creation & Agentic Workflows for Business Productivity"
+            </h2>
+            
+            <!-- Limited Time Countdown -->
+            <div class="bg-gradient-to-r from-blue-700 to-indigo-700 p-4 sm:p-6 rounded-lg shadow-xl inline-block mb-8 animate-pulse">
+                <p class="text-lg sm:text-xl md:text-2xl font-bold text-white uppercase mb-2">Limited Time Offer!</p>
+                <div class="flex justify-center items-center space-x-2 sm:space-x-4">
+                    <div class="flex flex-col items-center">
+                        <span id="countdown-days" class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-yellow-300">00</span>
+                        <span class="text-sm sm:text-base text-gray-200">Days</span>
+                    </div>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-300">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="countdown-hours" class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-yellow-300">00</span>
+                        <span class="text-sm sm:text-base text-gray-200">Hours</span>
+                    </div>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-300">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="countdown-minutes" class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-yellow-300">00</span>
+                        <span class="text-sm sm:text-base text-gray-200">Minutes</span>
+                    </div>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-300">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="countdown-seconds" class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-yellow-300">00</span>
+                        <span class="text-sm sm:text-base text-gray-200">Seconds</span>
+                    </div>
+                </div>
+                <p class="text-sm sm:text-base text-gray-300 mt-2">Enrollment closes soon!</p>
             </div>
-            <a href="#waitlist" class="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-full text-base sm:text-lg shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
-                Secure Your Kit Now!
+            <!-- End Countdown -->
+
+            <a href="#waitlist-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Secure Your Spot Now!
             </a>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-20 px-4">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-50 mb-12">What You'll Achieve with This Kit</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-3xl sm:text-4xl text-purple-400 mb-4">🚀</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Master New Siri AI</h3>
-                    <p class="text-gray-300 text-sm sm:text-base">Unlock advanced voice commands and intelligent automation with Siri's enhanced Golden Gate features. Go beyond basic tasks.</p>
+    <section class="py-16 sm:py-20 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white mb-12">
+                What You'll Gain: The Ultimate Claude Mastery Blueprint
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-600 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">🎥</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-blue-400">Comprehensive Video Modules</h3>
+                    </div>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Dive deep into Claude's Superapp with step-by-step video tutorials covering every feature, from basic navigation to advanced agentic workflow deployment. Learn at your own pace.
+                    </p>
                 </div>
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-3xl sm:text-4xl text-pink-500 mb-4">💡</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Workflow Optimization</h3>
-                    <p class="text-gray-300 text-sm sm:text-base">Streamline your daily routines with custom templates and pre-built workflows designed for maximum efficiency in macOS 27.</p>
+
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-600 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">✍️</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-blue-400">Ultimate Prompt Engineering Playbook</h3>
+                    </div>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Access our exclusive playbook with battle-tested prompts and strategies specifically for Claude Docs, ensuring you generate high-quality, relevant content every single time.
+                    </p>
                 </div>
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-3xl sm:text-4xl text-green-400 mb-4">⚙️</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Custom AI Shortcuts</h3>
-                    <p class="text-gray-300 text-sm sm:text-base">Learn to create powerful Siri Shortcuts that integrate with your favorite AI apps, saving you hours every week.</p>
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-600 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">📈</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-blue-400">Industry-Specific Workflow Blueprints</h3>
+                    </div>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Implement ready-to-use workflow blueprints tailored for marketing, sales, customer support, content creation, and more, saving you hours of development time.
+                    </p>
                 </div>
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-3xl sm:text-4xl text-blue-400 mb-4">📈</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">AI App Integration</h3>
-                    <p class="text-gray-300 text-sm sm:text-base">Seamlessly connect macOS 27 with cutting-edge AI productivity tools for enhanced data analysis, writing, and more.</p>
+
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-600 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">🤝</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-blue-400">Exclusive Private Community Forum</h3>
+                    </div>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Connect with fellow Claude power users, share insights, ask questions, and collaborate on cutting-edge agentic projects in our dedicated members-only forum.
+                    </p>
                 </div>
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-3xl sm:text-4xl text-red-400 mb-4">⚡</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Exclusive Templates</h3>
-                    <p class="text-gray-300 text-sm sm:text-base">Access a library of expert-designed templates for notes, projects, and creative tasks, all supercharged by AI.</p>
+
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-600 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">🚀</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-blue-400">Ongoing Support & Updates</h3>
+                    </div>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Stay ahead with continuous access to new modules, updated blueprints, and direct support as Claude's Superapp evolves. Never fall behind on the latest innovations.
+                    </p>
                 </div>
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-3xl sm:text-4xl text-yellow-400 mb-4">👑</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Golden Gate Advantage</h3>
-                    <p class="text-gray-300 text-sm sm:text-base">Leverage every new Golden Gate feature to its fullest potential, turning your Mac into an AI-driven productivity powerhouse.</p>
+
+                <!-- Feature 6 (Bonus/Summary) -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-600 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">💡</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-blue-400">Future-Proof Your Business</h3>
+                    </div>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        This course isn't just about learning tools; it's about adopting a mindset that leverages AI for exponential growth, efficiency, and a competitive edge in any market.
+                    </p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Waitlist/Enrollment Form Section -->
-    <section id="waitlist" class="py-16 sm:py-20 px-4 bg-gray-800">
-        <div class="max-w-2xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6 sm:mb-8">Ready to Elevate Your Productivity?</h2>
-            <p class="text-base sm:text-xl text-gray-300 mb-8 sm:mb-10">Don't miss out on this limited-time opportunity to transform your macOS 27 experience. Secure your exclusive AI Power-Up Kit today!</p>
-            <form class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-2xl space-y-4 sm:space-y-6">
-                <input type="text" placeholder="Your Full Name" class="w-full p-3 sm:p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-base sm:text-lg" required>
-                <input type="email" placeholder="Your Best Email Address" class="w-full p-3 sm:p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-base sm:text-lg" required>
-                <div class="flex items-center justify-center">
-                    <input type="checkbox" id="updates" name="updates" class="form-checkbox h-4 w-4 sm:h-5 sm:w-5 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-500">
-                    <label for="updates" class="ml-2 text-gray-300 text-xs sm:text-sm">Yes, send me exclusive updates and offers!</label>
+    <!-- Waitlist / Enrollment Form Section -->
+    <section id="waitlist-form" class="py-16 sm:py-20 bg-gray-800">
+        <div class="container mx-auto px-4 max-w-2xl text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
+                Ready to Transform Your Business with Claude?
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed">
+                Spaces for our premium 'Mastering Claude's Superapp' course are highly limited due to the intensive support and community access. Don't miss your chance to secure a spot.
+            </p>
+            <form class="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-2xl border border-gray-700">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-300 text-sm sm:text-base font-bold mb-2">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Full Name" required
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-200">
                 </div>
-                <button type="submit" class="w-full bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-full text-base sm:text-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-                    Join the Exclusive Waitlist!
+                <div class="mb-8 text-left">
+                    <label for="email" class="block text-gray-300 text-sm sm:text-base font-bold mb-2">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-200">
+                </div>
+                <button type="submit" class="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl w-full">
+                    Enroll Now & Transform My Business!
                 </button>
-                <p class="text-gray-400 text-xs sm:text-sm mt-4">We respect your privacy. Unsubscribe anytime.</p>
             </form>
+            <p class="text-gray-400 text-xs sm:text-sm mt-6">
+                Your information is 100% secure and will never be shared.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-6 sm:py-8 px-4 text-center text-gray-500 text-xs sm:text-sm">
-        <div class="max-w-6xl mx-auto">
-            &copy; <span id="current-year"></span> Digital Education Authority. All rights reserved. | <a href="#" class="hover:text-gray-300 mx-2">Privacy Policy</a> | <a href="#" class="hover:text-gray-300">Terms of Service</a>
+    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm">
+        <div class="container mx-auto px-4">
+            &copy; 2023 Digital Education Authority. All rights reserved. | <a href="#" class="text-blue-500 hover:underline">Privacy Policy</a> | <a href="#" class="text-blue-500 hover:underline">Terms of Service</a>
         </div>
     </footer>
 
+    <!-- Placeholder for Countdown JavaScript -->
     <script>
-        // Countdown Logic
-        const countdownElement = document.getElementById('countdown');
-        // Set the end date for the limited-time offer (e.g., 7 days from now)
-        const endDate = new Date();
-        endDate.setDate(endDate.getDate() + 7); // 7 days from now
+        // This is a client-side JavaScript placeholder for the countdown timer.
+        // As per the instructions, only raw HTML is returned, so this script
+        // is non-functional but illustrates where the logic would be placed.
+        // A full implementation would calculate the remaining time to a target date.
 
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = endDate - now;
+        function startCountdown(targetDate) {
+            const daysSpan = document.getElementById('countdown-days');
+            const hoursSpan = document.getElementById('countdown-hours');
+            const minutesSpan = document.getElementById('countdown-minutes');
+            const secondsSpan = document.getElementById('countdown-seconds');
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
 
-            if (distance < 0) {
-                countdownElement.innerHTML = "EXPIRED";
-                clearInterval(interval);
-            } else {
-                countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                if (distance < 0) {
+                    clearInterval(interval);
+                    daysSpan.textContent = '00';
+                    hoursSpan.textContent = '00';
+                    minutesSpan.textContent = '00';
+                    secondsSpan.textContent = '00';
+                    // You might want to hide the countdown or change the CTA here
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                daysSpan.textContent = String(days).padStart(2, '0');
+                hoursSpan.textContent = String(hours).padStart(2, '0');
+                minutesSpan.textContent = String(minutes).padStart(2, '0');
+                secondsSpan.textContent = String(seconds).padStart(2, '0');
             }
+
+            updateCountdown(); // Initial call
+            const interval = setInterval(updateCountdown, 1000);
         }
 
-        const interval = setInterval(updateCountdown, 1000);
-        updateCountdown(); // Initial call to display immediately
+        // Example: Set a target date 7 days from now for demonstration purposes.
+        // In a real application, this would be a specific course enrollment end date.
+        const oneWeekFromNow = new Date();
+        oneWeekFromNow.setDate(oneWeekFromNow.getDate() + 7); 
+        // Uncomment the line below in a real implementation
+        // window.addEventListener('load', () => startCountdown(oneWeekFromNow.getTime()));
 
-        // Set current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        // For this strict HTML output, we'll initialize with static values or leave it as default "00"
+        // to avoid actual JS execution. The structure is present for the user to add JS.
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('countdown-days').textContent = '07';
+            document.getElementById('countdown-hours').textContent = '23';
+            document.getElementById('countdown-minutes').textContent = '59';
+            document.getElementById('countdown-seconds').textContent = '59';
+        });
     </script>
 </body>
 </html>
