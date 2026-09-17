@@ -3,193 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel Power-Up: Android 17 QPR2 Productivity Playbook - Elite Guide & Toolkit</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>The Balanced Teen: A Parent's Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom scrollbar for a more premium feel, optional */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* Dark background */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* Slightly lighter dark */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096; /* Even lighter on hover */
+        }
+
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+        }
+        .countdown-digit {
+            @apply flex flex-col items-center justify-center p-4 bg-gray-800 bg-opacity-70 rounded-lg shadow-lg mx-2;
+        }
+        .countdown-digit span:first-child {
+            @apply text-5xl font-extrabold text-teal-400 leading-none;
+        }
+        .countdown-digit span:last-child {
+            @apply text-sm uppercase text-gray-300 tracking-wider mt-1;
+        }
+    </style>
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="relative bg-cover bg-center bg-no-repeat min-h-screen flex items-center justify-center p-4"
-            style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 py-16 rounded-lg bg-gray-900 bg-opacity-80 shadow-2xl">
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-                Pixel Power-Up: Android 17 QPR2 Productivity Playbook
+    <header class="relative hero-bg min-h-screen flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
+        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark Overlay -->
+
+        <div class="relative z-10 text-center max-w-4xl mx-auto">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6 drop-shadow-lg">
+                The Balanced Teen:
+                <span class="block text-teal-400 mt-2">A Parent's Guide to Smart Screen Time, Social Media Safety, and Digital Well-being.</span>
             </h1>
-            <p class="text-xl md:text-2xl lg:text-3xl text-gray-200 mb-8 font-light italic">
-                Unlock Your Pixel's True Potential for Unrivaled Focus & Digital Well-being.
-            </p>
-            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-                Tired of digital distractions and the 'doomscrolling habit'? Reclaim your attention and optimize your life. This premium guide & toolkit
-                leverages Android 17 QPR2's cutting-edge features to transform your Pixel into the ultimate productivity and wellness device.
+            <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Empower your child with lifelong healthy digital habits. Go beyond screen time limits and foster resilience in the online world.
             </p>
 
             <!-- Limited Time Countdown -->
-            <div class="mb-12 p-6 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-xl shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                <h3 class="text-3xl font-bold mb-4 text-white">Exclusive Launch Window: Access Closing Soon!</h3>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-white font-mono text-4xl md:text-5xl lg:text-6xl">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="font-extrabold">00</span>
-                        <span class="text-sm md:text-base opacity-80 mt-1">Days</span>
+            <div class="mb-12">
+                <p class="text-xl sm:text-2xl font-semibold text-red-400 mb-4 animate-pulse">Limited-Time Enrollment Offer Ends In:</p>
+                <div id="countdown" class="flex justify-center flex-wrap">
+                    <div class="countdown-digit">
+                        <span id="days">00</span>
+                        <span>Days</span>
                     </div>
-                    <span class="font-light">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="font-extrabold">00</span>
-                        <span class="text-sm md:text-base opacity-80 mt-1">Hours</span>
+                    <div class="countdown-digit">
+                        <span id="hours">00</span>
+                        <span>Hours</span>
                     </div>
-                    <span class="font-light">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="font-extrabold">00</span>
-                        <span class="text-sm md:text-base opacity-80 mt-1">Minutes</span>
+                    <div class="countdown-digit">
+                        <span id="minutes">00</span>
+                        <span>Minutes</span>
                     </div>
-                    <span class="font-light">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="font-extrabold">00</span>
-                        <span class="text-sm md:text-base opacity-80 mt-1">Seconds</span>
+                    <div class="countdown-digit">
+                        <span id="seconds">00</span>
+                        <span>Seconds</span>
                     </div>
                 </div>
+                <!-- Placeholder for JavaScript countdown logic. You'd typically add a script tag here. -->
+                <!-- Example JS (not included in raw HTML output):
+                <script>
+                    const countdown = () => {
+                        const targetDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000); // 7 days from now
+                        const updateCountdown = setInterval(() => {
+                            const now = new Date().getTime();
+                            const distance = targetDate - now;
+
+                            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                            document.getElementById("days").innerText = String(days).padStart(2, '0');
+                            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+                            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+                            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+
+                            if (distance < 0) {
+                                clearInterval(updateCountdown);
+                                document.getElementById("countdown").innerHTML = "<p class='text-red-500 text-3xl font-bold'>Offer Expired!</p>";
+                            }
+                        }, 1000);
+                    };
+                    countdown();
+                </script>
+                -->
             </div>
 
-            <a href="#waitlist" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl uppercase tracking-wide transform hover:scale-105 transition duration-300 ease-in-out shadow-lg">
-                Secure Your Early Access Now!
+            <a href="#waitlist" class="inline-block bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                Secure Your Teen's Digital Future Now!
             </a>
+            <p class="text-sm text-gray-400 mt-4">Enrollment is highly limited to ensure personalized support.</p>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section class="py-20 bg-gray-950 text-gray-100">
-        <div class="container mx-auto px-4 max-w-screen-xl">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-                What's Inside Your Pixel Power-Up Guide?
-            </h2>
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-12">What You'll Discover Inside This Essential Guide</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Feature 1: Deep Dive -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:translate-y-[-5px] transition duration-300 ease-in-out">
-                    <div class="text-5xl text-purple-400 mb-6">⚙️</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Deep Dive: Android 17 QPR2 Features</h3>
-                    <p class="text-gray-300">
-                        Master every new setting, tweak, and hidden potential of the latest Pixel update. From enhanced notifications to new privacy controls, nothing is left uncovered.
+
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-teal-500">
+                    <div class="text-teal-400 mb-4 text-5xl">💻</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Master Screen Time, Beyond Limits</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Move past rigid rules. Learn a flexible framework to help your teen develop self-regulation and intentional tech use, understanding *why* they use devices.
                     </p>
                 </div>
-                <!-- Feature 2: Digital Well-being -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:translate-y-[-5px] transition duration-300 ease-in-out">
-                    <div class="text-5xl text-green-400 mb-6">🧘‍♀️</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Digital Well-being Mastery</h3>
-                    <p class="text-gray-300">
-                        Combat screen addiction and doomscrolling with expertly crafted strategies. Leverage Pixel's tools to build healthier digital habits and reclaim your focus.
+
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-teal-500">
+                    <div class="text-teal-400 mb-4 text-5xl">🛡️</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Navigate Social Media Safely</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Understand privacy settings, cyberbullying prevention, and digital footprints. Empower your teen to build a positive online presence responsibly.
                     </p>
                 </div>
-                <!-- Feature 3: Productivity Power-Ups -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:translate-y-[-5px] transition duration-300 ease-in-out">
-                    <div class="text-5xl text-blue-400 mb-6">🚀</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Productivity Power-Ups</h3>
-                    <p class="text-gray-300">
-                        Transform your Pixel into a productivity powerhouse. Discover app integrations, workflow optimizations, and time-saving shortcuts to boost your efficiency.
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-teal-500">
+                    <div class="text-teal-400 mb-4 text-5xl">🧠</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Foster Digital Well-being & Mental Health</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Identify signs of digital strain and implement strategies to protect your teen's mental health, promoting balance between online and offline life.
                     </p>
                 </div>
-                <!-- Feature 4: Hidden Feature Discoveries -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:translate-y-[-5px] transition duration-300 ease-in-out">
-                    <div class="text-5xl text-yellow-400 mb-6">🕵️</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Hidden Feature Discoveries</h3>
-                    <p class="text-gray-300">
-                        Go beyond the obvious. Unearth secret settings and undocumented capabilities that Google doesn't tell you about, enhancing your user experience.
+
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-teal-500">
+                    <div class="text-teal-400 mb-4 text-5xl">🗣️</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Effective Communication Strategies</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Bridge the generation gap. Learn how to talk to your teen about their digital world without judgment, fostering trust and open dialogue.
                     </p>
                 </div>
-                <!-- Feature 5: Curated App Ecosystem -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:translate-y-[-5px] transition duration-300 ease-in-out">
-                    <div class="text-5xl text-red-400 mb-6">📱</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Curated App Ecosystem</h3>
-                    <p class="text-gray-300">
-                        Stop guessing. Get our hand-picked recommendations for apps that perfectly complement QPR2 features, elevating your Pixel's utility without bloat.
+
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-teal-500">
+                    <div class="text-teal-400 mb-4 text-5xl">🛠️</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Recommended Tools & Resources</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Access a curated list of apps, parental control software, and expert resources to support your family's digital journey.
                     </p>
                 </div>
-                <!-- Feature 6: Step-by-Step Tutorials -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:translate-y-[-5px] transition duration-300 ease-in-out">
-                    <div class="text-5xl text-pink-400 mb-6">🎓</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Step-by-Step Tutorials</h3>
-                    <p class="text-gray-300">
-                        No tech jargon, just clear, actionable instructions. Easily implement every strategy and unlock every feature with our visual, easy-to-follow guides.
+
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-teal-500">
+                    <div class="text-teal-400 mb-4 text-5xl">📈</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Proactive & Future-Proof Strategies</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Stay ahead of emerging trends, like new platforms and potential policy changes (e.g., Snapchat's considerations on time limits), equipping your teen for the future.
                     </p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-20 bg-gray-900 text-gray-100">
-        <div class="container mx-auto px-4 max-w-screen-md text-center">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-                Be the First to Transform Your Pixel Experience
-            </h2>
-            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto">
-                Join our exclusive waitlist for the Pixel Power-Up Guide & Toolkit. Get notified instantly upon launch and receive special early-bird bonuses!
+    <!-- Waitlist / Call to Action Form -->
+    <section id="waitlist" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div class="max-w-3xl mx-auto text-center bg-gray-800 p-10 rounded-xl shadow-2xl border border-gray-700">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">Ready to Empower Your Teen?</h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Join the waitlist for <span class="text-teal-400 font-semibold">'The Balanced Teen'</span> and be among the first to receive exclusive early access, bonus content, and launch discounts.
             </p>
-            <form class="max-w-lg mx-auto p-8 bg-gray-800 rounded-xl shadow-2xl">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-lg font-semibold mb-2">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400 text-lg" required>
+
+            <form action="#" method="POST" class="w-full max-w-md mx-auto">
+                <div class="flex flex-col sm:flex-row gap-4 mb-6">
+                    <input type="email" id="email" name="email" placeholder="Enter your best email address" required
+                           class="flex-grow p-4 rounded-lg bg-gray-700 border border-gray-600 focus:border-teal-500 focus:ring focus:ring-teal-500 focus:ring-opacity-50 text-white placeholder-gray-400 outline-none transition duration-200">
+                    <button type="submit"
+                            class="w-full sm:w-auto bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 px-8 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                        Join the Waitlist
+                    </button>
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-300 text-lg font-semibold mb-2">Your Best Email</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com"
-                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400 text-lg" required>
-                </div>
-                <button type="submit"
-                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-xl uppercase tracking-wide transform hover:scale-105 transition duration-300 ease-in-out shadow-lg">
-                    Join the Exclusive Waitlist
-                </button>
+                <p class="text-sm text-gray-400">
+                    We respect your privacy. Your email is safe with us. No spam, ever.
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-10 text-center text-gray-500 text-sm">
-        <div class="container mx-auto px-4">
-            <p>&copy; <span id="currentYear"></span> Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">Leveraging Knowledge, Amplifying Impact.</p>
-        </div>
+    <footer class="bg-gray-900 py-10 px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+        <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+        <p class="mt-2">
+            <a href="#" class="text-gray-400 hover:text-teal-400 transition duration-200 mx-2">Privacy Policy</a>
+            <span class="text-gray-600">|</span>
+            <a href="#" class="text-gray-400 hover:text-teal-400 transition duration-200 mx-2">Terms of Service</a>
+        </p>
     </footer>
-
-    <!-- Countdown Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 7 days from now for a limited launch)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Adds 7 days from the current date
-
-            // Update the count down every 1 second
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate - now;
-
-                // Time calculations for days, hours, minutes and seconds
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                // Display the result in the elements
-                if (document.getElementById("days")) {
-                    document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                    document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                    document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                    document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-                }
-
-                // If the count down is finished, display a message
-                if (distance < 0) {
-                    clearInterval(x);
-                    if (document.getElementById("countdown")) {
-                        document.getElementById("countdown").innerHTML = "<div class='text-white text-3xl font-bold'>OFFER EXPIRED!</div>";
-                    }
-                }
-            }, 1000);
-
-            // Update current year in footer
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-        });
-    </script>
 
 </body>
 </html>
