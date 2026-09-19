@@ -1,110 +1,150 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retro Handheld Optimization Guide - FunnyPlaying FPGB Mini</title>
+    <title>Apple Intelligence Power User: Maximize iOS 27 - Waitlist</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
-        /* Custom scrollbar for aesthetic appeal */
-        ::-webkit-scrollbar {
-            width: 10px;
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Provides a subtle parallax effect */
         }
-        ::-webkit-scrollbar-track {
-            background: #2d3748; /* bg-gray-800 */
+        /* Custom SVG styling for icons */
+        .icon-lg {
+            width: 4rem; /* 64px */
+            height: 4rem; /* 64px */
         }
-        ::-webkit-scrollbar-thumb {
-            background: #8b5cf6; /* purple-500 */
-            border-radius: 5px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #7c3aed; /* purple-600 */
+        @media (min-width: 640px) {
+            .icon-lg {
+                width: 5rem; /* 80px */
+                height: 5rem; /* 80px */
+            }
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative bg-cover bg-center bg-no-repeat min-h-screen flex items-center justify-center p-4" 
-            style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-        <div class="absolute inset-0 bg-black opacity-70 z-0"></div>
-        <div class="relative z-10 text-center max-w-4xl mx-auto space-y-6">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white drop-shadow-lg">
-                <span class="text-purple-400">Unlock</span> Your Ultimate Retro Gaming Experience
+    <section class="relative min-h-screen flex items-center justify-center text-center px-4 py-16 hero-background">
+        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
+        <div class="relative z-10 max-w-4xl mx-auto space-y-8">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white drop-shadow-lg">
+                Unlock Your Full Potential: Master Apple Intelligence in iOS 27
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl font-medium text-gray-200 leading-relaxed max-w-2xl mx-auto drop-shadow-md">
-                Inspired by the buzz around the FunnyPlaying FPGB Mini – the cheaper, smaller Game Boy clone making waves – this guide is your definitive resource to master setup, mods, and games.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 font-light max-w-3xl mx-auto drop-shadow-md">
+                Transform your daily workflows with cutting-edge AI. Get tangible efficiency gains and elevate your creativity with our premium course & community.
             </p>
-            <div class="mt-8">
-                <a href="#waitlist-section" class="inline-block bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50">
-                    Join the VIP Waitlist for Early Access!
-                </a>
+            
+            <!-- Call to Action Button -->
+            <a href="#waitlist-form" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105 text-lg sm:text-xl">
+                Join the Exclusive Waitlist Now!
+            </a>
+
+            <!-- Limited Time Countdown -->
+            <div class="mt-12 bg-gray-800 bg-opacity-70 backdrop-blur-sm p-6 rounded-lg shadow-2xl mx-auto max-w-md border border-indigo-500">
+                <p class="text-md sm:text-lg font-semibold text-indigo-300 mb-4 uppercase tracking-wider">Early Access Begins In:</p>
+                <div class="flex justify-center items-center space-x-4 sm:space-x-6 text-white">
+                    <div class="flex flex-col items-center">
+                        <span id="days" class="text-3xl sm:text-5xl font-bold">00</span>
+                        <span class="text-xs sm:text-sm uppercase font-medium text-gray-400">Days</span>
+                    </div>
+                    <span class="text-3xl sm:text-5xl font-bold">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours" class="text-3xl sm:text-5xl font-bold">00</span>
+                        <span class="text-xs sm:text-sm uppercase font-medium text-gray-400">Hours</span>
+                    </div>
+                    <span class="text-3xl sm:text-5xl font-bold">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes" class="text-3xl sm:text-5xl font-bold">00</span>
+                        <span class="text-xs sm:text-sm uppercase font-medium text-gray-400">Minutes</span>
+                    </div>
+                    <span class="text-3xl sm:text-5xl font-bold">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds" class="text-3xl sm:text-5xl font-bold">00</span>
+                        <span class="text-xs sm:text-sm uppercase font-medium text-gray-400">Seconds</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 bg-gray-900 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
-                What You'll Master in This Comprehensive Guide
+    <section class="py-16 sm:py-24 bg-gray-950 px-4">
+        <div class="container mx-auto max-w-screen-xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white mb-12 sm:mb-16 leading-tight">
+                What You'll Achieve with <span class="text-indigo-400">Apple Intelligence Power User</span>
             </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-5xl mb-4 text-purple-400">⚙️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Seamless Setup & Configuration</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Step-by-step instructions to get your FunnyPlaying FPGB Mini (and similar devices) up and running perfectly, right out of the box.
-                    </p>
-                </div>
-
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-5xl mb-4 text-pink-400">💾</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Cartridge Management Mastery</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Optimize your game library, understand flash carts, and best practices for preserving your retro game collection.
-                    </p>
-                </div>
-
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-5xl mb-4 text-teal-400">🚀</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Performance-Boosting Mods</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Unlock the full potential of your handheld with essential hardware modifications and software tweaks for enhanced performance.
-                    </p>
-                </div>
-
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-5xl mb-4 text-yellow-400">🎮</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Curated Game Recommendations</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Discover hidden gems and classic must-plays perfectly suited for your FPGB Mini, ensuring endless hours of fun.
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
+                <!-- Feature 1: In-depth Video Tutorials -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700">
+                    <div class="text-indigo-400 icon-lg mb-6 flex justify-center mx-auto">
+                        <svg class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.555-4.555A1.996 1.996 0 0121 7.152v9.696a1.996 1.996 0 01-1.445 1.803L15 14m-6 4c-1.105 0-2-.895-2-2v-4c0-1.105.895-2 2-2h4c1.105 0 2 .895 2 2v4c0 1.105-.895 2-2 2H9z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">In-depth Video Tutorials</h3>
+                    <p class="text-gray-300 text-center">
+                        Master every new iOS 27 AI feature with step-by-step video guides. Learn best practices for advanced text generation, image manipulation, and smart summaries.
                     </p>
                 </div>
                 
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-5xl mb-4 text-blue-400">🔋</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Power-User Accessory Guide</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        From power solutions to protective cases, find the best accessories to complement and enhance your portable setup.
+                <!-- Feature 2: Downloadable AI Templates -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700">
+                    <div class="text-indigo-400 icon-lg mb-6 flex justify-center mx-auto">
+                        <svg class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Downloadable AI Templates</h3>
+                    <p class="text-gray-300 text-center">
+                        Instantly apply AI to your work with ready-to-use templates for reports, creative briefs, social media content, and more. Boost your productivity from day one.
                     </p>
                 </div>
 
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-5xl mb-4 text-red-400">🎨</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Deep Customization & Aesthetics</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Personalize your device with shell swaps, button replacements, and other aesthetic upgrades to make it uniquely yours.
+                <!-- Feature 3: Exclusive Live Q&A Sessions -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700">
+                    <div class="text-indigo-400 icon-lg mb-6 flex justify-center mx-auto">
+                        <svg class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Exclusive Live Q&A</h3>
+                    <p class="text-gray-300 text-center">
+                        Get your burning questions answered by experts. Learn advanced strategies and troubleshoot specific challenges in real-time, directly from course instructors.
+                    </p>
+                </div>
+
+                <!-- Feature 4: Premium Community Access -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700">
+                    <div class="text-indigo-400 icon-lg mb-6 flex justify-center mx-auto">
+                        <svg class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.133-1.284-.384-1.856m0 0C17.384 16.144 18 15.112 18 14c0-3.314-4-6-9-6S0 10.686 0 14c0 1.112.616 2.144 1.616 2.856M17 20v-2c0-.653-.133-1.284-.384-1.856"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Premium Community Access</h3>
+                    <p class="text-gray-300 text-center">
+                        Connect with like-minded professionals and creatives. Share insights, collaborate on projects, and grow your network within an exclusive, curated community.
+                    </p>
+                </div>
+                
+                <!-- Feature 5: Regular Updates & New Modules -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700">
+                    <div class="text-indigo-400 icon-lg mb-6 flex justify-center mx-auto">
+                        <svg class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004 12m0 8l4.083-4.083a4.001 4.001 0 013.29-1.391C13.41 14.653 14 15.32 14 16.166v2.215c0 .324.281.587.625.587h2.215c.846 0 1.513.59 1.696 1.48L20 20M4 12v5h.582m15.356 2A8.001 8.001 0 004 12"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Regular Updates & New Modules</h3>
+                    <p class="text-gray-300 text-center">
+                        Stay ahead of the curve! Our course is continuously updated with new iOS 27 features, AI developments, and advanced productivity strategies as they emerge.
+                    </p>
+                </div>
+
+                <!-- Feature 6: Tangible Efficiency Gains -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-700">
+                    <div class="text-indigo-400 icon-lg mb-6 flex justify-center mx-auto">
+                        <svg class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Tangible Efficiency Gains</h3>
+                    <p class="text-gray-300 text-center">
+                        Stop wasting time on repetitive tasks. Our methods are designed to integrate Apple Intelligence seamlessly, giving you back hours every week for more impactful work.
                     </p>
                 </div>
             </div>
@@ -112,132 +152,79 @@
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist-section" class="py-16 md:py-24 bg-gray-800 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-2xl mx-auto bg-gray-900 p-8 sm:p-10 lg:p-12 rounded-xl shadow-2xl border border-gray-700">
-            
-            <!-- Limited Time Countdown -->
-            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-6 rounded-lg text-center mb-10 shadow-lg transform scale-100 hover:scale-102 transition-transform duration-300">
-                <h3 class="text-2xl sm:text-3xl font-extrabold mb-3">Limited Time Early Access Offer!</h3>
-                <p class="text-lg sm:text-xl font-semibold mb-4">Don't Miss Out – VIP Enrollment Closes In:</p>
-                <div id="countdown-timer" class="flex justify-center items-center space-x-4 text-4xl sm:text-5xl font-bold">
-                    <div class="flex flex-col items-center">
-                        <span class="block bg-white bg-opacity-20 rounded-lg p-2 min-w-[70px]" data-days>00</span>
-                        <span class="text-sm sm:text-base mt-1">Days</span>
+    <section id="waitlist-form" class="py-16 sm:py-24 bg-gray-900 px-4">
+        <div class="container mx-auto max-w-screen-xl">
+            <div class="bg-gray-800 rounded-2xl p-8 md:p-12 lg:p-16 shadow-2xl border border-gray-700 max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">
+                    Don't Miss Out on the Future of Productivity
+                </h2>
+                <p class="text-lg text-gray-300 mb-8 max-w-prose mx-auto">
+                    Be among the first to gain mastery over Apple Intelligence. Join our exclusive waitlist for early access, special launch discounts, and premium content updates.
+                </p>
+                <form class="space-y-6">
+                    <div>
+                        <input type="email" placeholder="Enter your best email address" required 
+                               class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none text-lg">
                     </div>
-                    <span class="text-white">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="block bg-white bg-opacity-20 rounded-lg p-2 min-w-[70px]" data-hours>00</span>
-                        <span class="text-sm sm:text-base mt-1">Hours</span>
+                    <div>
+                        <button type="submit" 
+                                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 text-xl">
+                            Secure My Spot on the Waitlist!
+                        </button>
                     </div>
-                    <span class="text-white">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="block bg-white bg-opacity-20 rounded-lg p-2 min-w-[70px]" data-minutes>00</span>
-                        <span class="text-sm sm:text-base mt-1">Mins</span>
-                    </div>
-                    <span class="text-white">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="block bg-white bg-opacity-20 rounded-lg p-2 min-w-[70px]" data-seconds>00</span>
-                        <span class="text-sm sm:text-base mt-1">Secs</span>
-                    </div>
-                </div>
-                <p class="text-sm sm:text-base mt-5 opacity-90">
-                    (Note: This countdown is illustrative. In a live version, JavaScript would power the actual timer.)
+                </form>
+                <p class="text-sm text-gray-500 mt-6">
+                    We respect your privacy. Your email will only be used for updates regarding this course.
                 </p>
             </div>
-
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-6 text-white">
-                Join the VIP Waitlist
-            </h2>
-            <p class="text-lg text-gray-300 text-center mb-8">
-                Be among the first to get access to the "Retro Handheld Optimization Guide" – available as a premium e-book or a series of high-quality video tutorials. Limited spots for early bird pricing!
-            </p>
-
-            <form class="space-y-6">
-                <div>
-                    <label for="name" class="block text-sm font-medium text-gray-200 mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-white placeholder-gray-400 text-base shadow-sm transition-colors duration-200"
-                           required>
-                </div>
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-200 mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-white placeholder-gray-400 text-base shadow-sm transition-colors duration-200"
-                           required>
-                </div>
-                <div class="pt-2">
-                    <button type="submit"
-                            class="w-full bg-gradient-to-r from-teal-500 to-green-500 hover:from-teal-600 hover:to-green-600 text-white font-bold py-4 px-6 rounded-full shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-4 focus:ring-teal-500 focus:ring-opacity-50 text-lg">
-                        Secure My Spot Now!
-                    </button>
-                </div>
-            </form>
-            <p class="text-xs text-gray-400 text-center mt-6">
-                We respect your privacy. Your email will only be used for updates regarding this guide.
-            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="mt-auto py-8 bg-gray-900 border-t border-gray-700">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
-            &copy; 2023 Digital Education Authority. All rights reserved. |
-            <a href="#" class="hover:text-purple-400 transition-colors duration-200">Privacy Policy</a> |
-            <a href="#" class="hover:text-purple-400 transition-colors duration-200">Terms of Service</a>
+    <footer class="bg-gray-950 py-10 px-4 text-center text-gray-400 text-sm">
+        <div class="container mx-auto max-w-screen-xl">
+            <p>&copy; 2024 Apple Intelligence Power User. All rights reserved.</p>
+            <p class="mt-2">Disclaimer: This course is independently developed and not affiliated with Apple Inc.</p>
         </div>
     </footer>
 
-    <!-- Placeholder for JavaScript (for the countdown) -->
+    <!-- Countdown Timer JavaScript -->
     <script>
-        // Placeholder JavaScript for the countdown timer
-        // In a real application, this would calculate and update the time.
-        // For this static HTML, it serves as a visual indicator.
-        document.addEventListener('DOMContentLoaded', () => {
-            const countdownElement = document.getElementById('countdown-timer');
-            if (countdownElement) {
-                // Set a target date (e.g., 7 days from now for a real countdown)
-                // For this example, we'll just show some static numbers.
-                const daysSpan = countdownElement.querySelector('[data-days]');
-                const hoursSpan = countdownElement.querySelector('[data-hours]');
-                const minutesSpan = countdownElement.querySelector('[data-minutes]');
-                const secondsSpan = countdownElement.querySelector('[data-seconds]');
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the date we're counting down to (e.g., 7 days from now for early access)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Sets the countdown for 7 days from page load
 
-                // Static illustrative values
-                daysSpan.textContent = '07';
-                hoursSpan.textContent = '12';
-                minutesSpan.textContent = '34';
-                secondsSpan.textContent = '56';
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate.getTime() - now;
 
-                // A real countdown would involve:
-                /*
-                const targetDate = new Date();
-                targetDate.setDate(targetDate.getDate() + 7); // 7 days from now
-
-                function updateCountdown() {
-                    const now = new Date().getTime();
-                    const distance = targetDate.getTime() - now;
-
-                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                    daysSpan.textContent = String(days).padStart(2, '0');
-                    hoursSpan.textContent = String(hours).padStart(2, '0');
-                    minutesSpan.textContent = String(minutes).padStart(2, '0');
-                    secondsSpan.textContent = String(seconds).padStart(2, '0');
-
-                    if (distance < 0) {
-                        clearInterval(countdownInterval);
-                        countdownElement.innerHTML = '<span class="text-xl">Sale Ended!</span>';
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("days").innerHTML = "00";
+                    document.getElementById("hours").innerHTML = "00";
+                    document.getElementById("minutes").innerHTML = "00";
+                    document.getElementById("seconds").innerHTML = "00";
+                    // Optionally, update the message when the countdown expires
+                    const countdownContainer = document.querySelector('.mt-12');
+                    if (countdownContainer) {
+                        countdownContainer.innerHTML = '<p class="text-md sm:text-lg font-semibold text-indigo-300 mb-4 uppercase tracking-wider">Early Access Has Begun!</p>';
                     }
+                    return;
                 }
 
-                updateCountdown();
-                const countdownInterval = setInterval(updateCountdown, 1000);
-                */
-            }
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+            }, 1000);
         });
     </script>
+
 </body>
 </html>
