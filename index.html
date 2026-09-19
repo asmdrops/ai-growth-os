@@ -3,140 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ultimate Smart TV Privacy & Security Toolkit</title>
+    <title>The Smart TV Privacy Playbook</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <style>
+        /* Custom styles for dark mode aesthetic */
         body {
             font-family: 'Inter', sans-serif;
+            @apply bg-gray-900 text-gray-100;
         }
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?The,tech');
-            background-size: cover;
-            background-position: center;
-            position: relative;
+        .gradient-button {
+            background-image: linear-gradient(to right, #4F46E5 0%, #7C3AED 51%, #4F46E5 100%);
+            transition: 0.5s;
+            background-size: 200% auto;
         }
-        .hero-background::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to right, rgba(17, 24, 39, 0.9) 0%, rgba(17, 24, 39, 0.7) 50%, rgba(17, 24, 39, 0.9) 100%);
+        .gradient-button:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
         }
-        .countdown-timer {
-            font-variant-numeric: tabular-nums; /* Ensures numbers have consistent width for visual stability */
+        .feature-card {
+            background: rgba(31, 41, 55, 0.7); /* bg-gray-800 with transparency */
+            backdrop-filter: blur(10px); /* Optional: add a blur effect */
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="antialiased leading-normal tracking-wide">
 
     <!-- Hero Section -->
-    <header class="hero-background min-h-screen flex items-center justify-center py-20 relative overflow-hidden">
-        <div class="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
-                Stop Your Smart TV From Spying On You.<br class="hidden sm:inline"> Reclaim Your Privacy Now.
+    <header class="relative min-h-screen flex items-center justify-center text-center p-4 overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?The,tech');"></div>
+        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay -->
+
+        <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 animate-pulse">
+                Reclaim Your Privacy: <br class="sm:hidden">The Smart TV Privacy Playbook
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
-                Inspired by "The Verge" and experts worldwide, our toolkit provides the ultimate defense against unsolicited data collection.
-                Take control of your digital life.
+            <p class="text-xl sm:text-2xl text-gray-300 font-light max-w-3xl mx-auto mb-10">
+                A comprehensive digital guide & actionable toolkit for safeguarding your home entertainment.
+                <span class="block mt-2">Protect your family from unwanted surveillance and data harvesting.</span>
             </p>
 
-            <!-- Limited Time Countdown -->
-            <div class="bg-purple-800 bg-opacity-70 backdrop-filter backdrop-blur-sm rounded-lg p-6 mb-10 inline-block">
-                <p class="text-yellow-300 text-xl sm:text-2xl font-semibold mb-3">
-                    Limited-Time Early Bird Access!
-                </p>
-                <div class="flex justify-center items-center space-x-4 countdown-timer">
-                    <div>
-                        <span id="days" class="block text-4xl sm:text-5xl font-bold text-white">00</span>
-                        <span class="block text-sm sm:text-base text-gray-300 uppercase">Days</span>
+            <div class="mb-10 p-6 bg-gray-800 bg-opacity-70 rounded-lg shadow-lg max-w-md mx-auto">
+                <p class="text-lg text-red-400 font-semibold mb-3">Limited Time Offer!</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-white text-3xl font-bold">
+                    <div class="flex flex-col items-center">
+                        <span id="days">00</span>
+                        <span class="text-sm font-normal text-gray-400">Days</span>
                     </div>
-                    <span class="text-4xl sm:text-5xl text-gray-400">:</span>
-                    <div>
-                        <span id="hours" class="block text-4xl sm:text-5xl font-bold text-white">00</span>
-                        <span class="block text-sm sm:text-base text-gray-300 uppercase">Hours</span>
+                    <span class="text-gray-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours">00</span>
+                        <span class="text-sm font-normal text-gray-400">Hours</span>
                     </div>
-                    <span class="text-4xl sm:text-5xl text-gray-400">:</span>
-                    <div>
-                        <span id="minutes" class="block text-4xl sm:text-5xl font-bold text-white">00</span>
-                        <span class="block text-sm sm:text-base text-gray-300 uppercase">Minutes</span>
+                    <span class="text-gray-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes">00</span>
+                        <span class="text-sm font-normal text-gray-400">Minutes</span>
                     </div>
-                    <span class="text-4xl sm:text-5xl text-gray-400">:</span>
-                    <div>
-                        <span id="seconds" class="block text-4xl sm:text-5xl font-bold text-white">00</span>
-                        <span class="block text-sm sm:text-base text-gray-300 uppercase">Seconds</span>
+                    <span class="text-gray-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds">00</span>
+                        <span class="text-sm font-normal text-gray-400">Seconds</span>
                     </div>
                 </div>
             </div>
 
-            <a href="#waitlist-form" class="inline-block bg-purple-600 hover:bg-purple-700 transition duration-300 ease-in-out
-                                            text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full
-                                            text-lg sm:text-xl shadow-lg hover:shadow-xl transform hover:scale-105">
-                Join the Waitlist & Secure Your Access
+            <a href="#waitlist-form" class="gradient-button inline-block px-12 py-5 text-lg font-bold text-white uppercase rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
+                Secure Your Digital Sanctuary Now!
             </a>
-            <p class="text-sm text-gray-400 mt-4">Don't miss out on exclusive early bird pricing!</p>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-20 lg:py-24 bg-gray-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-12">
-                What's Inside The Ultimate Privacy Toolkit?
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div class="max-w-screen-xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-white mb-12">
+                What You'll Discover Inside
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Feature 1 -->
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-purple-400 mb-4 text-5xl">⚙️</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Step-by-Step Brand Guides</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        No more guesswork. Get precise, easy-to-follow instructions for popular Smart TV brands like Samsung, LG, Sony, and more.
-                        Secure your settings in minutes.
+                <div class="feature-card p-6 rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out border border-gray-700">
+                    <div class="text-indigo-400 text-5xl mb-4 text-center">⚙️</div>
+                    <h3 class="text-xl font-semibold text-white mb-3 text-center">Step-by-Step Tracking Disablement</h3>
+                    <p class="text-gray-300 text-center">
+                        Easy-to-follow instructions to turn off intrusive tracking features on popular Smart TV brands, regaining control over your data.
                     </p>
                 </div>
+
                 <!-- Feature 2 -->
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-purple-400 mb-4 text-5xl">✅</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Essential Privacy Checklist</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        A comprehensive checklist to ensure every critical privacy setting on your TV and connected devices is locked down.
-                        Never miss a vulnerability again.
+                <div class="feature-card p-6 rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out border border-gray-700">
+                    <div class="text-indigo-400 text-5xl mb-4 text-center">🔒</div>
+                    <h3 class="text-xl font-semibold text-white mb-3 text-center">Recommended Privacy Hardware</h3>
+                    <p class="text-gray-300 text-center">
+                        Discover the best privacy-focused network hardware and configurations to fortify your home network against unwanted intrusions.
                     </p>
                 </div>
+
                 <!-- Feature 3 -->
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-purple-400 mb-4 text-5xl">🛡️</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Network Privacy Recommendations</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Discover top-rated VPNs, secure DNS providers, and firewall configurations to shield your entire home network from data snooping.
+                <div class="feature-card p-6 rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out border border-gray-700">
+                    <div class="text-indigo-400 text-5xl mb-4 text-center">🛠️</div>
+                    <h3 class="text-xl font-semibold text-white mb-3 text-center">Physical Modification Advice</h3>
+                    <p class="text-gray-300 text-center">
+                        Practical advice on simple, non-destructive physical alterations like mic/camera covers to ensure true, tangible privacy.
                     </p>
                 </div>
+
                 <!-- Feature 4 -->
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-purple-400 mb-4 text-5xl">🔬</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Simple 'Privacy Audit' Tool</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Our easy-to-use script or web-app helps you identify exactly what data your TV is sending out, giving you actionable insights to stop it.
-                    </p>
-                </div>
-                <!-- Feature 5 -->
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-purple-400 mb-4 text-5xl">📚</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Exclusive Resource Package</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Access to a curated list of privacy-focused apps, browser extensions, and further reading to enhance your digital security beyond your TV.
-                    </p>
-                </div>
-                <!-- Feature 6 -->
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300">
-                    <div class="text-purple-400 mb-4 text-5xl">🚀</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Future Updates & Community</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Stay ahead with regular updates on new TV models and privacy threats. Join our private community for ongoing support and tips.
+                <div class="feature-card p-6 rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out border border-gray-700">
+                    <div class="text-indigo-400 text-5xl mb-4 text-center">✅</div>
+                    <h3 class="text-xl font-semibold text-white mb-3 text-center">Secure Setup Checklist</h3>
+                    <p class="text-gray-300 text-center">
+                        A comprehensive checklist to guide you through a truly private and secure Smart TV configuration from day one.
                     </p>
                 </div>
             </div>
@@ -144,62 +122,46 @@
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 sm:py-20 lg:py-24 bg-gray-900 text-center">
-        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6">
-                Ready to Reclaim Your Smart TV Privacy?
+    <section id="waitlist-form" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800 border-t border-gray-700">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-8">
+                Join the Privacy Movement!
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10">
-                Join our exclusive waitlist today and be among the first to get access to
-                <span class="text-purple-400 font-semibold">The Ultimate Smart TV Privacy & Security Toolkit</span>.
-                Don't let your TV spy on you a day longer!
+            <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-10">
+                Be among the first to get access to "The Smart TV Privacy Playbook" and take back control of your home entertainment. Sign up for early access and exclusive launch bonuses!
             </p>
 
-            <form class="bg-gray-800 p-8 rounded-lg shadow-2xl border border-gray-700" action="#" method="POST">
+            <form action="#" method="POST" class="bg-gray-700 p-8 rounded-xl shadow-2xl border border-gray-600">
                 <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">
-                        Your Name (Optional)
-                    </label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 bg-gray-700 leading-tight
-                                  focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200">
+                    <label for="name" class="block text-gray-200 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-900" required>
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">
-                        Email Address <span class="text-red-500">*</span>
-                    </label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" required
-                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 bg-gray-700 leading-tight
-                                  focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200">
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-900" required>
                 </div>
-                <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 transition duration-300 ease-in-out
-                                            text-white font-bold py-3 px-6 rounded-lg
-                                            text-lg sm:text-xl shadow-lg hover:shadow-xl transform hover:scale-105">
+                <button type="submit" class="gradient-button w-full px-8 py-4 text-lg font-bold text-white uppercase rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
                     Get Early Access Now!
                 </button>
-                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, ever.</p>
+                <p class="text-xs text-gray-400 mt-4">We respect your privacy. Your email will not be shared or sold.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 border-t border-gray-700">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">
-                <a href="#" class="hover:text-purple-400 transition-colors duration-200">Privacy Policy</a> |
-                <a href="#" class="hover:text-purple-400 transition-colors duration-200">Terms of Service</a>
-            </p>
-        </div>
+    <footer class="py-8 bg-gray-900 border-t border-gray-700 text-center text-gray-400 text-sm">
+        <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+        <p class="mt-2">
+            <a href="#" class="hover:text-white transition-colors duration-300">Privacy Policy</a> |
+            <a href="#" class="hover:text-white transition-colors duration-300">Terms of Service</a>
+        </p>
     </footer>
 
-    <!-- Countdown Script -->
     <script>
-        // Set countdown for 48 hours from the moment the user loads the page
-        const countdownDate = new Date();
-        countdownDate.setHours(countdownDate.getHours() + 48); 
+        // Countdown Timer Logic
+        const countdownDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000) + (13 * 60 * 60 * 1000) + (24 * 60 * 1000) + (55 * 1000); // 7 Days, 13 Hours, 24 Minutes, 55 Seconds from now
 
-        const countdownInterval = setInterval(() => {
+        const x = setInterval(function() {
             const now = new Date().getTime();
             const distance = countdownDate - now;
 
@@ -208,28 +170,16 @@
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Update the elements, padding with '0' for single digits
-            document.getElementById("days").innerText = String(days).padStart(2, '0');
-            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-            // If the countdown is over
             if (distance < 0) {
-                clearInterval(countdownInterval);
-                const countdownContainer = document.querySelector('.countdown-timer');
-                if (countdownContainer) {
-                    countdownContainer.innerHTML = '<span class="text-yellow-400 text-2xl">Offer Expired!</span>';
-                }
-                const ctaButton = document.querySelector('a[href="#waitlist-form"]');
-                if (ctaButton) {
-                    ctaButton.classList.add('opacity-50', 'cursor-not-allowed');
-                    ctaButton.removeAttribute('href');
-                    ctaButton.innerText = 'Offer Expired';
-                }
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
             }
         }, 1000);
     </script>
-
 </body>
 </html>
