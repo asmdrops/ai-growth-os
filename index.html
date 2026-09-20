@@ -3,183 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Smart TV Privacy Playbook</title>
+    <title>iOS 27 Performance & Privacy Master Guide - Limited Time Offer</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <!-- Optional: Google Font for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for dark mode aesthetic */
         body {
             font-family: 'Inter', sans-serif;
-            @apply bg-gray-900 text-gray-100;
         }
-        .gradient-button {
-            background-image: linear-gradient(to right, #4F46E5 0%, #7C3AED 51%, #4F46E5 100%);
-            transition: 0.5s;
-            background-size: 200% auto;
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-        .gradient-button:hover {
-            background-position: right center; /* change the direction of the change here */
-            color: #fff;
-            text-decoration: none;
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.65); /* Darker overlay for better text readability */
         }
-        .feature-card {
-            background: rgba(31, 41, 55, 0.7); /* bg-gray-800 with transparency */
-            backdrop-filter: blur(10px); /* Optional: add a blur effect */
+        .btn-gradient {
+            background: linear-gradient(to right, #8A2BE2, #A020F0); /* Purple gradient */
+            transition: all 0.3s ease;
         }
+        .btn-gradient:hover {
+            background: linear-gradient(to right, #9932CC, #B028F5);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(160, 32, 240, 0.4);
+        }
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            min-width: 65px; /* Ensures consistent size */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .countdown-value {
+            font-size: 2.25rem; /* text-4xl on small, md:text-5xl */
+            font-weight: 800;
+            line-height: 1;
+        }
+        .countdown-label {
+            font-size: 0.875rem; /* text-sm */
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.5rem;
+            color: #d1d5db; /* gray-300 */
+        }
+
+        /* Responsive animations for a premium feel (conceptual, can be elaborated with @keyframes) */
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInScale 0.8s ease-out forwards;
+            opacity: 0; /* Hidden by default */
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
     </style>
 </head>
-<body class="antialiased leading-normal tracking-wide">
+<body class="bg-gray-900 text-white antialiased">
 
     <!-- Hero Section -->
-    <header class="relative min-h-screen flex items-center justify-center text-center p-4 overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?The,tech');"></div>
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay -->
-
-        <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 animate-pulse">
-                Reclaim Your Privacy: <br class="sm:hidden">The Smart TV Privacy Playbook
+    <section class="hero-background min-h-screen flex items-center justify-center p-4">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="container mx-auto relative z-10 text-center max-w-4xl py-16 sm:py-20 md:py-24 lg:py-32">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4 lg:mb-6 animate-fade-in-up">
+                Unleash iOS 27's True Power: Speed, Privacy & Control
             </h1>
-            <p class="text-xl sm:text-2xl text-gray-300 font-light max-w-3xl mx-auto mb-10">
-                A comprehensive digital guide & actionable toolkit for safeguarding your home entertainment.
-                <span class="block mt-2">Protect your family from unwanted surveillance and data harvesting.</span>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 lg:mb-10 max-w-2xl mx-auto animate-fade-in-up delay-100">
+                The definitive master guide to supercharge your iPhone with 30+ hidden speed hacks, optimize Siri AI, and confidently navigate new paywall features.
             </p>
 
-            <div class="mb-10 p-6 bg-gray-800 bg-opacity-70 rounded-lg shadow-lg max-w-md mx-auto">
-                <p class="text-lg text-red-400 font-semibold mb-3">Limited Time Offer!</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-white text-3xl font-bold">
-                    <div class="flex flex-col items-center">
-                        <span id="days">00</span>
-                        <span class="text-sm font-normal text-gray-400">Days</span>
+            <!-- Limited Time Offer & Countdown -->
+            <div class="bg-purple-800 bg-opacity-70 border border-purple-600 rounded-lg p-6 sm:p-8 lg:p-10 mb-8 lg:mb-12 shadow-xl max-w-xl mx-auto animate-fade-in-up delay-200">
+                <p class="text-yellow-300 text-xl sm:text-2xl font-bold mb-4 lg:mb-6">✨ Limited Time Introductory Discount! ✨</p>
+                <div id="countdown" class="flex justify-center flex-wrap gap-4 mb-6 lg:mb-8">
+                    <div class="countdown-item">
+                        <span id="days" class="countdown-value text-purple-200">00</span>
+                        <span class="countdown-label">Days</span>
                     </div>
-                    <span class="text-gray-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours">00</span>
-                        <span class="text-sm font-normal text-gray-400">Hours</span>
+                    <div class="countdown-item">
+                        <span id="hours" class="countdown-value text-purple-200">00</span>
+                        <span class="countdown-label">Hours</span>
                     </div>
-                    <span class="text-gray-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes">00</span>
-                        <span class="text-sm font-normal text-gray-400">Minutes</span>
+                    <div class="countdown-item">
+                        <span id="minutes" class="countdown-value text-purple-200">00</span>
+                        <span class="countdown-label">Minutes</span>
                     </div>
-                    <span class="text-gray-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds">00</span>
-                        <span class="text-sm font-normal text-gray-400">Seconds</span>
+                    <div class="countdown-item">
+                        <span id="seconds" class="countdown-value text-purple-200">00</span>
+                        <span class="countdown-label">Seconds</span>
                     </div>
                 </div>
+                <button onclick="document.getElementById('access-form').scrollIntoView({ behavior: 'smooth' });" class="btn-gradient text-white font-bold py-4 px-8 rounded-full text-lg md:text-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                    Get Instant Access Now!
+                </button>
             </div>
-
-            <a href="#waitlist-form" class="gradient-button inline-block px-12 py-5 text-lg font-bold text-white uppercase rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
-                Secure Your Digital Sanctuary Now!
-            </a>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900">
-        <div class="max-w-screen-xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-white mb-12">
-                What You'll Discover Inside
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Feature 1 -->
-                <div class="feature-card p-6 rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out border border-gray-700">
-                    <div class="text-indigo-400 text-5xl mb-4 text-center">⚙️</div>
-                    <h3 class="text-xl font-semibold text-white mb-3 text-center">Step-by-Step Tracking Disablement</h3>
-                    <p class="text-gray-300 text-center">
-                        Easy-to-follow instructions to turn off intrusive tracking features on popular Smart TV brands, regaining control over your data.
-                    </p>
+    <section class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 lg:mb-16 text-purple-400">What You'll Discover Inside:</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+                <div class="bg-gray-800 p-6 md:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105 flex items-start space-x-4">
+                    <span class="text-3xl text-yellow-400 mt-1">🚀</span>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">30+ Hidden Speed Hacks</h3>
+                        <p class="text-gray-300">Uncover little-known settings and tweaks to make your iPhone run faster than ever before. Eliminate lag and enjoy a buttery-smooth experience.</p>
+                    </div>
                 </div>
-
-                <!-- Feature 2 -->
-                <div class="feature-card p-6 rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out border border-gray-700">
-                    <div class="text-indigo-400 text-5xl mb-4 text-center">🔒</div>
-                    <h3 class="text-xl font-semibold text-white mb-3 text-center">Recommended Privacy Hardware</h3>
-                    <p class="text-gray-300 text-center">
-                        Discover the best privacy-focused network hardware and configurations to fortify your home network against unwanted intrusions.
-                    </p>
+                <div class="bg-gray-800 p-6 md:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105 flex items-start space-x-4">
+                    <span class="text-3xl text-green-400 mt-1">🔒</span>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">Fortify Your Privacy</h3>
+                        <p class="text-gray-300">Navigate iOS 27's new privacy features and lock down your personal data. Learn how to stop apps from tracking you and safeguard your digital footprint.</p>
+                    </div>
                 </div>
-
-                <!-- Feature 3 -->
-                <div class="feature-card p-6 rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out border border-gray-700">
-                    <div class="text-indigo-400 text-5xl mb-4 text-center">🛠️</div>
-                    <h3 class="text-xl font-semibold text-white mb-3 text-center">Physical Modification Advice</h3>
-                    <p class="text-gray-300 text-center">
-                        Practical advice on simple, non-destructive physical alterations like mic/camera covers to ensure true, tangible privacy.
-                    </p>
+                <div class="bg-gray-800 p-6 md:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105 flex items-start space-x-4">
+                    <span class="text-3xl text-blue-400 mt-1">🤖</span>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">Master Siri AI Settings</h3>
+                        <p class="text-gray-300">Harness the full power of Siri's advanced AI. Optimize its responses, customize commands, and integrate it seamlessly into your daily workflow.</p>
+                    </div>
                 </div>
-
-                <!-- Feature 4 -->
-                <div class="feature-card p-6 rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out border border-gray-700">
-                    <div class="text-indigo-400 text-5xl mb-4 text-center">✅</div>
-                    <h3 class="text-xl font-semibold text-white mb-3 text-center">Secure Setup Checklist</h3>
-                    <p class="text-gray-300 text-center">
-                        A comprehensive checklist to guide you through a truly private and secure Smart TV configuration from day one.
-                    </p>
+                <div class="bg-gray-800 p-6 md:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105 flex items-start space-x-4">
+                    <span class="text-3xl text-red-400 mt-1">💰</span>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">Conquer Paywall Features</h3>
+                        <p class="text-gray-300">Understand iOS 27's new subscription models and in-app purchase strategies. Learn how to bypass unnecessary costs and get the most value without hidden fees.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-6 md:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105 flex items-start space-x-4">
+                    <span class="text-3xl text-teal-400 mt-1">📈</span>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">Battery Life Optimization</h3>
+                        <p class="text-gray-300">Extend your iPhone's battery life with advanced optimization techniques. Keep your device running longer throughout the day with expert tips and tricks.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-6 md:p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105 flex items-start space-x-4">
+                    <span class="text-3xl text-orange-400 mt-1">🎬</span>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">Exclusive Video Tutorials</h3>
+                        <p class="text-gray-300">Go beyond the ebook with supplementary video tutorials. See step-by-step implementations of complex hacks and visual guides for the trickiest settings.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800 border-t border-gray-700">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-8">
-                Join the Privacy Movement!
-            </h2>
-            <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-10">
-                Be among the first to get access to "The Smart TV Privacy Playbook" and take back control of your home entertainment. Sign up for early access and exclusive launch bonuses!
+    <!-- Call to Action / Access Form Section -->
+    <section id="access-form" class="py-16 md:py-24 bg-gradient-to-br from-gray-900 to-gray-800">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 text-purple-400">Don't Miss Out on This Limited Offer!</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-10">
+                For a limited time, get the complete <span class="text-purple-300 font-semibold">iOS 27 Performance & Privacy Master Guide</span>, including all exclusive video tutorials, at an unbeatable introductory price.
             </p>
 
-            <form action="#" method="POST" class="bg-gray-700 p-8 rounded-xl shadow-2xl border border-gray-600">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-200 text-sm font-bold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-900" required>
-                </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-900" required>
-                </div>
-                <button type="submit" class="gradient-button w-full px-8 py-4 text-lg font-bold text-white uppercase rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
-                    Get Early Access Now!
-                </button>
-                <p class="text-xs text-gray-400 mt-4">We respect your privacy. Your email will not be shared or sold.</p>
-            </form>
+            <div class="bg-gray-800 p-8 md:p-10 rounded-lg shadow-2xl border border-purple-700">
+                <p class="text-gray-400 line-through text-xl mb-2">Original Price: <span class="font-bold">$97</span></p>
+                <p class="text-green-400 text-4xl md:text-5xl font-extrabold mb-6">Your Price Today: <span class="font-extrabold">$47</span></p>
+                <p class="text-yellow-300 text-lg mb-8 font-bold">Save 50% Instantly! Offer ends when the countdown hits zero.</p>
+
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label for="email" class="sr-only">Email Address</label>
+                        <input type="email" name="email" id="email" autocomplete="email" required 
+                               class="block w-full px-5 py-3 border border-gray-600 rounded-md bg-gray-700 text-white placeholder-gray-400 
+                                      focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-base md:text-lg" 
+                               placeholder="Enter your best email address">
+                    </div>
+                    <div>
+                        <button type="submit" class="btn-gradient w-full text-white font-bold py-4 px-8 rounded-full 
+                                                      text-xl md:text-2xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                            Get Your Master Guide Now!
+                        </button>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        By clicking "Get Your Master Guide Now!", you agree to our <a href="#" class="text-purple-400 hover:underline">Terms of Service</a> and <a href="#" class="text-purple-400 hover:underline">Privacy Policy</a>.
+                    </p>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 bg-gray-900 border-t border-gray-700 text-center text-gray-400 text-sm">
-        <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-        <p class="mt-2">
-            <a href="#" class="hover:text-white transition-colors duration-300">Privacy Policy</a> |
-            <a href="#" class="hover:text-white transition-colors duration-300">Terms of Service</a>
-        </p>
+    <footer class="bg-gray-900 py-10 text-center text-gray-500 text-sm">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2024 iOS 27 Master Guide. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="text-gray-400 hover:text-purple-400 mx-2">Privacy Policy</a> |
+                <a href="#" class="text-gray-400 hover:text-purple-400 mx-2">Terms of Service</a> |
+                <a href="#" class="text-gray-400 hover:text-purple-400 mx-2">Contact Us</a>
+            </p>
+        </div>
     </footer>
 
+    <!-- Countdown Timer Script -->
     <script>
-        // Countdown Timer Logic
-        const countdownDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000) + (13 * 60 * 60 * 1000) + (24 * 60 * 1000) + (55 * 1000); // 7 Days, 13 Hours, 24 Minutes, 55 Seconds from now
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from today
+            countDownDate.setHours(23, 59, 59, 999); // Set to the end of the day
 
-        const x = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate.getTime() - now;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                // Update the countdown elements with leading zeros
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "EXPIRED";
-            }
-        }, 1000);
+                // If the countdown is finished
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<p class='text-red-400 text-xl font-bold'>OFFER EXPIRED!</p>";
+                    const submitButton = document.querySelector('#access-form button[type="submit"]');
+                    if (submitButton) {
+                        submitButton.disabled = true;
+                        submitButton.textContent = 'Offer Expired';
+                        submitButton.classList.remove('btn-gradient', 'hover:-translate-y-1', 'shadow-lg', 'hover:shadow-xl');
+                        submitButton.classList.add('bg-gray-600', 'cursor-not-allowed', 'shadow-md');
+                    }
+                    const discountText = document.querySelector('#access-form .text-yellow-300');
+                    if (discountText) {
+                        discountText.textContent = 'This special introductory offer has ended.';
+                    }
+                }
+            }, 1000);
+        });
     </script>
 </body>
 </html>
