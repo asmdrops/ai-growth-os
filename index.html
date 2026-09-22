@@ -3,194 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate Googlebook & Gemini AI Productivity Guide</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Googlebook Gemini AI Power User Kit - Limited Time Launch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles for dark overlay and responsive background image */
+        /* Custom styles for modern dark mode aesthetic and responsive image handling */
+        body {
+            font-family: 'Inter', sans-serif; /* A popular modern sans-serif font */
+        }
         .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            position: relative;
+            /* Ensures image scales fluidly while maintaining aspect ratio */
         }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        /* Countdown styles for responsiveness and dark mode consistency */
+        #countdown div {
+            @apply flex flex-col items-center justify-center bg-gray-800 bg-opacity-70 text-white rounded-lg p-3 sm:p-4 m-1 sm:m-2;
+            min-width: 80px; /* Ensure a minimum width for small screens */
+        }
+        #countdown span {
+            @apply text-3xl sm:text-5xl font-extrabold;
+            line-height: 1; /* Adjust line height for better spacing */
+        }
+        #countdown small {
+            @apply text-xs sm:text-sm uppercase mt-1;
         }
 
-        /* Basic CSS Animations for a modern premium feel */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes bounceSlow {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
-        }
-        .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
-        .animate-fade-in-delay-1 { animation: fadeIn 1s ease-out 0.5s forwards; opacity: 0; }
-        .animate-slide-up { animation: slideUp 0.8s ease-out 1s forwards; opacity: 0; }
-        .animate-fade-in-up { animation: fadeIn 1s ease-out forwards; }
-        .animate-bounce-slow { animation: bounceSlow 2s infinite ease-in-out; }
+        /* Fluid typography for ultra-responsiveness */
+        h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); } /* 40px to 72px */
+        h2 { font-size: clamp(2rem, 6vw, 3.5rem); } /* 32px to 56px */
+        h3 { font-size: clamp(1.5rem, 4vw, 2rem); } /* 24px to 32px */
+        p.hero-text { font-size: clamp(1.125rem, 3vw, 1.5rem); } /* 18px to 24px */
+        a.cta-button { font-size: clamp(1rem, 2.5vw, 1.25rem); padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 5vw, 2.5rem); } /* button size */
 
-        /* Ensure smooth rendering for transitions/animations */
-        .transition-transform { transition-property: transform; }
-        .transition-all { transition-property: all; }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-gray-900 text-gray-200 antialiased leading-relaxed">
 
-    <!-- Hero Section -->
-    <header class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden hero-background">
-        <div class="hero-overlay"></div>
-        <div class="relative z-10 p-4 sm:p-8 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in">
-                🚀 Master Your New Googlebook & Gemini AI: <span class="text-indigo-400">Unlock Unprecedented Productivity!</span>
+    <!-- Hero Section with Background Image and Countdown -->
+    <header class="relative min-h-screen flex items-center justify-center hero-background">
+        <!-- Overlay for readability -->
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+
+        <div class="relative z-10 text-center px-4 py-16 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+            <span class="text-blue-400 text-base sm:text-lg font-semibold uppercase tracking-wider mb-4 block">
+                🚀 Limited Time Launch Offer 🚀
+            </span>
+            <h1 class="font-extrabold text-white leading-tight mb-6">
+                Unlock the <span class="text-blue-500">Full Power</span> of Your Googlebook Gemini AI
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl mb-8 opacity-90 animate-fade-in-delay-1">
-                With Google opening pre-orders for the new AI-powered Googlebook, the future of computing is here.
-                <br class="hidden sm:inline"> Don't just adapt—dominate. This premium guide is your blueprint to advanced Gemini AI workflows, seamless Android integration, and peak performance.
+            <p class="hero-text text-gray-300 mb-10 max-w-3xl mx-auto">
+                Transform your new Googlebook into an AI productivity powerhouse with the "Gemini AI Power User Kit."
+                Master advanced prompts, workflows, and integrations for unparalleled professional success.
             </p>
 
-            <!-- Limited Time Offer & Countdown -->
-            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 rounded-lg shadow-2xl mb-8 transform hover:scale-105 transition-transform duration-300 animate-slide-up">
-                <h2 class="text-2xl sm:text-3xl font-bold mb-4">
-                    🔥 Exclusive Launch Special: <span class="text-yellow-300">20% OFF for a Limited Time!</span>
-                </h2>
-                <p class="text-lg mb-4">Offer ends in:</p>
-                <div id="countdown" class="flex justify-center space-x-4 text-white font-mono text-3xl sm:text-4xl">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="bg-gray-800 p-3 rounded-lg min-w-[70px] sm:min-w-[90px] flex items-center justify-center">07</span>
-                        <span class="text-sm mt-1">Days</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="bg-gray-800 p-3 rounded-lg min-w-[70px] sm:min-w-[90px] flex items-center justify-center">23</span>
-                        <span class="text-sm mt-1">Hours</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="bg-gray-800 p-3 rounded-lg min-w-[70px] sm:min-w-[90px] flex items-center justify-center">59</span>
-                        <span class="text-sm mt-1">Minutes</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="bg-gray-800 p-3 rounded-lg min-w-[70px] sm:min-w-[90px] flex items-center justify-center">59</span>
-                        <span class="text-sm mt-1">Seconds</span>
-                    </div>
+            <!-- Countdown Timer -->
+            <div id="countdown" class="flex flex-wrap justify-center mb-10">
+                <div>
+                    <span id="days">00</span>
+                    <small>Days</small>
                 </div>
-                <!-- Note: The countdown above is a visual representation. A functional countdown requires JavaScript. -->
+                <div>
+                    <span id="hours">00</span>
+                    <small>Hours</small>
+                </div>
+                <div>
+                    <span id="minutes">00</span>
+                    <small>Minutes</small>
+                </div>
+                <div>
+                    <span id="seconds">00</span>
+                    <small>Seconds</small>
+                </div>
             </div>
+            <p class="text-red-400 text-base sm:text-lg font-bold mb-8">Offer ends soon! Don't miss out on launch exclusive pricing.</p>
 
-            <a href="#waitlist-form" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-xl uppercase tracking-wide transition duration-300 transform hover:scale-105 shadow-lg animate-bounce-slow">
-                Get Instant Access Now!
+            <a href="#waitlist" class="cta-button inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-full transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Join the Exclusive Waitlist Now!
             </a>
+            <p class="text-gray-400 text-sm mt-4 max-w-md mx-auto">Pre-orders for Googlebook Gemini AI laptops are open. Get ready to dominate your workflow from day one!</p>
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-16">
-
-        <!-- Features Section -->
-        <section class="mb-16">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 text-indigo-400">
-                What You'll Achieve with This Guide:
+    <!-- Features Section -->
+    <section id="features" class="py-16 sm:py-20 lg:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-extrabold text-white text-center mb-12 sm:mb-16">
+                What You'll Get with Your Power User Kit
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-indigo-400 text-4xl mb-4">💡</div>
-                    <h3 class="text-2xl font-bold mb-3">Master Gemini AI Workflows</h3>
-                    <p class="text-gray-300">Discover advanced prompts and strategies for content creation, data analysis, coding, and more across all Gemini capabilities.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
+                <!-- Feature 1: Advanced Prompt Library -->
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <div class="text-blue-500 text-4xl mb-6">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-white mb-4">Advanced Gemini Prompt Library</h3>
+                    <p class="text-gray-300">
+                        Access hundreds of meticulously crafted prompts to get superior outputs from Gemini AI, covering various professional tasks and industries. Stop guessing, start generating.
+                    </p>
                 </div>
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-indigo-400 text-4xl mb-4">🔗</div>
-                    <h3 class="text-2xl font-bold mb-3">Seamless Android Integration</h3>
-                    <p class="text-gray-300">Harmonize your Googlebook with your Android phone and tablet for a truly unified and hyper-efficient digital ecosystem.</p>
+
+                <!-- Feature 2: Productivity Workflow Templates -->
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <div class="text-purple-500 text-4xl mb-6">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8l-4 4H4c-1.1 0-2 .9-2 2v0c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v0c0-1.1-.9-2-2-2h-4l-4-4V7m0-3h4M8 7H4"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-white mb-4">Productivity Workflow Templates</h3>
+                    <p class="text-gray-300">
+                        Streamline your daily tasks with ready-to-use workflow templates for content creation, data analysis, email management, and more—all powered by Gemini AI.
+                    </p>
                 </div>
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-indigo-400 text-4xl mb-4">⚡</div>
-                    <h3 class="text-2xl font-bold mb-3">Optimize Performance & Battery</h3>
-                    <p class="text-gray-300">Unlock hidden settings and best practices to maximize your Googlebook's speed, efficiency, and battery life for all-day power.</p>
+
+                <!-- Feature 3: Exclusive Integration Tutorials -->
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <div class="text-green-500 text-4xl mb-6">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5 5.754 5 4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-white mb-4">Exclusive Integration Tutorials</h3>
+                    <p class="text-gray-300">
+                        Learn to seamlessly integrate Googlebook's Gemini AI into your specific professional tools and platforms, unlocking unprecedented levels of efficiency and automation.
+                    </p>
                 </div>
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-indigo-400 text-4xl mb-4">✍️</div>
-                    <h3 class="text-2xl font-bold mb-3">AI-Powered Content Creation</h3>
-                    <p class="text-gray-300">Leverage Gemini AI to draft emails, generate ideas, write compelling copy, and streamline your entire content workflow.</p>
+
+                <!-- Feature 4: Expert-Curated Digital Guide -->
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <div class="text-yellow-500 text-4xl mb-6">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-white mb-4">Expert-Curated Digital Guide (eBook/Course)</h3>
+                    <p class="text-gray-300">
+                        A comprehensive digital guide detailing best practices, hidden features, and advanced strategies for maximizing Gemini AI on your Googlebook device.
+                    </p>
                 </div>
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-indigo-400 text-4xl mb-4">📊</div>
-                    <h3 class="text-2xl font-bold mb-3">Data Analysis & Insights</h3>
-                    <p class="text-gray-300">Utilize Gemini to quickly process complex data, summarize reports, and extract actionable insights for smarter decisions.</p>
+
+                <!-- Feature 5: Future-Proof Your Skills -->
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <div class="text-red-500 text-4xl mb-6">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 1.343 3 3v2c0 1.657-1.343 3-3 3s-3-1.343-3-3v-2c0-1.657 1.343-3 3-3z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-white mb-4">Future-Proof Your Skills</h3>
+                    <p class="text-gray-300">
+                        Stay ahead in the rapidly evolving AI landscape. Our kit is regularly updated, ensuring you always have access to the latest Gemini features and strategies.
+                    </p>
                 </div>
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="text-indigo-400 text-4xl mb-4">✅</div>
-                    <h3 class="text-2xl font-bold mb-3">Personal Organization Mastery</h3>
-                    <p class="text-gray-300">Transform your personal productivity with AI-driven scheduling, note-taking, and task management techniques.</p>
+
+                <!-- Feature 6: Dedicated Community Access -->
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <div class="text-indigo-500 text-4xl mb-6">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-white mb-4">Dedicated Community Access</h3>
+                    <p class="text-gray-300">
+                        Join an exclusive community of Googlebook Gemini power users. Share insights, get direct support, and collaborate on advanced AI applications.
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Call to Action -->
-        <section class="text-center mb-16">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-indigo-400 mb-8">
-                Don't Just Own a Googlebook, Master It.
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 sm:py-20 lg:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl">
+            <h2 class="font-extrabold text-white text-center mb-8">
+                Be the First to Dominate with Gemini AI
             </h2>
-            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join the innovators who are already boosting their productivity by 3X with our advanced strategies.
-                This isn't just a guide; it's your unfair advantage in the AI-first world.
+            <p class="text-lg sm:text-xl text-gray-300 text-center mb-10">
+                Join our exclusive waitlist to get notified the moment the "Googlebook Gemini AI Power User Kit" launches.
+                Limited spots available for early bird pricing and exclusive bonuses!
             </p>
-            <a href="#waitlist-form" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-xl uppercase tracking-wide transition duration-300 transform hover:scale-105 shadow-lg">
-                Secure Your Copy with 20% OFF!
-            </a>
-        </section>
 
-        <!-- Waitlist / Pre-order Form Section -->
-        <section id="waitlist-form" class="bg-gray-800 p-8 sm:p-12 rounded-lg shadow-2xl max-w-2xl mx-auto border-t-4 border-indigo-500 animate-fade-in-up">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-indigo-400 mb-6">
-                Ready to Boost Your Productivity?
-            </h2>
-            <p class="text-center text-gray-300 mb-8 text-lg">
-                Secure your exclusive launch discount and be among the first to receive the 'Ultimate Googlebook & Gemini AI Productivity Guide'.
-                <br>This special offer is for a limited time only!
-            </p>
-            <form class="space-y-6">
-                <div>
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name"
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700 transition duration-300" required>
+            <form class="bg-gray-800 rounded-xl p-8 sm:p-10 shadow-2xl">
+                <div class="mb-6">
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-700"
+                           required>
                 </div>
-                <div>
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address:</label>
+                <div class="mb-8">
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
                     <input type="email" id="email" name="email" placeholder="you@example.com"
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700 transition duration-300" required>
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-700"
+                           required>
                 </div>
-                <button type="submit"
-                        class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-4 rounded-full text-xl uppercase tracking-wide transition duration-300 transform hover:scale-105 shadow-lg">
-                    Get My Discounted Guide Now!
-                </button>
+                <div class="text-center">
+                    <button type="submit"
+                            class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-12 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                        Join Waitlist
+                    </button>
+                </div>
+                <p class="text-gray-500 text-xs text-center mt-6">
+                    We value your privacy and will never share your email. You can unsubscribe at any time.
+                </p>
             </form>
-            <p class="text-center text-gray-500 text-xs mt-6">
-                Your privacy is important to us. We will never share your email.
-            </p>
-        </section>
-
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8 mt-16 text-center border-t border-gray-700">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2023 Ultimate Googlebook & Gemini AI Productivity Guide. All rights reserved.</p>
-            <p class="mt-2">
-                <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a> |
-                <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
-            </p>
+    <footer class="bg-gray-800 py-8">
+        <div class="container mx-auto text-center text-gray-500 text-sm px-4 sm:px-6 lg:px-8">
+            <p>&copy; <span id="currentYear"></span> Googlebook Gemini AI Power User Kit. All rights reserved.</p>
+            <p class="mt-2">Disclaimer: This product is an independent guide and not officially endorsed by Google.</p>
         </div>
     </footer>
 
+    <!-- Countdown Timer JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the date we're counting down to (e.g., 7 days from now for a launch/offer end)
+            const launchDate = new Date();
+            launchDate.setDate(launchDate.getDate() + 7); // Offer ends 7 days from today
+            launchDate.setHours(23, 59, 59, 999); // Set to end at the end of the 7th day
+
+            const countdownFunction = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = launchDate - now;
+
+                const countdownElement = document.getElementById("countdown");
+                const waitlistButton = document.querySelector('a[href="#waitlist"]');
+                const waitlistFormButton = document.querySelector('#waitlist button[type="submit"]');
+                const offerEndMessage = document.querySelector('.hero-background p.text-red-400');
+
+
+                if (distance < 0) {
+                    clearInterval(countdownFunction);
+                    countdownElement.innerHTML = "<p class='text-red-400 text-lg sm:text-xl font-bold'>Offer Has Ended!</p>";
+                    if (offerEndMessage) offerEndMessage.remove(); // Remove the "Offer ends soon!" message
+                    if (waitlistButton) {
+                        waitlistButton.textContent = "Learn More About the Kit";
+                        waitlistButton.href = "#features"; // Or to a different product page
+                        waitlistButton.classList.add('opacity-75', 'cursor-not-allowed'); // Indicate offer is over visually
+                    }
+                    if (waitlistFormButton) {
+                        waitlistFormButton.textContent = "See Full Details";
+                        waitlistFormButton.setAttribute('disabled', 'true');
+                        waitlistFormButton.classList.add('opacity-75', 'cursor-not-allowed');
+                    }
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+            }, 1000);
+
+            // Set current year for footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        });
+    </script>
 </body>
 </html>
