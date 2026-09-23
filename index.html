@@ -3,151 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mac AI Optimization Toolkit - Maximize Performance, Minimize Costs</title>
+    <title>Pixel Power-Up: Master Gemini & Personalize Your UI</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
+        /* Custom CSS for dark mode background */
         body {
-            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1c; /* A very dark grey, slightly off-black */
+            color: #f3f4f6; /* Light text for contrast */
         }
         .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            position: relative;
         }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+        .gradient-button {
+            background: linear-gradient(to right, #8b5cf6, #c026d3); /* Purple to Pink Gradient */
         }
-        /* Custom scrollbar for dark mode */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #1a1a1a;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #4a4a4a;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #6a6a6a;
+        .gradient-text {
+            background: linear-gradient(to right, #a78bfa, #f472b6); /* Lighter purple to pink for text */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent; /* Fallback for browsers that don't support -webkit-text-fill-color */
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 antialiased">
+<body class="font-sans antialiased text-zinc-100 bg-zinc-900">
 
     <!-- Hero Section -->
-    <header class="hero-bg min-h-screen flex items-center justify-center text-center">
-        <div class="hero-overlay absolute inset-0"></div>
-        <div class="relative z-10 p-4 max-w-4xl mx-auto flex flex-col items-center">
-            <p class="text-sm md:text-base text-purple-300 font-semibold mb-3 tracking-wide uppercase">
-                🚀 AI Performance Unleashed on Apple Silicon
-            </p>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
-                Unlock Peak AI Performance. <br class="hidden sm:inline">Slash Cloud Costs.
+    <header class="relative min-h-screen flex items-center justify-center text-center px-4 py-16 hero-bg">
+        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay -->
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 gradient-text">
+                Pixel Power-Up:<br>Master Your UI & AI for Peak Productivity
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
-                The **Mac AI Optimization Toolkit** empowers developers and small businesses to maximize AI inference and training performance while minimizing expenses on Apple Silicon.
-                Inspired by <span class="font-bold text-purple-300">Apple's push to lower AI costs</span>, we bring cloud-level efficiency to your desktop.
+            <p class="text-lg sm:text-xl md:text-2xl mb-10 text-zinc-200">
+                Unlock the true potential of your Google Pixel with advanced personalization, Gemini AI productivity hacks,
+                and leverage the upcoming "My Pixel Colors" trend on older devices.
             </p>
-
-            <div class="bg-purple-800 bg-opacity-30 border border-purple-700 rounded-lg p-4 mb-8 w-full max-w-md">
-                <p class="text-sm sm:text-base font-semibold mb-2 text-purple-200">
-                    🎉 Early Access Waitlist Closes In:
+            <div class="bg-gradient-to-r from-purple-700 to-pink-600 p-6 rounded-lg shadow-xl mb-12 animate-pulse">
+                <p class="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wide mb-3">
+                    Limited Time Exclusive Pre-Sale Access!
                 </p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 text-white font-bold text-2xl sm:text-3xl lg:text-4xl">
-                    <div class="flex flex-col items-center">
-                        <span id="days">00</span>
-                        <span class="text-xs sm:text-sm font-normal text-gray-300">Days</span>
-                    </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours">00</span>
-                        <span class="text-xs sm:text-sm font-normal text-gray-300">Hours</span>
-                    </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes">00</span>
-                        <span class="text-xs sm:text-sm font-normal text-gray-300">Minutes</span>
-                    </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds">00</span>
-                        <span class="text-xs sm:text-sm font-normal text-gray-300">Seconds</span>
-                    </div>
+                <!-- Countdown Timer Placeholder - JavaScript would render the actual countdown here -->
+                <div id="countdown" class="text-4xl sm:text-5xl md:text-6xl font-extrabold">
+                    <span class="block mb-2 text-yellow-300">⏳ 07 Days : 14 Hours : 32 Mins Left!</span>
                 </div>
+                <p class="text-md sm:text-lg text-zinc-200 mt-2">Prices will increase after this period.</p>
             </div>
-
-            <a href="#waitlist" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                Join the Waitlist Now!
+            <a href="#waitlist-form" class="inline-block gradient-button text-white text-xl sm:text-2xl font-bold py-4 px-10 rounded-full hover:scale-105 transition-transform duration-300 shadow-lg uppercase tracking-wide">
+                Join the Exclusive Waitlist Now!
             </a>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 bg-gray-900">
-        <div class="container mx-auto px-4 max-w-screen-xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">
-                Engineered for Peak AI Efficiency on Mac
+    <section class="py-16 md:py-24 bg-zinc-900 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 gradient-text">
+                What You'll Master
             </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-                <!-- Feature 1: Performance Profiler -->
-                <div class="bg-gray-800 rounded-lg p-8 shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 transform hover:scale-105">
-                    <div class="text-purple-400 mb-4 text-5xl">⚙️</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Advanced Performance Profiler</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Pinpoint and eliminate performance bottlenecks with our intuitive profiler. Gain deep insights into your AI workloads, identify inefficient operations, and optimize your code for maximum speed on Apple Silicon's unique architecture.
+                <div class="bg-zinc-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-zinc-700">
+                    <div class="text-5xl mb-4 text-purple-400">🎨</div>
+                    <h3 class="text-2xl font-bold mb-3">Deep UI Personalization</h3>
+                    <p class="text-zinc-300">
+                        Dive into advanced "My Pixel Colors" customization, even on older Pixel models. Tailor every aspect of your UI to reflect your unique style and boost your daily interaction.
                     </p>
                 </div>
 
-                <!-- Feature 2: Cost Savings Estimator -->
-                <div class="bg-gray-800 rounded-lg p-8 shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 transform hover:scale-105">
-                    <div class="text-purple-400 mb-4 text-5xl">💸</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Intelligent Cost Savings Estimator</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Make informed decisions. Compare the real-world cost of local Mac AI inference/training against cloud alternatives like AWS, Azure, and GCP. Our estimator helps you save significantly by leveraging your existing hardware.
+                <div class="bg-zinc-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-zinc-700">
+                    <div class="text-5xl mb-4 text-emerald-400">🤖</div>
+                    <h3 class="text-2xl font-bold mb-3">Gemini AI Productivity Hacks</h3>
+                    <p class="text-zinc-300">
+                        Leverage Gemini's proactive assistance and smart features to streamline your workflow, automate tasks, and elevate your daily productivity to unprecedented levels.
                     </p>
                 </div>
 
-                <!-- Feature 3: Optimized Framework Wrappers -->
-                <div class="bg-gray-800 rounded-lg p-8 shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 transform hover:scale-105">
-                    <div class="text-purple-400 mb-4 text-5xl">⚡️</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Neural Engine & GPU Optimized Libraries</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Unleash the full power of Apple's Neural Engine and integrated GPU. Our specialized libraries and framework wrappers provide drop-in enhancements for popular ML frameworks like PyTorch and TensorFlow, ensuring unparalleled efficiency.
+                <div class="bg-zinc-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-zinc-700">
+                    <div class="text-5xl mb-4 text-blue-400">🔗</div>
+                    <h3 class="text-2xl font-bold mb-3">Seamless Tool Integration</h3>
+                    <p class="text-zinc-300">
+                        Discover and integrate powerful third-party tools that are fully compatible with your Pixel's new features, creating a cohesive and hyper-efficient digital ecosystem.
                     </p>
                 </div>
 
-                <!-- Additional Feature: Seamless Integration -->
-                <div class="bg-gray-800 rounded-lg p-8 shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 transform hover:scale-105">
-                    <div class="text-purple-400 mb-4 text-5xl">🔌</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Seamless Workflow Integration</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Integrate effortlessly into your existing development workflow. Our toolkit is designed to be developer-friendly, offering straightforward setup and compatibility with your preferred ML environments.
+                <div class="bg-zinc-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-zinc-700">
+                    <div class="text-5xl mb-4 text-orange-400">💡</div>
+                    <h3 class="text-2xl font-bold mb-3">Expert-Level Tips & Tricks</h3>
+                    <p class="text-zinc-300">
+                        Go beyond basic settings with our exclusive guide and video course. Uncover hidden functionalities and advanced configurations known only by true Pixel masters.
                     </p>
                 </div>
 
-                <!-- Additional Feature: Real-time Resource Monitoring -->
-                <div class="bg-gray-800 rounded-lg p-8 shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 transform hover:scale-105">
-                    <div class="text-purple-400 mb-4 text-5xl">📊</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Real-time Resource Monitoring</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Keep a constant eye on your Mac's CPU, GPU, and Neural Engine utilization. Understand how your AI models consume resources and make real-time adjustments for optimal performance and energy efficiency.
+                <div class="bg-zinc-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-zinc-700">
+                    <div class="text-5xl mb-4 text-red-400">🔒</div>
+                    <h3 class="text-2xl font-bold mb-3">Enhanced Privacy & Security</h3>
+                    <p class="text-zinc-300">
+                        Learn how to optimize your Pixel's privacy settings and leverage built-in security features for a safer, more secure smartphone experience without sacrificing convenience.
                     </p>
                 </div>
 
-                <!-- Additional Feature: Built for Apple Silicon -->
-                <div class="bg-gray-800 rounded-lg p-8 shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 transform hover:scale-105">
-                    <div class="text-purple-400 mb-4 text-5xl">🍎</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Purpose-Built for Apple Silicon</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Developed from the ground up to take full advantage of Apple's M-series chips. Experience native, blazing-fast AI processing that simply isn't possible with generic x86 solutions.
+                <div class="bg-zinc-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-zinc-700">
+                    <div class="text-5xl mb-4 text-teal-400">🚀</div>
+                    <h3 class="text-2xl font-bold mb-3">Future-Proof Your Pixel</h3>
+                    <p class="text-zinc-300">
+                        Stay ahead of the curve with insights into upcoming Pixel features and how to prepare your device to embrace future updates and innovations seamlessly.
                     </p>
                 </div>
 
@@ -155,124 +118,40 @@
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-20 bg-gray-950">
-        <div class="container mx-auto px-4 max-w-screen-md text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white">
-                Be First to Experience Mac AI Power
+    <!-- Call to Action / Waitlist Form Section -->
+    <section id="waitlist-form" class="py-16 md:py-24 bg-gradient-to-br from-purple-900 to-indigo-900 px-4">
+        <div class="container mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 text-white">
+                Don't Miss Out! Get Early Access to Pixel Power-Up
             </h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-10">
-                Join our exclusive waitlist for early access, beta invitations, and special launch offers. Don't miss out on transforming your AI workflow.
+            <p class="text-lg sm:text-xl text-zinc-200 mb-10">
+                Be the first to know when "Pixel Power-Up" launches and secure your premium digital guide and video course at an exclusive early-bird price. Limited spots available!
             </p>
-
-            <div class="bg-gradient-to-br from-gray-800 to-gray-850 rounded-xl p-8 shadow-2xl border border-purple-700">
-                <p class="text-sm sm:text-base font-semibold mb-4 text-purple-200">
-                    🔥 Early Bird Access Closes Soon!
-                </p>
-                <div id="countdown-bottom" class="flex justify-center items-center space-x-3 text-white font-bold text-xl sm:text-2xl mb-8">
-                    <div class="flex flex-col items-center">
-                        <span id="days-b">00</span>
-                        <span class="text-xs sm:text-sm font-normal text-gray-400">Days</span>
-                    </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours-b">00</span>
-                        <span class="text-xs sm:text-sm font-normal text-gray-400">Hours</span>
-                    </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes-b">00</span>
-                        <span class="text-xs sm:text-sm font-normal text-gray-400">Minutes</span>
-                    </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds-b">00</span>
-                        <span class="text-xs sm:text-sm font-normal text-gray-400">Seconds</span>
-                    </div>
+            <form action="#" method="POST" class="bg-zinc-800 p-8 rounded-xl shadow-2xl border border-zinc-700">
+                <div class="mb-6">
+                    <label for="name" class="block text-left text-zinc-200 text-sm font-medium mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required
+                           class="w-full p-4 rounded-lg bg-zinc-700 border border-zinc-600 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200">
                 </div>
-
-                <form class="space-y-6">
-                    <div>
-                        <input type="text" id="name" name="name" placeholder="Your Name"
-                            class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200 outline-none" required>
-                    </div>
-                    <div>
-                        <input type="email" id="email" name="email" placeholder="Your Email Address"
-                            class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200 outline-none" required>
-                    </div>
-                    <button type="submit"
-                        class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
-                        Secure My Spot!
-                    </button>
-                </form>
-            </div>
+                <div class="mb-8">
+                    <label for="email" class="block text-left text-zinc-200 text-sm font-medium mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required
+                           class="w-full p-4 rounded-lg bg-zinc-700 border border-zinc-600 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200">
+                </div>
+                <button type="submit" class="w-full gradient-button text-white text-xl font-bold py-4 px-8 rounded-full hover:scale-105 transition-transform duration-300 shadow-xl uppercase tracking-wide">
+                    Join the Waitlist Now & Save!
+                </button>
+                <p class="text-sm text-zinc-400 mt-6">We respect your privacy. No spam, ever.</p>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 text-center text-gray-400 text-sm">
-        <div class="container mx-auto px-4">
-            <p>&copy; <span id="year"></span> Mac AI Optimization Toolkit. All rights reserved.</p>
-            <p class="mt-2">Powered by Innovation on Apple Silicon.</p>
+    <footer class="py-10 bg-zinc-950 text-center text-zinc-500 text-sm px-4">
+        <div class="container mx-auto">
+            <p>&copy; 2023 Pixel Power-Up. All rights reserved. | <a href="#" class="hover:text-purple-400 transition-colors">Privacy Policy</a> | <a href="#" class="hover:text-purple-400 transition-colors">Terms of Service</a></p>
         </div>
     </footer>
 
-    <script>
-        // Set the date we're counting down to (e.g., 30 days from now)
-        const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 30); // Set to 30 days from now
-
-        const countdownElements = {
-            top: {
-                days: document.getElementById("days"),
-                hours: document.getElementById("hours"),
-                minutes: document.getElementById("minutes"),
-                seconds: document.getElementById("seconds")
-            },
-            bottom: {
-                days: document.getElementById("days-b"),
-                hours: document.getElementById("hours-b"),
-                minutes: document.getElementById("minutes-b"),
-                seconds: document.getElementById("seconds-b")
-            }
-        };
-
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
-
-            // Time calculations for days, hours, minutes and seconds
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the result in the elements
-            for (const key in countdownElements) {
-                if (countdownElements[key].days) countdownElements[key].days.innerHTML = String(days).padStart(2, '0');
-                if (countdownElements[key].hours) countdownElements[key].hours.innerHTML = String(hours).padStart(2, '0');
-                if (countdownElements[key].minutes) countdownElements[key].minutes.innerHTML = String(minutes).padStart(2, '0');
-                if (countdownElements[key].seconds) countdownElements[key].seconds.innerHTML = String(seconds).padStart(2, '0');
-            }
-
-            // If the countdown is over, update the text
-            if (distance < 0) {
-                clearInterval(x);
-                for (const key in countdownElements) {
-                    if (countdownElements[key].days) countdownElements[key].days.innerHTML = "Ended";
-                    if (countdownElements[key].hours) countdownElements[key].hours.innerHTML = "";
-                    if (countdownElements[key].minutes) countdownElements[key].minutes.innerHTML = "";
-                    if (countdownElements[key].seconds) countdownElements[key].seconds.innerHTML = "";
-                }
-            }
-        }
-
-        // Update the countdown every 1 second
-        const x = setInterval(updateCountdown, 1000);
-        updateCountdown(); // Initial call to display immediately
-
-        // Set current year for footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
