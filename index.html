@@ -3,145 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Agentic OS Playbook: Master Rabbit OS3 for Ultimate Productivity & Automation</title>
+    <title>Player-Centric Ad Monetization: Master Microsoft's New In-Game Ad Tech</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
+        /* Custom styles for the hero background image and overlay */
         .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-image: url('https://source.unsplash.com/1600x900/?Develop,tech');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
         }
-        .animate-pulse-slow {
-            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.9) 100%);
         }
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: .7;
-            }
+        /* Fluid Typography for ULTRA-RESPONSIVE headings */
+        h1 {
+            font-size: clamp(2.5rem, 6vw + 1rem, 4.5rem); /* min, ideal (viewport-based), max */
+            line-height: 1.1;
+        }
+        h2 {
+            font-size: clamp(2rem, 4vw + 1rem, 3.5rem);
+            line-height: 1.2;
+        }
+        /* Ensure scrolling for very small devices, but maintain flex layout */
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        section {
+            flex-shrink: 0;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-900 text-white font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="relative hero-background min-h-screen flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black opacity-75"></div> <!-- Dark Overlay for Readability -->
-
-        <div class="relative z-10 text-center max-w-4xl mx-auto space-y-6 sm:space-y-8">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-                Unlock Ultimate Productivity: <br class="hidden sm:inline">The Agentic OS Playbook
+    <header class="hero-background min-h-screen flex items-center justify-center text-center py-20 relative overflow-hidden">
+        <div class="hero-overlay"></div>
+        <div class="container mx-auto px-4 relative z-10 max-w-4xl">
+            <h1 class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-6 tracking-tight">
+                Master Player-Centric Ad Monetization: Navigate Microsoft's New In-Game Ad Tech
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mt-4 max-w-2xl mx-auto">
-                Harness the revolutionary power of Rabbit's AI agent (OS3) across *all* your devices and applications. Transform your content creation, research, and task management with seamless cross-platform automation.
+            <p class="text-xl md:text-2xl text-gray-200 mb-10 leading-relaxed font-light">
+                Unlock sustainable revenue without sacrificing player loyalty. Transform potential interruptions into powerful engagement opportunities.
             </p>
 
-            <!-- Limited Time Offer Countdown -->
-            <div class="bg-purple-800 bg-opacity-70 border border-purple-700 rounded-lg p-6 sm:p-8 mt-8 shadow-xl max-w-xl mx-auto">
-                <p class="text-xl sm:text-2xl font-bold text-yellow-300 mb-4 animate-pulse-slow">LIMITED TIME LAUNCH OFFER!</p>
-                <div class="flex justify-center items-center space-x-4 sm:space-x-8 text-white" id="countdown">
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-5xl font-extrabold" id="days">00</span>
-                        <span class="text-sm sm:text-base text-gray-300">Days</span>
-                    </div>
-                    <span class="text-3xl sm:text-5xl">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-5xl font-extrabold" id="hours">00</span>
-                        <span class="text-sm sm:text-base text-gray-300">Hours</span>
-                    </div>
-                    <span class="text-3xl sm:text-5xl">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-5xl font-extrabold" id="minutes">00</span>
-                        <span class="text-sm sm:text-base text-gray-300">Minutes</span>
-                    </div>
-                    <span class="text-3xl sm:text-5xl">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-5xl font-extrabold" id="seconds">00</span>
-                        <span class="text-sm sm:text-base text-gray-300">Seconds</span>
-                    </div>
+            <!-- Limited Time Countdown -->
+            <div class="bg-gradient-to-r from-purple-700 to-pink-700 p-6 rounded-lg shadow-xl inline-block mb-12">
+                <p class="text-sm md:text-base uppercase tracking-wider mb-3 font-semibold text-gray-100">Special Early Access Offer Ends In:</p>
+                <div id="countdown" class="flex justify-center space-x-4 text-3xl md:text-5xl font-bold">
+                    <div><span id="days">00</span><br><span class="text-base font-normal">Days</span></div>
+                    <div><span id="hours">00</span><br><span class="text-base font-normal">Hours</span></div>
+                    <div><span id="minutes">00</span><br><span class="text-base font-normal">Mins</span></div>
+                    <div><span id="seconds">00</span><br><span class="text-base font-normal">Secs</span></div>
                 </div>
-                <button class="mt-8 px-10 py-4 bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-white font-bold rounded-full text-lg sm:text-xl shadow-lg transform transition-transform duration-300 hover:scale-105">
-                    Secure Your Early-Bird Access Now & Save!
-                </button>
             </div>
-            <p class="text-sm text-gray-400 mt-4">This exclusive discount expires when the timer hits zero!</p>
+
+            <a href="#waitlist" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg block max-w-xs mx-auto">
+                Secure Your Spot on the Waitlist
+            </a>
         </div>
     </header>
 
-    <!-- Features Section -->
-    <section class="py-16 sm:py-20 bg-gray-900 text-gray-100">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400">
-                What You'll Achieve with The Agentic OS Playbook
+    <!-- Problem/Opportunity Section -->
+    <section class="py-16 md:py-24 bg-gray-900 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-center text-gray-100 mb-12 leading-tight">
+                The New Frontier of Game Monetization
             </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
-                <!-- Course Features -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300">
-                    <h3 class="text-2xl sm:text-3xl font-bold text-purple-400 mb-6">Comprehensive Online Course</h3>
-                    <ul class="space-y-4 text-lg">
-                        <li class="flex items-start">
-                            <span class="text-green-400 mr-3 text-2xl leading-none">🚀</span>
-                            <span><b>Master Rabbit OS3 Setup & Customization:</b> Dive deep into configuring your AI agent for peak performance across any device.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-blue-400 mr-3 text-2xl leading-none">📱</span>
-                            <span><b>Seamless Cross-Platform Integration:</b> Connect Rabbit OS3 to all your apps, from desktop to mobile, for unified workflows.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-yellow-400 mr-3 text-2xl leading-none">✍️</span>
-                            <span><b>AI-Powered Content Creation & Editing:</b> Generate ideas, draft copy, and refine content with intelligent automation.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-red-400 mr-3 text-2xl leading-none">🔍</span>
-                            <span><b>Advanced Research & Data Synthesis:</b> Automate information gathering, summarization, and insight extraction.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-indigo-400 mr-3 text-2xl leading-none">✅</span>
-                            <span><b>Smart Task Management & Automation Routines:</b> Delegate repetitive tasks and build custom automation sequences.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-pink-400 mr-3 text-2xl leading-none">🛠️</span>
-                            <span><b>Troubleshooting & Optimization Strategies:</b> Keep your agent running smoothly and continually improve its efficiency.</span>
-                        </li>
-                    </ul>
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <p class="text-lg md:text-xl text-gray-300 mb-6">
+                        Microsoft's new in-game ad tech is here, promising new revenue streams but also posing significant challenges. Interruptive ads can alienate players, damage retention, and lead to negative sentiment if not handled with surgical precision.
+                    </p>
+                    <p class="text-lg md:text-xl text-gray-300">
+                        This isn't just a threat; it's an unprecedented opportunity for game developers who understand how to truly integrate 'promoted content trigger events' in a <span class="text-purple-400 font-semibold">player-centric</span> way.
+                    </p>
                 </div>
-
-                <!-- Newsletter Features -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300">
-                    <h3 class="text-2xl sm:text-3xl font-bold text-yellow-400 mb-6">Premium Newsletter Bundle</h3>
-                    <ul class="space-y-4 text-lg">
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700">
+                    <h3 class="text-2xl md:text-3xl font-bold text-purple-400 mb-4">Are You Prepared?</h3>
+                    <ul class="list-none space-y-4 text-gray-300 text-lg">
                         <li class="flex items-start">
-                            <span class="text-purple-400 mr-3 text-2xl leading-none">⚡</span>
-                            <span><b>Weekly 'Agentic AI Hacks':</b> Exclusive strategies and shortcuts to supercharge your Rabbit OS3 usage.</span>
+                            <svg class="w-6 h-6 mr-3 text-pink-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span>How to maximize revenue without alienating your fanbase?</span>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-green-400 mr-3 text-2xl leading-none">💡</span>
-                            <span><b>Advanced Tips & Best Practices:</b> Go beyond the basics with expert-level guidance and secret tactics.</span>
+                            <svg class="w-6 h-6 mr-3 text-pink-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span>Which ad integration strategies truly work in 2024?</span>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-blue-400 mr-3 text-2xl leading-none">🔄</span>
-                            <span><b>Stay Ahead with Ongoing Updates:</b> Never miss a new feature or crucial development in the AI agent space.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-pink-400 mr-3 text-2xl leading-none">🤖</span>
-                            <span><b>Deep Dives into Future AI Capabilities:</b> Understand what's next for agentic AI and how to prepare.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-yellow-400 mr-3 text-2xl leading-none">📩</span>
-                            <span><b>Direct Access to Expert Q&A:</b> Get your burning questions answered by leading AI automation specialists.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-indigo-400 mr-3 text-2xl leading-none">📈</span>
-                            <span><b>Exclusive Market Trends in AI Automation:</b> Insightful analysis on where the industry is heading and how to capitalize.</span>
+                            <svg class="w-6 h-6 mr-3 text-pink-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span>How to turn ad breaks into valuable player retention tools?</span>
                         </li>
                     </ul>
                 </div>
@@ -149,81 +108,130 @@
         </div>
     </section>
 
-    <!-- Call to Action / Waitlist Form -->
-    <section class="py-16 sm:py-20 bg-gray-800 text-gray-100">
-        <div class="container mx-auto px-4 max-w-3xl text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-600">
-                Ready to Transform Your Productivity?
+    <!-- Features Section -->
+    <section class="py-16 md:py-24 bg-gray-800 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-center text-gray-100 mb-16 leading-tight">
+                What You'll Master in This <span class="text-pink-500">Exclusive</span> Course
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10">
-                The exclusive launch discount is for a limited time only, and spaces for early access are filling fast. Join our VIP waitlist now to secure your special early-bird offer for 'The Agentic OS Playbook' and gain a competitive edge in AI automation!
-            </p>
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg border border-gray-700 hover:border-purple-500 transition duration-300">
+                    <div class="text-purple-400 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-100 mb-3">Effective Ad Integration</h3>
+                    <p class="text-gray-300">Implement interruptive ads seamlessly with actionable strategies designed to maximize revenue while minimizing player friction and frustration.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg border border-gray-700 hover:border-purple-500 transition duration-300">
+                    <div class="text-purple-400 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-100 mb-3">Minimize Player Backlash</h3>
+                    <p class="text-gray-300">Discover best practices and psychological frameworks to introduce ads in a way that respects player experience and builds long-term loyalty.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg border border-gray-700 hover:border-purple-500 transition duration-300">
+                    <div class="text-purple-400 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3 3 7-7m-8 2H7a2 2 0 00-2 2v4a2 2 0 002 2h10a2 2 0 002-2v-4a2 2 0 00-2-2h-2"></path></svg>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-100 mb-3">Maximize Ad Revenue</h3>
+                    <p class="text-gray-300">Leverage advanced A/B testing frameworks and data-driven insights to optimize ad placements, formats, and frequencies for peak profitability.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg border border-gray-700 hover:border-purple-500 transition duration-300">
+                    <div class="text-purple-400 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 1.343 3 3v2a3 3 0 01-3 3H6a3 3 0 01-3-3v-2c0-1.657 1.343-3 3-3h6zM15 8h3a3 3 0 013 3v2a3 3 0 01-3 3h-3"></path></svg>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-100 mb-3">Retention with Ad-Free Credits</h3>
+                    <p class="text-gray-300">Implement ingenious systems for 'ad-free playtime credits' as a powerful incentive for player retention and engagement.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg border border-gray-700 hover:border-purple-500 transition duration-300">
+                    <div class="text-purple-400 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-100 mb-3">Player Sentiment Analysis</h3>
+                    <p class="text-gray-300">Master techniques for monitoring and analyzing player feedback to proactively adjust your monetization strategy and maintain a happy community.</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg border border-gray-700 hover:border-purple-500 transition duration-300">
+                    <div class="text-purple-400 mb-4">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-100 mb-3">Alternative Monetization</h3>
+                    <p class="text-gray-300">Explore and integrate diverse monetization models to create a robust, resilient revenue ecosystem beyond just ad placements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <form class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-xl border border-gray-700 mx-auto max-w-lg">
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gray-900 px-4">
+        <div class="container mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-100 mb-8 leading-tight">
+                Be The First To Master This Crucial Shift
+            </h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-10">
+                Join the exclusive waitlist for 'Player-Centric Ad Monetization' and get notified instantly when enrollment opens. Special early bird bonuses available for waitlist members!
+            </p>
+            <form class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700">
                 <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Your Name:</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" required
-                           class="shadow-sm appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-gray-700">
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200" required>
                 </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Your Best Email Address:</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" required
-                           class="shadow-sm appearance-none border border-gray-700 rounded-lg w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-gray-700">
+                <div class="mb-8 text-left">
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your@example.com" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200" required>
                 </div>
-                <button type="submit"
-                        class="w-full px-8 py-4 bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-white font-bold rounded-full text-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
-                    Join the Exclusive Waitlist!
+                <button type="submit" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg w-full">
+                    Join the Exclusive Waitlist Now!
                 </button>
+                <p class="text-gray-500 text-xs mt-4">We respect your privacy. Your information will not be shared.</p>
             </form>
-            <p class="text-sm text-gray-500 mt-6">We respect your privacy. Your email will only be used for updates regarding this launch and related AI automation insights.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 text-gray-500 text-center text-sm border-t border-gray-700">
+    <footer class="bg-gray-800 py-10 text-center text-gray-400 text-sm">
         <div class="container mx-auto px-4">
             <p>&copy; 2024 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">The Agentic OS Playbook is your gateway to mastering cross-platform AI productivity with Rabbit OS3.</p>
+            <p class="mt-2">
+                <a href="#" class="hover:text-purple-400 transition-colors duration-200">Privacy Policy</a> |
+                <a href="#" class="hover:text-purple-400 transition-colors duration-200">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the date we're counting down to (e.g., 7 days from now for a launch offer)
-            const futureDate = new Date();
-            futureDate.setDate(futureDate.getDate() + 7); // Sets the countdown to 7 days from now
-            const countDownDate = futureDate.getTime();
+        // Set the date we're counting down to (e.g., 30 days from now for early bird)
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 30); // Sets the end date 30 days from today
+        // For a specific fixed date, use: const countdownDate = new Date("Dec 31, 2024 23:59:59").getTime();
 
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate - now;
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
 
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = '<p class="text-yellow-400 text-2xl font-bold">OFFER EXPIRED!</p>';
-                    // Optionally disable the CTA button here
-                    const ctaButton = document.querySelector('.hero-background button');
-                    if (ctaButton) {
-                        ctaButton.disabled = true;
-                        ctaButton.classList.add('opacity-50', 'cursor-not-allowed');
-                        ctaButton.textContent = 'Offer Expired';
-                    }
-                    return;
-                }
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Display the result in the corresponding elements
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-            }, 1000);
-        });
+            // If the countdown is over, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "OFFER EXPIRED";
+                document.getElementById("countdown").classList.add("text-lg", "text-red-400"); // Style expired message
+            }
+        }, 1000);
     </script>
 </body>
 </html>
