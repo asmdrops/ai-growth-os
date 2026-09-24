@@ -1,116 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel Power-Up: Master Gemini & Personalize Your UI</title>
+    <title>AI Voice Studio: Real-time, Ultra-low Latency Voice & Content Creation</title>
+    <meta name="description" content="Leverage Google Gemini 3.8 Flash TTS for ultra-low latency, natural AI voice generation. Create real-time voice assistants, live streaming voiceovers, podcasts, and more with our advanced content studio. Join the waitlist!">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom CSS for dark mode background */
         body {
-            background-color: #1a1a1c; /* A very dark grey, slightly off-black */
-            color: #f3f4f6; /* Light text for contrast */
+            font-family: 'Inter', sans-serif;
         }
-        .hero-bg {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        /* Custom scrollbar for a premium dark-mode look */
+        body::-webkit-scrollbar {
+            width: 8px;
         }
-        .gradient-button {
-            background: linear-gradient(to right, #8b5cf6, #c026d3); /* Purple to Pink Gradient */
+        body::-webkit-scrollbar-track {
+            background: #1A202C; /* bg-gray-900 */
         }
-        .gradient-text {
-            background: linear-gradient(to right, #a78bfa, #f472b6); /* Lighter purple to pink for text */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            color: transparent; /* Fallback for browsers that don't support -webkit-text-fill-color */
+        body::-webkit-scrollbar-thumb {
+            background-color: #4A5568; /* bg-gray-600 */
+            border-radius: 4px;
+            border: 2px solid #1A202C;
+        }
+        body::-webkit-scrollbar-thumb:hover {
+            background-color: #718096; /* bg-gray-500 */
+        }
+
+        /* Keyframe animations for a dynamic feel */
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 0.8s ease-out forwards;
+            opacity: 0; /* Start hidden */
+        }
+        .animate-fade-in-up.delay-100 { animation-delay: 0.1s; }
+        .animate-fade-in-up.delay-200 { animation-delay: 0.2s; }
+        .animate-fade-in-up.delay-300 { animation-delay: 0.3s; }
+
+        @keyframes pulse-light {
+            0%, 100% {
+                box-shadow: 0 0 10px rgba(99, 102, 241, 0.4), 0 0 20px rgba(99, 102, 241, 0.2); /* indigo-500 */
+            }
+            50% {
+                box-shadow: 0 0 15px rgba(99, 102, 241, 0.6), 0 0 30px rgba(99, 102, 241, 0.4);
+            }
+        }
+        .animate-pulse-light {
+            animation: pulse-light 2s infinite ease-in-out;
         }
     </style>
 </head>
-<body class="font-sans antialiased text-zinc-100 bg-zinc-900">
+<body class="bg-gray-900 text-gray-100 antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 p-4 bg-gray-900 bg-opacity-80 backdrop-filter backdrop-blur-md border-b border-gray-800">
+        <div class="container mx-auto flex justify-between items-center flex-wrap">
+            <a href="#" class="text-2xl font-extrabold text-white tracking-tight">AI Voice Studio</a>
+            <div class="flex items-center space-x-4">
+                <a href="#features" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md font-medium transition duration-300">Features</a>
+                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-md font-medium shadow-md transition duration-300 transform hover:scale-105">Join Waitlist</a>
+            </div>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <header class="relative min-h-screen flex items-center justify-center text-center px-4 py-16 hero-bg">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay -->
-        <div class="relative z-10 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 gradient-text">
-                Pixel Power-Up:<br>Master Your UI & AI for Peak Productivity
+    <header class="relative h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20">
+        <img src="https://source.unsplash.com/1600x900/?Develop,tech" alt="Real-time AI Voice Assistant & Content Studio Background" class="absolute inset-0 w-full h-full object-cover z-0 filter brightness-75">
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent opacity-90 z-10"></div>
+        <div class="relative z-20 text-center px-4 max-w-5xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mb-6 animate-fade-in-up">
+                Experience <span class="text-indigo-400">Ultra-Low Latency AI Voice</span> for Real-time & Content
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl mb-10 text-zinc-200">
-                Unlock the true potential of your Google Pixel with advanced personalization, Gemini AI productivity hacks,
-                and leverage the upcoming "My Pixel Colors" trend on older devices.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto animate-fade-in-up delay-100">
+                Revolutionize interactions and content creation with natural voice generation powered by Google's new <span class="font-bold text-indigo-300">Gemini 3.8 Flash TTS</span>.
             </p>
-            <div class="bg-gradient-to-r from-purple-700 to-pink-600 p-6 rounded-lg shadow-xl mb-12 animate-pulse">
-                <p class="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wide mb-3">
-                    Limited Time Exclusive Pre-Sale Access!
-                </p>
-                <!-- Countdown Timer Placeholder - JavaScript would render the actual countdown here -->
-                <div id="countdown" class="text-4xl sm:text-5xl md:text-6xl font-extrabold">
-                    <span class="block mb-2 text-yellow-300">⏳ 07 Days : 14 Hours : 32 Mins Left!</span>
-                </div>
-                <p class="text-md sm:text-lg text-zinc-200 mt-2">Prices will increase after this period.</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
+                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 animate-fade-in-up delay-200">
+                    Get Early Access Now!
+                </a>
+                <a href="#features" class="bg-transparent border-2 border-indigo-400 text-indigo-200 hover:bg-indigo-400 hover:text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 animate-fade-in-up delay-300">
+                    Explore Features
+                </a>
             </div>
-            <a href="#waitlist-form" class="inline-block gradient-button text-white text-xl sm:text-2xl font-bold py-4 px-10 rounded-full hover:scale-105 transition-transform duration-300 shadow-lg uppercase tracking-wide">
-                Join the Exclusive Waitlist Now!
-            </a>
+
+            <!-- Limited Time Countdown -->
+            <div class="bg-gray-800 bg-opacity-70 border border-indigo-500 rounded-lg p-6 max-w-xl mx-auto mt-12 shadow-2xl animate-pulse-light">
+                <p class="text-indigo-300 text-xl font-semibold mb-3">Special Early Bird Waitlist Offer Ends In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 text-white font-mono text-3xl sm:text-4xl md:text-5xl">
+                    <div class="flex flex-col items-center">
+                        <span class="block w-16 sm:w-20 px-2 py-1 bg-gray-900 rounded-md">07</span>
+                        <span class="text-sm mt-1 text-gray-400">Days</span>
+                    </div>
+                    <span class="text-indigo-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="block w-16 sm:w-20 px-2 py-1 bg-gray-900 rounded-md">23</span>
+                        <span class="text-sm mt-1 text-gray-400">Hours</span>
+                    </div>
+                    <span class="text-indigo-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="block w-16 sm:w-20 px-2 py-1 bg-gray-900 rounded-md">59</span>
+                        <span class="text-sm mt-1 text-gray-400">Mins</span>
+                    </div>
+                    <span class="text-indigo-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="block w-16 sm:w-20 px-2 py-1 bg-gray-900 rounded-md">59</span>
+                        <span class="text-sm mt-1 text-gray-400">Secs</span>
+                    </div>
+                </div>
+                <p class="text-gray-400 text-sm mt-4 italic"> (A real-time countdown requires JavaScript implementation) </p>
+            </div>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-zinc-900 px-4">
+    <section id="features" class="py-20 px-4 bg-gray-900 text-gray-100">
         <div class="container mx-auto">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 gradient-text">
-                What You'll Master
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-white">
+                Powerful Features for <span class="text-indigo-400">Unmatched Voice Synthesis</span>
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <p class="text-xl text-center text-gray-300 mb-16 max-w-3xl mx-auto">
+                Our platform delivers a comprehensive suite of tools for real-time interaction and professional audio production, leveraging the latest AI models.
+            </p>
 
-                <div class="bg-zinc-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-zinc-700">
-                    <div class="text-5xl mb-4 text-purple-400">🎨</div>
-                    <h3 class="text-2xl font-bold mb-3">Deep UI Personalization</h3>
-                    <p class="text-zinc-300">
-                        Dive into advanced "My Pixel Colors" customization, even on older Pixel models. Tailor every aspect of your UI to reflect your unique style and boost your daily interaction.
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+
+                <!-- Feature 1: Ultra-Low Latency -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-indigo-400 text-5xl mb-4">⚡</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Gemini Flash TTS: Ultra-Low Latency</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Harness the speed of Google's Gemini 3.8 Flash TTS for near-instant voice responses, perfect for interactive chatbots and live streaming applications.
                     </p>
                 </div>
 
-                <div class="bg-zinc-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-zinc-700">
-                    <div class="text-5xl mb-4 text-emerald-400">🤖</div>
-                    <h3 class="text-2xl font-bold mb-3">Gemini AI Productivity Hacks</h3>
-                    <p class="text-zinc-300">
-                        Leverage Gemini's proactive assistance and smart features to streamline your workflow, automate tasks, and elevate your daily productivity to unprecedented levels.
+                <!-- Feature 2: Content Studio -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-indigo-400 text-5xl mb-4">🎙️</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Intuitive Content Studio</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Upload scripts, select from diverse AI voices, and instantly generate high-quality audio content for podcasts, audiobooks, and video narration.
                     </p>
                 </div>
 
-                <div class="bg-zinc-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-zinc-700">
-                    <div class="text-5xl mb-4 text-blue-400">🔗</div>
-                    <h3 class="text-2xl font-bold mb-3">Seamless Tool Integration</h3>
-                    <p class="text-zinc-300">
-                        Discover and integrate powerful third-party tools that are fully compatible with your Pixel's new features, creating a cohesive and hyper-efficient digital ecosystem.
+                <!-- Feature 3: Emotional Nuances -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-indigo-400 text-5xl mb-4">🎭</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Fine-tuned Emotional Nuances</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Adjust emotional tones, pitch, and speaking styles to create highly natural and expressive voiceovers that truly resonate with your audience.
                     </p>
                 </div>
 
-                <div class="bg-zinc-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-zinc-700">
-                    <div class="text-5xl mb-4 text-orange-400">💡</div>
-                    <h3 class="text-2xl font-bold mb-3">Expert-Level Tips & Tricks</h3>
-                    <p class="text-zinc-300">
-                        Go beyond basic settings with our exclusive guide and video course. Uncover hidden functionalities and advanced configurations known only by true Pixel masters.
+                <!-- Feature 4: Custom Branded Voices -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-indigo-400 text-5xl mb-4">🗣️</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Diverse & Custom Branded Voices</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Access a rich library of AI voices, and even create custom branded voices to ensure consistent identity across all your audio productions.
                     </p>
                 </div>
 
-                <div class="bg-zinc-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-zinc-700">
-                    <div class="text-5xl mb-4 text-red-400">🔒</div>
-                    <h3 class="text-2xl font-bold mb-3">Enhanced Privacy & Security</h3>
-                    <p class="text-zinc-300">
-                        Learn how to optimize your Pixel's privacy settings and leverage built-in security features for a safer, more secure smartphone experience without sacrificing convenience.
+                <!-- Feature 5: Multi-Speaker Management -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-indigo-400 text-5xl mb-4">👥</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Advanced Multi-Speaker Control</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Effortlessly manage and orchestrate multiple AI speakers within a single script, ideal for dynamic dialogues and complex narrative projects.
                     </p>
                 </div>
 
-                <div class="bg-zinc-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-zinc-700">
-                    <div class="text-5xl mb-4 text-teal-400">🚀</div>
-                    <h3 class="text-2xl font-bold mb-3">Future-Proof Your Pixel</h3>
-                    <p class="text-zinc-300">
-                        Stay ahead of the curve with insights into upcoming Pixel features and how to prepare your device to embrace future updates and innovations seamlessly.
+                <!-- Feature 6: API Access -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-indigo-400 text-5xl mb-4">🔗</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Seamless API Integration</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Integrate our powerful voice generation capabilities directly into your existing platforms, applications, and business workflows with our robust API.
                     </p>
                 </div>
 
@@ -118,38 +193,52 @@
         </div>
     </section>
 
-    <!-- Call to Action / Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 md:py-24 bg-gradient-to-br from-purple-900 to-indigo-900 px-4">
-        <div class="container mx-auto max-w-2xl text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 text-white">
-                Don't Miss Out! Get Early Access to Pixel Power-Up
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-20 px-4 bg-gray-800 text-gray-100">
+        <div class="container mx-auto max-w-2xl">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-8 text-white">
+                Ready to Transform Your Voice Strategy? <span class="text-indigo-400">Join the Waitlist!</span>
             </h2>
-            <p class="text-lg sm:text-xl text-zinc-200 mb-10">
-                Be the first to know when "Pixel Power-Up" launches and secure your premium digital guide and video course at an exclusive early-bird price. Limited spots available!
+            <p class="text-xl text-center text-gray-300 mb-10 max-w-xl mx-auto">
+                Be among the first to harness the power of ultra-low latency AI voices. Get exclusive early access, product updates, and special launch discounts.
             </p>
-            <form action="#" method="POST" class="bg-zinc-800 p-8 rounded-xl shadow-2xl border border-zinc-700">
+
+            <form class="bg-gray-900 p-8 sm:p-10 rounded-xl shadow-2xl border border-indigo-600">
                 <div class="mb-6">
-                    <label for="name" class="block text-left text-zinc-200 text-sm font-medium mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" required
-                           class="w-full p-4 rounded-lg bg-zinc-700 border border-zinc-600 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200">
+                    <label for="name" class="block text-gray-300 text-lg font-medium mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="w-full px-5 py-3 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg" required>
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-300 text-lg font-medium mb-2">Work Email</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@yourcompany.com"
+                           class="w-full px-5 py-3 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg" required>
                 </div>
                 <div class="mb-8">
-                    <label for="email" class="block text-left text-zinc-200 text-sm font-medium mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" required
-                           class="w-full p-4 rounded-lg bg-zinc-700 border border-zinc-600 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200">
+                    <label for="role" class="block text-gray-300 text-lg font-medium mb-2">Your Role / Primary Use Case (Optional)</label>
+                    <input type="text" id="role" name="role" placeholder="e.g., Content Creator, Developer, Marketing Manager, Chatbot Integrator"
+                           class="w-full px-5 py-3 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg">
                 </div>
-                <button type="submit" class="w-full gradient-button text-white text-xl font-bold py-4 px-8 rounded-full hover:scale-105 transition-transform duration-300 shadow-xl uppercase tracking-wide">
-                    Join the Waitlist Now & Save!
+                <button type="submit"
+                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-md text-xl shadow-lg transform hover:scale-105 transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900">
+                    Secure My Early Access Spot!
                 </button>
-                <p class="text-sm text-zinc-400 mt-6">We respect your privacy. No spam, ever.</p>
+                <p class="text-center text-gray-400 text-sm mt-6">
+                    We value your privacy. Your information will not be shared.
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 bg-zinc-950 text-center text-zinc-500 text-sm px-4">
+    <footer class="bg-gray-900 py-10 px-4 text-gray-400 text-center text-sm border-t border-gray-800">
         <div class="container mx-auto">
-            <p>&copy; 2023 Pixel Power-Up. All rights reserved. | <a href="#" class="hover:text-purple-400 transition-colors">Privacy Policy</a> | <a href="#" class="hover:text-purple-400 transition-colors">Terms of Service</a></p>
+            <p>&copy; 2023 AI Voice Studio. All rights reserved. Powered by Google Gemini 3.8 Flash TTS.</p>
+            <div class="mt-4">
+                <a href="#" class="text-gray-500 hover:text-indigo-400 mx-2">Privacy Policy</a>
+                <span class="text-gray-600">|</span>
+                <a href="#" class="text-gray-500 hover:text-indigo-400 mx-2">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
