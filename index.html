@@ -1,284 +1,284 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PersonaVid AI - Scale Hyper-Personalized Video Interactions with Gemini 3.8 Live Avatar</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class', // Enable dark mode based on 'dark' class
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#6366f1', // Indigo 500
-                        secondary: '#8b5cf6', // Violet 500
-                        darkbg: '#0F0F0F', // Very dark gray, almost black
-                        darkcard: '#1A1A1A', // Slightly lighter for cards
-                        darktext: '#E0E0E0', // Off-white for text
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'], // Example custom font (ensure it's loaded if not default)
-                    },
-                    // We'll apply the hero image via custom CSS for better control
-                }
+    <title>AI Avatar Content Studio - Power Your Brand with Gemini 3.8 Live Avatars</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom Countdown Styles */
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 6rem; /* Responsive width */
+            height: 6rem; /* Responsive height */
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 0.75rem; /* Rounded corners */
+            margin: 0 0.5rem; /* Spacing between items */
+            font-size: 2.5rem; /* Large numbers */
+            font-weight: bold;
+            color: #fff;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+        .countdown-item span.label {
+            font-size: 0.875rem; /* Smaller label */
+            font-weight: normal;
+            position: absolute;
+            bottom: 0.5rem;
+            color: #ccc;
+        }
+        @media (max-width: 640px) {
+            .countdown-item {
+                min-width: 4.5rem;
+                height: 4.5rem;
+                font-size: 1.875rem;
+            }
+            .countdown-item span.label {
+                font-size: 0.75rem;
             }
         }
-    </script>
-    <style>
-        /* Custom styles for hero image and overlay */
-        .hero-section {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
+
+        /* Gradient for buttons/accents */
+        .btn-gradient {
+            background-image: linear-gradient(to right, #8b5cf6, #c026d3); /* A vibrant purple to magenta gradient */
+            transition: all 0.3s ease;
         }
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+        .btn-gradient:hover {
+            background-image: linear-gradient(to right, #7c3aed, #a21caf);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
-        /* Ensure smooth scrolling for anchor links */
-        html {
-            scroll-behavior: smooth;
+
+        /* Parallax effect for hero background */
+        .hero-bg {
+            background-attachment: fixed;
         }
-        /* Basic animations for a dynamic feel */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+
+        /* Ensure sections have good spacing */
+        section {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
         }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        @media (max-width: 768px) {
+            section {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
         }
-        @keyframes popIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        @keyframes bounceOnce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
-        .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
-        .animate-fade-in-up { animation: fadeInUp 1s ease-out 0.5s forwards; opacity: 0; }
-        .animate-pop-in { animation: popIn 0.7s ease-out 1s forwards; opacity: 0; }
-        .animate-bounce-once { animation: bounceOnce 2s ease-in-out 1.5s forwards; }
     </style>
 </head>
-<body class="bg-darkbg text-darktext font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased overflow-x-hidden">
 
     <!-- Hero Section -->
-    <section class="hero-section min-h-screen flex items-center justify-center text-center py-16 md:py-24 relative overflow-hidden">
-        <div class="hero-overlay"></div>
-        <div class="container mx-auto px-4 relative z-10 max-w-4xl">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg animate-fade-in-down">
-                Scale <span class="text-primary">Human-Like Interactions</span>, Instantly.
+    <section class="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center hero-bg" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');"></div>
+        <div class="absolute inset-0 bg-black opacity-75"></div> <!-- Dark overlay for text readability -->
+
+        <div class="relative z-10 p-4 md:p-8 max-w-5xl mx-auto flex flex-col items-center">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 tracking-tight text-white drop-shadow-lg">
+                <span class="text-purple-400">Unleash Your Brand</span> with Gemini 3.8 Live Avatars
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl mb-10 text-gray-200 max-w-3xl mx-auto drop-shadow-md animate-fade-in-up">
-                Leverage the power of <strong class="text-white">Gemini 3.8's Live Avatar</strong> to generate hyper-personalized video responses for customer support and sales queries, without increasing headcount.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl drop-shadow-md font-light">
+                Leverage Google's cutting-edge AI to rapidly generate, customize, and deploy interactive video content. Say goodbye to production bottlenecks and hello to scalable, engaging visuals.
             </p>
 
-            <!-- Limited Time Offer & Countdown -->
-            <div class="bg-gradient-to-r from-primary to-secondary p-6 md:p-8 rounded-xl shadow-2xl mb-12 animate-pop-in border-2 border-white/20">
-                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
-                    🎉 Limited-Time Early Access Bonus! 🎉
-                </h2>
-                <p class="text-lg sm:text-xl text-white mb-6">
-                    Join the waitlist now and secure <strong class="underline">50% off your first 3 months!</strong> Offer ends in:
+            <!-- CTA Button -->
+            <a href="#waitlist" class="btn-gradient text-white font-bold py-3 px-10 rounded-full text-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 mb-10">
+                Get Exclusive Early Access!
+            </a>
+
+            <!-- Limited Time Countdown -->
+            <div class="bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-md p-6 sm:p-8 rounded-xl shadow-2xl border border-purple-600 flex flex-col items-center w-full max-w-md">
+                <p class="text-lg sm:text-xl font-semibold mb-4 text-purple-300">
+                    Your Special Launch Discount Ends In:
                 </p>
-                <div class="flex justify-center items-center space-x-4 sm:space-x-6 text-white font-mono text-3xl sm:text-4xl md:text-5xl font-bold">
-                    <div class="flex flex-col items-center">
-                        <span id="countdown-days">07</span>
-                        <span class="text-sm sm:text-base font-medium">Days</span>
+                <div id="countdown" class="flex justify-center flex-wrap gap-2 sm:gap-4">
+                    <div class="countdown-item">
+                        <span id="days">00</span>
+                        <span class="label">Days</span>
                     </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="countdown-hours">14</span>
-                        <span class="text-sm sm:text-base font-medium">Hours</span>
+                    <div class="countdown-item">
+                        <span id="hours">00</span>
+                        <span class="label">Hours</span>
                     </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="countdown-minutes">38</span>
-                        <span class="text-sm sm:text-base font-medium">Minutes</span>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <span class="label">Minutes</span>
                     </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="countdown-seconds">55</span>
-                        <span class="text-sm sm:text-base font-medium">Seconds</span>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <span class="label">Seconds</span>
                     </div>
                 </div>
             </div>
-
-            <a href="#waitlist" class="inline-block bg-white text-darkbg hover:bg-gray-200 font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg animate-bounce-once">
-                Join the Waitlist Now!
-            </a>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-darkcard text-darktext">
-        <div class="container mx-auto px-4 max-w-6xl">
+    <section class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4">
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 text-white">
-                How <span class="text-primary">PersonaVid AI</span> Revolutionizes Your Business
+                Solve Your Content Pain Points <span class="text-purple-400">Intelligently</span>
             </h2>
+            <p class="text-lg text-center text-gray-300 max-w-3xl mx-auto mb-16 font-light">
+                Our AI Avatar Content Studio is engineered to eliminate technical hurdles, scale your video production, and deliver captivating interactive content faster and more cost-effectively.
+            </p>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-
-                <!-- Feature 1: Hyper-Personalized Video -->
-                <div class="bg-darkbg p-8 rounded-xl shadow-lg border border-gray-700 hover:border-primary transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-primary text-5xl mb-6 flex justify-center">
-                        <!-- Icon Placeholder: Replace with actual SVG icons -->
-                        <span>💡</span>
+                <!-- Feature 1: Rapid Content Generation -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700 hover:border-purple-600">
+                    <div class="text-purple-400 mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1.25-3M15 10V5a3 3 0 00-3-3H6a3 3 0 00-3 3v5m12 0h2a2 2 0 012 2v5a2 2 0 01-2 2h-2M7 10h10v7H7v-7z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Hyper-Personalized Video</h3>
-                    <p class="text-center text-gray-400">
-                        Generate unique, tailored video responses for every customer query using Gemini 3.8's Live Avatar, making every interaction feel genuinely human.
+                    <h3 class="text-2xl font-bold mb-3 text-white">Rapid Video Creation</h3>
+                    <p class="text-gray-300">
+                        Harness Gemini 3.8's Live Avatar capabilities to generate professional, interactive video content in minutes, drastically cutting down production time and costs.
                     </p>
                 </div>
 
-                <!-- Feature 2: Unmatched Scalability -->
-                <div class="bg-darkbg p-8 rounded-xl shadow-lg border border-gray-700 hover:border-primary transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-primary text-5xl mb-6 flex justify-center">
-                        <!-- Icon Placeholder -->
-                        <span>🚀</span>
+                <!-- Feature 2: Unparalleled Customization -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700 hover:border-purple-600">
+                    <div class="text-purple-400 mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Unmatched Scalability</h3>
-                    <p class="text-center text-gray-400">
-                        Handle thousands of simultaneous customer interactions without hiring more staff. Our AI-driven platform scales effortlessly with your business needs.
+                    <h3 class="text-2xl font-bold mb-3 text-white">Full Creative Control</h3>
+                    <p class="text-gray-300">
+                        From extensive script templates and diverse voice modulation to dynamic background scene selection, meticulously tailor every video to your brand's exact specifications.
                     </p>
                 </div>
 
-                <!-- Feature 3: Boost Sales & Engagement -->
-                <div class="bg-darkbg p-8 rounded-xl shadow-lg border border-gray-700 hover:border-primary transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-primary text-5xl mb-6 flex justify-center">
-                        <!-- Icon Placeholder -->
-                        <span>⚡</span>
+                <!-- Feature 3: Seamless Integration & Deployment -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700 hover:border-purple-600">
+                    <div class="text-purple-400 mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Boost Sales & Engagement</h3>
-                    <p class="text-center text-gray-400">
-                        Engage prospects with dynamic, personalized video pitches that capture attention and drive conversions far more effectively than static text.
+                    <h3 class="text-2xl font-bold mb-3 text-white">Effortless Deployment</h3>
+                    <p class="text-gray-300">
+                        Directly embed your interactive AI avatar content onto your website or publish across all major social media platforms with intuitive, one-click integrations.
                     </p>
                 </div>
 
-                <!-- Feature 4: Real-Time Responsiveness -->
-                <div class="bg-darkbg p-8 rounded-xl shadow-lg border border-gray-700 hover:border-primary transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-primary text-5xl mb-6 flex justify-center">
-                        <!-- Icon Placeholder -->
-                        <span>📈</span>
+                <!-- Feature 4: Boost Engagement & Conversion -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700 hover:border-purple-600">
+                    <div class="text-purple-400 mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Real-Time Responsiveness</h3>
-                    <p class="text-center text-gray-400">
-                        Deliver instant video support and sales responses, reducing wait times and improving customer satisfaction around the clock.
+                    <h3 class="text-2xl font-bold mb-3 text-white">Drive Higher Conversions</h3>
+                    <p class="text-gray-300">
+                        Captivate your audience with dynamic, interactive AI avatar videos that cut through the noise, leading to significantly higher engagement and conversion rates.
                     </p>
                 </div>
 
-                <!-- Feature 5: Consistent Brand Voice -->
-                <div class="bg-darkbg p-8 rounded-xl shadow-lg border border-gray-700 hover:border-primary transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-primary text-5xl mb-6 flex justify-center">
-                        <!-- Icon Placeholder -->
-                        <span>🛡️</span>
+                <!-- Feature 5: Cost-Effective Scalability -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700 hover:border-purple-600">
+                    <div class="text-purple-400 mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V3m0 9v3m0 3.01V21M12 6.95l-1-2.95m0 0H8m4 0h4m-9 7a4.996 4.996 0 011.026 1.026v.001C9.9 14.978 10 15 10 15H9c-.889 0-1.78-.322-2.34-.945l-1-1.066zM14.95 10.95a5 5 0 011.026-1.026v-.001C16.1 9.022 16 9 16 9h1c.889 0 1.78.322 2.34.945l1 1.066z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Consistent Brand Voice</h3>
-                    <p class="text-center text-gray-400">
-                        Maintain a consistent, professional brand presence across all interactions, ensuring every customer experiences your brand at its best.
+                    <h3 class="text-2xl font-bold mb-3 text-white">Scalable Content Pipeline</h3>
+                    <p class="text-gray-300">
+                        Eliminate the need for expensive actors and film crews. Our platform offers a scalable solution for recurring content needs, reducing costs and maximizing ROI.
                     </p>
                 </div>
 
-                <!-- Feature 6: Seamless Integration -->
-                <div class="bg-darkbg p-8 rounded-xl shadow-lg border border-gray-700 hover:border-primary transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-primary text-5xl mb-6 flex justify-center">
-                        <!-- Icon Placeholder -->
-                        <span>🛠️</span>
+                 <!-- Feature 6: Dynamic Scripting & AI Voices -->
+                 <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700 hover:border-purple-600">
+                    <div class="text-purple-400 mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Seamless Integration</h3>
-                    <p class="text-center text-gray-400">
-                        Easily integrate PersonaVid AI into your existing CRM, support systems, and sales funnels for a smooth and efficient workflow.
+                    <h3 class="text-2xl font-bold mb-3 text-white">Intelligent Scripting & Voice</h3>
+                    <p class="text-gray-300">
+                        Leverage AI-powered script generation and sophisticated voice modulation to ensure your avatar delivers compelling, pitch-perfect messages every time.
                     </p>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-darkbg text-darktext">
-        <div class="container mx-auto px-4 max-w-3xl">
+    <section id="waitlist" class="py-16 md:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 max-w-2xl">
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-8 text-white">
-                Join the <span class="text-secondary">PersonaVid AI</span> Waitlist
+                Be First to <span class="text-purple-400">Revolutionize Your Content</span>
             </h2>
-            <p class="text-center text-lg sm:text-xl mb-12 text-gray-400 max-w-2xl mx-auto">
-                Be among the first to experience the future of customer interactions. Get early access, exclusive updates, and special launch pricing.
+            <p class="text-lg text-center text-gray-300 mb-10 font-light">
+                Join our exclusive waitlist for early bird access, substantial launch discounts, and insider updates on how our AI Avatar Content Studio will transform your business. Spaces are limited!
             </p>
 
-            <div class="bg-darkcard p-8 md:p-10 rounded-xl shadow-2xl border border-gray-700">
-                <form action="#" method="POST" class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe"
-                               class="w-full px-5 py-3 rounded-lg bg-darkbg border border-gray-600 focus:border-primary focus:ring focus:ring-primary/50 text-white placeholder-gray-500 transition duration-300 outline-none" required>
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Work Email</label>
-                        <input type="email" id="email" name="email" placeholder="you@yourcompany.com"
-                               class="w-full px-5 py-3 rounded-lg bg-darkbg border border-gray-600 focus:border-primary focus:ring focus:ring-primary/50 text-white placeholder-gray-500 transition duration-300 outline-none" required>
-                    </div>
-                    <div>
-                        <label for="company" class="block text-sm font-medium text-gray-300 mb-2">Company Name</label>
-                        <input type="text" id="company" name="company" placeholder="Acme Inc."
-                               class="w-full px-5 py-3 rounded-lg bg-darkbg border border-gray-600 focus:border-primary focus:ring focus:ring-primary/50 text-white placeholder-gray-500 transition duration-300 outline-none">
-                    </div>
-                    <button type="submit"
-                            class="w-full bg-primary hover:bg-secondary text-white font-bold py-4 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
-                        Secure My Early Access
+            <form class="bg-gray-900 p-8 rounded-lg shadow-2xl border border-purple-700">
+                <div class="mb-6">
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200" placeholder="John Doe" required>
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Business Email</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200" placeholder="you@yourcompany.com" required>
+                </div>
+                <div class="flex items-center justify-center">
+                    <button type="submit" class="btn-gradient text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 w-full">
+                        Secure Your Spot on the Waitlist!
                     </button>
-                    <p class="text-center text-sm text-gray-500 mt-4">
-                        We respect your privacy. No spam, ever.
-                    </p>
-                </form>
-            </div>
+                </div>
+                <p class="text-center text-gray-500 text-xs mt-6">
+                    We value your privacy. Your information will never be shared or sold.
+                </p>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-darkcard py-8 text-darktext text-center border-t border-gray-800">
+    <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm border-t border-gray-800">
         <div class="container mx-auto px-4">
-            <p>&copy; 2024 PersonaVid AI. All rights reserved. Leveraging the power of Gemini 3.8 Live Avatar.</p>
+            <p>&copy; 2023 AI Avatar Content Studio. All rights reserved. Powered by Google Gemini 3.8 Live.</p>
         </div>
     </footer>
 
-    <!-- Simple JS for countdown visual effect (not a real timer) -->
+    <!-- JavaScript for Countdown Timer -->
     <script>
-        // This JavaScript provides a visual, non-functional countdown.
-        // For a real application, a server-side timer or more robust client-side JS would be used.
-        const countdownElements = {
-            days: document.getElementById('countdown-days'),
-            hours: document.getElementById('countdown-hours'),
-            minutes: document.getElementById('countdown-minutes'),
-            seconds: document.getElementById('countdown-seconds'),
-        };
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to: 7 days from now
+            const currentDate = new Date();
+            const countDownDate = new Date(currentDate.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 days in milliseconds
 
-        function updateCountdownDisplay() {
-            // Static values for demonstration of the countdown UI
-            const days = Math.floor(Math.random() * 8) + 1; // 1-8 days
-            const hours = Math.floor(Math.random() * 24);
-            const minutes = Math.floor(Math.random() * 60);
-            const seconds = Math.floor(Math.random() * 60);
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate - now;
 
-            countdownElements.days.textContent = String(days).padStart(2, '0');
-            countdownElements.hours.textContent = String(hours).padStart(2, '0');
-            countdownElements.minutes.textContent = String(minutes).padStart(2, '0');
-            countdownElements.seconds.textContent = String(seconds).padStart(2, '0');
-        }
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<p class='text-red-400 font-bold text-xl'>Offer Expired!</p>";
+                    const ctaButton = document.querySelector('.btn-gradient');
+                    if (ctaButton) {
+                        ctaButton.classList.add('opacity-50', 'cursor-not-allowed');
+                        ctaButton.setAttribute('disabled', 'true');
+                        ctaButton.textContent = 'Offer Expired - Join Standard Waitlist';
+                        ctaButton.style.backgroundImage = 'none';
+                        ctaButton.style.backgroundColor = '#4a5568'; /* Gray background for disabled */
+                    }
+                    return;
+                }
 
-        // Initialize the countdown display
-        updateCountdownDisplay();
-        // You could uncomment the line below for a "flickering" effect, but it's not a real countdown
-        // setInterval(updateCountdownDisplay, 1000); 
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+            }, 1000);
+        });
     </script>
 </body>
 </html>
