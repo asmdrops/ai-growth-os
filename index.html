@@ -1,192 +1,169 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Glass AI Agent Studio - Build AI for Meta's Smart Glasses</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>AvatarAI: Your Digital Twin for Scalable Engagement</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom CSS for background image with overlay and responsiveness */
-        .hero-bg {
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for a premium dark mode feel */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937; /* bg-gray-800 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4B5563; /* bg-gray-600 */
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6B7280; /* bg-gray-500 */
+        }
+        /* Hero background image style */
+        .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            position: relative;
         }
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for readability */
+        /* Custom subtle pulse animation for urgency */
+        @keyframes pulse-subtle {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.02); opacity: 0.95; }
         }
-        /* Countdown styles for ultra-responsiveness */
-        .countdown-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(30, 41, 59, 0.7); /* bg-slate-800 with some transparency */
-            border-radius: 0.5rem; /* rounded-lg */
-            padding: 0.75rem 0.5rem; /* Smaller padding for mobile, larger for desktop */
-            min-width: 4.5rem; /* Ensure minimum width for values */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
-            flex-grow: 1; /* Allow items to grow in small spaces */
-        }
-        @media (min-width: 640px) { /* sm breakpoint */
-            .countdown-item {
-                padding: 1rem 1.25rem;
-                min-width: 6rem;
-            }
-        }
-        .countdown-value {
-            font-size: 1.5rem; /* text-2xl on mobile */
-            font-weight: 700; /* font-bold */
-            color: #ffffff; /* text-white */
-            line-height: 1.2;
-        }
-        @media (min-width: 640px) { /* sm breakpoint */
-            .countdown-value {
-                font-size: 2.25rem; /* sm:text-4xl */
-            }
-        }
-        .countdown-label {
-            font-size: 0.625rem; /* text-xs on mobile */
-            text-transform: uppercase;
-            color: #94a3b8; /* text-slate-400 */
-            line-height: 1.2;
-        }
-        @media (min-width: 640px) { /* sm breakpoint */
-            .countdown-label {
-                font-size: 0.75rem; /* sm:text-sm */
-            }
+        .animate-pulse-subtle {
+            animation: pulse-subtle 3s ease-in-out infinite;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-50 font-sans antialiased leading-normal">
+<body class="bg-gray-950 text-gray-100 antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="absolute top-0 left-0 w-full z-20 py-4">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center max-w-7xl">
+            <a href="#" class="text-3xl font-extrabold text-white tracking-tight">Avatar<span class="text-purple-500">AI</span></a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#features" class="text-gray-300 hover:text-white transition-colors duration-300 text-lg">Features</a>
+                <a href="#waitlist" class="text-gray-300 hover:text-white transition-colors duration-300 text-lg">Join Waitlist</a>
+            </nav>
+            <a href="#waitlist" class="md:hidden bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-semibold py-2 px-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out text-base">Join Now</a>
+        </div>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero-bg relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <div class="hero-overlay"></div>
-        <div class="relative z-10 text-center max-w-7xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 text-white tracking-tight">
-                Empower Your Vision: <br class="hidden sm:inline">AI Agents for Meta Smart Glasses, No Code.
+    <section class="relative h-screen flex items-center justify-center text-center text-white hero-background overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-75"></div> <!-- Dark overlay for text readability -->
+        <div class="relative z-10 p-4 max-w-5xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 drop-shadow-lg">
+                Clone Your Expertise. <br class="hidden sm:inline"> Scale Your Impact.
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
-                Transform how you interact with the world. Build, deploy, and manage custom, privacy-aware AI agents for Meta's smart glasses using our intuitive drag-and-drop studio.
+            <p class="text-lg sm:text-xl md:text-2xl font-medium mb-8 opacity-90 drop-shadow-md max-w-3xl mx-auto">
+                Coaches, experts, and content creators: Build, train, and deploy an AI-powered interactive digital avatar of yourself for truly scalable personalized engagement.
             </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75">
-                    Join the Exclusive Waitlist
+            <div class="space-y-4 sm:space-y-0 sm:space-x-6 flex flex-col sm:flex-row justify-center">
+                <a href="#waitlist" class="bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-bold py-3 px-8 rounded-full shadow-xl text-lg sm:text-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
+                    Join Early Access Waitlist
                 </a>
-                <a href="#features" class="text-indigo-400 hover:text-indigo-300 font-medium py-3 px-8 transition duration-300 ease-in-out">
-                    Discover Features &darr;
+                <a href="#features" class="bg-gray-800 bg-opacity-70 border border-gray-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg text-lg sm:text-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
+                    See How It Works
                 </a>
             </div>
-
-            <!-- Limited Time Countdown -->
-            <div class="mt-8 pt-8 border-t border-gray-700">
-                <p class="text-sm sm:text-base text-gray-400 uppercase tracking-widest mb-6 font-semibold">Limited Early Bird Access Closes In:</p>
-                <div id="countdown" class="flex justify-center items-stretch space-x-3 sm:space-x-4 max-w-lg mx-auto">
-                    <div class="countdown-item">
-                        <span id="days" class="countdown-value">00</span>
-                        <span class="countdown-label">Days</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span id="hours" class="countdown-value">00</span>
-                        <span class="countdown-label">Hours</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span id="minutes" class="countdown-value">00</span>
-                        <span class="countdown-label">Minutes</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span id="seconds" class="countdown-value">00</span>
-                        <span class="countdown-label">Seconds</span>
-                    </div>
-                </div>
-            </div>
-
+            <p class="mt-10 text-sm sm:text-base opacity-80 max-w-2xl mx-auto">
+                <span class="font-semibold text-purple-300">Trending Now:</span> "I created an interactive digital avatar of myself — and you can talk to it." – <span class="font-bold text-white">TechCrunch</span>. Be at the forefront of this revolution.
+            </p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 md:py-28 bg-gray-800">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-6 text-white">
-                Unlock Unprecedented AI Capabilities for Your Smart Glasses
-            </h2>
-            <p class="text-lg sm:text-xl text-gray-300 text-center mb-16 max-w-4xl mx-auto">
-                Our Smart Glass AI Agent Studio is designed to put powerful, intelligent automation directly onto your Meta smart glasses, no technical expertise required.
+    <section id="features" class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 text-white">Transform Your Influence, Multiply Your Reach</h2>
+            <p class="text-lg sm:text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto">
+                AvatarAI revolutionizes how you connect with your audience, providing unparalleled scalability and personalization without sacrificing your time.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12">
 
-                <!-- Feature 1 -->
-                <div class="bg-gray-700 rounded-2xl p-8 shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700 hover:border-indigo-500">
-                    <div class="text-indigo-400 text-5xl mb-6">
-                        ✨
+                <!-- Feature 1: Easy Creation -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-2xl border border-gray-700 hover:border-purple-600 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-6 text-purple-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                        </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Intuitive Drag-and-Drop</h3>
-                    <p class="text-gray-300 text-base leading-relaxed">
-                        Effortlessly design complex AI workflows with our visual builder. No coding, just pure creation for non-technical users.
+                    <h3 class="text-2xl font-bold mb-4 text-white">Effortless AI Twin Creation</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        Simply upload your existing content (videos, audio, texts, PDFs) and our advanced AI learns your unique voice, expertise, and personality to craft your digital avatar.
                     </p>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="bg-gray-700 rounded-2xl p-8 shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700 hover:border-indigo-500">
-                    <div class="text-indigo-400 text-5xl mb-6">
-                        🔒
+                <!-- Feature 2: 24/7 Engagement -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-2xl border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-6 text-indigo-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Privacy-First Architecture</h3>
-                    <p class="text-gray-300 text-base leading-relaxed">
-                        Deploy agents with confidence. Our platform ensures your AI operates with robust data privacy and security protocols by design.
+                    <h3 class="text-2xl font-bold mb-4 text-white">Scalable, Personalized 24/7 Support</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        Your AI avatar can answer questions, provide guidance, and engage with your audience globally, at any time, maintaining your authentic brand voice and delivering consistent value.
                     </p>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="bg-gray-700 rounded-2xl p-8 shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700 hover:border-indigo-500">
-                    <div class="text-indigo-400 text-5xl mb-6">
-                        ⚙️
+                <!-- Feature 3: Channel Integration -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-2xl border border-gray-700 hover:border-pink-600 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-6 text-pink-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Fully Customizable Agents</h3>
-                    <p class="text-gray-300 text-base leading-relaxed">
-                        Tailor AI agents to your exact needs, from enhancing productivity to automating specific tasks directly on your smart glasses.
+                    <h3 class="text-2xl font-bold mb-4 text-white">Seamless Channel Integration</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        Deploy your avatar across your website, social media, email, and popular messaging platforms. Reach your community where they already are without friction.
                     </p>
                 </div>
 
-                <!-- Feature 4 -->
-                <div class="bg-gray-700 rounded-2xl p-8 shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700 hover:border-indigo-500">
-                    <div class="text-indigo-400 text-5xl mb-6">
-                        🧠
+                <!-- Feature 4: Performance Insights -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-2xl border border-gray-700 hover:border-green-600 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-6 text-green-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7 12l3-3 3 3 4-4M18 10h4M14 6h4M12 20h4M4 18h4M6 12h4m-4 6h4" />
+                        </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Contextual Intelligence</h3>
-                    <p class="text-gray-300 text-base leading-relaxed">
-                        Integrate real-time environmental and personal data to make your AI agents incredibly smart and situationally aware.
+                    <h3 class="text-2xl font-bold mb-4 text-white">Actionable Performance Insights</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        Gain deep insights into audience behavior, popular queries, and engagement patterns to continually refine your content strategy and better serve your community.
                     </p>
                 </div>
 
-                <!-- Feature 5 -->
-                <div class="bg-gray-700 rounded-2xl p-8 shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700 hover:border-indigo-500">
-                    <div class="text-indigo-400 text-5xl mb-6">
-                        📊
+                <!-- Feature 5: Content Auto-Sync -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-2xl border border-gray-700 hover:border-orange-600 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-6 text-orange-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004 12c0 2.21.816 4.215 2.164 5.75L4 20h5.356a9.998 9.998 0 0015.002-7.07C24.49 9.38 21.73 6 18 6c-1.657 0-3 1.343-3 3s-1.343 3-3 3" />
+                        </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Advanced Analytics & Control</h3>
-                    <p class="text-gray-300 text-base leading-relaxed">
-                        Gain deep insights into agent performance and manage deployments effortlessly through a powerful, user-friendly dashboard.
+                    <h3 class="text-2xl font-bold mb-4 text-white">Intelligent Content Auto-Sync</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        Keep your avatar perpetually updated. Link your content sources, and your digital twin will automatically ingest new information, staying current with your latest insights.
                     </p>
                 </div>
 
-                <!-- Feature 6 -->
-                <div class="bg-gray-700 rounded-2xl p-8 shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700 hover:border-indigo-500">
-                    <div class="text-indigo-400 text-5xl mb-6">
-                        🚀
+                <!-- Feature 6: Brand Consistency -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-2xl border border-gray-700 hover:border-yellow-600 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-5xl mb-6 text-yellow-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9.75 13.5M9.75 13.5L9.75 10.25M9.75 10.25L13.5 10.25M13.5 10.25L13.5 13.5M13.5 13.5L13.5 17M10.5 21a9.75 9.75 0 100-19.5 9.75 9.75 0 000 19.5zm-3.6-7.75h7.2M12 8.25V5.5" />
+                        </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Scalable & Seamless Deployment</h3>
-                    <p class="text-gray-300 text-base leading-relaxed">
-                        From individual use to enterprise-wide rollouts, our platform supports reliable and scalable deployment for any need.
+                    <h3 class="text-2xl font-bold mb-4 text-white">Unwavering Brand Consistency</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        Ensure every interaction reflects your unique brand values and personality. Your avatar is trained to replicate your specific tone, style, and messaging, every single time.
                     </p>
                 </div>
 
@@ -194,84 +171,115 @@
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-28 bg-gray-900">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-xl">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-6 text-white">
-                Be a Pioneer. Join Our Waitlist.
-            </h2>
-            <p class="text-lg sm:text-xl text-gray-300 text-center mb-12">
-                Secure your spot for early access to the Smart Glass AI Agent Studio. Be among the first to innovate with AI on Meta's smart glasses.
+    <!-- Waitlist Form Section with Urgency -->
+    <section id="waitlist" class="relative py-16 md:py-24 bg-gray-950 overflow-hidden">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6 text-white">Join the Future of Engagement.</h2>
+            <p class="text-xl sm:text-2xl text-gray-300 mb-8">
+                Get exclusive early access to AvatarAI and be among the first to transform your online presence.
             </p>
 
-            <form class="bg-gray-800 p-8 md:p-12 rounded-2xl shadow-2xl space-y-7 border border-gray-700">
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address <span class="text-red-500">*</span></label>
-                    <input type="email" id="email" name="email" required class="block w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 ease-in-out shadow-sm text-base">
-                </div>
-                <div>
-                    <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Your Name (Optional)</label>
-                    <input type="text" id="name" name="name" class="block w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 ease-in-out shadow-sm text-base">
-                </div>
-                <div class="flex items-start">
-                    <div class="flex items-center h-5 mt-1">
-                        <input id="consent" name="consent" type="checkbox" required class="focus:ring-indigo-500 h-5 w-5 text-indigo-600 border-gray-600 rounded bg-gray-700 cursor-pointer">
+            <!-- Limited Time Countdown -->
+            <div class="bg-purple-800 bg-opacity-30 border border-purple-600 p-6 rounded-xl mb-12 shadow-2xl animate-pulse-subtle">
+                <p class="text-xl sm:text-2xl font-bold text-purple-200 mb-4">Limited-Time Early Bird Access Closes In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 text-3xl sm:text-5xl font-extrabold text-white">
+                    <div class="flex flex-col items-center">
+                        <span id="days" class="w-16 sm:w-24 py-2 bg-gray-900 rounded-lg">00</span>
+                        <span class="text-sm text-gray-400 mt-1">Days</span>
                     </div>
-                    <div class="ml-3 text-sm">
-                        <label for="consent" class="font-medium text-gray-300 cursor-pointer">I agree to receive updates, exclusive offers, and platform news from Smart Glass AI Agent Studio. <span class="text-red-500">*</span></label>
+                    <span class="text-purple-400 text-3xl sm:text-5xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours" class="w-16 sm:w-24 py-2 bg-gray-900 rounded-lg">00</span>
+                        <span class="text-sm text-gray-400 mt-1">Hours</span>
+                    </div>
+                    <span class="text-purple-400 text-3xl sm:text-5xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes" class="w-16 sm:w-24 py-2 bg-gray-900 rounded-lg">00</span>
+                        <span class="text-sm text-gray-400 mt-1">Minutes</span>
+                    </div>
+                    <span class="text-purple-400 text-3xl sm:text-5xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds" class="w-16 sm:w-24 py-2 bg-gray-900 rounded-lg">00</span>
+                        <span class="text-sm text-gray-400 mt-1">Seconds</span>
                     </div>
                 </div>
-                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-6 rounded-lg shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75 text-lg">
-                    Join the Waitlist Now!
+            </div>
+
+            <form class="bg-gray-900 p-8 sm:p-10 rounded-2xl shadow-2xl border border-gray-700 space-y-6">
+                <div>
+                    <label for="name" class="block text-left text-gray-300 text-sm font-medium mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-left text-gray-300 text-sm font-medium mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200" required>
+                </div>
+                <div>
+                    <label for="role" class="block text-left text-gray-300 text-sm font-medium mb-2">Your Primary Role</label>
+                    <select id="role" name="role" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 appearance-none">
+                        <option value="" disabled selected>Select your role</option>
+                        <option value="coach">Coach</option>
+                        <option value="expert">Expert/Consultant</option>
+                        <option value="content_creator">Content Creator</option>
+                        <option value="educator">Educator</option>
+                        <option value="speaker">Public Speaker</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800 text-white font-bold py-3 rounded-lg shadow-xl text-lg sm:text-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
+                    Secure My Early Access Spot!
                 </button>
+                <p class="text-sm text-gray-400 mt-4">
+                    Your data is treated with utmost confidentiality. We'll only send you relevant updates and offers from AvatarAI.
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-10 border-t border-gray-700">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
-            <p>&copy; 2023 Smart Glass AI Agent Studio. All rights reserved.</p>
-            <p class="mt-3">A product for the next generation of spatial computing with Meta's Smart Glasses.</p>
-            <div class="mt-4 flex justify-center space-x-4">
-                <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors duration-200">Privacy Policy</a>
-                <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors duration-200">Terms of Service</a>
+    <footer class="bg-gray-950 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl text-center text-gray-400 text-sm">
+            <p>&copy; 2023 AvatarAI. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-white transition-colors duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors duration-300">Terms of Service</a>
             </div>
         </div>
     </footer>
 
-    <!-- Countdown JavaScript -->
+    <!-- JavaScript for Countdown Timer -->
     <script>
-        // Set the date we're counting down to (e.g., 30 days from now for demonstration)
-        // In a real application, replace with a fixed future date, e.g., 'Dec 31, 2023 23:59:59'.
-        const currentDate = new Date();
-        const futureDate = new Date(currentDate.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 days from now
-        let countDownDate = futureDate.getTime();
+        // Set the date we're counting down to: 30 days from now
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 30); // Set to 30 days from today
 
-        // Update the countdown every 1 second
-        let x = setInterval(function() {
-            let now = new Date().getTime();
-            let distance = countDownDate - now;
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate.getTime() - now;
 
-            // Time calculations for days, hours, minutes and seconds
-            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Calculate times for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Output the result in elements, ensuring two digits
-            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+            // Display the result in the corresponding elements
+            if (document.getElementById("days")) {
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+            }
 
-            // If the countdown is over, display a message
+            // If the countdown is finished, write some text
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("countdown").innerHTML = "<p class='text-lg sm:text-xl text-indigo-400 font-semibold'>Early Access Period Has Ended!</p>";
+                if (document.getElementById("countdown")) {
+                    document.getElementById("countdown").innerHTML = "<div class='text-xl sm:text-2xl font-bold text-red-400'>Early Access Period Ended! Join the regular waitlist for future announcements.</div>";
+                    document.querySelector('.animate-pulse-subtle').classList.remove('animate-pulse-subtle'); // Stop animation
+                }
             }
         }, 1000);
     </script>
-
 </body>
 </html>
