@@ -1,213 +1,277 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wearable Health Tracker Benchmark Report - Lab-Tested Performance Data</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Smart Glass AI Agent Studio - Build AI for Meta's Smart Glasses</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom Tailwind Configuration for Premium Dark Mode */
-        :root {
-            --color-primary: #1a202c; /* Darker bg */
-            --color-secondary: #2d3748; /* Slightly lighter bg for cards */
-            --color-accent: #6366f1; /* Purple/Blue accent */
-            --color-text-light: #e2e8f0; /* Light gray text */
-            --color-text-dim: #a0aec0; /* Dimmer gray text */
+        /* Custom CSS for background image with overlay and responsiveness */
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
         }
-
-        body {
-            font-family: 'Inter', sans-serif; /* A modern font */
-            background-color: var(--color-primary);
-            color: var(--color-text-light);
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for readability */
         }
-
-        .btn-gradient {
-            background-image: linear-gradient(to right, #6366f1, #9333ea); /* Blue to Purple */
-            transition: all 0.3s ease-in-out;
+        /* Countdown styles for ultra-responsiveness */
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(30, 41, 59, 0.7); /* bg-slate-800 with some transparency */
+            border-radius: 0.5rem; /* rounded-lg */
+            padding: 0.75rem 0.5rem; /* Smaller padding for mobile, larger for desktop */
+            min-width: 4.5rem; /* Ensure minimum width for values */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+            flex-grow: 1; /* Allow items to grow in small spaces */
         }
-        .btn-gradient:hover {
-            background-image: linear-gradient(to right, #4f46e5, #7e22ce);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        @media (min-width: 640px) { /* sm breakpoint */
+            .countdown-item {
+                padding: 1rem 1.25rem;
+                min-width: 6rem;
+            }
         }
-
-        .input-field {
-            background-color: #2d3748;
-            border-color: #4a5568;
-            color: var(--color-text-light);
+        .countdown-value {
+            font-size: 1.5rem; /* text-2xl on mobile */
+            font-weight: 700; /* font-bold */
+            color: #ffffff; /* text-white */
+            line-height: 1.2;
         }
-        .input-field:focus {
-            border-color: var(--color-accent);
-            outline: none;
-            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
+        @media (min-width: 640px) { /* sm breakpoint */
+            .countdown-value {
+                font-size: 2.25rem; /* sm:text-4xl */
+            }
         }
-
-        .countdown-segment {
-            background-color: rgba(99, 102, 241, 0.2); /* Semi-transparent accent */
-            border: 1px solid rgba(99, 102, 241, 0.5);
+        .countdown-label {
+            font-size: 0.625rem; /* text-xs on mobile */
+            text-transform: uppercase;
+            color: #94a3b8; /* text-slate-400 */
+            line-height: 1.2;
+        }
+        @media (min-width: 640px) { /* sm breakpoint */
+            .countdown-label {
+                font-size: 0.75rem; /* sm:text-sm */
+            }
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-200 antialiased">
+<body class="bg-gray-900 text-gray-50 font-sans antialiased leading-normal">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');"></div>
-        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
-        
-        <div class="relative z-10 px-4 max-w-5xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-tight text-white">
-                Beyond Reviews: Uncover the <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">TRUE Performance</span> of Your Wearable
+    <section class="hero-bg relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div class="hero-overlay"></div>
+        <div class="relative z-10 text-center max-w-7xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 text-white tracking-tight">
+                Empower Your Vision: <br class="hidden sm:inline">AI Agents for Meta Smart Glasses, No Code.
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl mb-10 font-light text-gray-300 max-w-3xl mx-auto">
-                Introducing the world's first premium, lab-tested benchmark report. Get granular, objective data on heart rate accuracy, sleep detection, SpO2 reliability, and more across Apple Watch, Garmin, Whoop, Oura, and leading devices.
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Transform how you interact with the world. Build, deploy, and manage custom, privacy-aware AI agents for Meta's smart glasses using our intuitive drag-and-drop studio.
             </p>
-            
-            <a href="#waitlist" class="btn-gradient inline-flex items-center justify-center py-3 px-8 rounded-full text-lg sm:text-xl font-bold uppercase tracking-wide shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                Secure Early Access & Exclusive Launch Discount
-            </a>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75">
+                    Join the Exclusive Waitlist
+                </a>
+                <a href="#features" class="text-indigo-400 hover:text-indigo-300 font-medium py-3 px-8 transition duration-300 ease-in-out">
+                    Discover Features &darr;
+                </a>
+            </div>
 
-            <div class="mt-10 flex flex-col items-center justify-center">
-                <p class="text-sm sm:text-base font-semibold uppercase tracking-wider text-gray-400 mb-3">Limited Time Offer:</p>
-                <div id="countdown" class="flex space-x-3 sm:space-x-4 text-white">
-                    <div class="countdown-segment p-3 sm:p-4 rounded-lg">
-                        <span class="block text-3xl sm:text-4xl font-extrabold" id="days">00</span>
-                        <span class="block text-xs sm:text-sm uppercase font-medium text-gray-300">Days</span>
+            <!-- Limited Time Countdown -->
+            <div class="mt-8 pt-8 border-t border-gray-700">
+                <p class="text-sm sm:text-base text-gray-400 uppercase tracking-widest mb-6 font-semibold">Limited Early Bird Access Closes In:</p>
+                <div id="countdown" class="flex justify-center items-stretch space-x-3 sm:space-x-4 max-w-lg mx-auto">
+                    <div class="countdown-item">
+                        <span id="days" class="countdown-value">00</span>
+                        <span class="countdown-label">Days</span>
                     </div>
-                    <div class="countdown-segment p-3 sm:p-4 rounded-lg">
-                        <span class="block text-3xl sm:text-4xl font-extrabold" id="hours">00</span>
-                        <span class="block text-xs sm:text-sm uppercase font-medium text-gray-300">Hours</span>
+                    <div class="countdown-item">
+                        <span id="hours" class="countdown-value">00</span>
+                        <span class="countdown-label">Hours</span>
                     </div>
-                    <div class="countdown-segment p-3 sm:p-4 rounded-lg">
-                        <span class="block text-3xl sm:text-4xl font-extrabold" id="minutes">00</span>
-                        <span class="block text-xs sm:text-sm uppercase font-medium text-gray-300">Minutes</span>
+                    <div class="countdown-item">
+                        <span id="minutes" class="countdown-value">00</span>
+                        <span class="countdown-label">Minutes</span>
                     </div>
-                    <div class="countdown-segment p-3 sm:p-4 rounded-lg">
-                        <span class="block text-3xl sm:text-4xl font-extrabold" id="seconds">00</span>
-                        <span class="block text-xs sm:text-sm uppercase font-medium text-gray-300">Seconds</span>
+                    <div class="countdown-item">
+                        <span id="seconds" class="countdown-value">00</span>
+                        <span class="countdown-label">Seconds</span>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-24 bg-gray-900 text-gray-200">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-12 text-white">
-                Why Our Benchmark Report Is Indispensable for Serious Users
+    <section id="features" class="py-16 md:py-28 bg-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-6 text-white">
+                Unlock Unprecedented AI Capabilities for Your Smart Glasses
             </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <p class="text-lg sm:text-xl text-gray-300 text-center mb-16 max-w-4xl mx-auto">
+                Our Smart Glass AI Agent Studio is designed to put powerful, intelligent automation directly onto your Meta smart glasses, no technical expertise required.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10">
+
                 <!-- Feature 1 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-500 transition-all duration-300">
-                    <div class="text-5xl mb-4 text-blue-400">🔬</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Lab-Verified Precision</h3>
-                    <p class="text-gray-400 leading-relaxed">Stop guessing. Our reports are built on rigorous, independent laboratory testing, not subjective user reviews or marketing claims. Get the scientific truth.</p>
+                <div class="bg-gray-700 rounded-2xl p-8 shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700 hover:border-indigo-500">
+                    <div class="text-indigo-400 text-5xl mb-6">
+                        ✨
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Intuitive Drag-and-Drop</h3>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Effortlessly design complex AI workflows with our visual builder. No coding, just pure creation for non-technical users.
+                    </p>
                 </div>
+
                 <!-- Feature 2 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300">
-                    <div class="text-5xl mb-4 text-purple-400">📈</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Granular Data Insights</h3>
-                    <p class="text-gray-400 leading-relaxed">Dive deep into specific health metrics – heart rate accuracy during HIIT vs. steady-state, precise sleep stage mapping, SpO2 reliability in varied conditions.</p>
+                <div class="bg-gray-700 rounded-2xl p-8 shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700 hover:border-indigo-500">
+                    <div class="text-indigo-400 text-5xl mb-6">
+                        🔒
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Privacy-First Architecture</h3>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Deploy agents with confidence. Our platform ensures your AI operates with robust data privacy and security protocols by design.
+                    </p>
                 </div>
+
                 <!-- Feature 3 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-green-500 transition-all duration-300">
-                    <div class="text-5xl mb-4 text-green-400">🏆</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Head-to-Head Comparisons</h3>
-                    <p class="text-gray-400 leading-relaxed">See exactly how Apple Watch stacks up against Garmin, Whoop, Oura, and others on crucial performance indicators that truly matter.</p>
+                <div class="bg-gray-700 rounded-2xl p-8 shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700 hover:border-indigo-500">
+                    <div class="text-indigo-400 text-5xl mb-6">
+                        ⚙️
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Fully Customizable Agents</h3>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Tailor AI agents to your exact needs, from enhancing productivity to automating specific tasks directly on your smart glasses.
+                    </p>
                 </div>
+
                 <!-- Feature 4 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-red-500 transition-all duration-300">
-                    <div class="text-5xl mb-4 text-red-400">💡</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Actionable Intelligence</h3>
-                    <p class="text-gray-400 leading-relaxed">Equip yourself with objective data to optimize your training, monitor your health, and make truly informed purchasing decisions.</p>
+                <div class="bg-gray-700 rounded-2xl p-8 shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700 hover:border-indigo-500">
+                    <div class="text-indigo-400 text-5xl mb-6">
+                        🧠
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Contextual Intelligence</h3>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Integrate real-time environmental and personal data to make your AI agents incredibly smart and situationally aware.
+                    </p>
                 </div>
+
                 <!-- Feature 5 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-yellow-500 transition-all duration-300">
-                    <div class="text-5xl mb-4 text-yellow-400">🔄</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Quarterly Updates</h3>
-                    <p class="text-gray-400 leading-relaxed">Stay ahead with fresh benchmarks every three months, tracking device improvements, new market entrants, and evolving accuracy trends.</p>
+                <div class="bg-gray-700 rounded-2xl p-8 shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700 hover:border-indigo-500">
+                    <div class="text-indigo-400 text-5xl mb-6">
+                        📊
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Advanced Analytics & Control</h3>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Gain deep insights into agent performance and manage deployments effortlessly through a powerful, user-friendly dashboard.
+                    </p>
                 </div>
+
                 <!-- Feature 6 -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-                    <div class="text-5xl mb-4 text-indigo-400">🎯</div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">For Serious Users Only</h3>
-                    <p class="text-gray-400 leading-relaxed">Designed specifically for athletes, fitness enthusiasts, and health-conscious individuals who demand objective truth over marketing hype.</p>
+                <div class="bg-gray-700 rounded-2xl p-8 shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out border border-gray-700 hover:border-indigo-500">
+                    <div class="text-indigo-400 text-5xl mb-6">
+                        🚀
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Scalable & Seamless Deployment</h3>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        From individual use to enterprise-wide rollouts, our platform supports reliable and scalable deployment for any need.
+                    </p>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-24 bg-gray-950 text-gray-200">
-        <div class="container mx-auto px-4 max-w-xl">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-8 text-white">
-                Be the First to Access <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Unbiased Wearable Data</span>
+    <section id="waitlist" class="py-16 md:py-28 bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-6 text-white">
+                Be a Pioneer. Join Our Waitlist.
             </h2>
-            <p class="text-lg text-center mb-10 text-gray-400">
-                Join our exclusive waitlist for the "Wearable Health Tracker Benchmark Report" and get notified the moment subscriptions open. Limited early bird discounts will be available only to waitlist members!
+            <p class="text-lg sm:text-xl text-gray-300 text-center mb-12">
+                Secure your spot for early access to the Smart Glass AI Agent Studio. Be among the first to innovate with AI on Meta's smart glasses.
             </p>
-            <div class="bg-gray-800 p-6 sm:p-10 rounded-xl shadow-2xl border border-gray-700">
-                <form class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe" required
-                               class="input-field w-full p-3 rounded-md text-base focus:ring-opacity-50">
+
+            <form class="bg-gray-800 p-8 md:p-12 rounded-2xl shadow-2xl space-y-7 border border-gray-700">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address <span class="text-red-500">*</span></label>
+                    <input type="email" id="email" name="email" required class="block w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 ease-in-out shadow-sm text-base">
+                </div>
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Your Name (Optional)</label>
+                    <input type="text" id="name" name="name" class="block w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 ease-in-out shadow-sm text-base">
+                </div>
+                <div class="flex items-start">
+                    <div class="flex items-center h-5 mt-1">
+                        <input id="consent" name="consent" type="checkbox" required class="focus:ring-indigo-500 h-5 w-5 text-indigo-600 border-gray-600 rounded bg-gray-700 cursor-pointer">
                     </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="john.doe@example.com" required
-                               class="input-field w-full p-3 rounded-md text-base focus:ring-opacity-50">
+                    <div class="ml-3 text-sm">
+                        <label for="consent" class="font-medium text-gray-300 cursor-pointer">I agree to receive updates, exclusive offers, and platform news from Smart Glass AI Agent Studio. <span class="text-red-500">*</span></label>
                     </div>
-                    <button type="submit" class="btn-gradient w-full py-3 rounded-md text-lg font-bold uppercase tracking-wide shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        Join the Exclusive Waitlist
-                    </button>
-                    <p class="text-xs text-center text-gray-500 mt-4">We respect your privacy. No spam, ever.</p>
-                </form>
-            </div>
+                </div>
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-6 rounded-lg shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75 text-lg">
+                    Join the Waitlist Now!
+                </button>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-gray-500 text-center text-sm">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">Wearable Health Tracker Benchmark Report is a product of our knowledge innovation.</p>
+    <footer class="bg-gray-800 py-10 border-t border-gray-700">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
+            <p>&copy; 2023 Smart Glass AI Agent Studio. All rights reserved.</p>
+            <p class="mt-3">A product for the next generation of spatial computing with Meta's Smart Glasses.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors duration-200">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors duration-200">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
-    <!-- Countdown Timer Script -->
+    <!-- Countdown JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the date we're counting down to (e.g., 7 days from now)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // 7 days from now
-            countDownDate.setHours(countDownDate.getHours() + 12); // plus 12 hours
-            countDownDate.setMinutes(countDownDate.getMinutes() + 30); // plus 30 minutes
-            countDownDate.setSeconds(countDownDate.getSeconds() + 45); // plus 45 seconds
+        // Set the date we're counting down to (e.g., 30 days from now for demonstration)
+        // In a real application, replace with a fixed future date, e.g., 'Dec 31, 2023 23:59:59'.
+        const currentDate = new Date();
+        const futureDate = new Date(currentDate.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 days from now
+        let countDownDate = futureDate.getTime();
 
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
+        // Update the countdown every 1 second
+        let x = setInterval(function() {
+            let now = new Date().getTime();
+            let distance = countDownDate - now;
 
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<p class='text-red-400 text-lg font-bold'>OFFER EXPIRED!</p>";
-                    return;
-                }
+            // Time calculations for days, hours, minutes and seconds
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Output the result in elements, ensuring two digits
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-            }, 1000);
-        });
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "<p class='text-lg sm:text-xl text-indigo-400 font-semibold'>Early Access Period Has Ended!</p>";
+            }
+        }, 1000);
     </script>
+
 </body>
 </html>
