@@ -3,248 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metaverse Catalyst: Hands-First VR Productivity for Meta Glasses</title>
-    <meta name="description" content="Experience the next generation of remote collaboration and 3D design with Metaverse Catalyst. AI-powered gesture recognition and content generation for Meta VR glasses.">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Pencils Down, Code Up: The AI Code Transition Platform</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom dark mode styles and overrides for ultra-responsiveness */
-        body {
-            font-family: 'Inter', sans-serif; /* Modern, clean font */
-        }
-        /* Hero specific styling for background image */
-        .hero-background {
+        /* Custom styles for dark overlay on hero image */
+        .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            /* Ensure the image is always visible and covers the area, even on very wide screens */
+            background-size: cover;
+            position: relative;
         }
-        /* Fluid typography for ultra-responsiveness */
-        h1 {
-            font-size: clamp(2.5rem, 8vw, 5.5rem); /* Min 2.5rem, prefers 8vw, max 5.5rem */
-            line-height: 1.1;
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for readability */
+            z-index: 1;
         }
-        h2 {
-            font-size: clamp(2rem, 6vw, 4rem); /* Min 2rem, prefers 6vw, max 4rem */
-            line-height: 1.2;
-        }
-        h3 {
-            font-size: clamp(1.5rem, 4vw, 2.5rem); /* Min 1.5rem, prefers 4vw, max 2.5rem */
-            line-height: 1.3;
-        }
-        p {
-            font-size: clamp(1rem, 2vw, 1.25rem); /* Min 1rem, prefers 2vw, max 1.25rem */
-            line-height: 1.6;
-        }
-        /* Improve scrollbar aesthetics for dark mode */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #1a202c; /* bg-gray-900 */
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #4a5568; /* bg-gray-600 */
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #6b7280; /* bg-gray-500 */
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-50 antialiased overflow-x-hidden">
+<body class="bg-gray-950 text-white font-sans antialiased">
 
-    <!-- Header (Simple, Minimal) -->
-    <header class="absolute top-0 left-0 right-0 z-20 p-4 sm:p-6">
-        <div class="container mx-auto flex justify-between items-center max-w-7xl">
-            <a href="#" class="text-2xl font-bold text-white hover:text-indigo-400 transition duration-300">Metaverse Catalyst</a>
-            <nav>
-                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Join Waitlist</a>
-            </nav>
+    <!-- Hero Section -->
+    <header class="hero-bg min-h-screen flex items-center justify-center text-center py-20 px-4 sm:px-6 lg:px-8">
+        <div class="hero-overlay"></div>
+        <div class="hero-content max-w-4xl mx-auto">
+            <!-- Headline leveraging the trend -->
+            <p class="text-indigo-400 text-base sm:text-lg font-semibold mb-4 uppercase tracking-wide">
+                As seen on businessinsider.com: "Ruby on Rails Creator Declares 'Pencils Down' on Handwritten Code"
+            </p>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
+                Pencils Down, Productivity Up.<br>
+                The AI Code Transition Platform.
+            </h1>
+            <!-- Sub-headline explaining the platform's core value -->
+            <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                Inspired by the 'pencils down' revolution, we empower engineering teams to intelligently refactor, strategically migrate, and seamlessly validate AI-generated code within existing CI/CD pipelines. For complex, legacy projects, it's time to build smarter.
+            </p>
+
+            <!-- Limited Time Countdown & CTA (Conversion Driver) -->
+            <div class="bg-indigo-700 bg-opacity-30 border border-indigo-600 rounded-lg p-6 mb-12 shadow-xl max-w-md mx-auto">
+                <p class="text-xl sm:text-2xl font-bold text-indigo-200 mb-3">Limited Pioneer Access - Launching Soon!</p>
+                <div class="flex justify-center items-center space-x-4 text-3xl sm:text-4xl font-mono">
+                    <span class="bg-indigo-900 text-white px-4 py-2 rounded-md shadow-inner">07</span>
+                    <span class="text-indigo-200">:</span>
+                    <span class="bg-indigo-900 text-white px-4 py-2 rounded-md shadow-inner">23</span>
+                    <span class="text-indigo-200">:</span>
+                    <span class="bg-indigo-900 text-white px-4 py-2 rounded-md shadow-inner">58</span>
+                    <span class="text-indigo-200">:</span>
+                    <span class="bg-indigo-900 text-white px-4 py-2 rounded-md shadow-inner">42</span>
+                </div>
+                <p class="text-sm text-gray-400 mt-2">Days &nbsp;: Hours &nbsp;: Mins &nbsp;: Secs</p>
+                <p class="text-red-300 mt-4 text-base font-medium">
+                    Limited spots available for early adopters. Don't miss out on transforming your codebase.
+                </p>
+            </div>
+
+            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:-translate-y-1 shadow-lg">
+                Join the Pioneer Waitlist Today!
+            </a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative hero-background min-h-screen flex items-center justify-center text-center p-4 sm:p-6 lg:p-8">
-        <div class="absolute inset-0 bg-black bg-opacity-70 z-10"></div>
-        <div class="relative z-20 max-w-4xl mx-auto py-20">
-            <h1 class="font-extrabold text-white mb-4 drop-shadow-lg leading-tight">
-                Beyond Vision Pro: <span class="text-indigo-400">True Spatial Productivity</span> on Meta VR
-            </h1>
-            <p class="text-xl sm:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto drop-shadow-md">
-                Unleash your hands with Meta's superior VR hardware. <br class="hidden sm:inline">Revolutionize remote collaboration and 3D design using intuitive AI-powered gestures and content generation.
-            </p>
-            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-lg py-4 px-10 rounded-full shadow-xl transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
-                Join the Exclusive Waitlist Today!
-            </a>
-            <p class="text-sm text-gray-400 mt-4">Early access spots are filling up fast.</p>
-        </div>
-    </section>
-
-    <!-- Market Trend / Problem Solving Section -->
-    <section class="py-16 sm:py-24 bg-gray-800 text-center px-4">
-        <div class="container mx-auto max-w-5xl">
-            <h2 class="font-extrabold text-white mb-8">
-                Why Meta VR is the Future of Work 🚀
-            </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-12 leading-relaxed">
-                As <span class="font-semibold text-indigo-400">Bloomberg reports</span>, Meta's VR glasses deliver the immersive, hands-first experience that professionals truly need. We're building for a platform designed for comfort, power, and real-world interaction, not just spectacle.
-                Metaverse Catalyst empowers creators and teams to transcend physical limitations with the hardware that truly gets it.
-            </p>
-            <div class="grid md:grid-cols-2 gap-8 text-left">
-                <div class="bg-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="font-bold text-indigo-300 mb-4">Hands-First Interaction 🖐️</h3>
-                    <p class="text-gray-200">Leverage Meta's advanced hand tracking for natural, intuitive control. Draw, sculpt, and collaborate without controllers – just your bare hands.</p>
-                </div>
-                <div class="bg-gray-700 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="font-bold text-indigo-300 mb-4">Unmatched Comfort & Power 💪</h3>
-                    <p class="text-gray-200">Designed for extended work sessions, Meta glasses offer ergonomic comfort paired with robust processing power to handle complex spatial applications.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Features Section -->
-    <section class="py-16 sm:py-24 bg-gray-900 px-4">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="font-extrabold text-center text-white mb-12">
-                Features Engineered for <span class="text-teal-400">Seamless Productivity</span>
+    <section id="features" class="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-16 leading-tight">
+                Unlock the Future of Code with Intelligent Automation
             </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-4xl mb-4 text-teal-400">✨</div>
-                    <h3 class="font-bold text-white mb-3">AI Gesture Recognition</h3>
-                    <p class="text-gray-300">Intuitive, AI-powered hand tracking converts natural gestures into precise commands, making traditional controllers obsolete.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+
+                <!-- Feature 1: AI-powered Intelligent Code Refactoring -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300">
+                    <div class="text-indigo-500 mb-4 text-5xl">⚙️</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Intelligent Code Refactoring</h3>
+                    <p class="text-gray-300">
+                        Leverage advanced AI to identify, analyze, and automatically refactor complex code patterns, reducing technical debt and improving maintainability with surgical precision.
+                    </p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-4xl mb-4 text-teal-400">🌐</div>
-                    <h3 class="font-bold text-white mb-3">Virtual Collaborative Whiteboard</h3>
-                    <p class="text-gray-300">Brainstorm, sketch, and present in a shared 3D space, interacting with content as naturally as if it were in front of you.</p>
+
+                <!-- Feature 2: Strategic Migration Planning -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300">
+                    <div class="text-indigo-500 mb-4 text-5xl">🗺️</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Strategic Migration Planning</h3>
+                    <p class="text-gray-300">
+                        Plan and execute large-scale code migrations (e.g., Ruby to Rust) with AI-driven insights, dependencies mapping, and phased transition roadmaps to minimize disruption.
+                    </p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-4xl mb-4 text-teal-400">🎨</div>
-                    <h3 class="font-bold text-white mb-3">3D Spatial Design Tools</h3>
-                    <p class="text-gray-300">Sculpt, model, and prototype directly in 3D space with your hands. Ideal for product designers, architects, and artists.</p>
+
+                <!-- Feature 3: Advanced Prompt Engineering -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300">
+                    <div class="text-indigo-500 mb-4 text-5xl">✍️</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Advanced Prompt Engineering</h3>
+                    <p class="text-gray-300">
+                        Access expert templates and guidance for crafting highly effective AI prompts, ensuring optimal code generation results tailored to your project's specific needs.
+                    </p>
                 </div>
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-4xl mb-4 text-teal-400">🧠</div>
-                    <h3 class="font-bold text-white mb-3">AI Content Generation</h3>
-                    <p class="text-gray-300">From a simple sketch to a complex 3D object, our AI assists in generating and refining content based on your spatial inputs.</p>
+
+                <!-- Feature 4: Robust Validation & CI/CD Integration -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300">
+                    <div class="text-indigo-500 mb-4 text-5xl">✅</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Robust Validation & CI/CD</h3>
+                    <p class="text-gray-300">
+                        Integrate seamlessly with your existing CI/CD pipelines. Our platform offers automated validation, testing, and quality checks for all AI-generated code.
+                    </p>
                 </div>
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-4xl mb-4 text-teal-400">🤝</div>
-                    <h3 class="font-bold text-white mb-3">Remote Team Collaboration</h3>
-                    <p class="text-gray-300">Connect with colleagues from anywhere, working together in shared virtual environments that feel as real as being in the same room.</p>
-                </div>
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-4xl mb-4 text-teal-400">🛡️</div>
-                    <h3 class="font-bold text-white mb-3">Secure & Scalable Infrastructure</h3>
-                    <p class="text-gray-300">Built on a robust, enterprise-grade cloud architecture to ensure your data is secure and your workflows are seamless.</p>
-                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-24 bg-gray-800 px-4 text-center">
-        <div class="container mx-auto max-w-3xl">
-            <h2 class="font-extrabold text-white mb-6">
-                Don't Miss Out! <span class="text-indigo-400">Limited Early Access</span> Spots
+    <section id="waitlist" class="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gray-950">
+        <div class="max-w-xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6 leading-tight">
+                Ready to Go "Pencils Down"?
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Be among the first to experience the future of productivity. Join our exclusive waitlist now and secure your spot!
+            <p class="text-lg sm:text-xl text-gray-300 mb-10">
+                Join our exclusive waitlist for early access and be among the first to experience the future of AI-powered code transition. Limited spots for pilot programs are filling fast!
             </p>
 
-            <!-- Countdown Timer -->
-            <div class="bg-gradient-to-r from-indigo-600 to-purple-600 p-6 rounded-xl shadow-2xl mb-12 max-w-md mx-auto transform hover:scale-105 transition-transform duration-300">
-                <p class="text-2xl sm:text-3xl font-extrabold text-white mb-4">Offer Ends In:</p>
-                <div id="countdown" class="grid grid-cols-4 gap-4 text-white font-bold text-4xl sm:text-5xl">
-                    <div class="bg-indigo-700 p-3 rounded-lg shadow-inner">
-                        <span id="days">00</span>
-                        <p class="text-sm sm:text-base font-medium mt-1">Days</p>
-                    </div>
-                    <div class="bg-indigo-700 p-3 rounded-lg shadow-inner">
-                        <span id="hours">00</span>
-                        <p class="text-sm sm:text-base font-medium mt-1">Hours</p>
-                    </div>
-                    <div class="bg-indigo-700 p-3 rounded-lg shadow-inner">
-                        <span id="minutes">00</span>
-                        <p class="text-sm sm:text-base font-medium mt-1">Mins</p>
-                    </div>
-                    <div class="bg-indigo-700 p-3 rounded-lg shadow-inner">
-                        <span id="seconds">00</span>
-                        <p class="text-sm sm:text-base font-medium mt-1">Secs</p>
-                    </div>
+            <form class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700 space-y-6">
+                <div>
+                    <label for="email" class="sr-only">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Your Work Email Address" required
+                           class="w-full px-6 py-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg sm:text-xl transition duration-200">
                 </div>
-            </div>
-
-            <form class="bg-gray-900 p-8 rounded-xl shadow-2xl max-w-lg mx-auto border border-gray-700">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-semibold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-300" required>
-                </div>
-                <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-semibold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-300" required>
-                </div>
-                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-lg py-4 rounded-lg shadow-xl transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
+                <button type="submit"
+                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg text-lg sm:text-xl transition duration-300 ease-in-out transform hover:-translate-y-1 shadow-md">
                     Secure My Early Access Spot!
                 </button>
-                <p class="text-sm text-gray-500 mt-4">We respect your privacy. No spam, ever.</p>
+                <p class="text-sm text-gray-500 mt-4">
+                    We value your privacy. Your information will not be shared.
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 text-center text-gray-400 text-sm px-4">
-        <div class="container mx-auto max-w-7xl">
-            <p>&copy; 2023 Metaverse Catalyst. All rights reserved. | Built for a truly hands-first future.</p>
-            <div class="mt-4 space-x-4">
-                <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
-            </div>
-        </div>
+    <footer class="bg-gray-900 py-10 px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm border-t border-gray-800">
+        <p>&copy; 2024 AI Code Transition Platform. All rights reserved.</p>
+        <p class="mt-2">Built for teams embracing intelligent automation and the 'pencils down' philosophy.</p>
     </footer>
 
-    <!-- Countdown JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 7 days from now for 'Limited Time' urgency)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); 
-            
-            // Update the countdown every 1 second
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
-
-                // If the countdown is over
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<p class='text-xl sm:text-2xl text-white'>Offer Expired! Stay tuned for updates.</p>";
-                    return;
-                }
-
-                // Time calculations for days, hours, minutes and seconds
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                // Display the result with leading zeros
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-            }, 1000);
-        });
-    </script>
 </body>
 </html>
