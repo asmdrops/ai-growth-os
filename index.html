@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prime Day Productivity Deals - Early Access Guide</title>
+    <title>Unlocking Meta Muse & VR: The Productivity & Privacy Playbook for AI Charmers</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,213 +14,285 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-        /* Custom scrollbar for dark mode */
-        body::-webkit-scrollbar {
-            width: 8px;
+        /* Custom animations for a premium feel */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        body::-webkit-scrollbar-track {
-            background: #1a202c; /* bg-gray-900 */
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0; /* Hidden by default */
         }
-        body::-webkit-scrollbar-thumb {
-            background-color: #4a5568; /* gray-600 */
-            border-radius: 20px;
-            border: 2px solid #1a202c;
+        .animate-fade-in-up {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
         }
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
-        }
-        /* Gradient overlay for better text contrast */
-        .hero-overlay {
-            background-image: linear-gradient(to top, rgba(17, 24, 39, 0.9) 0%, rgba(17, 24, 39, 0.6) 40%, rgba(17, 24, 39, 0.3) 70%, rgba(17, 24, 39, 0.1) 100%);
-        }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-600 { animation-delay: 0.6s; }
+        .delay-800 { animation-delay: 0.8s; }
+        .delay-1000 { animation-delay: 1s; }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased leading-relaxed">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative hero-background min-h-screen flex items-center justify-center p-4">
-        <div class="hero-overlay absolute inset-0"></div>
-        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 animate-pulse">
-                Unlock Prime Day Productivity Deals <span class="text-indigo-400">EARLY!</span>
+    <header class="relative bg-cover bg-center h-screen min-h-[600px] flex items-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+        <div class="absolute inset-0 bg-black bg-opacity-75"></div>
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-12">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6 animate-fade-in-up">
+                Unlocking Meta Muse & VR: The Productivity & Privacy Playbook for AI Charmers
             </h1>
-            <p class="text-xl sm:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto">
-                Stop sifting through junk. Get a curated daily guide to the BEST productivity-enhancing tech deals on Prime Day.
-                <span class="block mt-2 font-semibold">Your workflow, supercharged.</span>
+            <p class="text-lg sm:text-xl text-gray-200 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-200">
+                Master Meta's revolutionary devices for peak performance, ironclad privacy, and a truly personalized AI assistant.
+                Transform how you work, interact, and safeguard your digital future with this comprehensive guide.
             </p>
 
-            <!-- Limited Time Offer Countdown -->
-            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg p-6 shadow-xl mb-12 transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                <p class="text-sm font-semibold uppercase tracking-wider text-purple-200 mb-2">LIMITED TIME EARLY ACCESS OFFER!</p>
-                <div class="flex flex-wrap justify-center items-baseline space-x-4">
-                    <div class="text-center">
-                        <span id="countdown-days" class="block text-5xl sm:text-6xl font-bold text-white leading-none">00</span>
-                        <span class="block text-lg text-purple-100 mt-1">Days</span>
+            <!-- Limited-Time Offer Countdown -->
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-700 p-4 sm:p-6 rounded-lg shadow-2xl mb-8 transform hover:scale-105 transition-transform duration-300 ease-in-out animate-fade-in-up delay-400 max-w-xl mx-auto border border-indigo-500">
+                <p class="text-xl sm:text-2xl font-bold text-white mb-3">Exclusive Launch Offer Ends In:</p>
+                <div id="countdown" class="flex justify-center space-x-3 sm:space-x-6 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
+                    <div class="flex flex-col items-center">
+                        <span id="days" class="px-2 py-1 bg-gray-900 rounded-md">00</span>
+                        <span class="text-sm sm:text-base font-medium mt-1">Days</span>
                     </div>
-                    <span class="text-5xl sm:text-6xl font-bold text-white">:</span>
-                    <div class="text-center">
-                        <span id="countdown-hours" class="block text-5xl sm:text-6xl font-bold text-white leading-none">00</span>
-                        <span class="block text-lg text-purple-100 mt-1">Hours</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours" class="px-2 py-1 bg-gray-900 rounded-md">00</span>
+                        <span class="text-sm sm:text-base font-medium mt-1">Hours</span>
                     </div>
-                    <span class="text-5xl sm:text-6xl font-bold text-white">:</span>
-                    <div class="text-center">
-                        <span id="countdown-minutes" class="block text-5xl sm:text-6xl font-bold text-white leading-none">00</span>
-                        <span class="block text-lg text-purple-100 mt-1">Minutes</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes" class="px-2 py-1 bg-gray-900 rounded-md">00</span>
+                        <span class="text-sm sm:text-base font-medium mt-1">Minutes</span>
                     </div>
-                    <span class="text-5xl sm:text-6xl font-bold text-white">:</span>
-                    <div class="text-center">
-                        <span id="countdown-seconds" class="block text-5xl sm:text-6xl font-bold text-white leading-none">00</span>
-                        <span class="block text-lg text-purple-100 mt-1">Seconds</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds" class="px-2 py-1 bg-gray-900 rounded-md">00</span>
+                        <span class="text-sm sm:text-base font-medium mt-1">Seconds</span>
                     </div>
                 </div>
-                <p class="text-sm text-purple-200 mt-4 italic">Join now to secure your spot before prices revert!</p>
-                <!-- Note: The countdown functionality itself would require JavaScript. This is the HTML structure. -->
             </div>
 
-            <a href="#waitlist-form" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-full shadow-lg text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 active:scale-95">
-                Join Early Access Now &rarr;
+            <a href="#waitlist-form" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg animate-fade-in-up delay-600">
+                Join the Exclusive Waitlist Now!
             </a>
         </div>
     </header>
 
-    <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-24 bg-gray-800 text-gray-100">
-        <div class="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-12 text-white">
-                Why Our Early Access Guide is a Game-Changer for <span class="text-purple-400">Productivity</span>
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12">
-                <!-- Feature 1 -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col items-start">
-                    <div class="text-4xl text-purple-400 mb-4">💡</div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Hyper-Curated Deals</h3>
-                    <p class="text-gray-300 text-lg flex-grow">
-                        We filter out the noise. Only the best productivity-enhancing tech deals make it into your inbox. No junk, just gems.
-                    </p>
-                </div>
-
-                <!-- Feature 2 -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col items-start">
-                    <div class="text-4xl text-purple-400 mb-4">🚀</div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Early Bird Access</h3>
-                    <p class="text-gray-300 text-lg flex-grow">
-                        Get notified before deals go live to the general public. Secure limited stock items and exclusive discounts first.
-                    </p>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col items-start">
-                    <div class="text-4xl text-purple-400 mb-4">✅</div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Expert Vetted</h3>
-                    <p class="text-gray-300 text-lg flex-grow">
-                        Every deal is analyzed for its true value and productivity impact, ensuring you invest wisely in tools that truly matter.
-                    </p>
-                </div>
-
-                <!-- Feature 4 -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col items-start">
-                    <div class="text-4xl text-purple-400 mb-4">⏱️</div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Time-Saving</h3>
-                    <p class="text-gray-300 text-lg flex-grow">
-                        No more endless scrolling. We deliver direct links to high-value products, saving you hours of research.
-                    </p>
-                </div>
-
-                <!-- Feature 5 -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col items-start">
-                    <div class="text-4xl text-purple-400 mb-4">💰</div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Maximized Savings</h3>
-                    <p class="text-gray-300 text-lg flex-grow">
-                        Our guide focuses on significant price drops and bundle deals, ensuring you get the most bang for your buck.
-                    </p>
-                </div>
-
-                <!-- Feature 6 -->
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col items-start">
-                    <div class="text-4xl text-purple-400 mb-4">📧</div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Daily Updates</h3>
-                    <p class="text-gray-300 text-lg flex-grow">
-                        During the Prime Day period, receive daily newsletters with new deals, price changes, and stock alerts.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 sm:py-24 bg-gray-900 text-gray-100">
-        <div class="container mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
-            <div class="bg-gray-800 p-8 sm:p-10 lg:p-12 rounded-lg shadow-2xl border border-gray-700 transform hover:scale-[1.01] transition-transform duration-300 ease-in-out">
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-6 text-white">
-                    Don't Miss Out &mdash; Join the Early Access List!
+    <main>
+        <!-- Value Proposition / Problem-Solution Section -->
+        <section class="py-16 sm:py-20 lg:py-24 bg-gray-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6 animate-fade-in">
+                    Navigate the Future, Master Your Digital Realm
                 </h2>
-                <p class="text-lg text-gray-300 text-center mb-8">
-                    Be among the first to receive our exclusive Prime Day Productivity Deals Guide. Limited spots available!
+                <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-12 animate-fade-in delay-200">
+                    The promise of Meta Muse and VR is immense, yet the complexities of these cutting-edge devices can be daunting.
+                    From maximizing your efficiency to protecting your most sensitive data, this playbook offers clear, actionable strategies.
+                    Stop guessing and start leading the way in the new era of AI and immersive tech.
                 </p>
 
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left animate-fade-in delay-400">
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
+                        <h3 class="text-2xl font-bold text-white mb-3 flex items-center">
+                            <span class="text-indigo-400 text-3xl mr-3">🚀</span> Unprecedented Productivity
+                        </h3>
+                        <p class="text-gray-300">
+                            Leverage Meta Muse's AI and VR environments to elevate your focus, streamline tasks, and achieve more in less time.
+                        </p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
+                        <h3 class="text-2xl font-bold text-white mb-3 flex items-center">
+                            <span class="text-indigo-400 text-3xl mr-3">🔒</span> Bulletproof Privacy
+                        </h3>
+                        <p class="text-gray-300">
+                            Gain peace of mind with expert strategies to fortify your privacy settings, ensuring your data remains yours alone.
+                        </p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
+                        <h3 class="text-2xl font-bold text-white mb-3 flex items-center">
+                            <span class="text-indigo-400 text-3xl mr-3">✨</span> Personalized AI Charmer
+                        </h3>
+                        <p class="text-gray-300">
+                            Unleash the full potential of Muse's 'charming' AI by personalizing it to work seamlessly with your unique style and needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-16 sm:py-20 lg:py-24 bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-12 animate-fade-in">
+                    What You'll Master Inside This Comprehensive Playbook
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in delay-200">
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700">
+                        <h3 class="text-xl font-semibold text-white mb-3 flex items-center">
+                            <span class="text-indigo-400 mr-3 text-2xl">⚡</span> Muse Productivity Protocols
+                        </h3>
+                        <ul class="list-none text-gray-300 space-y-2 pl-0">
+                            <li>✅ Advanced AI prompts for rapid task completion.</li>
+                            <li>📊 Data visualization and analysis in VR.</li>
+                            <li>⏰ Time-saving automation workflows with Muse.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700">
+                        <h3 class="text-xl font-semibold text-white mb-3 flex items-center">
+                            <span class="text-indigo-400 mr-3 text-2xl">🛡️</span> Unbreakable Privacy Blueprints
+                        </h3>
+                        <ul class="list-none text-gray-300 space-y-2 pl-0">
+                            <li>🕵️‍♂️ Identifying and neutralizing privacy loopholes.</li>
+                            <li>🚫 Strategies for minimizing data collection by default.</li>
+                            <li>🔄 Secure data transfer and management techniques.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700">
+                        <h3 class="text-xl font-semibold text-white mb-3 flex items-center">
+                            <span class="text-indigo-400 mr-3 text-2xl">💖</span> AI Charmer Customization
+                        </h3>
+                        <ul class="list-none text-gray-300 space-y-2 pl-0">
+                            <li>🎨 Tailoring Muse's personality for optimal interaction.</li>
+                            <li>💬 Crafting custom responses for any scenario.</li>
+                            <li>🧠 Training your AI agent for intuitive support.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700">
+                        <h3 class="text-xl font-semibold text-white mb-3 flex items-center">
+                            <span class="text-indigo-400 mr-3 text-2xl">🌐</span> VR Workspace Optimization
+                        </h3>
+                        <ul class="list-none text-gray-300 space-y-2 pl-0">
+                            <li>🏗️ Designing your ideal virtual productivity environment.</li>
+                            <li>🤝 Seamless collaboration strategies in VR meetings.</li>
+                            <li>🎮 Leveraging VR for immersive training and simulation (with productivity focus).</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700">
+                        <h3 class="text-xl font-semibold text-white mb-3 flex items-center">
+                            <span class="text-indigo-400 mr-3 text-2xl">📈</span> Future-Proofing Your Edge
+                        </h3>
+                        <ul class="list-none text-gray-300 space-y-2 pl-0">
+                            <li>📚 Anticipating and adapting to Meta's next innovations.</li>
+                            <li>💡 Best practices for continuous learning and integration.</li>
+                            <li>🌟 Positioning yourself as a leader in AI/VR adoption.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gradient-to-br from-indigo-600 to-purple-600 p-6 rounded-lg shadow-xl border border-indigo-500 animate-fade-in delay-800">
+                        <h3 class="text-xl font-semibold text-white mb-3 flex items-center">
+                            <span class="text-white mr-3 text-2xl">🎁</span> Your Limited-Time Launch Bonuses!
+                        </h3>
+                        <ul class="list-none text-white space-y-2 pl-0">
+                            <li>📘 Exclusive Bonus Guide: "The Ethical AI Charmer's Handbook".</li>
+                            <li>✉️ Private Discord Community Access for networking and support.</li>
+                            <li>🎙️ Live Expert Q&A Session with the course creator.</li>
+                            <li>🔖 Early-Bird Discount for the first 100 members.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Waitlist Form Section -->
+        <section id="waitlist-form" class="py-16 sm:py-20 lg:py-24 bg-gray-950">
+            <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-gray-800 p-8 rounded-lg shadow-2xl border border-gray-700 animate-fade-in delay-400">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                    Ready to Charm the AI? Join Our Exclusive Waitlist!
+                </h2>
+                <p class="text-lg text-gray-300 mb-8">
+                    Don't miss out on the future of productivity and privacy. Sign up for the VIP waitlist to receive
+                    early access, special launch pricing, and immediate notifications when "Unlocking Meta Muse & VR" is live.
+                    Secure your limited-time bonuses today!
+                </p>
                 <form class="space-y-6">
                     <div>
-                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe"
-                               class="block w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-indigo-500 text-white placeholder-gray-400 shadow-sm transition-colors duration-200" required>
+                        <label for="name" class="sr-only">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Full Name"
+                            class="w-full p-4 rounded-md bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 text-white placeholder-gray-400 transition duration-300"
+                            required>
                     </div>
                     <div>
-                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="you@example.com"
-                               class="block w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-indigo-500 text-white placeholder-gray-400 shadow-sm transition-colors duration-200" required>
+                        <label for="email" class="sr-only">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Best Email Address"
+                            class="w-full p-4 rounded-md bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 text-white placeholder-gray-400 transition duration-300"
+                            required>
                     </div>
                     <button type="submit"
-                            class="w-full flex justify-center py-3 px-6 border border-transparent rounded-md shadow-lg text-lg font-bold text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-75 transition-all duration-300 ease-in-out transform hover:-translate-y-0.5 hover:scale-105 active:scale-98">
-                        Get My Early Access Guide!
+                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-md text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                        Secure My Spot on the Waitlist & Get Bonuses!
                     </button>
                 </form>
-
-                <p class="mt-8 text-center text-sm text-gray-400">
-                    We value your privacy. Your information will only be used to send you the Early Access Prime Day Deals Guide and related updates. You can unsubscribe at any time.
+                <p class="text-sm text-gray-400 mt-6">
+                    We respect your privacy. Your email will only be used for updates regarding this course and exclusive offers.
                 </p>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm">
-        <div class="container mx-auto px-4">
-            &copy; 2023 Digital Education Authority. All rights reserved. | <a href="#" class="hover:text-gray-300 transition-colors duration-200">Privacy Policy</a> | <a href="#" class="hover:text-gray-300 transition-colors duration-200">Terms of Service</a>
+    <footer class="bg-gray-800 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
+            <p>&copy; 2024 Digital Education Authority. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a>
+                <span class="text-gray-600">|</span>
+                <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
-    <!-- Simple JS for the countdown - Placeholder for dynamic functionality (as requested ONLY raw HTML, this is a comment) -->
+    <!-- Countdown Timer Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const countdownDate = new Date();
-            countdownDate.setDate(countdownDate.getDate() + 7); // Set countdown for 7 days from now as an example
+        // Set the launch date to 7 days from the current date for demonstration
+        const launchDate = new Date();
+        launchDate.setDate(launchDate.getDate() + 7); // Adds 7 days
 
-            const updateCountdown = () => {
-                const now = new Date().getTime();
-                const distance = countdownDate - now;
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = launchDate - now;
 
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                document.getElementById('countdown-days').textContent = String(days).padStart(2, '0');
-                document.getElementById('countdown-hours').textContent = String(hours).padStart(2, '0');
-                document.getElementById('countdown-minutes').textContent = String(minutes).padStart(2, '0');
-                document.getElementById('countdown-seconds').textContent = String(seconds).padStart(2, '0');
+            // Display the results in the elements
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
 
-                if (distance < 0) {
-                    clearInterval(countdownInterval);
-                    document.querySelector('.bg-gradient-to-r').innerHTML = '<p class="text-white text-xl font-bold">Offer Expired!</p>';
+            // If the countdown is finished, write some text
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "<span class='text-xl sm:text-2xl lg:text-3xl'>🚀 Course Launched! Get Instant Access!</span>";
+                const ctaButton = document.querySelector('a[href="#waitlist-form"]');
+                if (ctaButton) {
+                    ctaButton.innerText = "Get Instant Access Now!";
+                    ctaButton.href = "#"; // Replace with actual product purchase link
+                    ctaButton.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
+                    ctaButton.classList.add('bg-green-600', 'hover:bg-green-700');
                 }
-            };
+                const waitlistFormHeading = document.querySelector('#waitlist-form h2');
+                if (waitlistFormHeading) {
+                    waitlistFormHeading.innerText = "Get Instant Access to Your Playbook!";
+                }
+                 const waitlistFormP = document.querySelector('#waitlist-form p');
+                if (waitlistFormP) {
+                    waitlistFormP.innerText = "The wait is over! Grab your copy of 'Unlocking Meta Muse & VR' now and start transforming your productivity and privacy today. Your limited-time bonuses await!";
+                }
+                const waitlistFormButton = document.querySelector('#waitlist-form button[type="submit"]');
+                 if (waitlistFormButton) {
+                    waitlistFormButton.innerText = "Get Instant Access to the Playbook!";
+                    waitlistFormButton.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
+                    waitlistFormButton.classList.add('bg-green-600', 'hover:bg-green-700');
+                }
+            }
+        }
 
-            const countdownInterval = setInterval(updateCountdown, 1000);
-            updateCountdown(); // Initial call to display immediately
-        });
+        // Update the countdown every 1 second
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call to display immediately
     </script>
+
 </body>
 </html>
