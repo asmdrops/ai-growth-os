@@ -1,119 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pencils Down, Code Up: The AI Code Transition Platform</title>
+    <title>Meta Hands-First VR Masterclass: Win $1M & Build Next-Gen Experiences</title>
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for dark overlay on hero image */
+        /* Custom styles for dark mode and hero image overlay */
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
         .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-position: center;
             background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Optional: adds a subtle parallax effect */
             position: relative;
         }
         .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for readability */
-            z-index: 1;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
-<body class="bg-gray-950 text-white font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-bg min-h-screen flex items-center justify-center text-center py-20 px-4 sm:px-6 lg:px-8">
+    <section class="hero-bg relative h-screen flex items-center justify-center text-center">
         <div class="hero-overlay"></div>
-        <div class="hero-content max-w-4xl mx-auto">
-            <!-- Headline leveraging the trend -->
-            <p class="text-indigo-400 text-base sm:text-lg font-semibold mb-4 uppercase tracking-wide">
-                As seen on businessinsider.com: "Ruby on Rails Creator Declares 'Pencils Down' on Handwritten Code"
-            </p>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
-                Pencils Down, Productivity Up.<br>
-                The AI Code Transition Platform.
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-5xl">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white drop-shadow-lg">
+                🏆 Unlock Your Share of Meta's <span class="text-purple-400">$1 MILLION</span> VR Fund
             </h1>
-            <!-- Sub-headline explaining the platform's core value -->
-            <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-                Inspired by the 'pencils down' revolution, we empower engineering teams to intelligently refactor, strategically migrate, and seamlessly validate AI-generated code within existing CI/CD pipelines. For complex, legacy projects, it's time to build smarter.
+            <p class="text-xl sm:text-2xl lg:text-3xl text-gray-200 mb-8 max-w-3xl mx-auto">
+                Master Hands-First VR: Win the Competition & Build Next-Gen Experiences
             </p>
 
-            <!-- Limited Time Countdown & CTA (Conversion Driver) -->
-            <div class="bg-indigo-700 bg-opacity-30 border border-indigo-600 rounded-lg p-6 mb-12 shadow-xl max-w-md mx-auto">
-                <p class="text-xl sm:text-2xl font-bold text-indigo-200 mb-3">Limited Pioneer Access - Launching Soon!</p>
-                <div class="flex justify-center items-center space-x-4 text-3xl sm:text-4xl font-mono">
-                    <span class="bg-indigo-900 text-white px-4 py-2 rounded-md shadow-inner">07</span>
-                    <span class="text-indigo-200">:</span>
-                    <span class="bg-indigo-900 text-white px-4 py-2 rounded-md shadow-inner">23</span>
-                    <span class="text-indigo-200">:</span>
-                    <span class="bg-indigo-900 text-white px-4 py-2 rounded-md shadow-inner">58</span>
-                    <span class="text-indigo-200">:</span>
-                    <span class="bg-indigo-900 text-white px-4 py-2 rounded-md shadow-inner">42</span>
+            <!-- Limited Time Countdown -->
+            <div class="bg-purple-700/80 p-6 rounded-lg shadow-xl mb-10 w-full max-w-2xl mx-auto border-4 border-purple-500">
+                <p class="text-lg sm:text-xl font-semibold text-purple-200 mb-3">
+                    Limited Spots Available! The <span class="font-bold text-white">Entry Phase Ends In:</span>
+                </p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-white font-mono text-3xl sm:text-4xl lg:text-5xl">
+                    <div><span id="days" class="block">00</span> <span class="text-sm font-light">Days</span></div>
+                    <div><span id="hours" class="block">00</span> <span class="text-sm font-light">Hours</span></div>
+                    <div><span id="minutes" class="block">00</span> <span class="text-sm font-light">Minutes</span></div>
+                    <div><span id="seconds" class="block">00</span> <span class="text-sm font-light">Seconds</span></div>
                 </div>
-                <p class="text-sm text-gray-400 mt-2">Days &nbsp;: Hours &nbsp;: Mins &nbsp;: Secs</p>
-                <p class="text-red-300 mt-4 text-base font-medium">
-                    Limited spots available for early adopters. Don't miss out on transforming your codebase.
+                <p class="mt-4 text-purple-200 text-sm italic">
+                    (Offer aligned with Meta's competition phases - don't miss out!)
                 </p>
             </div>
 
-            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:-translate-y-1 shadow-lg">
-                Join the Pioneer Waitlist Today!
+            <a href="#enroll" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                🚀 Secure Your Masterclass Spot Now!
             </a>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gray-900">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-16 leading-tight">
-                Unlock the Future of Code with Intelligent Automation
+    <section class="py-16 sm:py-20 lg:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 text-white">
+                What You'll Get: Your Winning Edge
             </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
-
-                <!-- Feature 1: AI-powered Intelligent Code Refactoring -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300">
-                    <div class="text-indigo-500 mb-4 text-5xl">⚙️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Intelligent Code Refactoring</h3>
+                <!-- Feature 1: Comprehensive Video Tutorials -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300">
+                    <div class="text-4xl mb-4">📺</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Comprehensive Video Tutorials</h3>
                     <p class="text-gray-300">
-                        Leverage advanced AI to identify, analyze, and automatically refactor complex code patterns, reducing technical debt and improving maintainability with surgical precision.
+                        Dive deep with step-by-step video lessons covering Unity & Unreal Engine. Master the fundamentals and advanced techniques of 'Hands-First' VR development.
                     </p>
                 </div>
 
-                <!-- Feature 2: Strategic Migration Planning -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300">
-                    <div class="text-indigo-500 mb-4 text-5xl">🗺️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Strategic Migration Planning</h3>
+                <!-- Feature 2: Reusable Code Templates & Assets -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300">
+                    <div class="text-4xl mb-4">💾</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Reusable Code Templates & Assets</h3>
                     <p class="text-gray-300">
-                        Plan and execute large-scale code migrations (e.g., Ruby to Rust) with AI-driven insights, dependencies mapping, and phased transition roadmaps to minimize disruption.
+                        Accelerate your development with battle-tested code templates for Unity and Unreal. Focus on innovation, not boilerplate, with a ready-to-use developer toolkit.
                     </p>
                 </div>
 
-                <!-- Feature 3: Advanced Prompt Engineering -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300">
-                    <div class="text-indigo-500 mb-4 text-5xl">✍️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Advanced Prompt Engineering</h3>
+                <!-- Feature 3: Hand Tracking UX Best Practices -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300">
+                    <div class="text-4xl mb-4">✋</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Hand Tracking UX Best Practices</h3>
                     <p class="text-gray-300">
-                        Access expert templates and guidance for crafting highly effective AI prompts, ensuring optimal code generation results tailored to your project's specific needs.
+                        Craft intuitive and immersive experiences. Learn the secrets to designing compelling hand-tracking interfaces that delight users and stand out in the competition.
                     </p>
                 </div>
 
-                <!-- Feature 4: Robust Validation & CI/CD Integration -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300">
-                    <div class="text-indigo-500 mb-4 text-5xl">✅</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Robust Validation & CI/CD</h3>
+                <!-- Feature 4: Expert Strategy for Pitching to Meta -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Expert Strategy for Pitching to Meta</h3>
                     <p class="text-gray-300">
-                        Integrate seamlessly with your existing CI/CD pipelines. Our platform offers automated validation, testing, and quality checks for all AI-generated code.
+                        Gain insider knowledge on what Meta looks for in winning applications. Our expert guidance will help you refine your pitch and maximize your chances for the $1M prize.
+                    </p>
+                </div>
+
+                <!-- Feature 5: Win the $1 Million Competition -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300">
+                    <div class="text-4xl mb-4">💰</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Win the $1 Million Competition</h3>
+                    <p class="text-gray-300">
+                        This masterclass is specifically designed to equip you with the skills and strategies needed to successfully compete and win Meta's prestigious $1M competition.
+                    </p>
+                </div>
+
+                <!-- Feature 6: Build Next-Gen VR Experiences -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300">
+                    <div class="text-4xl mb-4">✨</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Build Next-Gen VR Experiences</h3>
+                    <p class="text-gray-300">
+                        Beyond the competition, learn to innovate and build groundbreaking VR applications that define the future of immersive computing, with or without controllers.
                     </p>
                 </div>
 
@@ -121,38 +129,96 @@
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gray-950">
-        <div class="max-w-xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6 leading-tight">
-                Ready to Go "Pencils Down"?
+    <!-- Call to Action / Waitlist Form Section -->
+    <section id="enroll" class="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-900 to-purple-900 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6">
+                Ready to Shape the Future of VR?
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10">
-                Join our exclusive waitlist for early access and be among the first to experience the future of AI-powered code transition. Limited spots for pilot programs are filling fast!
+            <p class="text-xl sm:text-2xl text-gray-200 mb-10 max-w-2xl mx-auto">
+                Don't miss this limited-time opportunity to gain a competitive edge in Meta's $1 Million competition. Secure your spot in the 'Meta Hands-First VR' Masterclass & Toolkit bundle today.
             </p>
 
-            <form class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700 space-y-6">
-                <div>
-                    <label for="email" class="sr-only">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Your Work Email Address" required
-                           class="w-full px-6 py-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg sm:text-xl transition duration-200">
-                </div>
-                <button type="submit"
-                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg text-lg sm:text-xl transition duration-300 ease-in-out transform hover:-translate-y-1 shadow-md">
-                    Secure My Early Access Spot!
-                </button>
-                <p class="text-sm text-gray-500 mt-4">
-                    We value your privacy. Your information will not be shared.
-                </p>
-            </form>
+            <div class="bg-gray-800 p-8 sm:p-10 rounded-xl shadow-2xl border-2 border-purple-600">
+                <h3 class="text-2xl sm:text-3xl font-bold mb-6 text-purple-400">Join the Exclusive Waitlist / Enroll Now</h3>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="sr-only">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" required
+                               class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:ring-purple-500 focus:border-purple-500 text-white placeholder-gray-400 text-lg">
+                    </div>
+                    <div>
+                        <label for="email" class="sr-only">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
+                               class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:ring-purple-500 focus:border-purple-500 text-white placeholder-gray-400 text-lg">
+                    </div>
+                    <div>
+                        <label for="interest" class="sr-only">Why are you interested?</label>
+                        <textarea id="interest" name="interest" rows="4" placeholder="Tell us why you're excited about Hands-First VR and the $1M competition (Optional)"
+                                  class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:ring-purple-500 focus:border-purple-500 text-white placeholder-gray-400 text-lg"></textarea>
+                    </div>
+                    <button type="submit"
+                            class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                        Enroll & Get Instant Access!
+                    </button>
+                    <p class="mt-4 text-sm text-gray-400">
+                        Your data is safe with us. We hate spam too.
+                    </p>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm border-t border-gray-800">
-        <p>&copy; 2024 AI Code Transition Platform. All rights reserved.</p>
-        <p class="mt-2">Built for teams embracing intelligent automation and the 'pencils down' philosophy.</p>
+    <footer class="py-8 bg-gray-950 text-gray-500 text-center text-sm">
+        <div class="container mx-auto px-4">
+            &copy; 2023 Meta Hands-First VR Masterclass. All rights reserved. | Powered by Next-Gen Knowledge.
+        </div>
     </footer>
 
+    <!-- Countdown JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the date we're counting down to.
+            // For a real competition, this should be the actual competition phase end date.
+            // Example: December 31, 2023, 23:59:59 PST
+            // const countDownDate = new Date("Dec 31, 2023 23:59:59").getTime();
+            
+            // For demonstration, setting it to 7 days from now.
+            const now = new Date();
+            const countDownDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)).getTime(); 
+
+            // Update the countdown every 1 second
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the elements
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+                // If the countdown is finished, write some text and disable the button
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<span class='text-red-400 text-2xl sm:text-3xl lg:text-4xl font-bold'>OFFER EXPIRED!</span>";
+                    const enrollButton = document.querySelector('#enroll button[type="submit"]');
+                    if (enrollButton) {
+                        enrollButton.textContent = "Notify Me When Available Again";
+                        enrollButton.classList.remove('bg-purple-600', 'hover:bg-purple-700', 'hover:scale-105');
+                        enrollButton.classList.add('bg-gray-500', 'cursor-not-allowed', 'opacity-70');
+                        enrollButton.disabled = true;
+                    }
+                }
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
