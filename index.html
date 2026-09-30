@@ -1,341 +1,197 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electron Genie | Reclaim Your RAM, Boost Windows 11 Performance</title>
-    <meta name="description" content="Tame Electron-based apps like Discord, Slack, VS Code & Spotify on Windows 11. Electron Genie offers real-time monitoring, intelligent optimization, smart sleep mode, and CPU throttling to reclaim your RAM and boost productivity.">
+    <title>The Active VR Gamer's Handbook - Optimize Your Setup for Peak Performance & Comfort</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom scrollbar for dark mode */
-        body::-webkit-scrollbar {
-            width: 8px;
-        }
-        body::-webkit-scrollbar-track {
-            background: #1a202c; /* Tailwind bg-gray-900 */
-        }
-        body::-webkit-scrollbar-thumb {
-            background-color: #4a5568; /* Tailwind bg-gray-600 */
-            border-radius: 4px;
-            border: 2px solid #1a202c;
-        }
-        body::-webkit-scrollbar-thumb:hover {
-            background-color: #6c7a97; /* A slightly lighter gray on hover */
-        }
-
-        /* Hero Background with Dark Overlay for Text Readability */
+        /* Custom CSS for the hero image background and overlay to ensure text readability */
         .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            position: relative;
-            /* Ensure the hero section is at least viewport height, but can grow */
-            min-height: 100vh;
         }
-        .hero-background::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.75); /* Stronger dark overlay */
-            z-index: 1;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Countdown styles */
-        .countdown-container {
-            display: flex;
-            gap: 0.75rem; /* Reduced gap for smaller screens */
-            justify-content: center;
-            margin-top: 1.5rem;
-            flex-wrap: wrap; /* Allow items to wrap on small screens */
-        }
-        .countdown-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 0.5rem 0.75rem; /* Adjusted padding */
-            background-color: rgba(0, 0, 0, 0.4); /* Slightly transparent for depth */
-            border-radius: 0.5rem;
-            min-width: 3.5rem; /* Minimum width for items */
-            flex-grow: 1; /* Allow items to grow */
-            max-width: 5rem; /* Max width to keep them from becoming too wide */
-        }
-        @media (min-width: 640px) { /* sm breakpoint */
-            .countdown-container {
-                gap: 1.5rem; /* Larger gap on larger screens */
-            }
-            .countdown-item {
-                min-width: 5rem;
-                max-width: none;
-            }
-        }
-        .countdown-value {
-            font-size: 2rem; /* text-3xl */
-            font-weight: 700; /* font-bold */
-            line-height: 1;
-            color: #fff; /* Ensure high contrast */
-        }
-        .countdown-label {
-            font-size: 0.7rem; /* text-xs equivalent */
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #a0aec0; /* Tailwind gray-400 */
-            margin-top: 0.25rem;
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for strong contrast and premium dark mode */
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased overflow-x-hidden">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <section class="hero-background flex items-center justify-center text-center py-20 px-4">
-        <div class="hero-content container mx-auto max-w-7xl">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-                Electron Genie: Reclaim Your RAM, Boost Windows 11.
+    <header class="relative hero-background min-h-screen flex items-center justify-center text-center py-16 px-4">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg">
+                The Active VR Gamer's Handbook
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl font-light text-gray-200 mb-10 max-w-4xl mx-auto">
-                Stop Electron apps from hogging your resources. Electron Genie intelligently optimizes Discord, Slack, VS Code, Spotify & more in real-time.
+            <p class="text-xl sm:text-2xl text-indigo-300 font-semibold mb-8">
+                Optimize Your Setup for Peak Performance & Comfort
             </p>
-
-            <!-- Limited Time Countdown & CTA -->
-            <div class="mb-12">
-                <p class="text-xl sm:text-2xl font-semibold text-yellow-400 mb-4 animate-pulse">
-                    Limited Beta Access & Launch Discounts Ending Soon!
-                </p>
-                <div class="countdown-container" id="countdown">
-                    <!-- Countdown items will be populated by JS -->
-                </div>
-                <button onclick="document.getElementById('waitlist-form-section').scrollIntoView({ behavior: 'smooth' });"
-                    class="mt-10 px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white text-xl font-bold rounded-full shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
-                    Join Early Access & Save Your RAM
-                </button>
-                <p class="text-sm mt-4 text-gray-400">Secure your spot before the beta fills up.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem/Trend Section -->
-    <section class="py-16 md:py-24 bg-gray-900 px-4">
-        <div class="container mx-auto max-w-6xl text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-white">
-                The Pain Point: Electron Apps are RAM Vampires on Windows 11.
-            </h2>
-            <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-                According to <span class="text-blue-400 font-medium">Windows Latest</span>, "Electron is one of Windows 11's biggest RAM offenders, and Discord's Game Mode doesn't fix it." Your favorite productivity apps shouldn't slow you down.
+            <p class="text-md sm:text-lg text-gray-300 mb-10 max-w-2xl mx-auto drop-shadow-md">
+                Meta's upcoming VR glasses strap accessory signals a massive shift towards active VR.
+                Don't get left behind – master your VR fitness journey, prevent injuries, and elevate your comfort
+                with our premium guides and exclusive insights, leveraging the latest market trends.
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                <div class="p-6 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <svg class="h-16 w-16 text-red-500 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <h3 class="text-xl font-semibold text-white mb-3">Silent Resource Drain</h3>
-                    <p class="text-gray-400">Inactive Electron apps silently consume gigabytes of RAM and CPU cycles, even when minimized.</p>
-                </div>
-                <div class="p-6 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <svg class="h-16 w-16 text-yellow-500 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1.25-3M15 10V6a3 3 0 10-6 0v4a3 3 0 106 0zm-6 0h6l-6 6h6l-2 2H9l-2-2m5-7a2 2 0 11-4 0h4z" />
-                    </svg>
-                    <h3 class="text-xl font-semibold text-white mb-3">System Lag & Freezes</h3>
-                    <p class="text-gray-400">Overall system performance degrades, leading to frustrating lag, slow boot times, and even crashes.</p>
-                </div>
-                <div class="p-6 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <svg class="h-16 w-16 text-blue-500 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                    <h3 class="text-xl font-semibold text-white mb-3">Lost Productivity</h3>
-                    <p class="text-gray-400">Constant resource warnings and sluggish apps disrupt your focus and productivity.</p>
-                </div>
-            </div>
+            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75">
+                Join the Exclusive Waitlist Now!
+            </a>
+            <p class="text-sm text-gray-400 mt-4">Limited Spots Available for Early Access & Bonuses</p>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-800 px-4">
-        <div class="container mx-auto max-w-7xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16 text-white">
-                How Electron Genie Delivers Peak Performance
+    <section id="features" class="py-16 sm:py-20 bg-gray-900 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-12">
+                What You'll Master in This Essential Bundle
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <!-- Feature 1: Real-time Monitoring -->
-                <div class="flex flex-col items-center text-center p-6 bg-gray-900 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-                    <div class="p-4 rounded-full bg-indigo-500 text-white mb-6">
-                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1.25-3M15 10V6a3 3 0 10-6 0v4a3 3 0 106 0zm-6 0h6l-6 6h6l-2 2H9l-2-2m5-7a2 2 0 11-4 0h4z" />
-                        </svg>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Feature 1: VR Strap Optimization -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">⚙️</span>
+                        <h3 class="text-2xl font-semibold text-white">Advanced VR Strap Optimization</h3>
                     </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Real-time Resource Monitoring</h3>
-                    <p class="text-gray-400 text-lg">Gain crystal-clear insights into which Electron apps are consuming your precious RAM and CPU, live.</p>
+                    <p class="text-gray-300">
+                        Unlock peak comfort and stability. Learn how to choose, modify, and fine-tune VR straps
+                        — including insights on upcoming Meta accessories and market trends — for long, intense gaming sessions without discomfort.
+                    </p>
                 </div>
-                <!-- Feature 2: Smart Sleep Mode -->
-                <div class="flex flex-col items-center text-center p-6 bg-gray-900 rounded-lg shadow-xl border border-gray-700 hover:border-green-500 transition-all duration-300">
-                    <div class="p-4 rounded-full bg-green-500 text-white mb-6">
-                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3m0 0l3 3m-3-3v8m0-9a9 9 0 110 18 9 9 0 010-18z" />
-                        </svg>
+
+                <!-- Feature 2: Maximize In-Game Fitness -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">💪</span>
+                        <h3 class="text-2xl font-semibold text-white">Maximize In-Game Fitness</h3>
                     </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Intelligent 'App Sleeping'</h3>
-                    <p class="text-gray-400 text-lg">Automatically puts inactive Electron apps into a low-power "sleep" state, freeing up RAM without closing them.</p>
+                    <p class="text-gray-300">
+                        Transform your gaming into a powerful workout. Discover strategies for cardio, strength, and agility
+                        training within your favorite VR titles, making every swing count for true performance.
+                    </p>
                 </div>
-                <!-- Feature 3: Memory Compression -->
-                <div class="flex flex-col items-center text-center p-6 bg-gray-900 rounded-lg shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300">
-                    <div class="p-4 rounded-full bg-purple-500 text-white mb-6">
-                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                        </svg>
+
+                <!-- Feature 3: Injury Prevention & Ergonomics -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">🛡️</span>
+                        <h3 class="text-2xl font-semibold text-white">Injury Prevention & Ergonomics</h3>
                     </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Smart Memory Compression</h3>
-                    <p class="text-gray-400 text-lg">Significantly reduce the memory footprint of running Electron apps, keeping your system lean and responsive.</p>
+                    <p class="text-gray-300">
+                        Protect your body while pushing limits. Essential guides on proper form, warm-ups, cool-downs,
+                        and ergonomic setups to keep you active and injury-free for years to come in VR.
+                    </p>
                 </div>
-                <!-- Feature 4: CPU Throttling -->
-                <div class="flex flex-col items-center text-center p-6 bg-gray-900 rounded-lg shadow-xl border border-gray-700 hover:border-red-500 transition-all duration-300">
-                    <div class="p-4 rounded-full bg-red-500 text-white mb-6">
-                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
+
+                <!-- Feature 4: Exclusive Future-Proof Reviews -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">🚀</span>
+                        <h3 class="text-2xl font-semibold text-white">Exclusive Future-Proof Reviews</h3>
                     </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Dynamic CPU Throttling</h3>
-                    <p class="text-gray-400 text-lg">Prevent background Electron processes from monopolizing your CPU, ensuring peak performance for active tasks.</p>
+                    <p class="text-gray-300">
+                        Stay ahead of the curve with insider access to reviews of upcoming active VR titles,
+                        cutting-edge accessories, and essential gear before anyone else, driven by current market trends.
+                    </p>
                 </div>
-                <!-- Feature 5: Customizable Limits -->
-                <div class="flex flex-col items-center text-center p-6 bg-gray-900 rounded-lg shadow-xl border border-gray-700 hover:border-teal-500 transition-all duration-300">
-                    <div class="p-4 rounded-full bg-teal-500 text-white mb-6">
-                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
+
+                <!-- Feature 5: Market Trend Insights for Setup -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">📈</span>
+                        <h3 class="text-2xl font-semibold text-white">Market Trend Setup Insights</h3>
                     </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Granular Control Dashboard</h3>
-                    <p class="text-gray-400 text-lg">Fine-tune resource limits and optimization strategies for individual apps via an intuitive, user-friendly dashboard.</p>
+                    <p class="text-gray-300">
+                        Leverage the latest VR hardware and software market trends to your advantage. Our analysis helps you
+                        make informed decisions, ensuring your setup is always optimized for peak performance and longevity.
+                    </p>
                 </div>
-                <!-- Feature 6: Seamless Workflow -->
-                <div class="flex flex-col items-center text-center p-6 bg-gray-900 rounded-lg shadow-xl border border-gray-700 hover:border-yellow-500 transition-all duration-300">
-                    <div class="p-4 rounded-full bg-yellow-500 text-white mb-6">
-                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002.92 12c0 3.072 1.05 5.947 2.825 8.219a12.004 12.004 0 0014.24 0c1.775-2.272 2.825-5.147 2.825-8.219 0-3.064-1.049-5.939-2.825-8.219z" />
-                        </svg>
+
+                <!-- Feature 6: Premium Community Access -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">🌟</span>
+                        <h3 class="text-2xl font-semibold text-white">Premium Community Access</h3>
                     </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Seamless & Boosted Workflow</h3>
-                    <p class="text-gray-400 text-lg">Enjoy a consistently fast, responsive Windows 11 experience without constantly battling resource hogs.</p>
+                    <p class="text-gray-300">
+                        Connect with a dedicated community of active VR gamers and fitness enthusiasts. Share tips, challenges, and celebrate
+                        victories in an exclusive, supportive environment.
+                    </p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Call to Action / Waitlist Form Section -->
-    <section id="waitlist-form-section" class="py-16 md:py-24 bg-gray-900 px-4">
-        <div class="container mx-auto max-w-2xl text-center p-8 bg-gray-800 rounded-lg shadow-2xl border border-gray-700">
+    <!-- Waitlist / CTA Section -->
+    <section id="waitlist" class="py-16 sm:py-20 bg-gray-800 px-4">
+        <div class="max-w-3xl mx-auto text-center">
             <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Join the Exclusive Electron Genie Beta!
+                Don't Miss Out! Join the Waitlist for Exclusive Access
             </h2>
-            <p class="text-lg text-gray-300 mb-8">
-                Be among the first to experience true Electron app optimization. Sign up now for early access and special launch pricing.
+            <p class="text-lg text-indigo-300 mb-8">
+                Be among the first to experience 'The Active VR Gamer's Handbook' and receive special early-bird bonuses!
             </p>
-            <p class="text-xl font-semibold text-yellow-400 mb-6 animate-pulse">
-                Don't Miss Out! Final Beta Slots are Filling Fast.
-            </p>
-            <form action="#" method="POST" class="space-y-6">
+
+            <!-- Limited Time Countdown (Static for HTML, dynamic with JS usually) -->
+            <div class="bg-indigo-700 text-white p-6 rounded-lg shadow-xl mb-8 border-2 border-indigo-500">
+                <p class="text-2xl font-bold mb-2">🔥 Limited Time Offer! 🔥</p>
+                <p class="text-xl mb-4">Early bird discount & bonus content expires in:</p>
+                <div class="flex justify-center space-x-4 text-3xl sm:text-4xl font-extrabold">
+                    <div class="flex flex-col items-center">
+                        <span class="bg-gray-900 text-indigo-300 py-2 px-4 rounded-md min-w-[70px] sm:min-w-[80px]">07</span>
+                        <span class="text-sm mt-1">Days</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="bg-gray-900 text-indigo-300 py-2 px-4 rounded-md min-w-[70px] sm:min-w-[80px]">23</span>
+                        <span class="text-sm mt-1">Hours</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="bg-gray-900 text-indigo-300 py-2 px-4 rounded-md min-w-[70px] sm:min-w-[80px]">59</span>
+                        <span class="text-sm mt-1">Mins</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="bg-gray-900 text-indigo-300 py-2 px-4 rounded-md min-w-[70px] sm:min-w-[80px]">59</span>
+                        <span class="text-sm mt-1">Secs</span>
+                    </div>
+                </div>
+                <p class="text-sm text-indigo-200 mt-4">
+                    (Note: Dynamic countdown functionality typically requires JavaScript to update in real-time.)
+                </p>
+            </div>
+
+
+            <form class="bg-gray-900 p-8 rounded-xl shadow-2xl space-y-6 border border-gray-700">
                 <div>
-                    <label for="name" class="sr-only">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Full Name" required
-                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200">
+                    <label for="name" class="sr-only">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Full Name"
+                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-400 text-lg transition duration-200" required>
                 </div>
                 <div>
                     <label for="email" class="sr-only">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
-                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200">
+                    <input type="email" id="email" name="email" placeholder="Your Best Email Address"
+                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-gray-400 text-lg transition duration-200" required>
                 </div>
-                <button type="submit"
-                        class="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-xl font-bold rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
-                    Get Early Access Now!
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-lg shadow-md transform hover:scale-105 transition duration-300 ease-in-out text-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75">
+                    Secure My Spot Now!
                 </button>
+                <p class="text-sm text-gray-400 mt-4">
+                    We respect your privacy. Your email will only be used for updates regarding 'The Active VR Gamer's Handbook'.
+                </p>
             </form>
-            <p class="text-sm text-gray-400 mt-6">
-                We value your privacy. Your data is safe with us. <a href="#" class="text-blue-400 hover:underline">Read our Privacy Policy</a>.
-            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-10 px-4 text-center text-gray-400">
-        <div class="container mx-auto max-w-6xl">
-            <p>&copy; <span id="currentYear"></span> Electron Genie. All rights reserved.</p>
-            <div class="mt-4 flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6">
-                <a href="#" class="text-gray-400 hover:text-white transition duration-200">Terms of Service</a>
-                <span class="hidden sm:inline text-gray-600">|</span>
-                <a href="#" class="text-gray-400 hover:text-white transition duration-200">Contact Support</a>
-            </div>
+    <footer class="bg-gray-900 py-8 px-4 text-center text-gray-500 text-sm border-t border-gray-700">
+        <div class="max-w-6xl mx-auto">
+            <p>&copy; 2023 The Active VR Gamer's Handbook. All rights reserved.</p>
+            <p class="mt-2">Disclaimer: This product is designed to enhance your VR gaming experience and fitness. Consult a physician before starting any new fitness regimen.</p>
         </div>
     </footer>
-
-    <script>
-        // JavaScript for the countdown timer
-        function setupCountdown() {
-            // Set the date we're counting down to: 7 days from when the script runs
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days in the future
-
-            const countdownElement = document.getElementById('countdown');
-
-            // Update the count down every 1 second
-            const x = setInterval(function() {
-                // Get today's date and time
-                const now = new Date().getTime();
-
-                // Find the distance between now and the count down date
-                const distance = countDownDate - now;
-
-                // Time calculations for days, hours, minutes and seconds
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                // Format numbers to always have two digits
-                const formatTime = (num) => num < 10 ? '0' + num : num;
-
-                // Output the result in elements
-                countdownElement.innerHTML = `
-                    <div class="countdown-item">
-                        <span class="countdown-value">${formatTime(days)}</span>
-                        <span class="countdown-label">Days</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-value">${formatTime(hours)}</span>
-                        <span class="countdown-label">Hours</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-value">${formatTime(minutes)}</span>
-                        <span class="countdown-label">Mins</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-value">${formatTime(seconds)}</span>
-                        <span class="countdown-label">Secs</span>
-                    </div>
-                `;
-
-                // If the count down is finished, display a message
-                if (distance < 0) {
-                    clearInterval(x);
-                    countdownElement.innerHTML = `<p class="text-red-500 text-xl font-bold">This limited offer has expired!</p>`;
-                    // Optionally disable the CTA button
-                    document.querySelector('.hero-content button').disabled = true;
-                    document.querySelector('.hero-content button').classList.add('opacity-50', 'cursor-not-allowed');
-                }
-            }, 1000);
-        }
-
-        // Set current year in footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Run countdown and other scripts on page load
-        document.addEventListener('DOMContentLoaded', setupCountdown);
-    </script>
 
 </body>
 </html>
