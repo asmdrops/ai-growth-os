@@ -3,216 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Ethics & Authenticity Playbook for Creative Contests</title>
+    <title>AuthentiView: Safeguarding Visual Content with AI Detection & Originality</title>
+    <meta name="description" content="A specialized SaaS platform offering AI detection and originality verification for visual creative content (photos, videos), explicitly designed for art/photography contest organizers and individual creators.">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👁️</text></svg>">
     <style>
+        /* Custom styles for dark mode and responsiveness */
         body {
-            font-family: 'Inter', sans-serif;
-            @apply bg-gray-900 text-gray-100;
+            font-family: 'Inter', sans-serif; /* A modern, clean font */
         }
-        .hero-background {
+        .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
         }
-        .gradient-overlay {
-            background: linear-gradient(to bottom, rgba(17, 24, 39, 0.7) 0%, rgba(17, 24, 39, 0.95) 100%);
+        /* Gradient overlay for text readability on hero image */
+        .hero-overlay {
+            background-image: linear-gradient(to bottom, rgba(17, 24, 39, 0.7) 0%, rgba(17, 24, 39, 0.9) 100%);
+        }
+        /* Custom scrollbar for a premium dark mode feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937; /* Tailwind gray-800 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4b5563; /* Tailwind gray-600 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280; /* Tailwind gray-500 */
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <section class="hero-background relative min-h-screen flex items-center justify-center py-16 px-4 md:px-8">
-        <div class="absolute inset-0 gradient-overlay"></div>
-        <div class="relative z-10 max-w-6xl mx-auto text-center">
-            <span class="inline-block bg-purple-600 text-white text-sm font-semibold px-4 py-2 rounded-full mb-4 shadow-lg animate-pulse">
-                🚨 TREND ALERT: Nikon Contest AI Scandal 🚨
-            </span>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
-                Stop the Scandal: Protect Your Creative Contests from AI Deception
+    <section class="hero-bg relative h-screen flex items-center justify-center text-center p-4 overflow-hidden">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6">
+                Reclaim Authenticity: Safeguarding Visual Content in the AI Era.
             </h1>
-            <p class="text-lg md:text-xl lg:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
-                The Nikon photo contest controversy is just the beginning. Equip your institution with the definitive
-                <span class="font-bold text-yellow-400">'AI Ethics & Authenticity Playbook'</span> before it's too late.
+            <p class="text-xl sm:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                Inspired by recent controversies, our platform empowers creators and organizers to verify originality and detect AI in photos & videos.
             </p>
-            <div class="bg-gray-800 bg-opacity-70 border border-purple-700 p-6 rounded-xl shadow-2xl mb-12 max-w-lg mx-auto transform transition-all hover:scale-105 duration-300">
-                <p class="text-xl md:text-2xl font-bold text-purple-300 mb-4">
-                    Limited Time Offer: Early Access Waitlist Closes In:
-                </p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-white text-3xl md:text-4xl font-extrabold">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="bg-gray-900 px-4 py-2 rounded-lg">00</span>
-                        <span class="text-sm text-gray-400 mt-1">Days</span>
-                    </div>
-                    <span class="text-purple-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="bg-gray-900 px-4 py-2 rounded-lg">00</span>
-                        <span class="text-sm text-gray-400 mt-1">Hours</span>
-                    </div>
-                    <span class="text-purple-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="bg-gray-900 px-4 py-2 rounded-lg">00</span>
-                        <span class="text-sm text-gray-400 mt-1">Minutes</span>
-                    </div>
-                    <span class="text-purple-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="bg-gray-900 px-4 py-2 rounded-lg">00</span>
-                        <span class="text-sm text-gray-400 mt-1">Seconds</span>
-                    </div>
+            
+            <!-- Limited Time Countdown Timer -->
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-700 p-6 rounded-lg shadow-xl mb-10 max-w-md mx-auto transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <p class="text-lg font-semibold text-purple-200 mb-2">Waitlist Closes In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-white font-bold text-4xl sm:text-5xl">
+                    <div><span id="days" class="block">00</span><span class="text-sm text-purple-200">Days</span></div>
+                    <div><span id="hours" class="block">00</span><span class="text-sm text-purple-200">Hours</span></div>
+                    <div><span id="minutes" class="block">00</span><span class="text-sm text-purple-200">Minutes</span></div>
+                    <div><span id="seconds" class="block">00</span><span class="text-sm text-purple-200">Seconds</span></div>
                 </div>
-                <button onclick="document.getElementById('waitlist-form-section').scrollIntoView({ behavior: 'smooth' });"
-                    class="mt-8 bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800
-                           text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg transform transition-all
-                           hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50">
-                    Join the Exclusive Waitlist & Get Early Access
-                </button>
             </div>
+
+            <a href="#waitlist-form" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50">
+                Secure Your Spot on the Waitlist Now!
+            </a>
+        </div>
+    </section>
+
+    <!-- Problem/Market Trend Section -->
+    <section class="py-20 px-4 bg-gray-800 text-center">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">The Shifting Landscape of Digital Art Authenticity</h2>
+            <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                Recent headlines, like the <strong class="text-purple-400">Nikon microscopy photo contest winner facing AI usage criticism</strong> (CNN), highlight a growing crisis. As AI advances, discerning human creativity from machine generation becomes increasingly difficult, threatening the integrity and value of creative industries.
+            </p>
+            <p class="text-lg text-gray-300 leading-relaxed">
+                <strong class="text-purple-400">AuthentiView</strong> provides the essential technical solution to restore trust, uphold fairness, and celebrate genuine human ingenuity in visual content.
+            </p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 px-4 md:px-8 bg-gray-900">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 text-white leading-tight">
-                What the AI Ethics & Authenticity Playbook Delivers:
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform transition-all hover:scale-105 duration-300">
-                    <p class="text-3xl mb-4">📄</p>
-                    <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Policy Templates</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Ready-to-use frameworks to define AI usage, submission guidelines, and ethical standards,
-                        saving you countless hours of legal drafting.
+    <section class="py-20 px-4 bg-gray-900">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-12">Empowering Your Creative Journey with Unrivaled Authenticity</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: AI-Powered Contest Submission Pre-screening -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out border-t-4 border-purple-600">
+                    <div class="text-5xl mb-4">🔍</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">AI-Powered Contest Submission Pre-screening</h3>
+                    <p class="text-gray-300">
+                        Automatically detect AI-generated elements in photo and video submissions, ensuring fair play and genuine talent shines through. Streamline your judging process with confidence.
+                    </p>
+                </div>
+                
+                <!-- Feature 2: Authenticity Workflow Tracking & Provenance -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out border-t-4 border-indigo-600">
+                    <div class="text-5xl mb-4">⏱️</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Authenticity Workflow Tracking & Provenance</h3>
+                    <p class="text-gray-300">
+                        Track the creation journey of visual content from inception to final output. Our platform logs key verifiable points, providing a robust chain of originality.
+                    </p>
+                </div>
+                
+                <!-- Feature 3: 'Human-Verified' Certifications for Your Art -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out border-t-4 border-pink-600">
+                    <div class="text-5xl mb-4">✅</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">'Human-Verified' Certifications for Your Art</h3>
+                    <p class="text-gray-300">
+                        Provide a verifiable stamp of authenticity. Our hybrid AI/human review process offers certifications that elevate trust and value for creators and collectors alike.
                     </p>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform transition-all hover:scale-105 duration-300">
-                    <p class="text-3xl mb-4">🔍</p>
-                    <h3 class="text-xl md:text-2xl font-bold text-white mb-3">AI Detection Strategies</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Practical guides and tool recommendations to identify AI-generated content and ensure
-                        fairness and integrity in your contests.
+                <!-- Feature 4: Scalable & Secure Cloud Platform -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out border-t-4 border-green-600">
+                    <div class="text-5xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Scalable & Secure Cloud Platform</h3>
+                    <p class="text-gray-300">
+                        Built for enterprise-grade performance, AuthentiView handles large volumes of submissions securely and efficiently, scaling with your needs from local contests to international competitions.
                     </p>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform transition-all hover:scale-105 duration-300">
-                    <p class="text-3xl mb-4">⚖️</p>
-                    <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Legal Considerations</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Navigate the complex legal landscape of AI-generated works, copyright, and intellectual property
-                        with expert guidance.
+                <!-- Feature 5: Intuitive Dashboard & Analytics -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out border-t-4 border-yellow-600">
+                    <div class="text-5xl mb-4">✨</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Intuitive Dashboard & Analytics</h3>
+                    <p class="text-gray-300">
+                        Gain insights into submission patterns, AI detection rates, and authenticity trends through a user-friendly dashboard, simplifying content management for organizers.
                     </p>
                 </div>
 
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform transition-all hover:scale-105 duration-300">
-                    <p class="text-3xl mb-4">✨</p>
-                    <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Best Practices Handbook</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Step-by-step guidance for transparent communication, fair judging, and maintaining
-                        unwavering contestant trust.
+                <!-- Feature 6: Protect Your Creative IP -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out border-t-4 border-cyan-600">
+                    <div class="text-5xl mb-4">🛡️</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Protect Your Creative IP</h3>
+                    <p class="text-gray-300">
+                        Individual creators can proactively protect their intellectual property, providing undeniable proof of originality against plagiarism and AI mimicry.
                     </p>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform transition-all hover:scale-105 duration-300">
-                    <p class="text-3xl mb-4">🛡️</p>
-                    <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Crisis Prevention</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Strategies to proactively address potential AI controversies and safeguard your institution's
-                        reputation from public backlash.
+    <!-- Target Audience Section -->
+    <section class="py-20 px-4 bg-gray-800 text-center">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Who Benefits from AuthentiView?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md border-b-4 border-purple-500 hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                    <div class="text-5xl mb-4">🏆</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Art & Photography Contest Organizers</h3>
+                    <p class="text-gray-300">
+                        Ensure the integrity of your competitions, uphold standards of fairness, and protect your brand's reputation by verifying every submission.
                     </p>
                 </div>
-
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform transition-all hover:scale-105 duration-300">
-                    <p class="text-3xl mb-4">💡</p>
-                    <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Future-Proofing</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Insights into emerging AI trends and how to adapt your policies for long-term success,
-                        keeping you ahead of the curve.
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md border-b-4 border-indigo-500 hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                    <div class="text-5xl mb-4">🎨</div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Individual Creators & Artists</h3>
+                    <p class="text-gray-300">
+                        Fortify your portfolio with undeniable proof of originality, gain trust from clients, and stand out in a world flooded with AI-generated content.
                     </p>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist-form-section" class="py-16 md:py-24 px-4 md:px-8 bg-gray-800 border-t border-gray-700">
-        <div class="max-w-xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
-                Secure Your Institution's Future. Join the Waitlist.
-            </h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-10">
-                Limited spots available for early access to the "AI Ethics & Authenticity Playbook."
-                Don't miss out on securing your institution's reputation and creative integrity.
+    <section id="waitlist-form" class="py-20 px-4 bg-gray-900">
+        <div class="container mx-auto max-w-2xl text-center bg-gray-800 p-8 md:p-12 rounded-lg shadow-2xl border-t-8 border-purple-600">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Join the AuthentiView Waitlist</h2>
+            <p class="text-lg text-gray-300 mb-8">
+                Be among the first to experience the future of visual content authenticity. Early access, exclusive updates, and special launch offers await!
             </p>
-
-            <form class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-purple-700">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-200 text-sm font-semibold mb-2">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                        class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 text-white text-lg transition duration-200">
+            <form class="space-y-6">
+                <div>
+                    <label for="name" class="sr-only">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required
+                           class="w-full p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-purple-500 focus:ring-purple-500 focus:outline-none placeholder-gray-400 text-lg">
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-200 text-sm font-semibold mb-2">Your Professional Email</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@artinstitution.org" required
-                        class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500 text-white text-lg transition duration-200">
+                <div>
+                    <label for="email" class="sr-only">Your Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
+                           class="w-full p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-purple-500 focus:ring-purple-500 focus:outline-none placeholder-gray-400 text-lg">
+                </div>
+                <div>
+                    <label for="organization" class="sr-only">Organization (Optional)</label>
+                    <input type="text" id="organization" name="organization" placeholder="Organization (Optional)"
+                           class="w-full p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-purple-500 focus:ring-purple-500 focus:outline-none placeholder-gray-400 text-lg">
                 </div>
                 <button type="submit"
-                    class="w-full bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-indigo-800
-                           text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transform transition-all
-                           hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50">
-                    Join the Waitlist Now
+                        class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50">
+                    Get Early Access
                 </button>
-                <p class="text-gray-400 text-xs mt-6">
-                    Your data is safe with us. We respect your privacy and will never share your information.
-                </p>
             </form>
+            <p class="text-sm text-gray-400 mt-6">We respect your privacy and will never share your email.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 bg-gray-900 border-t border-gray-800 text-center text-gray-500 text-sm">
-        <div class="max-w-7xl mx-auto px-4">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+    <footer class="bg-gray-900 text-gray-400 py-10 px-4 border-t border-gray-800">
+        <div class="container mx-auto text-center md:flex md:justify-between md:items-center">
+            <p class="mb-4 md:mb-0">&copy; <span id="currentYear"></span> AuthentiView. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a>
+                <a href="#" class="hover:text-white transition-colors duration-200">Contact Us</a>
+            </div>
         </div>
     </footer>
 
+    <!-- JavaScript for Countdown Timer and Current Year -->
     <script>
-        // Set the date we're counting down to (e.g., 7 days from now)
+        // Set the date we're counting down to (e.g., 30 days from now for 'Limited Time')
         const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 7); // Set to 7 days from now
+        countdownDate.setDate(countdownDate.getDate() + 30); // Set to 30 days from today
 
-        const x = setInterval(function() {
+        const countdownFunction = setInterval(function() {
             const now = new Date().getTime();
-            const distance = countdownDate - now;
+            const distance = countdownDate.getTime() - now;
 
+            // Time calculations for days, hours, minutes and seconds
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+            // Display the result in the corresponding elements, padding with '0'
             document.getElementById("days").innerHTML = String(days).padStart(2, '0');
             document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
             document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
             document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
+            // If the countdown is over, write some text 
             if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "<span class='text-red-500'>WAITLIST CLOSED!</span>";
-                // Optionally disable the waitlist form button here
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = "<span class='text-xl text-purple-200'>WAITLIST CLOSED!</span>";
+                // Optionally disable the waitlist button here
             }
         }, 1000);
+
+        // Set current year in the footer
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
     </script>
 
 </body>
