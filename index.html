@@ -1,233 +1,232 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Guard for Mac - Advanced AI Privacy & Control Beyond Apple's Defaults</title>
-    <!-- Tailwind CSS CDN -->
-    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'%3E%3C/path%3E%3C/svg%3E" type="image/svg+xml">
+    <title>AgentGuard for Mac: Master AI Agent Permissions & Compliance</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Favicon with Apple emoji for a premium feel -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%25%22 y=%2250%25%22 font-size=%2290%22 text-anchor=%22middle%22 dominant-baseline=%22central%22>🍎</text></svg>">
     <style>
-        /* Custom scrollbar for a more premium feel in dark mode */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
+        /* Custom scrollbar for a modern dark-mode aesthetic */
+        body::-webkit-scrollbar {
+            width: 12px;
         }
-        ::-webkit-scrollbar-track {
-            background: #1f2937; /* gray-800 */
+        body::-webkit-scrollbar-track {
+            background: #1a202c; /* Darker background */
         }
-        ::-webkit-scrollbar-thumb {
-            background: #4a90e2; /* A nice blue */
-            border-radius: 4px;
+        body::-webkit-scrollbar-thumb {
+            background-color: #4a5568; /* Grayish thumb */
+            border-radius: 20px;
+            border: 3px solid #1a202c; /* Spacing around thumb */
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #3c7cc9;
+        body::-webkit-scrollbar-thumb:hover {
+            background-color: #636b77; /* Lighter on hover */
         }
-
-        /* Basic transitions for smooth hover effects */
-        .transition-all {
-            transition-property: all;
-            transition-duration: 300ms;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        /* Custom animation for the limited time offer */
+        @keyframes pulse-slow {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 4s infinite ease-in-out;
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 font-sans antialiased overflow-x-hidden">
+<body class="bg-gray-900 text-white font-sans antialiased">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <div class="absolute inset-0">
-            <img src="https://source.unsplash.com/1600x900/?A,tech" alt="AI Guard for Mac Background: Advanced Technology" class="w-full h-full object-cover brightness-50">
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/70 to-transparent"></div>
-        </div>
-        <div class="relative z-10 p-6 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white drop-shadow-lg">
-                <span class="text-blue-400">Reclaim Control:</span> AI Agents & Your Mac's Data
+    <header class="relative bg-cover bg-center bg-no-repeat h-screen flex items-center justify-center p-4" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+        <!-- Overlay for better text readability and dark mode aesthetic -->
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+
+        <div class="relative z-10 text-center max-w-5xl mx-auto px-4">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight drop-shadow-lg">
+                <span class="text-blue-400">Apple's New AI Agent Rules Are Here.</span> <br class="hidden sm:inline-block"> Is Your Mac Fleet Ready?
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-200 font-light max-w-2xl mx-auto">
-                With Apple tightening full-disk access, your Mac needs more than default permissions. AI Guard for Mac provides granular control, real-time alerts, and a compliance sandbox for your sensitive files.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 max-w-4xl mx-auto drop-shadow-md">
+                Introducing <strong class="text-blue-300">AgentGuard for Mac</strong>: The definitive platform for Mac developers and IT teams to effortlessly audit, monitor, and manage AI agent full-disk access, ensuring real-time compliance with Apple's latest policies, sandboxing, and detailed activity logs.
             </p>
-            
-            <!-- Limited Time Countdown -->
-            <div class="bg-blue-600 bg-opacity-90 rounded-xl p-4 sm:p-6 mb-8 mx-auto max-w-md shadow-lg border border-blue-700">
-                <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Limited Time Early Bird Access Ends In:</h3>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 text-white">
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-4xl font-extrabold" id="days">00</span>
-                        <span class="text-xs sm:text-sm uppercase">Days</span>
-                    </div>
-                    <span class="text-3xl sm:text-4xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-4xl font-extrabold" id="hours">00</span>
-                        <span class="text-xs sm:text-sm uppercase">Hours</span>
-                    </div>
-                    <span class="text-3xl sm:text-4xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-4xl font-extrabold" id="minutes">00</span>
-                        <span class="text-xs sm:text-sm uppercase">Minutes</span>
-                    </div>
-                    <span class="text-3xl sm:text-4xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-3xl sm:text-4xl font-extrabold" id="seconds">00</span>
-                        <span class="text-xs sm:text-sm uppercase">Seconds</span>
-                    </div>
+
+            <!-- Limited Time Offer & Countdown - Conversion Booster -->
+            <div class="bg-gradient-to-r from-red-600 to-pink-600 p-4 rounded-xl shadow-xl inline-block mb-8 animate-pulse-slow">
+                <p class="text-lg sm:text-xl font-semibold mb-2">
+                    <span class="mr-2">⚡️</span>Limited Early Access Opportunity! Sign up now for exclusive beta features.
+                </p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-white text-3xl sm:text-4xl font-mono font-bold">
+                    <div><span id="days">00</span><span class="block text-sm">Days</span></div>
+                    <span>:</span>
+                    <div><span id="hours">00</span><span class="block text-sm">Hours</span></div>
+                    <span>:</span>
+                    <div><span id="minutes">00</span><span class="block text-sm">Mins</span></div>
+                    <span>:</span>
+                    <div><span id="seconds">00</span><span class="block text-sm">Secs</span></div>
                 </div>
             </div>
 
-            <a href="#waitlist" class="hero-cta inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition-all duration-300">
-                Join Early Bird & Secure Your Mac Now
+            <a href="#waitlist" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                <span class="mr-2">🚀</span> Secure Your Spot Now!
             </a>
-            <p class="mt-4 text-sm text-gray-300">Don't let AI agents misuse your data. Take control.</p>
+        </div>
+    </header>
+
+    <!-- Problem & Solution Overview -->
+    <section class="py-20 bg-gray-900 text-center px-4">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-gray-100">
+                The Challenge: Navigating Apple's Evolving Security Landscape
+            </h2>
+            <p class="text-lg text-gray-400 leading-relaxed mb-6">
+                With Apple's proactive steps to curb potential abuse from AI agents accessing sensitive data, maintaining compliance and robust security is no longer optional—it's paramount. The new full-disk access policies demand precise, continuous oversight.
+            </p>
+            <p class="text-lg text-gray-400 leading-relaxed">
+                <strong class="text-blue-400">AgentGuard for Mac</strong> provides the clarity and control you need, transforming a complex challenge into a streamlined, automated process for your entire Mac fleet.
+            </p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-24 bg-gray-900">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold mb-12 text-white">Unprecedented Control for Your Mac's AI Ecosystem</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-                
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-500 transition-all transform hover:-translate-y-1">
-                    <span class="text-5xl mb-4 inline-block text-blue-400">⚙️</span>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Granular AI Access Control</h3>
-                    <p class="text-gray-300">Define exactly which AI agents access specific files and folders, down to the byte level.</p>
+    <section id="features" class="py-20 bg-gray-800 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16 text-gray-100">
+                Unlock Unprecedented Control & Compliance
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Feature 1: Real-time Compliance Checks -->
+                <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">✅</span>
+                        <h3 class="text-2xl font-semibold text-white">Real-time Compliance Checks</h3>
+                    </div>
+                    <p class="text-gray-300">Automatically audit AI agent full-disk access against Apple's latest security policies and sandboxing recommendations. Stay ahead of potential violations effortlessly.</p>
                 </div>
-                
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-500 transition-all transform hover:-translate-y-1">
-                    <span class="text-5xl mb-4 inline-block text-blue-400">🔒</span>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Beyond macOS Defaults</h3>
-                    <p class="text-gray-300">Elevate your privacy with permissions smarter and more robust than Apple's built-in settings.</p>
+
+                <!-- Feature 2: Granular Permission Management -->
+                <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">⚙️</span>
+                        <h3 class="text-2xl font-semibold text-white">Granular Permission Management</h3>
+                    </div>
+                    <p class="text-gray-300">Gain precise control over what your AI agents can and cannot access. Define custom rules and enforce them across your entire Mac development or IT environment.</p>
                 </div>
-                
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-500 transition-all transform hover:-translate-y-1">
-                    <span class="text-5xl mb-4 inline-block text-blue-400">🧪</span>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Developer Compliance Sandbox</h3>
-                    <p class="text-gray-300">Safely test AI agent data access patterns without risk to live data or sensitive information.</p>
+
+                <!-- Feature 3: Detailed Activity Logs -->
+                <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">📊</span>
+                        <h3 class="text-2xl font-semibold text-white">Detailed Activity Logs</h3>
+                    </div>
+                    <p class="text-gray-300">Access comprehensive, immutable logs of all AI agent access events. Essential for forensic analysis, debugging, and maintaining an auditable trail.</p>
                 </div>
-                
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-500 transition-all transform hover:-translate-y-1">
-                    <span class="text-5xl mb-4 inline-block text-blue-400">🚨</span>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Real-time Threat Alerts</h3>
-                    <p class="text-gray-300">Get instant notifications on unusual or unauthorized data requests by any AI agent.</p>
+
+                <!-- Feature 4: Advanced Sandboxing Recommendations -->
+                <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">🔒</span>
+                        <h3 class="text-2xl font-semibold text-white">Advanced Sandboxing Recommendations</h3>
+                    </div>
+                    <p class="text-gray-300">Leverage intelligent recommendations to configure robust sandboxing for your AI agents, minimizing attack surface and enhancing security posture.</p>
                 </div>
-                
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-500 transition-all transform hover:-translate-y-1">
-                    <span class="text-5xl mb-4 inline-block text-blue-400">🍎</span>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Seamless macOS Integration</h3>
-                    <p class="text-gray-300">Designed to feel native, integrating directly with your Mac's privacy and security ecosystem.</p>
+
+                <!-- Feature 5: Security & Regulatory Reporting -->
+                <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">📄</span>
+                        <h3 class="text-2xl font-semibold text-white">Security & Regulatory Reporting</h3>
+                    </div>
+                    <p class="text-gray-300">Generate on-demand reports for internal security audits or external regulatory compliance. Prove your adherence with clear, actionable data.</p>
                 </div>
-                
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-500 transition-all transform hover:-translate-y-1">
-                    <span class="text-5xl mb-4 inline-block text-blue-400">📊</span>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Auditable Activity Logs</h3>
-                    <p class="text-gray-300">Maintain a clear, transparent record of all AI agent interactions with your file system.</p>
+
+                <!-- Feature 6: Seamless Mac Integration -->
+                <div class="bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl mr-4">🍎</span>
+                        <h3 class="text-2xl font-semibold text-white">Seamless Mac Integration</h3>
+                    </div>
+                    <p class="text-gray-300">Designed from the ground up for macOS environments, AgentGuard offers intuitive management and integrates perfectly with your existing Mac infrastructure.</p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / Early Bird Form Section -->
-    <section id="waitlist" class="py-16 sm:py-24 bg-gray-950">
-        <div class="container mx-auto px-6 text-center max-w-2xl">
-            <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 text-white">
-                Don't Miss Out: <span class="text-blue-400">Limited Early Bird Access!</span>
+    <!-- Waitlist / CTA Section -->
+    <section id="waitlist" class="py-20 bg-gradient-to-br from-blue-800 to-purple-900 text-center px-4">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white">
+                Ready to Secure Your Mac AI Agents?
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8">
-                Unlock advanced developer tools, priority support, and a lifetime discount by joining our exclusive early bird program. Spaces are limited!
+            <p class="text-lg text-blue-200 leading-relaxed mb-8">
+                Join our exclusive early access program today and be among the first to experience AgentGuard for Mac. Limited spots available to ensure a focused beta experience.
             </p>
-            <form action="#" method="POST" class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700">
-                <div class="mb-6">
-                    <label for="name" class="block text-left text-sm font-medium text-gray-200 mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" required 
-                           class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 text-white transition-all">
-                </div>
-                <div class="mb-6">
-                    <label for="email" class="block text-left text-sm font-medium text-gray-200 mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required 
-                           class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 text-white transition-all">
-                </div>
-                <button type="submit" class="waitlist-button w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg shadow-md transform hover:scale-105 transition-all duration-300">
-                    Join Early Bird Waitlist
+
+            <form class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto" onsubmit="alert('Thank you for joining the waitlist!'); event.preventDefault();">
+                <input type="email" placeholder="Your work email" aria-label="Your work email" required
+                       class="flex-grow p-4 rounded-lg bg-blue-900 border border-blue-700 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400 text-lg">
+                <button type="submit"
+                        class="bg-white text-blue-800 font-bold py-4 px-8 rounded-lg text-lg hover:bg-gray-200 transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
+                    <span class="mr-2">📧</span> Get Early Access
                 </button>
-                <p class="mt-4 text-xs text-gray-400">We respect your privacy. Your email will only be used for AI Guard for Mac updates.</p>
             </form>
+
+            <p class="mt-8 text-blue-300 text-sm">
+                No spam, just updates on AgentGuard's launch and exclusive beta invitations.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 border-t border-gray-800">
-        <div class="container mx-auto px-6 text-center text-gray-400 text-sm">
-            <p>&copy; 2023 AI Guard for Mac. All rights reserved.</p>
-            <p class="mt-2">
-                <a href="#" class="hover:text-blue-400 transition-colors">Privacy Policy</a> | 
-                <a href="#" class="hover:text-blue-400 transition-colors">Terms of Service</a>
-            </p>
+    <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm px-4">
+        <div class="container mx-auto">
+            &copy; 2023 AgentGuard for Mac. All rights reserved. Built with precision for the modern Mac enterprise.
         </div>
     </footer>
 
     <!-- JavaScript for Countdown Timer -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the target date for the countdown (e.g., 30 days from now)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 30); 
+        // Set the date we're counting down to (e.g., 7 days from now for a limited-time offer)
+        // You can change this to a specific future date like: new Date("Dec 25, 2023 00:00:00").getTime();
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 7); // Sets countdown for 7 days from now
 
-            // Update the count down every 1 second
-            const countdownInterval = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate - now;
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate.getTime() - now;
 
-                // Time calculations for days, hours, minutes and seconds
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Calculate times for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Display the result in the corresponding elements
-                const daysEl = document.getElementById("days");
-                const hoursEl = document.getElementById("hours");
-                const minutesEl = document.getElementById("minutes");
-                const secondsEl = document.getElementById("seconds");
+            // Display the result in the element with id="countdown"
+            if (document.getElementById("days")) {
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+            }
 
-                if (daysEl && hoursEl && minutesEl && secondsEl) {
-                    daysEl.innerHTML = String(days).padStart(2, '0');
-                    hoursEl.innerHTML = String(hours).padStart(2, '0');
-                    minutesEl.innerHTML = String(minutes).padStart(2, '0');
-                    secondsEl.innerHTML = String(seconds).padStart(2, '0');
+            // If the countdown is over, hide countdown and update text
+            if (distance < 0) {
+                clearInterval(x);
+                const countdownElement = document.getElementById("countdown");
+                if (countdownElement) {
+                    countdownElement.innerHTML = "<span class='text-xl sm:text-2xl font-bold'>Limited offer expired!</span>";
+                    countdownElement.classList.remove('space-x-4', 'text-3xl', 'sm:text-4xl');
                 }
-
-                // If the count down is finished, display "EXPIRED" and disable form
-                if (distance < 0) {
-                    clearInterval(countdownInterval);
-                    const countdownDiv = document.getElementById("countdown");
-                    if (countdownDiv) {
-                        countdownDiv.innerHTML = "<span class='text-xl sm:text-2xl font-bold'>OFFER EXPIRED!</span>";
-                        countdownDiv.classList.remove('space-x-3', 'sm:space-x-4');
-                    }
-
-                    const heroCta = document.querySelector('.hero-cta');
-                    if (heroCta) {
-                        heroCta.href = '#'; // Remove link
-                        heroCta.textContent = 'Offer Ended';
-                        heroCta.classList.remove('bg-blue-600', 'hover:bg-blue-700', 'transform', 'hover:scale-105');
-                        heroCta.classList.add('bg-gray-500', 'cursor-not-allowed');
-                        heroCta.removeAttribute('onclick'); // Prevent navigation
-                    }
-                    
-                    const waitlistButton = document.querySelector('.waitlist-button');
-                    if (waitlistButton) {
-                        waitlistButton.disabled = true;
-                        waitlistButton.textContent = 'Offer Expired';
-                        waitlistButton.classList.remove('bg-blue-600', 'hover:bg-blue-700');
-                        waitlistButton.classList.add('bg-gray-500', 'cursor-not-allowed');
-                    }
-                    // Optional: disable form inputs
-                    const formInputs = document.querySelectorAll('#waitlist form input');
-                    formInputs.forEach(input => input.disabled = true);
+                const offerText = document.querySelector(".bg-gradient-to-r.from-red-600.to-pink-600 p-4 > p");
+                if (offerText) {
+                    offerText.innerHTML = "Beta spots are now closed. Sign up below for future updates!";
                 }
-            }, 1000);
-        });
+                const ctaButton = document.querySelector("a[href='#waitlist']");
+                if (ctaButton) {
+                    ctaButton.innerHTML = "<span class='mr-2'>🔔</span> Get Launch Updates";
+                    ctaButton.setAttribute("href", "#waitlist"); 
+                }
+            }
+        }, 1000);
     </script>
 </body>
 </html>
