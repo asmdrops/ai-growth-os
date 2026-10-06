@@ -3,240 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ultimate Anti-Cheat Hardware Ban Survival Guide</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>The Ultimate Apple Smart Home Blueprint: Setup, Automate, Secure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .hero-bg {
+        /* Custom styles for dark overlay on hero image */
+        .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            position: relative;
+        }
+        .hero-background::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        /* Custom styles for gradient button */
+        .btn-gradient {
+            background-image: linear-gradient(to right, #3B82F6 0%, #2563EB 51%, #3B82F6 100%);
+            transition: 0.5s;
+            background-size: 200% auto;
+        }
+        .btn-gradient:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+        }
+        @keyframes pulse-gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .limited-offer-pulse {
+            animation: pulse-gradient 4s ease infinite;
+            background-image: linear-gradient(to right, #ef4444 0%, #f97316 50%, #ef4444 100%);
+            background-size: 200% auto;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
-    <!-- Hero Section -->
-    <header class="hero-bg relative min-h-screen flex items-center justify-center p-4">
-        <!-- Overlay for readability -->
-        <div class="absolute inset-0 bg-black opacity-75"></div>
-
-        <div class="relative z-10 max-w-7xl mx-auto text-center py-16 px-4 sm:px-6 lg:px-8">
-            <!-- Market Trend Highlight -->
-            <span class="inline-block bg-red-600 text-white text-xs sm:text-sm font-semibold px-3 py-1 rounded-full uppercase tracking-wide mb-4 animate-pulse">
-                🔥 TREND ALERT: Valorant Player Banned Due To Previous CPU Owner’s Cheating Ways
-            </span>
-
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight text-white mb-6">
-                Banned for a Crime You Didn't Commit?
-                <br class="hidden sm:inline">
-                <span class="text-indigo-400">Protect Your Gaming Future.</span>
-            </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-                Don't let a previous owner's mistakes cost you your gaming account. Our comprehensive guide equips you to navigate the treacherous world of used PC hardware.
-            </p>
-
-            <!-- Limited Time Offer & Countdown -->
-            <div class="bg-indigo-700 bg-opacity-80 p-6 rounded-lg shadow-xl mb-10 transform hover:scale-105 transition-transform duration-300 border-2 border-indigo-500">
-                <h3 class="text-2xl sm:text-3xl font-bold text-white mb-3">
-                    🚀 Limited Time Launch Offer!
-                </h3>
-                <p class="text-xl sm:text-2xl text-indigo-100 mb-4">
-                    Get <span class="text-white font-extrabold">50% OFF</span> the ultimate guide for the next:
-                </p>
-                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 text-white font-mono text-3xl sm:text-5xl lg:text-6xl mb-6">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="font-bold">00</span>
-                        <span class="text-xs sm:text-base text-indigo-200">DAYS</span>
-                    </div>
-                    <span class="font-light text-indigo-100">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="font-bold">00</span>
-                        <span class="text-xs sm:text-base text-indigo-200">HOURS</span>
-                    </div>
-                    <span class="font-light text-indigo-100">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="font-bold">00</span>
-                        <span class="text-xs sm:text-base text-indigo-200">MIN</span>
-                    </div>
-                    <span class="font-light text-indigo-100">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="font-bold">00</span>
-                        <span class="text-xs sm:text-base text-indigo-200">SEC</span>
-                    </div>
-                </div>
-                <a href="#order-form" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                    ✅ Secure Your Copy Now!
-                </a>
-            </div>
-
-            <p class="text-md text-gray-400">
-                A Premium Digital Product by Digital Education Authority
-            </p>
+    <!-- Header (Minimal for focus) -->
+    <header class="bg-gray-900 py-4 border-b border-gray-800 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-center items-center">
+            <h1 class="text-2xl md:text-3xl font-bold text-white tracking-wide">Apple Smart Home Blueprint</h1>
         </div>
     </header>
 
-    <!-- Features Section -->
-    <section class="py-16 sm:py-24 bg-gray-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4">
-                    What You'll Discover Inside
-                </h2>
-                <p class="text-lg text-gray-300 max-w-2xl mx-auto">
-                    'The Ultimate Anti-Cheat Hardware Ban Survival Guide' is your essential toolkit for peace of mind when buying used gaming hardware.
-                </p>
+    <!-- Hero Section -->
+    <section class="hero-background relative min-h-screen flex items-center justify-center text-center py-16 md:py-24">
+        <div class="hero-content container mx-auto px-4 max-w-5xl">
+            <div class="inline-block limited-offer-pulse text-white text-sm md:text-base font-bold px-6 py-3 rounded-full mb-8 uppercase tracking-wider shadow-lg transform scale-105">
+                🚨 LIMITED TIME PREMIUM ACCESS! Don't Miss Out! 🚨
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-600">
-                    <h3 class="text-2xl font-semibold text-indigo-400 mb-4">🔍 Comprehensive Pre-Purchase Checklist</h3>
-                    <p class="text-gray-200">
-                        Never guess again. Our expert-designed checklist guides you through evaluating used CPUs and motherboards, spotting red flags before you buy. Prevent costly mistakes!
-                    </p>
-                </div>
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-600">
-                    <h3 class="text-2xl font-semibold text-indigo-400 mb-4">🔬 Post-Purchase Diagnostic Steps</h3>
-                    <p class="text-gray-200">
-                        Already bought? Learn exactly how to run diagnostic tests to identify potential hardware bans on your newly acquired components, giving you time to act.
-                    </p>
-                </div>
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-600">
-                    <h3 class="text-2xl font-semibold text-indigo-400 mb-4">⚖️ Strategies for Appealing Bans</h3>
-                    <p class="text-gray-200">
-                        In the unfortunate event of a ban, don't despair! We provide proven strategies and templates for effectively appealing hardware bans with major game publishers.
-                    </p>
-                </div>
-                <div class="bg-gray-700 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-600">
-                    <h3 class="text-2xl font-semibold text-indigo-400 mb-4">🛡️ Best Practices for Risk Minimization</h3>
-                    <p class="text-gray-200">
-                        Beyond the ban, discover general best practices to minimize risks when dealing with any second-hand gaming hardware, ensuring long-term peace of mind.
-                    </p>
+            <h2 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg">
+                The Ultimate Apple Smart Home Blueprint
+            </h2>
+            <p class="text-lg md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto drop-shadow">
+                Go beyond basics. Master Apple HomeKit, seamlessly integrate the latest Apple/LG devices, and secure your intelligent living space with this comprehensive, premium guide.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                <a href="#waitlist" class="btn-gradient text-white font-bold py-4 px-10 rounded-full text-lg md:text-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out whitespace-nowrap">
+                    Secure Early Access & Discount!
+                </a>
+                <!-- Static countdown timer display -->
+                <div class="bg-gray-800 text-white rounded-lg p-4 text-center shadow-md border border-gray-700 w-full sm:w-auto">
+                    <p class="text-sm uppercase font-semibold text-gray-300 mb-2">Offer Ends In:</p>
+                    <div class="flex justify-center gap-4 mt-1">
+                        <span class="text-3xl md:text-4xl font-extrabold leading-none">03<span class="text-xs font-normal block mt-1">DAYS</span></span>
+                        <span class="text-3xl md:text-4xl font-extrabold leading-none">14<span class="text-xs font-normal block mt-1">HRS</span></span>
+                        <span class="text-3xl md:text-4xl font-extrabold leading-none">59<span class="text-xs font-normal block mt-1">MINS</span></span>
+                        <span class="text-3xl md:text-4xl font-extrabold leading-none">33<span class="text-xs font-normal block mt-1">SECS</span></span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / Order Form Section -->
-    <section id="order-form" class="py-16 sm:py-24 bg-gray-900">
-        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6">
-                Ready to Secure Your Gaming Future?
-            </h2>
-            <p class="text-lg text-gray-300 mb-8">
-                Stop worrying about hidden hardware bans. Secure your copy of 'The Ultimate Anti-Cheat Hardware Ban Survival Guide' today at the special launch price.
+    <!-- Problem/Solution & Trend Section -->
+    <section class="py-16 md:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-8">
+                Navigating Apple's Expanding Smart Home Ecosystem Just Got Easier!
+            </h3>
+            <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
+                With Apple pushing deeper into the smart home, collaborating with giants like LG on doorbells, locks, and thermostats, the landscape is rapidly evolving. Are you ready to harness this powerful new era?
             </p>
+            <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+                This blueprint is your definitive guide to understanding and implementing every aspect of Apple's growing smart home presence, ensuring you stay ahead of the curve.
+            </p>
+        </div>
+    </section>
 
-            <div class="bg-gray-800 p-8 rounded-lg shadow-2xl border border-indigo-600">
-                <form action="#" method="POST" class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-left text-sm font-medium text-gray-300 mb-2">Full Name</label>
-                        <input type="text" name="name" id="name" autocomplete="name" required class="block w-full px-4 py-3 rounded-md bg-gray-700 border-gray-600 focus:border-indigo-500 focus:ring-indigo-500 text-gray-100 placeholder-gray-400 shadow-sm transition duration-150 ease-in-out sm:text-sm">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-left text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                        <input type="email" name="email" id="email" autocomplete="email" required class="block w-full px-4 py-3 rounded-md bg-gray-700 border-gray-600 focus:border-indigo-500 focus:ring-indigo-500 text-gray-100 placeholder-gray-400 shadow-sm transition duration-150 ease-in-out sm:text-sm">
-                    </div>
-                    <div>
-                        <label for="country" class="block text-left text-sm font-medium text-gray-300 mb-2">Country (Optional)</label>
-                        <select id="country" name="country" class="block w-full px-4 py-3 rounded-md bg-gray-700 border-gray-600 focus:border-indigo-500 focus:ring-indigo-500 text-gray-100 placeholder-gray-400 shadow-sm transition duration-150 ease-in-out sm:text-sm">
-                            <option value="">Select your country</option>
-                            <option value="US">United States</option>
-                            <option value="CA">Canada</option>
-                            <option value="UK">United Kingdom</option>
-                            <option value="AU">Australia</option>
-                            <option value="DE">Germany</option>
-                            <option value="FR">France</option>
-                            <option value="JP">Japan</option>
-                            <option value="KR">South Korea</option>
-                            <!-- Add more countries as needed -->
-                        </select>
-                    </div>
-                    <div>
-                        <button type="submit" class="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out transform hover:scale-105">
-                            🔒 Get Instant Access Now!
-                        </button>
-                    </div>
-                    <p class="text-xs text-gray-400 mt-4">
-                        By submitting, you agree to our <a href="#" class="text-indigo-400 hover:underline">Privacy Policy</a> and receiving marketing emails.
-                    </p>
-                </form>
+    <!-- Features Section -->
+    <section class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h3 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center text-white mb-12">
+                What You'll Master Inside This Blueprint:
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="text-4xl mb-4 text-blue-400">🍎 seamless</div>
+                    <h4 class="text-xl md:text-2xl font-bold text-white mb-3">Seamless Apple/LG Integration</h4>
+                    <p class="text-gray-300">Master the setup of all your Apple and LG co-developed smart devices, ensuring they communicate flawlessly within HomeKit. Get ready for the next wave of smart home tech!</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="text-4xl mb-4 text-green-400">⚙️ advanced</div>
+                    <h4 class="text-xl md:text-2xl font-bold text-white mb-3">Advanced HomeKit Automations</h4>
+                    <p class="text-gray-300">Unlock the true power of automation. Create custom scenes, triggers, and shortcuts that make your home anticipate your needs and react intelligently. Save time and energy!</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="text-4xl mb-4 text-yellow-400">🛡️ secure</div>
+                    <h4 class="text-xl md:text-2xl font-bold text-white mb-3">Bulletproof Smart Home Security</h4>
+                    <p class="text-gray-300">Implement best practices for securing your devices and network. Protect your privacy and ensure your smart home remains a safe sanctuary, not a vulnerability.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="text-4xl mb-4 text-purple-400">💡 solve</div>
+                    <h4 class="text-xl md:text-2xl font-bold text-white mb-3">Troubleshooting & Optimization</h4>
+                    <p class="text-gray-300">Navigate common issues like a pro. Learn effective troubleshooting techniques and optimize your Wi-Fi, hubs, and device placements for peak performance and reliability.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="text-4xl mb-4 text-red-400">📈 future-proof</div>
+                    <h4 class="text-xl md:text-2xl font-bold text-white mb-3">Future-Proof Your Ecosystem</h4>
+                    <p class="text-gray-300">Understand the foundational principles that apply to new devices and updates. Be ready for upcoming innovations and expand your smart home confidently.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-700">
+                    <div class="text-4xl mb-4 text-cyan-400">🎓 expert</div>
+                    <h4 class="text-xl md:text-2xl font-bold text-white mb-3">Comprehensive Step-by-Step Guides</h4>
+                    <p class="text-gray-300">No guesswork. Follow clear, concise instructions and video demonstrations (for video course) to set up everything from lights to thermostats with ease.</p>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Urgency Reminder -->
+    <section class="bg-gradient-to-r from-blue-700 to-blue-500 py-12 md:py-16 text-center shadow-inner">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h3 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
+                This Exclusive, Limited-Time Offer Ends Soon!
+            </h3>
+            <p class="text-lg md:text-xl text-blue-100 mb-8">
+                Due to the premium nature and personalized value, enrollment for 'The Ultimate Apple Smart Home Blueprint' is strictly limited. Act now to secure your access before it's gone and prices increase!
+            </p>
+            <a href="#waitlist" class="bg-white text-blue-700 font-bold py-4 px-10 rounded-full text-lg md:text-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out whitespace-nowrap">
+                Claim Your Premium Spot!
+            </a>
+        </div>
+    </section>
+
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h3 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center text-white mb-10">
+                Join the Exclusive Waitlist for Your Blueprint
+            </h3>
+            <p class="text-lg md:text-xl text-gray-300 text-center mb-8">
+                Be the first to know when 'The Ultimate Apple Smart Home Blueprint' officially launches and secure your 'Limited Time' premium discount for early birds!
+            </p>
+            <form class="bg-gray-900 p-8 md:p-10 rounded-lg shadow-2xl border border-gray-700">
+                <div class="mb-6">
+                    <label for="name" class="block text-gray-200 text-lg font-medium mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Appleseed"
+                           class="w-full px-5 py-3 rounded-md bg-gray-700 text-white border border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-lg"
+                           required>
+                </div>
+                <div class="mb-8">
+                    <label for="email" class="block text-gray-200 text-lg font-medium mb-2">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="john.appleseed@icloud.com"
+                           class="w-full px-5 py-3 rounded-md bg-gray-700 text-white border border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-lg"
+                           required>
+                </div>
+                <button type="submit" class="btn-gradient w-full text-white font-bold py-4 px-6 rounded-md text-xl md:text-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
+                    Sign Up for Early Access & Discount
+                </button>
+                <p class="text-sm text-gray-400 mt-4 text-center">We value your privacy. No spam, ever. Unsubscribe anytime.</p>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-700 py-8 text-center text-gray-500 text-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <div class="mt-4 space-x-4">
-                <a href="#" class="hover:text-gray-300">Terms of Service</a>
-                <a href="#" class="hover:text-gray-300">Privacy Policy</a>
-                <a href="#" class="hover:text-gray-300">Contact Us</a>
-            </div>
+    <footer class="bg-gray-950 py-8 text-center border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <p class="text-gray-400 text-sm">&copy; 2023 Digital Education Authority. All rights reserved.</p>
+            <p class="text-gray-500 text-xs mt-2">Empowering Apple enthusiasts with premium knowledge.</p>
         </div>
     </footer>
 
-    <!-- Countdown Timer Script -->
-    <script>
-        function setupCountdown(endDateString) {
-            const endDate = new Date(endDateString).getTime();
-            const countdownElement = document.getElementById('countdown');
-
-            if (!countdownElement) return; // Exit if countdown element doesn't exist
-
-            const updateCountdown = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = endDate - now;
-
-                if (distance < 0) {
-                    clearInterval(updateCountdown);
-                    countdownElement.innerHTML = "<span class='text-xl sm:text-2xl lg:text-3xl text-red-400'>⏰ OFFER EXPIRED!</span>";
-                    // Optionally disable the purchase button or change its text
-                    const ctaButton = document.querySelector('a[href="#order-form"]');
-                    if (ctaButton) {
-                        ctaButton.textContent = 'Offer Expired';
-                        ctaButton.classList.remove('bg-green-500', 'hover:bg-green-600');
-                        ctaButton.classList.add('bg-gray-500', 'cursor-not-allowed');
-                        ctaButton.removeAttribute('href');
-                        ctaButton.style.pointerEvents = 'none'; // Further disable clicks
-                    }
-                    const formButton = document.querySelector('#order-form button[type="submit"]');
-                    if (formButton) {
-                        formButton.textContent = 'Offer Expired';
-                        formButton.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
-                        formButton.classList.add('bg-gray-500', 'cursor-not-allowed');
-                        formButton.disabled = true;
-                    }
-
-                    return;
-                }
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-            }, 1000);
-        }
-
-        // Set the end date for the countdown. For a real deployment, this would be a specific date.
-        // For demonstration, let's set it to exactly 7 days from when this script runs.
-        const futureDate = new Date();
-        futureDate.setDate(futureDate.getDate() + 7); // 7 days from now
-        // futureDate.setHours(futureDate.getHours() + 1); // Uncomment for testing a shorter period like 1 hour
-
-        setupCountdown(futureDate.toISOString());
-    </script>
 </body>
 </html>
