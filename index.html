@@ -3,200 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ultimate Apple Smart Home Blueprint: Setup, Automate, Secure</title>
+    <title>Workspace AI Flow - Master Claude in Google Workspace</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for dark overlay on hero image */
-        .hero-background {
+        /* Custom styles for modern premium dark-mode aesthetic */
+        body {
+            background-color: #0a0a0a; /* Very dark background */
+            color: #e0e0e0; /* Light grey text */
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Specific hero background with provided image */
+        .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            position: relative;
+            background-repeat: no-repeat;
         }
-        .hero-background::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
-            z-index: 1;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        /* Custom styles for gradient button */
+        /* Gradient for buttons/highlights */
         .btn-gradient {
-            background-image: linear-gradient(to right, #3B82F6 0%, #2563EB 51%, #3B82F6 100%);
-            transition: 0.5s;
-            background-size: 200% auto;
+            background-image: linear-gradient(to right, #6366f1, #3b82f6, #0ea5e9); /* Indigo, Blue, Sky */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         .btn-gradient:hover {
-            background-position: right center; /* change the direction of the change here */
-            color: #fff;
-            text-decoration: none;
-        }
-        @keyframes pulse-gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        .limited-offer-pulse {
-            animation: pulse-gradient 4s ease infinite;
-            background-image: linear-gradient(to right, #ef4444 0%, #f97316 50%, #ef4444 100%);
-            background-size: 200% auto;
+            background-image: linear-gradient(to right, #3b82f6, #0ea5e9, #6366f1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="antialiased">
 
-    <!-- Header (Minimal for focus) -->
-    <header class="bg-gray-900 py-4 border-b border-gray-800 sticky top-0 z-50">
-        <div class="container mx-auto px-4 flex justify-center items-center">
-            <h1 class="text-2xl md:text-3xl font-bold text-white tracking-wide">Apple Smart Home Blueprint</h1>
+    <!-- Header Section -->
+    <header class="py-4 bg-gray-900 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center max-w-7xl">
+            <a href="#" class="text-2xl font-extrabold text-white tracking-tight">Workspace AI Flow</a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#features" class="text-gray-300 hover:text-white transition-colors duration-300">Features</a></li>
+                    <li><a href="#waitlist" class="text-gray-300 hover:text-white transition-colors duration-300">Waitlist</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-background relative min-h-screen flex items-center justify-center text-center py-16 md:py-24">
-        <div class="hero-content container mx-auto px-4 max-w-5xl">
-            <div class="inline-block limited-offer-pulse text-white text-sm md:text-base font-bold px-6 py-3 rounded-full mb-8 uppercase tracking-wider shadow-lg transform scale-105">
-                🚨 LIMITED TIME PREMIUM ACCESS! Don't Miss Out! 🚨
-            </div>
-            <h2 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg">
-                The Ultimate Apple Smart Home Blueprint
-            </h2>
-            <p class="text-lg md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto drop-shadow">
-                Go beyond basics. Master Apple HomeKit, seamlessly integrate the latest Apple/LG devices, and secure your intelligent living space with this comprehensive, premium guide.
+    <section class="relative hero-bg bg-fixed h-screen flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black opacity-75"></div> <!-- Dark overlay for text readability -->
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg">
+                Master Claude in Google Workspace: Automate & Collaborate
+            </h1>
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto drop-shadow-md">
+                Unlock advanced prompt management, custom automation workflows, and a shared intelligence hub for Claude directly within Google Docs, Sheets, and Slides.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
-                <a href="#waitlist" class="btn-gradient text-white font-bold py-4 px-10 rounded-full text-lg md:text-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out whitespace-nowrap">
-                    Secure Early Access & Discount!
-                </a>
-                <!-- Static countdown timer display -->
-                <div class="bg-gray-800 text-white rounded-lg p-4 text-center shadow-md border border-gray-700 w-full sm:w-auto">
-                    <p class="text-sm uppercase font-semibold text-gray-300 mb-2">Offer Ends In:</p>
-                    <div class="flex justify-center gap-4 mt-1">
-                        <span class="text-3xl md:text-4xl font-extrabold leading-none">03<span class="text-xs font-normal block mt-1">DAYS</span></span>
-                        <span class="text-3xl md:text-4xl font-extrabold leading-none">14<span class="text-xs font-normal block mt-1">HRS</span></span>
-                        <span class="text-3xl md:text-4xl font-extrabold leading-none">59<span class="text-xs font-normal block mt-1">MINS</span></span>
-                        <span class="text-3xl md:text-4xl font-extrabold leading-none">33<span class="text-xs font-normal block mt-1">SECS</span></span>
-                    </div>
-                </div>
-            </div>
+            <a href="#waitlist" class="inline-block btn-gradient text-white font-semibold py-3 px-8 rounded-full text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 ease-in-out">
+                Join the Exclusive Waitlist & Get Early Access
+            </a>
+            <p class="text-sm text-gray-400 mt-4">Leveraging the new Claude + Google Workspace integration for unparalleled productivity.</p>
         </div>
     </section>
 
-    <!-- Problem/Solution & Trend Section -->
-    <section class="py-16 md:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 max-w-4xl text-center">
-            <h3 class="text-3xl md:text-4xl font-bold text-white mb-8">
-                Navigating Apple's Expanding Smart Home Ecosystem Just Got Easier!
-            </h3>
-            <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
-                With Apple pushing deeper into the smart home, collaborating with giants like LG on doorbells, locks, and thermostats, the landscape is rapidly evolving. Are you ready to harness this powerful new era?
-            </p>
-            <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
-                This blueprint is your definitive guide to understanding and implementing every aspect of Apple's growing smart home presence, ensuring you stay ahead of the curve.
+    <!-- Value Proposition / Introduction Section -->
+    <section class="py-16 md:py-24 bg-gradient-to-b from-gray-900 to-black text-center px-4">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Transform your workflow, amplify your team.</h2>
+            <p class="text-lg text-gray-300 leading-relaxed">
+                The recent Claude integration with Google Workspace is a game-changer, but realizing its full potential requires more than just a sidebar. Workspace AI Flow provides the robust tools your team needs to centralize prompt knowledge, automate complex tasks, and collaborate seamlessly on AI-driven content generation and data analysis.
             </p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h3 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center text-white mb-12">
-                What You'll Master Inside This Blueprint:
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-700">
-                    <div class="text-4xl mb-4 text-blue-400">🍎 seamless</div>
-                    <h4 class="text-xl md:text-2xl font-bold text-white mb-3">Seamless Apple/LG Integration</h4>
-                    <p class="text-gray-300">Master the setup of all your Apple and LG co-developed smart devices, ensuring they communicate flawlessly within HomeKit. Get ready for the next wave of smart home tech!</p>
+    <section id="features" class="py-16 md:py-24 bg-black px-4">
+        <div class="container mx-auto max-w-7xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white text-center mb-16">
+                Features to Supercharge Your Workspace
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+
+                <!-- Feature 1: Advanced Prompt Management -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-blue-400 mb-4 text-5xl">💡</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Intelligent Prompt Library</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed">Organize, version control, and categorize your best Claude prompts. Find the perfect prompt every time, ensuring consistent, high-quality AI outputs.</p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-700">
-                    <div class="text-4xl mb-4 text-green-400">⚙️ advanced</div>
-                    <h4 class="text-xl md:text-2xl font-bold text-white mb-3">Advanced HomeKit Automations</h4>
-                    <p class="text-gray-300">Unlock the true power of automation. Create custom scenes, triggers, and shortcuts that make your home anticipate your needs and react intelligently. Save time and energy!</p>
+
+                <!-- Feature 2: Drag-and-Drop Workflow Builder -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 hover:border-green-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-green-400 mb-4 text-5xl">🚀</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Visual Automation Builder</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed">Craft powerful multi-step Claude workflows with an intuitive drag-and-drop interface. Automate tasks like summarizing Docs, extracting data to Sheets, and drafting Slides.</p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-700">
-                    <div class="text-4xl mb-4 text-yellow-400">🛡️ secure</div>
-                    <h4 class="text-xl md:text-2xl font-bold text-white mb-3">Bulletproof Smart Home Security</h4>
-                    <p class="text-gray-300">Implement best practices for securing your devices and network. Protect your privacy and ensure your smart home remains a safe sanctuary, not a vulnerability.</p>
+
+                <!-- Feature 3: Shared Intelligence Hub -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-purple-400 mb-4 text-5xl">🧠</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Collaborative Intelligence Hub</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed">Centralize your team's best practices, custom prompts, and automation recipes. Foster a shared knowledge base that scales AI adoption across your organization.</p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-700">
-                    <div class="text-4xl mb-4 text-purple-400">💡 solve</div>
-                    <h4 class="text-xl md:text-2xl font-bold text-white mb-3">Troubleshooting & Optimization</h4>
-                    <p class="text-gray-300">Navigate common issues like a pro. Learn effective troubleshooting techniques and optimize your Wi-Fi, hubs, and device placements for peak performance and reliability.</p>
+
+                <!-- Feature 4: Expert-Vetted Prompt Marketplace -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 hover:border-yellow-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-yellow-400 mb-4 text-5xl">🛍️</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Expert Prompt Marketplace</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed">Access a growing library of expert-vetted prompts and workflow templates. Accelerate your projects with proven AI solutions for diverse tasks and industries.</p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-700">
-                    <div class="text-4xl mb-4 text-red-400">📈 future-proof</div>
-                    <h4 class="text-xl md:text-2xl font-bold text-white mb-3">Future-Proof Your Ecosystem</h4>
-                    <p class="text-gray-300">Understand the foundational principles that apply to new devices and updates. Be ready for upcoming innovations and expand your smart home confidently.</p>
+
+                <!-- Feature 5: Native Google Workspace Integration -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 hover:border-red-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-red-400 mb-4 text-5xl">G</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Seamless G-Suite Integration</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed">Operate directly within Google Docs, Sheets, and Slides. Workspace AI Flow enhances Claude's native integration, keeping your workflow unified and efficient.</p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-gray-700">
-                    <div class="text-4xl mb-4 text-cyan-400">🎓 expert</div>
-                    <h4 class="text-xl md:text-2xl font-bold text-white mb-3">Comprehensive Step-by-Step Guides</h4>
-                    <p class="text-gray-300">No guesswork. Follow clear, concise instructions and video demonstrations (for video course) to set up everything from lights to thermostats with ease.</p>
+
+                <!-- Feature 6: Team Collaboration & Sharing -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 hover:border-orange-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-orange-400 mb-4 text-5xl">🤝</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Team-First Collaboration</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed">Effortlessly share custom automation recipes, prompt libraries, and insights with your team. Drive consistency and innovation across your entire organization.</p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Call to Action / Urgency Reminder -->
-    <section class="bg-gradient-to-r from-blue-700 to-blue-500 py-12 md:py-16 text-center shadow-inner">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h3 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
-                This Exclusive, Limited-Time Offer Ends Soon!
-            </h3>
-            <p class="text-lg md:text-xl text-blue-100 mb-8">
-                Due to the premium nature and personalized value, enrollment for 'The Ultimate Apple Smart Home Blueprint' is strictly limited. Act now to secure your access before it's gone and prices increase!
+    <!-- Waitlist / CTA Section with Countdown -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gray-900 text-center px-4">
+        <div class="container mx-auto max-w-3xl bg-gray-800 rounded-xl p-8 md:p-12 shadow-2xl border border-gray-700">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6 leading-tight">
+                Limited Time Offer: Join the Exclusive Waitlist!
+            </h2>
+            <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                Be among the first to experience the future of AI-powered productivity. Early birds get lifetime access to premium features at an unbeatable price!
             </p>
-            <a href="#waitlist" class="bg-white text-blue-700 font-bold py-4 px-10 rounded-full text-lg md:text-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out whitespace-nowrap">
-                Claim Your Premium Spot!
-            </a>
-        </div>
-    </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 max-w-2xl">
-            <h3 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center text-white mb-10">
-                Join the Exclusive Waitlist for Your Blueprint
-            </h3>
-            <p class="text-lg md:text-xl text-gray-300 text-center mb-8">
-                Be the first to know when 'The Ultimate Apple Smart Home Blueprint' officially launches and secure your 'Limited Time' premium discount for early birds!
-            </p>
-            <form class="bg-gray-900 p-8 md:p-10 rounded-lg shadow-2xl border border-gray-700">
-                <div class="mb-6">
-                    <label for="name" class="block text-gray-200 text-lg font-medium mb-2">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Appleseed"
-                           class="w-full px-5 py-3 rounded-md bg-gray-700 text-white border border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-lg"
-                           required>
+            <!-- Countdown Timer -->
+            <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 mb-10 flex-wrap">
+                <div class="bg-gray-700 p-3 sm:p-4 rounded-lg flex flex-col items-center min-w-[70px] sm:min-w-[90px] m-1">
+                    <span id="days" class="text-3xl sm:text-4xl font-bold text-white">00</span>
+                    <span class="text-gray-400 text-sm sm:text-base">Days</span>
                 </div>
-                <div class="mb-8">
-                    <label for="email" class="block text-gray-200 text-lg font-medium mb-2">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="john.appleseed@icloud.com"
-                           class="w-full px-5 py-3 rounded-md bg-gray-700 text-white border border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-lg"
-                           required>
+                <div class="text-3xl sm:text-4xl font-bold text-gray-400">:</div>
+                <div class="bg-gray-700 p-3 sm:p-4 rounded-lg flex flex-col items-center min-w-[70px] sm:min-w-[90px] m-1">
+                    <span id="hours" class="text-3xl sm:text-4xl font-bold text-white">00</span>
+                    <span class="text-gray-400 text-sm sm:text-base">Hours</span>
                 </div>
-                <button type="submit" class="btn-gradient w-full text-white font-bold py-4 px-6 rounded-md text-xl md:text-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
-                    Sign Up for Early Access & Discount
+                <div class="text-3xl sm:text-4xl font-bold text-gray-400">:</div>
+                <div class="bg-gray-700 p-3 sm:p-4 rounded-lg flex flex-col items-center min-w-[70px] sm:min-w-[90px] m-1">
+                    <span id="minutes" class="text-3xl sm:text-4xl font-bold text-white">00</span>
+                    <span class="text-gray-400 text-sm sm:text-base">Minutes</span>
+                </div>
+                <div class="text-3xl sm:text-4xl font-bold text-gray-400">:</div>
+                <div class="bg-gray-700 p-3 sm:p-4 rounded-lg flex flex-col items-center min-w-[70px] sm:min-w-[90px] m-1">
+                    <span id="seconds" class="text-3xl sm:text-4xl font-bold text-white">00</span>
+                    <span class="text-gray-400 text-sm sm:text-base">Seconds</span>
+                </div>
+            </div>
+
+            <form action="#" method="POST" class="max-w-md mx-auto space-y-4">
+                <div>
+                    <input type="email" id="email" name="email" placeholder="Enter your email for early access" required
+                           class="w-full p-4 rounded-md bg-gray-700 border border-gray-600 text-white focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400 text-lg shadow-md">
+                </div>
+                <button type="submit" class="w-full btn-gradient text-white font-semibold py-4 rounded-md text-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 ease-in-out">
+                    Secure My Spot Now!
                 </button>
-                <p class="text-sm text-gray-400 mt-4 text-center">We value your privacy. No spam, ever. Unsubscribe anytime.</p>
+                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, just exclusive early access updates.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 text-center border-t border-gray-800">
-        <div class="container mx-auto px-4">
-            <p class="text-gray-400 text-sm">&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <p class="text-gray-500 text-xs mt-2">Empowering Apple enthusiasts with premium knowledge.</p>
+    <footer class="py-8 bg-black text-center text-gray-500 text-sm px-4 border-t border-gray-800">
+        <div class="container mx-auto max-w-7xl">
+            <p>&copy; 2023 Workspace AI Flow. All rights reserved.</p>
+            <p class="mt-2">Empowering teams to achieve more with Claude in Google Docs, Sheets, and Slides.</p>
         </div>
     </footer>
 
+    <!-- Countdown Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now
+            let futureDate = countDownDate.getTime();
+
+            // Update the countdown every 1 second
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = futureDate - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the elements
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+                // If the countdown is over, write some text
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<p class='text-red-500 text-xl sm:text-2xl font-bold'>Offer Expired!</p>";
+                    // Optionally disable the form
+                    const waitlistButton = document.querySelector('#waitlist form button');
+                    waitlistButton.setAttribute('disabled', 'true');
+                    waitlistButton.classList.add('opacity-50', 'cursor-not-allowed');
+                    waitlistButton.classList.remove('hover:shadow-xl', 'transform', 'hover:-translate-y-1');
+                }
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
