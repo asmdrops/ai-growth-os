@@ -3,200 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workspace AI Flow - Master Claude in Google Workspace</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter for a modern look -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Mastering Your AI PC: Unleashing Productivity & Creativity with Windows 11 & Nvidia AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for modern premium dark-mode aesthetic */
         body {
-            background-color: #0a0a0a; /* Very dark background */
-            color: #e0e0e0; /* Light grey text */
             font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            background-color: #0d1117; /* Dark mode background */
+            color: #c9d1d9; /* Light grey text */
         }
-        /* Specific hero background with provided image */
         .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            position: relative;
+            z-index: 0;
         }
-        /* Gradient for buttons/highlights */
-        .btn-gradient {
-            background-image: linear-gradient(to right, #6366f1, #3b82f6, #0ea5e9); /* Indigo, Blue, Sky */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(13, 17, 23, 1) 0%, rgba(13, 17, 23, 0.7) 30%, rgba(13, 17, 23, 0.4) 60%, rgba(13, 17, 23, 0.1) 100%);
+            z-index: 1;
         }
-        .btn-gradient:hover {
-            background-image: linear-gradient(to right, #3b82f6, #0ea5e9, #6366f1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        .text-gradient {
+            background: linear-gradient(90deg, #7F00FF, #E100FF); /* Modern tech gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #7F00FF, #E100FF);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(127, 0, 255, 0.4);
+        }
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(30, 41, 59, 0.7); /* Darker semi-transparent background for countdown */
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            min-width: 4rem; /* Ensure consistent width */
+        }
+        .countdown-value {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+            line-height: 1;
+            color: #E100FF;
+        }
+        .countdown-label {
+            font-size: 0.75rem; /* text-xs */
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #9ca3af; /* text-gray-400 */
+            margin-top: 0.25rem;
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Header Section -->
-    <header class="py-4 bg-gray-900 shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4 flex justify-between items-center max-w-7xl">
-            <a href="#" class="text-2xl font-extrabold text-white tracking-tight">Workspace AI Flow</a>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="#features" class="text-gray-300 hover:text-white transition-colors duration-300">Features</a></li>
-                    <li><a href="#waitlist" class="text-gray-300 hover:text-white transition-colors duration-300">Waitlist</a></li>
-                </ul>
-            </nav>
+    <!-- Hero Section -->
+    <header class="hero-bg min-h-screen flex items-center justify-center p-4">
+        <div class="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 text-white tracking-tight">
+                Unleash the Future: <br class="sm:hidden">
+                <span class="text-gradient">Master Your New AI PC</span>
+            </h1>
+            <p class="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-300 font-light max-w-3xl mx-auto">
+                With Microsoft's new Nvidia-chip AI PCs redefining computing, now is the time to truly
+                <strong class="text-white">maximize your productivity & creativity</strong> with Windows 11 & Nvidia AI.
+            </p>
+
+            <div class="bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-sm rounded-xl p-6 sm:p-8 md:p-10 mb-10 border border-gray-700 max-w-xl mx-auto shadow-lg">
+                <h2 class="text-3xl font-bold mb-4 text-white text-gradient">
+                    Early Access Closes In:
+                </h2>
+                <div id="countdown" class="flex justify-center gap-4 sm:gap-6 mb-8 flex-wrap">
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="days">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+                <a href="#waitlist-form" class="btn-primary inline-block text-white font-bold py-3 px-8 rounded-full text-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    Secure Your Early Access Spot
+                </a>
+                <p class="text-sm text-gray-400 mt-4">Limited spots available for early bird pricing.</p>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative hero-bg bg-fixed h-screen flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black opacity-75"></div> <!-- Dark overlay for text readability -->
-        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg">
-                Master Claude in Google Workspace: Automate & Collaborate
-            </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto drop-shadow-md">
-                Unlock advanced prompt management, custom automation workflows, and a shared intelligence hub for Claude directly within Google Docs, Sheets, and Slides.
-            </p>
-            <a href="#waitlist" class="inline-block btn-gradient text-white font-semibold py-3 px-8 rounded-full text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 ease-in-out">
-                Join the Exclusive Waitlist & Get Early Access
-            </a>
-            <p class="text-sm text-gray-400 mt-4">Leveraging the new Claude + Google Workspace integration for unparalleled productivity.</p>
-        </div>
-    </section>
-
-    <!-- Value Proposition / Introduction Section -->
-    <section class="py-16 md:py-24 bg-gradient-to-b from-gray-900 to-black text-center px-4">
-        <div class="container mx-auto max-w-3xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Transform your workflow, amplify your team.</h2>
-            <p class="text-lg text-gray-300 leading-relaxed">
-                The recent Claude integration with Google Workspace is a game-changer, but realizing its full potential requires more than just a sidebar. Workspace AI Flow provides the robust tools your team needs to centralize prompt knowledge, automate complex tasks, and collaborate seamlessly on AI-driven content generation and data analysis.
-            </p>
-        </div>
-    </section>
-
     <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 bg-black px-4">
-        <div class="container mx-auto max-w-7xl">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white text-center mb-16">
-                Features to Supercharge Your Workspace
+    <section class="py-16 sm:py-24 bg-gray-900 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 text-white">
+                What You'll Achieve with <span class="text-gradient">Mastering Your AI PC</span>
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+            <p class="text-lg text-gray-300 text-center max-w-3xl mx-auto mb-16">
+                Navigate the cutting-edge landscape of AI-powered computing. This comprehensive course equips you with the
+                skills to transform your new AI PC into an unparalleled productivity and creative powerhouse.
+            </p>
 
-                <!-- Feature 1: Advanced Prompt Management -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-blue-400 mb-4 text-5xl">💡</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Intelligent Prompt Library</h3>
-                    <p class="text-gray-300 text-lg leading-relaxed">Organize, version control, and categorize your best Claude prompts. Find the perfect prompt every time, ensuring consistent, high-quality AI outputs.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 rounded-lg p-6 sm:p-8 flex flex-col items-start border border-gray-700 shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-purple-400 text-4xl mb-4">✨</div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Copilot & Windows 11 AI Mastery</h3>
+                    <p class="text-gray-300 text-base flex-grow">
+                        Unlock the full potential of Copilot and Windows 11's integrated AI features. Learn to automate tasks,
+                        enhance creativity, and boost your daily workflow efficiency with practical, step-by-step tutorials.
+                    </p>
                 </div>
-
-                <!-- Feature 2: Drag-and-Drop Workflow Builder -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 hover:border-green-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-green-400 mb-4 text-5xl">🚀</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Visual Automation Builder</h3>
-                    <p class="text-gray-300 text-lg leading-relaxed">Craft powerful multi-step Claude workflows with an intuitive drag-and-drop interface. Automate tasks like summarizing Docs, extracting data to Sheets, and drafting Slides.</p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 rounded-lg p-6 sm:p-8 flex flex-col items-start border border-gray-700 shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-purple-400 text-4xl mb-4">🚀</div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Nvidia AI Hardware Optimization</h3>
+                    <p class="text-gray-300 text-base flex-grow">
+                        Get expert optimization guides for your Nvidia hardware. Squeeze every ounce of performance for AI
+                        applications, gaming (with productivity focus), and demanding creative tasks.
+                    </p>
                 </div>
-
-                <!-- Feature 3: Shared Intelligence Hub -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-purple-400 mb-4 text-5xl">🧠</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Collaborative Intelligence Hub</h3>
-                    <p class="text-gray-300 text-lg leading-relaxed">Centralize your team's best practices, custom prompts, and automation recipes. Foster a shared knowledge base that scales AI adoption across your organization.</p>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 rounded-lg p-6 sm:p-8 flex flex-col items-start border border-gray-700 shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-purple-400 text-4xl mb-4">💡</div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Essential AI-Powered Applications</h3>
+                    <p class="text-gray-300 text-base flex-grow">
+                        Discover, review, and integrate the best AI-powered applications across various categories – from
+                        writing and design to data analysis and development. Streamline your digital toolkit.
+                    </p>
                 </div>
-
-                <!-- Feature 4: Expert-Vetted Prompt Marketplace -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 hover:border-yellow-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-yellow-400 mb-4 text-5xl">🛍️</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Expert Prompt Marketplace</h3>
-                    <p class="text-gray-300 text-lg leading-relaxed">Access a growing library of expert-vetted prompts and workflow templates. Accelerate your projects with proven AI solutions for diverse tasks and industries.</p>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 rounded-lg p-6 sm:p-8 flex flex-col items-start border border-gray-700 shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-purple-400 text-4xl mb-4">🧑‍💻</div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Advanced Strategies for Power Users & Developers</h3>
+                    <p class="text-gray-300 text-base flex-grow">
+                        Dive deep into advanced AI strategies. For developers, explore local LLMs, custom AI models, and
+                        integration workflows. For power users, master advanced automation and system-level AI tweaks.
+                    </p>
                 </div>
-
-                <!-- Feature 5: Native Google Workspace Integration -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 hover:border-red-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-red-400 mb-4 text-5xl">G</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Seamless G-Suite Integration</h3>
-                    <p class="text-gray-300 text-lg leading-relaxed">Operate directly within Google Docs, Sheets, and Slides. Workspace AI Flow enhances Claude's native integration, keeping your workflow unified and efficient.</p>
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 rounded-lg p-6 sm:p-8 flex flex-col items-start border border-gray-700 shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-purple-400 text-4xl mb-4">🎁</div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Exclusive Tools & Templates (Premium Tiers)</h3>
+                    <p class="text-gray-300 text-base flex-grow">
+                        Elevate your mastery with premium access to exclusive software tools, custom AI templates, and
+                        advanced scripts designed to give you a significant edge.
+                    </p>
                 </div>
-
-                <!-- Feature 6: Team Collaboration & Sharing -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 hover:border-orange-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-orange-400 mb-4 text-5xl">🤝</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Team-First Collaboration</h3>
-                    <p class="text-gray-300 text-lg leading-relaxed">Effortlessly share custom automation recipes, prompt libraries, and insights with your team. Drive consistency and innovation across your entire organization.</p>
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 rounded-lg p-6 sm:p-8 flex flex-col items-start border border-gray-700 shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-purple-400 text-4xl mb-4">🌐</div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">Vibrant Community & Regular Updates</h3>
+                    <p class="text-gray-300 text-base flex-grow">
+                        Join an exclusive community of AI PC enthusiasts (premium tiers). Stay ahead with regularly
+                        updated content covering the latest AI advancements and Windows 11 features.
+                    </p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / CTA Section with Countdown -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gray-900 text-center px-4">
-        <div class="container mx-auto max-w-3xl bg-gray-800 rounded-xl p-8 md:p-12 shadow-2xl border border-gray-700">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6 leading-tight">
-                Limited Time Offer: Join the Exclusive Waitlist!
+    <!-- Waitlist Form Section -->
+    <section id="waitlist-form" class="py-16 sm:py-24 bg-gray-900 border-t border-gray-800">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 text-white">
+                <span class="text-gradient">Don't Miss Out</span> on the Future of Productivity
             </h2>
-            <p class="text-lg text-gray-300 mb-8 leading-relaxed">
-                Be among the first to experience the future of AI-powered productivity. Early birds get lifetime access to premium features at an unbeatable price!
+            <p class="text-lg text-gray-300 mb-8 max-w-xl mx-auto">
+                Be the first to know when 'Mastering Your AI PC' launches. Join our exclusive waitlist for early access pricing and special bonuses!
             </p>
 
-            <!-- Countdown Timer -->
-            <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 mb-10 flex-wrap">
-                <div class="bg-gray-700 p-3 sm:p-4 rounded-lg flex flex-col items-center min-w-[70px] sm:min-w-[90px] m-1">
-                    <span id="days" class="text-3xl sm:text-4xl font-bold text-white">00</span>
-                    <span class="text-gray-400 text-sm sm:text-base">Days</span>
+            <form class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700">
+                <div class="mb-6">
+                    <label for="name" class="block text-left text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="w-full px-4 py-3 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50 transition duration-200" required>
                 </div>
-                <div class="text-3xl sm:text-4xl font-bold text-gray-400">:</div>
-                <div class="bg-gray-700 p-3 sm:p-4 rounded-lg flex flex-col items-center min-w-[70px] sm:min-w-[90px] m-1">
-                    <span id="hours" class="text-3xl sm:text-4xl font-bold text-white">00</span>
-                    <span class="text-gray-400 text-sm sm:text-base">Hours</span>
+                <div class="mb-8">
+                    <label for="email" class="block text-left text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                           class="w-full px-4 py-3 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50 transition duration-200" required>
                 </div>
-                <div class="text-3xl sm:text-4xl font-bold text-gray-400">:</div>
-                <div class="bg-gray-700 p-3 sm:p-4 rounded-lg flex flex-col items-center min-w-[70px] sm:min-w-[90px] m-1">
-                    <span id="minutes" class="text-3xl sm:text-4xl font-bold text-white">00</span>
-                    <span class="text-gray-400 text-sm sm:text-base">Minutes</span>
-                </div>
-                <div class="text-3xl sm:text-4xl font-bold text-gray-400">:</div>
-                <div class="bg-gray-700 p-3 sm:p-4 rounded-lg flex flex-col items-center min-w-[70px] sm:min-w-[90px] m-1">
-                    <span id="seconds" class="text-3xl sm:text-4xl font-bold text-white">00</span>
-                    <span class="text-gray-400 text-sm sm:text-base">Seconds</span>
-                </div>
-            </div>
-
-            <form action="#" method="POST" class="max-w-md mx-auto space-y-4">
-                <div>
-                    <input type="email" id="email" name="email" placeholder="Enter your email for early access" required
-                           class="w-full p-4 rounded-md bg-gray-700 border border-gray-600 text-white focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400 text-lg shadow-md">
-                </div>
-                <button type="submit" class="w-full btn-gradient text-white font-semibold py-4 rounded-md text-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 ease-in-out">
-                    Secure My Spot Now!
+                <button type="submit" class="btn-primary w-full text-white font-bold py-3 px-6 rounded-full text-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    Join the Exclusive Waitlist Now!
                 </button>
-                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, just exclusive early access updates.</p>
+                <p class="text-sm text-gray-400 mt-4">Your information is 100% secure and will not be shared.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 bg-black text-center text-gray-500 text-sm px-4 border-t border-gray-800">
-        <div class="container mx-auto max-w-7xl">
-            <p>&copy; 2023 Workspace AI Flow. All rights reserved.</p>
-            <p class="mt-2">Empowering teams to achieve more with Claude in Google Docs, Sheets, and Slides.</p>
+    <footer class="bg-gray-900 text-gray-500 text-center py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p>&copy; 2024 Mastering Your AI PC. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Countdown Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the date we're counting down to (e.g., 7 days from now)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now
-            let futureDate = countDownDate.getTime();
+        // Countdown Timer Logic
+        function startCountdown() {
+            // Set the launch date for a limited time offer (e.g., 7 days from now)
+            const launchDate = new Date();
+            launchDate.setDate(launchDate.getDate() + 7); // 7 days from now
+            // You can also set a specific date like:
+            // const launchDate = new Date("December 31, 2024 23:59:59").getTime();
 
-            // Update the countdown every 1 second
-            const x = setInterval(function() {
+            const countdownFunction = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = futureDate - now;
+                const distance = launchDate - now;
 
                 // Time calculations for days, hours, minutes and seconds
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -212,16 +247,14 @@
 
                 // If the countdown is over, write some text
                 if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<p class='text-red-500 text-xl sm:text-2xl font-bold'>Offer Expired!</p>";
-                    // Optionally disable the form
-                    const waitlistButton = document.querySelector('#waitlist form button');
-                    waitlistButton.setAttribute('disabled', 'true');
-                    waitlistButton.classList.add('opacity-50', 'cursor-not-allowed');
-                    waitlistButton.classList.remove('hover:shadow-xl', 'transform', 'hover:-translate-y-1');
+                    clearInterval(countdownFunction);
+                    document.getElementById("countdown").innerHTML = "<p class='text-xl text-red-400'>Early Access Closed!</p>";
+                    // Optionally disable the form or change the CTA
                 }
             }, 1000);
-        });
+        }
+
+        document.addEventListener('DOMContentLoaded', startCountdown);
     </script>
 </body>
 </html>
