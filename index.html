@@ -1,261 +1,250 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M365 Family Storage & AI Mastery Kit | Limited Time Launch</title>
-    <!-- Tailwind CSS v3 via CDN - includes JIT compilation for modern usage -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Googlebook Gemini AI Productivity Masterclass - Waitlist</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for Hero background image for better control */
-        .hero-bg {
+        /* Custom styles for the hero background image to ensure full coverage and responsiveness */
+        .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
 
-        /* Responsive Countdown Styling */
-        .countdown-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem; /* Base size for mobile */
-            font-weight: bold;
-            line-height: 1;
-        }
-        .countdown-item span {
-            font-size: 0.75rem; /* Label size for mobile */
-            font-weight: normal;
-            margin-top: 0.25rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #d1d5db; /* gray-300 */
+        /* Basic animation for fade-in effect on page load */
+        @keyframes fadeInMoveUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        /* Adjust countdown sizes for larger screens */
-        @media (min-width: 640px) { /* sm breakpoint */
-            .countdown-item { font-size: 3rem; }
-            .countdown-item span { font-size: 1rem; }
+        .animate-fade-in-up {
+            animation: fadeInMoveUp 0.8s ease-out forwards;
+            opacity: 0; /* Start invisible */
         }
-        @media (min-width: 1024px) { /* lg breakpoint */
-            .countdown-item { font-size: 4.5rem; }
-            .countdown-item span { font-size: 1.25rem; }
-        }
-
-        /* Form input styling for consistent dark theme */
-        .form-input {
-            @apply w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-200 placeholder-gray-400;
-        }
+        .animate-fade-in-up.delay-200 { animation-delay: 0.2s; }
+        .animate-fade-in-up.delay-400 { animation-delay: 0.4s; }
+        .animate-fade-in-up.delay-600 { animation-delay: 0.6s; }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-200 font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased overflow-x-hidden">
 
     <!-- Hero Section -->
-    <header class="relative overflow-hidden min-h-screen flex items-center justify-center text-center py-16 md:py-24 lg:py-32 hero-bg">
-        <div class="absolute inset-0 bg-gradient-to-br from-black to-gray-900 opacity-80"></div> <!-- Dark gradient overlay for depth -->
-        <div class="relative z-10 container mx-auto px-4 max-w-7xl">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6 drop-shadow-lg">
-                Unlock the Full Power of Microsoft 365 Family:
-                <br class="hidden sm:inline"> Storage Mastery & AI Sharing for Your Household
+    <header class="relative hero-background min-h-screen flex items-center justify-center p-4">
+        <!-- Dark overlay for text readability -->
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+        
+        <div class="relative z-10 text-center max-w-4xl mx-auto py-20 px-6 sm:px-8 lg:px-12">
+            <!-- Trend integration as a subtle headline -->
+            <span class="text-blue-400 text-sm sm:text-base font-semibold uppercase tracking-wider mb-4 block animate-fade-in-up">
+                The Verge: "A week with Googlebooks: four notes from our testing so far"
+            </span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6 animate-fade-in-up delay-200">
+                Unlock Peak Productivity: The Googlebook Gemini AI Masterclass
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto drop-shadow-md">
-                Reclaim precious storage, master the new 2TB limit, and seamlessly leverage the powerful new M365 AI benefits with every family member.
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto animate-fade-in-up delay-400">
+                Master the new OS and its integrated AI from setup to advanced utilization. Be among the first to harness its full power and revolutionize your workflow.
             </p>
-            <div class="mb-12">
-                <p class="text-xl sm:text-2xl font-semibold text-red-400 mb-4 uppercase tracking-wider animate-pulse">Limited Time Launch Discount Ends In:</p>
-                <div id="countdown" class="flex justify-center space-x-3 sm:space-x-6 md:space-x-8 text-white">
-                    <div class="countdown-item">
-                        <span id="days">00</span>
-                        <span>Days</span>
+
+            <!-- Limited Time Offer & Countdown -->
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 rounded-lg shadow-lg mb-12 transform hover:scale-105 transition-transform duration-300 animate-fade-in-up delay-600">
+                <p class="text-2xl font-bold mb-3">Limited-Time Early Access Window Closing Soon!</p>
+                <!-- Countdown timer placeholder - dynamic values would be handled by JavaScript -->
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-4xl sm:text-5xl font-extrabold">
+                    <div class="flex flex-col items-center">
+                        <span class="block">00</span>
+                        <span class="text-sm font-medium">Days</span>
                     </div>
-                    <div class="countdown-item">
-                        <span id="hours">00</span>
-                        <span>Hours</span>
+                    <span>:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="block">00</span>
+                        <span class="text-sm font-medium">Hours</span>
                     </div>
-                    <div class="countdown-item">
-                        <span id="minutes">00</span>
-                        <span>Minutes</span>
+                    <span>:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="block">00</span>
+                        <span class="text-sm font-medium">Mins</span>
                     </div>
-                    <div class="countdown-item">
-                        <span id="seconds">00</span>
-                        <span>Seconds</span>
+                    <span>:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="block">00</span>
+                        <span class="text-sm font-medium">Secs</span>
                     </div>
                 </div>
             </div>
-            <a href="#waitlist-form" class="inline-block bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-bold py-4 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl ring-2 ring-blue-500 ring-offset-2 ring-offset-gray-950">
-                Get Your Mastery Kit & Limited-Time Discount Now!
+
+            <!-- Call to Action Button -->
+            <a href="#waitlist-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 animate-fade-in-up delay-800">
+                Join the Exclusive Waitlist Now!
             </a>
         </div>
     </header>
 
-    <!-- Problem/Opportunity Section -->
-    <section class="py-16 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 max-w-5xl text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Are You Maximizing Your Microsoft 365 Family Subscription?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                <div class="p-6 bg-gray-800 rounded-xl shadow-2xl border border-gray-700 transform hover:translate-y-[-5px] transition duration-300">
-                    <h3 class="text-2xl font-semibold text-white mb-4 flex items-center"><span class="text-red-400 mr-3 text-3xl">🚫</span> Overwhelmed by Storage?</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Multiple family members mean a rapid accumulation of files, photos, and documents, quickly pushing your 1TB OneDrive limit. Avoid clutter and data loss with proven strategies.
-                    </p>
-                </div>
-                <div class="p-6 bg-gray-800 rounded-xl shadow-2xl border border-gray-700 transform hover:translate-y-[-5px] transition duration-300">
-                    <h3 class="text-2xl font-semibold text-white mb-4 flex items-center"><span class="text-green-400 mr-3 text-3xl">🚀</span> Ready for Shared AI Benefits?</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        The exciting new M365 Family AI features are here! But how do you efficiently integrate and share these powerful tools for maximum productivity across your entire household?
-                    </p>
-                </div>
-            </div>
-            <p class="text-xl text-gray-300 mt-12 max-w-3xl mx-auto">
-                The **'Microsoft 365 Family Storage & AI Mastery Kit'** is your definitive solution to these challenges, providing clarity, control, and cutting-edge leverage.
-            </p>
-        </div>
-    </section>
-
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-950">
-        <div class="container mx-auto px-4 max-w-6xl text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-16">What You'll Master with This Comprehensive Kit</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section class="py-16 sm:py-20 lg:py-24 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-white mb-12 sm:mb-16">
+                What You'll Achieve with This Masterclass
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
                 <!-- Feature 1 -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 border border-gray-800">
-                    <div class="text-5xl text-blue-500 mb-4 drop-shadow-md">📚</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Expert Digital Guide & Toolkit</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Gain access to an in-depth eBook and exclusive video course, your ultimate roadmap to M365 Family domination.
+                <div class="bg-gray-700 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-400 text-4xl mb-4">✨</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Seamless Setup & Optimization</h3>
+                    <p class="text-gray-300 text-base sm:text-lg">
+                        Go from unboxing to peak performance with expert guidance on configuring your Googlebook Gemini AI for optimal speed and efficiency.
                     </p>
                 </div>
                 <!-- Feature 2 -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 border border-gray-800">
-                    <div class="text-5xl text-purple-500 mb-4 drop-shadow-md">💾</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Effortless OneDrive Downsizing</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Step-by-step strategies to declutter, organize, and significantly reduce your OneDrive storage footprint for good.
+                <div class="bg-gray-700 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-400 text-4xl mb-4">🤖</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Mastering Gemini AI Integration</h3>
+                    <p class="text-gray-300 text-base sm:text-lg">
+                        Learn advanced prompt engineering and seamlessly integrate Gemini AI into every aspect of your workflow for intelligent assistance.
                     </p>
                 </div>
                 <!-- Feature 3 -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 border border-gray-800">
-                    <div class="text-5xl text-green-500 mb-4 drop-shadow-md">☁️</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Seamless Data Migration Blueprint</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Expert guidance on safely and efficiently migrating data to alternative cloud services, if and when needed.
+                <div class="bg-gray-700 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-400 text-4xl mb-4">🚀</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Workflow Automation & Smart Organization</h3>
+                    <p class="text-gray-300 text-base sm:text-lg">
+                        Automate repetitive tasks, leverage AI for smarter file management, and keep your digital life perfectly organized.
                     </p>
                 </div>
                 <!-- Feature 4 -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 border border-gray-800">
-                    <div class="text-5xl text-yellow-500 mb-4 drop-shadow-md">📈</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Optimize for the New 2TB Limit</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Discover smart strategies to maximize file usage and shared storage efficiently within the evolving 2TB M365 Family storage limit.
+                <div class="bg-gray-700 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-400 text-4xl mb-4">💡</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Advanced Productivity Hacks</h3>
+                    <p class="text-gray-300 text-base sm:text-lg">
+                        Discover hidden features and pro-level techniques to squeeze every ounce of productivity out of your Googlebook and Gemini AI.
                     </p>
                 </div>
                 <!-- Feature 5 -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 border border-gray-800">
-                    <div class="text-5xl text-red-500 mb-4 drop-shadow-md">🧠</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Leverage & Share M365 AI Benefits</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        A practical, hands-on guide to effectively utilizing and sharing the powerful new AI features with every family member, enhancing creativity and productivity.
+                <div class="bg-gray-700 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-400 text-4xl mb-4">✅</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Troubleshooting & Best Practices</h3>
+                    <p class="text-gray-300 text-base sm:text-lg">
+                        Confidently tackle common issues and implement industry-leading best practices for long-term smooth operation.
                     </p>
                 </div>
                 <!-- Feature 6 -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 border border-gray-800">
-                    <div class="text-5xl text-cyan-500 mb-4 drop-shadow-md">👨‍👩‍👧‍👦</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Transform Family Productivity</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Turn your M365 subscription into a true family powerhouse, streamlining tasks, fostering creativity, and achieving superior digital organization for everyone.
+                <div class="bg-gray-700 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-400 text-4xl mb-4">🤝</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Exclusive Community Access</h3>
+                    <p class="text-gray-300 text-base sm:text-lg">
+                        Join a private network of early adopters and experts for ongoing support, Q&A, and advanced strategies.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / Call to Action Form -->
-    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 max-w-xl text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Secure Your Kit at the Exclusive Launch Discount!</h2>
-            <p class="text-lg text-gray-300 mb-8">
-                Don't miss this limited-time opportunity to get your **'Microsoft 365 Family Storage & AI Mastery Kit'** at a special introductory price.
-                Enter your details below for instant access to the course and your discount.
+    <!-- Waitlist Form Section -->
+    <section id="waitlist-form" class="py-16 sm:py-20 lg:py-24 bg-gray-900">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6">
+                Be First in Line for the Future of Productivity
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-xl mx-auto">
+                Join the exclusive waitlist to secure early access and a special launch discount for the Googlebook Gemini AI Productivity Masterclass. Limited spots available!
             </p>
-            <form action="#" method="POST" class="bg-gray-800 p-8 rounded-xl shadow-2xl space-y-6 border border-gray-700">
-                <div>
-                    <label for="name" class="sr-only">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Full Name" required
-                           class="form-input">
-                </div>
-                <div>
-                    <label for="email" class="sr-only">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
-                           class="form-input">
-                </div>
-                <button type="submit"
-                        class="w-full bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-bold py-4 px-8 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg ring-2 ring-blue-500 ring-offset-2 ring-offset-gray-800">
-                    Get Instant Access & The Discount!
-                </button>
-            </form>
-            <p class="text-sm text-gray-500 mt-6">
-                Your privacy is paramount. We will never share your information.
-            </p>
+
+            <div class="bg-gray-800 p-8 rounded-lg shadow-2xl border border-blue-600">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="sr-only">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" required
+                               class="w-full p-4 rounded-md bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring-blue-500 text-white placeholder-gray-400 transition duration-200">
+                    </div>
+                    <div>
+                        <label for="email" class="sr-only">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
+                               class="w-full p-4 rounded-md bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring-blue-500 text-white placeholder-gray-400 transition duration-200">
+                    </div>
+                    <button type="submit"
+                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-md text-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">
+                        Join the Waitlist & Get Notified!
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm border-t border-gray-800">
-        <div class="container mx-auto px-4">
+    <footer class="bg-gray-900 text-gray-500 text-center py-8 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
             <p class="mt-2">
-                <a href="#" class="hover:text-gray-300 transition duration-300 mx-2">Privacy Policy</a> |
-                <a href="#" class="hover:text-gray-300 transition duration-300 mx-2">Terms of Service</a>
+                <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a> |
+                <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a>
             </p>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
+    <!--
+    NOTE: The prompt specifically requested "ONLY raw HTML".
+    A functional countdown timer would require JavaScript.
+    The HTML structure above provides the visual placeholder for the countdown.
+    For a fully functional countdown, you would integrate a JavaScript snippet like the one below:
+
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the countdown date for 7 days from now as a dynamic launch window.
-            const countdownDate = new Date();
-            countdownDate.setDate(countdownDate.getDate() + 7); // 7 days from page load
-            // For a fixed launch, replace the above line with:
-            // const countdownDate = new Date("December 31, 2023 23:59:59").getTime(); // Example fixed date
+        document.addEventListener('DOMContentLoaded', () => {
+            const countdownElement = document.getElementById('countdown');
+            if (!countdownElement) return;
 
-            const x = setInterval(function() {
+            // Set your target date here (e.g., 7 days from now)
+            const targetDate = new Date();
+            targetDate.setDate(targetDate.getDate() + 7); // Example: 7 days from page load
+
+            const updateCountdown = () => {
                 const now = new Date().getTime();
-                const distance = countdownDate - now;
+                const distance = targetDate.getTime() - now;
 
-                // Time calculations for days, hours, minutes and seconds
+                if (distance < 0) {
+                    countdownElement.innerHTML = '<span class="text-red-400 text-2xl">Offer Expired!</span>';
+                    return;
+                }
+
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Display the result in the corresponding elements, ensuring two digits
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                countdownElement.innerHTML = `
+                    <div class="flex flex-col items-center">
+                        <span class="block">${String(days).padStart(2, '0')}</span>
+                        <span class="text-sm font-medium">Days</span>
+                    </div>
+                    <span>:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="block">${String(hours).padStart(2, '0')}</span>
+                        <span class="text-sm font-medium">Hours</span>
+                    </div>
+                    <span>:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="block">${String(minutes).padStart(2, '0')}</span>
+                        <span class="text-sm font-medium">Mins</span>
+                    </div>
+                    <span>:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="block">${String(seconds).padStart(2, '0')}</span>
+                        <span class="text-sm font-medium">Secs</span>
+                    </div>
+                `;
+            };
 
-                // If the countdown is over, hide countdown and update CTA
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<p class='text-red-500 text-2xl sm:text-3xl font-bold animate-fade-in'>Discount Period Has Ended!</p>";
-                    const discountMessage = document.querySelector('.animate-pulse');
-                    if (discountMessage) discountMessage.style.display = 'none';
-
-                    const ctaButtons = document.querySelectorAll('a[href="#waitlist-form"], #waitlist-form button[type="submit"]');
-                    ctaButtons.forEach(button => {
-                        button.textContent = "Get the Mastery Kit Now (Full Price)";
-                        if (button.tagName === 'BUTTON') {
-                            button.classList.remove('from-blue-600', 'to-indigo-700', 'hover:from-blue-700', 'hover:to-indigo-800', 'ring-blue-500');
-                            button.classList.add('bg-gray-600', 'cursor-not-allowed', 'hover:bg-gray-600', 'ring-gray-500');
-                            // Optionally disable the button: button.disabled = true;
-                        }
-                    });
-                }
-            }, 1000);
+            updateCountdown(); // Initial call
+            setInterval(updateCountdown, 1000); // Update every second
         });
     </script>
+    -->
 </body>
 </html>
