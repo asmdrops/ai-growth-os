@@ -1,250 +1,261 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProLocal AI - Unleash Your AI PC's Full Potential (Nvidia + Windows 11)</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%236366F1' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 14H10c-.55 0-1-.45-1-1v-4c0-.55.45-1 1-1h5.5c.55 0 1 .45 1 1v4c0 .55-.45 1-1 1zM11 11.5v3H9v-3h2zm3.5 3H12v-3h2.5v3z'/%3E%3C/svg%3E" type="image/svg+xml">
+    <title>M365 Family Storage & AI Mastery Kit | Limited Time Launch</title>
+    <!-- Tailwind CSS v3 via CDN - includes JIT compilation for modern usage -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles for the hero background image */
-        .hero-background {
+        /* Custom styles for Hero background image for better control */
+        .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
 
-        /* Ultra-responsive fluid typography adjustments for larger screens */
-        @media (min-width: 1536px) { /* Tailwind's 2xl breakpoint and above */
-            .hero-headline { font-size: 6.5rem; line-height: 1.05; } /* ~104px */
-            .hero-subheadline { font-size: 3rem; line-height: 1.3; } /* ~48px */
-            .section-headline { font-size: 4.5rem; line-height: 1.15; } /* ~72px */
+        /* Responsive Countdown Styling */
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem; /* Base size for mobile */
+            font-weight: bold;
+            line-height: 1;
         }
-        @media (min-width: 1280px) and (max-width: 1535px) { /* Tailwind's xl breakpoint */
-            .hero-headline { font-size: 5.5rem; line-height: 1.1; } /* ~88px */
-            .hero-subheadline { font-size: 2.5rem; line-height: 1.35; } /* ~40px */
-            .section-headline { font-size: 4rem; line-height: 1.2; } /* ~64px */
+        .countdown-item span {
+            font-size: 0.75rem; /* Label size for mobile */
+            font-weight: normal;
+            margin-top: 0.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #d1d5db; /* gray-300 */
         }
-        @media (min-width: 1024px) and (max-width: 1279px) { /* Tailwind's lg breakpoint */
-            .hero-headline { font-size: 4.5rem; line-height: 1.15; } /* ~72px */
-            .hero-subheadline { font-size: 2rem; line-height: 1.4; } /* ~32px */
-            .section-headline { font-size: 3.5rem; line-height: 1.25; } /* ~56px */
+
+        /* Adjust countdown sizes for larger screens */
+        @media (min-width: 640px) { /* sm breakpoint */
+            .countdown-item { font-size: 3rem; }
+            .countdown-item span { font-size: 1rem; }
         }
-        @media (min-width: 768px) and (max-width: 1023px) { /* Tailwind's md breakpoint */
-            .hero-headline { font-size: 3.5rem; line-height: 1.2; } /* ~56px */
-            .hero-subheadline { font-size: 1.75rem; line-height: 1.4; } /* ~28px */
-            .section-headline { font-size: 3rem; line-height: 1.3; } /* ~48px */
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .countdown-item { font-size: 4.5rem; }
+            .countdown-item span { font-size: 1.25rem; }
         }
-        /* Default for small screens (sm and below) handled by Tailwind utility classes */
+
+        /* Form input styling for consistent dark theme */
+        .form-input {
+            @apply w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-200 placeholder-gray-400;
+        }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-50 antialiased font-sans">
+<body class="bg-gray-950 text-gray-200 font-sans antialiased">
 
     <!-- Hero Section -->
-    <section class="relative hero-background min-h-screen flex items-center justify-center p-4 overflow-hidden">
-        <div class="absolute inset-0 bg-black bg-opacity-75 backdrop-blur-sm"></div>
-        <div class="relative z-10 max-w-6xl mx-auto text-center py-16 md:py-24 lg:py-32 xl:py-48">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl hero-headline font-extrabold leading-tight text-white mb-6">
-                Unleash Your AI PC's True Power
+    <header class="relative overflow-hidden min-h-screen flex items-center justify-center text-center py-16 md:py-24 lg:py-32 hero-bg">
+        <div class="absolute inset-0 bg-gradient-to-br from-black to-gray-900 opacity-80"></div> <!-- Dark gradient overlay for depth -->
+        <div class="relative z-10 container mx-auto px-4 max-w-7xl">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6 drop-shadow-lg">
+                Unlock the Full Power of Microsoft 365 Family:
+                <br class="hidden sm:inline"> Storage Mastery & AI Sharing for Your Household
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl hero-subheadline text-gray-200 mb-10 max-w-4xl mx-auto">
-                Discover ProLocal AI: The curated marketplace and management tool for productivity-focused local AI models on your new Nvidia-chip Windows 11 PC.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto drop-shadow-md">
+                Reclaim precious storage, master the new 2TB limit, and seamlessly leverage the powerful new M365 AI benefits with every family member.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
-                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105 text-lg sm:text-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
-                    Join the Waitlist Now!
-                </a>
-                <a href="#features" class="text-indigo-300 hover:text-indigo-400 font-semibold py-3 px-8 rounded-full border border-indigo-500 hover:border-indigo-600 transition-colors duration-300 text-lg sm:text-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
-                    Learn More
-                </a>
-            </div>
-
-            <!-- Limited Time Countdown -->
-            <div class="bg-gradient-to-r from-purple-700 via-indigo-600 to-blue-700 p-6 rounded-xl shadow-2xl inline-block max-w-full lg:max-w-2xl mx-auto border-4 border-indigo-400/50">
-                <p class="text-xl sm:text-2xl font-bold mb-4 text-white uppercase tracking-wider">Early Access Launch In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-6 text-white">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold drop-shadow-lg">00</span>
-                        <span class="text-sm sm:text-base font-medium text-indigo-200 uppercase tracking-wide">Days</span>
+            <div class="mb-12">
+                <p class="text-xl sm:text-2xl font-semibold text-red-400 mb-4 uppercase tracking-wider animate-pulse">Limited Time Launch Discount Ends In:</p>
+                <div id="countdown" class="flex justify-center space-x-3 sm:space-x-6 md:space-x-8 text-white">
+                    <div class="countdown-item">
+                        <span id="days">00</span>
+                        <span>Days</span>
                     </div>
-                    <span class="text-4xl sm:text-5xl lg:text-6xl font-extrabold drop-shadow-lg">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold drop-shadow-lg">00</span>
-                        <span class="text-sm sm:text-base font-medium text-indigo-200 uppercase tracking-wide">Hours</span>
+                    <div class="countdown-item">
+                        <span id="hours">00</span>
+                        <span>Hours</span>
                     </div>
-                    <span class="text-4xl sm:text-5xl lg:text-6xl font-extrabold drop-shadow-lg">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold drop-shadow-lg">00</span>
-                        <span class="text-sm sm:text-base font-medium text-indigo-200 uppercase tracking-wide">Minutes</span>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <span>Minutes</span>
                     </div>
-                    <span class="text-4xl sm:text-5xl lg:text-6xl font-extrabold drop-shadow-lg">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold drop-shadow-lg">00</span>
-                        <span class="text-sm sm:text-base font-medium text-indigo-200 uppercase tracking-wide">Seconds</span>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <span>Seconds</span>
                     </div>
                 </div>
             </div>
+            <a href="#waitlist-form" class="inline-block bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-bold py-4 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl ring-2 ring-blue-500 ring-offset-2 ring-offset-gray-950">
+                Get Your Mastery Kit & Limited-Time Discount Now!
+            </a>
+        </div>
+    </header>
+
+    <!-- Problem/Opportunity Section -->
+    <section class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-5xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Are You Maximizing Your Microsoft 365 Family Subscription?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <div class="p-6 bg-gray-800 rounded-xl shadow-2xl border border-gray-700 transform hover:translate-y-[-5px] transition duration-300">
+                    <h3 class="text-2xl font-semibold text-white mb-4 flex items-center"><span class="text-red-400 mr-3 text-3xl">🚫</span> Overwhelmed by Storage?</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Multiple family members mean a rapid accumulation of files, photos, and documents, quickly pushing your 1TB OneDrive limit. Avoid clutter and data loss with proven strategies.
+                    </p>
+                </div>
+                <div class="p-6 bg-gray-800 rounded-xl shadow-2xl border border-gray-700 transform hover:translate-y-[-5px] transition duration-300">
+                    <h3 class="text-2xl font-semibold text-white mb-4 flex items-center"><span class="text-green-400 mr-3 text-3xl">🚀</span> Ready for Shared AI Benefits?</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        The exciting new M365 Family AI features are here! But how do you efficiently integrate and share these powerful tools for maximum productivity across your entire household?
+                    </p>
+                </div>
+            </div>
+            <p class="text-xl text-gray-300 mt-12 max-w-3xl mx-auto">
+                The **'Microsoft 365 Family Storage & AI Mastery Kit'** is your definitive solution to these challenges, providing clarity, control, and cutting-edge leverage.
+            </p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 lg:py-32 bg-gray-900 text-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl section-headline font-extrabold text-center text-white mb-12 lg:mb-16 leading-tight">
-                Unlock Unprecedented Productivity with Local AI
-            </h2>
-            <p class="text-lg text-center text-gray-300 max-w-3xl mx-auto mb-16">
-                ProLocal AI is engineered to maximize the power of your Nvidia-chip AI PC, bringing advanced AI capabilities directly to your desktop.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-                <!-- Feature 1: One-Click Installation -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
-                    <div class="text-indigo-500 mb-4">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13H7l3-3 3 3H11v4H9v-4z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 21v-4a2 2 0 012-2h4a2 2 0 012 2v4a2 2 0 01-2 2h-4a2 2 0 01-2-2zM4 4h16V3a1 1 0 00-1-1H5a1 1 0 00-1 1v1zM2 6h20v14a2 2 0 01-2 2H4a2 2 0 01-2-2V6zm2-2v16"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Effortless One-Click Installation</h3>
-                    <p class="text-gray-300 text-lg">
-                        Browse, select, and install powerful local AI models with a single click. No complex setups, no terminal commands. Just seamless integration.
+    <section class="py-16 md:py-24 bg-gray-950">
+        <div class="container mx-auto px-4 max-w-6xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-16">What You'll Master with This Comprehensive Kit</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 border border-gray-800">
+                    <div class="text-5xl text-blue-500 mb-4 drop-shadow-md">📚</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Expert Digital Guide & Toolkit</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Gain access to an in-depth eBook and exclusive video course, your ultimate roadmap to M365 Family domination.
                     </p>
                 </div>
-
-                <!-- Feature 2: Performance Optimization -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
-                    <div class="text-indigo-500 mb-4">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Peak Performance, Always</h3>
-                    <p class="text-gray-300 text-lg">
-                        ProLocal AI automatically optimizes models for your Nvidia GPU, ensuring lightning-fast execution and efficient resource utilization on Windows 11.
+                <!-- Feature 2 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 border border-gray-800">
+                    <div class="text-5xl text-purple-500 mb-4 drop-shadow-md">💾</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Effortless OneDrive Downsizing</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Step-by-step strategies to declutter, organize, and significantly reduce your OneDrive storage footprint for good.
                     </p>
                 </div>
-
-                <!-- Feature 3: Integrated LLMs for Creation -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
-                    <div class="text-indigo-500 mb-4">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Enhanced Document & Content Creation</h3>
-                    <p class="text-gray-300 text-lg">
-                        Integrate powerful local LLMs into your workflow. Draft reports, generate creative content, and refine text with AI that never leaves your machine.
+                <!-- Feature 3 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 border border-gray-800">
+                    <div class="text-5xl text-green-500 mb-4 drop-shadow-md">☁️</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Seamless Data Migration Blueprint</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Expert guidance on safely and efficiently migrating data to alternative cloud services, if and when needed.
                     </p>
                 </div>
-
-                <!-- Feature 4: Advanced Data Analysis -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
-                    <div class="text-indigo-500 mb-4">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M18 21V9a2 2 0 00-2-2H8a2 2 0 00-2 2v12m.5-11h11a2 2 0 012 2v11a2 2 0 01-2 2h-11a2 2 0 01-2-2v-11a2 2 0 012-2z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Private Data Analysis Power</h3>
-                    <p class="text-gray-300 text-lg">
-                        Perform complex data analysis using local AI models, keeping your sensitive information securely on your device. Zero cloud exposure.
+                <!-- Feature 4 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 border border-gray-800">
+                    <div class="text-5xl text-yellow-500 mb-4 drop-shadow-md">📈</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Optimize for the New 2TB Limit</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Discover smart strategies to maximize file usage and shared storage efficiently within the evolving 2TB M365 Family storage limit.
                     </p>
                 </div>
-
-                <!-- Feature 5: Curated Marketplace -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
-                    <div class="text-indigo-500 mb-4">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Curated & Verified Marketplace</h3>
-                    <p class="text-gray-300 text-lg">
-                        Access a growing library of hand-picked, high-quality AI models optimized for your hardware. Only the best for your productivity.
+                <!-- Feature 5 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 border border-gray-800">
+                    <div class="text-5xl text-red-500 mb-4 drop-shadow-md">🧠</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Leverage & Share M365 AI Benefits</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        A practical, hands-on guide to effectively utilizing and sharing the powerful new AI features with every family member, enhancing creativity and productivity.
                     </p>
                 </div>
-
-                <!-- Feature 6: Centralized Management -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
-                    <div class="text-indigo-500 mb-4">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Comprehensive AI Model Management</h3>
-                    <p class="text-gray-300 text-lg">
-                        Keep track of all your local AI models from one intuitive dashboard. Update, uninstall, and monitor performance with ease.
+                <!-- Feature 6 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 border border-gray-800">
+                    <div class="text-5xl text-cyan-500 mb-4 drop-shadow-md">👨‍👩‍👧‍👦</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Transform Family Productivity</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Turn your M365 subscription into a true family powerhouse, streamlining tasks, fostering creativity, and achieving superior digital organization for everyone.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 lg:py-32 bg-gray-950 text-gray-50">
-        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-gray-800 p-8 sm:p-10 md:p-12 rounded-2xl shadow-2xl border border-indigo-700/50">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
-                Be the First to Experience ProLocal AI
-            </h2>
-            <p class="text-lg text-gray-300 mb-10">
-                Join our exclusive waitlist for early access, special launch offers, and updates on how to supercharge your Nvidia AI PC.
+    <!-- Waitlist / Call to Action Form -->
+    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Secure Your Kit at the Exclusive Launch Discount!</h2>
+            <p class="text-lg text-gray-300 mb-8">
+                Don't miss this limited-time opportunity to get your **'Microsoft 365 Family Storage & AI Mastery Kit'** at a special introductory price.
+                Enter your details below for instant access to the course and your discount.
             </p>
-            <form class="space-y-6">
+            <form action="#" method="POST" class="bg-gray-800 p-8 rounded-xl shadow-2xl space-y-6 border border-gray-700">
                 <div>
-                    <label for="name" class="sr-only">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required
-                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white placeholder-gray-400 outline-none transition-colors duration-200 text-lg">
+                    <label for="name" class="sr-only">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Full Name" required
+                           class="form-input">
                 </div>
                 <div>
-                    <label for="email" class="sr-only">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
-                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white placeholder-gray-400 outline-none transition-colors duration-200 text-lg">
+                    <label for="email" class="sr-only">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
+                           class="form-input">
                 </div>
                 <button type="submit"
-                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg shadow-xl transform transition-transform duration-300 hover:scale-105 text-xl tracking-wide focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
-                    Join the ProLocal AI Waitlist
+                        class="w-full bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-bold py-4 px-8 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg ring-2 ring-blue-500 ring-offset-2 ring-offset-gray-800">
+                    Get Instant Access & The Discount!
                 </button>
-                <p class="text-sm text-gray-400 mt-4">
-                    We value your privacy. Your information will not be shared.
-                </p>
             </form>
+            <p class="text-sm text-gray-500 mt-6">
+                Your privacy is paramount. We will never share your information.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 text-gray-400 text-center">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p>&copy; 2024 ProLocal AI. All rights reserved. Built for the next generation of AI PCs.</p>
-            <div class="mt-4 flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-6">
-                <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a>
-                <span class="hidden sm:inline-block text-gray-600">|</span>
-                <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a>
-            </div>
+    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="hover:text-gray-300 transition duration-300 mx-2">Privacy Policy</a> |
+                <a href="#" class="hover:text-gray-300 transition duration-300 mx-2">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
-    <!-- Countdown Script -->
+    <!-- JavaScript for Countdown Timer -->
     <script>
-        // Set the launch date (e.g., 30 days from now)
-        const launchDate = new Date();
-        launchDate.setDate(launchDate.getDate() + 30); // Sets launch date to 30 days from today
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the countdown date for 7 days from now as a dynamic launch window.
+            const countdownDate = new Date();
+            countdownDate.setDate(countdownDate.getDate() + 7); // 7 days from page load
+            // For a fixed launch, replace the above line with:
+            // const countdownDate = new Date("December 31, 2023 23:59:59").getTime(); // Example fixed date
 
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = launchDate.getTime() - now;
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countdownDate - now;
 
-            // Calculate time units
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Display the result in the elements
-            document.getElementById("days").innerText = String(days).padStart(2, '0');
-            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+                // Display the result in the corresponding elements, ensuring two digits
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-            // If the countdown is over, display a message
-            if (distance < 0) {
-                clearInterval(countdownInterval);
-                document.getElementById("countdown").innerHTML = "<p class='text-xl sm:text-2xl font-bold text-white'>ProLocal AI is LIVE! Get it now!</p>";
-            }
-        }
+                // If the countdown is over, hide countdown and update CTA
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<p class='text-red-500 text-2xl sm:text-3xl font-bold animate-fade-in'>Discount Period Has Ended!</p>";
+                    const discountMessage = document.querySelector('.animate-pulse');
+                    if (discountMessage) discountMessage.style.display = 'none';
 
-        // Initial call to display the countdown immediately
-        updateCountdown();
-
-        // Update the countdown every 1 second
-        const countdownInterval = setInterval(updateCountdown, 1000);
+                    const ctaButtons = document.querySelectorAll('a[href="#waitlist-form"], #waitlist-form button[type="submit"]');
+                    ctaButtons.forEach(button => {
+                        button.textContent = "Get the Mastery Kit Now (Full Price)";
+                        if (button.tagName === 'BUTTON') {
+                            button.classList.remove('from-blue-600', 'to-indigo-700', 'hover:from-blue-700', 'hover:to-indigo-800', 'ring-blue-500');
+                            button.classList.add('bg-gray-600', 'cursor-not-allowed', 'hover:bg-gray-600', 'ring-gray-500');
+                            // Optionally disable the button: button.disabled = true;
+                        }
+                    });
+                }
+            }, 1000);
+        });
     </script>
 </body>
 </html>
