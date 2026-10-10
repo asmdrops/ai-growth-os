@@ -3,182 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BirdSense AI - Advanced Bird Feeder Intelligence</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>TrendCast AI: Instant Expert Podcasts from Real-Time Industry Trends</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
+        /* Custom styles for modern dark mode and responsiveness */
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
+
+        /* Custom scrollbar for a premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* dark gray */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* slightly lighter gray */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280;
+        }
+
+        /* Hero section background image with overlay */
         .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            position: relative;
         }
-        /* Custom gradient text utility for premium look */
-        .gradient-text {
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding-bottom: 80px; /* Space for the floating button, if any */
         }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100">
 
-    <!-- Hero Section -->
-    <header class="relative hero-background min-h-screen flex items-center justify-center py-20 px-4">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
-        <div class="relative z-10 text-center max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 gradient-text bg-gradient-to-r from-blue-400 to-green-300">
-                Unlock the Secret Lives of Birds with BirdSense AI
-            </h1>
-            <p class="text-xl sm:text-2xl text-gray-300 mb-10 leading-relaxed">
-                Your smart bird feeder has a secret admirer – BirdSense AI. Integrate seamlessly to transcend basic identification and dive into advanced species recognition, migration analytics, and real-time rare sighting alerts.
-            </p>
-            <div class="space-y-4 sm:space-y-0 sm:space-x-6">
-                <a href="#waitlist" class="inline-block bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    Join the Early Access Waitlist
-                </a>
-                <a href="#features" class="inline-block text-gray-200 border-2 border-gray-400 hover:border-blue-400 py-3 px-8 rounded-full transform hover:scale-105 transition duration-300 ease-in-out">
-                    Discover Features
-                </a>
+    <!-- Navigation (Simple and sticky for modern feel) -->
+    <nav class="bg-gray-900 p-4 md:p-6 shadow-xl sticky top-0 z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-400 hover:text-blue-300 transition-colors duration-300">TrendCast AI</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#features" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">Features</a>
+                <a href="#waitlist" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-base font-semibold shadow-md transition-all duration-300 transform hover:scale-105">Join Waitlist</a>
             </div>
+            <!-- Mobile Menu Toggle (hamburger icon) -->
+            <button class="md:hidden text-gray-300 hover:text-white focus:outline-none p-2 rounded-md">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
 
-            <!-- Limited Time Offer Banner -->
-            <div class="mt-12 p-4 bg-yellow-600 bg-opacity-30 border border-yellow-500 rounded-lg max-w-sm mx-auto animate-pulse">
-                <p class="text-lg font-semibold text-yellow-200">
-                    <span class="text-xl font-bold">Limited Time Offer:</span> Early birds get 30% off Premium for 6 months!
-                </p>
-                <p class="text-sm text-yellow-300 mt-2">
-                    Exclusive discount for our first waitlist sign-ups. Don't miss out!
-                </p>
-                <!-- A real countdown would require JavaScript, which is outside the "ONLY raw HTML" scope.
-                     This textual offer with animation simulates the urgency. -->
+    <!-- Hero Section -->
+    <header class="hero-background min-h-screen flex items-center justify-center text-center p-4 sm:p-8 lg:p-16 relative">
+        <div class="hero-overlay"></div>
+        <div class="hero-content max-w-4xl mx-auto space-y-6 md:space-y-8 lg:space-y-10">
+            <span class="bg-blue-600 text-white text-sm sm:text-base font-semibold px-4 py-2 rounded-full inline-block mb-4 shadow-lg animate-pulse">
+                &#128293; AI-Powered Content Revolution
+            </span>
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight text-white drop-shadow-2xl">
+                Stop Chasing Trends.<br class="hidden sm:inline"> Start <span class="text-blue-400">Leading</span> Conversations.
+            </h1>
+            <p class="text-xl sm:text-2xl lg:text-3xl text-gray-200 mt-4 max-w-2xl mx-auto drop-shadow-xl">
+                Turn breaking industry news, <em class="text-blue-400 font-semibold">like Apple's latest AI moves</em>, into expert podcast episodes in minutes.
+            </p>
+            <p class="text-lg sm:text-xl text-gray-300 font-medium">
+                TrendCast AI monitors your industry's pulse, instantly generating full podcast outlines, scripts, show notes, and promotional content.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+                <a href="#waitlist" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-8 rounded-full text-lg shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
+                    &#128640; Get Early Access
+                </a>
+                <a href="#features" class="inline-block bg-gray-700 hover:bg-gray-600 text-gray-200 font-bold py-3.5 px-8 rounded-full text-lg shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
+                    &#128173; Learn How It Works
+                </a>
             </div>
+            <p class="mt-8 text-sm text-gray-400">
+                Trusted by B2B Thought Leaders & Industry Podcasters looking for a competitive edge.
+            </p>
         </div>
     </header>
 
-    <!-- Features Section -->
-    <section id="features" class="py-20 px-4 bg-gray-900">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl sm:text-5xl font-bold text-center mb-16 gradient-text bg-gradient-to-r from-blue-400 to-green-300">
-                Features That Bring Your Backyard to Life
+    <main class="container mx-auto px-4 py-16 sm:py-24">
+
+        <!-- Features Section -->
+        <section id="features" class="py-16 md:py-24 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6">
+                Your Expert Podcast, <span class="text-blue-400">Faster Than Ever.</span>
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Feature 1: Advanced AI Species Identification -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-5xl text-blue-400 mb-6">&#128038;</div> <!-- Bird emoji -->
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Advanced AI Species Identification</h3>
-                    <p class="text-gray-300">
-                        Go beyond your feeder's basic capabilities. Our cutting-edge AI identifies over 1,000 bird species with unmatched accuracy, recognizing even subtle variations.
+            <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+                TrendCast AI streamlines your content creation, allowing you to focus on your insights, not the mechanics.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Feature 1: Real-Time Trend Monitoring -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-in-out border border-gray-700">
+                    <div class="text-blue-400 mb-4 text-5xl">
+                        &#9889;
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Real-Time Trend Monitoring</h3>
+                    <p class="text-gray-300 text-base">
+                        Our AI constantly scans industry news, patents, and acquisitions – like the recent <span class="font-semibold text-blue-300">Apple AI acqui-hire founded by former NotebookLM developers</span> – to pinpoint crucial topics relevant to your audience. Never miss a beat.
                     </p>
                 </div>
-                <!-- Feature 2: Migration Pattern Analytics -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-5xl text-green-400 mb-6">&#128200;</div> <!-- Chart emoji -->
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Migration Pattern Analytics</h3>
-                    <p class="text-gray-300">
-                        Track seasonal movements and understand migration patterns specific to your region. Be ready for the arrival of rare visitors with predictive insights.
+
+                <!-- Feature 2: Automated Episode Outlines -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-in-out border border-gray-700">
+                    <div class="text-blue-400 mb-4 text-5xl">
+                        &#128172;
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Automated Episode Outlines</h3>
+                    <p class="text-gray-300 text-base">
+                        Based on trending topics, TrendCast AI crafts comprehensive podcast outlines, ensuring logical flow, key discussion points, and a professional structure for every episode.
                     </p>
                 </div>
-                <!-- Feature 3: Real-time Rare Sighting Alerts -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-5xl text-red-400 mb-6">&#128226;</div> <!-- Bell emoji -->
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Real-time Rare Sighting Alerts</h3>
-                    <p class="text-gray-300">
-                        Never miss a unique moment. Get instant notifications when a rare or unusual bird is detected in your feeder or local area.
+
+                <!-- Feature 3: Drafted Scripts & Show Notes -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-in-out border border-gray-700">
+                    <div class="text-blue-400 mb-4 text-5xl">
+                        &#128221;
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Drafted Scripts & Show Notes</h3>
+                    <p class="text-gray-300 text-base">
+                        From the outline, receive a well-researched script draft, complete with talking points, data, and context. Plus, instant show notes for easy audience reference.
                     </p>
                 </div>
-                <!-- Feature 4: Vibrant Bird Enthusiast Community -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-5xl text-purple-400 mb-6">&#128101;</div> <!-- People emoji -->
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Vibrant Bird Enthusiast Community</h3>
-                    <p class="text-gray-300">
-                        Connect with fellow bird lovers, share stunning photos, discuss observations, and contribute to citizen science efforts globally.
+
+                <!-- Feature 4: Instant Social Promotion -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-in-out border border-gray-700">
+                    <div class="text-blue-400 mb-4 text-5xl">
+                        &#128226;
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Instant Social Promotion</h3>
+                    <p class="text-gray-300 text-base">
+                        Don't just create, amplify. Get ready-to-use social media posts, compelling headlines, and engaging captions tailored for your episode, boosting visibility across platforms.
                     </p>
                 </div>
-                <!-- Feature 5: Multi-Feeder Brand Integration -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-5xl text-yellow-400 mb-6">&#128279;</div> <!-- Link emoji -->
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Multi-Feeder Brand Integration</h3>
-                    <p class="text-gray-300">
-                        BirdSense AI seamlessly connects with popular smart bird feeder brands, extending their capabilities without needing new hardware.
+
+                <!-- Feature 5: Targeted for B2B & Thought Leaders -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-in-out border border-gray-700">
+                    <div class="text-blue-400 mb-4 text-5xl">
+                        &#128200;
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Targeted B2B Expertise</h3>
+                    <p class="text-gray-300 text-base">
+                        Our AI is trained on expert-level content, ensuring your podcasts maintain a high standard of insight and relevance, perfect for influencing industry professionals and decision-makers.
                     </p>
                 </div>
-                <!-- Feature 6: Historical Data Access (Premium) -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 border border-gray-700">
-                    <div class="text-5xl text-pink-400 mb-6">&#128270;</div> <!-- Magnifying glass emoji -->
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Historical Data & Trends (Premium)</h3>
-                    <p class="text-gray-300">
-                        Unlock an archive of past sightings, detailed statistics, and long-term trend analysis for a complete picture of your bird activity (Premium feature).
+
+                <!-- Feature 6: Customizable & Editable Outputs -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-in-out border border-gray-700">
+                    <div class="text-blue-400 mb-4 text-5xl">
+                        &#128161;
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Fully Customizable Outputs</h3>
+                    <p class="text-gray-300 text-base">
+                        While powerful, TrendCast AI provides a robust foundation. Every output is fully editable, allowing you to infuse your unique voice, expert perspective, and brand identity seamlessly.
                     </p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-20 px-4 bg-gray-800">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-4xl sm:text-5xl font-bold mb-6 gradient-text bg-gradient-to-r from-green-300 to-blue-400">
-                Be the First to Experience BirdSense AI
+        <!-- Waitlist Section -->
+        <section id="waitlist" class="py-16 md:py-24 text-center bg-gray-800 rounded-3xl shadow-2xl p-6 md:p-12 border border-gray-700">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6">
+                Be First. Be Heard. <span class="text-blue-400">Join the Waitlist.</span>
             </h2>
-            <p class="text-xl text-gray-300 mb-8">
-                Join our exclusive waitlist for early access, product updates, and special launch offers!
+            <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Limited spots available for early access to TrendCast AI. Don't miss the opportunity to transform your podcast workflow.
             </p>
 
-            <form action="#" method="POST" class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700">
-                <div class="mb-6 text-yellow-200 text-lg font-semibold animate-pulse">
-                    🚀 Don't Miss Out! Sign up now for a chance to get 30% off your first 6 months of BirdSense AI Premium!
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                        <label for="name" class="block text-left text-sm font-medium text-gray-400 mb-2">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe"
-                               class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500 transition duration-200 ease-in-out" required>
-                    </div>
-                    <div>
-                        <label for="email" class="block text-left text-sm font-medium text-gray-400 mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                               class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500 transition duration-200 ease-in-out" required>
-                    </div>
-                </div>
-                <div class="mb-6">
-                    <label for="feeder_brand" class="block text-left text-sm font-medium text-gray-400 mb-2">Which smart bird feeder brand do you currently use? (Optional)</label>
-                    <select id="feeder_brand" name="feeder_brand"
-                            class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-500 transition duration-200 ease-in-out">
-                        <option value="">Select your brand</option>
-                        <option value="birdfy">Birdfy</option>
-                        <option value="netvue">Netvue Birdfy</option>
-                        <option value="soliom">Soliom</option>
-                        <option value="heimlink">Heimlink</option>
-                        <option value="other">Other</option>
-                        <option value="none">I don't own one yet</option>
-                    </select>
-                </div>
-                <button type="submit"
-                        class="w-full bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    Get Early Access Now!
-                </button>
-                <p class="text-sm text-gray-500 mt-4">
-                    We respect your privacy. No spam, ever.
+            <!-- Limited Time Countdown Banner (simulated as text for raw HTML) -->
+            <div class="bg-gradient-to-r from-red-700 to-orange-600 border border-red-600 text-white p-5 md:p-6 rounded-lg mb-10 max-w-lg mx-auto shadow-xl animate-pulse-fast">
+                <p class="text-xl sm:text-2xl font-bold flex items-center justify-center gap-3">
+                    &#128336; Early Bird Access Closes Soon!
                 </p>
+                <p class="text-sm sm:text-base mt-2">
+                    Secure your spot now and be among the first to innovate. Limited Beta Invitations available.
+                    <!-- In a live deployment, a JavaScript countdown timer would replace this line. -->
+                </p>
+            </div>
+
+            <form class="max-w-xl mx-auto space-y-6">
+                <div>
+                    <label for="name" class="sr-only">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Full Name"
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 text-base"
+                           required>
+                </div>
+                <div>
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Professional Email Address"
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 text-base"
+                           required>
+                </div>
+                <div>
+                    <label for="role" class="sr-only">Your Role/Industry</label>
+                    <input type="text" id="role" name="role" placeholder="Your Role or Industry (e.g., Tech Podcaster, Marketing Director)"
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 text-base">
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-xl shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
+                    &#128073; Join TrendCast AI Waitlist Now!
+                </button>
             </form>
-        </div>
-    </section>
+            <p class="text-sm text-gray-400 mt-6">
+                We respect your privacy. Your information will not be shared or sold.
+            </p>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 px-4 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto text-center text-gray-400 text-sm">
-            <p>&copy; 2023 BirdSense AI. All rights reserved.</p>
+    <footer class="bg-gray-900 border-t border-gray-800 py-8 text-center text-gray-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; 2023 TrendCast AI. All rights reserved.</p>
             <p class="mt-2">
-                <a href="#" class="text-blue-400 hover:text-blue-300 transition duration-200 ease-in-out">Privacy Policy</a> |
-                <a href="#" class="text-blue-400 hover:text-blue-300 transition duration-200 ease-in-out">Terms of Service</a>
+                <a href="#" class="hover:text-white transition-colors duration-300 mx-2">Privacy Policy</a>
+                <span class="text-gray-700">|</span>
+                <a href="#" class="hover:text-white transition-colors duration-300 mx-2">Terms of Service</a>
             </p>
         </div>
     </footer>
