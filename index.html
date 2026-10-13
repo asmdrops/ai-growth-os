@@ -1,193 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple Foldable Foresight: Investor & Supply Chain Brief</title>
+    <title>The Apple Home Collection Power User Blueprint - Early Bird Access</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍎</text></svg>">
     <style>
-        .hero-bg {
+        /* Custom scrollbar for a premium dark-mode feel */
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+        body::-webkit-scrollbar-track {
+            background: #1a202c; /* Tailwind gray-900 */
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #4a5568; /* Tailwind gray-600 */
+            border-radius: 20px;
+            border: 2px solid #1a202c;
+        }
+        .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        }
+        /* Subtle pulse animation for the headline */
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.9; }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 5s infinite ease-in-out;
         }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="relative hero-bg bg-opacity-70 text-center py-20 md:py-32 lg:py-48 flex items-center justify-center min-h-screen">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
-        <div class="relative z-10 max-w-4xl mx-auto px-4">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-indigo-300">
-                Unfold Apple's Future: <br class="sm:hidden">Exclusive Foldable Foresight Brief
+    <section class="relative min-h-screen hero-background bg-cover bg-center flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto py-16 sm:py-24 lg:py-32">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white mb-6 animate-pulse-slow">
+                Unlock the <span class="text-indigo-400">Full Power</span> of Your Apple Home Collection
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl mb-8 font-light text-gray-200">
-                Navigate the Complexities of Apple's Foldable Device Strategy – <span class="font-semibold text-indigo-200">Before the Market Reacts.</span>
-            </p>
-            <p class="text-md sm:text-lg mb-8 text-gray-300">
-                The buzz is real: <em class="italic text-gray-200">"Foldable iPhone sales are reportedly going to be riddled with problems - PhoneArena."</em> <br>Are you equipped to profit from – or mitigate against – these shifts?
+            <p class="text-lg sm:text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
+                Discover "The Apple Home Collection Power User Blueprint" – your premium guide to master setup, advanced automations, robust security, and the best compatible devices.
+                <span class="block mt-2 font-semibold">Stay ahead with the latest integrations like LG and Schneider!</span>
             </p>
 
-            <!-- Limited Time Offer & Countdown -->
-            <div class="bg-indigo-800 bg-opacity-50 p-6 rounded-lg shadow-xl mb-10 border border-indigo-700">
-                <h2 class="text-xl sm:text-2xl font-bold mb-4 text-indigo-100">
-                    <span class="animate-pulse mr-2">🚨</span> Early Access Bonus: Join the Waitlist Now!
-                </h2>
-                <p class="text-lg mb-4 text-gray-200">
-                    Secure your spot for exclusive early content and a special launch discount.
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-700 p-6 rounded-xl shadow-2xl mb-12 transform hover:scale-105 transition-transform duration-300">
+                <p class="text-2xl sm:text-3xl font-bold mb-4 text-white">
+                    Limited-Time Early Adopter Discount Ends In:
                 </p>
-                <div class="flex justify-center items-center space-x-4 mb-6">
-                    <div class="text-center">
-                        <span id="countdown-days" class="block text-4xl md:text-5xl font-bold text-white">00</span>
-                        <span class="block text-sm text-gray-300">Days</span>
-                    </div>
-                    <span class="text-4xl md:text-5xl font-bold text-white">:</span>
-                    <div class="text-center">
-                        <span id="countdown-hours" class="block text-4xl md:text-5xl font-bold text-white">00</span>
-                        <span class="block text-sm text-gray-300">Hours</span>
-                    </div>
-                    <span class="text-4xl md:text-5xl font-bold text-white">:</span>
-                    <div class="text-center">
-                        <span id="countdown-minutes" class="block text-4xl md:text-5xl font-bold text-white">00</span>
-                        <span class="block text-sm text-gray-300">Minutes</span>
-                    </div>
-                    <span class="text-4xl md:text-5xl font-bold text-white">:</span>
-                    <div class="text-center">
-                        <span id="countdown-seconds" class="block text-4xl md:text-5xl font-bold text-white">00</span>
-                        <span class="block text-sm text-gray-300">Seconds</span>
-                    </div>
+                <div id="countdown" class="flex justify-center items-end space-x-2 sm:space-x-4 text-indigo-200">
+                    <!-- Countdown will be injected here by JavaScript -->
                 </div>
-                <a href="#waitlist-form" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                    Join the Exclusive Waitlist!
-                </a>
             </div>
-            <!-- End Limited Time Offer -->
 
+            <a href="#early-access-form" class="inline-block bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-bold py-4 px-10 rounded-full text-xl uppercase tracking-wide transform hover:scale-105 transition duration-300 ease-in-out shadow-lg">
+                Secure Your Early Bird Access Now!
+            </a>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-12 text-indigo-300">
-                What You'll Gain with Apple Foldable Foresight
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <div class="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-4xl mb-4">🔬</div>
-                    <h3 class="text-xl font-bold mb-4 text-white">In-depth Manufacturing Hurdles</h3>
-                    <p class="text-gray-300">Uncover potential production bottlenecks, yield challenges, and assembly complexities that could impact Apple's foldable device timeline and success.</p>
+    <section class="py-16 sm:py-24 bg-gray-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-12">What You'll Master Inside The Blueprint</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 border border-gray-700">
+                    <div class="text-5xl mb-4">⚙️</div>
+                    <h3 class="text-xl font-bold text-white mb-3">In-depth Setup Tutorials</h3>
+                    <p class="text-gray-300">From unboxing to full integration, learn step-by-step how to effortlessly set up all your Apple Home devices, including new LG and Schneider additions.</p>
                 </div>
-
-                <div class="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-4xl mb-4">🔗</div>
-                    <h3 class="text-xl font-bold mb-4 text-white">Critical Supplier Intelligence</h3>
-                    <p class="text-gray-300">Track key component suppliers, anticipate supply chain disruptions, and identify emerging partnerships that will shape the foldable ecosystem.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 border border-gray-700">
+                    <div class="text-5xl mb-4">✨</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Advanced Automation Recipes</h3>
+                    <p class="text-gray-300">Create sophisticated routines that react to your life. Lights, thermostats, cameras – make your home truly smart and intuitive.</p>
                 </div>
-
-                <div class="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-4xl mb-4">⚔️</div>
-                    <h3 class="text-xl font-bold mb-4 text-white">Competitive Landscape Shifts</h3>
-                    <p class="text-gray-300">Analyze how Samsung, Huawei, and others are positioning themselves. Understand the market dynamics and Apple's potential competitive advantages or disadvantages.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 border border-gray-700">
+                    <div class="text-5xl mb-4">🔒</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Ironclad Security Best Practices</h3>
+                    <p class="text-gray-300">Protect your privacy and secure your smart home. Implement expert-recommended strategies to keep your data and family safe.</p>
                 </div>
-
-                <div class="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-4xl mb-4">💰</div>
-                    <h3 class="text-xl font-bold mb-4 text-white">Actionable Investment Opportunities</h3>
-                    <p class="text-gray-300">Identify undervalued suppliers, anticipate stock movements, and pinpoint investment opportunities or risks driven by Apple's foldable strategy.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 border border-gray-700">
+                    <div class="text-5xl mb-4">🏆</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Curated Device Reviews</h3>
+                    <p class="text-gray-300">Never buy the wrong device again. Get unbiased reviews and recommendations for the best compatible accessories on the market.</p>
                 </div>
-
-                <div class="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-4xl mb-4">📈</div>
-                    <h3 class="text-xl font-bold mb-4 text-white">Weekly Premium Insights</h3>
-                    <p class="text-gray-300">Receive concise, yet comprehensive, weekly briefs delivered directly to your inbox, saving you hours of research time.</p>
-                </div>
-
-                <div class="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-4xl mb-4">🧑‍💻</div>
-                    <h3 class="text-xl font-bold mb-4 text-white">For Industry Leaders</h3>
-                    <p class="text-gray-300">Specifically designed for investors, tech analysts, and industry professionals who need to be ahead of the curve.</p>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-950">
+    <!-- Call to Action / Early Access Form -->
+    <section id="early-access-form" class="py-16 sm:py-24 bg-gray-900">
         <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold mb-8 text-indigo-300">
-                Secure Your Place: Join the Exclusive Waitlist
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">
+                Don't Miss Out! Become an Apple Home Power User Today.
             </h2>
-            <p class="text-lg mb-8 text-gray-300">
-                Be among the first to receive Apple Foldable Foresight. We'll notify you before the official launch and share early-bird access details.
+            <p class="text-lg text-gray-300 mb-8">
+                The exclusive early adopter discount for 'The Apple Home Collection Power User Blueprint' is for a limited time only. Enter your details below to claim your access and transform your smart home experience.
             </p>
-            <form action="#" method="POST" class="bg-gray-800 p-8 rounded-lg shadow-2xl border border-gray-700">
-                <div class="mb-6">
-                    <label for="name" class="block text-left text-sm font-medium text-gray-200 mb-2">Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400">
+            <form action="#" method="POST" class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-200 text-sm font-bold mb-2">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700"
+                           required>
                 </div>
-                <div class="mb-6">
-                    <label for="email" class="block text-left text-sm font-medium text-gray-200 mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" required class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400">
+                <div class="mb-8 text-left">
+                    <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com"
+                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700"
+                           required>
                 </div>
-                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-md text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                    Get Early Access Now!
+                <button type="submit"
+                        class="w-full bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white font-bold py-4 px-6 rounded-full text-xl uppercase tracking-wide transform hover:scale-105 transition duration-300 ease-in-out shadow-lg">
+                    Claim My Discount & Get Instant Access!
                 </button>
-                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, ever.</p>
+                <p class="text-xs text-gray-400 mt-4">
+                    By clicking "Claim My Discount", you agree to receive our newsletter and special offers. We respect your privacy.
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm">
-        <p>&copy; 2023 Apple Foldable Foresight. All rights reserved.</p>
-        <p class="mt-2">Disclaimer: This newsletter provides market analysis and should not be considered investment advice.</p>
+    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p>&copy; 2023 The Apple Home Collection Blueprint. All rights reserved. </p>
+            <p class="mt-2">Powered by cutting-edge knowledge for your smart home.</p>
+        </div>
     </footer>
 
-    <!-- Countdown Script -->
+    <!-- Countdown JavaScript -->
     <script>
-        // Set your target launch date here (Year, Month (0-11), Day, Hour, Minute, Second)
-        // For demonstration, setting it to 7 days from now.
-        const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 7); 
+        document.addEventListener('DOMContentLoaded', function() {
+            const countdownElement = document.getElementById('countdown');
+            // Set the target date for the countdown (e.g., 7 days from now for demonstration)
+            const endDate = new Date();
+            endDate.setDate(endDate.getDate() + 7); // This sets the offer to expire 7 days from page load
 
-        const daysSpan = document.getElementById('countdown-days');
-        const hoursSpan = document.getElementById('countdown-hours');
-        const minutesSpan = document.getElementById('countdown-minutes');
-        const secondsSpan = document.getElementById('countdown-seconds');
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = endDate - now;
 
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
+                if (distance < 0) {
+                    countdownElement.innerHTML = `
+                        <p class="text-red-400 text-3xl font-bold">Offer Expired!</p>
+                        <p class="text-xl text-gray-400 mt-2">Sign up anyway for future updates.</p>
+                    `;
+                    clearInterval(interval); // Stop updating once expired
+                    return;
+                }
 
-            if (distance < 0) {
-                clearInterval(countdownInterval);
-                document.querySelector('.bg-indigo-800.bg-opacity-50 h2').innerHTML = "<span class='mr-2'>🚫</span> Offer Expired!";
-                document.querySelector('.bg-indigo-800.bg-opacity-50 p:nth-of-type(1)').innerText = "The special early access bonus has ended. Join the waitlist for future updates!";
-                daysSpan.innerText = hoursSpan.innerText = minutesSpan.innerText = secondsSpan.innerText = '00';
-                document.querySelector('.bg-indigo-800.bg-opacity-50 a').classList.add('opacity-50', 'cursor-not-allowed');
-                document.querySelector('.bg-indigo-800.bg-opacity-50 a').href = "#waitlist-form"; // Still point to form
-                return;
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                countdownElement.innerHTML = `
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl sm:text-5xl font-bold">${days < 10 ? '0' + days : days}</span>
+                        <span class="text-sm sm:text-base text-gray-300">Days</span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl font-thin text-gray-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl sm:text-5xl font-bold">${hours < 10 ? '0' + hours : hours}</span>
+                        <span class="text-sm sm:text-base text-gray-300">Hours</span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl font-thin text-gray-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl sm:text-5xl font-bold">${minutes < 10 ? '0' + minutes : minutes}</span>
+                        <span class="text-sm sm:text-base text-gray-300">Minutes</span>
+                    </div>
+                    <span class="text-4xl sm:text-5xl font-thin text-gray-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl sm:text-5xl font-bold">${seconds < 10 ? '0' + seconds : seconds}</span>
+                        <span class="text-sm sm:text-base text-gray-300">Seconds</span>
+                    </div>
+                `;
             }
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            daysSpan.innerText = String(days).padStart(2, '0');
-            hoursSpan.innerText = String(hours).padStart(2, '0');
-            minutesSpan.innerText = String(minutes).padStart(2, '0');
-            secondsSpan.innerText = String(seconds).padStart(2, '0');
-        }
-
-        updateCountdown(); // Initial call
-        const countdownInterval = setInterval(updateCountdown, 1000);
+            const interval = setInterval(updateCountdown, 1000);
+            updateCountdown(); // Initial call to display immediately
+        });
     </script>
-
 </body>
 </html>
