@@ -3,204 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Productivity Suite Masterclass - Exclusive Waitlist</title>
+    <title>Galaxy Watch Sleep Optimization Masterclass - Transform Your Rest</title>
     <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for the hero background and overlay */
+        /* Custom styles for dark overlay and responsive background image */
         .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            background-attachment: fixed; /* Creates a subtle parallax effect on scroll */
         }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for strong contrast */
-            backdrop-filter: blur(3px); /* Optional: subtle blur for modern depth effect */
+        .dark-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for strong text contrast */
         }
-        /* Ultra-responsive adjustments for smaller screens */
-        @media (max-width: 640px) {
-            .hero-content h1 {
-                font-size: 2.5rem; /* Smaller headline on phones */
-            }
-            .hero-content p {
-                font-size: 1rem; /* Smaller paragraph on phones */
-            }
-            .countdown-item span:first-child {
-                font-size: 2.5rem; /* Smaller countdown digits */
-            }
-            .countdown-item span:last-child {
-                font-size: 0.65rem; /* Smaller countdown labels */
-            }
-            .features-grid {
-                grid-template-columns: 1fr; /* Single column for features on small screens */
-            }
+        /* Fluid spacing for countdown elements */
+        .countdown-timer > div {
+            flex: 1; /* Distribute space evenly */
+            min-width: 4rem; /* Minimum width for numbers */
+        }
+        .countdown-timer span {
+            display: block;
+            text-align: center;
+        }
+        /* Hide scrollbar for aesthetic, if desired */
+        body {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        body::-webkit-scrollbar {
+            display: none;  /* Chrome, Safari, Opera */
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="font-sans antialiased bg-gray-900 text-gray-100 min-h-screen flex flex-col">
 
     <!-- Hero Section -->
-    <header class="hero-bg relative min-h-screen flex items-center justify-center py-16">
-        <div class="hero-overlay absolute inset-0 z-0"></div>
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center hero-content max-w-4xl">
-            <!-- Market Trend-focused Sub-headline -->
-            <p class="text-indigo-400 text-lg sm:text-xl font-semibold mb-3 tracking-wide uppercase drop-shadow-md">
-                Disrupting the Norm, Boosting Your Bottom Line
-            </p>
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 drop-shadow-xl text-white">
-                AI Just Cloned Photoshop, Word & Excel.
-                <span class="block text-purple-400 mt-2">Master Your New Productivity Suite.</span>
+    <header class="hero-bg relative h-screen flex items-center justify-center text-center overflow-hidden">
+        <div class="dark-overlay absolute inset-0"></div>
+        <div class="relative z-10 p-4 sm:p-6 md:p-8 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 text-white drop-shadow-lg">
+                Unlock Your Galaxy Watch's True Sleep Potential
             </h1>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Unlock unparalleled efficiency and cut expensive software costs with the <strong class="text-white">AI Productivity Suite Masterclass</strong>. Learn to leverage powerful, free AI alternatives to Adobe and Microsoft Office, designed for small businesses and power users.
+            <p class="text-lg sm:text-xl md:text-2xl mb-8 font-light max-w-2xl mx-auto text-gray-200">
+                Go beyond basic metrics. Master your unique sleep patterns, personalize your recovery, and integrate advanced techniques for unparalleled rest.
             </p>
+            <p class="text-sm sm:text-base md:text-lg mb-4 text-purple-300 font-medium italic">
+                "Your Galaxy Watch is about to become a whole lot better." <span class="block sm:inline">- PhoneArena</span>
+            </p>
+            <a href="#waitlist" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-700 hover:from-indigo-700 hover:to-purple-800 text-white font-bold py-4 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg sm:text-xl">
+                Join the Waitlist Now & Get Early Bird Access!
+            </a>
 
             <!-- Limited Time Countdown -->
-            <div class="bg-gray-800 bg-opacity-80 border border-indigo-600 rounded-lg p-6 mb-12 shadow-2xl inline-block max-w-full">
-                <p class="text-xl sm:text-2xl font-bold text-indigo-300 mb-4 uppercase tracking-wider">
-                    Exclusive Waitlist Closes In:
-                </p>
-                <div class="flex justify-center space-x-4 sm:space-x-6 text-white countdown-timer">
-                    <div class="countdown-item">
-                        <span id="days" class="block text-4xl sm:text-5xl lg:text-6xl font-extrabold drop-shadow-lg">XX</span>
-                        <span class="text-xs sm:text-sm uppercase text-gray-400">Days</span>
+            <div class="mt-12 bg-gray-800 bg-opacity-80 rounded-xl p-6 sm:p-8 max-w-md mx-auto shadow-2xl border border-gray-700">
+                <p class="text-xl sm:text-2xl font-semibold mb-4 text-yellow-300">Early Bird Enrollment Ends In:</p>
+                <div id="countdown" class="flex justify-center items-center text-yellow-100 countdown-timer space-x-2 sm:space-x-4 md:space-x-6">
+                    <div>
+                        <span class="block text-4xl sm:text-5xl md:text-6xl font-bold" id="days">00</span>
+                        <span class="block text-xs sm:text-sm uppercase tracking-wider text-gray-300">Days</span>
                     </div>
-                    <div class="countdown-item">
-                        <span id="hours" class="block text-4xl sm:text-5xl lg:text-6xl font-extrabold drop-shadow-lg">XX</span>
-                        <span class="text-xs sm:text-sm uppercase text-gray-400">Hours</span>
+                    <div class="text-3xl sm:text-4xl font-bold text-gray-400">:</div>
+                    <div>
+                        <span class="block text-4xl sm:text-5xl md:text-6xl font-bold" id="hours">00</span>
+                        <span class="block text-xs sm:text-sm uppercase tracking-wider text-gray-300">Hours</span>
                     </div>
-                    <div class="countdown-item">
-                        <span id="minutes" class="block text-4xl sm:text-5xl lg:text-6xl font-extrabold drop-shadow-lg">XX</span>
-                        <span class="text-xs sm:text-sm uppercase text-gray-400">Minutes</span>
+                    <div class="text-3xl sm:text-4xl font-bold text-gray-400">:</div>
+                    <div>
+                        <span class="block text-4xl sm:text-5xl md:text-6xl font-bold" id="minutes">00</span>
+                        <span class="block text-xs sm:text-sm uppercase tracking-wider text-gray-300">Minutes</span>
                     </div>
-                    <div class="countdown-item">
-                        <span id="seconds" class="block text-4xl sm:text-5xl lg:text-6xl font-extrabold drop-shadow-lg">XX</span>
-                        <span class="text-xs sm:text-sm uppercase text-gray-400">Seconds</span>
+                    <div class="text-3xl sm:text-4xl font-bold text-gray-400">:</div>
+                    <div>
+                        <span class="block text-4xl sm:text-5xl md:text-6xl font-bold" id="seconds">00</span>
+                        <span class="block text-xs sm:text-sm uppercase tracking-wider text-gray-300">Seconds</span>
                     </div>
                 </div>
-                <p class="text-sm text-gray-500 mt-4 italic">
-                    (Note: This countdown is a visual placeholder; a live timer requires JavaScript.)
-                </p>
             </div>
-
-            <a href="#waitlist-form" class="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-4 px-10 rounded-full text-xl uppercase tracking-wider transition duration-300 ease-in-out shadow-lg transform hover:-translate-y-1 block max-w-xs sm:max-w-md mx-auto">
-                Join the Exclusive Waitlist Now!
-            </a>
         </div>
     </header>
 
-    <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 text-white">
-                What You'll Achieve with This Masterclass
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+        <!-- Problem/Opportunity Section (Market Trends Focus) -->
+        <section class="mb-16 text-center max-w-3xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-indigo-400">
+                Are You Truly Optimizing Your Sleep, Or Just Collecting Data?
             </h2>
-            <div class="grid features-grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1: Comprehensive Video Tutorials -->
-                <div class="bg-gray-800 rounded-lg p-8 shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-purple-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Comprehensive Video Tutorials</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Gain mastery over every aspect of AI-powered alternatives with our expert-led, step-by-step video guides. From basic setup to advanced techniques.
-                    </p>
-                </div>
-                <!-- Feature 2: Detailed Migration Guides -->
-                <div class="bg-gray-800 rounded-lg p-8 shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Seamless Migration Guides</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Migrate your existing projects and data from Adobe & Microsoft Office with confidence. Our guides ensure a smooth, error-free transition.
-                    </p>
-                </div>
-                <!-- Feature 3: Ironclad Security Best Practices -->
-                <div class="bg-gray-800 rounded-lg p-8 shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-green-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.007 12.007 0 002.944 12c.044 1.144.372 2.274.957 3.337M12 21.056a11.955 11.955 0 01-8.618-3.04A12.007 12.007 0 002.944 12c.044-1.144.372-2.274.957-3.337m0 0c.917 1.054 1.956 2.016 3.09 2.872a12.004 12.004 0 008.307 0c1.134-.856 2.173-1.818 3.09-2.872m0 0C17.028 8.167 18.067 9.129 19.201 9.985a12.004 12.004 0 008.307 0c1.134-.856 2.173-1.818 3.09-2.872"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Ironclad Security Best Practices</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Protect your intellectual property. Learn essential security protocols to keep your data safe and private when using AI-powered tools.
-                    </p>
-                </div>
-                <!-- Feature 4: Advanced Feature Unlocks -->
-                <div class="bg-gray-800 rounded-lg p-8 shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-pink-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Advanced Feature Unlocks</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Unleash the full potential of your new AI tools. Discover hidden features and advanced workflows to maximize your productivity beyond the basics.
-                    </p>
-                </div>
-                <!-- Feature 5: Exclusive Template Library -->
-                <div class="bg-gray-800 rounded-lg p-8 shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-yellow-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Exclusive Template Library</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Jumpstart your projects with our curated collection of premium, ready-to-use templates for documents, presentations, spreadsheets, and creative designs.
-                    </p>
-                </div>
-                <!-- Feature 6: Strategic Cost Savings -->
-                <div class="bg-gray-800 rounded-lg p-8 shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
-                    <div class="text-blue-400 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V3m0 9v3m0 8h.01M12 12H3s.895-3 2-3h7c1.105 0 2-.895 2-2V7M21 12h-7"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Strategic Cost Savings</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Significantly reduce your operational expenses by moving away from costly traditional software to powerful, free AI-driven alternatives without compromise.
-                    </p>
-                </div>
+            <p class="text-lg sm:text-xl leading-relaxed text-gray-300">
+                Your Galaxy Watch delivers incredible sleep metrics, but knowing what to *do* with that data is the real challenge. The market is buzzing with new health tech capabilities, yet most users only scratch the surface. This masterclass closes that gap, turning raw data into actionable insights for profound, lasting sleep improvement.
+            </p>
+        </section>
+
+        <!-- Features Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <!-- Feature 1 -->
+            <div class="bg-gray-800 rounded-xl shadow-xl p-6 flex flex-col items-center text-center border border-gray-700 transition duration-300 ease-in-out hover:scale-105 hover:border-indigo-500">
+                <div class="text-5xl text-indigo-400 mb-4">🔬</div>
+                <h3 class="text-xl sm:text-2xl font-bold mb-3">Decode Your Sleep Data</h3>
+                <p class="text-gray-300">Go beyond basic scores. Learn to deeply interpret your Samsung Health sleep data, understanding each stage, anomaly, and trend with expert precision.</p>
             </div>
-        </div>
-    </section>
+            <!-- Feature 2 -->
+            <div class="bg-gray-800 rounded-xl shadow-xl p-6 flex flex-col items-center text-center border border-gray-700 transition duration-300 ease-in-out hover:scale-105 hover:border-purple-500">
+                <div class="text-5xl text-purple-400 mb-4">📝</div>
+                <h3 class="text-xl sm:text-2xl font-bold mb-3">Personalized Sleep Roadmaps</h3>
+                <p class="text-gray-300">Craft a sleep improvement plan tailored to <em class="font-semibold text-white">your</em> unique patterns, not generic advice. Create a strategy that truly works for you.</p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="bg-gray-800 rounded-xl shadow-xl p-6 flex flex-col items-center text-center border border-gray-700 transition duration-300 ease-in-out hover:scale-105 hover:border-teal-500">
+                <div class="text-5xl text-teal-400 mb-4">🍎</div>
+                <h3 class="text-xl sm:text-2xl font-bold mb-3">Holistic Optimization Techniques</h3>
+                <p class="text-gray-300">Integrate powerful techniques like targeted nutrition, optimal light exposure, and advanced stress management to amplify your watch's coaching.</p>
+            </div>
+            <!-- Feature 4 -->
+            <div class="bg-gray-800 rounded-xl shadow-xl p-6 flex flex-col items-center text-center border border-gray-700 transition duration-300 ease-in-out hover:scale-105 hover:border-yellow-500">
+                <div class="text-5xl text-yellow-400 mb-4">📈</div>
+                <h3 class="text-xl sm:text-2xl font-bold mb-3">Actionable Trackers & Tools</h3>
+                <p class="text-gray-300">Get exclusive printable trackers and interactive tools to monitor progress, reinforce new habits, and visualize your sleep transformation.</p>
+            </div>
+            <!-- Feature 5 -->
+            <div class="bg-gray-800 rounded-xl shadow-xl p-6 flex flex-col items-center text-center border border-gray-700 transition duration-300 ease-in-out hover:scale-105 hover:border-red-500">
+                <div class="text-5xl text-red-400 mb-4">💬</div>
+                <h3 class="text-xl sm:text-2xl font-bold mb-3">Private Community Support</h3>
+                <p class="text-gray-300">Join a dedicated private community forum for ongoing accountability, expert Q&A, shared successes, and peer encouragement.</p>
+            </div>
+            <!-- Feature 6 -->
+            <div class="bg-gray-800 rounded-xl shadow-xl p-6 flex flex-col items-center text-center border border-gray-700 transition duration-300 ease-in-out hover:scale-105 hover:border-green-500">
+                <div class="text-5xl text-green-400 mb-4">✨</div>
+                <h3 class="text-xl sm:text-2xl font-bold mb-3">Sustainable Sleep Habits</h3>
+                <p class="text-gray-300">Move beyond quick fixes. Develop sustainable, evidence-based sleep habits that will serve you for a lifetime of restorative rest.</p>
+            </div>
+        </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 sm:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-8 text-white">
-                Don't Miss This Revolution: Join the Exclusive Waitlist!
+        <!-- Waitlist Form Section -->
+        <section id="waitlist" class="bg-gray-800 rounded-xl shadow-2xl p-8 sm:p-12 lg:p-16 max-w-2xl mx-auto border border-gray-700">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-center text-indigo-400">
+                Ready to Transform Your Sleep with Your Galaxy Watch?
             </h2>
-            <p class="text-lg text-gray-300 mb-10 max-w-xl mx-auto">
-                Secure your spot for the <strong class="text-white">AI Productivity Suite Masterclass</strong>. Gain early access, exclusive launch discounts, and insider updates directly to your inbox.
+            <p class="text-lg text-gray-300 text-center mb-8">
+                Spaces for the "Galaxy Watch Sleep Optimization Masterclass" are limited. Join the exclusive waitlist now to be among the first to know when enrollment opens, and secure special early bird pricing!
             </p>
-
-            <form class="bg-gray-900 p-8 sm:p-10 rounded-lg shadow-2xl border border-indigo-700 max-w-md mx-auto">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
+            <form class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-200 mb-2">Your Name</label>
                     <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:shadow-outline bg-gray-700 focus:border-indigo-500 transition duration-200"
-                           required>
+                           class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 transition duration-200 ease-in-out" required>
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-200 mb-2">Your Best Email</label>
                     <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:shadow-outline bg-gray-700 focus:border-indigo-500 transition duration-200"
-                           required>
+                           class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 transition duration-200 ease-in-out" required>
                 </div>
-                <button type="submit"
-                        class="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg uppercase tracking-wide transition duration-300 ease-in-out shadow-lg transform hover:-translate-y-1 w-full">
-                    Secure My Spot Now
+                <button type="submit" class="w-full bg-gradient-to-r from-indigo-600 to-purple-700 hover:from-indigo-700 hover:to-purple-800 text-white font-bold py-3 px-6 rounded-md shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg">
+                    Join the Exclusive Waitlist!
                 </button>
+                <p class="text-center text-gray-400 text-sm mt-4">
+                    We respect your privacy. Your email will only be used for masterclass updates.
+                </p>
             </form>
-            <p class="mt-8 text-sm text-gray-400">
-                Your privacy is paramount. We commit to a strict no-spam policy.
-            </p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm">
-        <div class="container mx-auto px-4">
-            &copy; 2023 AI Productivity Suite Masterclass. All rights reserved. | <a href="#" class="hover:text-gray-300 transition duration-200">Privacy Policy</a> | <a href="#" class="hover:text-gray-300 transition duration-200">Terms of Service</a>
-        </div>
+    </main>
+
+    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm mt-16 border-t border-gray-800">
+        <p>&copy; 2023 Galaxy Watch Sleep Optimization Masterclass. All rights reserved.</p>
+        <p class="mt-2">Disclaimer: This course provides educational content and is not a substitute for professional medical advice.</p>
     </footer>
+
+    <!-- JavaScript for Countdown Timer -->
+    <script>
+        const targetDate = new Date();
+        targetDate.setDate(targetDate.getDate() + 7); // Set countdown for 7 days from now
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Ensure two-digit formatting
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "<p class='text-xl sm:text-2xl text-red-400 font-bold'>Enrollment for early bird pricing has closed!</p>";
+                // Optionally, disable the waitlist form button here or change its text
+            }
+        }
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call to display immediately on page load
+    </script>
 
 </body>
 </html>
