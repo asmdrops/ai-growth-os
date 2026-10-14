@@ -3,150 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galaxy Health Unleashed: Master Your Sleep & Fitness</title>
-    <meta name="description" content="Unlock your peak potential with Galaxy Health Unleashed. Master the new Samsung Health features for optimal sleep, fitness, and well-being.">
-    <meta name="keywords" content="Samsung Health, Galaxy Watch, Sleep Coaching, Fitness, Strava Integration, Digital Guide, Online Course, Health Optimization, Wellness, Productivity">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>The HomeView Pro-Pack: Master Your New Apple Tablet</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Custom styles for modern dark aesthetic and responsiveness */
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #0d1117; /* GitHub Dark Mode bg */
-            color: #c9d1d9; /* GitHub Dark Mode text */
+            font-family: 'Inter', sans-serif; /* A modern, clean font choice */
         }
         .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
             background-size: cover;
             background-position: center;
-            position: relative;
-            z-index: 0;
+            background-repeat: no-repeat;
         }
-        .overlay {
-            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for text readability */
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-        .content-z-index {
-            position: relative;
-            z-index: 2;
-        }
-        .gradient-button {
-            background: linear-gradient(90deg, #6366f1, #a855f7); /* Indigo to Purple */
-            transition: all 0.3s ease;
-        }
-        .gradient-button:hover {
-            background: linear-gradient(90deg, #a855f7, #6366f1);
-            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
-        }
+        /* Further responsive adjustments can be added here if needed, but Tailwind's utility classes are highly effective */
     </style>
 </head>
-<body class="antialiased">
+<body class="bg-zinc-900 text-zinc-100 antialiased overflow-x-hidden">
 
     <!-- Hero Section -->
-    <section class="hero-background min-h-screen flex items-center justify-center text-white py-16 px-4 sm:px-6 lg:px-8">
-        <div class="overlay"></div>
-        <div class="content-z-index text-center max-w-4xl mx-auto space-y-8">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight drop-shadow-lg">
-                <span class="text-indigo-400">Unlock Your Peak Potential:</span> Master Sleep & Fitness with Next-Gen Samsung Health!
+    <header class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+        <div class="hero-background absolute inset-0 w-full h-full"></div>
+        <div class="absolute inset-0 bg-black bg-opacity-70"></div> <!-- Dark Overlay for text readability -->
+
+        <div class="relative z-10 p-4 sm:p-6 lg:p-8 max-w-5xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 tracking-tight drop-shadow-lg">
+                Unlock the Full Potential of Your New Apple HomeView Tablet
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl font-light text-gray-200 mt-4 leading-relaxed">
-                The highly anticipated Samsung Health update is here. Transform your well-being with personalized coaching, seamless Strava integration, and advanced sleep insights. Don't miss out on mastering these powerful new features.
+            <p class="text-lg sm:text-xl md:text-2xl text-zinc-300 mb-8 max-w-3xl mx-auto drop-shadow-md">
+                Introducing <span class="text-blue-400 font-semibold">The HomeView Pro-Pack</span>: Your essential interactive guide to master initial setup, integrate with smart home devices, and optimize entertainment on Apple's revolutionary new tablet.
             </p>
 
-            <!-- Limited Time Countdown (Visual Only - Requires JS for functionality) -->
-            <div class="bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-sm p-6 rounded-lg shadow-xl inline-block mt-8">
-                <p class="text-xl sm:text-2xl font-semibold text-purple-300 mb-4">🚨 Exclusive Early Access Closes In:</p>
-                <div class="flex justify-center items-center space-x-4 sm:space-x-6 lg:space-x-8">
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white" id="countdown-days">07</span>
-                        <span class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Days</span>
+            <!-- Limited Time Offer & Countdown -->
+            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 sm:p-8 rounded-xl shadow-2xl mb-10 transform hover:scale-105 transition-transform duration-300 ease-in-out border-2 border-white/20">
+                <p class="text-base sm:text-lg md:text-xl font-bold uppercase tracking-wide mb-3">Limited Early Bird Access Ends In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 text-white">
+                    <div class="flex flex-col items-center min-w-[50px] sm:min-w-[70px]">
+                        <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold" id="days">00</span>
+                        <span class="text-xs sm:text-sm uppercase text-zinc-200">Days</span>
                     </div>
-                    <span class="text-4xl sm:text-5xl lg:text-6xl font-bold text-purple-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white" id="countdown-hours">23</span>
-                        <span class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Hours</span>
+                    <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold">:</span>
+                    <div class="flex flex-col items-center min-w-[50px] sm:min-w-[70px]">
+                        <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold" id="hours">00</span>
+                        <span class="text-xs sm:text-sm uppercase text-zinc-200">Hours</span>
                     </div>
-                    <span class="text-4xl sm:text-5xl lg:text-6xl font-bold text-purple-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white" id="countdown-minutes">59</span>
-                        <span class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Minutes</span>
+                    <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold">:</span>
+                    <div class="flex flex-col items-center min-w-[50px] sm:min-w-[70px]">
+                        <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold" id="minutes">00</span>
+                        <span class="text-xs sm:text-sm uppercase text-zinc-200">Minutes</span>
                     </div>
-                    <span class="text-4xl sm:text-5xl lg:text-6xl font-bold text-purple-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white" id="countdown-seconds">59</span>
-                        <span class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Seconds</span>
+                    <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold">:</span>
+                    <div class="flex flex-col items-center min-w-[50px] sm:min-w-[70px]">
+                        <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold" id="seconds">00</span>
+                        <span class="text-xs sm:text-sm uppercase text-zinc-200">Seconds</span>
                     </div>
                 </div>
-                <p class="text-sm text-gray-400 mt-4">*(A functional countdown timer requires JavaScript for real-time updates.)</p>
             </div>
 
-            <a href="#waitlist-form" class="inline-block mt-10 px-10 py-4 text-xl sm:text-2xl font-bold text-white rounded-full gradient-button shadow-lg transform hover:scale-105">
-                Secure Your Spot Now!
+            <a href="#waitlist-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                Secure Your Early Bird Access & Exclusive Bonuses!
             </a>
-            <p class="text-sm text-gray-400 mt-4">Join 1,000+ early adopters transforming their health.</p>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-20 lg:py-24 bg-gray-900 text-c9d1d9 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 sm:mb-16 leading-tight">
-                What You'll Achieve with <span class="text-purple-400">Galaxy Health Unleashed</span>
+    <section id="features" class="py-16 sm:py-24 bg-zinc-800">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-12 text-zinc-50">
+                What You'll Master with the HomeView Pro-Pack
             </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
-
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-                    <div class="text-5xl mb-4 text-purple-400">🚀</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Precision Sleep Coaching Mastery</h3>
-                    <p class="text-gray-300 text-lg">
-                        Dive deep into your sleep cycles. Learn how to optimize recovery with AI-powered personalized insights and actionable steps from your Galaxy Watch, ensuring you wake up refreshed and energized.
+                <!-- Feature 1 -->
+                <div class="bg-zinc-700 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 border-t-4 border-blue-500">
+                    <p class="text-5xl mb-4">🚀</p>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Effortless Initial Setup</h3>
+                    <p class="text-zinc-300 text-lg">
+                        Get your new Apple HomeView tablet up and running in minutes with our step-by-step video guides. Avoid common pitfalls and start enjoying immediately!
                     </p>
                 </div>
 
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-                    <div class="text-5xl mb-4 text-indigo-400">📈</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Personalized Weekly Guidance</h3>
-                    <p class="text-gray-300 text-lg">
-                        Get tailored fitness and wellness plans delivered straight to your wrist. Achieve your goals faster with smart, adaptive coaching designed just for you, evolving with your progress.
+                <!-- Feature 2 -->
+                <div class="bg-zinc-700 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 border-t-4 border-purple-500">
+                    <p class="text-5xl mb-4">🎬</p>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Streamlined Entertainment Hub</h3>
+                    <p class="text-zinc-300 text-lg">
+                        Optimize YouTube & Netflix integration, learn advanced streaming tips, and turn your tablet into the ultimate media powerhouse, leveraging HomeView's unique capabilities.
                     </p>
                 </div>
 
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-                    <div class="text-5xl mb-4 text-green-400">🔗</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Seamless Strava Integration</h3>
-                    <p class="text-gray-300 text-lg">
-                        Connect your favorite fitness community directly. Track, share, and challenge yourself with enhanced data synchronization and a unified fitness experience that keeps you motivated.
+                <!-- Feature 3 -->
+                <div class="bg-zinc-700 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 border-t-4 border-green-500">
+                    <p class="text-5xl mb-4">🏠</p>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Seamless Smart Home Integration</h3>
+                    <p class="text-zinc-300 text-lg">
+                        Connect your existing smart home devices (lights, thermostats, cameras) to your HomeView tablet with ease. Control your entire home from one central device!
                     </p>
                 </div>
 
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-                    <div class="text-5xl mb-4 text-yellow-400">💡</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Data-Driven Health Insights</h3>
-                    <p class="text-gray-300 text-lg">
-                        Go beyond raw numbers. Understand your body's signals with clear, intuitive analytics that empower smarter health decisions, leading to lasting improvements in your well-being.
+                <!-- Feature 4 -->
+                <div class="bg-zinc-700 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 border-t-4 border-yellow-500">
+                    <p class="text-5xl mb-4">💡</p>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Hidden Productivity Secrets</h3>
+                    <p class="text-zinc-300 text-lg">
+                        Uncover powerful, overlooked features that transform your entertainment device into a productivity assistant for organization, communication, and more.
                     </p>
                 </div>
 
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-                    <div class="text-5xl mb-4 text-red-400">⚡</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Boost Productivity & Energy</h3>
-                    <p class="text-gray-300 text-lg">
-                        Optimizing your sleep and fitness isn't just about health; it's about unlocking sustained energy, sharp focus, and peak daily performance across all areas of your life.
+                <!-- Feature 5 -->
+                <div class="bg-zinc-700 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 border-t-4 border-red-500">
+                    <p class="text-5xl mb-4">🛡️</p>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Security & Privacy Best Practices</h3>
+                    <p class="text-zinc-300 text-lg">
+                        Learn how to secure your new HomeView tablet and protect your personal data, ensuring peace of mind while enjoying all its features.
                     </p>
                 </div>
 
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-                    <div class="text-5xl mb-4 text-blue-400">🏆</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Achieve Your Health Goals Faster</h3>
-                    <p class="text-gray-300 text-lg">
-                        With step-by-step strategies and expert guidance, you'll utilize every new Samsung Health feature to hit your personal health and fitness milestones more efficiently than ever before.
+                <!-- Feature 6 -->
+                <div class="bg-zinc-700 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 border-t-4 border-teal-500">
+                    <p class="text-5xl mb-4">🔄</p>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Always Up-to-Date Content</h3>
+                    <p class="text-zinc-300 text-lg">
+                        As HomeView evolves, so does your Pro-Pack. Get continuous updates, new video tutorials, and advanced tips to stay ahead of the curve.
                     </p>
                 </div>
 
@@ -155,46 +134,85 @@
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 sm:py-20 lg:py-24 bg-gray-800 text-c9d1d9 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-2xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6 leading-tight text-white">
-                Be Among the First to <span class="text-purple-400">Master Galaxy Health Unleashed!</span>
+    <section id="waitlist-form" class="py-16 sm:py-24 bg-zinc-900">
+        <div class="container mx-auto px-4 max-w-xl">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-6 text-zinc-50">
+                Don't Miss Out! Get Early Bird Access to the Pro-Pack
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10">
-                Don't get left behind. Join our exclusive waitlist for "Galaxy Health Unleashed" and receive early access, special launch discounts, and insider tips to maximize your health journey with Samsung's latest innovations.
+            <p class="text-lg sm:text-xl text-center text-zinc-300 mb-10">
+                Be among the first to master your new Apple HomeView tablet and receive exclusive early bird bonuses. The clock is ticking!
             </p>
 
-            <form class="bg-gray-900 p-8 sm:p-10 lg:p-12 rounded-lg shadow-2xl border border-gray-700 space-y-6">
-                <div>
-                    <label for="name" class="sr-only">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Full Name"
-                           class="w-full px-5 py-3 rounded-md bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white placeholder-gray-400 text-lg outline-none"
-                           required>
-                </div>
-                <div>
-                    <label for="email" class="sr-only">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Best Email Address"
-                           class="w-full px-5 py-3 rounded-md bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white placeholder-gray-400 text-lg outline-none"
-                           required>
-                </div>
-                <button type="submit" class="w-full px-8 py-4 text-xl font-bold text-white rounded-md gradient-button shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    Join the Exclusive Waitlist!
-                </button>
-                <p class="text-sm text-gray-400 mt-4">We respect your privacy. Your information will never be shared.</p>
-            </form>
+            <div class="bg-zinc-800 p-8 sm:p-10 rounded-xl shadow-2xl border border-purple-500">
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-lg font-medium text-zinc-200 mb-2">Your Full Name:</label>
+                        <input type="text" id="name" name="name" required
+                               class="w-full px-5 py-3 rounded-lg bg-zinc-700 border border-zinc-600 focus:border-blue-500 focus:ring-blue-500 text-white placeholder-zinc-400 text-lg"
+                               placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-lg font-medium text-zinc-200 mb-2">Your Best Email:</label>
+                        <input type="email" id="email" name="email" required
+                               class="w-full px-5 py-3 rounded-lg bg-zinc-700 border border-zinc-600 focus:border-blue-500 focus:ring-blue-500 text-white placeholder-zinc-400 text-lg"
+                               placeholder="john.doe@example.com">
+                    </div>
+                    <button type="submit"
+                            class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                        Join the HomeView Pro-Pack Waitlist Now!
+                    </button>
+                    <p class="text-center text-zinc-400 text-sm mt-4">
+                        We respect your privacy. No spam, ever.
+                    </p>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8 px-4 sm:px-6 lg:px-8 text-center border-t border-gray-700">
-        <div class="max-w-7xl mx-auto">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2 text-sm">
-                <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a> |
-                <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a>
-            </p>
+    <footer class="bg-zinc-950 py-8 text-center text-zinc-500 text-sm">
+        <div class="container mx-auto px-4">
+            &copy; 2023 The HomeView Pro-Pack. All rights reserved.
         </div>
     </footer>
+
+    <!-- Countdown Script -->
+    <script>
+        // Set the date we're counting down to (e.g., 7 days from now)
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 7); // Set to 7 days from today
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "<span class='text-red-400 font-bold'>OFFER EXPIRED!</span>";
+                // Optionally, disable the waitlist form or redirect
+                const ctaButton = document.querySelector('a[href="#waitlist-form"]');
+                if (ctaButton) ctaButton.style.display = 'none';
+                const submitButton = document.querySelector('#waitlist-form button[type="submit"]');
+                if (submitButton) {
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Offer Expired';
+                    submitButton.classList.remove('from-blue-600', 'to-purple-600', 'hover:from-blue-700', 'hover:to-purple-700');
+                    submitButton.classList.add('bg-gray-600', 'cursor-not-allowed');
+                }
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+        }, 1000);
+    </script>
 
 </body>
 </html>
