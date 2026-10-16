@@ -3,232 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple HomeView Energy Optimization Guide - Save Big on Bills!</title>
+    <title>Mastering Your HomePod: Unlock Every New Feature</title>
+    <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Google Font: Inter for a modern, premium feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for modern dark mode aesthetics and responsiveness */
+        /* Custom styles for dark overlay and subtle animations */
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better text contrast */
+        }
         body {
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            background-color: #0d0d0d; /* Slightly darker than gray-900 for premium feel */
-            color: #e0e0e0; /* Off-white for readability */
+            font-family: 'Inter', sans-serif;
         }
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?The,tech');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* Parallax effect for premium feel */
+
+        /* Keyframe Animations for a modern, premium entrance effect */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        .text-gradient-dark {
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            background-image: linear-gradient(to right, #6EE7B7, #3B82F6); /* Emerald to Blue */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-        .dark .bg-gray-950 {
-            background-color: #0a0a0a; /* Even darker for contrast */
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0; /* Hidden by default */
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        /* Delay utilities for staggered animations */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+        .delay-700 { animation-delay: 0.7s; }
+
+        /* Ensure animations apply on page load */
+        .animate-fade-in-up, .animate-fade-in {
+            animation-fill-mode: both;
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 antialiased overflow-x-hidden">
+<body class="bg-gray-900 text-white antialiased">
 
     <!-- Hero Section -->
-    <section class="hero-background relative min-h-screen flex items-center justify-center py-20 px-4 overflow-hidden">
-        <div class="absolute inset-0 bg-black opacity-80 backdrop-filter backdrop-blur-sm"></div> <!-- Dark overlay with blur for depth -->
-        <div class="relative z-10 text-center max-w-4xl mx-auto space-y-8 p-6 md:p-8 rounded-xl bg-gray-900 bg-opacity-70 shadow-2xl border border-gray-700">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white mb-4">
-                Unlock <span class="text-gradient-dark">Massive Savings</span> with Apple HomeView
+    <header class="relative bg-cover bg-center h-screen flex items-center justify-center p-4 overflow-hidden"
+            style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
+            <span class="inline-block bg-indigo-600 text-white text-xs sm:text-sm font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 shadow-lg animate-fade-in delay-100">
+                📈 Trending: HomePod Free Upgrade News!
+            </span>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 drop-shadow-lg animate-fade-in-up delay-200">
+                Mastering Your HomePod with Siri AI & Mac Audio
+                <span class="block text-indigo-400 mt-2">Unlock Every New Feature</span>
             </h1>
-            <p class="text-xl sm:text-2xl text-gray-300 mb-8 font-light max-w-2xl mx-auto">
-                Your Comprehensive Guide to Cutting Energy Bills and Mastering Smart Home Automation.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto font-light leading-relaxed animate-fade-in-up delay-300">
+                Ready to fully harness your HomePod? Discover advanced setups, seamless Apple ecosystem integration, and troubleshoot like a pro. Perfect for new buyers and existing users embracing the latest Siri AI and Mac audio upgrades!
             </p>
             
-            <div class="bg-gray-800 bg-opacity-70 border border-gray-700 rounded-lg p-6 md:p-8 mb-8 shadow-xl">
-                <p class="text-lg md:text-xl text-yellow-400 font-semibold mb-4 animate-pulse">
-                    Special Launch Offer Ends In:
-                </p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-5 md:space-x-8 text-white text-3xl sm:text-4xl md:text-5xl font-bold">
+            <!-- Countdown Timer -->
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-700 text-white p-6 rounded-xl shadow-2xl mx-auto max-w-md mb-8 animate-fade-in-up delay-400">
+                <h3 class="text-xl sm:text-2xl font-bold mb-3">Limited-Time Offer Ends In:</h3>
+                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 text-3xl sm:text-5xl font-extrabold">
                     <div class="flex flex-col items-center">
-                        <span id="days" class="w-16 sm:w-20 md:w-24 bg-gray-700 rounded-lg py-2">00</span>
-                        <span class="text-xs sm:text-sm text-gray-400 font-medium mt-1">Days</span>
+                        <span id="days">00</span>
+                        <span class="text-xs sm:text-sm font-medium">Days</span>
                     </div>
-                    <span class="text-gray-500 text-3xl md:text-5xl">:</span>
+                    <span>:</span>
                     <div class="flex flex-col items-center">
-                        <span id="hours" class="w-16 sm:w-20 md:w-24 bg-gray-700 rounded-lg py-2">00</span>
-                        <span class="text-xs sm:text-sm text-gray-400 font-medium mt-1">Hours</span>
+                        <span id="hours">00</span>
+                        <span class="text-xs sm:text-sm font-medium">Hours</span>
                     </div>
-                    <span class="text-gray-500 text-3xl md:text-5xl">:</span>
+                    <span>:</span>
                     <div class="flex flex-col items-center">
-                        <span id="minutes" class="w-16 sm:w-20 md:w-24 bg-gray-700 rounded-lg py-2">00</span>
-                        <span class="text-xs sm:text-sm text-gray-400 font-medium mt-1">Minutes</span>
+                        <span id="minutes">00</span>
+                        <span class="text-xs sm:text-sm font-medium">Minutes</span>
                     </div>
-                    <span class="text-gray-500 text-3xl md:text-5xl">:</span>
+                    <span>:</span>
                     <div class="flex flex-col items-center">
-                        <span id="seconds" class="w-16 sm:w-20 md:w-24 bg-gray-700 rounded-lg py-2">00</span>
-                        <span class="text-xs sm:text-sm text-gray-400 font-medium mt-1">Seconds</span>
+                        <span id="seconds">00</span>
+                        <span class="text-xs sm:text-sm font-medium">Seconds</span>
                     </div>
                 </div>
             </div>
 
-            <a href="#waitlist" class="inline-block bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-lg shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out animate-fade-in-up delay-500">
                 Secure Your Spot on the Waitlist!
             </a>
-            <p class="text-sm text-gray-400 mt-4">Limited Early Bird Access for Beta Testers.</p>
+            <p class="text-sm text-gray-400 mt-4 animate-fade-in-up delay-600">Early Bird Access & Exclusive Bonuses Await</p>
         </div>
-    </section>
-
-    <!-- Problem/Trend Section -->
-    <section class="py-16 md:py-20 px-4 bg-gray-950 text-center">
-        <div class="container mx-auto max-w-3xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight">
-                Are You Maximizing Your Apple Smart Home Potential?
-            </h2>
-            <p class="text-lg text-gray-300 leading-relaxed mb-8">
-                The buzz around Apple HomeView is real. As CNET highlighted with "I’ve Tested Echo Shows and Nest Hubs. Here’s How Apple’s HomeView Display Stacks Up," Apple is a serious contender. But owning HomeView is one thing; leveraging its full power for significant energy savings and truly smart living is another.
-            </p>
-            <p class="text-xl font-semibold text-gray-200">
-                Don't just observe your home, <span class="text-blue-400">optimize it.</span>
-            </p>
-        </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-20 px-4 bg-gray-800">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-12">
-                What You'll Achieve with <span class="text-gradient-dark">The HomeView Energy Optimization Guide</span>:
+    <section class="py-16 sm:py-20 bg-gray-900 dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 text-white animate-fade-in-up delay-700">
+                What You'll Unlock with This Comprehensive Guide 🚀
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 <!-- Feature 1 -->
-                <div class="bg-gray-900 rounded-lg p-6 shadow-xl border border-gray-700 hover:border-blue-500 transform hover:-translate-y-1 transition duration-300">
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 dark:bg-gray-800 dark:text-gray-100 animate-fade-in-up delay-800">
                     <div class="flex items-center mb-4">
-                        <span class="text-blue-400 text-4xl mr-4">💡</span>
-                        <h3 class="text-xl font-semibold text-white">Significantly Reduce Utility Bills</h3>
+                        <span class="text-3xl sm:text-4xl mr-4">⚙️</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-indigo-400">Advanced Setup & Configuration</h3>
                     </div>
-                    <p class="text-gray-300">Discover proven strategies to cut down on electricity, heating, and cooling costs by up to 30%, saving hundreds annually.</p>
+                    <p class="text-gray-300 text-base sm:text-lg">Go beyond the basics. Learn intricate setup techniques, create multi-room audio zones, and fine-tune your HomePod for unparalleled sound quality and smart home control.</p>
                 </div>
                 <!-- Feature 2 -->
-                <div class="bg-gray-900 rounded-lg p-6 shadow-xl border border-gray-700 hover:border-green-500 transform hover:-translate-y-1 transition duration-300">
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 dark:bg-gray-800 dark:text-gray-100 animate-fade-in-up delay-900">
                     <div class="flex items-center mb-4">
-                        <span class="text-green-400 text-4xl mr-4">🛠️</span>
-                        <h3 class="text-xl font-semibold text-white">Master HomeView Setup & Best Practices</h3>
+                        <span class="text-3xl sm:text-4xl mr-4">🍎</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-indigo-400">Seamless Apple Ecosystem Integration</h3>
                     </div>
-                    <p class="text-gray-300">From initial setup to advanced configurations, ensure your HomeView operates at peak efficiency and security.</p>
+                    <p class="text-gray-300 text-base sm:text-lg">Connect your HomePod effortlessly with your iPhone, iPad, Apple TV, and more. Master Handoff, Intercom, and optimize for the ultimate Apple experience.</p>
                 </div>
                 <!-- Feature 3 -->
-                <div class="bg-gray-900 rounded-lg p-6 shadow-xl border border-gray-700 hover:border-purple-500 transform hover:-translate-y-1 transition duration-300">
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 dark:bg-gray-800 dark:text-gray-100 animate-fade-in-up delay-1000">
                     <div class="flex items-center mb-4">
-                        <span class="text-purple-400 text-4xl mr-4">🤖</span>
-                        <h3 class="text-xl font-semibold text-white">Advanced Automation & Custom Scenes</h3>
+                        <span class="text-3xl sm:text-4xl mr-4">🤖</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-indigo-400">Leverage New Siri AI Capabilities</h3>
                     </div>
-                    <p class="text-gray-300">Create intelligent automations and scenes that adapt to your lifestyle, optimizing energy use effortlessly 24/7.</p>
+                    <p class="text-gray-300 text-base sm:text-lg">Unlock the full potential of the upgraded Siri AI. Discover advanced commands, personalized requests, and truly smart home automation scenarios you didn't know were possible.</p>
                 </div>
                 <!-- Feature 4 -->
-                <div class="bg-gray-900 rounded-lg p-6 shadow-xl border border-gray-700 hover:border-red-500 transform hover:-translate-y-1 transition duration-300">
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 dark:bg-gray-800 dark:text-gray-100 animate-fade-in-up delay-1100">
                     <div class="flex items-center mb-4">
-                        <span class="text-red-400 text-4xl mr-4">📊</span>
-                        <h3 class="text-xl font-semibold text-white">Comparative Analysis of Smart Devices</h3>
+                        <span class="text-3xl sm:text-4xl mr-4">🔊</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-indigo-400">Master Mac Audio Output</h3>
                     </div>
-                    <p class="text-gray-300">Detailed reviews on which thermostats, lighting, and accessories offer the best energy savings and HomeView compatibility.</p>
+                    <p class="text-gray-300 text-base sm:text-lg">Transform your Mac audio experience. Learn how to use your HomePod as a superior external speaker, troubleshoot connectivity issues, and optimize for crystal-clear sound.</p>
                 </div>
                 <!-- Feature 5 -->
-                <div class="bg-gray-900 rounded-lg p-6 shadow-xl border border-gray-700 hover:border-yellow-500 transform hover:-translate-y-1 transition duration-300">
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 dark:bg-gray-800 dark:text-gray-100 animate-fade-in-up delay-1200">
                     <div class="flex items-center mb-4">
-                        <span class="text-yellow-400 text-4xl mr-4">📚</span>
-                        <h3 class="text-xl font-semibold text-white">Comprehensive Digital Toolkit Included</h3>
+                        <span class="text-3xl sm:text-4xl mr-4">💡</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-indigo-400">Common Troubleshooting & Fixes</h3>
                     </div>
-                    <p class="text-gray-300">Access an in-depth ebook, step-by-step video tutorials, and printable checklists for easy, actionable implementation.</p>
+                    <p class="text-gray-300 text-base sm:text-lg">Don't let minor glitches ruin your experience. Our guide provides clear, actionable steps to resolve common HomePod issues, from connectivity drops to Siri not responding.</p>
                 </div>
-                <!-- Feature 6 -->
-                <div class="bg-gray-900 rounded-lg p-6 shadow-xl border border-gray-700 hover:border-cyan-500 transform hover:-translate-y-1 transition duration-300">
+                 <!-- Feature 6 -->
+                 <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 dark:bg-gray-800 dark:text-gray-100 animate-fade-in-up delay-1300">
                     <div class="flex items-center mb-4">
-                        <span class="text-cyan-400 text-4xl mr-4">🏡</span>
-                        <h3 class="text-xl font-semibold text-white">Eco-Friendly & Sustainable Living</h3>
+                        <span class="text-3xl sm:text-4xl mr-4">📈</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-indigo-400">Future-Proof Your HomePod Knowledge</h3>
                     </div>
-                    <p class="text-gray-300">Contribute to a greener planet while enjoying significant financial benefits from an expertly optimized smart home.</p>
+                    <p class="text-gray-300 text-base sm:text-lg">Stay ahead with insights into upcoming features and best practices. Our guide is continuously updated to ensure you're always leveraging the latest HomePod capabilities.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-20 md:py-24 px-4 bg-gray-950 text-center">
-        <div class="container mx-auto max-w-lg">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight">
-                Be the First to Access This Game-Changing Guide!
+    <section id="waitlist" class="py-16 sm:py-20 bg-gray-800 dark:bg-gray-800">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-6 text-white animate-fade-in-up delay-1400">
+                Don't Miss Out! Join the Exclusive Waitlist!
             </h2>
-            <p class="text-lg text-gray-300 mb-8 max-w-md mx-auto">
-                Join our exclusive waitlist now for early bird access, special launch discounts, and bonus content!
+            <p class="text-lg text-center text-gray-300 mb-8 max-w-xl mx-auto animate-fade-in-up delay-1500">
+                Be the first to know when "Mastering Your HomePod" launches, and get access to early bird discounts and bonus content. Limited spots available!
             </p>
-
-            <form class="bg-gray-800 rounded-xl p-8 shadow-2xl border border-gray-700">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-semibold mb-2">Your Name:</label>
-                    <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-500 transition duration-200" placeholder="John Doe" required>
-                </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-semibold mb-2">Your Email Address:</label>
-                    <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-500 transition duration-200" placeholder="john.doe@example.com" required>
-                </div>
-                <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-bold py-4 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
-                    Join the Exclusive Waitlist Now!
-                </button>
-                <p class="text-sm text-gray-500 mt-4">We respect your privacy. No spam, ever.</p>
-            </form>
+            <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-2xl dark:bg-gray-900 animate-fade-in-up delay-1600">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-200 mb-2">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe"
+                               class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 dark:bg-gray-700 dark:border-gray-600 dark:text-white" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-200 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com"
+                               class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 dark:bg-gray-700 dark:border-gray-600 dark:text-white" required>
+                    </div>
+                    <button type="submit"
+                            class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-md text-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+                        Get Early Access & Updates
+                    </button>
+                    <p class="text-xs text-gray-400 text-center mt-4">
+                        We respect your privacy. Your email will only be used for course updates and exclusive offers.
+                    </p>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 px-4 text-center text-gray-500 text-sm border-t border-gray-800">
-        <div class="container mx-auto">
+    <footer class="bg-gray-900 dark:bg-gray-900 text-gray-400 text-center py-8">
+        <div class="container mx-auto px-4">
             <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">Leveraging Knowledge for a Smarter Future.</p>
+            <p class="mt-2 text-sm">
+                <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a> |
+                <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
-    <!-- Countdown Timer Script -->
+    <!-- JavaScript for Countdown Timer -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 7 days from now for limited time offer)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // 7 days from today
-            countDownDate.setHours(countDownDate.getHours() + 10); // Added hours
-            countDownDate.setMinutes(countDownDate.getMinutes() + 25); // Added minutes
-            countDownDate.setSeconds(countDownDate.getSeconds() + 50); // Added seconds
+        // Set the target date for the countdown (e.g., 7 days from now)
+        const targetDate = new Date();
+        targetDate.setDate(targetDate.getDate() + 7); // Sets target 7 days from the current date
 
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
 
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<span class='text-red-500 text-2xl md:text-3xl'>Offer Expired!</span>";
-                    const waitlistButton = document.querySelector('a[href="#waitlist"]');
-                    if (waitlistButton) {
-                        waitlistButton.textContent = "Offer Ended - Stay Tuned for Updates!";
-                        waitlistButton.classList.add('opacity-50', 'cursor-not-allowed', 'bg-gray-600', 'hover:bg-gray-600', 'transform-none', 'hover:scale-100');
-                        waitlistButton.href = "#"; 
-                    }
-                    const formButton = document.querySelector('#waitlist button[type="submit"]');
-                    if (formButton) {
-                        formButton.textContent = "Updates Coming Soon!";
-                        formButton.classList.add('opacity-50', 'cursor-not-allowed', 'bg-gray-600', 'hover:bg-gray-600', 'transform-none', 'hover:scale-100');
-                        formButton.disabled = true;
-                    }
-                    return;
-                }
+            // Calculate time units
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Display the results
+            document.getElementById('days').innerText = String(days).padStart(2, '0');
+            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
 
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-            }, 1000);
-        });
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('countdown').innerHTML = '<span class="text-xl sm:text-2xl font-bold">Offer Expired!</span>';
+            }
+        }
+
+        // Update the countdown every 1 second
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        // Initial call to display countdown immediately upon page load
+        updateCountdown();
     </script>
-
 </body>
 </html>
