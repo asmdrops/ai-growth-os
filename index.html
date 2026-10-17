@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate Guide to Apple HomeView - Early Access & Discount</title>
+    <title>The Savvy iPhone User's Guide: Master Multi-Device Connectivity</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏠</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for premium dark mode and responsiveness */
         body {
             font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            scroll-behavior: smooth;
         }
         .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
@@ -20,236 +20,167 @@
             background-repeat: no-repeat;
             position: relative;
         }
-        .hero-background::before {
-            content: '';
+        .hero-overlay {
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7); /* Dark overlay */
-            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for strong contrast and modern feel */
+            backdrop-filter: blur(2px); /* Subtle blur to the background image */
         }
-        .hero-content {
-            position: relative;
-            z-index: 2;
+        /* Fluid Typography - ULTRA-RESPONSIVE for all screens */
+        .text-fluid-xl { font-size: calc(1rem + 0.5vw); } /* base 16px + 0.5vw */
+        .text-fluid-2xl { font-size: calc(1.25rem + 0.75vw); } /* base 20px + 0.75vw */
+        .text-fluid-3xl { font-size: calc(1.5rem + 1vw); } /* base 24px + 1vw */
+        .text-fluid-5xl { font-size: calc(2rem + 2.5vw); } /* base 32px + 2.5vw */
+        .text-fluid-6xl { font-size: calc(2.5rem + 3.5vw); } /* base 40px + 3.5vw */
+
+        @media (min-width: 1024px) { /* Adjust for larger screens to cap max size */
+            .text-fluid-xl { font-size: 1.5rem; }
+            .text-fluid-2xl { font-size: 1.75rem; }
+            .text-fluid-3xl { font-size: 2.5rem; }
+            .text-fluid-5xl { font-size: 4rem; }
+            .text-fluid-6xl { font-size: 5rem; }
         }
-        .gradient-text {
-            background: linear-gradient(to right top, #a78bfa, #8b5cf6, #6d28d9);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .feature-icon {
-            @apply text-indigo-400 text-3xl;
+        .countdown-digits {
+            font-variant-numeric: tabular-nums; /* Align digits nicely in the countdown */
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-900 text-white antialiased">
 
     <!-- Hero Section -->
-    <section class="hero-background min-h-screen flex items-center justify-center text-center py-16 md:py-24 lg:py-32">
-        <div class="hero-content container mx-auto px-4 md:px-6 lg:px-8 max-w-4xl">
-            <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-tight">
-                Unlock the <span class="gradient-text">Full Potential</span> of Apple HomeView
+    <section class="hero-background min-h-screen flex items-center justify-center text-center p-4">
+        <div class="hero-overlay"></div>
+        <div class="relative z-10 max-w-5xl mx-auto px-4 py-16 md:py-24">
+            <span class="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-xs md:text-sm px-4 py-2 rounded-full uppercase font-semibold tracking-wide mb-5 shadow-lg">
+                🔥 Timely Alert: Verizon's New $10/Month Handoff Fee!
+            </span>
+            <h1 class="text-fluid-5xl md:text-fluid-6xl font-extrabold leading-tight mb-7 text-white drop-shadow-lg">
+                <span class="text-indigo-400">STOP Paying Extra.</span> Unlock True iPhone Multi-Device Connectivity.
             </h1>
-            <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Master Apple's latest smart home innovation with our comprehensive guide. From initial setup to advanced automations and integrating with the <strong class="text-white">Apple apps HomeView will include at launch (as reported by 9to5Mac)</strong>, we cover everything.
+            <p class="text-fluid-xl md:text-fluid-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+                Discover 'The Savvy iPhone User's Guide' – your essential resource to expose hidden carrier fees, compare multi-device plans, and leverage powerful FREE alternatives for seamless connectivity.
             </p>
+            <a href="#waitlist" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-700 hover:from-indigo-700 hover:to-purple-800 text-white font-bold py-4 px-10 rounded-full text-fluid-xl md:text-fluid-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
+                Get Early Access & Save 30% Now!
+            </a>
 
-            <!-- Limited Time Offer & Countdown -->
-            <div class="bg-gradient-to-r from-indigo-700 to-purple-800 p-6 md:p-8 rounded-xl shadow-2xl mb-10 border border-indigo-500">
-                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-white">
-                    Limited-Time Launch Offer: <span class="text-yellow-300">Save 20%!</span>
-                </h2>
-                <p class="text-lg md:text-xl text-gray-200 mb-6">
-                    Enroll now and get early access to the Ultimate Guide at an exclusive discounted price.
-                </p>
-                <div class="flex flex-wrap justify-center gap-4 md:gap-6 text-white text-shadow" id="countdown">
-                    <div class="bg-indigo-900/50 p-3 md:p-4 rounded-lg min-w-[70px] md:min-w-[90px] lg:min-w-[100px]">
-                        <div class="text-3xl md:text-4xl lg:text-5xl font-extrabold" id="days">00</div>
-                        <div class="text-xs md:text-sm mt-1">DAYS</div>
+            <!-- Limited Time Countdown -->
+            <div class="mt-16 bg-gray-800 bg-opacity-80 backdrop-blur-sm p-7 rounded-lg shadow-2xl inline-block border border-indigo-700">
+                <p class="text-indigo-300 text-sm md:text-base uppercase tracking-wider mb-4 font-semibold">Limited-Time Early Bird Offer Ends In:</p>
+                <div class="flex justify-center items-baseline space-x-4 md:space-x-8 countdown-digits">
+                    <div class="flex flex-col items-center">
+                        <span class="text-fluid-3xl md:text-5xl font-extrabold text-white">03</span>
+                        <span class="text-xs md:text-sm text-gray-400 uppercase tracking-wide">Days</span>
                     </div>
-                    <div class="bg-indigo-900/50 p-3 md:p-4 rounded-lg min-w-[70px] md:min-w-[90px] lg:min-w-[100px]">
-                        <div class="text-3xl md:text-4xl lg:text-5xl font-extrabold" id="hours">00</div>
-                        <div class="text-xs md:text-sm mt-1">HOURS</div>
+                    <span class="text-fluid-3xl md:text-5xl font-extrabold text-gray-500">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-fluid-3xl md:text-5xl font-extrabold text-white">14</span>
+                        <span class="text-xs md:text-sm text-gray-400 uppercase tracking-wide">Hours</span>
                     </div>
-                    <div class="bg-indigo-900/50 p-3 md:p-4 rounded-lg min-w-[70px] md:min-w-[90px] lg:min-w-[100px]">
-                        <div class="text-3xl md:text-4xl lg:text-5xl font-extrabold" id="minutes">00</div>
-                        <div class="text-xs md:text-sm mt-1">MINUTES</div>
+                    <span class="text-fluid-3xl md:text-5xl font-extrabold text-gray-500">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-fluid-3xl md:text-5xl font-extrabold text-white">59</span>
+                        <span class="text-xs md:text-sm text-gray-400 uppercase tracking-wide">Mins</span>
                     </div>
-                    <div class="bg-indigo-900/50 p-3 md:p-4 rounded-lg min-w-[70px] md:min-w-[90px] lg:min-w-[100px]">
-                        <div class="text-3xl md:text-4xl lg:text-5xl font-extrabold" id="seconds">00</div>
-                        <div class="text-xs md:text-sm mt-1">SECONDS</div>
+                    <span class="text-fluid-3xl md:text-5xl font-extrabold text-gray-500">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-fluid-3xl md:text-5xl font-extrabold text-white">42</span>
+                        <span class="text-xs md:text-sm text-gray-400 uppercase tracking-wide">Secs</span>
                     </div>
                 </div>
             </div>
-
-            <a href="#waitlist-form" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                Get Early Access & 20% Off!
-            </a>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 md:px-6 lg:px-8 max-w-6xl">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center mb-12 gradient-text tracking-tight">
-                What You'll Master Inside the Ultimate HomeView Guide
+    <section id="features" class="py-16 md:py-28 bg-gray-950 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-fluid-5xl md:text-5xl font-extrabold mb-8 text-white">
+                Inside <span class="text-indigo-400">'The Savvy iPhone User's Guide'</span>, You'll Discover:
             </h2>
+            <p class="text-fluid-xl md:text-2xl text-gray-400 mb-14 max-w-4xl mx-auto">
+                No more confusing carrier jargon or unexpected charges. Our guide empowers you with actionable insights to connect all your Apple devices effortlessly and affordably.
+            </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="flex items-center mb-4">
-                        <span class="feature-icon mr-3">⚙️</span>
-                        <h3 class="text-xl md:text-2xl font-bold text-white">Effortless Initial Setup</h3>
-                    </div>
-                    <p class="text-gray-300 text-base">
-                        Walk through every step from unboxing to your first smart action. We simplify the complexities.
-                    </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                <!-- Feature 1: Carrier Plan Showdown -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700 hover:border-indigo-600">
+                    <div class="text-indigo-400 mb-4 text-4xl">💡</div>
+                    <h3 class="text-fluid-2xl font-bold mb-3 text-white">Carrier Plan Showdown</h3>
+                    <p class="text-gray-300">Detailed comparison of Verizon, EE, and other multi-device plans. Understand true costs, benefits, and hidden traps before you commit.</p>
                 </div>
-
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="flex items-center mb-4">
-                        <span class="feature-icon mr-3">🤖</span>
-                        <h3 class="text-xl md:text-2xl font-bold text-white">Advanced Automation Tips</h3>
-                    </div>
-                    <p class="text-gray-300 text-base">
-                        Craft intelligent scenes, automate routines, and make your home truly responsive to your life.
-                    </p>
+                <!-- Feature 2: Handoff Fees Exposed -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700 hover:border-indigo-600">
+                    <div class="text-indigo-400 mb-4 text-4xl">💸</div>
+                    <h3 class="text-fluid-2xl font-bold mb-3 text-white">Handoff Fees Exposed</h3>
+                    <p class="text-gray-300">A precise cost-benefit analysis of 'Handoff' services. Is it worth $10/month? We reveal the real value versus carrier hype.</p>
                 </div>
-
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="flex items-center mb-4">
-                        <span class="feature-icon mr-3">🔒</span>
-                        <h3 class="text-xl md:text-2xl font-bold text-white">Bulletproof Privacy Settings</h3>
-                    </div>
-                    <p class="text-gray-300 text-base">
-                        Understand and configure HomeView's robust privacy controls to keep your data secure and personal.
-                    </p>
+                <!-- Feature 3: Hidden Charge Hacks -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700 hover:border-indigo-600">
+                    <div class="text-indigo-400 mb-4 text-4xl">🚫</div>
+                    <h3 class="text-fluid-2xl font-bold mb-3 text-white">Hidden Charge Hacks</h3>
+                    <p class="text-gray-300">Uncover how carriers like Verizon sneak in charges and master battle-tested strategies to avoid these recurring fees entirely.</p>
                 </div>
-
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="flex items-center mb-4">
-                        <span class="feature-icon mr-3">📱</span>
-                        <h3 class="text-xl md:text-2xl font-bold text-white">Seamless Apple Ecosystem Integration</h3>
-                    </div>
-                    <p class="text-gray-300 text-base">
-                        Connect HomeView with HomeKit, Apple Watch, iPad, and more for a unified smart home experience.
-                    </p>
+                <!-- Feature 4: FREE Connectivity Alternatives -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700 hover:border-indigo-600">
+                    <div class="text-indigo-400 mb-4 text-4xl">✨</div>
+                    <h3 class="text-fluid-2xl font-bold mb-3 text-white">FREE Connectivity Alternatives</h3>
+                    <p class="text-gray-300">Leverage powerful third-party apps and advanced eSIM management to achieve seamless multi-device functionality without premium costs.</p>
                 </div>
-
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="flex items-center mb-4">
-                        <span class="feature-icon mr-3">🔌</span>
-                        <h3 class="text-xl md:text-2xl font-bold text-white">Third-Party Accessory Recommendations</h3>
-                    </div>
-                    <p class="text-gray-300 text-base">
-                        Discover the best compatible accessories to expand your HomeView setup and maximize its utility.
-                    </p>
+                <!-- Feature 5: Maximize Your iPhone's Potential -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700 hover:border-indigo-600">
+                    <div class="text-indigo-400 mb-4 text-4xl">🚀</div>
+                    <h3 class="text-fluid-2xl font-bold mb-3 text-white">Maximize Your iPhone's Potential</h3>
+                    <p class="text-gray-300">Transform your entire multi-device ecosystem, save hundreds annually, and regain complete control over your Apple connectivity.</p>
                 </div>
-
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
-                    <div class="flex items-center mb-4">
-                        <span class="feature-icon mr-3">💡</span>
-                        <h3 class="text-xl md:text-2xl font-bold text-white">Expert Troubleshooting & Tips</h3>
-                    </div>
-                    <p class="text-gray-300 text-base">
-                        Avoid common pitfalls and quickly resolve issues with our expert-level advice and best practices.
-                    </p>
+                <!-- Feature 6: Future-Proof Your Setup -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700 hover:border-indigo-600">
+                    <div class="text-indigo-400 mb-4 text-4xl">🔒</div>
+                    <h3 class="text-fluid-2xl font-bold mb-3 text-white">Future-Proof Your Setup</h3>
+                    <p class="text-gray-300">Stay ahead of evolving carrier policies with strategies that ensure your multi-device experience remains efficient, secure, and cost-effective.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 md:px-6 lg:px-8 max-w-2xl text-center">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-8 gradient-text tracking-tight">
-                Don't Miss Out! Join the HomeView Waitlist
+    <section id="waitlist" class="py-16 md:py-28 bg-gray-900 px-4">
+        <div class="max-w-4xl mx-auto text-center bg-gray-800 p-8 md:p-14 rounded-3xl shadow-2xl border border-indigo-700">
+            <h2 class="text-fluid-5xl md:text-5xl font-extrabold mb-7 text-white leading-tight">
+                Don't Miss Out! <span class="text-indigo-400">Secure Your Savings</span> & Master Multi-Device Connectivity.
             </h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-10">
-                Be the first to know when new content drops, get exclusive tips, and never miss an update on your path to HomeView mastery. Secure your spot for the launch discount!
+            <p class="text-fluid-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                Join our exclusive waitlist for 'The Savvy iPhone User's Guide' and be among the first to get access.
+                <span class="font-semibold text-indigo-300 block mt-3">This limited-time early bird offer is available for the first 500 members only!</span>
             </p>
 
-            <form class="bg-gray-700 p-6 md:p-10 rounded-xl shadow-2xl border border-gray-600">
-                <div class="mb-6">
-                    <label for="name" class="block text-left text-gray-200 text-sm md:text-base font-medium mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200" required>
-                </div>
-                <div class="mb-8">
-                    <label for="email" class="block text-left text-gray-200 text-sm md:text-base font-medium mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200" required>
-                </div>
-                <button type="submit"
-                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
-                    Join the Waitlist Now!
+            <form class="flex flex-col md:flex-row gap-5 max-w-xl mx-auto">
+                <input
+                    type="email"
+                    placeholder="Enter Your Best Email Address"
+                    required
+                    class="flex-grow p-4 rounded-xl bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg shadow-inner"
+                />
+                <button
+                    type="submit"
+                    class="w-full md:w-auto bg-gradient-to-r from-indigo-600 to-purple-700 hover:from-indigo-700 hover:to-purple-800 text-white font-bold py-4 px-8 rounded-xl text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50"
+                >
+                    Join the Waitlist & Get 30% Off!
                 </button>
-                <p class="text-gray-400 text-sm mt-4">We respect your privacy. No spam, ever.</p>
             </form>
+            <p class="text-gray-500 text-sm mt-8">We respect your privacy. No spam, only valuable insights.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 md:py-10 border-t border-gray-800">
-        <div class="container mx-auto px-4 text-center text-gray-500 text-sm md:text-base">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved. </p>
-            <p class="mt-2">The "Ultimate Guide to Apple HomeView" is an independent knowledge product and not affiliated with Apple Inc.</p>
+    <footer class="bg-gray-950 py-12 px-4 text-center text-gray-500 text-base">
+        <div class="max-w-6xl mx-auto">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved. | <a href="#" class="text-indigo-400 hover:underline">Privacy Policy</a> | <a href="#" class="text-indigo-400 hover:underline">Terms of Service</a></p>
         </div>
     </footer>
 
-    <!-- Countdown Timer JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const countdownElements = {
-                days: document.getElementById('days'),
-                hours: document.getElementById('hours'),
-                minutes: document.getElementById('minutes'),
-                seconds: document.getElementById('seconds')
-            };
-
-            // Set the launch date (e.g., 7 days from now)
-            const launchDate = new Date();
-            launchDate.setDate(launchDate.getDate() + 7); // 7 days from now
-
-            function updateCountdown() {
-                const now = new Date().getTime();
-                const distance = launchDate.getTime() - now;
-
-                if (distance < 0) {
-                    clearInterval(countdownInterval);
-                    for (const key in countdownElements) {
-                        countdownElements[key].innerHTML = '00';
-                    }
-                    // Optionally, update UI to say "Offer Expired"
-                    const offerSection = document.querySelector('.bg-gradient-to-r');
-                    if (offerSection) {
-                        offerSection.innerHTML = '<h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-white">Offer Expired!</h2><p class="text-lg md:text-xl text-gray-200">The launch discount has ended. Stay tuned for future promotions!</p>';
-                    }
-                    return;
-                }
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                countdownElements.days.innerHTML = String(days).padStart(2, '0');
-                countdownElements.hours.innerHTML = String(hours).padStart(2, '0');
-                countdownElements.minutes.innerHTML = String(minutes).padStart(2, '0');
-                countdownElements.seconds.innerHTML = String(seconds).padStart(2, '0');
-            }
-
-            const countdownInterval = setInterval(updateCountdown, 1000);
-            updateCountdown(); // Initial call to display immediately
-        });
-    </script>
 </body>
 </html>
