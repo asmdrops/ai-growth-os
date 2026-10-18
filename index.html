@@ -3,275 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MindFlow AI - Reclaim Your Digital Focus</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Mindful Scroll AI - Reclaim Your Focus. Master Your Digital Life.</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for Hero Background and Dark Mode */
+        /* Custom styles for hero image overlay and background */
         .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-image: url('https://source.unsplash.com/1600x900/?Mindful,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
-
-        body {
-            @apply bg-gray-950 text-gray-200;
+        .hero-gradient-overlay {
+            background-image: linear-gradient(to top, rgba(17, 24, 39, 0.95) 0%, rgba(17, 24, 39, 0.7) 40%, rgba(17, 24, 39, 0.4) 70%, rgba(17, 24, 39, 0.2) 100%);
         }
-
-        /* Custom Animations for a premium feel */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes bounceIn {
-            0% { transform: scale(0.3); opacity: 0; }
-            50% { transform: scale(1.05); opacity: 1; }
-            70% { transform: scale(0.9); }
-            100% { transform: scale(1); }
-        }
-
-        .animate-fade-in-up {
-            animation: fadeInUp 1s ease-out forwards;
-            opacity: 0; /* Start hidden */
-        }
-        .animate-fade-in {
-            animation: fadeIn 1.2s ease-out forwards;
-            animation-delay: 0.3s;
-            opacity: 0; /* Start hidden */
-        }
-        .animate-bounce-in {
-            animation: bounceIn 0.8s ease-out forwards;
-            opacity: 0; /* Start hidden */
-        }
-        /* Staggered animation delays for hero buttons */
-        .hero-buttons > .animate-bounce-in:nth-child(1) { animation-delay: 0.8s; }
-        .hero-buttons > .animate-bounce-in:nth-child(2) { animation-delay: 1s; }
-
-        /* Hide scrollbar for aesthetic, but allow scrolling */
-        body::-webkit-scrollbar {
-            width: 0px;
-            background: transparent;
+        /* Ensure smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-200 antialiased">
-
-    <!-- Navbar -->
-    <header class="py-4 px-6 fixed top-0 left-0 w-full z-50 bg-gray-950/70 backdrop-blur-sm">
-        <nav class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-white tracking-tight">MindFlow AI</a>
-            <!-- Optional: Add navigation links here if desired -->
-            <!-- <div class="hidden md:flex space-x-6">
-                <a href="#features" class="text-gray-300 hover:text-white transition duration-300">Features</a>
-                <a href="#waitlist" class="text-gray-300 hover:text-white transition duration-300">Waitlist</a>
-            </div> -->
-        </nav>
-    </header>
+<body class="bg-gray-900 text-gray-200 font-sans antialiased">
 
     <!-- Hero Section -->
-    <section class="hero-background relative min-h-screen flex items-center justify-center p-4 pt-20 md:pt-0">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Overlay for text readability -->
-        <div class="relative z-10 text-center max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 animate-fade-in-up">
-                Reclaim Your Focus. Master Your Digital Habits.
+    <header class="relative min-h-screen flex items-center justify-center text-center px-4 py-16 hero-background">
+        <div class="absolute inset-0 hero-gradient-overlay"></div>
+        <div class="relative z-10 max-w-5xl mx-auto space-y-8">
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white leading-tight">
+                <span class="block text-indigo-400">Reclaim Your Focus.</span> Master Your Digital World.
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in">
-                MindFlow AI leverages intelligent analysis of your digital patterns to create personalized focus modes,
-                real-time interventions, and gamified challenges for a healthier tech-life balance.
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto">
+                Mindful Scroll AI is your premium partner in productivity. Leveraging advanced AI, we analyze your unique scrolling patterns to deliver proactive focus nudges, positive content replacements, and gamified challenges linked to your real-world goals. Beyond basic blockers, it's a profound shift in digital well-being.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 hero-buttons">
-                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 animate-bounce-in">
-                    Join the Waitlist Now
+            <div class="space-y-4 sm:space-x-6 sm:space-y-0 flex flex-col sm:flex-row justify-center items-center mt-8">
+                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full shadow-xl transition duration-300 ease-in-out transform hover:scale-105 text-lg">
+                    Join the Exclusive Waitlist!
                 </a>
-                <a href="#features" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 animate-bounce-in">
-                    Explore Features
+                <a href="#features" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 px-10 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg">
+                    Discover What's Possible
                 </a>
             </div>
-        </div>
-    </section>
 
-    <!-- Market Trend Integration Section -->
-    <section class="py-16 bg-gray-900 text-center">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-100 mb-4">The World is Waking Up to Mindful Digital Use.</h2>
-            <p class="text-lg text-gray-400 max-w-3xl mx-auto">
-                With tech giants like Google recognizing the need for anti-doomscrolling solutions, the shift towards
-                healthier digital habits is undeniable. MindFlow AI is at the forefront, offering a comprehensive,
-                cross-platform solution for true digital well-being, going beyond basic tools.
-            </p>
+            <!-- Limited Time Countdown -->
+            <div class="mt-12 p-6 bg-gray-800 bg-opacity-90 rounded-xl shadow-2xl max-w-lg mx-auto border border-indigo-500">
+                <p class="text-xl font-semibold text-yellow-400 mb-3 uppercase tracking-wide">Limited Time Early Access Offer Ends In:</p>
+                <div id="countdown" class="flex justify-center space-x-3 sm:space-x-6 text-white text-3xl sm:text-5xl font-mono">
+                    <div class="flex flex-col items-center">
+                        <span id="days" class="font-bold">00</span>
+                        <span class="text-sm text-gray-400 uppercase">Days</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span id="hours" class="font-bold">00</span>
+                        <span class="text-sm text-gray-400 uppercase">Hours</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes" class="font-bold">00</span>
+                        <span class="text-sm text-gray-400 uppercase">Minutes</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds" class="font-bold">00</span>
+                        <span class="text-sm text-gray-400 uppercase">Seconds</span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 bg-gray-950">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-extrabold text-center text-white mb-12">Empower Your Digital Well-being</h2>
+    <section id="features" class="py-16 sm:py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4">
+                    Why Mindful Scroll AI is Uniquely Powerful
+                </h2>
+                <p class="text-lg text-gray-400 max-w-3xl mx-auto">
+                    In a world of evolving anti-doomscrolling tools, Mindful Scroll AI stands apart. We offer intelligent, deeply integrated control far beyond basic OS functions, transforming your digital experience from passive consumption to active productivity.
+                </p>
+            </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Feature 1: Adaptive AI Focus Modes -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-800 hover:border-indigo-600 transition-all duration-300">
-                    <div class="text-indigo-500 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1-3m-6.938 0l-2.126 1.705A1.996 1.996 0 012 18.007V5c0-1.104.896-2 2-2h16c1.104 0 2 .896 2 2v13.007a1.996 1.996 0 01-1.874 1.998L14.25 17m-6.938 0h6.938"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Adaptive AI Focus Modes</h3>
-                    <p class="text-gray-400">Our AI learns your unique digital consumption patterns to dynamically create personalized focus environments, optimizing for your productivity and peace of mind.</p>
+                <!-- Feature 1: AI-Powered Pattern Analysis -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-indigo-400 mb-4 text-5xl">🧠</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">AI-Powered Pattern Analysis</h3>
+                    <p class="text-gray-300">Our advanced AI learns your unique scrolling habits, identifying triggers and potential distractions before they even start. Experience truly personalized, predictive intervention.</p>
                 </div>
-
-                <!-- Feature 2: Smart Real-time Prompts -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-800 hover:border-indigo-600 transition-all duration-300">
-                    <div class="text-indigo-500 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Smart Real-time Interventions</h3>
-                    <p class="text-gray-400">Receive gentle, intelligent nudges and prompts precisely when you need them, helping you break free from unproductive digital spirals and distractions.</p>
+                <!-- Feature 2: Proactive Focus Nudges -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-indigo-400 mb-4 text-5xl">🎯</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Proactive Focus Nudges</h3>
+                    <p class="text-gray-300">Receive gentle, intelligent nudges precisely when you need them most, subtly guiding you back to productive tasks and away from endless scrolling, without harsh interruptions.</p>
                 </div>
-
-                <!-- Feature 3: Engaging Gamified Challenges -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-800 hover:border-indigo-600 transition-all duration-300">
-                    <div class="text-indigo-500 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Engaging Gamified Challenges</h3>
-                    <p class="text-gray-400">Transform habit formation into a rewarding journey with fun challenges and milestones that celebrate your progress towards mindful tech use and digital mastery.</p>
+                <!-- Feature 3: Positive Content Replacement -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-indigo-400 mb-4 text-5xl">✨</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Positive Content Replacements</h3>
+                    <p class="text-gray-300">Transform passive consumption into an opportunity for growth. Our AI intelligently replaces potentially negative feeds with personalized, uplifting, and educational content tailored to you.</p>
                 </div>
-
-                <!-- Feature 4: Seamless Cross-Platform Sync -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-800 hover:border-indigo-600 transition-all duration-300">
-                    <div class="text-indigo-500 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1-3m-6.938 0l-2.126 1.705A1.996 1.996 0 012 18.007V5c0-1.104.896-2 2-2h16c1.104 0 2 .896 2 2v13.007a1.996 1.996 0 01-1.874 1.998L14.25 17m-6.938 0h6.938"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Seamless Cross-Platform Sync</h3>
-                    <p class="text-gray-400">Experience consistent focus across all your devices – mobile, desktop, and tablet. MindFlow AI keeps your digital habits aligned, everywhere you go.</p>
+                <!-- Feature 4: Gamified Productivity Challenges -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-indigo-400 mb-4 text-5xl">🏆</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Gamified Productivity Challenges</h3>
+                    <p class="text-gray-300">Turn focus and goal achievement into an engaging game. Participate in challenges directly linked to your real-world productivity goals, complete with rewards and progress tracking.</p>
                 </div>
-
-                <!-- Feature 5: Insightful Analytics Dashboards -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-800 hover:border-indigo-600 transition-all duration-300">
-                    <div class="text-indigo-500 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M18 10h4M12 10V4M12 10a9 9 0 11-9 9m9-9h.01"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Insightful Analytics Dashboards</h3>
-                    <p class="text-gray-400">Gain deep understanding of your digital consumption with intuitive dashboards. See your progress, identify patterns, and optimize your mindful tech use for better results.</p>
+                <!-- Feature 5: Seamless Cross-Device Integration -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-indigo-400 mb-4 text-5xl">🔗</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Seamless Cross-Device Integration</h3>
+                    <p class="text-gray-300">Your focus, uninterrupted. Mindful Scroll AI syncs effortlessly across all your devices, ensuring consistent support whether you're on your phone, tablet, or desktop.</p>
                 </div>
-
-                <!-- Feature 6: Popular Productivity Integrations -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-800 hover:border-indigo-600 transition-all duration-300">
-                    <div class="text-indigo-500 mb-4">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v4a1 1 0 001 1h3m-3 4h4m-4 0v4m-5-8h.01M17 12h.01M12 12h.01M12 18h.01M12 21a9 9 0 110-18 9 9 0 010 18z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Popular Productivity Integrations</h3>
-                    <p class="text-gray-400">Connect MindFlow AI with your favorite productivity apps to enhance your workflow without compromising your focus. Integrations coming soon with leading tools!</p>
+                <!-- Feature 6: Advanced Analytics & Custom Rules -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-indigo-400 mb-4 text-5xl">📊</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Advanced Analytics & Controls</h3>
+                    <p class="text-gray-300">Gain profound insights into your digital habits. Utilize custom blocking rules and detailed usage analytics that go far beyond basic operating system functionalities, for true mastery.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / CTA Section with Limited Time Offer -->
-    <section id="waitlist" class="py-20 bg-gray-900 text-center relative overflow-hidden">
-        <div class="container mx-auto px-4 max-w-2xl">
-            <h2 class="text-4xl font-extrabold text-white mb-6">Be Among the First to Reclaim Your Focus</h2>
-            <p class="text-lg text-gray-400 mb-8">
-                Join our exclusive waitlist for early access and special launch offers. Don't miss out!
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 sm:py-24 bg-gray-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4">
+                Be Among the First to Master Your Digital Life
+            </h2>
+            <p class="text-lg text-gray-300 mb-10 max-w-2xl mx-auto">
+                Join the exclusive Mindful Scroll AI waitlist today for priority early access, special launch pricing, and become part of a community dedicated to unparalleled digital well-being and productivity.
             </p>
-
-            <!-- Limited Time Offer Countdown -->
-            <div class="bg-indigo-700/30 border border-indigo-600 p-6 rounded-lg mb-8 shadow-xl">
-                <p class="text-xl font-semibold text-white mb-2">🚀 Limited Time Early Access Offer! 🚀</p>
-                <p class="text-3xl font-bold text-white mb-4">Get 30% OFF Lifetime Membership!</p>
-                <div id="countdown" class="flex justify-center items-center gap-4 text-white text-4xl font-extrabold">
-                    <div class="flex flex-col items-center">
-                        <span id="days">00</span>
-                        <span class="text-sm font-normal text-gray-300">Days</span>
-                    </div>
-                    <span class="text-gray-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours">00</span>
-                        <span class="text-sm font-normal text-gray-300">Hours</span>
-                    </div>
-                    <span class="text-gray-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes">00</span>
-                        <span class="text-sm font-normal text-gray-300">Minutes</span>
-                    </div>
-                    <span class="text-gray-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds">00</span>
-                        <span class="text-sm font-normal text-gray-300">Seconds</span>
-                    </div>
+            <form class="bg-gray-900 p-8 sm:p-12 rounded-xl shadow-2xl space-y-7 max-w-md mx-auto border border-gray-700">
+                <div>
+                    <label for="name" class="sr-only">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" 
+                           class="w-full p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 placeholder-gray-400 text-lg" required>
                 </div>
-                <p class="text-sm text-gray-400 mt-4">Offer expires in <span class="font-bold">2 days, 16 hours, 30 minutes!</span></p>
-            </div>
-
-            <form class="max-w-md mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700" required>
+                <div>
+                    <label for="email" class="sr-only">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" 
+                           class="w-full p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 placeholder-gray-400 text-lg" required>
                 </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700" required>
-                </div>
-                <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 w-full">
-                    Join Early Access & Save
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-xl">
+                    Secure My Spot Now!
                 </button>
-                <p class="text-gray-500 text-xs mt-4">We respect your privacy and will never share your email. Unsubscribe anytime.</p>
+                <p class="text-sm text-gray-500 mt-4">We respect your inbox. Expect only valuable updates on Mindful Scroll AI.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2023 MindFlow AI. All rights reserved.</p>
-            <p class="mt-2">
-                <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a> |
-                <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
-            </p>
+    <footer class="bg-gray-900 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            <p>&copy; 2023 Mindful Scroll AI. All rights reserved.</p>
+            <p class="mt-2">Empowering your digital focus, built with precision and care.</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
+    <!-- Countdown Timer JavaScript -->
     <script>
-        const countdownElement = document.getElementById("countdown");
-        const daysElement = document.getElementById("days");
-        const hoursElement = document.getElementById("hours");
-        const minutesElement = document.getElementById("minutes");
-        const secondsElement = document.getElementById("seconds");
+        document.addEventListener('DOMContentLoaded', function() {
+            const countdownElement = document.getElementById('countdown');
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
 
-        // Set the date we're counting down to (e.g., 2 days, 16 hours, 30 minutes from now)
-        const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 2);
-        countdownDate.setHours(countdownDate.getHours() + 16);
-        countdownDate.setMinutes(countdownDate.getMinutes() + 30);
-        countdownDate.setSeconds(countdownDate.getSeconds() + 0); // Reset seconds for cleaner calculation
+            if (!countdownElement || !daysEl || !hoursEl || !minutesEl || !secondsEl) return;
 
-        const x = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countdownDate.getTime() - now;
+            // Set the date we're counting down to: 7 days from now
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); 
+            // Add some random hours/minutes/seconds for a more realistic start
+            countDownDate.setHours(countDownDate.getHours() + Math.floor(Math.random() * 20));
+            countDownDate.setMinutes(countDownDate.getMinutes() + Math.floor(Math.random() * 59));
+            countDownDate.setSeconds(countDownDate.getSeconds() + Math.floor(Math.random() * 59));
 
-            if (distance < 0) {
-                clearInterval(x);
-                countdownElement.innerHTML = "EXPIRED";
-                return;
-            }
+            // Update the count down every 1 second
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate.getTime() - now;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                if (distance < 0) {
+                    clearInterval(x);
+                    countdownElement.innerHTML = "<span class='text-red-500 text-xl sm:text-3xl font-bold'>Offer Expired!</span>";
+                    // Optionally hide the entire countdown container or change its style
+                    countdownElement.parentElement.classList.add('bg-opacity-50', 'border-red-500');
+                    countdownElement.parentElement.classList.remove('border-indigo-500');
+                    return;
+                }
 
-            daysElement.innerHTML = String(days).padStart(2, '0');
-            hoursElement.innerHTML = String(hours).padStart(2, '0');
-            minutesElement.innerHTML = String(minutes).padStart(2, '0');
-            secondsElement.innerHTML = String(seconds).padStart(2, '0');
-        }, 1000);
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result with leading zeros
+                daysEl.innerHTML = String(days).padStart(2, '0');
+                hoursEl.innerHTML = String(hours).padStart(2, '0');
+                minutesEl.innerHTML = String(minutes).padStart(2, '0');
+                secondsEl.innerHTML = String(seconds).padStart(2, '0');
+            }, 1000);
+        });
     </script>
 </body>
 </html>
