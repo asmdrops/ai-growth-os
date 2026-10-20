@@ -1,234 +1,226 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PodPro – Optimize Your Spotify Podcast Memberships</title>
+    <title>DuoDash Alerts - Secure Limited Edition Tech & Dominate Resale Markets</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for dark mode and premium feel */
-        body {
-            @apply bg-gray-900 text-gray-100 font-sans antialiased;
-        }
+        /* Custom styles for background image and overlay */
         .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
         }
-        /* Basic animations for a premium feel */
-        .card-hover {
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better text contrast */
         }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.4), 0 6px 15px -3px rgba(0, 0, 0, 0.25);
+        /* Custom scrollbar for premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* dark gray */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6; /* blue */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb; /* darker blue */
+        }
+
+        /* Keyframe animations for subtle entry */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0; /* Hidden by default */
+        }
+        .animate-fade-in-up.delay-200 { animation-delay: 0.2s; }
+        .animate-fade-in-up.delay-400 { animation-delay: 0.4s; }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-gray-900 text-white font-sans antialiased">
 
     <!-- Hero Section -->
-    <section class="relative w-full min-h-screen flex items-center justify-center hero-bg bg-cover bg-center bg-fixed">
-        <div class="absolute inset-0 bg-black opacity-75"></div> <!-- Dark overlay -->
-        <div class="relative z-10 text-center px-4 md:px-8 max-w-5xl mx-auto py-16">
-            <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
-                Supercharge Your Spotify Paid Podcast Memberships
+    <header class="hero-bg min-h-screen flex items-center justify-center py-20 md:py-0">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="container mx-auto px-4 relative z-10 text-center max-w-4xl">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-up">
+                Outsmart the Scalpers. Own the iPhone Duo.
             </h1>
-            <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
-                Unlock advanced analytics, automate exclusive perk delivery, and exponentially grow your audience engagement with PodPro.
+            <p class="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-10 max-w-2xl mx-auto animate-fade-in-up delay-200">
+                Unlock real-time iPhone Duo restock alerts, exclusive market analysis on secondary resale values, and actionable strategies for securing ALL limited-edition tech.
             </p>
-            
-            <!-- Limited Time Countdown -->
-            <div class="bg-gradient-to-r from-purple-700 to-indigo-800 p-6 rounded-xl shadow-2xl mb-12 border border-purple-600 max-w-md mx-auto transform hover:scale-105 transition-transform duration-300">
-                <p class="text-xl md:text-2xl font-semibold text-white mb-4">Exclusive Early Access Ending Soon:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-white font-extrabold text-4xl md:text-5xl">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="px-2 py-1 bg-gray-900 rounded-md">00</span>
-                        <span class="text-sm font-normal text-gray-300 mt-1">Days</span>
+
+            <!-- Limited Time Offer & Countdown -->
+            <div class="bg-gradient-to-r from-purple-600 to-blue-600 p-6 rounded-lg shadow-2xl mb-12 transform hover:scale-105 transition-all duration-300 ease-in-out border border-purple-500 max-w-xl mx-auto">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">🚨 Limited Time Early Bird Access! 🚨</h2>
+                <p class="text-lg md:text-xl mb-4">
+                    Secure your premium subscription for a special launch price. Offer ends in:
+                </p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-4xl md:text-5xl font-extrabold">
+                    <div class="bg-gray-800 p-4 rounded-lg shadow-inner">
+                        <span id="days">00</span><span class="block text-sm font-normal mt-1">Days</span>
                     </div>
-                    <span class="text-4xl md:text-5xl">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="px-2 py-1 bg-gray-900 rounded-md">00</span>
-                        <span class="text-sm font-normal text-gray-300 mt-1">Hours</span>
+                    <div class="bg-gray-800 p-4 rounded-lg shadow-inner">
+                        <span id="hours">00</span><span class="block text-sm font-normal mt-1">Hours</span>
                     </div>
-                    <span class="text-4xl md:text-5xl">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="px-2 py-1 bg-gray-900 rounded-md">00</span>
-                        <span class="text-sm font-normal text-gray-300 mt-1">Minutes</span>
+                    <div class="bg-gray-800 p-4 rounded-lg shadow-inner">
+                        <span id="minutes">00</span><span class="block text-sm font-normal mt-1">Minutes</span>
                     </div>
-                    <span class="text-4xl md:text-5xl">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="px-2 py-1 bg-gray-900 rounded-md">00</span>
-                        <span class="text-sm font-normal text-gray-300 mt-1">Seconds</span>
+                    <div class="bg-gray-800 p-4 rounded-lg shadow-inner">
+                        <span id="seconds">00</span><span class="block text-sm font-normal mt-1">Seconds</span>
                     </div>
                 </div>
-            </div>
+                <button onclick="document.getElementById('waitlist-form-section').scrollIntoView({ behavior: 'smooth' });"
+                        class="mt-8 bg-white text-gray-900 hover:bg-gray-200 px-10 py-4 rounded-full text-xl md:text-2xl font-bold uppercase tracking-wide shadow-lg transform hover:-translate-y-1 transition duration-300 ease-in-out">
+                    Claim Your Spot Now!
+                </button>
+                <!-- JavaScript for countdown timer functionality -->
+                <script>
+                    const countdownTarget = new Date();
+                    // Set target to 7 days from now for demonstration. Replace with actual end date for production.
+                    countdownTarget.setDate(countdownTarget.getDate() + 7); 
+                    
+                    function updateCountdown() {
+                        const now = new Date().getTime();
+                        const distance = countdownTarget - now;
 
-            <a href="#waitlist" class="inline-block bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-bold py-4 px-12 rounded-full text-xl md:text-2xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out uppercase tracking-wider">
-                Join the Exclusive Waitlist!
-            </a>
+                        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                        // Update the elements
+                        const getElement = (id) => document.getElementById(id);
+                        if (getElement('days')) getElement('days').innerText = String(days).padStart(2, '0');
+                        if (getElement('hours')) getElement('hours').innerText = String(hours).padStart(2, '0');
+                        if (getElement('minutes')) getElement('minutes').innerText = String(minutes).padStart(2, '0');
+                        if (getElement('seconds')) getElement('seconds').innerText = String(seconds).padStart(2, '0');
+
+                        // If the countdown is finished, display a message
+                        if (distance < 0) {
+                            clearInterval(countdownInterval);
+                            if (getElement('countdown')) getElement('countdown').innerHTML = "<p class='text-xl text-red-300'>Offer Expired! Sign up for full price.</p>";
+                        }
+                    }
+
+                    // Initial call and set interval
+                    updateCountdown();
+                    const countdownInterval = setInterval(updateCountdown, 1000);
+                </script>
+            </div>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-28 bg-gray-950">
-        <div class="container mx-auto px-4 text-center max-w-7xl">
-            <h2 class="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-8 text-white leading-tight">
-                Unlock Unprecedented Growth for Your Spotify Podcast
+    <section class="py-20 bg-gray-900 text-center">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+                Why DuoDash Alerts is Your Ultimate Advantage
             </h2>
-            <p class="text-lg md:text-xl text-gray-400 mb-16 max-w-4xl mx-auto">
-                PodPro provides the essential tools Spotify podcast creators need to maximize revenue, streamline operations, and build a loyal, engaged community around their paid memberships.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Feature 1: Advanced Analytics -->
-                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700 card-hover flex flex-col items-center text-center">
-                    <div class="text-teal-400 mb-5 p-3 rounded-full bg-gray-700">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
-                    </div>
-                    <h3 class="text-3xl font-bold text-white mb-3">Deep Dive Analytics</h3>
-                    <p class="text-gray-400 text-lg">
-                        Track subscriber growth, churn rates, and engagement metrics specifically for your Spotify paid memberships. Understand what truly drives success and retention.
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: Real-Time Restock Notifications -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-all duration-300 ease-in-out">
+                    <div class="text-5xl mb-4">⚡️</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-300">Real-Time Restock Notifications</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Get instant alerts across all major retailers the moment iPhone Duo or other limited tech is back in stock. Never miss a window again!
                     </p>
                 </div>
-
-                <!-- Feature 2: Automation -->
-                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700 card-hover flex flex-col items-center text-center">
-                    <div class="text-purple-400 mb-5 p-3 rounded-full bg-gray-700">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2c-3.189 0-5.908 1.554-7.55 3.931M6.094 13.565A9.957 9.957 0 0112 10c2.515 0 4.81.978 6.477 2.564"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.062 13.916C18.423 15.688 19 17.842 19 20c0 1.105-.895 2-2 2s-2-.895-2-2c0-.766-.355-1.455-.916-1.921M5 20a2 2 0 104 0 2 2 0 00-4 0z"></path></svg>
-                    </div>
-                    <h3 class="text-3xl font-bold text-white mb-3">Automated Perk Delivery</h3>
-                    <p class="text-gray-400 text-lg">
-                        Effortlessly manage and deliver exclusive content, merchandise, and other custom perks directly to your paying Spotify subscribers. Save time, delight fans.
+                <!-- Feature 2: Exclusive Market Analysis -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-all duration-300 ease-in-out">
+                    <div class="text-5xl mb-4">📈</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-300">Exclusive Market Analysis</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Access expert analysis on secondary resale values, demand trends, and pricing strategies to maximize your investment or secure at the best price.
                     </p>
                 </div>
-
-                <!-- Feature 3: Audience Engagement -->
-                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700 card-hover flex flex-col items-center text-center">
-                    <div class="text-pink-400 mb-5 p-3 rounded-full bg-gray-700">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l4-4H7m-7-2h20"></path></svg>
-                    </div>
-                    <h3 class="text-3xl font-bold text-white mb-3">Smarter Engagement Tools</h3>
-                    <p class="text-gray-400 text-lg">
-                        Segment your audience, personalize communication, and foster a stronger, more vibrant community around your premium Spotify content.
+                <!-- Feature 3: Actionable Acquisition Strategies -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-all duration-300 ease-in-out">
+                    <div class="text-5xl mb-4">🎯</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-green-300">Actionable Acquisition Strategies</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Learn insider tactics and proven methods to outsmart the competition and secure highly sought-after limited-edition tech products.
                     </p>
                 </div>
-
-                <!-- Feature 4: Membership Optimization -->
-                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700 card-hover flex flex-col items-center text-center">
-                    <div class="text-red-400 mb-5 p-3 rounded-full bg-gray-700">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
-                    </div>
-                    <h3 class="text-3xl font-bold text-white mb-3">Maximize Membership Revenue</h3>
-                    <p class="text-gray-400 text-lg">
-                        Get a clear overview of your paid membership performance, identify trends, and make data-driven decisions to boost your recurring revenue.
+                <!-- Feature 4: Anti-Scalping Advantage (Directly addresses trend) -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-all duration-300 ease-in-out">
+                    <div class="text-5xl mb-4">🔒</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-red-300">Anti-Scalping Advantage</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        With Apple limiting orders, our alerts give YOU the edge to get your hands on the Duo before scalpers hoard them. Fair access, on your terms.
                     </p>
                 </div>
-                
-                <!-- Feature 5: Churn Reduction -->
-                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700 card-hover flex flex-col items-center text-center">
-                    <div class="text-yellow-400 mb-5 p-3 rounded-full bg-gray-700">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-                    </div>
-                    <h3 class="text-3xl font-bold text-white mb-3">Intelligent Churn Prediction</h3>
-                    <p class="text-gray-400 text-lg">
-                        Proactively identify at-risk subscribers and implement targeted retention strategies before they decide to leave your paid community.
+                <!-- Feature 5: Cross-Retailer Monitoring -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-all duration-300 ease-in-out">
+                    <div class="text-5xl mb-4">🌐</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-yellow-300">Cross-Retailer Monitoring</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        We monitor all major online and brick-and-mortar retailers, so you don't have to. Your one-stop source for availability.
                     </p>
                 </div>
-
-                <!-- Feature 6: Exclusive Content Management -->
-                <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700 card-hover flex flex-col items-center text-center">
-                    <div class="text-blue-400 mb-5 p-3 rounded-full bg-gray-700">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                    </div>
-                    <h3 class="text-3xl font-bold text-white mb-3">Exclusive Content Hub</h3>
-                    <p class="text-gray-400 text-lg">
-                        Organize and present your bonus content, behind-the-scenes access, and member-only episodes seamlessly within your Spotify ecosystem.
+                <!-- Feature 6: Elite Tech Community Access -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition-all duration-300 ease-in-out">
+                    <div class="text-5xl mb-4">🏆</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-cyan-300">Elite Tech Community Access</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Join a private community of serious tech enthusiasts, share insights, and get support from fellow DuoDash subscribers.
                     </p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-28 bg-gray-900">
-        <div class="container mx-auto px-4 text-center max-w-3xl">
-            <h2 class="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-8 text-white leading-tight">
-                Ready to Elevate Your Spotify Podcast?
+    <!-- Waitlist/Subscription Form Section -->
+    <section id="waitlist-form-section" class="py-20 bg-gray-800 text-center">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
+                Ready to Get Ahead?
             </h2>
-            <p class="text-lg md:text-xl text-gray-400 mb-12">
-                Join our exclusive waitlist to get early access to PodPro and transform your Spotify podcast into a powerful, revenue-generating machine. Don't miss out on this limited opportunity!
+            <p class="text-xl md:text-2xl text-gray-300 mb-10">
+                Don't let the opportunity slip away. Join DuoDash Alerts today and transform how you acquire limited tech.
             </p>
-            
-            <form action="#" method="POST" class="bg-gray-800 p-8 md:p-12 rounded-2xl shadow-2xl border border-gray-700 space-y-6">
-                <div>
-                    <label for="name" class="sr-only">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Full Name" 
-                           class="w-full p-4 rounded-xl bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-teal-500 focus:border-transparent text-gray-200 placeholder-gray-400 text-lg transition-all duration-300 shadow-inner" 
-                           required>
-                </div>
-                <div>
-                    <label for="email" class="sr-only">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email Address" 
-                           class="w-full p-4 rounded-xl bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-teal-500 focus:border-transparent text-gray-200 placeholder-gray-400 text-lg transition-all duration-300 shadow-inner" 
-                           required>
-                </div>
-                <div>
-                    <button type="submit" 
-                            class="w-full bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-bold py-4 px-8 rounded-xl text-xl md:text-2xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out uppercase tracking-wider">
-                        Secure My Spot & Get Early Access!
-                    </button>
-                </div>
-                <p class="text-sm text-gray-500 mt-4">
-                    We respect your privacy. Your information will not be shared.
+            <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700">
+                <p class="text-xl text-yellow-400 font-semibold mb-6">
+                    🚨 This is your LAST CHANCE to lock in early bird pricing! 🚨
                 </p>
-            </form>
+                <form class="space-y-6" action="#" method="POST"> <!-- Add a real action and method for form submission -->
+                    <div>
+                        <label for="name" class="sr-only">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Full Name"
+                               class="w-full px-6 py-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg" required>
+                    </div>
+                    <div>
+                        <label for="email" class="sr-only">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email Address"
+                               class="w-full px-6 py-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg" required>
+                    </div>
+                    <button type="submit"
+                            class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg text-xl font-bold uppercase tracking-wide shadow-lg transform hover:-translate-y-1 transition duration-300 ease-in-out">
+                        Secure My Early Bird Access!
+                    </button>
+                    <p class="text-sm text-gray-400 mt-4">
+                        We respect your privacy. No spam, ever. Unsubscribe anytime.
+                    </p>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-10 border-t border-gray-800">
-        <div class="container mx-auto px-4 text-center text-gray-500 text-md">
-            <p>&copy; 2023 PodPro. All rights reserved. Built for discerning Spotify podcast creators.</p>
+    <footer class="bg-gray-900 py-10 text-center text-gray-500 text-sm">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2024 DuoDash Alerts. All rights reserved.</p>
+            <p class="mt-2">Powered by cutting-edge tech. Designed for the savvy enthusiast.</p>
         </div>
     </footer>
 
-    <!-- Countdown Timer Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the target date for the countdown (e.g., 7 days from now)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Adds 7 days to the current date
-            countDownDate.setHours(23, 59, 59, 999); // Sets time to end of the day for the target date
-
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<p class='text-xl md:text-2xl text-red-400 font-bold'>Early Access Window Has Closed!</p>";
-                    // Optional: Disable waitlist form or change CTA
-                    const waitlistButton = document.querySelector('#waitlist button[type="submit"]');
-                    if (waitlistButton) {
-                        waitlistButton.textContent = "Join Regular Waitlist";
-                        waitlistButton.classList.remove('from-green-500', 'to-teal-600');
-                        waitlistButton.classList.add('from-gray-500', 'to-gray-600', 'cursor-not-allowed');
-                        waitlistButton.disabled = true; // Or redirect to a different form
-                    }
-                    return;
-                }
-
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-            }, 1000);
-        });
-    </script>
 </body>
 </html>
