@@ -3,198 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iPhone Duo Crackgate Repair Masterclass - Enroll Now</title>
+    <title>Foldable iPhone Mastery & Protection Guide | Early Adopter Exclusive</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
+        /* Custom scrollbar for dark mode aesthetic */
+        ::-webkit-scrollbar {
+            width: 10px;
         }
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* Darker track */
         }
-        .countdown-item {
-            @apply flex flex-col items-center justify-center text-center p-4 bg-gray-800 bg-opacity-70 rounded-lg shadow-lg;
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* Grayish thumb */
+            border-radius: 5px;
         }
-        .countdown-value {
-            @apply text-4xl sm:text-5xl font-extrabold text-indigo-400;
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280; /* Lighter gray on hover */
         }
-        .countdown-label {
-            @apply text-sm sm:text-base text-gray-300 font-medium mt-1;
+
+        /* Custom CSS for animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        input[type="email"], input[type="text"] {
-            @apply bg-gray-800 border border-gray-700 text-gray-200 placeholder-gray-500 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors duration-200;
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        .btn-primary {
-            @apply bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-md transition-all duration-200 ease-in-out transform hover:scale-105;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
+        @keyframes pulseFade {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.9; }
+        }
+
+        .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
+        .animate-fade-in-up { animation: fadeInUp 1s ease-out forwards; }
+        .animate-fade-in { animation: fadeIn 0.8s ease-out forwards; }
+        .animate-pulse-fade { animation: pulseFade 2s infinite ease-in-out; }
+
+        /* Delay utilities for features section */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+        .delay-700 { animation-delay: 0.7s; }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased overflow-x-hidden">
 
     <!-- Hero Section -->
-    <header class="relative overflow-hidden min-h-screen flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8 hero-background bg-cover bg-center">
-        <div class="absolute inset-0 bg-black opacity-75"></div> <!-- Dark overlay -->
-        <div class="relative z-10 max-w-7xl mx-auto text-center">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
-                Master the iPhone Duo <span class="text-indigo-400">'Crackgate'</span> Repair
+    <header class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+        <!-- Hero Image Background -->
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://source.unsplash.com/1600x900/?An,tech');">
+            <!-- Dark Overlay for Readability -->
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-black/60 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 p-4 md:p-8 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 text-white drop-shadow-lg animate-fade-in-down">
+                Master Your Foldable iPhone
             </h1>
-            <p class="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto font-light">
-                Go Beyond Apple's DIY Guides. Simplified, Step-by-Step Mastery for Hinge & Screen Fixes.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto drop-shadow-md animate-fade-in-up">
+                The Ultimate Early Adopter's Guide to Unlocking Hidden Features, Optimizing Performance, and Ensuring Unprecedented Longevity.
             </p>
 
             <!-- Limited Time Offer & Countdown -->
-            <div class="mb-12">
-                <p class="text-lg sm:text-xl text-yellow-300 font-semibold mb-4">
-                    Exclusive Launch Offer: <span class="uppercase">Limited Spots Available!</span>
+            <div class="bg-purple-700 bg-opacity-90 p-4 sm:p-6 rounded-lg shadow-xl inline-block animate-pulse-fade">
+                <p class="text-xl sm:text-2xl font-bold text-white mb-3">
+                    Exclusive Introductory Price - <span class="text-yellow-300">Limited Time Offer!</span>
                 </p>
-                <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto">
-                    <div class="countdown-item">
-                        <span id="days" class="countdown-value">00</span>
-                        <span class="countdown-label">Days</span>
+                <div class="flex justify-center items-center space-x-4 mb-4">
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white" id="countdown-hours">03</span>
+                        <span class="text-sm sm:text-base text-gray-200">Hours</span>
                     </div>
-                    <div class="countdown-item">
-                        <span id="hours" class="countdown-value">00</span>
-                        <span class="countdown-label">Hours</span>
+                    <span class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white" id="countdown-minutes">59</span>
+                        <span class="text-sm sm:text-base text-gray-200">Minutes</span>
                     </div>
-                    <div class="countdown-item">
-                        <span id="minutes" class="countdown-value">00</span>
-                        <span class="countdown-label">Minutes</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span id="seconds" class="countdown-value">00</span>
-                        <span class="countdown-label">Seconds</span>
+                    <span class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white" id="countdown-seconds">59</span>
+                        <span class="text-sm sm:text-base text-gray-200">Seconds</span>
                     </div>
                 </div>
+                <a href="#waitlist" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-full text-lg sm:text-xl transition duration-300 transform hover:scale-105 shadow-lg">
+                    Secure Your Guide Now!
+                </a>
             </div>
-
-            <a href="#waitlist" class="btn-primary text-lg sm:text-xl px-10 py-4">
-                Join the VIP Waitlist Now!
-            </a>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-20 lg:py-24 bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 text-white">
-                What You'll Achieve with This Masterclass
+    <section id="features" class="py-16 md:py-24 bg-gray-900 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-12 animate-fade-in-up">
+                What You'll Discover Inside
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700">
-                    <h3 class="text-2xl font-semibold mb-4 text-indigo-400">🎥 Simplified Video Tutorials</h3>
-                    <ul class="list-none space-y-3 text-gray-300">
-                        <li>✅ Step-by-step guidance for hinge & screen replacement.</li>
-                        <li>💡 Crystal-clear explanations, even for beginners.</li>
-                        <li>⏰ Save time and frustration with expert techniques.</li>
-                    </ul>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 animate-fade-in delay-100">
+                    <div class="text-5xl text-purple-400 mb-6 mx-auto">📱</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Uncover Hidden OS Gems</h3>
+                    <p class="text-gray-300 leading-relaxed">Access proprietary features and settings Apple won't tell you about, enhancing your daily usage and productivity.</p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700">
-                    <h3 class="text-2xl font-semibold mb-4 text-indigo-400">🔍 Comprehensive Troubleshooting</h3>
-                    <ul class="list-none space-y-3 text-gray-300">
-                        <li>🛠️ Diagnose common iPhone Duo issues with confidence.</li>
-                        <li>🔧 Learn advanced repair strategies for complex problems.</li>
-                        <li>🛑 Avoid costly mistakes with preventative insights.</li>
-                    </ul>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 animate-fade-in delay-200">
+                    <div class="text-5xl text-blue-400 mb-6 mx-auto">⚙️</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Maximize Performance & Battery</h3>
+                    <p class="text-gray-300 leading-relaxed">Implement expert tweaks and configurations to achieve peak efficiency and significantly extend your device's battery life.</p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700">
-                    <h3 class="text-2xl font-semibold mb-4 text-indigo-400">🛒 Curated Toolkit & Parts List</h3>
-                    <ul class="list-none space-y-3 text-gray-300">
-                        <li>✅ Exact specialized tools recommended for precision.</li>
-                        <li>💯 Trusted third-party parts providers for quality.</li>
-                        <li>💸 Save money by knowing what to buy and where.</li>
-                    </ul>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 animate-fade-in delay-300">
+                    <div class="text-5xl text-green-400 mb-6 mx-auto">💧</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Advanced Screen & Hinge Care</h3>
+                    <p class="text-gray-300 leading-relaxed">Learn exclusive maintenance strategies to preserve your foldable screen's pristine condition and the hinge's longevity.</p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700">
-                    <h3 class="text-2xl font-semibold mb-4 text-indigo-400">🛡️ Extend Your Device's Lifespan</h3>
-                    <ul class="list-none space-y-3 text-gray-300">
-                        <li>💖 Keep your iPhone Duo running like new for longer.</li>
-                        <li>🌍 Contribute to reducing electronic waste responsibly.</li>
-                        <li>🚀 Unlock the full potential of your device investment.</li>
-                    </ul>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 animate-fade-in delay-400">
+                    <div class="text-5xl text-red-400 mb-6 mx-auto">🛡️</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Future-Proof Your Investment</h3>
+                    <p class="text-gray-300 leading-relaxed">Discover strategies to extend your device's overall lifespan and maximize its resale value, protecting your premium purchase.</p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700">
-                    <h3 class="text-2xl font-semibold mb-4 text-indigo-400">💰 Massive Cost Savings</h3>
-                    <ul class="list-none space-y-3 text-gray-300">
-                        <li>🚫 Say goodbye to expensive repair shop bills.</li>
-                        <li>💪 Gain independence and self-sufficiency in tech repair.</li>
-                        <li>📈 Potentially earn extra income by offering repairs.</li>
-                    </ul>
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 animate-fade-in delay-500">
+                    <div class="text-5xl text-yellow-400 mb-6 mx-auto">💡</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Early Adopter Advantage</h3>
+                    <p class="text-gray-300 leading-relaxed">Stay ahead of the curve with insights specifically tailored for the pioneering foldable iPhone owner.</p>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-700">
-                    <h3 class="text-2xl font-semibold mb-4 text-indigo-400">🚀 Become an iPhone Duo Repair Expert</h3>
-                    <ul class="list-none space-y-3 text-gray-300">
-                        <li>🎓 Develop a valuable, in-demand technical skill.</li>
-                        <li>🌐 Join a community of empowered DIY enthusiasts.</li>
-                        <li>✨ Feel the satisfaction of fixing it yourself.</li>
-                    </ul>
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 animate-fade-in delay-600">
+                    <div class="text-5xl text-pink-400 mb-6 mx-auto">🚀</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Exclusive Updates & Bonuses</h3>
+                    <p class="text-gray-300 leading-relaxed">Gain access to future guide updates, new discoveries, and bonus content reserved only for our early community.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-20 lg:py-24 bg-gray-800">
-        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white">
-                Don't Miss Out! Join the Waitlist!
+    <section id="waitlist" class="py-16 md:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 max-w-xl text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8 animate-fade-in-up">
+                Secure Your Early Access Now
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8">
-                Be among the first to get exclusive access, early bird discounts, and updates on the 'iPhone Duo Crackgate Repair Masterclass.'
+            <p class="text-lg text-gray-300 mb-10 leading-relaxed animate-fade-in-up">
+                Don't miss out on the introductory pricing and become one of the first to truly master your new foldable iPhone.
             </p>
-            <form class="space-y-6">
-                <div>
-                    <input type="text" id="name" name="name" placeholder="Your Full Name" required
-                           class="w-full">
+            <form class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-purple-700 animate-fade-in-up delay-700">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-200 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600 bg-gray-700 transition duration-300" required>
                 </div>
-                <div>
-                    <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
-                           class="w-full">
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600 bg-gray-700 transition duration-300" required>
                 </div>
-                <div>
-                    <button type="submit" class="btn-primary w-full text-lg">
-                        Secure My Spot on the Waitlist!
-                    </button>
-                </div>
+                <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-xl transition duration-300 transform hover:scale-105 shadow-lg w-full">
+                    Join the Exclusive Ranks
+                </button>
+                <p class="text-sm text-gray-400 mt-6">
+                    Your information is 100% secure and will never be shared.
+                </p>
             </form>
-            <p class="mt-8 text-sm text-gray-400">
-                Your information is safe with us. We hate spam too!
-            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 bg-gray-900 text-center text-gray-400 text-sm">
-        <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm">
+        <div class="container mx-auto px-4">
+            <p>&copy; <span id="current-year"></span> Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">Leveraging Knowledge for Digital Mastery.</p>
+        </div>
     </footer>
 
     <script>
-        // Countdown Logic
-        const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 14); // Set for 14 days from now
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        const countdownInterval = setInterval(() => {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
+        // Basic countdown timer (client-side simulation, not persistent)
+        let targetDate = new Date();
+        targetDate.setHours(targetDate.getHours() + 3); // 3 hours from now
+        targetDate.setMinutes(targetDate.getMinutes() + 59); // 59 minutes
+        targetDate.setSeconds(targetDate.getSeconds() + 59); // 59 seconds
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        function updateCountdown() {
+            let now = new Date().getTime();
+            let distance = targetDate - now;
 
-            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
-            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
-            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
-            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Ensure two digits
+            document.getElementById('countdown-hours').innerText = hours < 10 ? '0' + hours : hours;
+            document.getElementById('countdown-minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
+            document.getElementById('countdown-seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
 
             if (distance < 0) {
                 clearInterval(countdownInterval);
-                document.getElementById("countdown").innerHTML = "<p class='text-lg sm:text-xl text-red-400 font-semibold'>Offer Expired!</p>";
+                document.getElementById('countdown-hours').innerText = '00';
+                document.getElementById('countdown-minutes').innerText = '00';
+                document.getElementById('countdown-seconds').innerText = '00';
+                // Optionally, disable the button or change text to "Offer Expired"
             }
-        }, 1000);
+        }
+
+        let countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call to display immediately
     </script>
 </body>
 </html>
