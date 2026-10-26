@@ -3,196 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlowSync 5G - Ultra-Low Latency Collaboration for MacBook Pro</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuTTBdGaSxbT9fFRjXf/Yq66oG9y+W1M7a6T4QW44G1x0Ew==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Duo Mastery: Unlock iPhone Duo & Apple Pencil Potential</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for dark mode aesthetics and countdown timer responsiveness */
-        body {
-            font-family: 'Inter', sans-serif; /* A modern, clean font */
-        }
-        .countdown-timer span {
-            @apply text-4xl lg:text-5xl font-extrabold text-indigo-400;
-        }
-        .countdown-timer div {
-            @apply flex flex-col items-center justify-center;
-        }
-        .countdown-timer p {
-            @apply text-sm md:text-base uppercase text-gray-400 mt-1;
-        }
+        /* Custom styles for premium dark aesthetic and responsive image overlay */
         .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?FlowSync,tech');
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
+        }
+        /* Countdown styling */
+        .countdown-segment {
+            @apply flex flex-col items-center justify-center p-4 bg-gray-800 bg-opacity-70 rounded-lg shadow-lg;
+        }
+        .countdown-number {
+            @apply text-5xl font-extrabold text-indigo-400;
+        }
+        .countdown-label {
+            @apply text-sm uppercase text-gray-300 mt-2;
         }
     </style>
 </head>
-<body class="bg-gray-950 text-white font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans leading-normal tracking-normal antialiased">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center hero-background">
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-        <div class="relative z-10 text-center p-4 md:p-8 lg:p-12 max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 tracking-tight text-white drop-shadow-lg">
-                FlowSync 5G: Ultra-Low Latency Creativity, Redefined
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden hero-background">
+        <div class="absolute inset-0 hero-overlay z-0"></div>
+        <div class="relative z-10 text-center px-4 py-16 max-w-5xl mx-auto">
+            <p class="text-indigo-400 text-sm md:text-base uppercase font-semibold mb-4 tracking-wider">
+                📈 TREND ALERT: iPhone Duo now supports Apple Pencil with iOS 27.2 – The Verge
+            </p>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                Duo Mastery: Unlock Apple Pencil's <span class="text-indigo-400">Full Potential</span> on Your iPhone Duo
             </h1>
-            <p class="text-xl md:text-2xl text-gray-300 mb-8 drop-shadow-md">
-                Revolutionary collaboration and secure project sync, <span class="font-semibold text-indigo-300">exclusively optimized for the next-gen 5G MacBook Pro.</span>
-                <br><span class="text-base md:text-lg text-gray-400 mt-2 block">Leverage rumored 5G and touchscreen capabilities for unparalleled remote workflows.</span>
+            <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+                Transform your iPhone Duo into the ultimate creative and productivity powerhouse. Master specific workflows, custom templates, and curated apps optimized for its unique form factor and USB-C Apple Pencil integration.
             </p>
 
-            <!-- Limited Time / Countdown -->
-            <div class="bg-gray-800 bg-opacity-75 rounded-xl p-6 mb-8 shadow-xl border border-indigo-600">
-                <h3 class="text-2xl md:text-3xl font-bold text-indigo-400 mb-4">Limited Early Access Window Closing Soon!</h3>
-                <div id="countdown" class="flex justify-center space-x-4 md:space-x-8 lg:space-x-12 countdown-timer">
-                    <div><span id="days">00</span><p>Days</p></div>
-                    <div><span id="hours">00</span><p>Hours</p></div>
-                    <div><span id="minutes">00</span><p>Minutes</p></div>
-                    <div><span id="seconds">00</span><p>Seconds</p></div>
-                </div>
-                <p class="text-sm text-gray-400 mt-4">Offer Ends: <span id="countdownEndDate"></span></p>
-            </div>
-
-            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                Secure Your Early Access Spot Now
+            <!-- CTA Button -->
+            <a href="#waitlist" class="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg mb-8">
+                🚀 Join the Exclusive Waitlist Now!
             </a>
-            <p class="mt-4 text-gray-400 text-sm">
-                Be among the first to experience the future of remote creative and engineering collaboration.
-            </p>
+
+            <!-- Limited Time Countdown -->
+            <div class="flex flex-wrap justify-center gap-4 text-white mt-12 mb-8" id="countdown-timer">
+                <div class="countdown-segment">
+                    <span id="days" class="countdown-number">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-segment">
+                    <span id="hours" class="countdown-number">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-segment">
+                    <span id="minutes" class="countdown-number">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-segment">
+                    <span id="seconds" class="countdown-number">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+            <p class="text-sm text-gray-400 italic">⏳ Early bird access and special pricing available for a limited time.</p>
+
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
     <section id="features" class="py-16 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 md:px-8 lg:px-12">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-12 md:mb-16 tracking-tight text-white">
-                Engineered for Peak Performance on Tomorrow's MacBook Pro
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-white">
+                What You'll Achieve with <span class="text-indigo-400">Duo Mastery</span>
             </h2>
-            <p class="text-xl md:text-2xl text-center text-gray-400 max-w-4xl mx-auto mb-16">
-                FlowSync 5G harnesses the unparalleled potential of your future 5G-enabled MacBook Pro, solving critical technical pain points for creative and engineering teams with seamless, secure, and ultra-fast collaboration.
-            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-                <!-- Feature 1: Real-time Canvas Collaboration -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-                    <div class="text-indigo-400 mb-4 text-4xl"><i class="fas fa-paintbrush"></i></div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Instant Multi-User Canvas</h3>
-                    <p class="text-gray-300">
-                        Experience virtually zero-latency drawing and editing on shared digital canvases. Empower your design and engineering teams to work as one, in real-time, across any distance.
-                    </p>
+                <!-- Feature 1: Accelerated Creative Workflows -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-4xl">🎨</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Accelerated Creative Workflows</h3>
+                    <ul class="list-none space-y-3 text-gray-300">
+                        <li>🚀 Master drawing techniques leveraging the Duo's unique screen split.</li>
+                        <li>✏️ Optimize sketching and illustration for Apple Pencil on iPhone Duo.</li>
+                        <li>💡 Discover professional creative app setups for on-the-go design.</li>
+                    </ul>
                 </div>
-                <!-- Feature 2: Advanced Large File Version Control -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-                    <div class="text-indigo-400 mb-4 text-4xl"><i class="fas fa-code-branch"></i></div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Intelligent Large File Versioning</h3>
-                    <p class="text-gray-300">
-                        Eliminate sync conflicts and lost work. FlowSync 5G provides robust, granular version control specifically designed for gigabyte-scale creative and engineering assets.
-                    </p>
+
+                <!-- Feature 2: Revolutionary Note-Taking & Planning -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-4xl">📝</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Revolutionary Note-Taking & Planning</h3>
+                    <ul class="list-none space-y-3 text-gray-300">
+                        <li>🗓️ Implement custom digital planners and journaling templates.</li>
+                        <li>🧠 Utilize active recall and mind-mapping on your Duo for better retention.</li>
+                        <li>⚡️ Streamline meeting notes and annotation with advanced Apple Pencil gestures.</li>
+                    </ul>
                 </div>
-                <!-- Feature 3: Encrypted Peer-to-Peer Data Sharing -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-                    <div class="text-indigo-400 mb-4 text-4xl"><i class="fas fa-lock"></i></div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Zero-Trust Peer-to-Peer Encryption</h3>
-                    <p class="text-gray-300">
-                        Ensure utmost privacy and security for your sensitive project data. Leverage 5G's direct connectivity for encrypted, fast, and secure peer-to-peer file sharing.
-                    </p>
+
+                <!-- Feature 3: Seamless App & Integration Mastery -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-4xl">🔗</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Seamless App & Integration Mastery</h3>
+                    <ul class="list-none space-y-3 text-gray-300">
+                        <li>📲 Uncover the best apps fully optimized for iPhone Duo's dual screens.</li>
+                        <li>⚙️ Learn how to integrate your Duo into your existing professional toolkit.</li>
+                        <li>🌐 Explore advanced USB-C Apple Pencil features for precision and speed.</li>
+                    </ul>
                 </div>
-                <!-- Feature 4: Touchscreen-Optimized Interaction -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-                    <div class="text-indigo-400 mb-4 text-4xl"><i class="fas fa-tablet-screen-button"></i></div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Intuitive Touchscreen Integration</h3>
-                    <p class="text-gray-300">
-                        Built from the ground up to utilize your MacBook Pro's rumored touchscreen. Draw, annotate, zoom, and navigate with natural gestures, enhancing creative precision and speed.
-                    </p>
+
+                <!-- Feature 4: Custom Workflow & Productivity Hacks -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-4xl">🛠️</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Custom Workflow & Productivity Hacks</h3>
+                    <ul class="list-none space-y-3 text-gray-300">
+                        <li>📊 Build personalized workflows for project management and task execution.</li>
+                        <li>📈 Visualize data and concepts effectively with Duo-specific techniques.</li>
+                        <li>✅ Boost your daily productivity with hacks designed for the dual-screen environment.</li>
+                    </ul>
                 </div>
-                <!-- Feature 5: Persistent 5G-Powered Synchronization -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-                    <div class="text-indigo-400 mb-4 text-4xl"><i class="fas fa-satellite-dish"></i></div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Always-On 5G Project Sync</h3>
-                    <p class="text-gray-300">
-                        Powered by a persistent, high-speed 5G connection, your projects sync instantly across all team members, regardless of their location or network stability.
-                    </p>
+
+                <!-- Feature 5: Exclusive Template & Resource Bundle -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-4xl">🎁</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Exclusive Template & Resource Bundle</h3>
+                    <ul class="list-none space-y-3 text-gray-300">
+                        <li>📓 Access a library of custom note-taking templates for various industries.</li>
+                        <li>✍️ Get drawing exercise sheets to hone your digital art skills.</li>
+                        <li>📚 Curated list of essential apps and accessories for your iPhone Duo setup.</li>
+                    </ul>
                 </div>
-                <!-- Feature 6: Next-Gen MacBook Pro Performance -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-                    <div class="text-indigo-400 mb-4 text-4xl"><i class="fas fa-laptop-code"></i></div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">MacBook Pro 5G Native</h3>
-                    <p class="text-gray-300">
-                        Designed exclusively to leverage Apple's cutting-edge hardware and anticipated 5G cellular support, FlowSync delivers an unprecedented level of remote workflow fluidity.
-                    </p>
+
+                <!-- Feature 6: Future-Proof Your Digital Craft -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-4xl">✨</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Future-Proof Your Digital Craft</h3>
+                    <ul class="list-none space-y-3 text-gray-300">
+                        <li>⬆️ Stay ahead with techniques tailored for the evolving iOS ecosystem.</li>
+                        <li>👨‍💻 Position yourself as an early adopter and master of cutting-edge tech.</li>
+                        <li>🌟 Unlock new possibilities for creativity and efficiency on the go.</li>
+                    </ul>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gray-950">
-        <div class="container mx-auto px-4 md:px-8 lg:px-12 text-center max-w-2xl">
-            <h2 class="text-3xl md:text-5xl font-extrabold mb-8 md:mb-12 tracking-tight text-white">
-                Be First in Line for the 5G Collaboration Revolution
+    <section id="waitlist" class="py-16 md:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 max-w-xl text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">
+                Don't Miss Your Chance! Get Early Access!
             </h2>
-            <p class="text-xl md:text-2xl text-gray-300 mb-8">
-                Join our exclusive waitlist to gain early access, participate in beta programs, and receive critical updates as we lead the charge in 5G-native collaboration.
+            <p class="text-lg md:text-xl text-gray-300 mb-8">
+                Be among the first to master your iPhone Duo with Apple Pencil. Join our exclusive waitlist for early access, special launch discounts, and bonus content!
             </p>
-            <form class="bg-gray-800 p-8 rounded-xl shadow-xl border border-indigo-600">
+
+            <form class="bg-gray-900 p-8 rounded-lg shadow-xl border border-indigo-500 max-w-md mx-auto">
                 <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-lg font-medium mb-2">Your Professional Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="team@yourcompany.com"
-                        class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white text-lg transition-all duration-200"
-                        required>
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200">
+                </div>
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200">
                 </div>
                 <button type="submit"
-                    class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-lg text-xl md:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                    Secure My Early Access Spot
+                        class="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg w-full">
+                    ✅ Secure My Spot Now!
                 </button>
-                <p class="mt-6 text-gray-400 text-sm">
-                    We respect your privacy. Your email will only be used for FlowSync 5G updates and early access invitations.
-                </p>
+                <p class="text-xs text-gray-400 mt-4">🔒 We respect your privacy. Your information will not be shared.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8">
-        <div class="container mx-auto px-4 md:px-8 text-center text-gray-500">
-            <p>&copy; 2023 FlowSync. All rights reserved.</p>
-            <p class="text-sm mt-2">Pioneering the future of creative & engineering team collaboration on 5G.</p>
+    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm">
+        <div class="container mx-auto px-4">
+            <p>&copy; <span id="currentYear"></span> Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 mx-2">Privacy Policy</a> |
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 mx-2">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
-    <!-- Countdown Script -->
+    <!-- JavaScript for Countdown Timer and Current Year -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to: 7 days from now for a "limited time" feel.
-            const endDate = new Date();
-            endDate.setDate(endDate.getDate() + 7); // 7 days from today
-            endDate.setHours(23, 59, 59, 999); // Set to end of the 7th day
+        // Countdown Timer: Set to 7 days from now for demonstration purposes
+        const countdownDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).getTime();
 
-            // Display the target end date
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', timeZoneName: 'short' };
-            document.getElementById('countdownEndDate').textContent = endDate.toLocaleString('en-US', options);
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
 
-            const countdownFunction = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = endDate.getTime() - now;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                if (distance < 0) {
-                    clearInterval(countdownFunction);
-                    document.getElementById("countdown").innerHTML = "<p class='text-xl md:text-2xl font-bold text-red-400'>Early Access Window Has Closed!</p>";
-                    return;
+            // Update elements, ensuring they exist
+            if (document.getElementById("days")) {
+                document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+            }
+            if (document.getElementById("hours")) {
+                document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+            }
+            if (document.getElementById("minutes")) {
+                document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+            }
+            if (document.getElementById("seconds")) {
+                document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+            }
+
+            // If the countdown is over
+            if (distance < 0) {
+                clearInterval(x);
+                if (document.getElementById("countdown-timer")) {
+                    document.getElementById("countdown-timer").innerHTML = "<p class='text-lg text-red-400 font-bold'>⏳ Offer Expired!</p>";
                 }
+            }
+        }, 1000);
 
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-            }, 1000);
-        });
+        // Update current year in footer
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
     </script>
+
 </body>
 </html>
