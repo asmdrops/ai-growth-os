@@ -3,236 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastering Siri AI in iOS 27.2: Productivity & Automation Hacks</title>
+    <title>Ultimate Google Health & Fitbit Edge Ecosystem Guide</title>
+    <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Favicon for a modern touch -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
     <style>
-        /* Custom styles for dark mode and hero image overlay */
+        /* Custom Dark Mode Scrollbar for a premium feel */
         body {
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            scrollbar-width: thin;
+            scrollbar-color: #4a5568 #1a202c; /* thumb color track color */
         }
-        .hero-bg {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
+        body::-webkit-scrollbar {
+            width: 8px;
         }
-        .hero-bg::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.75); /* Dark overlay for readability */
+        body::-webkit-scrollbar-track {
+            background: #1a202c; /* bg-gray-900 */
         }
-        /* Custom Tailwind components for countdown boxes */
-        .countdown-box {
-            @apply flex flex-col items-center justify-center bg-gray-800 bg-opacity-70 rounded-lg p-3 mx-1 w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        body::-webkit-scrollbar-thumb {
+            background-color: #4a5568; /* bg-gray-700 */
+            border-radius: 4px;
+            border: 2px solid #1a202c;
         }
-        .countdown-number {
-            @apply text-3xl md:text-4xl lg:text-5xl font-extrabold text-blue-400;
+
+        /* Simple CSS for Fade-in Animation to enhance modernity */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        .countdown-label {
-            @apply text-xs md:text-sm text-gray-300 uppercase mt-1;
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0; /* Hidden by default */
         }
+        .animate-fade-in-up.delay-100 { animation-delay: 0.1s; }
+        .animate-fade-in-up.delay-200 { animation-delay: 0.2s; }
+        .animate-fade-in-up.delay-300 { animation-delay: 0.3s; }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <section class="hero-bg min-h-screen flex items-center justify-center text-center relative p-4">
-        <div class="relative z-10 max-w-5xl mx-auto py-16 px-6 sm:px-8 md:px-12 lg:px-16">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6 drop-shadow-lg">
-                🚀 Master Siri AI in iOS 27.2: <br class="hidden md:inline">Your Ultimate Productivity & Automation Guide
+    <header class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?An,tech');">
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center text-center px-4 py-8 max-w-6xl mx-auto">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 animate-fade-in-up">
+                Google's Health Vision, Maximized:<br> Your Ultimate Guide to Fitbit Edge & Google Health
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto drop-shadow-md">
-                Siri AI is evolving faster than ever with iOS 27.2! Unlock its true power with exclusive hacks and AI-driven Apple Shortcuts templates designed for peak performance. Stop missing out on the future of personal automation!
+            <p class="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mb-8 animate-fade-in-up delay-100">
+                Leverage the full power of Google's health ecosystem. From in-depth comparisons to personalized tracking strategies, gain the edge in your wellness journey.
             </p>
-            <div class="mb-10">
-                <a href="#purchase" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl transition duration-300 transform hover:scale-105 shadow-lg">
-                    Get Instant Access - Limited Time Offer!
-                </a>
-            </div>
 
-            <!-- Countdown Timer -->
-            <div class="bg-gray-800 bg-opacity-80 rounded-xl p-6 md:p-8 max-w-xl mx-auto shadow-2xl">
-                <h3 class="text-xl md:text-2xl font-semibold text-white mb-4">Limited-Time Introductory Offer Ends In:</h3>
-                <div id="countdown" class="flex justify-center text-center space-x-2 md:space-x-4">
-                    <div class="countdown-box">
-                        <span id="days" class="countdown-number">00</span>
-                        <span class="countdown-label">Days</span>
+            <!-- Limited Time Countdown -->
+            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 rounded-lg shadow-xl mb-10 w-full max-w-md animate-fade-in-up delay-200">
+                <p class="text-xl md:text-2xl font-semibold mb-3 text-white">Limited Time Offer Ends In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-white font-bold text-3xl md:text-4xl lg:text-5xl">
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-value" data-unit="days">02</span>
+                        <span class="text-sm md:text-base font-medium text-gray-200">Days</span>
                     </div>
-                    <div class="countdown-box">
-                        <span id="hours" class="countdown-number">00</span>
-                        <span class="countdown-label">Hours</span>
+                    <span>:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-value" data-unit="hours">23</span>
+                        <span class="text-sm md:text-base font-medium text-gray-200">Hours</span>
                     </div>
-                    <div class="countdown-box">
-                        <span id="minutes" class="countdown-number">00</span>
-                        <span class="countdown-label">Minutes</span>
+                    <span>:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-value" data-unit="minutes">59</span>
+                        <span class="text-sm md:text-base font-medium text-gray-200">Minutes</span>
                     </div>
-                    <div class="countdown-box">
-                        <span id="seconds" class="countdown-number">00</span>
-                        <span class="countdown-label">Seconds</span>
+                    <span>:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-value" data-unit="seconds">59</span>
+                        <span class="text-sm md:text-base font-medium text-gray-200">Seconds</span>
                     </div>
                 </div>
+                <p class="text-sm md:text-base text-gray-200 mt-4">Secure your copy now and save 20%!</p>
+                <!-- NOTE: For a fully functional countdown, client-side JavaScript is required.
+                     The values above are static placeholders.
+                     A basic JS implementation would involve calculating time differences
+                     and updating these span elements every second. -->
             </div>
+
+            <a href="#secure-your-copy" class="bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg transform transition-transform duration-300 hover:scale-105 animate-fade-in-up delay-300">
+                Get Instant Access Now!
+            </a>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900 px-4">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white mb-12">
-                What You'll Discover Inside This Essential Guide 💡
+    <section class="py-20 px-4 md:px-8 lg:px-16 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-center text-white mb-16">
+                What You'll Discover Inside
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
                 <!-- Feature 1 -->
-                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-blue-400 text-4xl mb-4">⚡</div>
-                    <h3 class="text-xl font-bold text-white mb-2">Automate Repetitive Tasks</h3>
-                    <p class="text-gray-300">Transform your iPhone into a productivity powerhouse. Learn to automate daily routines and eliminate manual effort with Siri AI's advanced capabilities. Say goodbye to tedious clicks! 👋</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 text-5xl mb-6 text-center">🔬</div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Fitbit Edge vs. Competitors</h3>
+                    <p class="text-gray-300 text-center">
+                        Dive deep into comprehensive comparisons against leading health tech devices. Make informed decisions tailored to your lifestyle and goals.
+                    </p>
                 </div>
+
                 <!-- Feature 2 -->
-                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-blue-400 text-4xl mb-4">🧠</div>
-                    <h3 class="text-xl font-bold text-white mb-2">Leverage New AI Capabilities</h3>
-                    <p class="text-gray-300">Dive deep into the advanced AI features of iOS 27.2's Siri. Understand its context awareness, proactive suggestions, and neural engine integration like never before. Get smarter results! 🚀</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-green-400 text-5xl mb-6 text-center">📈</div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Advanced Google Health Mastery</h3>
+                    <p class="text-gray-300 text-center">
+                        Unlock hidden features, master data interpretation, and seamlessly integrate your Google Health app with other services for a holistic view.
+                    </p>
                 </div>
+
                 <!-- Feature 3 -->
-                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-blue-400 text-4xl mb-4">🔗</div>
-                    <h3 class="text-xl font-bold text-white mb-2">Exclusive Apple Shortcuts</h3>
-                    <p class="text-gray-300">Get access to ready-to-use, powerful Apple Shortcuts templates specifically designed to harness Siri AI's new functionalities for ultimate efficiency. Copy, paste, and automate! ✂️</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-purple-400 text-5xl mb-6 text-center">🎯</div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Personalized Tracking Strategies</h3>
+                    <p class="text-gray-300 text-center">
+                        Learn how to customize your health tracking for maximum impact. From sleep to activity, build a strategy that works specifically for YOU.
+                    </p>
                 </div>
+
                 <!-- Feature 4 -->
-                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-blue-400 text-4xl mb-4">📈</div>
-                    <h3 class="text-xl font-bold text-white mb-2">Boost Your Daily Productivity</h3>
-                    <p class="text-gray-300">From managing your calendar to quick data lookups and smart home controls, discover hacks that will significantly cut down your screen time and mental load. Work smarter, not harder! ✨</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="text-yellow-400 text-5xl mb-6 text-center">✨</div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Curated Accessory List</h3>
+                    <p class="text-gray-300 text-center">
+                        Discover essential accessories that enhance your Fitbit Edge and Google Health experience. No more guesswork, just proven upgrades and recommendations.
+                    </p>
                 </div>
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-blue-400 text-4xl mb-4">🛡️</div>
-                    <h3 class="text-xl font-bold text-white mb-2">Privacy & Security Best Practices</h3>
-                    <p class="text-gray-300">Learn how to maximize Siri AI's potential while maintaining your data privacy and ensuring secure automation workflows. Your data, your rules! 🔒</p>
-                </div>
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-blue-400 text-4xl mb-4">⚙️</div>
-                    <h3 class="text-xl font-bold text-white mb-2">Custom Voice Commands</h3>
-                    <p class="text-gray-300">Go beyond basic commands. Craft personalized voice triggers for complex workflows, making your iPhone truly an extension of your will. Speak, and it shall be done! 🗣️</p>
-                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Purchase Section -->
-    <section id="purchase" class="py-16 md:py-24 bg-gradient-to-br from-gray-900 to-black px-4">
-        <div class="container mx-auto max-w-3xl text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8">
-                🔥 Secure Your Copy Now & Unlock Immediate Value!
+    <!-- Call to Action / "Secure Your Copy" Form (interpreted from "Waitlist form" given sales context) -->
+    <section id="secure-your-copy" class="py-20 px-4 md:px-8 lg:px-16 bg-gradient-to-br from-gray-800 to-gray-900">
+        <div class="container mx-auto max-w-2xl">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-center text-white mb-8">
+                Secure Your Ultimate Guide Now!
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-                Don't miss out on this limited-time introductory price. Elevate your productivity today!
+            <p class="text-lg md:text-xl text-gray-300 text-center mb-10">
+                Don't miss out on this limited-time offer. Gain unparalleled insights and transform your health journey today.
             </p>
-
-            <div class="bg-gray-800 rounded-2xl p-8 md:p-10 shadow-2xl border-2 border-blue-600">
-                <p class="text-lg text-gray-400 line-through mb-2">Regular Price: $<span id="original-price">99.00</span></p>
-                <p class="text-5xl md:text-6xl font-extrabold text-blue-400 mb-6">
-                    Only <span id="discounted-price">$49.00</span>
-                </p>
-                <p class="text-xl font-semibold text-white mb-8">
-                    Save <span id="savings" class="text-green-400">$50.00</span> today!
-                </p>
-
+            <div class="bg-gray-800 p-8 md:p-10 rounded-xl shadow-2xl border border-gray-700">
                 <form class="space-y-6">
                     <div>
-                        <input type="text" id="name" name="name" placeholder="Your Full Name" required
-                               class="w-full p-4 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-blue-500 focus:ring-blue-500 transition duration-200 placeholder-gray-400 text-lg">
+                        <label for="name" class="block text-lg font-medium text-gray-200 mb-2">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe"
+                               class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white placeholder-gray-400 transition-colors duration-200"
+                               required>
                     </div>
                     <div>
-                        <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
-                               class="w-full p-4 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-blue-500 focus:ring-blue-500 transition duration-200 placeholder-gray-400 text-lg">
+                        <label for="email" class="block text-lg font-medium text-gray-200 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                               class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white placeholder-gray-400 transition-colors duration-200"
+                               required>
+                        <p class="mt-2 text-sm text-gray-400">We'll send your guide and exclusive updates to this email.</p>
                     </div>
-                    <!-- In a real-world scenario, this would integrate with a secure payment gateway -->
-                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg text-xl md:text-2xl transition duration-300 transform hover:scale-105 shadow-xl">
-                        🛒 Get Instant Access Now!
+                    <button type="submit"
+                            class="w-full bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white font-bold py-4 rounded-lg text-xl shadow-lg transform transition-transform duration-300 hover:scale-105">
+                        Download Your Guide Now!
                     </button>
-                    <p class="text-sm text-gray-400 mt-4">
-                        By clicking "Get Instant Access Now!", you agree to our <a href="#" class="text-blue-400 hover:underline">Terms of Service</a> and <a href="#" class="text-blue-400 hover:underline">Privacy Policy</a>.
-                    </p>
+                    <p class="text-sm text-gray-400 text-center mt-4">Your information is 100% secure and will not be shared.</p>
                 </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-800 py-8 px-4 text-center text-gray-500 text-sm">
-        <div class="container mx-auto max-w-6xl">
-            <p>&copy; 2024 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">
-                <a href="#" class="text-blue-400 hover:underline mx-2">Privacy Policy</a> |
-                <a href="#" class="text-blue-400 hover:underline mx-2">Terms of Service</a>
-            </p>
+    <footer class="py-10 px-4 md:px-8 lg:px-16 bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto text-center text-gray-500 text-sm">
+            &copy; 2023 Digital Education Authority. All rights reserved. | <a href="#" class="hover:text-gray-300 transition-colors">Privacy Policy</a> | <a href="#" class="hover:text-gray-300 transition-colors">Terms of Service</a>
         </div>
     </footer>
 
-    <!-- Countdown Timer JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the date we're counting down to (e.g., 7 days from now for a limited offer)
-            const endDate = new Date();
-            endDate.setDate(endDate.getDate() + 7); // Offer ends 7 days from page load
-            endDate.setHours(23, 59, 59, 999); // Set to end of the 7th day
-
-            const countdownElement = document.getElementById('countdown');
-            const daysSpan = document.getElementById('days');
-            const hoursSpan = document.getElementById('hours');
-            const minutesSpan = document.getElementById('minutes');
-            const secondsSpan = document.getElementById('seconds');
-            const originalPriceSpan = document.getElementById('original-price');
-            const discountedPriceSpan = document.getElementById('discounted-price');
-            const savingsSpan = document.getElementById('savings');
-            const purchaseFormButton = document.querySelector('#purchase button[type="submit"]');
-
-            function updateCountdown() {
-                const now = new Date().getTime();
-                const distance = endDate.getTime() - now;
-
-                if (distance < 0) {
-                    clearInterval(countdownInterval);
-                    countdownElement.innerHTML = '<span class="text-red-500 text-xl font-bold">Offer Expired!</span>';
-                    
-                    // Update prices and disable/change button
-                    if (originalPriceSpan) originalPriceSpan.textContent = '99.00';
-                    if (discountedPriceSpan) discountedPriceSpan.innerHTML = '<span class="line-through">$49.00</span> <span class="text-white">$99.00</span>';
-                    if (savingsSpan) savingsSpan.style.display = 'none';
-
-                    if (purchaseFormButton) {
-                        purchaseFormButton.textContent = 'Offer Expired - Get Full Price Access';
-                        purchaseFormButton.classList.remove('bg-blue-600', 'hover:bg-blue-700', 'hover:scale-105');
-                        purchaseFormButton.classList.add('bg-gray-600', 'cursor-not-allowed');
-                        purchaseFormButton.onclick = function(e) { e.preventDefault(); alert('This introductory offer has expired. The guide is now available at its full price.'); };
-                    }
-                    return;
-                }
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                daysSpan.textContent = String(days).padStart(2, '0');
-                hoursSpan.textContent = String(hours).padStart(2, '0');
-                minutesSpan.textContent = String(minutes).padStart(2, '0');
-                secondsSpan.textContent = String(seconds).padStart(2, '0');
-            }
-
-            const countdownInterval = setInterval(updateCountdown, 1000);
-            updateCountdown(); // Call once immediately to avoid delay
-        });
-    </script>
 </body>
 </html>
