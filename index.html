@@ -1,190 +1,266 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate Google Health & Fitbit Edge Ecosystem Guide</title>
+    <title>The Ultimate iPhone Duo Screen Survival Guide - Get Yours Now!</title>
     <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Favicon for a modern touch -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* Custom Dark Mode Scrollbar for a premium feel */
         body {
-            scrollbar-width: thin;
-            scrollbar-color: #4a5568 #1a202c; /* thumb color track color */
+            font-family: 'Inter', sans-serif;
         }
-        body::-webkit-scrollbar {
-            width: 8px;
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* For a subtle parallax effect */
         }
-        body::-webkit-scrollbar-track {
-            background: #1a202c; /* bg-gray-900 */
+        /* Custom styles for the countdown timer digits */
+        .countdown-digit {
+            @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white;
+            @apply bg-gray-800 bg-opacity-70 rounded-lg p-4 mx-1 sm:mx-2;
+            @apply flex flex-col items-center justify-center;
+            min-width: 60px; /* Ensure digits have enough space on small screens */
+            width: clamp(60px, 15vw, 100px); /* Fluid width */
         }
-        body::-webkit-scrollbar-thumb {
-            background-color: #4a5568; /* bg-gray-700 */
-            border-radius: 4px;
-            border: 2px solid #1a202c;
+        .countdown-label {
+            @apply text-xs sm:text-sm md:text-base text-gray-300 font-medium uppercase mt-2;
         }
-
-        /* Simple CSS for Fade-in Animation to enhance modernity */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            50% {
+                transform: scale(1.02);
             }
         }
-
-        .animate-fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-            opacity: 0; /* Hidden by default */
+        .animate-pulse-subtle {
+            animation: pulse 2s ease-in-out infinite;
         }
-        .animate-fade-in-up.delay-100 { animation-delay: 0.1s; }
-        .animate-fade-in-up.delay-200 { animation-delay: 0.2s; }
-        .animate-fade-in-up.delay-300 { animation-delay: 0.3s; }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?An,tech');">
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-        <div class="relative z-10 flex flex-col items-center justify-center text-center px-4 py-8 max-w-6xl mx-auto">
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 animate-fade-in-up">
-                Google's Health Vision, Maximized:<br> Your Ultimate Guide to Fitbit Edge & Google Health
+    <header class="relative hero-background min-h-screen flex items-center justify-center py-16 px-4">
+        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay -->
+        <div class="relative z-10 text-center max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mb-6 animate-pulse-subtle">
+                iPhone Duo Screen Woes? <br class="sm:hidden">Master Its Longevity.
             </h1>
-            <p class="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mb-8 animate-fade-in-up delay-100">
-                Leverage the full power of Google's health ecosystem. From in-depth comparisons to personalized tracking strategies, gain the edge in your wellness journey.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Amidst the 'Apple to replace iPhone Duos affected by screen problem' trend reported by BBC,
+                gain the ultimate insider knowledge to protect, troubleshoot, and navigate Apple's support with ease.
             </p>
 
-            <!-- Limited Time Countdown -->
-            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 rounded-lg shadow-xl mb-10 w-full max-w-md animate-fade-in-up delay-200">
-                <p class="text-xl md:text-2xl font-semibold mb-3 text-white">Limited Time Offer Ends In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-white font-bold text-3xl md:text-4xl lg:text-5xl">
-                    <div class="flex flex-col items-center">
-                        <span class="countdown-value" data-unit="days">02</span>
-                        <span class="text-sm md:text-base font-medium text-gray-200">Days</span>
+            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 rounded-xl shadow-2xl mb-8 transform hover:scale-105 transition-transform duration-300">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Limited-Time Launch Offer!</h2>
+                <p class="text-lg text-gray-200 mb-6">Secure your guide now and save <span class="font-bold text-yellow-300">50% OFF</span> the regular price!</p>
+
+                <!-- Countdown Timer (HTML structure only, JavaScript would populate this dynamically) -->
+                <div id="countdown" class="flex justify-center items-end mb-8 flex-wrap">
+                    <div class="countdown-item flex flex-col items-center mx-1 sm:mx-2 my-2">
+                        <span class="countdown-digit" id="days">00</span>
+                        <span class="countdown-label">Days</span>
                     </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="countdown-value" data-unit="hours">23</span>
-                        <span class="text-sm md:text-base font-medium text-gray-200">Hours</span>
+                    <div class="countdown-item flex flex-col items-center mx-1 sm:mx-2 my-2">
+                        <span class="countdown-digit" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
                     </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="countdown-value" data-unit="minutes">59</span>
-                        <span class="text-sm md:text-base font-medium text-gray-200">Minutes</span>
+                    <div class="countdown-item flex flex-col items-center mx-1 sm:mx-2 my-2">
+                        <span class="countdown-digit" id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
                     </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="countdown-value" data-unit="seconds">59</span>
-                        <span class="text-sm md:text-base font-medium text-gray-200">Seconds</span>
+                    <div class="countdown-item flex flex-col items-center mx-1 sm:mx-2 my-2">
+                        <span class="countdown-digit" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
                     </div>
                 </div>
-                <p class="text-sm md:text-base text-gray-200 mt-4">Secure your copy now and save 20%!</p>
-                <!-- NOTE: For a fully functional countdown, client-side JavaScript is required.
-                     The values above are static placeholders.
-                     A basic JS implementation would involve calculating time differences
-                     and updating these span elements every second. -->
-            </div>
 
-            <a href="#secure-your-copy" class="bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg transform transition-transform duration-300 hover:scale-105 animate-fade-in-up delay-300">
-                Get Instant Access Now!
-            </a>
+                <a href="#purchase-section" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-extrabold py-4 px-10 rounded-full text-xl uppercase tracking-wide shadow-lg transform hover:scale-105 transition duration-300 ease-in-out border-2 border-yellow-400 hover:border-yellow-500 animate-bounce">
+                    Get Instant Access Now!
+                </a>
+            </div>
+            <p class="text-sm text-gray-400 mt-4">Don't wait for disaster – prevent it and save your iPhone Duo.</p>
         </div>
     </header>
 
-    <!-- Features Section -->
-    <section class="py-20 px-4 md:px-8 lg:px-16 bg-gray-900">
-        <div class="container mx-auto">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-center text-white mb-16">
-                What You'll Discover Inside
+    <main class="container mx-auto px-4 py-16">
+
+        <!-- Introduction / Problem Statement Section -->
+        <section class="mb-20 text-center max-w-3xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                The <span class="text-red-500">Truth</span> About Your iPhone Duo's Screen
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 text-5xl mb-6 text-center">🔬</div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Fitbit Edge vs. Competitors</h3>
-                    <p class="text-gray-300 text-center">
-                        Dive deep into comprehensive comparisons against leading health tech devices. Make informed decisions tailored to your lifestyle and goals.
-                    </p>
-                </div>
-
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
-                    <div class="text-green-400 text-5xl mb-6 text-center">📈</div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Advanced Google Health Mastery</h3>
-                    <p class="text-gray-300 text-center">
-                        Unlock hidden features, master data interpretation, and seamlessly integrate your Google Health app with other services for a holistic view.
-                    </p>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
-                    <div class="text-purple-400 text-5xl mb-6 text-center">🎯</div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Personalized Tracking Strategies</h3>
-                    <p class="text-gray-300 text-center">
-                        Learn how to customize your health tracking for maximum impact. From sleep to activity, build a strategy that works specifically for YOU.
-                    </p>
-                </div>
-
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
-                    <div class="text-yellow-400 text-5xl mb-6 text-center">✨</div>
-                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Curated Accessory List</h3>
-                    <p class="text-gray-300 text-center">
-                        Discover essential accessories that enhance your Fitbit Edge and Google Health experience. No more guesswork, just proven upgrades and recommendations.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action / "Secure Your Copy" Form (interpreted from "Waitlist form" given sales context) -->
-    <section id="secure-your-copy" class="py-20 px-4 md:px-8 lg:px-16 bg-gradient-to-br from-gray-800 to-gray-900">
-        <div class="container mx-auto max-w-2xl">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-center text-white mb-8">
-                Secure Your Ultimate Guide Now!
-            </h2>
-            <p class="text-lg md:text-xl text-gray-300 text-center mb-10">
-                Don't miss out on this limited-time offer. Gain unparalleled insights and transform your health journey today.
+            <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                You've seen the headlines. The news from the BBC confirms it:
+                <span class="font-semibold text-white">Apple is stepping in to replace iPhone Duos affected by screen problems.</span>
+                This isn't just a tech blip; it's a call to action for every iPhone Duo owner.
+                Are you prepared to navigate potential issues, or worse, face an unexpected screen failure?
             </p>
-            <div class="bg-gray-800 p-8 md:p-10 rounded-xl shadow-2xl border border-gray-700">
-                <form class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-lg font-medium text-gray-200 mb-2">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe"
-                               class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white placeholder-gray-400 transition-colors duration-200"
-                               required>
-                    </div>
-                    <div>
-                        <label for="email" class="block text-lg font-medium text-gray-200 mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                               class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white placeholder-gray-400 transition-colors duration-200"
-                               required>
-                        <p class="mt-2 text-sm text-gray-400">We'll send your guide and exclusive updates to this email.</p>
-                    </div>
-                    <button type="submit"
-                            class="w-full bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white font-bold py-4 rounded-lg text-xl shadow-lg transform transition-transform duration-300 hover:scale-105">
-                        Download Your Guide Now!
-                    </button>
-                    <p class="text-sm text-gray-400 text-center mt-4">Your information is 100% secure and will not be shared.</p>
-                </form>
+            <p class="text-lg text-gray-300 leading-relaxed">
+                Most users are caught off guard, left scrambling for solutions. But what if you could have a comprehensive blueprint
+                to not only understand, but also <span class="font-semibold text-white">proactively protect your investment</span>,
+                troubleshoot common glitches, and seamlessly manage Apple's repair process?
+            </p>
+        </section>
+
+        <!-- Features Section -->
+        <section class="mb-20">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-12">What You'll Unlock Inside:</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center">
+                        ✅ Preventative Mastery
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Discover detailed preventative care tips specifically for foldable screens. Extend your iPhone Duo's life
+                        and avoid common pitfalls that lead to costly damage.
+                    </p>
+                </div>
+
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center">
+                        🛠️ Troubleshooting Toolkit
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Access advanced troubleshooting steps for a wide range of common screen issues. From minor glitches to
+                        more persistent problems, empower yourself to fix it at home.
+                    </p>
+                </div>
+
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center">
+                        🍏 AppleCare Navigation
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        A comprehensive walkthrough of Apple's replacement process. Learn insider tips for a smoother experience,
+                        understand your rights, and bypass common frustrations.
+                    </p>
+                </div>
+
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center">
+                        🛡️ Premium Protection Picks
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Curated recommendations for best-in-class third-party screen protectors and cases specifically designed
+                        for foldable phones. Stop guessing, get proven solutions.
+                    </p>
+                </div>
+
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center">
+                        💰 Exclusive Affiliate Access
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Leverage our direct affiliate links to secure the highest-rated protection products and accessories
+                        at the best prices, vetted by experts.
+                    </p>
+                </div>
+
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700">
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center">
+                        📈 Future-Proof Your Investment
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        With rapid advancements in foldable tech, our guide ensures you're always one step ahead,
+                        protecting your high-value device for years to come.
+                    </p>
+                </div>
+
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Call to Action / Purchase Form Section -->
+        <section id="purchase-section" class="bg-gray-800 rounded-xl p-8 sm:p-12 lg:p-16 shadow-2xl border border-gray-700 max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                Ready to Safeguard Your iPhone Duo?
+            </h2>
+            <p class="text-xl text-gray-300 leading-relaxed mb-8">
+                Don't leave your premium device's longevity to chance. Get 'The Ultimate iPhone Duo Screen Survival Guide' today!
+            </p>
+
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label for="name" class="sr-only">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Full Name" required
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-400 text-lg">
+                </div>
+                <div>
+                    <label for="email" class="sr-only">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-400 text-lg">
+                </div>
+                <button type="submit"
+                        class="w-full bg-purple-600 hover:bg-purple-700 text-white font-extrabold py-4 px-8 rounded-lg text-xl uppercase tracking-wide shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    Get My Guide Now & Unlock My Discount!
+                </button>
+            </form>
+            <p class="text-sm text-gray-400 mt-6">
+                Your information is 100% secure. You'll receive instant access to the guide via email.
+            </p>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="py-10 px-4 md:px-8 lg:px-16 bg-gray-900 border-t border-gray-800">
-        <div class="container mx-auto text-center text-gray-500 text-sm">
-            &copy; 2023 Digital Education Authority. All rights reserved. | <a href="#" class="hover:text-gray-300 transition-colors">Privacy Policy</a> | <a href="#" class="hover:text-gray-300 transition-colors">Terms of Service</a>
+    <footer class="bg-gray-950 py-8 mt-20 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved. | <a href="#" class="hover:text-gray-300">Privacy Policy</a></p>
         </div>
     </footer>
 
+    <!-- Simple JavaScript for Countdown Timer (Conceptual for the HTML output, for full functionality, this would require server-side time or robust client-side date management) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the target date for the countdown.
+            // For demonstration, setting it to 3 days from the current time.
+            // In a real application, this would typically come from a specific offer end date.
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 3); // Example: 3 days from now
+            countDownDate.setHours(23, 59, 59, 999); // Set to end of the 3rd day
+
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate.getTime() - now;
+
+                // If the countdown is over
+                if (distance < 0) {
+                    clearInterval(x);
+                    const countdownElement = document.getElementById("countdown");
+                    if(countdownElement) {
+                        countdownElement.innerHTML = "<p class='text-red-500 text-xl font-bold'>OFFER EXPIRED!</p>";
+                    }
+                    // Optionally disable the purchase button or change its text
+                    const ctaButton = document.querySelector('#purchase-section button[type="submit"]');
+                    if (ctaButton) {
+                        ctaButton.disabled = true;
+                        ctaButton.textContent = "Offer Expired";
+                        ctaButton.classList.remove('bg-purple-600', 'hover:bg-purple-700', 'transform', 'hover:scale-105');
+                        ctaButton.classList.add('bg-gray-600', 'cursor-not-allowed');
+                    }
+                    return;
+                }
+
+                // Calculate times
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the corresponding elements
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
