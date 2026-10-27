@@ -1,237 +1,238 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duo Mastery: Unlock iPhone Duo & Apple Pencil Potential</title>
+    <title>Mastering Siri AI in iOS 27.2: Productivity & Automation Hacks</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for premium dark aesthetic and responsive image overlay */
-        .hero-background {
+        /* Custom styles for dark mode and hero image overlay */
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+        .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            position: relative;
         }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
+        .hero-bg::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75); /* Dark overlay for readability */
         }
-        /* Countdown styling */
-        .countdown-segment {
-            @apply flex flex-col items-center justify-center p-4 bg-gray-800 bg-opacity-70 rounded-lg shadow-lg;
+        /* Custom Tailwind components for countdown boxes */
+        .countdown-box {
+            @apply flex flex-col items-center justify-center bg-gray-800 bg-opacity-70 rounded-lg p-3 mx-1 w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
         .countdown-number {
-            @apply text-5xl font-extrabold text-indigo-400;
+            @apply text-3xl md:text-4xl lg:text-5xl font-extrabold text-blue-400;
         }
         .countdown-label {
-            @apply text-sm uppercase text-gray-300 mt-2;
+            @apply text-xs md:text-sm text-gray-300 uppercase mt-1;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans leading-normal tracking-normal antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative min-h-screen flex items-center justify-center overflow-hidden hero-background">
-        <div class="absolute inset-0 hero-overlay z-0"></div>
-        <div class="relative z-10 text-center px-4 py-16 max-w-5xl mx-auto">
-            <p class="text-indigo-400 text-sm md:text-base uppercase font-semibold mb-4 tracking-wider">
-                📈 TREND ALERT: iPhone Duo now supports Apple Pencil with iOS 27.2 – The Verge
-            </p>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
-                Duo Mastery: Unlock Apple Pencil's <span class="text-indigo-400">Full Potential</span> on Your iPhone Duo
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center relative p-4">
+        <div class="relative z-10 max-w-5xl mx-auto py-16 px-6 sm:px-8 md:px-12 lg:px-16">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6 drop-shadow-lg">
+                🚀 Master Siri AI in iOS 27.2: <br class="hidden md:inline">Your Ultimate Productivity & Automation Guide
             </h1>
-            <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-                Transform your iPhone Duo into the ultimate creative and productivity powerhouse. Master specific workflows, custom templates, and curated apps optimized for its unique form factor and USB-C Apple Pencil integration.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto drop-shadow-md">
+                Siri AI is evolving faster than ever with iOS 27.2! Unlock its true power with exclusive hacks and AI-driven Apple Shortcuts templates designed for peak performance. Stop missing out on the future of personal automation!
             </p>
-
-            <!-- CTA Button -->
-            <a href="#waitlist" class="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg mb-8">
-                🚀 Join the Exclusive Waitlist Now!
-            </a>
-
-            <!-- Limited Time Countdown -->
-            <div class="flex flex-wrap justify-center gap-4 text-white mt-12 mb-8" id="countdown-timer">
-                <div class="countdown-segment">
-                    <span id="days" class="countdown-number">00</span>
-                    <span class="countdown-label">Days</span>
-                </div>
-                <div class="countdown-segment">
-                    <span id="hours" class="countdown-number">00</span>
-                    <span class="countdown-label">Hours</span>
-                </div>
-                <div class="countdown-segment">
-                    <span id="minutes" class="countdown-number">00</span>
-                    <span class="countdown-label">Minutes</span>
-                </div>
-                <div class="countdown-segment">
-                    <span id="seconds" class="countdown-number">00</span>
-                    <span class="countdown-label">Seconds</span>
-                </div>
+            <div class="mb-10">
+                <a href="#purchase" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl transition duration-300 transform hover:scale-105 shadow-lg">
+                    Get Instant Access - Limited Time Offer!
+                </a>
             </div>
-            <p class="text-sm text-gray-400 italic">⏳ Early bird access and special pricing available for a limited time.</p>
 
-        </div>
-    </header>
-
-    <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-white">
-                What You'll Achieve with <span class="text-indigo-400">Duo Mastery</span>
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Feature 1: Accelerated Creative Workflows -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-indigo-400 mb-4 text-4xl">🎨</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Accelerated Creative Workflows</h3>
-                    <ul class="list-none space-y-3 text-gray-300">
-                        <li>🚀 Master drawing techniques leveraging the Duo's unique screen split.</li>
-                        <li>✏️ Optimize sketching and illustration for Apple Pencil on iPhone Duo.</li>
-                        <li>💡 Discover professional creative app setups for on-the-go design.</li>
-                    </ul>
+            <!-- Countdown Timer -->
+            <div class="bg-gray-800 bg-opacity-80 rounded-xl p-6 md:p-8 max-w-xl mx-auto shadow-2xl">
+                <h3 class="text-xl md:text-2xl font-semibold text-white mb-4">Limited-Time Introductory Offer Ends In:</h3>
+                <div id="countdown" class="flex justify-center text-center space-x-2 md:space-x-4">
+                    <div class="countdown-box">
+                        <span id="days" class="countdown-number">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span id="hours" class="countdown-number">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span id="minutes" class="countdown-number">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span id="seconds" class="countdown-number">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
                 </div>
-
-                <!-- Feature 2: Revolutionary Note-Taking & Planning -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-indigo-400 mb-4 text-4xl">📝</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Revolutionary Note-Taking & Planning</h3>
-                    <ul class="list-none space-y-3 text-gray-300">
-                        <li>🗓️ Implement custom digital planners and journaling templates.</li>
-                        <li>🧠 Utilize active recall and mind-mapping on your Duo for better retention.</li>
-                        <li>⚡️ Streamline meeting notes and annotation with advanced Apple Pencil gestures.</li>
-                    </ul>
-                </div>
-
-                <!-- Feature 3: Seamless App & Integration Mastery -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-indigo-400 mb-4 text-4xl">🔗</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Seamless App & Integration Mastery</h3>
-                    <ul class="list-none space-y-3 text-gray-300">
-                        <li>📲 Uncover the best apps fully optimized for iPhone Duo's dual screens.</li>
-                        <li>⚙️ Learn how to integrate your Duo into your existing professional toolkit.</li>
-                        <li>🌐 Explore advanced USB-C Apple Pencil features for precision and speed.</li>
-                    </ul>
-                </div>
-
-                <!-- Feature 4: Custom Workflow & Productivity Hacks -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-indigo-400 mb-4 text-4xl">🛠️</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Custom Workflow & Productivity Hacks</h3>
-                    <ul class="list-none space-y-3 text-gray-300">
-                        <li>📊 Build personalized workflows for project management and task execution.</li>
-                        <li>📈 Visualize data and concepts effectively with Duo-specific techniques.</li>
-                        <li>✅ Boost your daily productivity with hacks designed for the dual-screen environment.</li>
-                    </ul>
-                </div>
-
-                <!-- Feature 5: Exclusive Template & Resource Bundle -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-indigo-400 mb-4 text-4xl">🎁</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Exclusive Template & Resource Bundle</h3>
-                    <ul class="list-none space-y-3 text-gray-300">
-                        <li>📓 Access a library of custom note-taking templates for various industries.</li>
-                        <li>✍️ Get drawing exercise sheets to hone your digital art skills.</li>
-                        <li>📚 Curated list of essential apps and accessories for your iPhone Duo setup.</li>
-                    </ul>
-                </div>
-
-                <!-- Feature 6: Future-Proof Your Digital Craft -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-indigo-400 mb-4 text-4xl">✨</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Future-Proof Your Digital Craft</h3>
-                    <ul class="list-none space-y-3 text-gray-300">
-                        <li>⬆️ Stay ahead with techniques tailored for the evolving iOS ecosystem.</li>
-                        <li>👨‍💻 Position yourself as an early adopter and master of cutting-edge tech.</li>
-                        <li>🌟 Unlock new possibilities for creativity and efficiency on the go.</li>
-                    </ul>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 max-w-xl text-center">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">
-                Don't Miss Your Chance! Get Early Access!
+    <!-- Features Section -->
+    <section class="py-16 md:py-24 bg-gray-900 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white mb-12">
+                What You'll Discover Inside This Essential Guide 💡
             </h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-8">
-                Be among the first to master your iPhone Duo with Apple Pencil. Join our exclusive waitlist for early access, special launch discounts, and bonus content!
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-400 text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Automate Repetitive Tasks</h3>
+                    <p class="text-gray-300">Transform your iPhone into a productivity powerhouse. Learn to automate daily routines and eliminate manual effort with Siri AI's advanced capabilities. Say goodbye to tedious clicks! 👋</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-400 text-4xl mb-4">🧠</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Leverage New AI Capabilities</h3>
+                    <p class="text-gray-300">Dive deep into the advanced AI features of iOS 27.2's Siri. Understand its context awareness, proactive suggestions, and neural engine integration like never before. Get smarter results! 🚀</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-400 text-4xl mb-4">🔗</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Exclusive Apple Shortcuts</h3>
+                    <p class="text-gray-300">Get access to ready-to-use, powerful Apple Shortcuts templates specifically designed to harness Siri AI's new functionalities for ultimate efficiency. Copy, paste, and automate! ✂️</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-400 text-4xl mb-4">📈</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Boost Your Daily Productivity</h3>
+                    <p class="text-gray-300">From managing your calendar to quick data lookups and smart home controls, discover hacks that will significantly cut down your screen time and mental load. Work smarter, not harder! ✨</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-400 text-4xl mb-4">🛡️</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Privacy & Security Best Practices</h3>
+                    <p class="text-gray-300">Learn how to maximize Siri AI's potential while maintaining your data privacy and ensuring secure automation workflows. Your data, your rules! 🔒</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-400 text-4xl mb-4">⚙️</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Custom Voice Commands</h3>
+                    <p class="text-gray-300">Go beyond basic commands. Craft personalized voice triggers for complex workflows, making your iPhone truly an extension of your will. Speak, and it shall be done! 🗣️</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Purchase Section -->
+    <section id="purchase" class="py-16 md:py-24 bg-gradient-to-br from-gray-900 to-black px-4">
+        <div class="container mx-auto max-w-3xl text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8">
+                🔥 Secure Your Copy Now & Unlock Immediate Value!
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                Don't miss out on this limited-time introductory price. Elevate your productivity today!
             </p>
 
-            <form class="bg-gray-900 p-8 rounded-lg shadow-xl border border-indigo-500 max-w-md mx-auto">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200">
-                </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" required
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200">
-                </div>
-                <button type="submit"
-                        class="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg w-full">
-                    ✅ Secure My Spot Now!
-                </button>
-                <p class="text-xs text-gray-400 mt-4">🔒 We respect your privacy. Your information will not be shared.</p>
-            </form>
+            <div class="bg-gray-800 rounded-2xl p-8 md:p-10 shadow-2xl border-2 border-blue-600">
+                <p class="text-lg text-gray-400 line-through mb-2">Regular Price: $<span id="original-price">99.00</span></p>
+                <p class="text-5xl md:text-6xl font-extrabold text-blue-400 mb-6">
+                    Only <span id="discounted-price">$49.00</span>
+                </p>
+                <p class="text-xl font-semibold text-white mb-8">
+                    Save <span id="savings" class="text-green-400">$50.00</span> today!
+                </p>
+
+                <form class="space-y-6">
+                    <div>
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" required
+                               class="w-full p-4 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-blue-500 focus:ring-blue-500 transition duration-200 placeholder-gray-400 text-lg">
+                    </div>
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
+                               class="w-full p-4 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-blue-500 focus:ring-blue-500 transition duration-200 placeholder-gray-400 text-lg">
+                    </div>
+                    <!-- In a real-world scenario, this would integrate with a secure payment gateway -->
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg text-xl md:text-2xl transition duration-300 transform hover:scale-105 shadow-xl">
+                        🛒 Get Instant Access Now!
+                    </button>
+                    <p class="text-sm text-gray-400 mt-4">
+                        By clicking "Get Instant Access Now!", you agree to our <a href="#" class="text-blue-400 hover:underline">Terms of Service</a> and <a href="#" class="text-blue-400 hover:underline">Privacy Policy</a>.
+                    </p>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-sm">
-        <div class="container mx-auto px-4">
-            <p>&copy; <span id="currentYear"></span> Digital Education Authority. All rights reserved.</p>
+    <footer class="bg-gray-900 border-t border-gray-800 py-8 px-4 text-center text-gray-500 text-sm">
+        <div class="container mx-auto max-w-6xl">
+            <p>&copy; 2024 Digital Education Authority. All rights reserved.</p>
             <p class="mt-2">
-                <a href="#" class="text-indigo-400 hover:text-indigo-300 mx-2">Privacy Policy</a> |
-                <a href="#" class="text-indigo-400 hover:text-indigo-300 mx-2">Terms of Service</a>
+                <a href="#" class="text-blue-400 hover:underline mx-2">Privacy Policy</a> |
+                <a href="#" class="text-blue-400 hover:underline mx-2">Terms of Service</a>
             </p>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer and Current Year -->
+    <!-- Countdown Timer JavaScript -->
     <script>
-        // Countdown Timer: Set to 7 days from now for demonstration purposes
-        const countdownDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).getTime();
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the date we're counting down to (e.g., 7 days from now for a limited offer)
+            const endDate = new Date();
+            endDate.setDate(endDate.getDate() + 7); // Offer ends 7 days from page load
+            endDate.setHours(23, 59, 59, 999); // Set to end of the 7th day
 
-        const x = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
+            const countdownElement = document.getElementById('countdown');
+            const daysSpan = document.getElementById('days');
+            const hoursSpan = document.getElementById('hours');
+            const minutesSpan = document.getElementById('minutes');
+            const secondsSpan = document.getElementById('seconds');
+            const originalPriceSpan = document.getElementById('original-price');
+            const discountedPriceSpan = document.getElementById('discounted-price');
+            const savingsSpan = document.getElementById('savings');
+            const purchaseFormButton = document.querySelector('#purchase button[type="submit"]');
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = endDate.getTime() - now;
 
-            // Update elements, ensuring they exist
-            if (document.getElementById("days")) {
-                document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
-            }
-            if (document.getElementById("hours")) {
-                document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
-            }
-            if (document.getElementById("minutes")) {
-                document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
-            }
-            if (document.getElementById("seconds")) {
-                document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
-            }
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    countdownElement.innerHTML = '<span class="text-red-500 text-xl font-bold">Offer Expired!</span>';
+                    
+                    // Update prices and disable/change button
+                    if (originalPriceSpan) originalPriceSpan.textContent = '99.00';
+                    if (discountedPriceSpan) discountedPriceSpan.innerHTML = '<span class="line-through">$49.00</span> <span class="text-white">$99.00</span>';
+                    if (savingsSpan) savingsSpan.style.display = 'none';
 
-            // If the countdown is over
-            if (distance < 0) {
-                clearInterval(x);
-                if (document.getElementById("countdown-timer")) {
-                    document.getElementById("countdown-timer").innerHTML = "<p class='text-lg text-red-400 font-bold'>⏳ Offer Expired!</p>";
+                    if (purchaseFormButton) {
+                        purchaseFormButton.textContent = 'Offer Expired - Get Full Price Access';
+                        purchaseFormButton.classList.remove('bg-blue-600', 'hover:bg-blue-700', 'hover:scale-105');
+                        purchaseFormButton.classList.add('bg-gray-600', 'cursor-not-allowed');
+                        purchaseFormButton.onclick = function(e) { e.preventDefault(); alert('This introductory offer has expired. The guide is now available at its full price.'); };
+                    }
+                    return;
                 }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                daysSpan.textContent = String(days).padStart(2, '0');
+                hoursSpan.textContent = String(hours).padStart(2, '0');
+                minutesSpan.textContent = String(minutes).padStart(2, '0');
+                secondsSpan.textContent = String(seconds).padStart(2, '0');
             }
-        }, 1000);
 
-        // Update current year in footer
-        document.getElementById("currentYear").textContent = new Date().getFullYear();
+            const countdownInterval = setInterval(updateCountdown, 1000);
+            updateCountdown(); // Call once immediately to avoid delay
+        });
     </script>
-
 </body>
 </html>
