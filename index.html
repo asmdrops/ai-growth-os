@@ -3,169 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeminiConnect Pro - Master Your Connected Apps</title>
+    <title>CreatorGuard AI: Protect Your Creativity from AI Theft & Slop</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Favicon: A simple SVG shield/exclamation icon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%236366F1' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z'/%3E%3C/svg%3E" type="image/svg+xml">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-        /* Custom dark overlay for hero image for better text readability */
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay */
-        }
-        /* Custom styles for the countdown timer for visual appeal */
-        .countdown-item {
-            @apply flex flex-col items-center justify-center p-4 bg-gray-800 rounded-lg shadow-lg;
-        }
-        .countdown-value {
-            @apply text-4xl sm:text-5xl font-extrabold text-purple-400;
-        }
-        .countdown-label {
-            @apply text-sm uppercase text-gray-400 mt-1;
+        /* Custom styles for the Hero background image */
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+
+    <!-- Header -->
+    <header class="bg-gray-900 bg-opacity-80 backdrop-filter backdrop-blur-lg fixed w-full z-50 py-4">
+        <div class="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
+            <a href="#" class="flex items-center space-x-2 text-white text-2xl font-bold tracking-tight">
+                <svg class="w-8 h-8 text-indigo-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                </svg>
+                <span>CreatorGuard AI</span>
+            </a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#features" class="text-gray-300 hover:text-white transition duration-300 font-medium">Features</a>
+                <a href="#waitlist" class="text-gray-300 hover:text-white transition duration-300 font-medium">Join Waitlist</a>
+            </nav>
+            <!-- Mobile-specific waitlist button -->
+            <a href="#waitlist" class="md:hidden px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300 font-medium">Join</a>
+        </div>
+    </header>
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');"></div>
-        <div class="hero-overlay absolute inset-0"></div>
-        
+    <section class="relative h-screen flex items-center justify-center text-center text-white hero-background">
+        <!-- Dark overlay for readability -->
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-gray-900/60 opacity-90"></div>
         <div class="relative z-10 p-4 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
-                Master Your Google Gemini & Search Connected Apps
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">
+                Your Creativity, <span class="text-indigo-400">Unstolen.</span> Your Voice, <span class="text-indigo-400">Unsilenced.</span>
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Unlock unparalleled insights, automate workflows, and ensure flawless performance for your applications on Google's new developer platform.
+            <p class="text-lg sm:text-xl lg:text-2xl mb-8 font-light text-gray-200 drop-shadow-md">
+                CreatorGuard AI empowers comedians, writers, and artists to fight back against AI theft and 'slop'.
+                <br>As Adam Mosseri says, "negativity around AI is going to get worse" – protect yourself now.
             </p>
-            <a href="#waitlist" class="inline-block bg-purple-600 hover:bg-purple-700 text-white text-lg sm:text-xl font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
-                Get Early Access & Join Waitlist
-            </a>
+            <div class="mb-8">
+                <a href="#waitlist" class="inline-flex items-center px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white text-xl font-semibold rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    Join the Early Access Waitlist &rarr;
+                </a>
+            </div>
+
+            <!-- Limited Time Countdown -->
+            <div class="bg-indigo-700 bg-opacity-70 backdrop-filter backdrop-blur-sm p-4 rounded-xl shadow-xl border border-indigo-500 max-w-md mx-auto">
+                <p class="text-lg sm:text-xl font-semibold mb-2">Limited Time Early Bird Offer Ends In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-value">07</span>
+                        <span class="text-sm font-normal text-gray-300">Days</span>
+                    </div>
+                    <span class="text-gray-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-value">12</span>
+                        <span class="text-sm font-normal text-gray-300">Hours</span>
+                    </div>
+                    <span class="text-gray-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-value">34</span>
+                        <span class="text-sm font-normal text-gray-300">Minutes</span>
+                    </div>
+                    <span class="text-gray-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-value">56</span>
+                        <span class="text-sm font-normal text-gray-300">Seconds</span>
+                    </div>
+                </div>
+                <p class="mt-3 text-sm text-gray-300">Unlock bonus features for life by signing up now!</p>
+            </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-20 md:py-24 bg-gray-950">
-        <div class="container mx-auto px-4 max-w-7xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 text-gray-100">
-                Elevate Your Connected App Management
+    <section id="features" class="py-16 sm:py-20 lg:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6 text-white leading-tight">
+                Empower Your Creativity. <span class="text-indigo-400">Protect Your Legacy.</span>
             </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-                
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-600 transition duration-300">
-                    <div class="text-5xl text-purple-400 mb-4">📈</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Advanced Performance Tracking</h3>
-                    <p class="text-gray-300">Monitor real-time performance metrics within Gemini & Search to identify bottlenecks and optimize user experience. Get granular data like never before.</p>
+            <p class="text-lg sm:text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+                CreatorGuard AI provides a comprehensive suite of tools to defend your unique artistic voice in the age of AI.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+
+                <!-- Feature 1: AI Plagiarism & Slop Detection -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="flex justify-center mb-6">
+                        <svg class="w-16 h-16 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.007 12.007 0 002 12c0 2.408.766 4.635 2.062 6.425M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8 10h4m-2 4v-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">
+                        AI Plagiarism & Slop Detection 🕵️‍♂️
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Our advanced AI model is specifically trained to identify unique creative patterns in your content,
+                        flagging instances where AI-generated 'slop' or outright theft closely mimics your original work.
+                        <br><strong class="text-indigo-300">Stop AI impersonators dead in their tracks!</strong>
+                    </p>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-cyan-400 transition duration-300">
-                    <div class="text-5xl text-cyan-400 mb-4">🚨</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Proactive Error Alerts & Diagnostics</h3>
-                    <p class="text-gray-300">Receive instant notifications for critical errors and easily diagnose issues with detailed logs, minimizing downtime and user impact.</p>
+                <!-- Feature 2: Digital IP Fingerprinting & Timestamping -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="flex justify-center mb-6">
+                        <svg class="w-16 h-16 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">
+                        Digital IP Fingerprinting & Timestamping ✍️
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Register and timestamp your original works with unique digital identifiers. Provide irrefutable, blockchain-backed proof of creation and ownership, protecting your intellectual property from the moment of inception.
+                        <br><strong class="text-indigo-300">Your proof, solidified.</strong>
+                    </p>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-600 transition duration-300">
-                    <div class="text-5xl text-purple-400 mb-4">📊</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Comprehensive Usage Statistics</h3>
-                    <p class="text-gray-300">Understand how users interact with your connected apps. Gain insights into adoption rates, feature usage, and retention within the Gemini ecosystem.</p>
-                </div>
-
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-cyan-400 transition duration-300">
-                    <div class="text-5xl text-cyan-400 mb-4">🔗</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Seamless Integration Monitoring</h3>
-                    <p class="text-gray-300">Keep a watchful eye on all your integrations. Ensure data flows smoothly between your services and the Gemini platform, preventing costly outages.</p>
-                </div>
-
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-600 transition duration-300">
-                    <div class="text-5xl text-purple-400 mb-4">⚡</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Automated Workflow & Submission</h3>
-                    <p class="text-gray-300">Streamline your app submission and update processes. Automate repetitive tasks, reduce manual effort, and accelerate your time to market.</p>
-                </div>
-
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-cyan-400 transition duration-300">
-                    <div class="text-5xl text-cyan-400 mb-4">🛡️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Security & Compliance Insights</h3>
-                    <p class="text-gray-300">Stay ahead with continuous monitoring of your app's security posture and compliance adherence within Google's developer guidelines.</p>
+                <!-- Feature 3: Automated Takedown Request Generator -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="flex justify-center mb-6">
+                        <svg class="w-16 h-16 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">
+                        Automated Takedown Request Generator 🚀
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Don't fight alone. Our streamlined tools automatically generate and submit DMCA or platform-specific takedown notices to combat infringement.
+                        <br><strong class="text-indigo-300">Reclaim your stolen content with a click.</strong>
+                    </p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Section -->
-    <section id="waitlist" class="py-16 sm:py-20 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 max-w-3xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-6 text-gray-100">
-                Don't Miss Out! Join Our Exclusive Waitlist
+    <!-- Waitlist / Call to Action Section -->
+    <section id="waitlist" class="py-16 sm:py-20 lg:py-24 bg-gray-800 border-t border-gray-700">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6 text-white leading-tight">
+                Secure Your Spot. <span class="text-indigo-400">Join the Fight.</span>
             </h2>
-            <p class="text-lg sm:text-xl text-center text-gray-300 mb-10">
-                Be among the first to experience GeminiConnect Pro. Secure early access and special launch pricing.
+            <p class="text-lg sm:text-xl text-gray-300 mb-10">
+                Be among the first to access CreatorGuard AI and gain exclusive early bird benefits. Protect your creative future today.
             </p>
 
-            <!-- Limited Time Countdown -->
-            <div class="bg-gradient-to-r from-purple-700 to-cyan-600 p-6 rounded-xl shadow-2xl mb-12">
-                <p class="text-center text-xl sm:text-2xl font-bold mb-6 text-white">
-                    Limited Time Offer: Early Access Closes In
-                </p>
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-white">
-                    <div class="countdown-item">
-                        <div class="countdown-value">XX</div>
-                        <div class="countdown-label">Days</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div class="countdown-value">XX</div>
-                        <div class="countdown-label">Hours</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div class="countdown-value">XX</div>
-                        <div class="countdown-label">Minutes</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div class="countdown-value">XX</div>
-                        <div class="countdown-label">Seconds</div>
-                    </div>
+            <form class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-indigo-700">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-800" required>
                 </div>
-                <p class="text-center text-sm mt-4 text-gray-200">
-                    (Note: This is a placeholder timer for demonstration. Real timer would be dynamic.)
-                </p>
-            </div>
-
-            <form class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700">
-                <div class="mb-6">
-                    <label for="name" class="block text-gray-200 text-lg font-semibold mb-2">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-400 text-lg" required>
+                <div class="mb-8 text-left">
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-white leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-800" required>
                 </div>
-                <div class="mb-6">
-                    <label for="email" class="block text-gray-200 text-lg font-semibold mb-2">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-400 text-lg" required>
-                </div>
-                <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white text-xl font-bold py-4 rounded-lg transition duration-300 transform hover:scale-105 shadow-xl">
-                    Join the Waitlist Now!
+                <button type="submit" class="w-full sm:w-auto px-10 py-4 bg-indigo-600 hover:bg-indigo-700 text-white text-xl font-semibold rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    Join Early Access Now!
                 </button>
-                <p class="text-center text-sm text-gray-400 mt-4">We respect your privacy. No spam, ever.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-10">
-        <div class="container mx-auto px-4 text-center text-gray-500">
-            <p>&copy; 2023 GeminiConnect Pro. All rights reserved.</p>
-            <p class="mt-2 text-sm">Made with passion for developers & businesses.</p>
+    <footer class="bg-gray-900 py-8 border-t border-gray-700">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            <p>&copy; 2023 CreatorGuard AI. All rights reserved. Built to protect the future of creativity.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
+    <!-- Placeholder for JavaScript to power the countdown -->
+    <script>
+        // In a real application, this JavaScript would calculate the remaining time
+        // until a specific date and dynamically update the countdown values.
+        // For this raw HTML output, the values are static placeholders as per the requirement.
+        // Example of how it would be structured (not active in this raw HTML):
+        /*
+        document.addEventListener('DOMContentLoaded', () => {
+            const countdownElement = document.getElementById('countdown');
+            const targetDate = new Date('2024-01-01T00:00:00'); // Set your desired end date here
+
+            function updateCountdown() {
+                const now = new Date();
+                const difference = targetDate - now;
+
+                if (difference < 0) {
+                    countdownElement.innerHTML = '<span class="text-xl text-white">Offer Expired!</span>';
+                    return;
+                }
+
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                countdownElement.querySelector('.countdown-value:nth-child(1)').textContent = String(days).padStart(2, '0');
+                countdownElement.querySelector('.countdown-value:nth-child(2)').textContent = String(hours).padStart(2, '0');
+                countdownElement.querySelector('.countdown-value:nth-child(3)').textContent = String(minutes).padStart(2, '0');
+                countdownElement.querySelector('.countdown-value:nth-child(4)').textContent = String(seconds).padStart(2, '0');
+            }
+
+            updateCountdown(); // Initial call
+            setInterval(updateCountdown, 1000); // Update every second
+        });
+        */
+    </script>
 </body>
 </html>
