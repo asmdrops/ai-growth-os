@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The iPhone Duo Durability Handbook: Pre-Order Now!</title>
+    <title>Emergency Android Exploit Guide - Early Access Waitlist</title>
+    <meta name="description" content="Protect your Android phone from the new 'SMS of Death' exploit. Join the early access waitlist for our comprehensive prevention, detection, and recovery guide. Limited-time discount!">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,216 +12,211 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            @apply bg-gray-900 text-gray-200;
+            scroll-behavior: smooth;
         }
         .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            position: relative;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text contrast */
         }
         .countdown-segment {
-            @apply flex flex-col items-center justify-center p-4 bg-gray-800 bg-opacity-70 rounded-lg shadow-lg;
+            @apply flex flex-col items-center justify-center p-4 rounded-lg bg-gray-800 bg-opacity-70 text-white shadow-lg;
         }
         .countdown-value {
-            @apply text-4xl sm:text-5xl font-extrabold text-indigo-400;
+            @apply text-4xl sm:text-5xl lg:text-6xl font-extrabold text-red-400;
         }
         .countdown-label {
-            @apply text-xs sm:text-sm font-semibold text-gray-400 uppercase mt-1;
+            @apply text-sm sm:text-base font-semibold text-gray-300 uppercase mt-2;
+        }
+        @keyframes pulse-once {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .animate-pulse-once {
+            animation: pulse-once 1s ease-in-out;
+        }
+        .shadow-3xl {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.1); /* Custom shadow for more depth */
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-200 antialiased">
+<body class="bg-gray-950 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative hero-background min-h-screen flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-        <div class="relative z-10 max-w-5xl mx-auto text-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
-                <span class="block">Protect Your Investment:</span>
-                <span class="block text-indigo-400 mt-2">Master iPhone Duo Durability & Repair</span>
+    <header id="hero" class="hero-background min-h-screen flex items-center justify-center text-center py-16 px-4">
+        <div class="hero-overlay absolute inset-0 z-0"></div>
+        <div class="relative z-10 max-w-5xl mx-auto flex flex-col items-center justify-center min-h-[inherit]">
+            <span class="bg-red-600 text-white text-xs sm:text-sm font-bold uppercase px-3 py-1 rounded-full mb-4 animate-pulse-once">Urgent Security Alert</span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 drop-shadow-lg text-white">
+                <span class="text-red-400">ZERO-DAY ANDROID EXPLOIT ALERT!</span><br>
+                Protect Your Phone NOW From The New 'SMS of Death' Threat.
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto drop-shadow-md">
-                Don't let display cracks define your iPhone Duo experience. With Apple's recent alerts on display issues,
-                our comprehensive guide is your essential toolkit to prevent damage, navigate repairs, and extend your device's life.
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-200 mb-8 max-w-3xl">
+                A critical new exploit allows remote crashing of unpatched Android phones. Our <span class="text-red-300 font-bold">Emergency Exploit Protection & Recovery Guide</span> offers actionable steps to secure your device BEFORE it's too late.
             </p>
 
-            <!-- Limited Time Countdown -->
-            <div class="mb-10 p-6 bg-gray-800 bg-opacity-80 rounded-xl shadow-2xl border border-indigo-600">
-                <h2 class="text-xl sm:text-2xl font-bold text-white mb-4">
-                    Early Bird Access Ends In:
-                </h2>
-                <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-md mx-auto" data-target-date="2024-12-31T23:59:59">
+            <!-- Countdown Timer -->
+            <div class="mb-10 text-center">
+                <p class="text-lg sm:text-xl text-red-300 font-semibold mb-4">
+                    Early Bird Access & Exclusive Discount Opportunity Ends In:
+                </p>
+                <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 justify-center max-w-lg mx-auto">
                     <div class="countdown-segment">
-                        <span class="countdown-value" id="days">00</span>
+                        <span id="days" class="countdown-value">00</span>
                         <span class="countdown-label">Days</span>
                     </div>
                     <div class="countdown-segment">
-                        <span class="countdown-value" id="hours">00</span>
+                        <span id="hours" class="countdown-value">00</span>
                         <span class="countdown-label">Hours</span>
                     </div>
                     <div class="countdown-segment">
-                        <span class="countdown-value" id="minutes">00</span>
+                        <span id="minutes" class="countdown-value">00</span>
                         <span class="countdown-label">Minutes</span>
                     </div>
                     <div class="countdown-segment">
-                        <span class="countdown-value" id="seconds">00</span>
+                        <span id="seconds" class="countdown-value">00</span>
                         <span class="countdown-label">Seconds</span>
                     </div>
                 </div>
-                <p class="text-sm text-gray-400 mt-4">
-                    *Pre-order now to secure exclusive launch benefits and a special discount!
-                </p>
             </div>
 
-            <a href="#preorder" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
-                Secure Your Copy Now!
+            <a href="#waitlist-form-section" class="bg-red-600 hover:bg-red-700 text-white font-extrabold text-xl sm:text-2xl px-10 py-5 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 active:scale-95">
+                ⚡ Join Early Access Waitlist & Secure Your Device! ⚡
             </a>
         </div>
     </header>
 
-    <!-- Features Section -->
-    <section class="py-16 sm:py-24 bg-gray-950 px-4 sm:px-6 lg:px-8">
+    <!-- Problem Section -->
+    <section id="problem" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-900">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">What You'll Discover Inside</h2>
-            <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-                The <span class="text-indigo-400 font-semibold">iPhone Duo Durability Handbook</span> is your ultimate guide to ensuring your foldable device stands the test of time.
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 text-red-400">The Silent Threat: Android's New 'SMS of Death' Exploit</h2>
+            <p class="text-lg sm:text-xl leading-relaxed mb-6 text-gray-300">
+                Reports from cybersecurity experts, including <span class="font-bold text-blue-400">BleepingComputer</span>, confirm a severe zero-day vulnerability. A specially crafted SMS message can remotely crash unpatched Android phones, rendering them unusable and potentially exposing sensitive data. This isn't just an inconvenience; it's a direct threat to your digital security and privacy.
             </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <h3 class="text-xl font-bold text-white mb-3 flex items-center">
-                        <span class="mr-3 text-2xl">💪</span>Unrivaled Protection Strategies
-                    </h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li>✅ Detailed tips for optimal handling and preventing common damage.</li>
-                        <li>🛡️ Expert recommendations for specialized cases and screen protectors (with affiliate links to the best).</li>
-                        <li>☔ Guide to liquid damage prevention and what to do if an accident occurs.</li>
-                    </ul>
-                </div>
-                <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <h3 class="text-xl font-bold text-white mb-3 flex items-center">
-                        <span class="mr-3 text-2xl">🍎</span>Navigate Apple's Repair Maze
-                    </h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li>🛠️ A clear, step-by-step walkthrough of Apple's replacement and repair process.</li>
-                        <li>💰 Understanding warranty vs. out-of-warranty costs and how to prepare.</li>
-                        <li>📝 Tips for communicating with Apple support to get the best outcome.</li>
-                    </ul>
-                </div>
-                <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <h3 class="text-xl font-bold text-white mb-3 flex items-center">
-                        <span class="mr-3 text-2xl">🌟</span>Master Foldable Phone Care
-                    </h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li>👐 Specific care instructions unique to the iPhone Duo's foldable display.</li>
-                        <li>🌬️ Best practices for cleaning hinges and screens without causing damage.</li>
-                        <li>🌡️ Advice on environmental factors that affect foldable longevity.</li>
-                    </ul>
-                </div>
-                <div class="p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <h3 class="text-xl font-bold text-white mb-3 flex items-center">
-                        <span class="mr-3 text-2xl">🔒</span>Long-Term Maintenance & Insurance
-                    </h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li>🔋 Strategies for optimizing battery health and extending device lifespan.</li>
-                        <li>📜 Comprehensive advice on device insurance options and choosing the right plan.</li>
-                        <li>🔄 When to upgrade, trade-in, or repair for maximum value.</li>
-                    </ul>
-                </div>
-            </div>
+            <p class="text-lg sm:text-xl leading-relaxed text-gray-300">
+                Most users are unaware of the specific settings and actions needed to prevent such attacks or recover if affected. Standard security practices are often insufficient. You need a targeted, actionable guide that cuts through the jargon and provides immediate solutions.
+            </p>
         </div>
     </section>
 
-    <!-- Pre-Order / Waitlist Form Section -->
-    <section id="preorder" class="py-16 sm:py-24 bg-gray-900 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-2xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-                Be Among the First to Fortify Your iPhone Duo
+    <!-- Features/Solution Section -->
+    <section id="features" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-950">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 text-white">
+                Your Comprehensive Guide to Android Exploit Protection & Recovery
             </h2>
-            <p class="text-lg text-gray-400 mb-8">
-                Pre-order "The iPhone Duo Durability Handbook" today to gain early access, an exclusive launch discount,
-                and peace of mind for your cutting-edge device. Don't wait for a crack to regret it!
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Prevention -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-800 hover:border-red-600 transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold mb-4 text-red-300">🛡️ Proactive Prevention</h3>
+                    <ul class="space-y-3 text-lg text-gray-300">
+                        <li>✅ Optimize Messaging App Settings: Block unknown senders and secure your inbox.</li>
+                        <li>🚫 Identify & Block Unknown Numbers: Stop malicious messages before they arrive.</li>
+                        <li>🌐 Secure Browsing Habits: Navigate the web safely to avoid phishing and malware.</li>
+                        <li>⚙️ Essential System Configurations: Lock down critical Android settings for maximum defense.</li>
+                    </ul>
+                </div>
+                <!-- Detection -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-800 hover:border-red-600 transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold mb-4 text-red-300">🔍 Early Detection</h3>
+                    <ul class="space-y-3 text-lg text-gray-300">
+                        <li>⚠️ Recognize Warning Signs: Learn to spot the subtle indicators of an exploit.</li>
+                        <li>📊 Monitor Phone Performance: Understand unusual battery drain or app behavior.</li>
+                        <li>📡 Identify Network Anomalies: Detect suspicious data usage or connection issues.</li>
+                        <li>🧰 Utilize Built-in Security Tools: Maximize your phone's native defenses effectively.</li>
+                    </ul>
+                </div>
+                <!-- Recovery -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-800 hover:border-red-600 transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold mb-4 text-red-300">🚑 Step-by-Step Recovery</h3>
+                    <ul class="space-y-3 text-lg text-gray-300">
+                        <li>🚨 Enter Safe Mode: Isolate threats and diagnose issues without further harm.</li>
+                        <li>🔄 Factory Reset Precautions: Perform a reset safely, preserving what you can.</li>
+                        <li>💾 Critical Data Backup Strategies: Ensure your precious data is always recoverable.</li>
+                        <li>🔒 Post-Recovery Security Checklist: Rebuild your phone's defense stronger than before.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-center text-xl sm:text-2xl text-gray-200 mt-12 max-w-3xl mx-auto">
+                Don't wait for your phone to be targeted. Our guide provides <span class="font-bold text-red-400">clear, actionable instructions</span> to safeguard your Android device against current and future threats.
+            </p>
+        </div>
+    </section>
+
+    <!-- Waitlist / Call to Action Section -->
+    <section id="waitlist-form-section" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div class="max-w-3xl mx-auto bg-gray-800 p-8 md:p-12 rounded-2xl shadow-3xl text-center border border-gray-700">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-red-400">
+                Ready to Secure Your Android?
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-200 mb-8">
+                Join our exclusive early access waitlist to get notified the moment the "Emergency Android Exploit Protection & Recovery Guide" is available. As an early bird, you'll also receive a <span class="font-bold text-green-400">significant discount</span> and bonus resources!
             </p>
 
-            <form class="bg-gray-800 p-8 rounded-lg shadow-2xl border border-indigo-700">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700 placeholder-gray-500 transition-colors duration-200"
-                           required>
+            <form class="space-y-6">
+                <div>
+                    <label for="name" class="sr-only">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Full Name" required
+                           class="w-full px-5 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-red-500 focus:ring-1 focus:ring-red-500 placeholder-gray-400 text-lg transition duration-200">
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700 placeholder-gray-500 transition-colors duration-200"
-                           required>
+                <div>
+                    <label for="email" class="sr-only">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
+                           class="w-full px-5 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-red-500 focus:ring-1 focus:ring-red-500 placeholder-gray-400 text-lg transition duration-200">
                 </div>
-                <button type="submit"
-                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                    Secure My Early Access & Discount
+                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-extrabold text-xl sm:text-2xl py-4 rounded-lg shadow-xl transition duration-300 ease-in-out transform hover:scale-105 active:scale-95">
+                    🚀 Join Early Access & Get Notified!
                 </button>
-                <p class="text-sm text-gray-500 mt-4">
-                    Your information is 100% secure and will never be shared.
-                </p>
             </form>
-
-            <p class="text-lg text-gray-300 mt-10">
-                Join <span class="text-indigo-400 font-bold">1,200+</span> future-proof iPhone Duo owners today!
+            <p class="text-sm text-gray-400 mt-6">
+                Your privacy is important to us. We will never share your email.
             </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-10 px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
-        <div class="max-w-4xl mx-auto">
-            <p>&copy; 2024 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">
-                <a href="#" class="text-indigo-400 hover:text-indigo-300">Privacy Policy</a> |
-                <a href="#" class="text-indigo-400 hover:text-indigo-300">Terms of Service</a>
-            </p>
+    <footer class="bg-gray-950 py-10 px-4 sm:px-6 lg:px-8 text-center text-gray-500">
+        <div class="max-w-7xl mx-auto">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved. | <a href="#" class="text-red-400 hover:underline">Privacy Policy</a> | <a href="#" class="text-red-400 hover:underline">Terms of Service</a></p>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer (Placeholder - requires actual JS to function) -->
+    <!-- Countdown Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const countdownElement = document.getElementById('countdown');
-            const targetDateString = countdownElement.getAttribute('data-target-date');
-            const targetDate = new Date(targetDateString).getTime();
+            // Set the target date for the countdown (e.g., 7 days from now)
+            const countdownDate = new Date();
+            countdownDate.setDate(countdownDate.getDate() + 7); // 7 days from page load
 
-            const updateCountdown = () => {
+            const x = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = targetDate - now;
+                const distance = countdownDate - now;
 
-                // If the countdown is over
-                if (distance < 0) {
-                    clearInterval(interval);
-                    document.getElementById('days').innerText = '00';
-                    document.getElementById('hours').innerText = '00';
-                    document.getElementById('minutes').innerText = '00';
-                    document.getElementById('seconds').innerText = '00';
-                    // Optional: Update text to "Offer Expired"
-                    return;
-                }
-
-                // Calculate time units
+                // Calculate times for days, hours, minutes and seconds
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Update the elements
-                document.getElementById('days').innerText = String(days).padStart(2, '0');
-                document.getElementById('hours').innerText = String(hours).padStart(2, '0');
-                document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
-                document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
-            };
+                // Display the result in the corresponding elements, ensuring two digits
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-            // Update the countdown every 1 second
-            const interval = setInterval(updateCountdown, 1000);
-            // Initial call to display immediately
-            updateCountdown();
+                // If the countdown is over
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<p class='text-red-500 text-xl font-bold'>OFFER HAS ENDED!</p>";
+                    // Optionally, disable the form or change the CTA message here
+                }
+            }, 1000);
         });
     </script>
 </body>
