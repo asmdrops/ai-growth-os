@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emergency Android Exploit Guide - Early Access Waitlist</title>
-    <meta name="description" content="Protect your Android phone from the new 'SMS of Death' exploit. Join the early access waitlist for our comprehensive prevention, detection, and recovery guide. Limited-time discount!">
+    <title>HomeView Navigator: Master Your Apple Smart Home & Discover Alternatives</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,212 +11,240 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
+        /* Custom scrollbar for dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+            background: #1a202c; /* bg-gray-900 */
         }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text contrast */
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* A darker gray */
+            border-radius: 4px;
         }
-        .countdown-segment {
-            @apply flex flex-col items-center justify-center p-4 rounded-lg bg-gray-800 bg-opacity-70 text-white shadow-lg;
-        }
-        .countdown-value {
-            @apply text-4xl sm:text-5xl lg:text-6xl font-extrabold text-red-400;
-        }
-        .countdown-label {
-            @apply text-sm sm:text-base font-semibold text-gray-300 uppercase mt-2;
-        }
-        @keyframes pulse-once {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        .animate-pulse-once {
-            animation: pulse-once 1s ease-in-out;
-        }
-        .shadow-3xl {
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.1); /* Custom shadow for more depth */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096; /* Lighter gray on hover */
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header id="hero" class="hero-background min-h-screen flex items-center justify-center text-center py-16 px-4">
-        <div class="hero-overlay absolute inset-0 z-0"></div>
-        <div class="relative z-10 max-w-5xl mx-auto flex flex-col items-center justify-center min-h-[inherit]">
-            <span class="bg-red-600 text-white text-xs sm:text-sm font-bold uppercase px-3 py-1 rounded-full mb-4 animate-pulse-once">Urgent Security Alert</span>
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 drop-shadow-lg text-white">
-                <span class="text-red-400">ZERO-DAY ANDROID EXPLOIT ALERT!</span><br>
-                Protect Your Phone NOW From The New 'SMS of Death' Threat.
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://source.unsplash.com/1600x900/?A,tech" alt="Smart Home Technology, Apple HomeKit devices" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark Overlay for text readability -->
+        </div>
+
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white">
+                Stuck with <span class="text-red-400">Outdated Apple HomeView</span>? <br>
+                <span class="text-indigo-400">Unlock Its True Power</span> & Discover Budget-Friendly Alternatives!
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-200 mb-8 max-w-3xl">
-                A critical new exploit allows remote crashing of unpatched Android phones. Our <span class="text-red-300 font-bold">Emergency Exploit Protection & Recovery Guide</span> offers actionable steps to secure your device BEFORE it's too late.
+            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Master your Apple Smart Home, navigate the 'Siri-first' future, and explore our expertly reviewed top 5 cost-effective solutions to take control of your connected living.
             </p>
 
-            <!-- Countdown Timer -->
-            <div class="mb-10 text-center">
-                <p class="text-lg sm:text-xl text-red-300 font-semibold mb-4">
-                    Early Bird Access & Exclusive Discount Opportunity Ends In:
-                </p>
-                <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 justify-center max-w-lg mx-auto">
-                    <div class="countdown-segment">
-                        <span id="days" class="countdown-value">00</span>
-                        <span class="countdown-label">Days</span>
+            <!-- Limited Time Countdown & CTA -->
+            <div class="bg-indigo-900 bg-opacity-40 border border-indigo-700 rounded-xl p-6 mb-8 shadow-xl backdrop-filter backdrop-blur-sm">
+                <p class="text-sm uppercase tracking-wider text-indigo-200 mb-3">Limited Time Early Bird Offer Expires In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-white text-3xl sm:text-4xl lg:text-5xl font-bold">
+                    <div class="flex flex-col items-center">
+                        <span id="days">00</span>
+                        <span class="text-sm text-indigo-300 font-normal mt-1">Days</span>
                     </div>
-                    <div class="countdown-segment">
-                        <span id="hours" class="countdown-value">00</span>
-                        <span class="countdown-label">Hours</span>
+                    <span class="text-2xl sm:text-3xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours">00</span>
+                        <span class="text-sm text-indigo-300 font-normal mt-1">Hours</span>
                     </div>
-                    <div class="countdown-segment">
-                        <span id="minutes" class="countdown-value">00</span>
-                        <span class="countdown-label">Minutes</span>
+                    <span class="text-2xl sm:text-3xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes">00</span>
+                        <span class="text-sm text-indigo-300 font-normal mt-1">Minutes</span>
                     </div>
-                    <div class="countdown-segment">
-                        <span id="seconds" class="countdown-value">00</span>
-                        <span class="countdown-label">Seconds</span>
+                    <span class="text-2xl sm:text-3xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds">00</span>
+                        <span class="text-sm text-indigo-300 font-normal mt-1">Seconds</span>
                     </div>
                 </div>
             </div>
 
-            <a href="#waitlist-form-section" class="bg-red-600 hover:bg-red-700 text-white font-extrabold text-xl sm:text-2xl px-10 py-5 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 active:scale-95">
-                ⚡ Join Early Access Waitlist & Secure Your Device! ⚡
+            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                Secure Your Spot & Get Exclusive Launch Bonuses
             </a>
+            <p class="mt-4 text-sm text-gray-400">Join our exclusive waitlist for early access and special discounts.</p>
         </div>
     </header>
 
-    <!-- Problem Section -->
-    <section id="problem" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-900">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 text-red-400">The Silent Threat: Android's New 'SMS of Death' Exploit</h2>
-            <p class="text-lg sm:text-xl leading-relaxed mb-6 text-gray-300">
-                Reports from cybersecurity experts, including <span class="font-bold text-blue-400">BleepingComputer</span>, confirm a severe zero-day vulnerability. A specially crafted SMS message can remotely crash unpatched Android phones, rendering them unusable and potentially exposing sensitive data. This isn't just an inconvenience; it's a direct threat to your digital security and privacy.
-            </p>
-            <p class="text-lg sm:text-xl leading-relaxed text-gray-300">
-                Most users are unaware of the specific settings and actions needed to prevent such attacks or recover if affected. Standard security practices are often insufficient. You need a targeted, actionable guide that cuts through the jargon and provides immediate solutions.
-            </p>
-        </div>
-    </section>
+    <!-- Features Section -->
+    <section class="py-16 sm:py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">What You'll Discover Inside <span class="text-indigo-400">HomeView Navigator</span></h2>
+                <p class="text-lg text-gray-400 max-w-3xl mx-auto">
+                    A comprehensive premium digital guide and accompanying exclusive newsletter to give you ultimate control over your smart home.
+                </p>
+            </div>
 
-    <!-- Features/Solution Section -->
-    <section id="features" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-950">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 text-white">
-                Your Comprehensive Guide to Android Exploit Protection & Recovery
-            </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Prevention -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-800 hover:border-red-600 transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-2xl font-bold mb-4 text-red-300">🛡️ Proactive Prevention</h3>
-                    <ul class="space-y-3 text-lg text-gray-300">
-                        <li>✅ Optimize Messaging App Settings: Block unknown senders and secure your inbox.</li>
-                        <li>🚫 Identify & Block Unknown Numbers: Stop malicious messages before they arrive.</li>
-                        <li>🌐 Secure Browsing Habits: Navigate the web safely to avoid phishing and malware.</li>
-                        <li>⚙️ Essential System Configurations: Lock down critical Android settings for maximum defense.</li>
-                    </ul>
+                <!-- Feature 1: Maximize Current HomeView -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Maximize Your Current HomeView</h3>
+                    <p class="text-gray-300">
+                        Despite outdated software, unlock advanced tips and tricks to supercharge your existing Apple HomeView setup, making your smart home truly intelligent.
+                    </p>
                 </div>
-                <!-- Detection -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-800 hover:border-red-600 transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-2xl font-bold mb-4 text-red-300">🔍 Early Detection</h3>
-                    <ul class="space-y-3 text-lg text-gray-300">
-                        <li>⚠️ Recognize Warning Signs: Learn to spot the subtle indicators of an exploit.</li>
-                        <li>📊 Monitor Phone Performance: Understand unusual battery drain or app behavior.</li>
-                        <li>📡 Identify Network Anomalies: Detect suspicious data usage or connection issues.</li>
-                        <li>🧰 Utilize Built-in Security Tools: Maximize your phone's native defenses effectively.</li>
-                    </ul>
+
+                <!-- Feature 2: Future-Proofing for Siri-First -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Future-Proof for Apple's 'Siri-First'</h3>
+                    <p class="text-gray-300">
+                        Prepare for tomorrow, today. Strategize and adapt your smart home for Apple's evolving ecosystem and the upcoming 'Siri-first' vision, ensuring long-term compatibility.
+                    </p>
                 </div>
-                <!-- Recovery -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-800 hover:border-red-600 transition duration-300 transform hover:-translate-y-1">
-                    <h3 class="text-2xl font-bold mb-4 text-red-300">🚑 Step-by-Step Recovery</h3>
-                    <ul class="space-y-3 text-lg text-gray-300">
-                        <li>🚨 Enter Safe Mode: Isolate threats and diagnose issues without further harm.</li>
-                        <li>🔄 Factory Reset Precautions: Perform a reset safely, preserving what you can.</li>
-                        <li>💾 Critical Data Backup Strategies: Ensure your precious data is always recoverable.</li>
-                        <li>🔒 Post-Recovery Security Checklist: Rebuild your phone's defense stronger than before.</li>
-                    </ul>
+
+                <!-- Feature 3: Top 5 Budget-Friendly Alternatives -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V3m0 9v3m0 0V9m0 3h2.207a2 2 0 001.519-.698V8.293a2 2 0 00-.698-1.519L14 6m-2 2h-2.207a2 2 0 00-1.519.698V8.293a2 2 0 00.698 1.519L10 6m-2 2h-2.207a2 2 0 00-1.519.698V8.293a2 2 0 00.698 1.519L6 6m-2 2h-2.207a2 2 0 00-1.519.698V8.293a2 2 0 00.698 1.519L2 6" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Top 5 Budget-Friendly Alternatives</h3>
+                    <p class="text-gray-300">
+                        Save money without compromise. Get unbiased, in-depth reviews and comparisons of the best five cost-effective smart home systems that truly deliver.
+                    </p>
+                </div>
+
+                <!-- Feature 4: Exclusive Newsletter -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.206 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.794 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.794 5 16.5 5c1.706 0 3.332.477 4.5 1.253v13C19.832 18.477 18.206 18 16.5 18c-1.706 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Exclusive Smart Home Newsletter</h3>
+                    <p class="text-gray-300">
+                        Stay ahead of the curve with our accompanying exclusive newsletter, delivering cutting-edge market trends, expert insights, and productivity tips.
+                    </p>
+                </div>
+
+                <!-- Feature 5: Comprehensive Comparisons -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 112 2h-2zm0 0l2 2m0 0l2-2m-2 2v-4m0 4l-2 2m2-2l2-2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">In-Depth Reviews & Comparisons</h3>
+                    <p class="text-gray-300">
+                        Make informed decisions with detailed reviews and side-by-side comparisons, highlighting pros, cons, and real-world performance of each smart home solution.
+                    </p>
+                </div>
+
+                <!-- Feature 6: Confidence & Control -->
+                <div class="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.01 12.01 0 003 12c0 2.21.362 4.347 1.05 6.363C5.526 21.011 8.711 22 12 22s6.474-1 7.95-3.637A12.01 12.01 0 0021 12c0-2.21-.362-4.347-1.05-6.363z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Gain Confidence & Complete Control</h3>
+                    <p class="text-gray-300">
+                        Eliminate confusion and buyer's remorse. Empower yourself to build the perfect smart home setup that aligns with your needs, preferences, and budget.
+                    </p>
                 </div>
             </div>
-            <p class="text-center text-xl sm:text-2xl text-gray-200 mt-12 max-w-3xl mx-auto">
-                Don't wait for your phone to be targeted. Our guide provides <span class="font-bold text-red-400">clear, actionable instructions</span> to safeguard your Android device against current and future threats.
-            </p>
         </div>
     </section>
 
-    <!-- Waitlist / Call to Action Section -->
-    <section id="waitlist-form-section" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-900">
-        <div class="max-w-3xl mx-auto bg-gray-800 p-8 md:p-12 rounded-2xl shadow-3xl text-center border border-gray-700">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-red-400">
-                Ready to Secure Your Android?
-            </h2>
-            <p class="text-lg sm:text-xl text-gray-200 mb-8">
-                Join our exclusive early access waitlist to get notified the moment the "Emergency Android Exploit Protection & Recovery Guide" is available. As an early bird, you'll also receive a <span class="font-bold text-green-400">significant discount</span> and bonus resources!
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 sm:py-24 bg-gray-900 border-t border-gray-800">
+        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Join the <span class="text-indigo-400">Exclusive Waitlist</span></h2>
+            <p class="text-lg text-gray-400 mb-8">
+                Be among the first to receive "HomeView Navigator" and unlock special launch-day bonuses. Don't miss out on mastering your smart home!
             </p>
 
-            <form class="space-y-6">
-                <div>
-                    <label for="name" class="sr-only">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Full Name" required
-                           class="w-full px-5 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-red-500 focus:ring-1 focus:ring-red-500 placeholder-gray-400 text-lg transition duration-200">
+            <form action="#" method="POST" class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-sm font-medium text-gray-200 mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 transition duration-200" required>
                 </div>
-                <div>
-                    <label for="email" class="sr-only">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
-                           class="w-full px-5 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-red-500 focus:ring-1 focus:ring-red-500 placeholder-gray-400 text-lg transition duration-200">
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-sm font-medium text-gray-200 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 transition duration-200" required>
                 </div>
-                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-extrabold text-xl sm:text-2xl py-4 rounded-lg shadow-xl transition duration-300 ease-in-out transform hover:scale-105 active:scale-95">
-                    🚀 Join Early Access & Get Notified!
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
+                    Get Early Access Now!
                 </button>
+                <p class="mt-4 text-sm text-gray-500">
+                    We value your privacy and will never share your information.
+                </p>
             </form>
-            <p class="text-sm text-gray-400 mt-6">
-                Your privacy is important to us. We will never share your email.
-            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-10 px-4 sm:px-6 lg:px-8 text-center text-gray-500">
-        <div class="max-w-7xl mx-auto">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved. | <a href="#" class="text-red-400 hover:underline">Privacy Policy</a> | <a href="#" class="text-red-400 hover:underline">Terms of Service</a></p>
+    <footer class="py-10 bg-gray-900 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Countdown Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the target date for the countdown (e.g., 7 days from now)
-            const countdownDate = new Date();
-            countdownDate.setDate(countdownDate.getDate() + 7); // 7 days from page load
+        // Countdown Logic
+        const countdown = () => {
+            // Set launch date to 7 days from the current time for demonstration purposes.
+            // In a real scenario, this would be a specific future date like:
+            // const launchDate = new Date('December 31, 2023 23:59:59').getTime();
+            const launchDate = new Date();
+            launchDate.setDate(launchDate.getDate() + 7); // Set to 7 days from now
+            // launchDate.setMinutes(launchDate.getMinutes() + 5); // For quick testing
 
-            const x = setInterval(function() {
+            const updateInterval = setInterval(() => {
                 const now = new Date().getTime();
-                const distance = countdownDate - now;
+                const distance = launchDate - now;
 
-                // Calculate times for days, hours, minutes and seconds
+                if (distance < 0) {
+                    clearInterval(updateInterval);
+                    document.getElementById('countdown').innerHTML = '<span class="text-white text-2xl sm:text-3xl lg:text-4xl font-bold">Offer Expired!</span>';
+                    const ctaButton = document.querySelector('a[href="#waitlist"]');
+                    if (ctaButton) {
+                        ctaButton.classList.add('opacity-50', 'cursor-not-allowed');
+                        ctaButton.removeAttribute('href');
+                        ctaButton.innerText = 'Offer Has Ended';
+                        ctaButton.style.pointerEvents = 'none'; // Further disable clicks
+                    }
+                    return;
+                }
+
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Display the result in the corresponding elements, ensuring two digits
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-                // If the countdown is over
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<p class='text-red-500 text-xl font-bold'>OFFER HAS ENDED!</p>";
-                    // Optionally, disable the form or change the CTA message here
-                }
+                document.getElementById('days').innerText = String(days).padStart(2, '0');
+                document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+                document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
             }, 1000);
-        });
+        };
+
+        document.addEventListener('DOMContentLoaded', countdown);
     </script>
 </body>
 </html>
