@@ -3,248 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomeView Navigator: Master Your Apple Smart Home & Discover Alternatives</title>
+    <title>The Ultimate iPhone Duo Protection & Care Manual - Extend Your Device's Life</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Optional: Add a custom font like Inter for a more modern feel if desired, e.g., <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800;900&display=swap" rel="stylesheet"> -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📱</text></svg>">
     <style>
+        /* Custom styles for premium dark mode and responsiveness beyond Tailwind defaults */
         body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            font-family: 'Inter', sans-serif; /* Fallback to sans-serif if Inter is not linked */
         }
-        /* Custom scrollbar for dark mode */
-        ::-webkit-scrollbar {
-            width: 8px;
-            background: #1a202c; /* bg-gray-900 */
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #4a5568; /* A darker gray */
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #718096; /* Lighter gray on hover */
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Optional: for parallax-like effect */
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="bg-gray-950 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0">
-            <img src="https://source.unsplash.com/1600x900/?A,tech" alt="Smart Home Technology, Apple HomeKit devices" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark Overlay for text readability -->
-        </div>
+    <header class="relative hero-background min-h-screen flex items-center justify-center p-4">
+        <!-- Overlay to ensure text readability -->
+        <div class="absolute inset-0 bg-black opacity-70"></div>
 
-        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white">
-                Stuck with <span class="text-red-400">Outdated Apple HomeView</span>? <br>
-                <span class="text-indigo-400">Unlock Its True Power</span> & Discover Budget-Friendly Alternatives!
+        <div class="relative z-10 text-center max-w-4xl mx-auto space-y-8">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white drop-shadow-lg">
+                <span class="block mb-2 text-red-400">iPhone Duo Cracks Are Real.</span>
+                Protect Your Investment. Preserve Its Future.
             </h1>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Master your Apple Smart Home, navigate the 'Siri-first' future, and explore our expertly reviewed top 5 cost-effective solutions to take control of your connected living.
+            <p class="text-lg sm:text-xl md:text-2xl font-light text-gray-300 max-w-2xl mx-auto">
+                Don't let your cutting-edge Apple folding device become another costly statistic. Get the definitive guide to extend its life and prevent screen cracks.
             </p>
 
-            <!-- Limited Time Countdown & CTA -->
-            <div class="bg-indigo-900 bg-opacity-40 border border-indigo-700 rounded-xl p-6 mb-8 shadow-xl backdrop-filter backdrop-blur-sm">
-                <p class="text-sm uppercase tracking-wider text-indigo-200 mb-3">Limited Time Early Bird Offer Expires In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-white text-3xl sm:text-4xl lg:text-5xl font-bold">
+            <!-- Limited Time Offer & Countdown -->
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-800 p-6 rounded-xl shadow-2xl inline-block max-w-xl mx-auto mt-8 border border-purple-600">
+                <p class="text-2xl sm:text-3xl font-bold mb-4 text-white uppercase tracking-wider">
+                    🎉 Exclusive Launch Offer Ends In:
+                </p>
+                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 text-white font-mono text-3xl sm:text-5xl lg:text-6xl">
                     <div class="flex flex-col items-center">
-                        <span id="days">00</span>
-                        <span class="text-sm text-indigo-300 font-normal mt-1">Days</span>
+                        <span class="block" id="days">00</span>
+                        <span class="text-xs sm:text-sm font-light uppercase text-gray-200">Days</span>
                     </div>
-                    <span class="text-2xl sm:text-3xl">:</span>
+                    <span class="text-gray-300">:</span>
                     <div class="flex flex-col items-center">
-                        <span id="hours">00</span>
-                        <span class="text-sm text-indigo-300 font-normal mt-1">Hours</span>
+                        <span class="block" id="hours">00</span>
+                        <span class="text-xs sm:text-sm font-light uppercase text-gray-200">Hours</span>
                     </div>
-                    <span class="text-2xl sm:text-3xl">:</span>
+                    <span class="text-gray-300">:</span>
                     <div class="flex flex-col items-center">
-                        <span id="minutes">00</span>
-                        <span class="text-sm text-indigo-300 font-normal mt-1">Minutes</span>
+                        <span class="block" id="minutes">00</span>
+                        <span class="text-xs sm:text-sm font-light uppercase text-gray-200">Minutes</span>
                     </div>
-                    <span class="text-2xl sm:text-3xl">:</span>
+                    <span class="text-gray-300">:</span>
                     <div class="flex flex-col items-center">
-                        <span id="seconds">00</span>
-                        <span class="text-sm text-indigo-300 font-normal mt-1">Seconds</span>
+                        <span class="block" id="seconds">00</span>
+                        <span class="text-xs sm:text-sm font-light uppercase text-gray-200">Seconds</span>
                     </div>
                 </div>
+                <p class="text-lg font-medium text-gray-200 mt-4">
+                    Join the waitlist before this limited-time discount vanishes!
+                </p>
             </div>
 
-            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
-                Secure Your Spot & Get Exclusive Launch Bonuses
+            <a href="#waitlist-form" class="inline-block bg-green-500 hover:bg-green-600 transition duration-300 ease-in-out text-white font-bold py-4 px-10 rounded-full text-xl sm:text-2xl mt-10 shadow-lg transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-green-400">
+                🔒 Secure Your Early Access & Discount Now
             </a>
-            <p class="mt-4 text-sm text-gray-400">Join our exclusive waitlist for early access and special discounts.</p>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-24 bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">What You'll Discover Inside <span class="text-indigo-400">HomeView Navigator</span></h2>
-                <p class="text-lg text-gray-400 max-w-3xl mx-auto">
-                    A comprehensive premium digital guide and accompanying exclusive newsletter to give you ultimate control over your smart home.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1: Maximize Current HomeView -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Maximize Your Current HomeView</h3>
-                    <p class="text-gray-300">
-                        Despite outdated software, unlock advanced tips and tricks to supercharge your existing Apple HomeView setup, making your smart home truly intelligent.
+    <section class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 text-white">
+                What You'll Discover Inside This Essential Guide:
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 border border-gray-700">
+                    <p class="text-xl md:text-2xl font-semibold mb-4 text-purple-300">
+                        ✨ Expert Handling Techniques
                     </p>
+                    <ul class="space-y-3 text-lg text-gray-300">
+                        <li>✅ Master the art of opening, closing, and using your folding iPhone safely.</li>
+                        <li>🚀 Best practices to avoid unnecessary stress on hinges and screens.</li>
+                        <li>💡 Daily habits that dramatically reduce wear and tear.</li>
+                    </ul>
                 </div>
 
-                <!-- Feature 2: Future-Proofing for Siri-First -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Future-Proof for Apple's 'Siri-First'</h3>
-                    <p class="text-gray-300">
-                        Prepare for tomorrow, today. Strategize and adapt your smart home for Apple's evolving ecosystem and the upcoming 'Siri-first' vision, ensuring long-term compatibility.
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 border border-gray-700">
+                    <p class="text-xl md:text-2xl font-semibold mb-4 text-blue-300">
+                        🛡️ Recommended Protection Gear
                     </p>
+                    <ul class="space-y-3 text-lg text-gray-300">
+                        <li>⭐ Top-rated screen protectors vetted for folding screens (and how to apply them).</li>
+                        <li>💪 The ultimate cases that offer maximum shock absorption without bulk.</li>
+                        <li>🔍 What to look for in accessories to ensure long-term device health.</li>
+                    </ul>
                 </div>
 
-                <!-- Feature 3: Top 5 Budget-Friendly Alternatives -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V3m0 9v3m0 0V9m0 3h2.207a2 2 0 001.519-.698V8.293a2 2 0 00-.698-1.519L14 6m-2 2h-2.207a2 2 0 00-1.519.698V8.293a2 2 0 00.698 1.519L10 6m-2 2h-2.207a2 2 0 00-1.519.698V8.293a2 2 0 00.698 1.519L6 6m-2 2h-2.207a2 2 0 00-1.519.698V8.293a2 2 0 00.698 1.519L2 6" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Top 5 Budget-Friendly Alternatives</h3>
-                    <p class="text-gray-300">
-                        Save money without compromise. Get unbiased, in-depth reviews and comparisons of the best five cost-effective smart home systems that truly deliver.
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 border border-gray-700">
+                    <p class="text-xl md:text-2xl font-semibold mb-4 text-yellow-300">
+                        🛑 Critical Dos & Don'ts
                     </p>
+                    <ul class="space-y-3 text-lg text-gray-300">
+                        <li>⛔ Absolute actions to avoid that could instantly damage your device.</li>
+                        <li>✅ Simple routines to maintain your screen's pristine condition.</li>
+                        <li>💧 Cleaning and maintenance tips endorsed by tech experts.</li>
+                    </ul>
                 </div>
 
-                <!-- Feature 4: Exclusive Newsletter -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.206 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.794 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.794 5 16.5 5c1.706 0 3.332.477 4.5 1.253v13C19.832 18.477 18.206 18 16.5 18c-1.706 0-3.332.477-4.5 1.253" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Exclusive Smart Home Newsletter</h3>
-                    <p class="text-gray-300">
-                        Stay ahead of the curve with our accompanying exclusive newsletter, delivering cutting-edge market trends, expert insights, and productivity tips.
+                <div class="bg-gray-800 p-6 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 border border-gray-700">
+                    <p class="text-xl md:text-2xl font-semibold mb-4 text-green-300">
+                        🔧 Verified Repair & DIY Troubleshooting
                     </p>
-                </div>
-
-                <!-- Feature 5: Comprehensive Comparisons -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 112 2h-2zm0 0l2 2m0 0l2-2m-2 2v-4m0 4l-2 2m2-2l2-2" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">In-Depth Reviews & Comparisons</h3>
-                    <p class="text-gray-300">
-                        Make informed decisions with detailed reviews and side-by-side comparisons, highlighting pros, cons, and real-world performance of each smart home solution.
-                    </p>
-                </div>
-
-                <!-- Feature 6: Confidence & Control -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300 transform hover:-translate-y-1">
-                    <div class="text-indigo-400 mb-4">
-                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.01 12.01 0 003 12c0 2.21.362 4.347 1.05 6.363C5.526 21.011 8.711 22 12 22s6.474-1 7.95-3.637A12.01 12.01 0 0021 12c0-2.21-.362-4.347-1.05-6.363z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Gain Confidence & Complete Control</h3>
-                    <p class="text-gray-300">
-                        Eliminate confusion and buyer's remorse. Empower yourself to build the perfect smart home setup that aligns with your needs, preferences, and budget.
-                    </p>
+                    <ul class="space-y-3 text-lg text-gray-300">
+                        <li>🛠️ Identifying common issues and safe, feasible DIY troubleshooting steps.</li>
+                        <li>📍 Vetted, authorized repair options and how to choose the right service.</li>
+                        <li>💰 Tips to avoid costly repairs and extend warranty coverage.</li>
+                    </ul>
                 </div>
             </div>
+            <p class="text-center text-xl sm:text-2xl text-gray-300 mt-12 max-w-3xl mx-auto leading-relaxed">
+                This isn't just a guide; it's an investment in the longevity and resale value of your premium device.
+                <span class="block font-semibold text-white mt-4">Don't risk irreversible damage – empower yourself with knowledge!</span>
+            </p>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-24 bg-gray-900 border-t border-gray-800">
-        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Join the <span class="text-indigo-400">Exclusive Waitlist</span></h2>
-            <p class="text-lg text-gray-400 mb-8">
-                Be among the first to receive "HomeView Navigator" and unlock special launch-day bonuses. Don't miss out on mastering your smart home!
+    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-950">
+        <div class="container mx-auto px-4 max-w-xl text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
+                🔥 Don't Wait Until It's Too Late!
+            </h2>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10">
+                Join the exclusive waitlist for 'The Ultimate iPhone Duo Protection & Care Manual' now and
+                <span class="font-bold text-green-400">lock in your special early-bird discount!</span>
             </p>
 
-            <form action="#" method="POST" class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-sm font-medium text-gray-200 mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 transition duration-200" required>
-                </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-sm font-medium text-gray-200 mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 transition duration-200" required>
-                </div>
-                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
-                    Get Early Access Now!
-                </button>
-                <p class="mt-4 text-sm text-gray-500">
-                    We value your privacy and will never share your information.
+            <div class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-left text-sm font-medium text-gray-300 mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe"
+                               class="w-full p-4 rounded-lg bg-gray-700 text-white border border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition duration-200"
+                               required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-left text-sm font-medium text-gray-300 mb-2">Your Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                               class="w-full p-4 rounded-lg bg-gray-700 text-white border border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition duration-200"
+                               required>
+                    </div>
+                    <button type="submit"
+                            class="w-full bg-purple-600 hover:bg-purple-700 transition duration-300 ease-in-out text-white font-bold py-4 rounded-lg text-xl shadow-lg transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-purple-500">
+                        👉 Join The Waitlist & Save!
+                    </button>
+                </form>
+                <p class="text-xs text-gray-400 mt-6">
+                    By joining, you agree to receive updates and exclusive offers. We respect your privacy. Unsubscribe anytime.
                 </p>
-            </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 bg-gray-900 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-        </div>
+    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm">
+        <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+        <p class="mt-2">Disclaimer: This guide provides recommendations. Always follow manufacturer guidelines.</p>
     </footer>
 
+    <!-- JavaScript for Countdown Timer (Included to ensure functionality as per 'highly converting' requirement) -->
     <script>
-        // Countdown Logic
-        const countdown = () => {
-            // Set launch date to 7 days from the current time for demonstration purposes.
-            // In a real scenario, this would be a specific future date like:
-            // const launchDate = new Date('December 31, 2023 23:59:59').getTime();
-            const launchDate = new Date();
-            launchDate.setDate(launchDate.getDate() + 7); // Set to 7 days from now
-            // launchDate.setMinutes(launchDate.getMinutes() + 5); // For quick testing
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from the current date
 
-            const updateInterval = setInterval(() => {
+            const x = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = launchDate - now;
+                const distance = countDownDate.getTime() - now;
 
-                if (distance < 0) {
-                    clearInterval(updateInterval);
-                    document.getElementById('countdown').innerHTML = '<span class="text-white text-2xl sm:text-3xl lg:text-4xl font-bold">Offer Expired!</span>';
-                    const ctaButton = document.querySelector('a[href="#waitlist"]');
-                    if (ctaButton) {
-                        ctaButton.classList.add('opacity-50', 'cursor-not-allowed');
-                        ctaButton.removeAttribute('href');
-                        ctaButton.innerText = 'Offer Has Ended';
-                        ctaButton.style.pointerEvents = 'none'; // Further disable clicks
-                    }
-                    return;
-                }
-
+                // Time calculations for days, hours, minutes and seconds
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                document.getElementById('days').innerText = String(days).padStart(2, '0');
-                document.getElementById('hours').innerText = String(hours).padStart(2, '0');
-                document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
-                document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
-            }, 1000);
-        };
+                // Display the result in the elements, padding with '0' for single digits
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-        document.addEventListener('DOMContentLoaded', countdown);
+                // If the countdown is over, display expired message and disable form
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<span class='text-red-500 font-bold'>OFFER EXPIRED!</span>";
+                    const submitButton = document.querySelector('#waitlist-form button[type="submit"]');
+                    if (submitButton) {
+                        submitButton.disabled = true;
+                        submitButton.textContent = 'Offer Expired';
+                        submitButton.classList.add('opacity-50', 'cursor-not-allowed', 'bg-gray-600', 'hover:bg-gray-600');
+                        submitButton.classList.remove('bg-purple-600', 'hover:bg-purple-700', 'transform', 'hover:scale-105');
+                    }
+                    const discountText = document.querySelector('#waitlist-form .font-bold.text-green-400');
+                    if (discountText) {
+                        discountText.textContent = 'this exclusive discount has ended.';
+                        discountText.classList.add('text-red-400');
+                        discountText.classList.remove('text-green-400');
+                    }
+                    const offerParagraph = document.querySelector('.bg-gradient-to-r p:last-of-type');
+                    if (offerParagraph) {
+                        offerParagraph.textContent = 'You missed the exclusive early-bird discount.';
+                    }
+                }
+            }, 1000);
+        });
     </script>
+
 </body>
 </html>
