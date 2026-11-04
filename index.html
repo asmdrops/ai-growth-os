@@ -3,193 +3,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deepfake Sentinel: Proactive Threat Detection & Brand Protection</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Siri AI Link - Low-Code Multilingual Siri Integration for iOS 27.3+</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        .hero-bg {
+        /* Custom styles for dark overlay and hero image */
+        .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            position: relative;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        /* Custom scrollbar for dark mode */
+        body {
+            scrollbar-color: #4a5568 #1a202c; /* thumb and track color */
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* dark background */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* gray thumb */
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096; /* lighter gray on hover */
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-200 antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <section class="relative hero-bg min-h-screen flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-indigo-900 opacity-90"></div>
-        <div class="relative z-10 text-center max-w-4xl mx-auto py-20 px-6">
-            <span class="inline-block bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide mb-4">
-                As Featured In WIRED
-            </span>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
-                Unmask Hidden Deepfake Threats. Protect Your Brand. Secure Your Users.
+    <header class="hero-background relative min-h-screen flex items-center justify-center p-4">
+        <div class="hero-overlay"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto">
+            <p class="text-indigo-400 uppercase tracking-wide text-sm md:text-base mb-3 animate-pulse">
+                <span class="inline-block px-3 py-1 bg-indigo-800 bg-opacity-50 rounded-full mr-2">
+                    🚨 Market Trend: iOS 27.3 Expands Siri AI to NEW Languages! (9to5Mac)
+                </span>
+            </p>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mb-6">
+                Unlock Global Voice AI: <br class="hidden sm:inline"> Integrate Multilingual Siri with <span class="text-indigo-400">Low-Code Ease</span>
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                "Hundreds of Mundane AI Apps Are Hiding Sexually Abusive Deepfake Features" warns WIRED.
-                Our B2B SaaS platform empowers app stores and enterprise security teams to proactively detect and neutralize these invisible, devastating threats.
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Go from idea to advanced, multilingual voice commands in minutes for iOS 27.3+, no deep AI expertise required. Empower your app developers to innovate faster.
             </p>
 
             <!-- Limited Time Countdown -->
-            <div class="bg-gradient-to-r from-purple-600 to-indigo-700 text-white p-4 rounded-lg shadow-xl mb-8 transform hover:scale-105 transition-transform duration-300">
-                <p class="text-xl font-bold mb-2">Exclusive Early Access Enrollment Closes In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-3xl md:text-4xl font-mono">
+            <div id="countdown-timer" class="bg-indigo-800 bg-opacity-70 text-white p-4 rounded-lg shadow-lg mb-8 inline-block max-w-sm mx-auto">
+                <p class="text-sm uppercase tracking-wider mb-2">Early Access Offer Ends In:</p>
+                <div class="flex justify-center items-center space-x-4 text-3xl font-bold">
                     <div class="flex flex-col items-center">
-                        <span id="days" class="font-extrabold">00</span>
-                        <span class="text-sm">Days</span>
+                        <span id="days">00</span>
+                        <span class="text-xs font-normal uppercase">Days</span>
                     </div>
                     <span>:</span>
                     <div class="flex flex-col items-center">
-                        <span id="hours" class="font-extrabold">00</span>
-                        <span class="text-sm">Hours</span>
+                        <span id="hours">00</span>
+                        <span class="text-xs font-normal uppercase">Hours</span>
                     </div>
                     <span>:</span>
                     <div class="flex flex-col items-center">
-                        <span id="minutes" class="font-extrabold">00</span>
-                        <span class="text-sm">Minutes</span>
+                        <span id="minutes">00</span>
+                        <span class="text-xs font-normal uppercase">Minutes</span>
                     </div>
                     <span>:</span>
                     <div class="flex flex-col items-center">
-                        <span id="seconds" class="font-extrabold">00</span>
-                        <span class="text-sm">Seconds</span>
+                        <span id="seconds">00</span>
+                        <span class="text-xs font-normal uppercase">Seconds</span>
                     </div>
                 </div>
             </div>
-
-            <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
-                Join the Early Access Waitlist
+            
+            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full text-lg md:text-xl shadow-lg transform transition duration-300 ease-in-out hover:scale-105">
+                Join the Waitlist & Get Early Access!
             </a>
+            <p class="text-xs text-gray-400 mt-3">Secure your spot and revolutionize your app's voice experience.</p>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section class="py-20 px-4 bg-gray-900">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-extrabold mb-12 text-white">How Deepfake Sentinel Secures Your Digital Ecosystem</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-                <!-- Feature 1: AI-Powered Deepfake Detection API -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition duration-300 border border-gray-700">
-                    <div class="text-5xl text-purple-400 mb-4">🔬</div>
-                    <h3 class="text-xl font-bold mb-3 text-white">AI-Powered Detection API</h3>
-                    <p class="text-gray-400">Seamlessly integrate our specialized API to instantly scan apps for hidden deepfake generation capabilities, safeguarding your platform at scale.</p>
+    <section id="features" class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white mb-12">
+                Powerful Features Engineered for Developers
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Feature 1: Low-Code/No-Code Interface -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 mb-4 text-4xl">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Effortless Low-Code/No-Code</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Drag-and-drop your way to advanced Siri integrations. Focus on your app's core innovation, not complex AI backend setup. Speed up development cycles significantly.
+                    </p>
                 </div>
-                <!-- Feature 2: Advanced Forensic Analysis Suite -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition duration-300 border border-gray-700">
-                    <div class="text-5xl text-blue-400 mb-4">🔍</div>
-                    <h3 class="text-xl font-bold mb-3 text-white">Forensic Analysis Suite</h3>
-                    <p class="text-gray-400">Utilize intuitive tools to perform deep code analysis, identify obfuscation techniques, and pinpoint malicious deepfake functionalities.</p>
+
+                <!-- Feature 2: Multilingual Siri Modules -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 mb-4 text-4xl">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.51 19m0 0v1a2 2 0 002 2h10a2 2 0 002-2v-1a2 2 0 00-2-2H8.51c-.171 0-.34.02-.51.05zM12 4.5A.5.5 0 0112.5 5h1a.5.5 0 01.5.5V10h-2V5.5a.5.5 0 01.5-.5z"></path></svg>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Pre-Built Multilingual Modules</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Deploy powerful voice modules like 'Order a coffee in German' or 'Check flight status in Japanese'. Instantly support global users with iOS 27.3's expanded languages.
+                    </p>
                 </div>
-                <!-- Feature 3: Legal Evidence Collection Tools -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition duration-300 border border-gray-700">
-                    <div class="text-5xl text-green-400 mb-4">⚖️</div>
-                    <h3 class="text-xl font-bold mb-3 text-white">Legal Evidence Collection</h3>
-                    <p class="text-gray-400">Generate comprehensive, legally-sound reports with an immutable chain of custody for digital evidence, vital for legal proceedings.</p>
+
+                <!-- Feature 3: Detailed Usage Analytics -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 mb-4 text-4xl">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Granular Siri Usage Analytics</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Gain deep insights into user interactions with Siri. Track command usage, identify popular phrases, and discover areas for improvement to enhance voice UI and engagement.
+                    </p>
                 </div>
-                <!-- Feature 4: Real-Time Brand Reputation Monitoring -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition duration-300 border border-gray-700">
-                    <div class="text-5xl text-red-400 mb-4">🛡️</div>
-                    <h3 class="text-xl font-bold mb-3 text-white">Brand Reputation Monitoring</h3>
-                    <p class="text-gray-400">Proactively track deepfake-related threats and mentions across the digital landscape to prevent and mitigate potential brand damage.</p>
+
+                <!-- Feature 4: Voice UI A/B Testing -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 mb-4 text-4xl">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V5.25A2.25 2.25 0 015.25 3h10.5A2.25 2.25 0 0118 5.25V10m-12 4h.02"></path></svg>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Intelligent Voice UI A/B Testing</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Optimize your voice interactions. Test different phrases, responses, and conversational flows to find what resonates best with your users, driving higher conversion and engagement.
+                    </p>
                 </div>
+                
+                <!-- Feature 5: Scalable & Secure -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 mb-4 text-4xl">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Scalable & Enterprise-Grade Secure</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Built for explosive growth. Our robust infrastructure scales seamlessly with your app's demands, ensuring reliable performance and impenetrable security for all voice data.
+                    </p>
+                </div>
+                
+                <!-- Feature 6: Flexible Subscription Tiers -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 mb-4 text-4xl">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Flexible Subscription Tiers</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Choose a plan that perfectly fits your project's needs. Our usage-based and feature-tiered subscriptions ensure you only pay for what you use, from indie developers to enterprise.
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-20 px-4 bg-gray-950">
-        <div class="max-w-xl mx-auto bg-gray-800 p-8 md:p-12 rounded-lg shadow-2xl border border-gray-700 text-center">
-            <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-white">Secure Your Spot for Early Access</h2>
-            <p class="text-lg text-gray-400 mb-8">
-                Join the exclusive waitlist to be among the first to deploy Deepfake Sentinel. Limited slots are available to ensure premium support.
+    <!-- Waitlist / CTA Section -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 text-center max-w-2xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
+                Ready to Supercharge Your iOS App with Siri?
+            </h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-8">
+                Join our exclusive waitlist for <span class="text-indigo-400 font-semibold">Siri AI Link</span> and be among the first to integrate advanced, multilingual Siri capabilities with unprecedented ease. Don't miss out on this limited-time offer!
             </p>
-            <form class="space-y-6">
-                <div>
-                    <label for="name" class="sr-only">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Full Name" required
-                           class="w-full px-5 py-3 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200">
+            <form class="bg-gray-700 p-8 rounded-lg shadow-xl border border-gray-600">
+                <div class="mb-6">
+                    <label for="name" class="block text-left text-gray-200 text-sm font-bold mb-2">
+                        Your Name (Optional)
+                    </label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 bg-gray-900 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200 ease-in-out">
                 </div>
-                <div>
-                    <label for="email" class="sr-only">Work Email</label>
-                    <input type="email" id="email" name="email" placeholder="Work Email" required
-                           class="w-full px-5 py-3 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200">
+                <div class="mb-6">
+                    <label for="email" class="block text-left text-gray-200 text-sm font-bold mb-2">
+                        Your Work Email <span class="text-red-500">*</span>
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="you@company.com" required
+                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 bg-gray-900 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200 ease-in-out">
                 </div>
-                <div>
-                    <label for="company" class="sr-only">Company / Organization</label>
-                    <input type="text" id="company" name="company" placeholder="Company / Organization"
-                           class="w-full px-5 py-3 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200">
+                <div class="mb-6">
+                    <label for="app_type" class="block text-left text-gray-200 text-sm font-bold mb-2">
+                        What kind of app are you building? (Optional)
+                    </label>
+                    <input type="text" id="app_type" name="app_type" placeholder="e.g., E-commerce, Productivity, Health & Fitness"
+                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 bg-gray-900 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200 ease-in-out">
                 </div>
-                <div>
-                    <label for="role" class="sr-only">Your Role</label>
-                    <input type="text" id="role" name="role" placeholder="Your Role (e.g., CISO, App Store Manager)"
-                           class="w-full px-5 py-3 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200">
-                </div>
-                <button type="submit"
-                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-md text-lg shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
-                    Join the Waitlist Now
+                <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg transform transition duration-300 ease-in-out hover:scale-105 w-full">
+                    Join the Waitlist
                 </button>
+                <p class="text-xs text-gray-400 mt-4">We respect your privacy. Your information will not be shared and you can unsubscribe anytime.</p>
             </form>
-            <p class="text-xs text-gray-500 mt-6">
-                We respect your privacy. Your information will only be used to notify you about Deepfake Sentinel updates and early access.
-            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 px-4 text-center text-gray-500 text-sm border-t border-gray-800">
-        <div class="max-w-7xl mx-auto">
-            <p>&copy; 2023 Deepfake Sentinel. All rights reserved.</p>
-            <div class="mt-4 space-x-4">
-                <a href="#" class="hover:text-white transition duration-200">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition duration-200">Terms of Service</a>
-            </div>
+    <footer class="bg-gray-900 py-10 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-gray-400 text-sm">
+            <p>&copy; 2024 Siri AI Link. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 mx-2">Privacy Policy</a> |
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 mx-2">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
-    <!-- Countdown JavaScript -->
+    <!-- Countdown Timer Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to: 7 days from when the user loads the page
+            // Set the date we're counting down to (e.g., 7 days from now for the limited time offer)
             const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); 
+            countDownDate.setDate(countDownDate.getDate() + 7); // Sets the countdown for 7 days from the current date
 
             const x = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = countDownDate - now;
+                const distance = countDownDate.getTime() - now;
 
+                // Time calculations for days, hours, minutes and seconds
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                if (document.getElementById("days")) {
-                    document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                    document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                    document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                    document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-                }
+                // Display the result in the corresponding elements, padding with '0' for single digits
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-
+                // If the count down is finished, write some text 
                 if (distance < 0) {
                     clearInterval(x);
-                    const countdownElement = document.getElementById("countdown");
-                    if (countdownElement) {
-                        countdownElement.innerHTML = "APPLICATIONS CLOSED";
-                        countdownElement.classList.add('text-lg', 'font-semibold', 'opacity-75'); 
-                        countdownElement.classList.remove('space-x-4', 'text-3xl', 'md:text-4xl', 'font-mono'); 
-                    }
+                    document.getElementById("countdown-timer").innerHTML = "<p class='text-lg font-semibold'>🚀 Offer Expired! But you can still join the waitlist.</p>";
+                    // Optionally, you might want to disable the submit button or change its text here
                 }
-            }, 1000);
+            }, 1000); // Update the count every 1 second
         });
     </script>
-
 </body>
 </html>
