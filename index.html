@@ -3,266 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Defend Against APT29: Real-time AI Client-Side Security for Web Analytics</title>
-    <!-- Tailwind CSS CDN (v2 for broad compatibility) -->
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Siri-First Ecosystem Strategy Briefing - Future-Proof Your App Development</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            @apply bg-gray-950 text-gray-100;
-            overflow-x: hidden; /* Prevent horizontal scroll on resize */
+        /* Custom styles for the dark mode background image with overlay */
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
         }
-        /* Custom scrollbar for premium dark mode aesthetic */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
+        .hero-bg::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+            z-index: 1;
         }
-        ::-webkit-scrollbar-track {
-            background: #1f2937; /* bg-gray-800 */
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
-        ::-webkit-scrollbar-thumb {
-            background: #4b5563; /* bg-gray-600 */
-            border-radius: 4px;
+        /* Custom focus styles for inputs to ensure consistency with dark theme */
+        input:focus, textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* blue-500 with transparency */
+            border-color: #3b82f6; /* blue-500 */
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #6b7280; /* bg-gray-500 */
-        }
-        /* Gradient overlay for hero image for better text readability */
-        .hero-overlay {
-            background: linear-gradient(to top, rgba(10, 10, 15, 0.9) 0%, rgba(10, 10, 15, 0.6) 50%, rgba(10, 10, 15, 0.9) 100%);
-        }
-        /* Basic animation for fade-in-up effect */
-        .animate-fade-in-up {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
-        .animate-fade-in-up.delay-200 { transition-delay: 0.2s; }
-        .animate-fade-in-up.delay-400 { transition-delay: 0.4s; }
-        .animate-fade-in-up.delay-600 { transition-delay: 0.6s; }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <div class="absolute inset-0 w-full h-full">
-            <img src="https://source.unsplash.com/1600x900/?A,tech" alt="AI Security Monitoring Background" class="w-full h-full object-cover brightness-75">
-            <div class="absolute inset-0 hero-overlay"></div>
-        </div>
-
-        <div class="relative z-10 p-4 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white mb-6 animate-fade-in-up">
-                Stop APT29 & Supply Chain Attacks:<br>
-                <span class="text-emerald-400">Secure Your Web Analytics, Protect Your Visitors.</span>
+    <section class="hero-bg flex items-center justify-center min-h-screen py-16 px-4 md:px-8 lg:px-16">
+        <div class="hero-content text-center max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                <span class="text-blue-400">Apple's Siri Shift:</span> The End of Apps As We Know Them?
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-200">
-                Real-time, AI-driven monitoring for third-party scripts. Prevent iOS and Android mobile exploits before they strike.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto drop-shadow-md">
+                Inc.com reports it. Your competitors are worried. Are you ready for Apple's evolving conversational AI landscape?
             </p>
-
-            <div class="bg-gray-800 bg-opacity-70 backdrop-blur-sm p-4 sm:p-6 rounded-xl shadow-lg inline-block mb-8 border border-emerald-700 animate-fade-in-up delay-400">
-                <p class="text-lg sm:text-xl font-semibold text-emerald-300 mb-3">Limited Time Early Access Offer!</p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 text-white text-3xl sm:text-4xl md:text-5xl font-bold">
-                    <div class="flex flex-col items-center">
-                        <span id="days">00</span>
-                        <span class="text-xs sm:text-sm font-medium text-gray-400">Days</span>
-                    </div>
-                    <span class="text-emerald-500">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours">00</span>
-                        <span class="text-xs sm:text-sm font-medium text-gray-400">Hours</span>
-                    </div>
-                    <span class="text-emerald-500">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes">00</span>
-                        <span class="text-xs sm:text-sm font-medium text-gray-400">Minutes</span>
-                    </div>
-                    <span class="text-emerald-500">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds">00</span>
-                        <span class="text-xs sm:text-sm font-medium text-gray-400">Seconds</span>
-                    </div>
-                </div>
-            </div>
-
-            <a href="#waitlist" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-full text-lg sm:text-xl transition-all duration-300 transform hover:scale-105 shadow-lg animate-fade-in-up delay-600">
-                Join Waitlist & Secure Your Discount!
+            <p class="text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-10 max-w-2xl mx-auto drop-shadow-md">
+                Introducing the <span class="text-blue-300">Siri-First Ecosystem Strategy Briefing</span> & the <span class="text-blue-300">Developer's Master Guide to Conversational UX on iOS</span>.
+            </p>
+            <a href="#waitlist-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transform transition duration-300 ease-in-out hover:scale-105 text-lg sm:text-xl">
+                Secure Your Strategic Advantage & Join the Waitlist!
             </a>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white text-center mb-12">
-                Unmatched Protection for Your Digital Footprint
+    <section class="py-16 md:py-24 px-4 md:px-8 lg:px-16 bg-gray-950">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 sm:mb-16 text-white">
+                Future-Proof Your Business in the Conversational Era
             </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Feature 1: Real-time AI Monitoring -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-emerald-500 transition-all duration-300">
-                    <div class="text-emerald-400 mb-4 text-4xl">
-                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.276a11.952 11.952 0 01-1.293-2.614A4.002 4.002 0 0013.885 1.5h-2.77c-.896 0-1.748.243-2.484.671a11.95 11.95 0 01-1.293 2.614M12 17.25c-2.485 0-4.5-2.015-4.5-4.5s2.015-4.5 4.5-4.5 4.5 2.015 4.5 4.5-2.015 4.5-4.5 4.5zM12 21a9 9 0 100-18 9 9 0 000 18z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Real-time AI Monitoring</h3>
-                    <p class="text-gray-300 text-lg">
-                        Instantly detect unauthorized modifications and anomalies in third-party web analytics and marketing scripts. Our AI engine learns and adapts to your site's legitimate behavior.
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+                <!-- Newsletter Feature -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="text-2xl sm:text-3xl font-bold mb-6 text-blue-400">
+                        Siri-First Ecosystem Strategy Briefing <span class="text-lg text-gray-400 block sm:inline-block mt-1 sm:mt-0">(Premium Newsletter)</span>
+                    </h3>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Stay ahead of the curve with weekly, actionable intelligence delivered straight to your inbox.
+                        Transform uncertainty into a competitive edge.
                     </p>
+                    <ul class="space-y-4 text-gray-200 text-base lg:text-lg">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <strong class="text-white">Weekly Actionable Insights:</strong> Cut through the noise with practical strategies you can implement today.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <strong class="text-white">Exclusive Trend Analysis:</strong> Understand Apple's evolving conversational AI landscape before your competitors do.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <strong class="text-white">Strategic Recommendations:</strong> Get clear guidance on adapting your app development and business models.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <strong class="text-white">Competitive Advantage:</strong> Position your products and services at the forefront of the Siri-first revolution.
+                            </div>
+                        </li>
+                    </ul>
                 </div>
 
-                <!-- Feature 2: Supply Chain Attack Prevention -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-emerald-500 transition-all duration-300">
-                    <div class="text-emerald-400 mb-4 text-4xl">
-                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v14c0 1.105-.895 2-2 2H9c-1.105 0-2-.895-2-2m0 0V5m0 0a2 2 0 100-4 2 2 0 000 4zm0 0a2 2 11004 2 0 000-4zm-8 4a2 2 0 1004 2 0 000-4z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Supply Chain Attack Prevention</h3>
-                    <p class="text-gray-300 text-lg">
-                        Actively defend against sophisticated attacks like those from APT29. We safeguard the integrity of your digital supply chain, ensuring trust in your website's services.
+                <!-- Master Guide Feature -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="text-2xl sm:text-3xl font-bold mb-6 text-blue-400">
+                        Developer's Master Guide to Conversational UX on iOS <span class="text-lg text-gray-400 block sm:inline-block mt-1 sm:mt-0">(Info-Product)</span>
+                    </h3>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Beyond the briefing, gain a comprehensive playbook for building cutting-edge Siri-centric user experiences.
                     </p>
+                    <ul class="space-y-4 text-gray-200 text-base lg:text-lg">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <strong class="text-white">Detailed Frameworks:</strong> Step-by-step guides for integrating and optimizing Siri interactions within your apps.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <strong class="text-white">Practical Implementation Steps:</strong> Move from theory to execution with clear, code-ready advice (where applicable).
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <strong class="text-white">Conversational UX Best Practices:</strong> Design compelling, intuitive, and effective voice experiences.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <strong class="text-white">Future-Proof Your Development:</strong> Build apps that thrive in an increasingly voice-first world.
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-
-                <!-- Feature 3: Visitor Mobile Exploit Protection -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-emerald-500 transition-all duration-300">
-                    <div class="text-emerald-400 mb-4 text-4xl">
-                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Visitor Mobile Exploit Protection</h3>
-                    <p class="text-gray-300 text-lg">
-                        Prevent the delivery of iOS and Android exploits to your site visitors. Maintain user trust and avoid reputational damage by proactively blocking malicious payloads.
-                    </p>
-                </div>
-
-                <!-- Feature 4: Automated Instant Alerts -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-emerald-500 transition-all duration-300">
-                    <div class="text-emerald-400 mb-4 text-4xl">
-                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Automated Instant Alerts</h3>
-                    <p class="text-gray-300 text-lg">
-                        Receive immediate notifications via email, Slack, PagerDuty, or custom webhooks the moment a threat is detected. Minimize response time and contain breaches fast.
-                    </p>
-                </div>
-
-                <!-- Feature 5: Continuous Script Integrity -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-emerald-500 transition-all duration-300">
-                    <div class="text-emerald-400 mb-4 text-4xl">
-                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Continuous Script Integrity</h3>
-                    <p class="text-gray-300 text-lg">
-                        Beyond initial checks, we continuously validate the integrity of every third-party script. Trust that your web analytics, marketing tags, and chatbots remain uncompromised.
-                    </p>
-                </div>
-
-                <!-- Feature 6: Enterprise-Grade Scalability -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-emerald-500 transition-all duration-300">
-                    <div class="text-emerald-400 mb-4 text-4xl">
-                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 8a8 8 0 01-8-8c0-3.218 2.062-6.19 5.06-7.536M12 21a8 8 0 008-8c0-3.218-2.062-6.19-5.06-7.536M12 21V3"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Enterprise-Grade Scalability</h3>
-                    <p class="text-gray-300 text-lg">
-                        Designed for the most demanding environments, our platform scales effortlessly to protect enterprises, e-commerce giants, and digital agencies with complex web presences.
-                    </p>
-                </div>
-
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gray-950 text-white">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
-                Be Among the First to Secure Your Site.
+    <section id="waitlist-form" class="py-16 md:py-24 px-4 md:px-8 lg:px-16 bg-gray-900">
+        <div class="max-w-xl mx-auto text-center bg-gray-800 p-8 sm:p-10 md:p-12 rounded-xl shadow-2xl border border-gray-700">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 text-white">
+                Don't Be Left Behind!
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10">
-                Join our exclusive waitlist for early access to our platform and lock in your limited-time discount. Don't let your website be the next target.
+            <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                The conversational AI revolution is here. Join the exclusive waitlist to secure early access and special launch offers for our premium briefing and master guide.
             </p>
 
-            <form class="bg-gray-800 p-8 sm:p-10 rounded-xl shadow-2xl border border-emerald-700 max-w-lg mx-auto">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-gray-700" required>
+            <!-- Limited Time Countdown -->
+            <div class="bg-blue-600 text-white p-4 rounded-lg mb-8 shadow-md">
+                <p class="text-xl sm:text-2xl font-bold mb-2">LIMITED TIME OPPORTUNITY!</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-2xl sm:text-3xl font-mono">
+                    <div class="flex flex-col items-center">
+                        <span id="days" class="font-extrabold">00</span>
+                        <span class="text-sm">Days</span>
+                    </div>
+                    <span>:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours" class="font-extrabold">00</span>
+                        <span class="text-sm">Hours</span>
+                    </div>
+                    <span>:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes" class="font-extrabold">00</span>
+                        <span class="text-sm">Minutes</span>
+                    </div>
+                    <span>:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds" class="font-extrabold">00</span>
+                        <span class="text-sm">Seconds</span>
+                    </div>
                 </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Work Email</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-gray-700" required>
+                <p class="text-sm mt-2">Special pricing and bonuses for early adopters will expire soon!</p>
+            </div>
+
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label for="name" class="sr-only">Your Name</label>
+                    <input type="text" name="name" id="name" autocomplete="name" required
+                           class="block w-full px-5 py-3 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500 bg-gray-700 text-white text-lg"
+                           placeholder="Your Name">
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="company" class="block text-gray-300 text-sm font-bold mb-2">Company Name</label>
-                    <input type="text" id="company" name="company" placeholder="Acme Corp" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-gray-700" required>
+                <div>
+                    <label for="email" class="sr-only">Email Address</label>
+                    <input type="email" name="email" id="email" autocomplete="email" required
+                           class="block w-full px-5 py-3 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500 bg-gray-700 text-white text-lg"
+                           placeholder="Email Address">
                 </div>
-                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-lg">
-                    Join the Waitlist
-                </button>
-                <p class="mt-4 text-sm text-gray-400">Limited spots available for early access discounts.</p>
+                <div>
+                    <button type="submit"
+                            class="w-full flex justify-center py-4 px-6 border border-transparent rounded-md shadow-sm text-lg font-bold text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:scale-105">
+                        Join the Exclusive Waitlist Now
+                    </button>
+                </div>
+                <p class="text-sm text-gray-400">
+                    We respect your privacy. No spam, ever. Unsubscribe anytime.
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-8 text-center text-gray-400 text-sm border-t border-gray-700">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p>&copy; 2023 ShieldAI. All rights reserved.</p>
-            <p class="mt-2">Protecting your digital integrity, one script at a time.</p>
+    <footer class="bg-gray-950 py-8 px-4 md:px-8 lg:px-16 text-center text-gray-500 text-sm">
+        <div class="max-w-7xl mx-auto">
+            <p>&copy; <span id="currentYear"></span> Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="text-gray-400 hover:text-blue-400 mr-4">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-blue-400">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown Timer and Animations -->
     <script>
-        const countdown = () => {
-            // Set the target date for the countdown (e.g., 7 days from when the script loads)
-            const now = new Date();
-            const endDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 days from current time
+        // Set the date we're counting down to (e.g., 7 days from now)
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 7); // Set to 7 days from the current date
 
-            const x = setInterval(() => {
-                const currentTime = new Date().getTime();
-                const distance = endDate.getTime() - currentTime;
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate.getTime() - now;
 
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<span class='text-red-500 text-base sm:text-lg'>OFFER EXPIRED!</span>";
-                    return;
-                }
+            // Calculate days, hours, minutes, seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Display the result in the elements
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-            }, 1000);
-        }
+            // If the countdown is over, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                const countdownElement = document.getElementById("countdown");
+                countdownElement.innerHTML = "OFFER EXPIRED!";
+                countdownElement.classList.remove('text-2xl', 'sm:text-3xl', 'space-x-4');
+                countdownElement.classList.add('text-3xl', 'sm:text-4xl', 'font-extrabold', 'text-red-400', 'justify-center');
+            }
+        }, 1000);
 
-        countdown();
-
-        // Trigger CSS animations on DOM content loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            const animateElements = document.querySelectorAll('.animate-fade-in-up');
-            animateElements.forEach((el) => {
-                el.style.opacity = '1';
-                el.style.transform = 'translateY(0)';
-            });
-        });
+        // Update current year in footer dynamically
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
