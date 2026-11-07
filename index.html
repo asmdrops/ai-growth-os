@@ -3,269 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guardrail AI - AI-Powered Proactive Vulnerability Intelligence</title>
+    <title>PokéVault AI - Master Your Pokémon TCG Investments</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0f172a; /* Tailwind's slate-900 */
-            color: #f8fafc; /* Tailwind's slate-50 */
-        }
-        .hero-bg {
+        /* Custom styles for dark mode and hero image overlay */
+        .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             position: relative;
         }
         .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for text readability */
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
+            background: linear-gradient(to bottom right, rgba(17, 24, 39, 0.8), rgba(55, 65, 81, 0.7)); /* Dark gradient overlay */
         }
-        .gradient-text {
-            background: linear-gradient(90deg, #6366f1 0%, #a855f7 100%); /* Indigo to Purple */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        /* Custom scrollbar for aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        .countdown-digits {
-            font-variant-numeric: tabular-nums; /* Ensures fixed width for numbers */
+        ::-webkit-scrollbar-track {
+            background: #1f2937; /* Dark background */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4B5563; /* Gray thumb */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6B7280; /* Lighter gray on hover */
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-bg min-h-screen flex items-center justify-center text-white py-16">
+    <section class="hero-background min-h-screen flex items-center justify-center p-4">
         <div class="hero-overlay"></div>
-        <div class="container mx-auto px-4 text-center relative z-10 max-w-4xl">
-            <p class="text-indigo-400 text-sm md:text-base font-semibold uppercase mb-4 tracking-wider">
-                Leveraging Cutting-Edge AI - Inspired by GPT-6 Cyber's Breakthroughs
-            </p>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-                Shift Security Left with <br><span class="gradient-text">AI-Powered Proactive Vulnerability Intelligence</span>
+        <div class="relative z-10 text-center max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">PokéVault AI:</span> Master Your Pokémon TCG Universe
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
-                Integrate with your CI/CD to detect, predict, and remediate emerging vulnerabilities *before* deployment.
-                Reduce breach risk and accelerate secure innovation for mid-market software teams.
+            <p class="text-lg md:text-xl lg:text-2xl mb-10 font-light text-gray-200 drop-shadow">
+                Unleash the full potential of your collection with AI-driven insights, real-time market data, and seamless digital management. <br class="hidden md:inline">From casual collector to serious investor, elevate your game.
             </p>
-
-            <div class="space-y-6 md:space-y-0 md:space-x-4 flex flex-col md:flex-row items-center justify-center mb-8">
-                <a href="#waitlist" class="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 text-lg">
-                    Join the Early Access Waitlist
-                </a>
-                <a href="#features" class="border border-indigo-400 text-indigo-300 font-semibold py-3 px-8 rounded-full hover:bg-indigo-700 hover:text-white transition duration-300 ease-in-out text-lg">
-                    Learn More
-                </a>
-            </div>
-
-            <!-- Limited Time Countdown -->
-            <div class="mt-12 p-6 bg-gray-800 bg-opacity-70 rounded-lg shadow-xl inline-block max-w-sm mx-auto">
-                <p class="text-orange-400 text-sm font-semibold mb-3 uppercase tracking-wider">Early Access Spots Are Limited!</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4">
-                    <div>
-                        <span id="days" class="text-5xl font-bold text-white countdown-digits">00</span>
-                        <p class="text-gray-400 text-sm">Days</p>
-                    </div>
-                    <span class="text-4xl text-gray-500">:</span>
-                    <div>
-                        <span id="hours" class="text-5xl font-bold text-white countdown-digits">00</span>
-                        <p class="text-gray-400 text-sm">Hours</p>
-                    </div>
-                    <span class="text-4xl text-gray-500">:</span>
-                    <div>
-                        <span id="minutes" class="text-5xl font-bold text-white countdown-digits">00</span>
-                        <p class="text-gray-400 text-sm">Minutes</p>
-                    </div>
-                    <span class="text-4xl text-gray-500">:</span>
-                    <div>
-                        <span id="seconds" class="text-5xl font-bold text-white countdown-digits">00</span>
-                        <p class="text-gray-400 text-sm">Seconds</p>
-                    </div>
-                </div>
-            </div>
-
+            <a href="#waitlist" class="inline-block bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-xl">
+                Join the Exclusive Waitlist – Limited Spots!
+            </a>
+            <p class="mt-4 text-sm text-gray-300 font-semibold animate-pulse">Offer ends soon!</p>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 md:py-28 bg-slate-900 text-white">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-16 gradient-text">Unparalleled Security, Powered by AI</h2>
+    <section id="features" class="py-16 md:py-24 bg-gray-900 text-gray-100">
+        <div class="container mx-auto px-4 max-w-screen-xl">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">
+                Unlock Unrivaled Power for Your Collection
+            </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-4xl mb-4">🚀</div>
-                    <h3 class="text-2xl font-bold mb-4">Seamless CI/CD Integration</h3>
-                    <p class="text-gray-300">Easily integrate Guardrail AI into your existing development pipelines (GitHub Actions, GitLab CI, Jenkins, etc.) for continuous, automated security scanning without disruption.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Feature 1: Real-time Market Value Tracking -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+                    <div class="flex items-center justify-center mb-6 w-16 h-16 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 text-white text-3xl mx-auto">
+                        📈
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-center">Real-time Market Value</h3>
+                    <p class="text-gray-300 text-center">Track card prices instantly across TCGplayer, eBay, and more. Stay ahead with live data from every major marketplace.</p>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-4xl mb-4">🧠</div>
-                    <h3 class="text-2xl font-bold mb-4">Advanced AI Vulnerability Detection</h3>
-                    <p class="text-gray-300">Harness the power of advanced AI, including potential future GPT-6 Cyber APIs, to identify complex and emerging vulnerabilities in code and dependencies with unmatched accuracy.</p>
+                <!-- Feature 2: AI-driven Price Prediction & Insights -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+                    <div class="flex items-center justify-center mb-6 w-16 h-16 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 text-white text-3xl mx-auto">
+                        🧠
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-center">AI Investment Insights</h3>
+                    <p class="text-gray-300 text-center">Leverage advanced AI for price predictions and smart investment opportunities. Know when to buy, sell, or hold, even for new releases like the Mega Evolution—Delta Reign Expansion.</p>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-4xl mb-4">🔮</div>
-                    <h3 class="text-2xl font-bold mb-4">Predictive Exploit Intelligence</h3>
-                    <p class="text-gray-300">Our AI predicts potential exploit vectors and attack paths, giving your team foresight to mitigate risks *before* they become critical threats.</p>
+                <!-- Feature 3: Personalized Collection Management -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+                    <div class="flex items-center justify-center mb-6 w-16 h-16 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 text-white text-3xl mx-auto">
+                        🗂️
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-center">Digital Collection Manager</h3>
+                    <p class="text-gray-300 text-center">Digitize your entire collection with rarity guides, detailed stats, and custom organization tools. Never lose track of your assets.</p>
                 </div>
 
-                <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-4xl mb-4">🛠️</div>
-                    <h3 class="text-2xl font-bold mb-4">Prioritized Remediation Strategies</h3>
-                    <p class="text-gray-300">Receive actionable, prioritized recommendations for fixing vulnerabilities, complete with code snippets and best practices, saving developer time and effort.</p>
+                <!-- Feature 4: Automated Alerts -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+                    <div class="flex items-center justify-center mb-6 w-16 h-16 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 text-white text-3xl mx-auto">
+                        🚨
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-center">Smart Alerts & Trends</h3>
+                    <p class="text-gray-300 text-center">Receive instant notifications for undervalued cards, trending sets, and critical market shifts tailored to your portfolio.</p>
                 </div>
 
-                <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-4xl mb-4">⬅️</div>
-                    <h3 class="text-2xl font-bold mb-4">True "Shift Left" Security</h3>
-                    <p class="text-gray-300">Embed security early in the development lifecycle. Catch issues during development, not after deployment, dramatically reducing the cost and complexity of fixes.</p>
+                <!-- Feature 5: Secure Peer-to-Peer Trading -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+                    <div class="flex items-center justify-center mb-6 w-16 h-16 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 text-white text-3xl mx-auto">
+                        🤝
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-center">Secure P2P Trading Hub</h3>
+                    <p class="text-gray-300 text-center">Connect with other verified collectors and trade securely within our integrated, moderated marketplace.</p>
                 </div>
 
-                <!-- Feature 6 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-4xl mb-4">🛡️</div>
-                    <h3 class="text-2xl font-bold mb-4">Drastically Reduce Breach Risk</h3>
-                    <p class="text-gray-300">By proactively identifying and addressing vulnerabilities before they hit production, Guardrail AI significantly lowers your organization's exposure to costly security breaches.</p>
+                <!-- Feature 6: Advanced Analytics & Reporting -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+                    <div class="flex items-center justify-center mb-6 w-16 h-16 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 text-white text-3xl mx-auto">
+                        📊
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white text-center">Advanced Analytics</h3>
+                    <p class="text-gray-300 text-center">Gain deep insights into your collection's performance and market trends with comprehensive, easy-to-understand reports.</p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Section -->
-    <section id="waitlist" class="py-20 md:py-28 bg-gray-900 text-white">
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gray-800 text-gray-100">
         <div class="container mx-auto px-4 max-w-2xl text-center">
-            <h2 class="text-3xl md:text-4xl font-extrabold mb-6 gradient-text">Secure Your Spot. Reduce Your Risk.</h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-8">
-                Be among the first to experience the future of code security. Join our exclusive early access waitlist now!
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-500">
+                Ready to Elevate Your Collection?
+            </h2>
+            <p class="text-lg md:text-xl text-gray-200 mb-8">
+                Join our exclusive waitlist for early access, special launch offers, and to be among the first to experience PokéVault AI. <br class="hidden md:inline">Limited spots are available – secure yours now!
             </p>
-
-            <!-- Limited Time Countdown (repeated for emphasis near form) -->
-            <div class="mb-10 p-5 bg-gray-800 bg-opacity-70 rounded-lg shadow-xl inline-block max-w-sm mx-auto">
-                <p class="text-orange-400 text-sm font-semibold mb-3 uppercase tracking-wider">Only <span id="waitlist-spots">XX</span> Spots Remaining!</p>
-                <div id="countdown-waitlist" class="flex justify-center items-center space-x-3">
+            <div class="bg-gray-700 p-8 rounded-lg shadow-2xl">
+                <p class="text-red-400 font-bold mb-4 text-xl animate-pulse">
+                    🚨 Limited Time Offer: Secure Early Access! 🚨
+                </p>
+                <form action="#" method="POST" class="space-y-6">
                     <div>
-                        <span id="days-wl" class="text-4xl font-bold text-white countdown-digits">00</span>
-                        <p class="text-gray-400 text-xs">Days</p>
+                        <label for="name" class="sr-only">Full Name</label>
+                        <input type="text" name="name" id="name" placeholder="Your Full Name"
+                               class="w-full p-4 rounded-md bg-gray-900 border border-gray-600 text-white placeholder-gray-400 focus:ring-2 focus:ring-teal-500 focus:border-transparent text-lg" required>
                     </div>
-                    <span class="text-3xl text-gray-500">:</span>
                     <div>
-                        <span id="hours-wl" class="text-4xl font-bold text-white countdown-digits">00</span>
-                        <p class="text-gray-400 text-xs">Hours</p>
+                        <label for="email" class="sr-only">Email Address</label>
+                        <input type="email" name="email" id="email" placeholder="Your Email Address"
+                               class="w-full p-4 rounded-md bg-gray-900 border border-gray-600 text-white placeholder-gray-400 focus:ring-2 focus:ring-teal-500 focus:border-transparent text-lg" required>
                     </div>
-                    <span class="text-3xl text-gray-500">:</span>
-                    <div>
-                        <span id="minutes-wl" class="text-4xl font-bold text-white countdown-digits">00</span>
-                        <p class="text-gray-400 text-xs">Minutes</p>
-                    </div>
-                    <span class="text-3xl text-gray-500">:</span>
-                    <div>
-                        <span id="seconds-wl" class="text-4xl font-bold text-white countdown-digits">00</span>
-                        <p class="text-gray-400 text-xs">Seconds</p>
-                    </div>
-                </div>
+                    <button type="submit"
+                            class="w-full bg-gradient-to-r from-blue-500 to-teal-600 hover:from-blue-600 hover:to-teal-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-xl">
+                        Secure My Spot Now!
+                    </button>
+                </form>
+                <p class="text-sm text-gray-400 mt-6">
+                    We respect your privacy. No spam, ever.
+                </p>
             </div>
-
-
-            <form class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700 max-w-xl mx-auto">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-900" required>
-                </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Work Email</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-900" required>
-                </div>
-                <div class="mb-8 text-left">
-                    <label for="company" class="block text-gray-300 text-sm font-bold mb-2">Company Name</label>
-                    <input type="text" id="company" name="company" placeholder="Acme Software Inc."
-                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-900" required>
-                </div>
-                <button type="submit"
-                        class="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 text-lg">
-                    Join Waitlist Now!
-                </button>
-                <p class="text-xs text-gray-500 mt-4">We respect your privacy. No spam, ever.</p>
-            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 py-10 text-center text-gray-400 text-sm border-t border-gray-800">
+    <footer class="bg-gray-900 py-8 text-gray-400 text-center">
         <div class="container mx-auto px-4">
-            <p>&copy; 2023 Guardrail AI. All rights reserved.</p>
-            <p class="mt-2">
-                <a href="#" class="text-indigo-400 hover:text-indigo-300 mx-2">Privacy Policy</a> |
-                <a href="#" class="text-indigo-400 hover:text-indigo-300 mx-2">Terms of Service</a>
-            </p>
+            <p>&copy; 2023 PokéVault AI. All rights reserved. Pokémon is a trademark of Nintendo. This platform is not affiliated with, endorsed, sponsored, or specifically approved by Nintendo, The Pokémon Company International, or Game Freak.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="hover:text-teal-400 transition duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-teal-400 transition duration-300">Terms of Service</a>
+            </div>
         </div>
     </footer>
-
-    <!-- Countdown Script -->
-    <script>
-        // Set the date we're counting down to (e.g., 7 days from now)
-        const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 7); // Set to 7 days from now
-        countdownDate.setHours(countdownDate.getHours() + 12); // Plus 12 hours for a slightly "random" start
-        countdownDate.setMinutes(countdownDate.getMinutes() + 34); // Plus 34 minutes
-        countdownDate.setSeconds(countdownDate.getSeconds() + 50); // Plus 50 seconds
-
-        // Update the countdown every 1 second
-        const x = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countdownDate.getTime() - now;
-
-            // Calculate days, hours, minutes and seconds
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the result in the elements
-            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-            // Also update the waitlist countdown
-            document.getElementById("days-wl").innerHTML = String(days).padStart(2, '0');
-            document.getElementById("hours-wl").innerHTML = String(hours).padStart(2, '0');
-            document.getElementById("minutes-wl").innerHTML = String(minutes).padStart(2, '0');
-            document.getElementById("seconds-wl").innerHTML = String(seconds).padStart(2, '0');
-
-            // If the countdown is over, write some text
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "<span class='text-red-500'>Early Access Closed!</span>";
-                document.getElementById("countdown-waitlist").innerHTML = "<span class='text-red-500'>Early Access Closed!</span>";
-                document.getElementById("waitlist-spots").innerHTML = "All"; // All spots taken
-            } else {
-                // Update dynamic spot count (simulate spots running out)
-                const totalSecondsInitial = (7 * 24 * 60 * 60) + (12 * 60 * 60) + (34 * 60) + 50; // Initial total seconds based on setup above
-                const totalSecondsRemaining = distance / 1000;
-                const progress = (totalSecondsInitial - totalSecondsRemaining) / totalSecondsInitial; // 0 to 1
-                let spots = 100 - Math.floor(progress * 80); // Start with 100, reduce to minimum 20 spots
-                if (spots < 10) spots = 9; // Don't go below 9 for realism
-                document.getElementById("waitlist-spots").innerHTML = spots;
-            }
-        }, 1000);
-    </script>
 
 </body>
 </html>
