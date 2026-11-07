@@ -3,167 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI-Powered Secure DevOps Platform - Join the Waitlist</title>
+    <title>Guardrail AI - AI-Powered Proactive Vulnerability Intelligence</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233B82F6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0 -7.07-7.07l-3 3a5 5 0 0 0 -1.77 4.24M14 11a5 5 0 0 0 -7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l3-3a5 5 0 0 0 1.77-4.24'%3E%3C/path%3E%3C/svg%3E" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for dark mode and hero image */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #000; /* Ensure black background by default */
+            background-color: #0f172a; /* Tailwind's slate-900 */
+            color: #f8fafc; /* Tailwind's slate-50 */
         }
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?AI-Powered,tech');
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
+            position: relative;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for text readability */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #6366f1 0%, #a855f7 100%); /* Indigo to Purple */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .countdown-digits {
+            font-variant-numeric: tabular-nums; /* Ensures fixed width for numbers */
         }
     </style>
 </head>
-<body class="bg-black text-white antialiased">
+<body class="antialiased">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center hero-background">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay -->
-        <div class="relative z-10 p-4 md:p-8 max-w-6xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 animate-fade-in-up">
-                AI-Powered Secure DevOps: <br class="md:hidden"> From Vulnerability to Automated Fixes
+    <header class="hero-bg min-h-screen flex items-center justify-center text-white py-16">
+        <div class="hero-overlay"></div>
+        <div class="container mx-auto px-4 text-center relative z-10 max-w-4xl">
+            <p class="text-indigo-400 text-sm md:text-base font-semibold uppercase mb-4 tracking-wider">
+                Leveraging Cutting-Edge AI - Inspired by GPT-6 Cyber's Breakthroughs
+            </p>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                Shift Security Left with <br><span class="gradient-text">AI-Powered Proactive Vulnerability Intelligence</span>
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl font-light mb-8 text-gray-200 animate-fade-in-up delay-200">
-                Leverage advanced AI, inspired by GPT-6 Cyber's security prowess, to proactively secure your CI/CD pipeline. Continuously scan, remediate, and automatically propose security fixes – dramatically reducing developer overhead.
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Integrate with your CI/CD to detect, predict, and remediate emerging vulnerabilities *before* deployment.
+                Reduce breach risk and accelerate secure innovation for mid-market software teams.
             </p>
 
+            <div class="space-y-6 md:space-y-0 md:space-x-4 flex flex-col md:flex-row items-center justify-center mb-8">
+                <a href="#waitlist" class="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 text-lg">
+                    Join the Early Access Waitlist
+                </a>
+                <a href="#features" class="border border-indigo-400 text-indigo-300 font-semibold py-3 px-8 rounded-full hover:bg-indigo-700 hover:text-white transition duration-300 ease-in-out text-lg">
+                    Learn More
+                </a>
+            </div>
+
             <!-- Limited Time Countdown -->
-            <div id="countdown" class="text-3xl md:text-4xl font-extrabold text-red-500 mb-8 p-4 bg-red-900 bg-opacity-30 rounded-lg animate-pulse delay-400">
-                Limited-time early access window ends in:
-                <div class="flex justify-center items-center mt-4 space-x-4">
-                    <span id="days">00d</span>
-                    <span id="hours">00h</span>
-                    <span id="minutes">00m</span>
-                    <span id="seconds">00s</span>
+            <div class="mt-12 p-6 bg-gray-800 bg-opacity-70 rounded-lg shadow-xl inline-block max-w-sm mx-auto">
+                <p class="text-orange-400 text-sm font-semibold mb-3 uppercase tracking-wider">Early Access Spots Are Limited!</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4">
+                    <div>
+                        <span id="days" class="text-5xl font-bold text-white countdown-digits">00</span>
+                        <p class="text-gray-400 text-sm">Days</p>
+                    </div>
+                    <span class="text-4xl text-gray-500">:</span>
+                    <div>
+                        <span id="hours" class="text-5xl font-bold text-white countdown-digits">00</span>
+                        <p class="text-gray-400 text-sm">Hours</p>
+                    </div>
+                    <span class="text-4xl text-gray-500">:</span>
+                    <div>
+                        <span id="minutes" class="text-5xl font-bold text-white countdown-digits">00</span>
+                        <p class="text-gray-400 text-sm">Minutes</p>
+                    </div>
+                    <span class="text-4xl text-gray-500">:</span>
+                    <div>
+                        <span id="seconds" class="text-5xl font-bold text-white countdown-digits">00</span>
+                        <p class="text-gray-400 text-sm">Seconds</p>
+                    </div>
                 </div>
             </div>
 
-            <button onclick="document.getElementById('waitlist-form-section').scrollIntoView({ behavior: 'smooth' });"
-                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg animate-fade-in-up delay-600 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">
-                Join the Exclusive Waitlist
-            </button>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section id="features-section" class="py-16 md:py-24 bg-gray-950 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12 md:mb-16 text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-400">
-                Revolutionize Your Secure SDLC
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+    <section id="features" class="py-20 md:py-28 bg-slate-900 text-white">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-16 gradient-text">Unparalleled Security, Powered by AI</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
                 <!-- Feature 1 -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-800">
-                    <div class="text-blue-500 mb-4 text-4xl">🤖</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Continuous AI Vulnerability Scanning</h3>
-                    <p class="text-gray-300 leading-relaxed">Integrate directly into your CI/CD. Our AI continuously scans code, configurations, and dependencies for vulnerabilities, insecure practices, and compliance issues before they reach production.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-4xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold mb-4">Seamless CI/CD Integration</h3>
+                    <p class="text-gray-300">Easily integrate Guardrail AI into your existing development pipelines (GitHub Actions, GitLab CI, Jenkins, etc.) for continuous, automated security scanning without disruption.</p>
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-800">
-                    <div class="text-blue-500 mb-4 text-4xl">✨</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Precise AI-Generated Remediation</h3>
-                    <p class="text-gray-300 leading-relaxed">Beyond identification, our platform provides context-aware, AI-generated code remediation suggestions, tailored to your codebase and tech stack for faster, more effective fixes.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-4xl mb-4">🧠</div>
+                    <h3 class="text-2xl font-bold mb-4">Advanced AI Vulnerability Detection</h3>
+                    <p class="text-gray-300">Harness the power of advanced AI, including potential future GPT-6 Cyber APIs, to identify complex and emerging vulnerabilities in code and dependencies with unmatched accuracy.</p>
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-800">
-                    <div class="text-blue-500 mb-4 text-4xl">🚀</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Automated Security Pull Requests</h3>
-                    <p class="text-gray-300 leading-relaxed">Significantly reduce developer overhead. Our AI can automatically propose pull requests with security fixes, allowing your team to focus on innovation, not chasing vulnerabilities.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-4xl mb-4">🔮</div>
+                    <h3 class="text-2xl font-bold mb-4">Predictive Exploit Intelligence</h3>
+                    <p class="text-gray-300">Our AI predicts potential exploit vectors and attack paths, giving your team foresight to mitigate risks *before* they become critical threats.</p>
                 </div>
 
                 <!-- Feature 4 -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-800">
-                    <div class="text-blue-500 mb-4 text-4xl">🔒</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Enhanced Compliance & Governance</h3>
-                    <p class="text-gray-300 leading-relaxed">Automatically enforce security policies and compliance standards across your development lifecycle, ensuring every commit aligns with your organizational and regulatory requirements.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-4xl mb-4">🛠️</div>
+                    <h3 class="text-2xl font-bold mb-4">Prioritized Remediation Strategies</h3>
+                    <p class="text-gray-300">Receive actionable, prioritized recommendations for fixing vulnerabilities, complete with code snippets and best practices, saving developer time and effort.</p>
                 </div>
 
                 <!-- Feature 5 -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-800">
-                    <div class="text-blue-500 mb-4 text-4xl">⚡</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Accelerated Development Lifecycle</h3>
-                    <p class="text-gray-300 leading-relaxed">By shifting security left and automating fixes, our platform helps you ship secure code faster, without sacrificing quality or adding friction to your existing development processes.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-4xl mb-4">⬅️</div>
+                    <h3 class="text-2xl font-bold mb-4">True "Shift Left" Security</h3>
+                    <p class="text-gray-300">Embed security early in the development lifecycle. Catch issues during development, not after deployment, dramatically reducing the cost and complexity of fixes.</p>
                 </div>
 
                 <!-- Feature 6 -->
-                <div class="bg-gray-900 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-800">
-                    <div class="text-blue-500 mb-4 text-4xl">📈</div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Actionable Insights & Reporting</h3>
-                    <p class="text-gray-300 leading-relaxed">Gain a clear overview of your security posture with intuitive dashboards and detailed reports, enabling data-driven decisions and continuous improvement of your security practices.</p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-4xl mb-4">🛡️</div>
+                    <h3 class="text-2xl font-bold mb-4">Drastically Reduce Breach Risk</h3>
+                    <p class="text-gray-300">By proactively identifying and addressing vulnerabilities before they hit production, Guardrail AI significantly lowers your organization's exposure to costly security breaches.</p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist-form-section" class="py-16 md:py-24 bg-black text-white">
-        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-                Secure Your Software Supply Chain. <br> Join Our Exclusive Waitlist.
-            </h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-10">
-                Be among the first to experience the future of secure software development. Get early access to our AI-Powered Secure DevOps Platform.
+    <!-- Waitlist Section -->
+    <section id="waitlist" class="py-20 md:py-28 bg-gray-900 text-white">
+        <div class="container mx-auto px-4 max-w-2xl text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-6 gradient-text">Secure Your Spot. Reduce Your Risk.</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-8">
+                Be among the first to experience the future of code security. Join our exclusive early access waitlist now!
             </p>
-            <form action="#" method="POST" class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                <input type="email" name="email" id="email" placeholder="Your work email address" required
-                    class="w-full sm:flex-grow p-4 rounded-md bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg transition duration-200">
+
+            <!-- Limited Time Countdown (repeated for emphasis near form) -->
+            <div class="mb-10 p-5 bg-gray-800 bg-opacity-70 rounded-lg shadow-xl inline-block max-w-sm mx-auto">
+                <p class="text-orange-400 text-sm font-semibold mb-3 uppercase tracking-wider">Only <span id="waitlist-spots">XX</span> Spots Remaining!</p>
+                <div id="countdown-waitlist" class="flex justify-center items-center space-x-3">
+                    <div>
+                        <span id="days-wl" class="text-4xl font-bold text-white countdown-digits">00</span>
+                        <p class="text-gray-400 text-xs">Days</p>
+                    </div>
+                    <span class="text-3xl text-gray-500">:</span>
+                    <div>
+                        <span id="hours-wl" class="text-4xl font-bold text-white countdown-digits">00</span>
+                        <p class="text-gray-400 text-xs">Hours</p>
+                    </div>
+                    <span class="text-3xl text-gray-500">:</span>
+                    <div>
+                        <span id="minutes-wl" class="text-4xl font-bold text-white countdown-digits">00</span>
+                        <p class="text-gray-400 text-xs">Minutes</p>
+                    </div>
+                    <span class="text-3xl text-gray-500">:</span>
+                    <div>
+                        <span id="seconds-wl" class="text-4xl font-bold text-white countdown-digits">00</span>
+                        <p class="text-gray-400 text-xs">Seconds</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <form class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700 max-w-xl mx-auto">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-900" required>
+                </div>
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Work Email</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-900" required>
+                </div>
+                <div class="mb-8 text-left">
+                    <label for="company" class="block text-gray-300 text-sm font-bold mb-2">Company Name</label>
+                    <input type="text" id="company" name="company" placeholder="Acme Software Inc."
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-900" required>
+                </div>
                 <button type="submit"
-                    class="w-full sm:w-auto px-8 py-4 rounded-md bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg transition-colors duration-200 shadow-md focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">
-                    Secure My Spot
+                        class="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 text-lg">
+                    Join Waitlist Now!
                 </button>
+                <p class="text-xs text-gray-500 mt-4">We respect your privacy. No spam, ever.</p>
             </form>
-            <p class="text-sm text-gray-400 mt-6">
-                We respect your privacy. Your information will only be used to send platform updates and early access invitations.
-            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 bg-gray-950 text-gray-500 text-center text-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p>&copy; 2024 AI-Powered Secure DevOps Platform. All rights reserved.</p>
+    <footer class="bg-slate-900 py-10 text-center text-gray-400 text-sm border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2023 Guardrail AI. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 mx-2">Privacy Policy</a> |
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 mx-2">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
-    <!-- JavaScript for Countdown (Placeholder - Actual JS would be implemented here) -->
+    <!-- Countdown Script -->
     <script>
         // Set the date we're counting down to (e.g., 7 days from now)
         const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 7); // Set to 7 days from now for demo
+        countdownDate.setDate(countdownDate.getDate() + 7); // Set to 7 days from now
+        countdownDate.setHours(countdownDate.getHours() + 12); // Plus 12 hours for a slightly "random" start
+        countdownDate.setMinutes(countdownDate.getMinutes() + 34); // Plus 34 minutes
+        countdownDate.setSeconds(countdownDate.getSeconds() + 50); // Plus 50 seconds
 
+        // Update the countdown every 1 second
         const x = setInterval(function() {
             const now = new Date().getTime();
             const distance = countdownDate.getTime() - now;
 
+            // Calculate days, hours, minutes and seconds
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            if (document.getElementById("days")) {
-                document.getElementById("days").innerHTML = days + "d";
-                document.getElementById("hours").innerHTML = hours + "h";
-                document.getElementById("minutes").innerHTML = minutes + "m";
-                document.getElementById("seconds").innerHTML = seconds + "s";
-            }
+            // Display the result in the elements
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
+            // Also update the waitlist countdown
+            document.getElementById("days-wl").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours-wl").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes-wl").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds-wl").innerHTML = String(seconds).padStart(2, '0');
+
+            // If the countdown is over, write some text
             if (distance < 0) {
                 clearInterval(x);
-                if (document.getElementById("countdown")) {
-                    document.getElementById("countdown").innerHTML = "Early access has ended!";
-                    document.getElementById("countdown").classList.remove("animate-pulse"); // Stop pulsing
-                }
+                document.getElementById("countdown").innerHTML = "<span class='text-red-500'>Early Access Closed!</span>";
+                document.getElementById("countdown-waitlist").innerHTML = "<span class='text-red-500'>Early Access Closed!</span>";
+                document.getElementById("waitlist-spots").innerHTML = "All"; // All spots taken
+            } else {
+                // Update dynamic spot count (simulate spots running out)
+                const totalSecondsInitial = (7 * 24 * 60 * 60) + (12 * 60 * 60) + (34 * 60) + 50; // Initial total seconds based on setup above
+                const totalSecondsRemaining = distance / 1000;
+                const progress = (totalSecondsInitial - totalSecondsRemaining) / totalSecondsInitial; // 0 to 1
+                let spots = 100 - Math.floor(progress * 80); // Start with 100, reduce to minimum 20 spots
+                if (spots < 10) spots = 9; // Don't go below 9 for realism
+                document.getElementById("waitlist-spots").innerHTML = spots;
             }
         }, 1000);
     </script>
+
 </body>
 </html>
