@@ -3,152 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple Black Friday Deals: Hyper-Curated Alerts & Live Tracker</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zM10.5 8.5C10.5 7.671 9.829 7 9 7s-1.5.671-1.5 1.5.671 1.5 1.5 1.5 1.5-.671 1.5-1.5zM15 8.5c0-.829-.671-1.5-1.5-1.5S12 7.671 12 8.5s.671 1.5 1.5 1.5S15 9.329 15 8.5zM12 16.5c-2.071 0-3.5-1.5-3.5-1.5h7s-1.429 1.5-3.5 1.5z'/%3E%3C/svg%3E" type="image/svg+xml">
+    <title>Agentic AI Edge - Master Apple's AI Ecosystem</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles for dark overlay and responsive text */
+        /* Custom styles for the hero section background and overlay */
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
         .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for readability */
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for strong text readability */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
         }
-        @keyframes pulse-once {
-            0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.03); opacity: 0.95; }
-            100% { transform: scale(1); opacity: 1; }
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
-        .animate-pulse-once {
-            animation: pulse-once 2s ease-in-out infinite;
+        /* Gradient for buttons and text accent */
+        .gradient-button {
+            background-image: linear-gradient(to right, #8A2BE2, #6A5ACD); /* Blue Violet to Slate Blue */
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #8A2BE2, #A020F0); /* Blue Violet to Purple */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Animation for urgency message */
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.03); opacity: 0.9; }
+        }
+        .animate-pulse {
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+        /* Fade-in-up animation */
+        @keyframes fadeInMoveUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInMoveUp 0.8s ease-out forwards;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white font-sans antialiased">
+<body class="bg-gray-950 text-gray-100 font-sans antialiased min-h-screen flex flex-col">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        <!-- Background Image -->
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
-            <div class="hero-overlay absolute inset-0"></div>
-        </div>
-
-        <!-- Content -->
-        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 animate-pulse-once">
-                Unlock The Steepest Apple Black Friday Deals
+    <header class="hero-background relative min-h-screen flex items-center justify-center p-4">
+        <div class="hero-overlay"></div>
+        <div class="hero-content text-center max-w-4xl mx-auto space-y-6">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight gradient-text drop-shadow-lg">
+                Master Apple's Agentic AI Shift.
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
-                Don't miss a single limited-time discount. Get <span class="text-blue-400 font-semibold">hyper-curated, real-time alerts</span> and access our live deal tracker for the top 3-5 Apple product savings.
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 leading-relaxed font-light mt-4">
+                The <strong class="text-purple-300">Apple CEO is pushing an ambitious AI strategy</strong>. Are your apps ready for the <strong class="text-purple-300">rapidly evolving Apple AI ecosystem</strong>?
             </p>
-            <a href="#waitlist-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                Get Instant Access & Alerts!
-            </a>
-            <p class="mt-4 text-sm sm:text-base text-gray-400">
-                🔥 Early Black Friday Deals are already dropping: Don't miss out on Apple Watch Ultras and more!
+            <p class="text-xl sm:text-2xl md:text-3xl text-purple-400 font-semibold mt-4 animate-pulse">
+                <span class="inline-block bg-purple-800 bg-opacity-40 rounded-full px-5 py-2">
+                    Early Access Spots Closing Soon!
+                </span>
             </p>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-20 lg:py-24 bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 sm:mb-16">
-                Why You Need <span class="text-blue-400">Hyper-Curated Apple Deal Alerts</span>
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-
-                <!-- Feature 1: Hyper-Curated -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full mb-6 text-2xl">⚡</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-4 text-blue-300">Top 3-5 Steepest Discounts</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">
-                        We cut through the noise. Get access to only the <span class="font-semibold text-white">top 3-5 steepest or most exclusive Apple discounts</span> available right now. No more endless searching.
-                    </p>
-                </div>
-
-                <!-- Feature 2: Real-Time & Live Tracker -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full mb-6 text-2xl">⏳</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-4 text-blue-300">Real-Time Alerts & Live Page</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">
-                        Receive instant email alerts as soon as a hot deal drops. Plus, gain access to our <span class="font-semibold text-white">constantly updated live web page</span> to track all active discounts.
-                    </p>
-                </div>
-
-                <!-- Feature 3: Limited-Time Countdowns -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full mb-6 text-2xl">⏱️</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-4 text-blue-300">Urgent 'Limited Time' Countdowns</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">
-                        Our live tracker features a <span class="font-semibold text-white">clear 'Limited Time' countdown for each deal</span>. See exactly how long you have before that Apple Watch Ultra deal vanishes!
-                    </p>
-                </div>
-
-                <!-- Feature 4: Direct Affiliate Links -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full mb-6 text-2xl">🔗</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-4 text-blue-300">Direct, Vetted Affiliate Links</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">
-                        Purchase with confidence. Every deal comes with <span class="font-semibold text-white">direct, verified affiliate links</span> to trusted retailers, making your savings just one click away.
-                    </p>
-                </div>
-
-                <!-- Feature 5: Exclusively Apple -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full mb-6 text-2xl">🍏</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-4 text-blue-300">100% Apple Product Focus</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">
-                        Your passion is Apple, so is ours. We focus <span class="font-semibold text-white">exclusively on iPhone, Mac, Apple Watch, AirPods, and more</span>. No distractions, just premium deals.
-                    </p>
-                </div>
-                
-                <!-- Feature 6: Save Big, Stress Less -->
-                <div class="bg-gray-800 rounded-xl p-8 shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full mb-6 text-2xl">💰</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-4 text-blue-300">Maximize Savings, Minimize Effort</h3>
-                    <p class="text-gray-300 text-base sm:text-lg">
-                        Stop tirelessly searching multiple sites. Let us do the heavy lifting and <span class="font-semibold text-white">deliver the best savings directly to you</span>, so you can enjoy your new tech worry-free.
-                    </p>
-                </div>
-
+            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#waitlist" class="gradient-button text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out text-lg sm:text-xl md:text-2xl w-full sm:w-auto min-w-[250px]">
+                    🚀 Join the Priority Waitlist
+                </a>
+            </div>
+            <div class="mt-8 text-center text-gray-400 text-sm md:text-base">
+                As highlighted by <span class="font-bold text-gray-300">Bloomberg: "Apple CEO Presses Software Chief to Pursue More Ambitious AI Strategy"</span>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Call to Action / Waitlist Form -->
-    <section id="waitlist-form" class="bg-gray-800 py-16 sm:py-20 lg:py-24 text-center">
-        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-8 text-blue-400">
-                Don't Miss Out on Apple's Hottest Black Friday Deals!
-            </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-xl mx-auto">
-                Join our exclusive email list for instant deal alerts and access to the live tracker page. <span class="font-bold text-red-400">Limited slots for early access!</span>
-            </p>
-            
-            <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700">
-                <form action="#" method="POST" class="space-y-6">
-                    <div>
-                        <label for="email" class="sr-only">Email address</label>
-                        <input type="email" name="email" id="email" autocomplete="email" required 
-                               class="w-full px-5 py-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg sm:text-xl"
-                               placeholder="Enter your email for instant alerts">
+    <main class="flex-grow">
+        <!-- Features Section -->
+        <section id="features" class="py-16 md:py-24 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-50 mb-12 sm:mb-16">
+                    Unlock Seamless Apple AI Integration
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 max-w-6xl mx-auto">
+
+                    <!-- Feature 1 -->
+                    <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 group">
+                        <div class="text-5xl mb-4 text-purple-400 group-hover:text-purple-300 transition-colors duration-300">⚡</div>
+                        <h3 class="text-2xl font-semibold text-gray-50 mb-3">Real-time Apple AI API Tracker</h3>
+                        <p class="text-gray-300 leading-relaxed">Stay updated with instant notifications on Apple's ever-changing 'agentic' Siri and future AI service APIs, ensuring zero downtime for your integrations.</p>
                     </div>
-                    <button type="submit" 
-                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
-                        Sign Up for Early Access & Instant Alerts!
+
+                    <!-- Feature 2 -->
+                    <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 group">
+                        <div class="text-5xl mb-4 text-teal-400 group-hover:text-teal-300 transition-colors duration-300">🛠️</div>
+                        <h3 class="text-2xl font-semibold text-gray-50 mb-3">Automated Code Migration Tools</h3>
+                        <p class="text-gray-300 leading-relaxed">Effortlessly adapt your codebase to new Apple AI API versions with smart, automated migration suggestions and tools, reducing developer overhead.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 group">
+                        <div class="text-5xl mb-4 text-pink-400 group-hover:text-pink-300 transition-colors duration-300">🍎</div>
+                        <h3 class="text-2xl font-semibold text-gray-50 mb-3">Apple-specific Sample Projects</h3>
+                        <p class="text-gray-300 leading-relaxed">Jumpstart your development with ready-to-use, fully compatible sample projects tailored for the latest Apple AI frameworks and services.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 group">
+                        <div class="text-5xl mb-4 text-amber-400 group-hover:text-amber-300 transition-colors duration-300">📊</div>
+                        <h3 class="text-2xl font-semibold text-gray-50 mb-3">AI Integration Performance Analytics</h3>
+                        <p class="text-gray-300 leading-relaxed">Optimize your AI features with deep insights into performance metrics, latency, and resource usage specific to Apple's AI hardware and software stack.</p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 group">
+                        <div class="text-5xl mb-4 text-blue-400 group-hover:text-blue-300 transition-colors duration-300">✨</div>
+                        <h3 class="text-2xl font-semibold text-gray-50 mb-3">Future-Proof Your Apps</h3>
+                        <p class="text-gray-300 leading-relaxed">Ensure seamless compatibility with 'agentic' Siri and stay ahead of all future Apple AI services as they evolve, powered by our proactive insights.</p>
+                    </div>
+
+                    <!-- Feature 6 (Problem/Benefit focused) -->
+                    <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 group">
+                        <div class="text-5xl mb-4 text-indigo-400 group-hover:text-indigo-300 transition-colors duration-300">💡</div>
+                        <h3 class="text-2xl font-semibold text-gray-50 mb-3">Accelerate Developer Adoption</h3>
+                        <p class="text-gray-300 leading-relaxed">Reduce learning curves and integration headaches, allowing your team to rapidly innovate and deploy with Apple's cutting-edge AI technologies.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Waitlist Section with Countdown -->
+        <section id="waitlist" class="py-16 md:py-24 bg-gray-950">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-50 mb-8 sm:mb-12">
+                    Get Exclusive Early Access
+                </h2>
+                <p class="text-lg sm:text-xl text-center text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Don't get left behind as Apple redefines AI. Join our priority waitlist to be among the first to accelerate your Apple AI integrations.
+                </p>
+
+                <!-- Countdown Timer (Placeholder for dynamic JS) -->
+                <div class="bg-gradient-to-r from-purple-700 to-indigo-700 p-6 rounded-xl shadow-2xl mb-10 text-center animate-fade-in-up">
+                    <p class="text-2xl sm:text-3xl font-bold text-white mb-4">Limited Early Access Ends In:</p>
+                    <div class="flex justify-center items-center space-x-3 sm:space-x-6 text-white">
+                        <div class="flex flex-col items-center">
+                            <span class="text-4xl sm:text-5xl md:text-6xl font-extrabold" id="days">07</span>
+                            <span class="text-sm sm:text-base font-medium">Days</span>
+                        </div>
+                        <span class="text-4xl sm:text-5xl font-extrabold">:</span>
+                        <div class="flex flex-col items-center">
+                            <span class="text-4xl sm:text-5xl md:text-6xl font-extrabold" id="hours">14</span>
+                            <span class="text-sm sm:text-base font-medium">Hours</span>
+                        </div>
+                        <span class="text-4xl sm:text-5xl font-extrabold">:</span>
+                        <div class="flex flex-col items-center">
+                            <span class="text-4xl sm:text-5xl md:text-6xl font-extrabold" id="minutes">32</span>
+                            <span class="text-sm sm:text-base font-medium">Minutes</span>
+                        </div>
+                        <span class="text-4xl sm:text-5xl font-extrabold">:</span>
+                        <div class="flex flex-col items-center">
+                            <span class="text-4xl sm:text-5xl md:text-6xl font-extrabold" id="seconds">58</span>
+                            <span class="text-sm sm:text-base font-medium">Seconds</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-200 mt-4">Spots are filling fast!</p>
+                </div>
+
+
+                <form class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-2xl space-y-6">
+                    <div>
+                        <label for="email" class="block text-xl font-medium text-gray-200 mb-2">Your Professional Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@yourcompany.com" required
+                               class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg sm:text-xl">
+                    </div>
+                    <div>
+                        <label for="company" class="block text-xl font-medium text-gray-200 mb-2">Company (Optional)</label>
+                        <input type="text" id="company" name="company" placeholder="Your Company Name"
+                               class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg sm:text-xl">
+                    </div>
+                    <button type="submit" class="gradient-button text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out text-xl sm:text-2xl w-full">
+                        ⚡ Secure My Early Access Spot!
                     </button>
-                    <p class="text-sm text-gray-400 mt-4">
-                        We respect your privacy. Unsubscribe anytime.
+                    <p class="text-center text-sm text-gray-400">
+                        We respect your privacy. No spam, just updates on Agentic AI Edge.
                     </p>
                 </form>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            &copy; 2023 AppleDealAlerts. All rights reserved. Not affiliated with Apple Inc.
+    <footer class="bg-gray-900 text-gray-400 text-center py-8 px-4 mt-auto">
+        <div class="container mx-auto">
+            <p>&copy; 2023 Agentic AI Edge. All rights reserved.</p>
+            <p class="mt-2 text-sm">Empowering developers in the rapidly evolving Apple AI ecosystem.</p>
         </div>
     </footer>
 
+    <!-- Simple JavaScript for the countdown (for demonstration, a real one would update dynamically) -->
+    <script>
+        // This is a static placeholder for the countdown for raw HTML output.
+        // In a live production environment, this function would be called with `setInterval(updateCountdown, 1000);`
+        // to dynamically update the time every second. The values below are pre-set to match the HTML.
+        function updateCountdown() {
+            const daysElem = document.getElementById('days');
+            const hoursElem = document.getElementById('hours');
+            const minutesElem = document.getElementById('minutes');
+            const secondsElem = document.getElementById('seconds');
+
+            // For dynamic functionality:
+            // const targetDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000 + 14 * 60 * 60 * 1000 + 32 * 60 * 1000 + 58 * 1000);
+            // const now = new Date();
+            // const totalSeconds = (targetDate - now) / 1000;
+            // if (totalSeconds < 0) {
+            //     // Handle countdown end
+            //     daysElem.textContent = hoursElem.textContent = minutesElem.textContent = secondsElem.textContent = '00';
+            //     return;
+            // }
+            // const days = Math.floor(totalSeconds / (3600 * 24));
+            // const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+            // const minutes = Math.floor((totalSeconds % 3600) / 60);
+            // const seconds = Math.floor(totalSeconds % 60);
+            // daysElem.textContent = String(days).padStart(2, '0');
+            // hoursElem.textContent = String(hours).padStart(2, '0');
+            // minutesElem.textContent = String(minutes).padStart(2, '0');
+            // secondsElem.textContent = String(seconds).padStart(2, '0');
+        }
+        updateCountdown(); // Call once to ensure static values are set if not already in HTML
+    </script>
 </body>
 </html>
