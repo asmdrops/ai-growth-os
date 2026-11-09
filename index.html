@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agentic AI Edge - Master Apple's AI Ecosystem</title>
+    <title>AgenticCore AI - Build Siri-Powered Workflows & Agents for Apple</title>
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Favicon (Inline SVG for raw HTML requirement) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-cpu'%3E%3Crect x='4' y='4' width='16' height='16' rx='2' ry='2'%3E%3C/rect%3E%3Crect x='9' y='9' width='6' height='6'%3E%3C/rect%3E%3Cline x1='9' y1='1' x2='9' y2='4'%3E%3C/line%3E%3Cline x1='15' y1='1' x2='15' y2='4'%3E%3C/line%3E%3Cline x1='9' y1='20' x2='9' y2='23'%3E%3C/line%3E%3Cline x1='15' y1='20' x2='15' y2='23'%3E%3C/line%3E%3Cline x1='20' y1='9' x2='23' y2='9'%3E%3C/line%3E%3Cline x1='20' y1='15' x2='23' y2='15'%3E%3C/line%3E%3Cline x1='1' y1='9' x2='4' y2='9'%3E%3C/line%3E%3Cline x1='1' y1='15' x2='4' y2='15'%3E%3C/line%3E%3C/svg%3E" type="image/svg+xml">
+    <!-- Preconnect to Google Fonts for Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
     <style>
-        /* Custom styles for the hero section background and overlay */
+        /* Modern Premium Dark Mode Aesthetic & Ultra-Responsiveness */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Deep dark background */
+            color: #c9d1d9; /* Light grey text for contrast */
+        }
         .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
@@ -16,227 +29,176 @@
             position: relative;
         }
         .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for strong text readability */
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
+            background: linear-gradient(to bottom, rgba(13, 17, 23, 0.7) 0%, rgba(13, 17, 23, 0.95) 100%);
         }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        /* Gradient for buttons and text accent */
-        .gradient-button {
-            background-image: linear-gradient(to right, #8A2BE2, #6A5ACD); /* Blue Violet to Slate Blue */
-        }
-        .gradient-text {
-            background: linear-gradient(to right, #8A2BE2, #A020F0); /* Blue Violet to Purple */
+        .text-gradient {
+            background: linear-gradient(90deg, #8b5cf6 0%, #d946ef 50%, #f43f5e 100%); /* Purple to Pink gradient */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        /* Animation for urgency message */
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.03); opacity: 0.9; }
+        .countdown-segment {
+            background-color: rgba(30, 41, 59, 0.8); /* Darker shade, semi-transparent */
+            border-radius: 0.75rem; /* More rounded */
+            padding: 1rem 1.25rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px); /* Subtle blur for premium feel */
         }
-        .animate-pulse {
-            animation: pulse 1.5s infinite ease-in-out;
+        /* Custom scrollbar for premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
         }
-        /* Fade-in-up animation */
-        @keyframes fadeInMoveUp {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* Dark track */
         }
-        .animate-fade-in-up {
-            animation: fadeInMoveUp 0.8s ease-out forwards;
+        ::-webkit-scrollbar-thumb {
+            background: #5b21b6; /* Purple thumb */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7c3aed; /* Lighter purple on hover */
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 font-sans antialiased min-h-screen flex flex-col">
+<body class="antialiased selection:bg-purple-600 selection:text-white">
 
     <!-- Hero Section -->
-    <header class="hero-background relative min-h-screen flex items-center justify-center p-4">
-        <div class="hero-overlay"></div>
-        <div class="hero-content text-center max-w-4xl mx-auto space-y-6">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight gradient-text drop-shadow-lg">
-                Master Apple's Agentic AI Shift.
+    <section class="hero-background min-h-screen flex items-center justify-center text-center relative p-4">
+        <div class="hero-overlay absolute inset-0 z-0"></div>
+        <div class="relative z-10 max-w-5xl mx-auto px-6 py-20 md:py-32 rounded-2xl bg-gray-900 bg-opacity-80 backdrop-filter backdrop-blur-md shadow-2xl border border-gray-700">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight mb-6 text-white">
+                <span class="text-gradient">AgenticCore AI:</span> Your Gateway to Apple's AI Future
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 leading-relaxed font-light mt-4">
-                The <strong class="text-purple-300">Apple CEO is pushing an ambitious AI strategy</strong>. Are your apps ready for the <strong class="text-purple-300">rapidly evolving Apple AI ecosystem</strong>?
+            <p class="text-lg sm:text-xl md:text-2xl mb-10 font-medium text-gray-300 max-w-4xl mx-auto">
+                As Apple's CEO presses for an "ambitious AI strategy," AgenticCore AI empowers businesses and developers to design, test, and deploy custom, intelligent workflows that integrate natively with Siri and Apple's evolving AI APIs.
             </p>
-            <p class="text-xl sm:text-2xl md:text-3xl text-purple-400 font-semibold mt-4 animate-pulse">
-                <span class="inline-block bg-purple-800 bg-opacity-40 rounded-full px-5 py-2">
-                    Early Access Spots Closing Soon!
-                </span>
-            </p>
-            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#waitlist" class="gradient-button text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out text-lg sm:text-xl md:text-2xl w-full sm:w-auto min-w-[250px]">
-                    🚀 Join the Priority Waitlist
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
+                <a href="#waitlist" class="inline-block bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 shadow-lg text-xl">
+                    Join Early Access <span class="ml-2 text-2xl leading-none">&rarr;</span>
+                </a>
+                <a href="#features" class="inline-block bg-gray-700 hover:bg-gray-600 text-gray-200 font-bold py-4 px-10 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 shadow-lg text-xl">
+                    Discover Features
                 </a>
             </div>
-            <div class="mt-8 text-center text-gray-400 text-sm md:text-base">
-                As highlighted by <span class="font-bold text-gray-300">Bloomberg: "Apple CEO Presses Software Chief to Pursue More Ambitious AI Strategy"</span>
+            <!-- Trend Mention, highlighted -->
+            <p class="text-sm text-gray-400 mt-8 italic max-w-md mx-auto">
+                <span class="font-bold text-gray-200">Timely Insight:</span> "Apple CEO Presses Software Chief to Pursue More Ambitious AI Strategy" — <span class="text-purple-400">Bloomberg</span>.
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 md:py-28 bg-gray-900 border-t border-gray-800 text-white p-4">
+        <div class="container mx-auto max-w-screen-xl px-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-16 text-white leading-tight">
+                Unlock the Full Potential of <span class="text-gradient">Apple-Native AI</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 rounded-xl p-7 shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="flex items-center mb-5">
+                        <span class="text-4xl mr-4 text-purple-400">🎨</span>
+                        <h3 class="text-2xl font-bold text-white leading-tight">Intuitive Workflow Builder</h3>
+                    </div>
+                    <p class="text-gray-300 text-lg">Visually design sophisticated AI-powered workflows and custom agents using our powerful drag-and-drop interface. No complex coding required.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 rounded-xl p-7 shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="flex items-center mb-5">
+                        <span class="text-4xl mr-4 text-green-400">🍎</span>
+                        <h3 class="text-2xl font-bold text-white leading-tight">Seamless Apple API Integration</h3>
+                    </div>
+                    <p class="text-gray-300 text-lg">Integrate directly with Apple's evolving Siri, Neural Engine, and on-device intelligence APIs. Ensure privacy, performance, and true Apple-native experiences.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 rounded-xl p-7 shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="flex items-center mb-5">
+                        <span class="text-4xl mr-4 text-red-400">📈</span>
+                        <h3 class="text-2xl font-bold text-white leading-tight">Advanced Analytics & Insights</h3>
+                    </div>
+                    <p class="text-gray-300 text-lg">Monitor agent performance, user interaction, and workflow efficiency with real-time analytics. Optimize for maximum impact and user satisfaction.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 rounded-xl p-7 shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="flex items-center mb-5">
+                        <span class="text-4xl mr-4 text-blue-400">🚀</span>
+                        <h3 class="text-2xl font-bold text-white leading-tight">Effortless Deployment & Scaling</h3>
+                    </div>
+                    <p class="text-gray-300 text-lg">Deploy your custom AI assistants across your apps and services with confidence. Scale your intelligence as your business grows.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 rounded-xl p-7 shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="flex items-center mb-5">
+                        <span class="text-4xl mr-4 text-yellow-400">🔒</span>
+                        <h3 class="text-2xl font-bold text-white leading-tight">Privacy-First Architecture</h3>
+                    </div>
+                    <p class="text-gray-300 text-lg">Built with Apple's commitment to privacy. Your proprietary AI and user data are secured by design, giving you complete control.</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 rounded-xl p-7 shadow-xl border border-gray-700 hover:border-purple-600 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="flex items-center mb-5">
+                        <span class="text-4xl mr-4 text-orange-400">💡</span>
+                        <h3 class="text-2xl font-bold text-white leading-tight">Elevate Existing Applications</h3>
+                    </div>
+                    <p class="text-gray-300 text-lg">Infuse your current applications with advanced, context-aware intelligence, transforming user experience and driving engagement to new heights.</p>
+                </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <main class="flex-grow">
-        <!-- Features Section -->
-        <section id="features" class="py-16 md:py-24 bg-gray-900">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-50 mb-12 sm:mb-16">
-                    Unlock Seamless Apple AI Integration
-                </h2>
+    <!-- Waitlist Section with Countdown -->
+    <section id="waitlist" class="py-16 md:py-28 bg-gray-950 border-t border-gray-800 text-white p-4">
+        <div class="container mx-auto max-w-3xl px-4 text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 text-white leading-tight">
+                <span class="text-gradient">Limited Time Early Access</span> &mdash; Act Fast!
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-prose mx-auto">
+                Secure your exclusive spot for early access to AgenticCore AI and be at the forefront of Apple's intelligence revolution. Special launch benefits for our first users.
+            </p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 max-w-6xl mx-auto">
-
-                    <!-- Feature 1 -->
-                    <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 group">
-                        <div class="text-5xl mb-4 text-purple-400 group-hover:text-purple-300 transition-colors duration-300">⚡</div>
-                        <h3 class="text-2xl font-semibold text-gray-50 mb-3">Real-time Apple AI API Tracker</h3>
-                        <p class="text-gray-300 leading-relaxed">Stay updated with instant notifications on Apple's ever-changing 'agentic' Siri and future AI service APIs, ensuring zero downtime for your integrations.</p>
-                    </div>
-
-                    <!-- Feature 2 -->
-                    <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 group">
-                        <div class="text-5xl mb-4 text-teal-400 group-hover:text-teal-300 transition-colors duration-300">🛠️</div>
-                        <h3 class="text-2xl font-semibold text-gray-50 mb-3">Automated Code Migration Tools</h3>
-                        <p class="text-gray-300 leading-relaxed">Effortlessly adapt your codebase to new Apple AI API versions with smart, automated migration suggestions and tools, reducing developer overhead.</p>
-                    </div>
-
-                    <!-- Feature 3 -->
-                    <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 group">
-                        <div class="text-5xl mb-4 text-pink-400 group-hover:text-pink-300 transition-colors duration-300">🍎</div>
-                        <h3 class="text-2xl font-semibold text-gray-50 mb-3">Apple-specific Sample Projects</h3>
-                        <p class="text-gray-300 leading-relaxed">Jumpstart your development with ready-to-use, fully compatible sample projects tailored for the latest Apple AI frameworks and services.</p>
-                    </div>
-
-                    <!-- Feature 4 -->
-                    <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 group">
-                        <div class="text-5xl mb-4 text-amber-400 group-hover:text-amber-300 transition-colors duration-300">📊</div>
-                        <h3 class="text-2xl font-semibold text-gray-50 mb-3">AI Integration Performance Analytics</h3>
-                        <p class="text-gray-300 leading-relaxed">Optimize your AI features with deep insights into performance metrics, latency, and resource usage specific to Apple's AI hardware and software stack.</p>
-                    </div>
-
-                    <!-- Feature 5 -->
-                    <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 group">
-                        <div class="text-5xl mb-4 text-blue-400 group-hover:text-blue-300 transition-colors duration-300">✨</div>
-                        <h3 class="text-2xl font-semibold text-gray-50 mb-3">Future-Proof Your Apps</h3>
-                        <p class="text-gray-300 leading-relaxed">Ensure seamless compatibility with 'agentic' Siri and stay ahead of all future Apple AI services as they evolve, powered by our proactive insights.</p>
-                    </div>
-
-                    <!-- Feature 6 (Problem/Benefit focused) -->
-                    <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 group">
-                        <div class="text-5xl mb-4 text-indigo-400 group-hover:text-indigo-300 transition-colors duration-300">💡</div>
-                        <h3 class="text-2xl font-semibold text-gray-50 mb-3">Accelerate Developer Adoption</h3>
-                        <p class="text-gray-300 leading-relaxed">Reduce learning curves and integration headaches, allowing your team to rapidly innovate and deploy with Apple's cutting-edge AI technologies.</p>
-                    </div>
-
+            <!-- Placeholder Countdown Timer -->
+            <div class="flex justify-center items-center space-x-4 mb-12 text-white font-mono text-center">
+                <div class="countdown-segment">
+                    <div class="text-4xl md:text-5xl font-extrabold text-purple-400">07</div>
+                    <div class="text-sm md:text-lg text-gray-400 mt-1">Days</div>
+                </div>
+                <div class="countdown-segment">
+                    <div class="text-4xl md:text-5xl font-extrabold text-purple-400">18</div>
+                    <div class="text-sm md:text-lg text-gray-400 mt-1">Hours</div>
+                </div>
+                <div class="countdown-segment">
+                    <div class="text-4xl md:text-5xl font-extrabold text-purple-400">34</div>
+                    <div class="text-sm md:text-lg text-gray-400 mt-1">Mins</div>
+                </div>
+                <div class="countdown-segment">
+                    <div class="text-4xl md:text-5xl font-extrabold text-purple-400">59</div>
+                    <div class="text-sm md:text-lg text-gray-400 mt-1">Secs</div>
                 </div>
             </div>
-        </section>
+            <!-- End Countdown Timer -->
 
-        <!-- Waitlist Section with Countdown -->
-        <section id="waitlist" class="py-16 md:py-24 bg-gray-950">
-            <div class="container mx-auto px-4 max-w-3xl">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-50 mb-8 sm:mb-12">
-                    Get Exclusive Early Access
-                </h2>
-                <p class="text-lg sm:text-xl text-center text-gray-300 mb-8 max-w-2xl mx-auto">
-                    Don't get left behind as Apple redefines AI. Join our priority waitlist to be among the first to accelerate your Apple AI integrations.
-                </p>
-
-                <!-- Countdown Timer (Placeholder for dynamic JS) -->
-                <div class="bg-gradient-to-r from-purple-700 to-indigo-700 p-6 rounded-xl shadow-2xl mb-10 text-center animate-fade-in-up">
-                    <p class="text-2xl sm:text-3xl font-bold text-white mb-4">Limited Early Access Ends In:</p>
-                    <div class="flex justify-center items-center space-x-3 sm:space-x-6 text-white">
-                        <div class="flex flex-col items-center">
-                            <span class="text-4xl sm:text-5xl md:text-6xl font-extrabold" id="days">07</span>
-                            <span class="text-sm sm:text-base font-medium">Days</span>
-                        </div>
-                        <span class="text-4xl sm:text-5xl font-extrabold">:</span>
-                        <div class="flex flex-col items-center">
-                            <span class="text-4xl sm:text-5xl md:text-6xl font-extrabold" id="hours">14</span>
-                            <span class="text-sm sm:text-base font-medium">Hours</span>
-                        </div>
-                        <span class="text-4xl sm:text-5xl font-extrabold">:</span>
-                        <div class="flex flex-col items-center">
-                            <span class="text-4xl sm:text-5xl md:text-6xl font-extrabold" id="minutes">32</span>
-                            <span class="text-sm sm:text-base font-medium">Minutes</span>
-                        </div>
-                        <span class="text-4xl sm:text-5xl font-extrabold">:</span>
-                        <div class="flex flex-col items-center">
-                            <span class="text-4xl sm:text-5xl md:text-6xl font-extrabold" id="seconds">58</span>
-                            <span class="text-sm sm:text-base font-medium">Seconds</span>
-                        </div>
-                    </div>
-                    <p class="text-sm text-gray-200 mt-4">Spots are filling fast!</p>
+            <form class="bg-gray-800 rounded-xl p-8 md:p-10 shadow-xl border border-gray-700 max-w-xl mx-auto" action="#" method="POST">
+                <div class="mb-7 text-left">
+                    <label for="email" class="block text-gray-300 text-base font-semibold mb-3">Your Professional Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@yourcompany.com" required 
+                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200 text-lg">
                 </div>
-
-
-                <form class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-2xl space-y-6">
-                    <div>
-                        <label for="email" class="block text-xl font-medium text-gray-200 mb-2">Your Professional Email</label>
-                        <input type="email" id="email" name="email" placeholder="you@yourcompany.com" required
-                               class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg sm:text-xl">
-                    </div>
-                    <div>
-                        <label for="company" class="block text-xl font-medium text-gray-200 mb-2">Company (Optional)</label>
-                        <input type="text" id="company" name="company" placeholder="Your Company Name"
-                               class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg sm:text-xl">
-                    </div>
-                    <button type="submit" class="gradient-button text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out text-xl sm:text-2xl w-full">
-                        ⚡ Secure My Early Access Spot!
-                    </button>
-                    <p class="text-center text-sm text-gray-400">
-                        We respect your privacy. No spam, just updates on Agentic AI Edge.
-                    </p>
-                </form>
-            </div>
-        </section>
-    </main>
+                <button type="submit" 
+                        class="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 shadow-lg text-xl">
+                    Secure My Early Access!
+                </button>
+                <p class="text-xs text-gray-400 mt-5">We respect your privacy and will never spam you. Unsubscribe anytime.</p>
+            </form>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 text-center py-8 px-4 mt-auto">
-        <div class="container mx-auto">
-            <p>&copy; 2023 Agentic AI Edge. All rights reserved.</p>
-            <p class="mt-2 text-sm">Empowering developers in the rapidly evolving Apple AI ecosystem.</p>
+    <footer class="bg-gray-900 border-t border-gray-800 py-10 text-gray-400 text-center text-sm p-4">
+        <div class="container mx-auto max-w-screen-xl px-4">
+            <p>&copy; 2023 AgenticCore AI. All rights reserved.</p>
+            <p class="mt-3">Pioneering the future of intelligent applications on Apple platforms.</p>
         </div>
     </footer>
 
-    <!-- Simple JavaScript for the countdown (for demonstration, a real one would update dynamically) -->
-    <script>
-        // This is a static placeholder for the countdown for raw HTML output.
-        // In a live production environment, this function would be called with `setInterval(updateCountdown, 1000);`
-        // to dynamically update the time every second. The values below are pre-set to match the HTML.
-        function updateCountdown() {
-            const daysElem = document.getElementById('days');
-            const hoursElem = document.getElementById('hours');
-            const minutesElem = document.getElementById('minutes');
-            const secondsElem = document.getElementById('seconds');
-
-            // For dynamic functionality:
-            // const targetDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000 + 14 * 60 * 60 * 1000 + 32 * 60 * 1000 + 58 * 1000);
-            // const now = new Date();
-            // const totalSeconds = (targetDate - now) / 1000;
-            // if (totalSeconds < 0) {
-            //     // Handle countdown end
-            //     daysElem.textContent = hoursElem.textContent = minutesElem.textContent = secondsElem.textContent = '00';
-            //     return;
-            // }
-            // const days = Math.floor(totalSeconds / (3600 * 24));
-            // const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
-            // const minutes = Math.floor((totalSeconds % 3600) / 60);
-            // const seconds = Math.floor(totalSeconds % 60);
-            // daysElem.textContent = String(days).padStart(2, '0');
-            // hoursElem.textContent = String(hours).padStart(2, '0');
-            // minutesElem.textContent = String(minutes).padStart(2, '0');
-            // secondsElem.textContent = String(seconds).padStart(2, '0');
-        }
-        updateCountdown(); // Call once to ensure static values are set if not already in HTML
-    </script>
 </body>
 </html>
