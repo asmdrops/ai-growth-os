@@ -3,232 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastering One UI 9.5 & Galaxy AI: Unlock Productivity & Wellness</title>
+    <title>The Indie Artist's Playbook: Mastering Social Music Discovery & Engagement on Apps like Drops</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
+        /* Custom styles for dark mode and premium feel */
         body {
             font-family: 'Inter', sans-serif;
         }
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
+        /* Gradient overlay for hero image to improve text readability */
+        .hero-overlay {
+            background-image: linear-gradient(to top, rgba(17, 24, 39, 0.9) 0%, rgba(17, 24, 39, 0.6) 50%, rgba(17, 24, 39, 0.9) 100%);
         }
-        /* Custom scrollbar for dark mode aesthetic */
-        ::-webkit-scrollbar {
-            width: 10px;
+        /* Countdown specific styles */
+        .countdown-segment {
+            background-color: rgba(31, 41, 55, 0.8); /* bg-gray-800 with transparency */
+            border-radius: 0.5rem; /* rounded-lg */
+            padding: 0.75rem 1.25rem; /* p-3 px-5 */
         }
-        ::-webkit-scrollbar-track {
-            background: #1a202c; /* Tailwind gray-900 equivalent */
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        ::-webkit-scrollbar-thumb {
-            background: #4a5568; /* Tailwind gray-700 equivalent */
-            border-radius: 5px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #2d3748; /* Tailwind gray-800 equivalent */
+        .animate-fade-in-up {
+            animation: fade-in-up 1s ease-out forwards;
         }
     </style>
 </head>
-<body class="min-h-screen bg-gray-900 text-white antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative hero-background min-h-screen flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black bg-opacity-70 backdrop-blur-sm"></div>
-        <div class="relative z-10 max-w-4xl mx-auto text-center space-y-8">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white drop-shadow-lg">
-                Mastering One UI 9.5 & Galaxy AI
+    <header class="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+
+        <div class="relative z-10 p-4 max-w-7xl mx-auto flex flex-col items-center justify-center min-h-screen">
+            <span class="text-purple-400 uppercase tracking-wider text-sm md:text-base font-semibold mb-4 animate-pulse">TREND ALERT: Drops App is Here!</span>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 drop-shadow-lg animate-fade-in-up">
+                Unlock Viral Reach: <br class="sm:hidden">The Indie Artist's Playbook for <span class="text-purple-500">Drops</span> & Beyond
             </h1>
-            <p class="text-xl sm:text-2xl md:text-3xl font-light text-gray-200 leading-relaxed max-w-3xl mx-auto">
-                Unlock Peak Productivity & Wellness Features on Your Samsung Galaxy.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mb-10 leading-relaxed animate-fade-in-up" style="animation-delay: 0.2s;">
+                Master social music discovery and engagement on new apps like Drops to convert listeners into loyal fans.
             </p>
-            <div class="bg-gradient-to-r from-indigo-500 to-purple-600 p-6 sm:p-8 rounded-lg shadow-xl border border-indigo-700 mx-auto max-w-xl">
-                <p class="text-lg sm:text-xl font-semibold text-white mb-4">Limited Time Offer Ending In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 text-3xl sm:text-4xl md:text-5xl font-bold">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="text-purple-200">00</span>
-                        <span class="text-xs sm:text-sm text-gray-300 font-normal">Days</span>
+
+            <!-- Limited Time Offer & Countdown -->
+            <div class="mb-12 bg-purple-900 bg-opacity-30 border border-purple-700 rounded-xl p-6 shadow-2xl backdrop-filter backdrop-blur-sm animate-fade-in-up" style="animation-delay: 0.4s;">
+                <p class="text-lg md:text-xl font-bold text-yellow-300 mb-4 animate-bounce">Limited Time Founding Member Offer!</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 md:space-x-6 lg:space-x-8 text-gray-50">
+                    <div class="countdown-segment flex flex-col items-center">
+                        <span id="days" class="text-4xl md:text-5xl lg:text-6xl font-extrabold">00</span>
+                        <span class="text-xs md:text-sm uppercase tracking-wide">Days</span>
                     </div>
-                    <span class="text-purple-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="text-purple-200">00</span>
-                        <span class="text-xs sm:text-sm text-gray-300 font-normal">Hours</span>
+                    <div class="countdown-segment flex flex-col items-center">
+                        <span id="hours" class="text-4xl md:text-5xl lg:text-6xl font-extrabold">00</span>
+                        <span class="text-xs md:text-sm uppercase tracking-wide">Hours</span>
                     </div>
-                    <span class="text-purple-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="text-purple-200">00</span>
-                        <span class="text-xs sm:text-sm text-gray-300 font-normal">Minutes</span>
+                    <div class="countdown-segment flex flex-col items-center">
+                        <span id="minutes" class="text-4xl md:text-5xl lg:text-6xl font-extrabold">00</span>
+                        <span class="text-xs md:text-sm uppercase tracking-wide">Minutes</span>
                     </div>
-                    <span class="text-purple-400">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="text-purple-200">00</span>
-                        <span class="text-xs sm:text-sm text-gray-300 font-normal">Seconds</span>
+                    <div class="countdown-segment flex flex-col items-center">
+                        <span id="seconds" class="text-4xl md:text-5xl lg:text-6xl font-extrabold">00</span>
+                        <span class="text-xs md:text-sm uppercase tracking-wide">Seconds</span>
                     </div>
                 </div>
-                <button class="mt-8 px-8 sm:px-10 py-4 bg-white text-gray-900 text-lg sm:text-xl font-bold rounded-full shadow-lg hover:bg-gray-200 transform hover:scale-105 transition-all duration-300 ease-in-out uppercase tracking-wider">
-                    Get Instant Access Now!
-                </button>
-                <p class="text-sm text-gray-300 mt-4">One-time purchase, lifetime updates included.</p>
             </div>
+            
+            <a href="#waitlist-form" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-full text-xl md:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg animate-fade-in-up" style="animation-delay: 0.6s;">
+                Secure Your Spot & Get Early Access!
+            </a>
         </div>
     </header>
 
-    <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-900 px-4">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white mb-12 sm:mb-16 leading-tight">
-                What You'll Achieve with This Guide
+    <!-- Problem/Opportunity Section -->
+    <section class="py-16 md:py-24 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 text-white">
+                The Music Industry is Evolving. <span class="text-purple-500">Are You Keeping Up?</span>
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-
-                <!-- Feature 1: Health Optimization -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center justify-center w-16 h-16 bg-indigo-600 rounded-full text-white text-3xl mb-6 shadow-md">
-                        <span role="img" aria-label="Heartbeat">❤️</span>
-                    </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Optimize Your Wellness</h3>
-                    <p class="text-gray-300 text-base sm:text-lg leading-relaxed">
-                        Master the new One UI 9.5 Health features to track, analyze, and improve your daily well-being. From sleep patterns to workout routines, leverage AI for personalized health insights.
-                    </p>
+            <p class="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+                With new social music apps like <strong class="text-purple-400">Drops</strong> emerging, independent artists have an unprecedented opportunity to gain visibility and build a direct connection with fans. But how do you stand out in a crowded digital landscape?
+            </p>
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 max-w-md w-full">
+                    <h3 class="text-2xl font-bold mb-4 text-purple-400">The Challenge</h3>
+                    <ul class="text-lg text-gray-300 text-left space-y-3">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 text-red-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Struggling to get your music discovered?
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 text-red-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Confused by ever-changing algorithms?
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 text-red-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Difficulty converting listeners into loyal fans?
+                        </li>
+                    </ul>
                 </div>
-
-                <!-- Feature 2: Calendar Productivity -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center justify-center w-16 h-16 bg-purple-600 rounded-full text-white text-3xl mb-6 shadow-md">
-                        <span role="img" aria-label="Calendar">📅</span>
-                    </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Supercharge Your Schedule</h3>
-                    <p class="text-gray-300 text-base sm:text-lg leading-relaxed">
-                        Navigate the enhanced Calendar app with advanced AI scheduling, smart reminders, and seamless integration with your daily tasks. Never miss an important event again.
-                    </p>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 max-w-md w-full">
+                    <h3 class="text-2xl font-bold mb-4 text-purple-400">The Opportunity</h3>
+                    <ul class="text-lg text-gray-300 text-left space-y-3">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            New apps like Drops revolutionize music sharing.
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Massive potential for viral reach & organic growth.
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Direct path to building a devoted, engaged community.
+                        </li>
+                    </ul>
                 </div>
-
-                <!-- Feature 3: Galaxy AI Power -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center justify-center w-16 h-16 bg-pink-600 rounded-full text-white text-3xl mb-6 shadow-md">
-                        <span role="img" aria-label="Robot">🤖</span>
-                    </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Unleash AI Power</h3>
-                    <p class="text-gray-300 text-base sm:text-lg leading-relaxed">
-                        Discover the full potential of Galaxy AI across your device. Learn AI-driven photo editing, smart text summaries, live translation, and other productivity hacks.
-                    </p>
-                </div>
-
-                <!-- Feature 4: Seamless Integration -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center justify-center w-16 h-16 bg-green-600 rounded-full text-white text-3xl mb-6 shadow-md">
-                        <span role="img" aria-label="Gear">⚙️</span>
-                    </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Seamless Device Integration</h3>
-                    <p class="text-gray-300 text-base sm:text-lg leading-relaxed">
-                        Understand how One UI 9.5 streamlines interactions between your Galaxy phone, tablet, and watch. Create a unified ecosystem for maximum efficiency.
-                    </p>
-                </div>
-
-                <!-- Feature 5: Privacy & Security -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center justify-center w-16 h-16 bg-red-600 rounded-full text-white text-3xl mb-6 shadow-md">
-                        <span role="img" aria-label="Lock">🔒</span>
-                    </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Enhanced Privacy Controls</h3>
-                    <p class="text-gray-300 text-base sm:text-lg leading-relaxed">
-                        Dive deep into the updated privacy settings of One UI 9.5. Learn to manage your data, app permissions, and ensure your personal information stays secure.
-                    </p>
-                </div>
-
-                <!-- Feature 6: Always-Updated Content -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center justify-center w-16 h-16 bg-yellow-600 rounded-full text-white text-3xl mb-6 shadow-md">
-                        <span role="img" aria-label="Refresh">🔄</span>
-                    </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Future-Proof Your Knowledge</h3>
-                    <p class="text-gray-300 text-base sm:text-lg leading-relaxed">
-                        This premium guide is 'always-updated'. As One UI evolves, so does our content, ensuring you always have the latest insights and mastery over your device.
-                    </p>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / Early Access Form Section -->
-    <section class="py-16 md:py-24 bg-gradient-to-br from-gray-900 to-gray-800 px-4">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
-                Stay Ahead of the Curve
+    <!-- Features Section -->
+    <section class="py-16 md:py-24 bg-gray-800 border-t border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 text-white">
+                Inside <span class="text-purple-500">The Indie Artist's Playbook</span>, You'll Discover:
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Be the first to know about future updates, exclusive tips, and advanced Galaxy AI insights. Join our priority notification list!
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Feature 1 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300">
+                    <svg class="w-12 h-12 text-purple-400 mb-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c-1.381 0-2.298.818-3 2h0c-.702-.182-1.619-1-3-2V5c0-.628.718-1 1.25-1h13.5c.532 0 1.25.372 1.25 1v12c0 .628-.718 1-1.25 1H9z"></path></svg>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Optimized Audio Clips</h3>
+                    <p class="text-gray-300">Learn to craft compelling short-form audio clips perfectly tailored for social sharing, maximizing engagement on platforms like Drops and TikTok.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300">
+                    <svg class="w-12 h-12 text-purple-400 mb-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.552 3.546a2 2 0 00.936 0m-6.552-3.546L13.5 8.688a2 2 0 00-.936 0m-6.552 3.546c-.07.2-.115.416-.145.626a5.55 5.55 0 01-1.144 2.872C4.192 18.237 7.394 21 12 21c4.606 0 7.808-2.763 8.327-6.208.03-.21.075-.426.145-.626M5.244 12c.07-.2.115-.416.145-.626C5.59 7.763 8.792 5 12 5c4.606 0 7.808 2.763 8.327 6.208.03-.21.075-.426.145-.626M8.684 13.342c-.07.2-.115.416-.145.626C5.59 16.237 4.192 18.237 3.673 21M5.244 12c-.07-.2-.115-.416-.145-.626C5.59 7.763 4.192 5.763 3.673 3"></path></svg>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Viral Social Sharing</h3>
+                    <p class="text-gray-300">Uncover the secrets to leveraging social sharing features for maximum viral reach, turning casual listeners into your biggest advocates.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300">
+                    <svg class="w-12 h-12 text-purple-400 mb-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Algorithm Mastery</h3>
+                    <p class="text-gray-300">Demystify platform algorithms. Learn how they work, how to feed them, and how to get your music seen by the right audience.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300">
+                    <svg class="w-12 h-12 text-purple-400 mb-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M12 20a8 8 0 100-16 8 8 0 000 16zm-5-9H3v-1H3V8h4.085A6.002 6.002 0 006 12c0 1.25.32 2.43.89 3.486L4 17h16l-2.89-3.514A6.002 6.002 0 0018 12c0-1.25-.32-2.43-.89-3.486L21 8h-4.085A6.002 6.002 0 0018 12z"></path></svg>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Fan Conversion Secrets</h3>
+                    <p class="text-gray-300">Implement proven strategies to convert engaged listeners into loyal fans who stream your music, attend shows, and support your journey.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300">
+                    <svg class="w-12 h-12 text-purple-400 mb-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.206 5 7.5 5A6.5 6.5 0 003 11.5c0 1.638.508 3.167 1.393 4.318c.356.467.828.91 1.378 1.341c.214.17.432.333.66.494M12 6.253c1.168.776 2.15 1.761 2.913 2.913M12 6.253a6.5 6.5 0 012.913-2.913M12 6.253C13.168 5.477 14.794 5 16.5 5A6.5 6.5 0 0121 11.5c0 1.638-.508 3.167-1.393 4.318c-.356.467-.828.91-1.378 1.341-.214.17-.432.333-.66.494M12 13v6m-4-6h8"></path></svg>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Case Studies & Templates</h3>
+                    <p class="text-gray-300">Access real-world case studies and ready-to-use content templates to kickstart your campaign and apply strategies immediately.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700 transform hover:scale-105 transition duration-300">
+                    <svg class="w-12 h-12 text-purple-400 mb-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Cross-Platform Promotion</h3>
+                    <p class="text-gray-300">Master effective strategies for promoting your music across various platforms, amplifying your reach and driving consistent streams.</p>
+                </div>
+
+            </div>
+            <div class="mt-16">
+                <a href="#waitlist-form" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                    Ready to Level Up Your Music Career?
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist Form Section -->
+    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-900">
+        <div class="max-w-xl mx-auto px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 text-white">
+                Don't Miss Out! <span class="text-purple-500">Join the Waitlist Today.</span>
+            </h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
+                Be among the first to gain access to 'The Indie Artist's Playbook' and receive exclusive early bird pricing updates.
             </p>
-            <form action="#" method="POST" class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <input type="email" placeholder="Enter your best email address" required
-                       class="w-full sm:w-2/3 md:w-1/2 px-6 py-4 rounded-full bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg placeholder-gray-400 shadow-inner">
-                <button type="submit"
-                        class="w-full sm:w-1/3 md:w-1/4 px-6 py-4 bg-indigo-600 text-white font-bold rounded-full shadow-lg hover:bg-indigo-700 transform hover:scale-105 transition-all duration-300 ease-in-out text-lg uppercase tracking-wider">
-                    Get Notified
-                </button>
+            
+            <form class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700 space-y-6">
+                <div>
+                    <label for="name" class="sr-only">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" 
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200"
+                           required>
+                </div>
+                <div>
+                    <label for="email" class="sr-only">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Best Email" 
+                           class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition duration-200"
+                           required>
+                </div>
+                <div>
+                    <button type="submit" 
+                            class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                        Get Early Access & Updates!
+                    </button>
+                </div>
+                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, ever.</p>
             </form>
-            <p class="text-sm text-gray-400 mt-6">
-                We respect your privacy. No spam, ever.
-            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 text-center text-gray-500 text-sm">
-        <div class="max-w-7xl mx-auto px-4">
-            <p>&copy; 2023 Mastering One UI & Galaxy AI. All rights reserved.</p>
-            <p class="mt-2">A Premium Digital Education Product.</p>
+    <footer class="bg-gray-900 py-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <p>&copy; 2023 The Indie Artist's Playbook. All rights reserved.</p>
+            <p class="mt-2">Powered by Digital Education Authority</p>
         </div>
     </footer>
 
-    <!-- Countdown Script -->
+    <!-- Countdown JavaScript -->
     <script>
-        function setupCountdown() {
-            // Set the date we're counting down to (e.g., 7 days from now)
-            // For production, you'd set a specific future date: new Date("Dec 25, 2023 10:00:00").getTime();
-            const now = new Date();
-            const countDownDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)).getTime(); // 7 days from now
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (e.g., 7 days from now for a limited offer)
+            // For demonstration, let's set it to 7 days from the page load.
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now
+            // Alternatively, set a specific date for an actual deadline: new Date("Dec 25, 2024 10:00:00").getTime();
 
             const x = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = countDownDate - now;
+                const distance = countDownDate.getTime() - now;
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    const countdownElement = document.getElementById("countdown");
+                    if (countdownElement) {
+                        countdownElement.innerHTML = "<p class='text-red-400 text-xl font-bold'>Offer Expired!</p>";
+                        // Optionally disable the CTA button
+                        const ctaButton = document.querySelector('a[href="#waitlist-form"]');
+                        if (ctaButton) {
+                            ctaButton.classList.add('opacity-50', 'cursor-not-allowed');
+                            ctaButton.removeAttribute('href');
+                            ctaButton.textContent = "Offer Expired";
+                        }
+                    }
+                    return;
+                }
 
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                if (document.getElementById("days")) {
-                    document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                    document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                    document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                    document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-                }
-
-                if (distance < 0) {
-                    clearInterval(x);
-                    if (document.getElementById("countdown")) {
-                        document.getElementById("countdown").innerHTML = "Offer Expired";
-                        document.getElementById("countdown").classList.add("text-red-400");
-                        document.getElementById("countdown").classList.remove("text-purple-200", "text-3xl", "sm:text-4xl", "md:text-5xl");
-                        document.getElementById("countdown").classList.add("text-xl", "sm:text-2xl");
-                    }
-                    const ctaButton = document.querySelector('.hero-background button');
-                    if (ctaButton) {
-                        ctaButton.textContent = 'Offer Ended - Join Waitlist for Next Discount';
-                        ctaButton.disabled = true;
-                        ctaButton.classList.remove('hover:bg-gray-200', 'transform', 'hover:scale-105');
-                        ctaButton.classList.add('opacity-50', 'cursor-not-allowed', 'bg-gray-400', 'text-gray-700');
-                    }
-                }
+                // Update the countdown elements, ensuring they exist
+                const getElement = (id) => document.getElementById(id);
+                if (getElement("days")) getElement("days").innerHTML = String(days).padStart(2, '0');
+                if (getElement("hours")) getElement("hours").innerHTML = String(hours).padStart(2, '0');
+                if (getElement("minutes")) getElement("minutes").innerHTML = String(minutes).padStart(2, '0');
+                if (getElement("seconds")) getElement("seconds").innerHTML = String(seconds).padStart(2, '0');
             }, 1000);
-        }
-
-        document.addEventListener('DOMContentLoaded', setupCountdown);
+        });
     </script>
 </body>
 </html>
