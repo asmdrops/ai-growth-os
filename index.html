@@ -3,183 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GTA 6 Day One & Online Dominance Kit - Master Grand Theft Auto VI</title>
-    <!-- Tailwind CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Google Fonts for a modern premium feel -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Automate with AI Agent Swarms | Gemini 4 Carbon No-Code Platform</title>
+    <meta name="description" content="Design, deploy, and manage custom AI agent swarms powered by Gemini 4 Carbon. Automate complex workflows with our no-code/low-code SaaS platform.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-        }
+        /* Custom styles for background image and overlay */
         .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            position: relative;
+            background-attachment: fixed; /* For a subtle parallax effect */
         }
-        .hero-bg::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.75); /* Darker overlay for maximum text readability */
-            z-index: 1;
+        .gradient-overlay {
+            background: linear-gradient(to top, rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 0.5));
         }
-        .hero-content {
-            position: relative;
-            z-index: 2;
+        /* Styles for the Limited Time Countdown box */
+        .countdown-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem; /* Smaller gap for mobile */
         }
-        /* Custom animation for the countdown */
-        @keyframes pulse-slow {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.02); opacity: 0.95; }
+        .countdown-item {
+            background-color: rgba(0,0,0,0.4);
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 1.5rem; /* Base font size */
+            font-weight: bold;
+            color: #E2E8F0; /* gray-200 */
+            border: 1px solid rgba(255,255,255,0.1);
+            line-height: 1; /* Adjust line height for better vertical alignment */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .animate-pulse-slow {
-            animation: pulse-slow 4s infinite ease-in-out;
+        @media (min-width: 768px) { /* Medium screens and up */
+            .countdown-box {
+                gap: 1.5rem;
+            }
+            .countdown-item {
+                padding: 1rem 1.5rem;
+                font-size: 2.5rem;
+            }
+        }
+        @media (min-width: 1024px) { /* Large screens and up */
+            .countdown-item {
+                font-size: 3rem;
+            }
+        }
+        /* Custom bounce animation for CTA */
+        @keyframes bounce-custom {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+        .animate-bounce-custom {
+            animation: bounce-custom 2s infinite ease-in-out;
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-bg min-h-screen flex items-center justify-center text-center py-24 px-4">
-        <div class="hero-content max-w-5xl mx-auto">
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg animate-pulse-slow">
-                Dominate Grand Theft Auto VI From Day One.
+    <header class="relative hero-bg min-h-screen flex items-center justify-center text-center">
+        <div class="absolute inset-0 gradient-overlay"></div> <!-- Darker gradient overlay for readability -->
+        <div class="relative z-10 container mx-auto px-4 py-24 md:py-32 lg:py-48">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                <span class="text-indigo-400">Unleash</span> AI Agent Swarms <br class="md:hidden"> with <span class="text-green-400">Gemini 4 Carbon</span>
             </h1>
-            <p class="text-xl md:text-2xl lg:text-3xl font-medium mb-10 text-gray-200 px-2">
-                Unlock early success, flawless gameplay & online riches with the exclusive GTA 6 Dominance Kit.
+            <p class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-gray-200 mb-10 max-w-4xl mx-auto drop-shadow-md">
+                Design, deploy, and manage custom AI automation workflows – no code required.
             </p>
 
             <!-- Limited Time Countdown -->
-            <div class="bg-gradient-to-r from-purple-800 to-indigo-800 p-6 md:p-8 rounded-lg shadow-2xl mb-12 transform hover:scale-105 transition-transform duration-300 border-b-4 border-indigo-500">
-                <p class="text-2xl md:text-3xl font-bold text-white mb-3 flex items-center justify-center">
-                    <span class="mr-2 text-red-400">🚨</span> Limited Time Launch Offer! <span class="ml-2 text-red-400">🚨</span>
-                </p>
-                <div class="flex justify-center items-center space-x-4 text-white">
-                    <div class="flex flex-col items-center">
-                        <span id="countdown-hours" class="text-4xl md:text-5xl font-extrabold drop-shadow-md">00</span>
-                        <span class="text-sm md:text-base font-semibold">Hours</span>
-                    </div>
-                    <span class="text-4xl md:text-5xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="countdown-minutes" class="text-4xl md:text-5xl font-extrabold drop-shadow-md">00</span>
-                        <span class="text-sm md:text-base font-semibold">Minutes</span>
-                    </div>
-                    <span class="text-4xl md:text-5xl font-extrabold">:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="countdown-seconds" class="text-4xl md:text-5xl font-extrabold drop-shadow-md">00</span>
-                        <span class="text-sm md:text-base font-semibold">Seconds</span>
-                    </div>
+            <div class="bg-purple-800 bg-opacity-70 text-white p-6 md:p-8 rounded-xl shadow-2xl inline-block mb-12 transform hover:scale-105 transition-transform duration-300">
+                <p class="text-sm md:text-lg font-semibold uppercase tracking-widest mb-4">Limited-Time Early Access Offer!</p>
+                <div class="countdown-box">
+                    <div class="countdown-item"><span id="days">07</span><span class="block text-xs md:text-sm font-normal uppercase">Days</span></div>
+                    <div class="countdown-item"><span id="hours">23</span><span class="block text-xs md:text-sm font-normal uppercase">Hrs</span></div>
+                    <div class="countdown-item"><span id="minutes">59</span><span class="block text-xs md:text-sm font-normal uppercase">Min</span></div>
+                    <div class="countdown-item"><span id="seconds">59</span><span class="block text-xs md:text-sm font-normal uppercase">Sec</span></div>
                 </div>
-                <p class="text-sm md:text-base mt-4 text-gray-200">
-                    Join the waitlist to lock in your exclusive launch discount before it vanishes!
-                </p>
+                <p class="mt-4 text-xs md:text-sm text-gray-200">Exclusive access for the first 1000 sign-ups.</p>
             </div>
-            <!-- CTA Button -->
-            <a href="#waitlist-form" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl shadow-xl transform hover:scale-105 transition-transform duration-300 ease-in-out uppercase tracking-wide border-2 border-indigo-500">
-                Secure Your Day One Dominance Kit Access
+
+            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl transition-all duration-300 transform hover:scale-105 shadow-lg animate-bounce-custom">
+                Join The Waitlist Now!
             </a>
-            <p class="mt-5 text-base text-gray-400">Join 15,000+ ambitious gamers ready to conquer Vice City.</p>
+            <p class="text-sm text-gray-400 mt-4">Secure your spot for revolutionary AI automation.</p>
         </div>
     </header>
 
-    <!-- Why You Need This / Trend Section -->
-    <section class="py-20 px-4 bg-gray-900 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-indigo-400">
-                🚀 GTA 6 Preloading Is LIVE! Are YOU Truly Ready? 🚀
-            </h2>
-            <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
-                The most anticipated game of the decade is on the horizon, and preloading has begun. Don't be caught off guard struggling with installation glitches, optimizing settings, or missing out on crucial early-game advantages. Our kit ensures you hit the ground running, flawlessly, and efficiently.
-            </p>
-            <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
-                Avoid the common day-one frustrations and focus on what truly matters: dominating Vice City and building your empire from the very first minute.
-            </p>
-        </div>
-    </section>
-
     <!-- Features Section -->
-    <section class="py-20 px-4 bg-gray-950">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-14 text-white">
-                What's Inside Your GTA 6 Dominance Kit?
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300 border-t-4 border-indigo-600">
-                    <div class="text-5xl mb-6 flex justify-center">⚙️</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Flawless Day One Setup & Troubleshooting</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Say goodbye to installation nightmares! Our step-by-step guide covers ALL platforms (PlayStation, Xbox & PC), ensuring a smooth, hassle-free launch. Get ahead with common issue fixes before they even occur.
-                    </p>
-                </div>
-                <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300 border-t-4 border-purple-600">
-                    <div class="text-5xl mb-6 flex justify-center">🎮</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Optimal Graphics & Network Settings</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Experience GTA 6 as it's truly meant to be played. Discover the perfect balance of visual fidelity and buttery-smooth frame rates, plus network settings to minimize lag and maximize your online advantage.
-                    </p>
-                </div>
-                <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300 border-t-4 border-emerald-600">
-                    <div class="text-5xl mb-6 flex justify-center">💰</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Early Money-Making & Progression Blueprint</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Become an online mogul faster than anyone else! Our exclusive blueprint reveals the most lucrative early-game strategies to build your wealth, upgrade your gear, and dominate the streets of Vice City Online.
-                    </p>
-                </div>
-            </div>
-            <p class="mt-16 text-xl md:text-2xl text-gray-200 font-semibold">
-                Delivered as a premium, easy-to-follow e-book or immersive video course – your choice!
+    <section id="features" class="py-16 md:py-24 lg:py-32 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 text-white">Transform Your Workflows with <span class="text-indigo-400">Intelligent Automation</span></h2>
+            <p class="text-lg md:text-xl text-center text-gray-300 max-w-3xl mx-auto mb-16">
+                Our platform leverages the cutting-edge capabilities of Gemini 4 Carbon to empower your business with custom AI agent swarms, automating tasks previously unimaginable.
             </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12">
+
+                <!-- Feature 1: No-Code/Low-Code Interface -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-indigo-400 mb-4 text-5xl">💡</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">No-Code AI Swarm Builder</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Visually design, configure, and deploy sophisticated AI agent swarms without writing a single line of code. Intuitive drag-and-drop interface for complex logic.
+                    </p>
+                </div>
+
+                <!-- Feature 2: Gemini 4 Carbon Power -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-green-400 mb-4 text-5xl">⚡</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Powered by Gemini 4 Carbon</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Harness the unparalleled intelligence and multi-modal capabilities of Google's latest Gemini 4 Carbon, optimized for enterprise-grade automation.
+                    </p>
+                </div>
+
+                <!-- Feature 3: Automate Complex Workflows -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-yellow-400 mb-4 text-5xl">⚙️</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Automate Complex Workflows</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        From comprehensive market research reports to dynamic customer support escalation and personalized content pipelines – automate multi-step processes with precision.
+                    </p>
+                </div>
+
+                <!-- Feature 4: Scalable & Resilient Swarms -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-red-400 mb-4 text-5xl">📈</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Scalable & Resilient Swarms</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Our infrastructure ensures your AI agent swarms scale effortlessly with demand, maintaining high performance and reliability for critical business operations.
+                    </p>
+                </div>
+
+                <!-- Feature 5: Customization & Integration -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-blue-400 mb-4 text-5xl">🎨</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Customization & Integration</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Tailor your AI agents to specific business needs and seamlessly integrate with your existing tools and data sources for a truly unified automation solution.
+                    </p>
+                </div>
+
+                <!-- Feature 6: Secure & Compliant Operations -->
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-700">
+                    <div class="text-purple-400 mb-4 text-5xl">🛡️</div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Secure & Compliant Operations</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Built with enterprise security in mind, ensuring your data and operations are protected with advanced encryption and compliance standards.
+                    </p>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-20 px-4 bg-gradient-to-br from-gray-900 to-black text-center">
-        <div class="max-w-2xl mx-auto bg-gray-800 p-10 rounded-xl shadow-2xl border border-indigo-700">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Join the Elite Waitlist for GTA 6 Dominance
-            </h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-                Be among the first to get access to the GTA 6 Day One & Online Dominance Kit. Sign up now for exclusive launch discounts and early bird access!
+    <!-- Waitlist / Call to Action Section -->
+    <section id="waitlist" class="py-16 md:py-24 lg:py-32 bg-gray-900 text-center">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-white">Ready to Transform Your Business?</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-12">
+                Be among the first to experience the revolutionary power of Gemini 4 Carbon AI Agent Swarms. Join our exclusive waitlist for early access and updates.
             </p>
 
-            <form action="#" method="POST" class="space-y-6">
-                <div>
-                    <input type="text" id="name" name="name" placeholder="Your Name (Optional)"
-                           class="w-full px-5 py-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg transition-all duration-200">
+            <form class="max-w-xl mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700">
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-300 text-lg font-semibold mb-2">Your Professional Email:</label>
+                    <input type="email" id="email" name="email" placeholder="business.email@example.com"
+                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
+                           required>
                 </div>
-                <div>
-                    <input type="email" id="email" name="email" placeholder="Your Best Email Address" required
-                           class="w-full px-5 py-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg transition-all duration-200">
+                <div class="mb-8 text-left">
+                    <label for="company" class="block text-gray-300 text-lg font-semibold mb-2">Company (Optional):</label>
+                    <input type="text" id="company" name="company" placeholder="Your Company Name"
+                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200">
                 </div>
-                <button type="submit"
-                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg text-xl uppercase tracking-wide shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                    Get Early Access & Exclusive Discounts
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full text-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    Join The Waitlist!
                 </button>
+                <p class="text-sm text-gray-400 mt-4">We respect your privacy. Your information will not be shared.</p>
             </form>
-            <p class="mt-8 text-sm text-gray-400">
-                We respect your privacy. Your email will only be used for updates regarding the GTA 6 Dominance Kit.
-            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-10 px-4 text-center text-gray-500 text-sm">
-        <p>&copy; 2023 Digital Education Authority. All rights reserved. Not affiliated with Rockstar Games or Take-Two Interactive.</p>
-        <p class="mt-2">Disclaimer: Grand Theft Auto VI is a trademark of Rockstar Games. This guide is an independent product for informational purposes only and is not endorsed by or affiliated with Rockstar Games.</p>
+    <footer class="bg-gray-900 border-t border-gray-800 py-10">
+        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+            <p>&copy; 2023 AI Agent Swarms Inc. All rights reserved.</p>
+            <nav class="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2">
+                <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors duration-200">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors duration-200">Terms of Service</a>
+                <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors duration-200">Contact Us</a>
+            </nav>
+        </div>
     </footer>
 
-    <!-- Placeholder for JavaScript - Actual JS for countdown is omitted as per "Return ONLY raw HTML" requirement -->
-    <!-- A real implementation would update the #countdown-hours, #countdown-minutes, #countdown-seconds elements dynamically. -->
+    <!-- Note: A JavaScript snippet would typically be used here to power the live countdown. -->
+    <!-- For raw HTML, the numbers above are static placeholders to showcase the design. -->
+
 </body>
 </html>
