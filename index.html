@@ -3,243 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elevate Your Tabletop AI Workspaces | QuantumCollab</title>
+    <title>Rapid-Response Outage Hub - Never Lose Communication</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for hero image overlay and subtle gradients */
-        .hero-background {
+        /* Custom styles for background image and dark scrollbar for a premium feel */
+        .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
         }
-        .hero-background::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
-            z-index: 0; /* Ensure overlay is behind text, but within the hero-background stacking context */
+        ::-webkit-scrollbar {
+            width: 8px;
+            background-color: #1a202c; /* bg-gray-900 */
         }
-        .hero-background > div {
-            position: relative;
-            z-index: 1; /* Ensure text and countdown are above the overlay */
+        ::-webkit-scrollbar-thumb {
+            background-color: #4a5568; /* bg-gray-600 */
+            border-radius: 4px;
         }
-        .text-gradient-purple-blue {
-            background: linear-gradient(to right, #a78bfa, #6366f1); /* Tailwind's purple-400 to indigo-500 */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .btn-gradient {
-            background: linear-gradient(to right, #8b5cf6, #3b82f6); /* Tailwind's purple-500 to blue-500 */
-            transition: all 0.3s ease;
-        }
-        .btn-gradient:hover {
-            background: linear-gradient(to right, #3b82f6, #8b5cf6); /* Reverse gradient on hover */
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: .8;
-            }
-        }
-        .animate-pulse-subtle {
-            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #a0aec0; /* bg-gray-400 */
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-gray-900 text-gray-50 antialiased font-sans">
 
     <!-- Hero Section -->
-    <header class="hero-background min-h-screen flex items-center justify-center relative py-20 px-4">
-        <div class="relative z-10 text-center max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 animate-pulse-subtle">
-                <span class="text-gradient-purple-blue">QuantumCollab:</span> Elevate Your Google Tabletop AI
-            </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
-                Go beyond native functionalities. Instantly deploy **industry-specific Tabletop AI workspaces** with custom CRM, project management, and specialized analytics integrations.
+    <header class="relative h-screen flex items-center justify-center hero-bg bg-cover bg-center bg-no-repeat">
+        <div class="absolute inset-0 bg-black bg-opacity-75"></div> <!-- Dark Overlay for readability -->
+
+        <div class="relative z-10 text-center px-4 md:px-8 lg:px-16 max-w-4xl mx-auto">
+            <p class="text-indigo-400 text-sm md:text-base font-semibold uppercase tracking-wide mb-4">
+                Market Trend: Recent Outlook outages show the critical need for a backup.
             </p>
-            <div class="bg-gray-800 bg-opacity-80 backdrop-filter backdrop-blur-lg p-6 rounded-xl shadow-2xl border border-purple-700 max-w-md mx-auto mb-8">
-                <p class="text-xl sm:text-2xl font-semibold text-purple-300 mb-3">Limited Access: Join Our Exclusive Waitlist!</p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 text-purple-200 text-3xl sm:text-4xl md:text-5xl font-mono mb-4">
-                    <div class="text-center">
-                        <span id="days" class="block font-bold">00</span>
-                        <span class="text-sm sm:text-base">Days</span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                Don't Let Cloud Outages Silence Your Business.
+            </h1>
+            <p class="text-xl sm:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">
+                Introducing the <span class="text-indigo-300 font-bold">Rapid-Response Outage Hub</span>: Your secure, single-click communication lifeline when primary systems fail.
+            </p>
+
+            <!-- Limited Time Offer & Countdown -->
+            <div class="bg-indigo-700 bg-opacity-80 p-6 rounded-xl shadow-2xl mb-10 border border-indigo-600">
+                <h3 class="text-2xl font-bold mb-4 text-white">Exclusive Early Access Offer!</h3>
+                <p class="text-lg text-indigo-100 mb-6">
+                    Join our waitlist now and secure <span class="font-bold text-yellow-300">50% off</span> your first 6 months. Offer ends in:
+                </p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 md:space-x-8 text-white font-mono">
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl md:text-5xl lg:text-6xl font-bold" id="days">00</span>
+                        <span class="text-sm md:text-base text-gray-200 uppercase">Days</span>
                     </div>
-                    <span class="text-3xl sm:text-4xl">:</span>
-                    <div class="text-center">
-                        <span id="hours" class="block font-bold">00</span>
-                        <span class="text-sm sm:text-base">Hours</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl md:text-5xl lg:text-6xl font-bold" id="hours">00</span>
+                        <span class="text-sm md:text-base text-gray-200 uppercase">Hours</span>
                     </div>
-                    <span class="text-3xl sm:text-4xl">:</span>
-                    <div class="text-center">
-                        <span id="minutes" class="block font-bold">00</span>
-                        <span class="text-sm sm:text-base">Mins</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl md:text-5xl lg:text-6xl font-bold" id="minutes">00</span>
+                        <span class="text-sm md:text-base text-gray-200 uppercase">Minutes</span>
                     </div>
-                    <span class="text-3xl sm:text-4xl">:</span>
-                    <div class="text-center">
-                        <span id="seconds" class="block font-bold">00</span>
-                        <span class="text-sm sm:text-base">Secs</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl md:text-5xl lg:text-6xl font-bold" id="seconds">00</span>
+                        <span class="text-sm md:text-base text-gray-200 uppercase">Seconds</span>
                     </div>
                 </div>
-                <p class="text-red-400 text-sm sm:text-base italic">⏳ Hurry, exclusive access slots are filling up fast!</p>
             </div>
-            <a href="#waitlist-form" class="inline-block btn-gradient text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
-                Secure Your Spot Now!
+
+            <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Secure Your Lifeline Now
             </a>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 px-4 bg-gray-900">
-        <div class="container mx-auto max-w-7xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16 text-gray-50">Why QuantumCollab is Your Edge</h2>
+    <section id="features" class="py-20 md:py-24 bg-gray-900 text-gray-50 px-4 md:px-8 lg:px-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 text-white">
+                How <span class="text-indigo-400">Rapid-Response Outage Hub</span> Empowers Your Business
+            </h2>
+            <p class="text-center text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-16">
+                When critical services like M365, Google Workspace, or AWS go down, your business shouldn't. Our platform provides the essential tools to stay connected and informed, regardless of primary system failures.
+            </p>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Feature 1: Rapid Deployment Templates -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-purple-800 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">🚀</span>
-                        <h3 class="text-2xl font-semibold text-gray-50">Industry-Specific Templates</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+
+                <!-- Feature 1: Pre-configured Emergency Plans -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-indigo-500 mb-6 text-5xl">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14c-1.657 0-3 .895-3 2v1h6v-1c0-1.105-1.343-2-3-2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
-                    <p class="text-gray-300 text-lg">
-                        Jumpstart collaboration with premium, **pre-built Tabletop AI templates** tailored for finance, marketing, engineering, HR, and more. Less setup, more doing.
+                    <h3 class="text-2xl font-bold mb-4 text-white">Pre-configured Emergency Plans</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Effortlessly set up emergency contact lists and communication templates for internal teams and external stakeholders *before* an incident strikes, ensuring rapid deployment and clarity.
                     </p>
                 </div>
 
-                <!-- Feature 2: Custom Integration Marketplace -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-blue-800 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">🔗</span>
-                        <h3 class="text-2xl font-semibold text-gray-50">Seamless Integrations Marketplace</h3>
+                <!-- Feature 2: Critical Status Dashboards -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-indigo-500 mb-6 text-5xl">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
                     </div>
-                    <p class="text-gray-300 text-lg">
-                        Bridge the gap between Tabletop AI and your critical business tools. Discover modules for Salesforce, Jira, Asana, Google Analytics, bespoke ERPs, and beyond.
+                    <h3 class="text-2xl font-bold mb-4 text-white">Critical Status Dashboards</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Keep a vigilant eye on the real-time operational status of major cloud providers (M365, Google Workspace, AWS) from a single, always-available independent dashboard.
                     </p>
                 </div>
 
-                <!-- Feature 3: Enhanced Functionality -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-green-800 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">⚡</span>
-                        <h3 class="text-2xl font-semibold text-gray-50">Unlock Advanced Capabilities</h3>
+                <!-- Feature 3: One-Click Activation Portal -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-indigo-500 mb-6 text-5xl">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg>
                     </div>
-                    <p class="text-gray-300 text-lg">
-                        Elevate your Tabletop AI with capabilities not natively available. Custom workflows, AI-driven insights, advanced data visualization, and automated reporting are now at your fingertips.
+                    <h3 class="text-2xl font-bold mb-4 text-white">One-Click Activation Portal</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Instantly deploy a secure, temporary communication portal with a single click, bypassing your primary, downed systems to restore critical comms within seconds.
                     </p>
                 </div>
 
-                <!-- Feature 4: Tailored to Your Business -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-yellow-800 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">🎯</span>
-                        <h3 class="text-2xl font-semibold text-gray-50">Precision-Tailored Environments</h3>
+                <!-- Feature 4: Multi-Channel Communication -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-indigo-500 mb-6 text-5xl">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
                     </div>
-                    <p class="text-gray-300 text-lg">
-                        Each template and integration is meticulously crafted to address specific industry challenges and operational needs, ensuring unparalleled relevance and productivity.
+                    <h3 class="text-2xl font-bold mb-4 text-white">Multi-Channel Communication</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Deliver vital updates via web, SMS, or alternate email gateways, ensuring your message penetrates the noise and reaches its audience no matter what primary systems are down.
                     </p>
                 </div>
 
-                <!-- Feature 5: Scalable & Secure -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-red-800 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">🔒</span>
-                        <h3 class="text-2xl font-semibold text-gray-50">Enterprise-Grade Security & Scale</h3>
+                <!-- Feature 5: Real-time Outage Alerts -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-indigo-500 mb-6 text-5xl">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </div>
-                    <p class="text-gray-300 text-lg">
-                        Built for growth and peace of mind. Our platform scales effortlessly with your team, while robust security protocols keep your sensitive data and collaborations protected.
+                    <h3 class="text-2xl font-bold mb-4 text-white">Real-time Outage Alerts</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Receive instant, actionable notifications on detected outages across major cloud providers directly to your alternate channels, keeping you ahead of the curve.
                     </p>
                 </div>
 
-                <!-- Feature 6: Future-Proof Your Collaboration -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-indigo-800 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">✨</span>
-                        <h3 class="text-2xl font-semibold text-gray-50">Innovate & Stay Ahead</h3>
+                <!-- Feature 6: Proactive Security & Compliance -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-indigo-500 mb-6 text-5xl">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.007 12.007 0 002.944 12c.032 1.401.189 2.775.463 4.103M12 20.056a11.955 11.955 0 01-8.618-3.04A12.007 12.007 0 002.944 12c.032-1.401.189-2.775.463-4.103M12 20.056a11.955 11.955 0 008.618-3.04A12.007 12.007 0 0121.056 12c-.032-1.401-.189-2.775-.463-4.103"></path></svg>
                     </div>
-                    <p class="text-gray-300 text-lg">
-                        Future-proof your collaborative ecosystem with continuous updates, new template releases, and an expanding marketplace of cutting-edge integration modules.
+                    <h3 class="text-2xl font-bold mb-4 text-white">Secure & Compliant Lifeline</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Our platform is built with enterprise-grade security and compliance in mind, ensuring your emergency communications remain private and protected even under duress.
                     </p>
                 </div>
+
+            </div>
+            
+            <div class="mt-20 text-center">
+                <h3 class="text-3xl font-bold mb-4 text-white">Ready to Achieve Uninterrupted Communication?</h3>
+                <p class="text-indigo-100 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+                    Don't wait for the next outage to hit. Be proactive, protect your productivity, and ensure business continuity.
+                </p>
+                <a href="#waitlist" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                    Join Our Exclusive Waitlist
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
+    <!-- Waitlist Section -->
+    <section id="waitlist" class="py-20 md:py-24 bg-gray-800 text-gray-50 px-4 md:px-8 lg:px-16">
         <div class="container mx-auto max-w-2xl text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gray-50">Join Our Exclusive QuantumCollab Waitlist</h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8">
-                Be among the first businesses to transform their Google Tabletop AI experience. Limited early access spots are available!
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-8 text-white">
+                Be Prepared. Join the <span class="text-indigo-400">Waitlist</span> Today.
+            </h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-10">
+                Gain early access to the Rapid-Response Outage Hub and be among the first to experience truly resilient communication. Secure your special early-bird pricing mentioned above!
             </p>
 
-            <form class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-purple-700 max-w-lg mx-auto">
+            <form class="bg-gray-700 p-8 rounded-xl shadow-2xl border border-gray-600">
                 <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-200 text-lg font-medium mb-2">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Alex Johnson" class="w-full px-5 py-3 rounded-lg bg-gray-700 text-gray-100 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-200" required>
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">
+                        Your Professional Email Address:
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="you@yourcompany.com" required
+                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-900 transition duration-200">
                 </div>
                 <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-200 text-lg font-medium mb-2">Work Email</label>
-                    <input type="email" id="email" name="email" placeholder="alex.johnson@quantum.io" class="w-full px-5 py-3 rounded-lg bg-gray-700 text-gray-100 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-200" required>
+                    <label for="company" class="block text-gray-300 text-sm font-bold mb-2">
+                        Company Name (Optional):
+                    </label>
+                    <input type="text" id="company" name="company" placeholder="Acme Corp"
+                           class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-900 transition duration-200">
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="company" class="block text-gray-200 text-lg font-medium mb-2">Company Name (Optional)</label>
-                    <input type="text" id="company" name="company" placeholder="Quantum Solutions Inc." class="w-full px-5 py-3 rounded-lg bg-gray-700 text-gray-100 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-200">
-                </div>
-                <button type="submit" class="w-full btn-gradient text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
-                    Join Waitlist Now!
+                <button type="submit"
+                        class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 w-full md:w-auto">
+                    Join the Rapid-Response Waitlist
                 </button>
-                <p class="text-gray-400 text-sm mt-4">We respect your privacy. No spam, only innovation.</p>
+                <p class="text-gray-400 text-sm mt-4">
+                    We respect your privacy. Your data will not be shared.
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 px-4 text-center text-gray-400">
-        <div class="container mx-auto max-w-6xl">
-            <p>&copy; 2023 QuantumCollab. All rights reserved.</p>
-            <p class="mt-2 text-sm">Empowering Google Tabletop AI for unparalleled business efficiency.</p>
-        </div>
+    <footer class="bg-gray-900 py-10 text-center text-gray-400 text-sm px-4 md:px-8 lg:px-16 border-t border-gray-800">
+        <p>&copy; 2023 Rapid-Response Outage Hub. All rights reserved.</p>
+        <p class="mt-2">Built for resilient businesses, by SaaS builders.</p>
     </footer>
 
-    <!-- Countdown Timer JavaScript -->
+    <!-- JavaScript for Countdown Timer -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const countdownElement = document.getElementById('countdown');
-            if (!countdownElement) return;
+        const countdown = () => {
+            // Set the end date for the offer (e.g., 7 days from now)
+            const endDate = new Date();
+            endDate.setDate(endDate.getDate() + 7);
+            endDate.setHours(endDate.getHours() + 12); // Adding arbitrary hours/minutes/seconds for a more dynamic look
+            endDate.setMinutes(endDate.getMinutes() + 30);
+            endDate.setSeconds(endDate.getSeconds() + 45);
 
-            // Set the date we're counting down to (e.g., 7 days from now)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now for demo purposes
-            countDownDate.setHours(countDownDate.getHours() + 12); // Add some hours
-            countDownDate.setMinutes(countDownDate.getMinutes() + 30); // Add some minutes
-            countDownDate.setSeconds(countDownDate.getSeconds() + 15); // Add some seconds for immediate start
-
-            const x = setInterval(function() {
+            const updateCountdown = () => {
                 const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
+                const distance = endDate - now;
 
                 if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<p class='text-red-500 text-xl sm:text-2xl font-bold'>WAITLIST CLOSED!</p>";
-                    const ctaButton = document.querySelector('a[href="#waitlist-form"]');
-                    if(ctaButton) {
-                        ctaButton.outerHTML = '<button class="inline-block bg-gray-700 text-gray-400 font-bold py-4 px-10 rounded-full text-lg sm:text-xl shadow-lg cursor-not-allowed">Waitlist Closed</button>';
-                    }
-                    const submitButton = document.querySelector('#waitlist-form button[type="submit"]');
-                    if(submitButton) {
-                        submitButton.textContent = 'Waitlist Closed';
-                        submitButton.disabled = true;
-                        submitButton.classList.remove('btn-gradient', 'hover:scale-105');
-                        submitButton.classList.add('bg-gray-700', 'text-gray-400', 'cursor-not-allowed');
-                    }
+                    clearInterval(interval);
+                    document.getElementById('countdown').innerHTML = "<span class='text-xl font-bold text-red-400'>Offer Expired!</span>";
                     return;
                 }
 
@@ -248,12 +231,18 @@
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-            }, 1000);
-        });
+                document.getElementById('days').innerText = String(days).padStart(2, '0');
+                document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+                document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+            };
+
+            updateCountdown(); // Initial call to display immediately
+            const interval = setInterval(updateCountdown, 1000); // Update every second
+        };
+
+        window.onload = countdown;
     </script>
+
 </body>
 </html>
