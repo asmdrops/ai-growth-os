@@ -3,229 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Apple Watch Privacy & Productivity Playbook | Limited Time Offer</title>
+    <title>Apple Black Friday & Cyber Monday Savings Playbook - Instant Access</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
         }
         .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Optional: for parallax-like effect */
+            background-repeat: no-repeat;
         }
-        .countdown-digit {
-            @apply text-5xl md:text-6xl font-extrabold text-blue-400;
+        .countdown-segment {
+            @apply flex flex-col items-center justify-center p-4 bg-gray-800 bg-opacity-70 rounded-lg shadow-lg;
         }
-        .countdown-label {
-            @apply text-sm md:text-base text-gray-300 uppercase tracking-widest;
+        .countdown-segment span:first-child {
+            @apply text-4xl lg:text-5xl font-extrabold text-white;
+        }
+        .countdown-segment span:last-child {
+            @apply text-sm uppercase text-gray-400 mt-1;
         }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-background relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
-                Master Your Apple Watch: <br class="hidden sm:block"> Privacy, Productivity, & Data Control Unleashed.
+    <header class="hero-background relative min-h-screen flex items-center justify-center text-center p-4">
+        <div class="absolute inset-0 bg-black opacity-70 z-0"></div>
+        <div class="relative z-10 max-w-5xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6">
+                Unlock <span class="text-red-500">Massive Savings</span>: Your Apple Black Friday & Cyber Monday Playbook Awaits!
             </h1>
-            <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Stop letting your tech eavesdrop. Discover how to leverage powerful new features like Siri Recap and Live Rewind while safeguarding your personal data.
+            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Don't just browse deals – master them. Get exclusive insights, historical price analysis, and a curated list of the absolute best Apple deals before they vanish.
             </p>
-            <div class="bg-gray-800 bg-opacity-80 p-6 rounded-lg shadow-xl mb-10 border border-gray-700 backdrop-filter backdrop-blur-sm">
-                <p class="text-red-400 text-2xl md:text-3xl font-bold mb-4">Limited Time Offer! Price Jumps In:</p>
-                <div id="countdown" class="flex justify-center items-end space-x-4 md:space-x-8">
-                    <div>
-                        <span id="days" class="countdown-digit">00</span>
-                        <span class="countdown-label block">Days</span>
+            
+            <!-- Countdown Timer -->
+            <div class="mb-10 p-6 bg-gray-900 bg-opacity-80 rounded-xl shadow-2xl border border-gray-700">
+                <h3 class="text-2xl font-bold text-gray-100 mb-6">Limited-Time Offer: Secure Your Playbook Now!</h3>
+                <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-xl mx-auto">
+                    <div class="countdown-segment">
+                        <span id="days">00</span>
+                        <span>Days</span>
                     </div>
-                    <div>
-                        <span id="hours" class="countdown-digit">00</span>
-                        <span class="countdown-label block">Hours</span>
+                    <div class="countdown-segment">
+                        <span id="hours">00</span>
+                        <span>Hours</span>
                     </div>
-                    <div>
-                        <span id="minutes" class="countdown-digit">00</span>
-                        <span class="countdown-label block">Minutes</span>
+                    <div class="countdown-segment">
+                        <span id="minutes">00</span>
+                        <span>Minutes</span>
                     </div>
-                    <div>
-                        <span id="seconds" class="countdown-digit">00</span>
-                        <span class="countdown-label block">Seconds</span>
+                    <div class="countdown-segment">
+                        <span id="seconds">00</span>
+                        <span>Seconds</span>
                     </div>
                 </div>
             </div>
-            <a href="#waitlist-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                Get The Playbook Now & Secure Your Data!
+
+            <a href="#get-playbook" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-10 rounded-full text-xl uppercase tracking-wider transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Get Your Instant Download Now!
             </a>
-            <p class="text-sm text-gray-400 mt-4">Normally <s class="text-red-400">$49.99</s>, get it for just <span class="text-green-400 font-bold">$29.99</span> for a limited time!</p>
+            <p class="text-sm text-gray-400 mt-4">Immediate access. No waiting.</p>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 bg-gray-950">
-        <div class="container mx-auto px-6 max-w-6xl">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-12 text-white">
-                What You'll Discover Inside 'The Apple Watch Playbook'
-            </h2>
+    <section class="py-20 bg-gray-800 text-center px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-extrabold text-white mb-12">What You'll Discover Inside Your Playbook</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1: Siri Recap & Live Rewind Demystified -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-                    <div class="text-4xl text-blue-400 mb-4">⚙️</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Siri Recap & Live Rewind Demystified</h3>
-                    <p class="text-gray-300 text-lg">
-                        Understand exactly what these powerful (and potentially intrusive) features are, how they work, and what audio they collect.
-                    </p>
+                <!-- Feature 1 -->
+                <div class="bg-gray-700 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 border border-gray-600">
+                    <div class="text-red-500 text-5xl mb-6">🚀</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Curated Top Deals</h3>
+                    <p class="text-gray-300">Stop sifting through endless pages. We've hand-picked the absolute best Apple deals across all major retailers.</p>
                 </div>
-                <!-- Feature 2: Bulletproof Privacy Settings -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-                    <div class="text-4xl text-green-400 mb-4">🔒</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Bulletproof Privacy Settings</h3>
-                    <p class="text-gray-300 text-lg">
-                        Step-by-step instructions to lock down your Apple Watch and prevent unintended data collection and sharing. Take back control!
-                    </p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-700 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 border border-gray-600">
+                    <div class="text-red-500 text-5xl mb-6">📈</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">True Savings Analysis</h3>
+                    <p class="text-gray-300">Leverage historical price data to reveal genuine discounts, avoiding inflated "deals" and ensuring you get maximum value.</p>
                 </div>
-                <!-- Feature 3: Productivity Power-Ups & Hacks -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-                    <div class="text-4xl text-purple-400 mb-4">⚡</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Productivity Power-Ups & Hacks</h3>
-                    <p class="text-gray-300 text-lg">
-                        Uncover hidden features and workflows to transform your Apple Watch into an ultimate personal assistant for peak efficiency.
-                    </p>
+                <!-- Feature 3 -->
+                <div class="bg-gray-700 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 border border-gray-600">
+                    <div class="text-red-500 text-5xl mb-6">🆚</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Product Comparison Charts</h3>
+                    <p class="text-gray-300">Decide with confidence. In-depth comparisons like MacBook Air M2 vs M5, AirPods Pro 2 vs 3, and more.</p>
                 </div>
-                <!-- Feature 4: Your Data Ownership & Control -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-                    <div class="text-4xl text-yellow-400 mb-4">📊</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Your Data Ownership & Control</h3>
-                    <p class="text-gray-300 text-lg">
-                        Learn what data your watch collects, how to review it, manage access, and delete it permanently from Apple's servers.
-                    </p>
+                <!-- Feature 4 -->
+                <div class="bg-gray-700 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 border border-gray-600">
+                    <div class="text-red-500 text-5xl mb-6">📊</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Exclusive Deal Tracker Dashboard</h3>
+                    <p class="text-gray-300">Get limited-time access to our dynamic online dashboard, updating you with real-time price drops and availability.</p>
                 </div>
-                <!-- Feature 5: Ethical Tech Usage & Mindset -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-                    <div class="text-4xl text-red-400 mb-4">🧠</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Ethical Tech Usage & Mindset</h3>
-                    <p class="text-gray-300 text-lg">
-                        Navigate the blurred lines of personal device privacy with confidence, clarity, and an informed perspective.
-                    </p>
+                <!-- Feature 5 -->
+                <div class="bg-gray-700 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 border border-gray-600">
+                    <div class="text-red-500 text-5xl mb-6">💡</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Insider Buying Tips</h3>
+                    <p class="text-gray-300">Learn strategies to maximize your savings, stack discounts, and navigate the Black Friday madness like a pro.</p>
                 </div>
-                <!-- Feature 6: Future-Proofing Your Privacy -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-                    <div class="text-4xl text-teal-400 mb-4">🚀</div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Future-Proofing Your Privacy</h3>
-                    <p class="text-gray-300 text-lg">
-                        Stay ahead of new features and potential privacy implications with expert insights and proactive strategies.
-                    </p>
+                <!-- Feature 6 -->
+                <div class="bg-gray-700 rounded-xl p-8 shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 border border-gray-600">
+                    <div class="text-red-500 text-5xl mb-6">⚡</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Immediate Download</h3>
+                    <p class="text-gray-300">No waiting! Get instant access to your premium playbook and start saving on Apple products today.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action Form Section (acting as a "waitlist" for pre-orders/initial sales) -->
-    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-6 max-w-3xl">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-8 text-white">
-                Don't Miss This Exclusive Offer!
-            </h2>
-            <p class="text-xl md:text-2xl text-center text-gray-300 mb-10">
-                Unlock your Apple Watch's full potential and protect your privacy today. This comprehensive guide is your key to mastering your device.
+    <!-- Waitlist/Get Instant Access Form Section -->
+    <section id="get-playbook" class="py-20 bg-gray-900 text-center px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto bg-gray-800 rounded-xl p-8 md:p-12 shadow-2xl border border-gray-700">
+            <h2 class="text-4xl font-extrabold text-white mb-6">Ready to Save Big?</h2>
+            <p class="text-lg text-gray-300 mb-8">
+                Enter your email below to get instant access to the <span class="font-bold text-red-400">'Apple Black Friday & Cyber Monday Savings Playbook'</span> and start unlocking unparalleled deals immediately.
             </p>
-            <div class="bg-gray-800 p-8 md:p-10 rounded-lg shadow-2xl border border-gray-700">
-                <p class="text-red-400 text-2xl md:text-3xl font-bold text-center mb-6">Limited-Time Offer Ending Soon!</p>
-                <form class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-gray-300 text-lg font-semibold mb-2">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe"
-                               class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-100 placeholder-gray-400 text-lg" required>
-                    </div>
-                    <div>
-                        <label for="email" class="block text-gray-300 text-lg font-semibold mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                               class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-100 placeholder-gray-400 text-lg" required>
-                    </div>
-                    <button type="submit"
-                            class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-lg text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
-                        Secure My Limited-Time Copy Now!
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label for="email" class="sr-only">Email address</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required class="appearance-none block w-full px-5 py-3 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-lg bg-gray-700 text-white" placeholder="Enter your email address">
+                </div>
+                <div>
+                    <button type="submit" class="w-full flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:px-8 text-xl uppercase tracking-wider transition duration-300 ease-in-out transform hover:scale-105">
+                        Get My Playbook Now!
                     </button>
-                    <p class="text-sm text-center text-gray-400 mt-4">
-                        By clicking "Secure My Copy", you agree to receive email updates and promotions.
-                    </p>
-                </form>
-            </div>
+                </div>
+            </form>
+            <p class="mt-8 text-sm text-gray-400">
+                Your privacy is important to us. We will never share your email.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-10 text-center text-gray-500 text-sm">
-        <div class="container mx-auto px-6">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">Disclaimer: This guide is an independent resource and not affiliated with Apple Inc. All product names, logos, and brands are property of their respective owners.</p>
+    <footer class="py-10 bg-gray-900 text-center text-gray-500 text-sm border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <p>&copy; 2023 [Your Company Name]. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="hover:text-white mx-2">Privacy Policy</a> | 
+                <a href="#" class="hover:text-white mx-2">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
-    <!-- Countdown JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 7 days from now)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Set for 7 days in the future (adjust as needed)
+        // Set the date we're counting down to (e.g., end of Cyber Monday 2024, Nov 30th 2024 23:59:59 PST)
+        // Using a future date for demonstration purposes. Adjust as needed.
+        const countDownDate = new Date("Nov 30, 2024 23:59:59").getTime();
 
-            // Update the count down every 1 second
-            const x = setInterval(function() {
+        // Update the count down every 1 second
+        const x = setInterval(function() {
 
-                // Get today's date and time
-                const now = new Date().getTime();
+            // Get today's date and time
+            const now = new Date().getTime();
 
-                // Find the distance between now and the count down date
-                const distance = countDownDate - now;
+            // Find the distance between now and the count down date
+            const distance = countDownDate - now;
 
-                // Time calculations for days, hours, minutes and seconds
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Display the result in the element with id="countdown"
-                if (document.getElementById("days")) {
-                    document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                    document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                    document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                    document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-                }
+            // Output the result in elements with id="days", "hours", "minutes", "seconds"
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-
-                // If the count down is finished, write some text and update CTAs
-                if (distance < 0) {
-                    clearInterval(x);
-                    const countdownElement = document.getElementById("countdown");
-                    if (countdownElement) {
-                         countdownElement.innerHTML = "<div class='text-red-500 text-3xl font-bold'>OFFER EXPIRED!</div>";
-                    }
-
-                    // Update Hero CTA
-                    const heroCtaButton = document.querySelector('.hero-background a');
-                    if (heroCtaButton) {
-                        heroCtaButton.textContent = "Offer Expired. Get Playbook at Regular Price";
-                        heroCtaButton.classList.remove('bg-blue-600', 'hover:bg-blue-700', 'hover:scale-105');
-                        heroCtaButton.classList.add('bg-gray-600', 'cursor-not-allowed', 'opacity-70');
-                        heroCtaButton.removeAttribute('href'); // Remove link to form
-                    }
-
-                    // Update Form CTA
-                    const formCtaButton = document.querySelector('#waitlist-form button');
-                    if (formCtaButton) {
-                        formCtaButton.textContent = "Offer Expired. Get Playbook at Regular Price";
-                        formCtaButton.classList.remove('from-blue-600', 'to-purple-600', 'hover:from-blue-700', 'hover:to-purple-700', 'hover:scale-105');
-                        formCtaButton.classList.add('bg-gray-600', 'cursor-not-allowed', 'opacity-70');
-                        formCtaButton.disabled = true; // Disable the button
-                    }
-                }
-            }, 1000);
-        });
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "<p class='text-xl text-red-500 font-bold'>This limited-time offer has expired!</p>";
+                document.querySelector('.hero-background a').style.display = 'none'; // Hide CTA button
+                document.querySelector('.hero-background p.text-sm').style.display = 'none'; // Hide CTA sub-text
+            }
+        }, 1000);
     </script>
 </body>
 </html>
