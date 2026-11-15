@@ -3,230 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reclaim the Voice: BCI for A.L.S. Communication & Quality of Life</title>
+    <title>The Apple Watch Privacy & Productivity Playbook | Limited Time Offer</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for hero overlay and responsive countdown */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
         .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            position: relative;
+            background-attachment: fixed; /* Optional: for parallax-like effect */
         }
-        .hero-background::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
-            z-index: 1;
+        .countdown-digit {
+            @apply text-5xl md:text-6xl font-extrabold text-blue-400;
         }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        /* Custom responsive font size for countdown numbers */
-        #countdown .countdown-number {
-            font-size: 2rem; /* Default for small screens */
-        }
-        @media (min-width: 640px) { /* sm breakpoint */
-            #countdown .countdown-number {
-                font-size: 2.5rem;
-            }
-        }
-        @media (min-width: 1024px) { /* lg breakpoint */
-            #countdown .countdown-number {
-                font-size: 3rem;
-            }
+        .countdown-label {
+            @apply text-sm md:text-base text-gray-300 uppercase tracking-widest;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <section class="hero-background min-h-screen flex items-center justify-center text-center py-20 px-4 md:px-8">
-        <div class="hero-content max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
-                Reclaim the Voice: Empowering A.L.S. Communication with Cutting-Edge BCI Technology
+    <header class="hero-background relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                Master Your Apple Watch: <br class="hidden sm:block"> Privacy, Productivity, & Data Control Unleashed.
             </h1>
-            <p class="text-xl sm:text-2xl text-purple-200 mb-10">
-                Leveraging groundbreaking innovations, inspired by the latest breakthroughs reported by <span class="font-bold">The New York Times</span>. Discover how BCI can transform communication and elevate quality of life for A.L.S. patients and caregivers.
+            <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Stop letting your tech eavesdrop. Discover how to leverage powerful new features like Siri Recap and Live Rewind while safeguarding your personal data.
             </p>
-
-            <!-- Limited Time Countdown -->
-            <div class="bg-gradient-to-r from-purple-700 to-indigo-600 p-6 rounded-lg shadow-xl inline-block mb-12">
-                <p class="text-sm uppercase tracking-wider font-semibold text-purple-100 mb-3">Launch in Just:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 text-white font-bold">
-                    <div class="flex flex-col items-center">
-                        <span class="countdown-number" id="days">00</span>
-                        <span class="text-xs sm:text-sm text-purple-200 uppercase">Days</span>
+            <div class="bg-gray-800 bg-opacity-80 p-6 rounded-lg shadow-xl mb-10 border border-gray-700 backdrop-filter backdrop-blur-sm">
+                <p class="text-red-400 text-2xl md:text-3xl font-bold mb-4">Limited Time Offer! Price Jumps In:</p>
+                <div id="countdown" class="flex justify-center items-end space-x-4 md:space-x-8">
+                    <div>
+                        <span id="days" class="countdown-digit">00</span>
+                        <span class="countdown-label block">Days</span>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <span class="countdown-number">:</span>
+                    <div>
+                        <span id="hours" class="countdown-digit">00</span>
+                        <span class="countdown-label block">Hours</span>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <span class="countdown-number" id="hours">00</span>
-                        <span class="text-xs sm:text-sm text-purple-200 uppercase">Hours</span>
+                    <div>
+                        <span id="minutes" class="countdown-digit">00</span>
+                        <span class="countdown-label block">Minutes</span>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <span class="countdown-number">:</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <span class="countdown-number" id="minutes">00</span>
-                        <span class="text-xs sm:text-sm text-purple-200 uppercase">Minutes</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <span class="countdown-number">:</span>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <span class="countdown-number" id="seconds">00</span>
-                        <span class="text-xs sm:text-sm text-purple-200 uppercase">Seconds</span>
+                    <div>
+                        <span id="seconds" class="countdown-digit">00</span>
+                        <span class="countdown-label block">Seconds</span>
                     </div>
                 </div>
             </div>
-
-            <a href="#waitlist" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-10 rounded-full text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                Secure Your Early Access Now
+            <a href="#waitlist-form" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Get The Playbook Now & Secure Your Data!
             </a>
+            <p class="text-sm text-gray-400 mt-4">Normally <s class="text-red-400">$49.99</s>, get it for just <span class="text-green-400 font-bold">$29.99</span> for a limited time!</p>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 px-4 md:px-8 bg-gray-900">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-extrabold text-center text-white mb-16 leading-tight">
-                Unlock Unprecedented Insights & Empowerment
+    <section class="py-16 md:py-24 bg-gray-950">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-12 text-white">
+                What You'll Discover Inside 'The Apple Watch Playbook'
             </h2>
-
-            <div class="grid md:grid-cols-2 gap-12 lg:gap-16">
-                <!-- Premium Newsletter Features -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-600 transition duration-300">
-                    <h3 class="text-3xl font-bold text-purple-400 mb-6">
-                        The BCI Frontier: Premium Newsletter
-                    </h3>
-                    <p class="text-lg text-gray-300 mb-8">
-                        Stay at the forefront of BCI innovation with our exclusive weekly newsletter, delivering crucial updates directly to your inbox.
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: Siri Recap & Live Rewind Demystified -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
+                    <div class="text-4xl text-blue-400 mb-4">⚙️</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Siri Recap & Live Rewind Demystified</h3>
+                    <p class="text-gray-300 text-lg">
+                        Understand exactly what these powerful (and potentially intrusive) features are, how they work, and what audio they collect.
                     </p>
-                    <ul class="space-y-4 text-lg text-gray-200">
-                        <li class="flex items-start">
-                            <span class="text-purple-400 text-2xl mr-3">🚀</span>
-                            <span>
-                                <strong class="text-white">Latest BCI Breakthroughs:</strong> Get curated, timely updates on new BCI technologies and research advancements.
-                            </span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-purple-400 text-2xl mr-3">💡</span>
-                            <span>
-                                <strong class="text-white">Expert Insights & Analysis:</strong> Understand complex BCI concepts with clear, concise summaries from leading experts.
-                            </span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-purple-400 text-2xl mr-3">🌍</span>
-                            <span>
-                                <strong class="text-white">Global Clinical Trial Access:</strong> Navigate the landscape of available trials with practical information on eligibility and application.
-                            </span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-purple-400 text-2xl mr-3">🛠️</span>
-                            <span>
-                                <strong class="text-white">Practical Implementation Guides:</strong> Receive actionable advice for integrating emerging BCI solutions into daily care routines.
-                            </span>
-                        </li>
-                    </ul>
                 </div>
-
-                <!-- Digital Guide Features -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300">
-                    <h3 class="text-3xl font-bold text-indigo-400 mb-6">
-                        BCI for A.L.S.: The Caregiver's Digital Guide
-                    </h3>
-                    <p class="text-lg text-gray-300 mb-8">
-                        A comprehensive digital guide that demystifies BCI and provides essential strategies for A.L.S. communication and care.
+                <!-- Feature 2: Bulletproof Privacy Settings -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
+                    <div class="text-4xl text-green-400 mb-4">🔒</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Bulletproof Privacy Settings</h3>
+                    <p class="text-gray-300 text-lg">
+                        Step-by-step instructions to lock down your Apple Watch and prevent unintended data collection and sharing. Take back control!
                     </p>
-                    <ul class="space-y-4 text-lg text-gray-200">
-                        <li class="flex items-start">
-                            <span class="text-indigo-400 text-2xl mr-3">🧠</span>
-                            <span>
-                                <strong class="text-white">Demystifying BCI Technologies:</strong> Understand the fundamentals, types, and applications of BCI for A.L.S. patients.
-                            </span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-indigo-400 text-2xl mr-3">🔗</span>
-                            <span>
-                                <strong class="text-white">Navigating Clinical Trial Access:</strong> A step-by-step roadmap to finding, understanding, and enrolling in relevant BCI clinical trials.
-                            </span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-indigo-400 text-2xl mr-3">❤️</span>
-                            <span>
-                                <strong class="text-white">Advanced Care Management Strategies:</strong> Practical advice and resources to enhance daily living and provide optimal support.
-                            </span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-indigo-400 text-2xl mr-3">🗣️</span>
-                            <span>
-                                <strong class="text-white">Optimizing Communication Solutions:</strong> Learn how to leverage emerging BCI tools to restore and enhance meaningful interaction.
-                            </span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-indigo-400 text-2xl mr-3">✨</span>
-                            <span>
-                                <strong class="text-white">Enhancing Quality of Life:</strong> Discover holistic approaches to improve well-being, independence, and overall patient experience.
-                            </span>
-                        </li>
-                    </ul>
+                </div>
+                <!-- Feature 3: Productivity Power-Ups & Hacks -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
+                    <div class="text-4xl text-purple-400 mb-4">⚡</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Productivity Power-Ups & Hacks</h3>
+                    <p class="text-gray-300 text-lg">
+                        Uncover hidden features and workflows to transform your Apple Watch into an ultimate personal assistant for peak efficiency.
+                    </p>
+                </div>
+                <!-- Feature 4: Your Data Ownership & Control -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
+                    <div class="text-4xl text-yellow-400 mb-4">📊</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Your Data Ownership & Control</h3>
+                    <p class="text-gray-300 text-lg">
+                        Learn what data your watch collects, how to review it, manage access, and delete it permanently from Apple's servers.
+                    </p>
+                </div>
+                <!-- Feature 5: Ethical Tech Usage & Mindset -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
+                    <div class="text-4xl text-red-400 mb-4">🧠</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Ethical Tech Usage & Mindset</h3>
+                    <p class="text-gray-300 text-lg">
+                        Navigate the blurred lines of personal device privacy with confidence, clarity, and an informed perspective.
+                    </p>
+                </div>
+                <!-- Feature 6: Future-Proofing Your Privacy -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
+                    <div class="text-4xl text-teal-400 mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Future-Proofing Your Privacy</h3>
+                    <p class="text-gray-300 text-lg">
+                        Stay ahead of new features and potential privacy implications with expert insights and proactive strategies.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-20 px-4 md:px-8 bg-gray-800">
-        <div class="max-w-3xl mx-auto bg-gray-900 p-10 rounded-xl shadow-2xl border border-gray-700 text-center">
-            <h2 class="text-4xl font-extrabold text-white mb-6">
-                Be First to Access: Join Our Exclusive Waitlist
+    <!-- Call to Action Form Section (acting as a "waitlist" for pre-orders/initial sales) -->
+    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-8 text-white">
+                Don't Miss This Exclusive Offer!
             </h2>
-            <p class="text-xl text-gray-300 mb-10">
-                Limited spots available for early access and special launch pricing. Don't miss this opportunity to transform A.L.S. care.
+            <p class="text-xl md:text-2xl text-center text-gray-300 mb-10">
+                Unlock your Apple Watch's full potential and protect your privacy today. This comprehensive guide is your key to mastering your device.
             </p>
-            <form class="space-y-6">
-                <div>
-                    <label for="email" class="sr-only">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
-                           class="w-full px-6 py-4 rounded-lg bg-gray-700 border border-gray-600 text-white text-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition duration-300 placeholder-gray-400">
-                </div>
-                <button type="submit"
-                        class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
-                    Get Early Access Now
-                </button>
-            </form>
-            <p class="text-sm text-gray-500 mt-8">
-                We respect your privacy. Your information will not be shared.
-            </p>
+            <div class="bg-gray-800 p-8 md:p-10 rounded-lg shadow-2xl border border-gray-700">
+                <p class="text-red-400 text-2xl md:text-3xl font-bold text-center mb-6">Limited-Time Offer Ending Soon!</p>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-300 text-lg font-semibold mb-2">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe"
+                               class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-100 placeholder-gray-400 text-lg" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-300 text-lg font-semibold mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                               class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-100 placeholder-gray-400 text-lg" required>
+                    </div>
+                    <button type="submit"
+                            class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-lg text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                        Secure My Limited-Time Copy Now!
+                    </button>
+                    <p class="text-sm text-center text-gray-400 mt-4">
+                        By clicking "Secure My Copy", you agree to receive email updates and promotions.
+                    </p>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 px-4 md:px-8 text-center text-gray-500">
-        <div class="max-w-7xl mx-auto">
+    <footer class="bg-gray-950 py-10 text-center text-gray-500 text-sm">
+        <div class="container mx-auto px-6">
             <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2">Disclaimer: This guide is an independent resource and not affiliated with Apple Inc. All product names, logos, and brands are property of their respective owners.</p>
         </div>
     </footer>
 
     <!-- Countdown JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the launch date (e.g., 30 days from now for demonstration)
-            const launchDate = new Date();
-            launchDate.setDate(launchDate.getDate() + 30); // Launch in 30 days
-            launchDate.setHours(launchDate.getHours() + 1); // Add a small offset to ensure it's not exactly 00:00:00
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set for 7 days in the future (adjust as needed)
 
-            // Update the countdown every 1 second
-            const countdownInterval = setInterval(function() {
+            // Update the count down every 1 second
+            const x = setInterval(function() {
+
+                // Get today's date and time
                 const now = new Date().getTime();
-                const distance = launchDate - now;
+
+                // Find the distance between now and the count down date
+                const distance = countDownDate - now;
 
                 // Time calculations for days, hours, minutes and seconds
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -235,36 +190,42 @@
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
                 // Display the result in the element with id="countdown"
-                if (document.getElementById("days")) { // Check if elements exist
+                if (document.getElementById("days")) {
                     document.getElementById("days").innerHTML = String(days).padStart(2, '0');
                     document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
                     document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
                     document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
                 }
 
-                // If the countdown is over, update UI
+
+                // If the count down is finished, write some text and update CTAs
                 if (distance < 0) {
-                    clearInterval(countdownInterval);
+                    clearInterval(x);
                     const countdownElement = document.getElementById("countdown");
                     if (countdownElement) {
-                        countdownElement.innerHTML = "LAUNCHED!";
-                        countdownElement.classList.add('text-4xl'); // Make "LAUNCHED!" stand out
-                        countdownElement.classList.remove('space-x-2', 'sm:space-x-4');
+                         countdownElement.innerHTML = "<div class='text-red-500 text-3xl font-bold'>OFFER EXPIRED!</div>";
                     }
-                    const countdownWrapper = document.querySelector('.bg-gradient-to-r');
-                    if (countdownWrapper) {
-                        countdownWrapper.classList.remove('from-purple-700', 'to-indigo-600');
-                        countdownWrapper.classList.add('from-green-600', 'to-green-500'); // Indicate success
+
+                    // Update Hero CTA
+                    const heroCtaButton = document.querySelector('.hero-background a');
+                    if (heroCtaButton) {
+                        heroCtaButton.textContent = "Offer Expired. Get Playbook at Regular Price";
+                        heroCtaButton.classList.remove('bg-blue-600', 'hover:bg-blue-700', 'hover:scale-105');
+                        heroCtaButton.classList.add('bg-gray-600', 'cursor-not-allowed', 'opacity-70');
+                        heroCtaButton.removeAttribute('href'); // Remove link to form
                     }
-                    const ctaButton = document.querySelector('a[href="#waitlist"]');
-                    if (ctaButton) {
-                        ctaButton.textContent = "Get Instant Access Now";
-                        ctaButton.href = "#"; // Change to actual product link if available
+
+                    // Update Form CTA
+                    const formCtaButton = document.querySelector('#waitlist-form button');
+                    if (formCtaButton) {
+                        formCtaButton.textContent = "Offer Expired. Get Playbook at Regular Price";
+                        formCtaButton.classList.remove('from-blue-600', 'to-purple-600', 'hover:from-blue-700', 'hover:to-purple-700', 'hover:scale-105');
+                        formCtaButton.classList.add('bg-gray-600', 'cursor-not-allowed', 'opacity-70');
+                        formCtaButton.disabled = true; // Disable the button
                     }
                 }
             }, 1000);
         });
     </script>
-
 </body>
 </html>
