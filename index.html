@@ -3,161 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Storyteller's Playbook: Create & Print a Personalized Children's Book</title>
+    <title>Reclaim the Voice: BCI for A.L.S. Communication & Quality of Life</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
+        /* Custom styles for hero overlay and responsive countdown */
         .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
             position: relative;
         }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.7);
+        .hero-background::before {
+            content: "";
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        /* Custom responsive font size for countdown numbers */
+        #countdown .countdown-number {
+            font-size: 2rem; /* Default for small screens */
+        }
+        @media (min-width: 640px) { /* sm breakpoint */
+            #countdown .countdown-number {
+                font-size: 2.5rem;
+            }
+        }
+        @media (min-width: 1024px) { /* lg breakpoint */
+            #countdown .countdown-number {
+                font-size: 3rem;
+            }
         }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <section class="hero-background relative h-screen flex items-center justify-center p-4">
-        <div class="hero-overlay"></div>
-        <div class="relative z-10 text-center max-w-4xl mx-auto">
-            <p class="text-purple-400 uppercase tracking-wide text-sm sm:text-base mb-3 md:mb-4">
-                As seen in the <span class="font-bold">WSJ: "How I Used AI to Make My Grandson a Children’s Book for Less Than $200"</span>
-            </p>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white mb-4 md:mb-6">
-                <span class="block text-teal-400">Unlock Your Inner AI Storyteller:</span>
-                Create & Print a Personalized Children's Book for Under $100
+    <section class="hero-background min-h-screen flex items-center justify-center text-center py-20 px-4 md:px-8">
+        <div class="hero-content max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                Reclaim the Voice: Empowering A.L.S. Communication with Cutting-Edge BCI Technology
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-6 md:mb-8 max-w-2xl mx-auto">
-                No Tech Skills Needed. Transform your unique ideas into a beautiful, physical book for your loved ones, powered by AI.
+            <p class="text-xl sm:text-2xl text-purple-200 mb-10">
+                Leveraging groundbreaking innovations, inspired by the latest breakthroughs reported by <span class="font-bold">The New York Times</span>. Discover how BCI can transform communication and elevate quality of life for A.L.S. patients and caregivers.
             </p>
-            <a href="#waitlist" class="bg-gradient-to-r from-purple-600 to-teal-500 hover:from-purple-700 hover:to-teal-600 text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl transition-all duration-300 transform hover:scale-105 inline-block">
-                Join the Exclusive Waitlist Now!
+
+            <!-- Limited Time Countdown -->
+            <div class="bg-gradient-to-r from-purple-700 to-indigo-600 p-6 rounded-lg shadow-xl inline-block mb-12">
+                <p class="text-sm uppercase tracking-wider font-semibold text-purple-100 mb-3">Launch in Just:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 text-white font-bold">
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-number" id="days">00</span>
+                        <span class="text-xs sm:text-sm text-purple-200 uppercase">Days</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-number">:</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="text-xs sm:text-sm text-purple-200 uppercase">Hours</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-number">:</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="text-xs sm:text-sm text-purple-200 uppercase">Minutes</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-number">:</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="text-xs sm:text-sm text-purple-200 uppercase">Seconds</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#waitlist" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-10 rounded-full text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Secure Your Early Access Now
             </a>
-            <p class="mt-4 text-sm text-gray-400">Limited Spots Available – Don't Miss Out!</p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-20 bg-gray-900 p-4">
-        <div class="container mx-auto px-4 max-w-7xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white mb-12 sm:mb-16">
-                Everything You Need to Become an AI Storyteller
+    <section id="features" class="py-20 px-4 md:px-8 bg-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-extrabold text-center text-white mb-16 leading-tight">
+                Unlock Unprecedented Insights & Empowerment
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-                <!-- Feature 1: AI Text Prompt Templates -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">✍️</span>
-                        <h3 class="text-xl sm:text-2xl font-semibold text-white">AI Text Prompt Templates</h3>
-                    </div>
-                    <p class="text-gray-300 text-base sm:text-lg">
-                        Unleash captivating narratives with our proven prompt templates for ChatGPT, Claude, and other AI text generators. Craft compelling stories effortlessly.
+
+            <div class="grid md:grid-cols-2 gap-12 lg:gap-16">
+                <!-- Premium Newsletter Features -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-600 transition duration-300">
+                    <h3 class="text-3xl font-bold text-purple-400 mb-6">
+                        The BCI Frontier: Premium Newsletter
+                    </h3>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Stay at the forefront of BCI innovation with our exclusive weekly newsletter, delivering crucial updates directly to your inbox.
                     </p>
+                    <ul class="space-y-4 text-lg text-gray-200">
+                        <li class="flex items-start">
+                            <span class="text-purple-400 text-2xl mr-3">🚀</span>
+                            <span>
+                                <strong class="text-white">Latest BCI Breakthroughs:</strong> Get curated, timely updates on new BCI technologies and research advancements.
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-400 text-2xl mr-3">💡</span>
+                            <span>
+                                <strong class="text-white">Expert Insights & Analysis:</strong> Understand complex BCI concepts with clear, concise summaries from leading experts.
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-400 text-2xl mr-3">🌍</span>
+                            <span>
+                                <strong class="text-white">Global Clinical Trial Access:</strong> Navigate the landscape of available trials with practical information on eligibility and application.
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-400 text-2xl mr-3">🛠️</span>
+                            <span>
+                                <strong class="text-white">Practical Implementation Guides:</strong> Receive actionable advice for integrating emerging BCI solutions into daily care routines.
+                            </span>
+                        </li>
+                    </ul>
                 </div>
-                <!-- Feature 2: Detailed AI Image Guides -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">🎨</span>
-                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Detailed AI Image Guides</h3>
-                    </div>
-                    <p class="text-gray-300 text-base sm:text-lg">
-                        Bring your stories to life with stunning visuals! Step-by-step instructions for Midjourney, DALL-E, and other AI art tools – no artistic skill required.
+
+                <!-- Digital Guide Features -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-600 transition duration-300">
+                    <h3 class="text-3xl font-bold text-indigo-400 mb-6">
+                        BCI for A.L.S.: The Caregiver's Digital Guide
+                    </h3>
+                    <p class="text-lg text-gray-300 mb-8">
+                        A comprehensive digital guide that demystifies BCI and provides essential strategies for A.L.S. communication and care.
                     </p>
-                </div>
-                <!-- Feature 3: Story Structure Templates -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">📖</span>
-                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Story Structure Templates</h3>
-                    </div>
-                    <p class="text-gray-300 text-base sm:text-lg">
-                        Master the art of storytelling with easy-to-follow frameworks for plot development, character arcs, and engaging narratives tailored for children.
-                    </p>
-                </div>
-                <!-- Feature 4: Editing & Polishing Checklists -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">✅</span>
-                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Editing & Polishing Checklists</h3>
-                    </div>
-                    <p class="text-gray-300 text-base sm:text-lg">
-                        Ensure your story shines! Comprehensive checklists to refine your text, perfect your illustrations, and prepare your masterpiece for publication.
-                    </p>
-                </div>
-                <!-- Feature 5: Affordable Print-on-Demand List -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">💰</span>
-                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Affordable Print-on-Demand List</h3>
-                    </div>
-                    <p class="text-gray-300 text-base sm:text-lg">
-                        Turn your digital creation into a tangible treasure for under $100! A curated list of budget-friendly print services to get your book into eager hands.
-                    </p>
-                </div>
-                <!-- Feature 6: Step-by-Step Video Course -->
-                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex items-center mb-4">
-                        <span class="text-4xl mr-4">🎓</span>
-                        <h3 class="text-xl sm:text-2xl font-semibold text-white">Step-by-Step Video Course</h3>
-                    </div>
-                    <p class="text-gray-300 text-base sm:text-lg">
-                        Go from concept to a physical book with our easy-to-follow video lessons. Designed for absolute beginners, guiding you every step of the way.
-                    </p>
+                    <ul class="space-y-4 text-lg text-gray-200">
+                        <li class="flex items-start">
+                            <span class="text-indigo-400 text-2xl mr-3">🧠</span>
+                            <span>
+                                <strong class="text-white">Demystifying BCI Technologies:</strong> Understand the fundamentals, types, and applications of BCI for A.L.S. patients.
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigo-400 text-2xl mr-3">🔗</span>
+                            <span>
+                                <strong class="text-white">Navigating Clinical Trial Access:</strong> A step-by-step roadmap to finding, understanding, and enrolling in relevant BCI clinical trials.
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigo-400 text-2xl mr-3">❤️</span>
+                            <span>
+                                <strong class="text-white">Advanced Care Management Strategies:</strong> Practical advice and resources to enhance daily living and provide optimal support.
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigo-400 text-2xl mr-3">🗣️</span>
+                            <span>
+                                <strong class="text-white">Optimizing Communication Solutions:</strong> Learn how to leverage emerging BCI tools to restore and enhance meaningful interaction.
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigo-400 text-2xl mr-3">✨</span>
+                            <span>
+                                <strong class="text-white">Enhancing Quality of Life:</strong> Discover holistic approaches to improve well-being, independence, and overall patient experience.
+                            </span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Section -->
-    <section id="waitlist" class="py-16 sm:py-20 bg-gray-800 p-4">
-        <div class="container mx-auto px-4 max-w-2xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white mb-6 sm:mb-8">
-                Be the First to Create Magic!
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-20 px-4 md:px-8 bg-gray-800">
+        <div class="max-w-3xl mx-auto bg-gray-900 p-10 rounded-xl shadow-2xl border border-gray-700 text-center">
+            <h2 class="text-4xl font-extrabold text-white mb-6">
+                Be First to Access: Join Our Exclusive Waitlist
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 text-center mb-8 sm:mb-10">
-                Join our exclusive waitlist for the 'AI Storyteller's Playbook' and get early bird access, special discounts, and bonus content when we launch.
+            <p class="text-xl text-gray-300 mb-10">
+                Limited spots available for early access and special launch pricing. Don't miss this opportunity to transform A.L.S. care.
             </p>
-
-            <!-- Limited Time Offer / Countdown Placeholder -->
-            <div class="bg-purple-700 text-white p-4 sm:p-6 rounded-lg text-center mb-8 sm:mb-10 shadow-lg">
-                <p class="text-xl sm:text-2xl font-bold mb-2">🔥 Limited Time Early Bird Access! 🔥</p>
-                <p class="text-lg sm:text-xl">Our initial launch will have <span class="font-extrabold text-yellow-300">limited spots and special pricing</span>. Don't miss out!</p>
-                <div id="countdown" class="mt-4 text-3xl sm:text-4xl font-extrabold text-teal-300">
-                    Launching Soon!
-                </div>
-            </div>
-
             <form class="space-y-6">
                 <div>
-                    <label for="email" class="sr-only">Email address</label>
-                    <input type="email" id="email" name="email" autocomplete="email" required class="block w-full px-5 py-3 border border-transparent rounded-md leading-5 bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 sm:text-lg" placeholder="Enter your best email">
+                    <label for="email" class="sr-only">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
+                           class="w-full px-6 py-4 rounded-lg bg-gray-700 border border-gray-600 text-white text-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition duration-300 placeholder-gray-400">
                 </div>
-                <div>
-                    <button type="submit" class="w-full bg-gradient-to-r from-teal-500 to-purple-600 hover:from-teal-600 hover:to-purple-700 text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-md text-lg sm:text-xl transition-all duration-300 transform hover:scale-105">
-                        Get Early Access & Updates
-                    </button>
-                </div>
+                <button type="submit"
+                        class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
+                    Get Early Access Now
+                </button>
             </form>
-            <p class="mt-6 text-sm text-gray-400 text-center">We respect your privacy. No spam, ever.</p>
+            <p class="text-sm text-gray-500 mt-8">
+                We respect your privacy. Your information will not be shared.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm p-4">
-        <div class="container mx-auto px-4">
+    <footer class="bg-gray-900 py-10 px-4 md:px-8 text-center text-gray-500">
+        <div class="max-w-7xl mx-auto">
             <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2">AI Storyteller's Playbook is a product of our high-margin knowledge initiatives.</p>
         </div>
     </footer>
+
+    <!-- Countdown JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the launch date (e.g., 30 days from now for demonstration)
+            const launchDate = new Date();
+            launchDate.setDate(launchDate.getDate() + 30); // Launch in 30 days
+            launchDate.setHours(launchDate.getHours() + 1); // Add a small offset to ensure it's not exactly 00:00:00
+
+            // Update the countdown every 1 second
+            const countdownInterval = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = launchDate - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the element with id="countdown"
+                if (document.getElementById("days")) { // Check if elements exist
+                    document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                    document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                    document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                    document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                }
+
+                // If the countdown is over, update UI
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    const countdownElement = document.getElementById("countdown");
+                    if (countdownElement) {
+                        countdownElement.innerHTML = "LAUNCHED!";
+                        countdownElement.classList.add('text-4xl'); // Make "LAUNCHED!" stand out
+                        countdownElement.classList.remove('space-x-2', 'sm:space-x-4');
+                    }
+                    const countdownWrapper = document.querySelector('.bg-gradient-to-r');
+                    if (countdownWrapper) {
+                        countdownWrapper.classList.remove('from-purple-700', 'to-indigo-600');
+                        countdownWrapper.classList.add('from-green-600', 'to-green-500'); // Indicate success
+                    }
+                    const ctaButton = document.querySelector('a[href="#waitlist"]');
+                    if (ctaButton) {
+                        ctaButton.textContent = "Get Instant Access Now";
+                        ctaButton.href = "#"; // Change to actual product link if available
+                    }
+                }
+            }, 1000);
+        });
+    </script>
 
 </body>
 </html>
