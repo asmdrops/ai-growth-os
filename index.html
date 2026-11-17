@@ -3,320 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AEPM: AI-Powered Autonomous Exploit Prediction & Mitigation</title>
-    <meta name="description" content="AEPM leverages AI to proactively identify zero-day vulnerabilities, predict adversarial AI weaponization, and generate mitigation strategies before exploits are deployed. Join the waitlist for the future of cybersecurity.">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366F1'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z'/%3E%3C/svg%3E" type="image/svg+xml">
+    <title>Neuro-Focus Frontiers: Master Your Focus, Amplify Productivity</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for dark mode and premium feel */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0A0A0A; /* Deep dark background */
-            color: #E0E0E0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?AI-Powered,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
-        }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
-        }
-        .gradient-text {
-            background: linear-gradient(90deg, #6366F1, #8B5CF6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            color: transparent;
-        }
-        .feature-card {
-            background-color: #1A1A1A;
-            border-radius: 12px;
-            border: 1px solid #2A2A2A;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            border-color: #6366F1;
-        }
-        .btn-primary {
-            background: linear-gradient(90deg, #6366F1, #8B5CF6);
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 9999px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        .btn-primary:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
-        }
-        input[type="text"], input[type="email"] {
-            background-color: #1A1A1A;
-            border: 1px solid #333333;
-            color: #E0E0E0;
-            padding: 0.75rem 1rem;
-            border-radius: 8px;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-        input[type="text"]:focus, input[type="email"]:focus {
-            border-color: #6366F1;
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
-            outline: none;
-        }
-        .countdown-segment {
-            background-color: #1A1A1A;
-            border: 1px solid #333;
-            border-radius: 8px;
-            min-width: 60px; /* Ensure segments have a minimum width */
-        }
-        @media (min-width: 1024px) {
-            .hero-headline {
-                font-size: 5.5rem; /* Larger font size for 4K */
-                line-height: 1.1;
-            }
-        }
-        /* Custom scrollbar for premium feel */
-        ::-webkit-scrollbar {
+        /* Custom scrollbar for premium dark mode */
+        body::-webkit-scrollbar {
             width: 8px;
         }
-        ::-webkit-scrollbar-track {
-            background: #1A1A1A;
+        body::-webkit-scrollbar-track {
+            background: #111827; /* bg-gray-900 */
         }
-        ::-webkit-scrollbar-thumb {
-            background: #444444;
+        body::-webkit-scrollbar-thumb {
+            background-color: #4b5563; /* gray-600 */
             border-radius: 4px;
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #6366F1;
+        body::-webkit-scrollbar-thumb:hover {
+            background-color: #6b7280; /* gray-500 */
+        }
+
+        /* Hero image background styles */
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Provides a subtle parallax effect */
+        }
+        /* Gradient overlay for optimal text readability on the hero image */
+        .hero-overlay {
+            background-image: linear-gradient(to top, rgba(17, 24, 39, 0.95) 0%, rgba(17, 24, 39, 0.8) 40%, rgba(17, 24, 39, 0.6) 100%);
+        }
+        @media (min-width: 1024px) {
+            .hero-overlay {
+                /* More subtle overlay for larger screens, allowing more of the image to show */
+                background-image: linear-gradient(to right, rgba(17, 24, 39, 0.95) 0%, rgba(17, 24, 39, 0.7) 50%, rgba(17, 24, 39, 0.4) 100%);
+            }
         }
     </style>
 </head>
-<body class="antialiased leading-relaxed text-gray-100">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <section class="hero-background min-h-screen flex items-center justify-center text-center py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <header class="hero-background relative min-h-screen flex items-center justify-center p-4 overflow-hidden">
         <div class="hero-overlay absolute inset-0"></div>
-        <div class="relative z-10 max-w-7xl mx-auto space-y-8">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold hero-headline leading-tight text-balance">
-                <span class="gradient-text">STOP AI Cyberattacks</span><br class="hidden md:block"> BEFORE They Start.
+        <div class="relative z-10 text-center max-w-5xl mx-auto py-16 px-6 lg:px-8">
+            <span class="inline-block bg-indigo-500 text-white text-sm font-semibold px-4 py-1 rounded-full uppercase tracking-wide mb-4 animate-pulse">
+                Launching Soon: The Future of Focus is Here
+            </span>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mb-6 drop-shadow-xl">
+                Unlock Peak Focus: Your Brain's Ultimate Productivity Upgrade
             </h1>
-            <p class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light max-w-4xl mx-auto text-gray-300 leading-relaxed text-balance">
-                The Future of <span class="text-indigo-400 font-semibold">Autonomous Exploit Mitigation (AEPM)</span> is Here.
+            <p class="text-lg sm:text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Dive deep into emerging brain-tech for unprecedented productivity and master practical neuro-optimization techniques. Inspired by groundbreaking innovations like <span class="font-bold text-indigo-300">Neurable One</span>, 'Neuro-Focus Frontiers' is your exclusive guide to sustained cognitive performance.
             </p>
-            <p class="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto text-gray-400 mt-4 leading-normal">
-                Leverage AEPM to predict zero-day vulnerabilities, simulate adversarial AI threats, and deploy proactive defenses in real-time. Don't just react – prevent.
-            </p>
-            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6">
-                <a href="#waitlist" class="btn-primary text-lg sm:text-xl transform hover:scale-105">
-                    🚀 Join the Elite Waitlist
-                </a>
-            </div>
+            <a href="#waitlist" class="inline-flex items-center justify-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-xl group">
+                Join the Exclusive Waitlist Today 
+                <svg class="ml-3 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+            <p class="mt-4 text-sm text-gray-400">Limited spots available for early access and founder benefits.</p>
         </div>
-    </section>
-
-    <!-- Market Trend Section -->
-    <section class="py-20 md:py-28 bg-black">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-white leading-tight">
-                The Threat Is Real: <span class="gradient-text">Fully Automated AI Cyberattacks</span> Are Here.
-            </h2>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-400 leading-relaxed max-w-4xl mx-auto mb-10">
-                <span class="font-bold text-indigo-300">"Google says Russian speakers pulled off first-ever fully automated AI cyberattack."</span> – POLITICO.eu
-            </p>
-            <p class="text-md sm:text-lg md:text-xl text-gray-500 leading-relaxed max-w-4xl mx-auto">
-                The recent confirmation by Google's Mandiant of the first fully automated AI cyberattack, originating from sophisticated threat actors, marks a critical turning point in cybersecurity. Traditional defenses are struggling against self-learning, self-optimizing attack agents that operate at machine speed.
-                <span class="block mt-4 text-white">AEPM is built for this new reality, providing a proactive shield against threats designed to bypass human response times and exploit vulnerabilities before they are even fully understood.</span>
-            </p>
-        </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section class="py-20 md:py-28 bg-gray-900">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16 text-white leading-tight">
-                Unmatched <span class="gradient-text">AI-Driven Cybersecurity</span><br> for the Autonomous Threat Landscape
+    <section id="features" class="py-16 sm:py-20 bg-gray-950 px-4">
+        <div class="container mx-auto max-w-screen-xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-4">
+                What You'll Discover Inside Neuro-Focus Frontiers
             </h2>
+            <p class="text-lg text-center text-gray-300 mb-12 max-w-3xl mx-auto">
+                Move beyond distractions and amplify your cognitive abilities. Access exclusive market trends, research-backed techniques, and a supportive community to elevate your cognitive game.
+            </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <div class="feature-card p-8 flex flex-col items-start text-left">
-                    <div class="text-indigo-400 text-5xl mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Autonomous Vulnerability Prediction</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        AEPM's advanced AI scans software patches and codebases to identify nascent zero-day vulnerabilities before they are public knowledge or even fully formed. Stay ahead of threats.
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Feature 1: Curated Brain-Tech Insights -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 group">
+                    <div class="text-indigo-400 text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🧠</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Curated Brain-Tech Insights</h3>
+                    <p class="text-gray-300">
+                        Stay ahead with expert-curated analysis of emerging neuro-technologies for productivity. We cut through the noise to bring you what truly matters in brain-computer interfaces, neurofeedback, and advanced cognitive tools.
                     </p>
+                    <ul class="mt-4 space-y-2 text-gray-300">
+                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">✨</span> In-depth trend reports on the neuro-tech market</li>
+                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">🔬</span> Research breakdowns made simple for practical application</li>
+                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">🔮</span> Future-gazing and strategic implications of neuro-innovation</li>
+                    </ul>
                 </div>
 
-                <div class="feature-card p-8 flex flex-col items-start text-left">
-                    <div class="text-indigo-400 text-5xl mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Adversarial AI Simulation Engine</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Our platform simulates how sophisticated adversarial AI agents might weaponize identified weaknesses, providing unparalleled foresight into potential attack vectors.
+                <!-- Feature 2: Practical Neuro-Optimization -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 group">
+                    <div class="text-indigo-400 text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🧘</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Practical Neuro-Optimization</h3>
+                    <p class="text-gray-300">
+                        Transform complex neuroscience into actionable results. Learn proven techniques and protocols to enhance your focus, memory, and cognitive resilience, derived from the latest research and applied principles.
                     </p>
+                    <ul class="mt-4 space-y-2 text-gray-300">
+                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">✅</span> Step-by-step guides for achieving and sustaining peak states</li>
+                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">💡</span> Advanced biohacking strategies that deliver tangible results</li>
+                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">📈</span> Trackable progress methods to measure your cognitive gains</li>
+                    </ul>
                 </div>
 
-                <div class="feature-card p-8 flex flex-col items-start text-left">
-                    <div class="text-indigo-400 text-5xl mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002 12c0 2.755 1.157 5.26 3.016 7.037.336.31.686.602 1.047.876V21a1 1 0 001 1h10a1 1 0 001-1v-.087a12.001 12.001 0 003.968-7.907A11.955 11.955 0 0122 12c0-2.755-1.157-5.26-3.016-7.037z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Proactive Mitigation Strategy Generation</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        AEPM doesn't just predict; it automatically generates or recommends precise mitigation strategies, allowing you to patch and protect against threats that haven't been fully deployed yet.
+                <!-- Feature 3: Exclusive Expert Interviews -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 group">
+                    <div class="text-indigo-400 text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎙️</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Exclusive Expert Interviews</h3>
+                    <p class="text-gray-300">
+                        Gain direct wisdom from the pioneers and thought leaders. Our deep-dive interviews with leading neuroscientists, tech innovators, and peak performance coaches give you unparalleled access to cutting-edge insights.
                     </p>
+                    <ul class="mt-4 space-y-2 text-gray-300">
+                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">👤</span> Unfiltered insights from industry visionaries and researchers</li>
+                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">🚀</span> Actionable strategies directly from high-performers</li>
+                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">❓</span> Live Q&A sessions to get your pressing questions answered</li>
+                    </ul>
                 </div>
 
-                <div class="feature-card p-8 flex flex-col items-start text-left">
-                    <div class="text-indigo-400 text-5xl mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Real-time Threat Intelligence Integration</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Continuously updated with the latest global threat intelligence, AEPM ensures your defenses are always one step ahead of the most advanced cyber adversaries and emerging attack patterns.
+                <!-- Feature 4: Focus Protocol Blueprints -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 group">
+                    <div class="text-indigo-400 text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🗺️</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Focus Protocol Blueprints</h3>
+                    <p class="text-gray-300">
+                        Eliminate guesswork with ready-to-implement, step-by-step blueprints tailored for different work styles and goals. Whether you're a creative, an analyst, or a leader, optimize your deep work sessions with precision.
                     </p>
-                </div>
-                
-                <div class="feature-card p-8 flex flex-col items-start text-left">
-                    <div class="text-indigo-400 text-5xl mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-4-1m5-16v4h4V3m6 8a2 2 0 11-4 0 2 2 0 014 0zM7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Scalable & Automated Deployment</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Designed for enterprises of all sizes, AEPM integrates seamlessly into existing infrastructure, automating security workflows and reducing human-error vulnerabilities at scale.
-                    </p>
+                    <ul class="mt-4 space-y-2 text-gray-300">
+                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">🛠️</span> Customizable productivity plans for diverse professional needs</li>
+                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">🎯</span> Goal-specific focus strategies to achieve your objectives faster</li>
+                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">🔄</span> Adaptable workflows for seamless integration into your daily routine</li>
+                    </ul>
                 </div>
 
-                <div class="feature-card p-8 flex flex-col items-start text-left">
-                    <div class="text-indigo-400 text-5xl mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h.02M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Intuitive Control & Reporting</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Gain complete visibility and control through an intuitive dashboard. Receive detailed reports and actionable insights to strengthen your security posture continuously.
+                <!-- Feature 5: Exclusive Member Community -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 group">
+                    <div class="text-indigo-400 text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🤝</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Exclusive Member Community</h3>
+                    <p class="text-gray-300">
+                        Connect with a dedicated network of high-achievers and forward-thinkers. Share strategies, discuss breakthroughs, and celebrate results in a private, moderated community that fosters genuine engagement and collaborative growth.
                     </p>
+                    <ul class="mt-4 space-y-2 text-gray-300">
+                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">💬</span> Engage directly with fellow innovators and thought leaders</li>
+                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">🌟</span> Share successes, overcome challenges, and get peer support</li>
+                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">🌱</span> Nurture a collaborative environment for continuous learning and growth</li>
+                    </ul>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-20 md:py-28 bg-black text-center">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
-                Be Among the First to Defend Against <span class="gradient-text">Autonomous AI Cyber Threats</span>.
+    <!-- Waitlist / CTA Section -->
+    <section id="waitlist" class="py-16 sm:py-20 bg-gray-900 px-4">
+        <div class="container mx-auto max-w-3xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+                Don't Miss Out: Secure Your Spot for Early Access
             </h2>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-400 leading-relaxed max-w-3xl mx-auto mb-12">
-                Access AEPM: The platform that protects you from the future of cyber warfare. <span class="font-bold text-red-500">Limited slots available.</span>
+            <p class="text-lg text-gray-300 mb-8">
+                'Neuro-Focus Frontiers' is launching soon, and access will be limited for our initial cohort. Join the waitlist now to guarantee your spot, receive exclusive founder discounts, and get early content previews!
             </p>
 
-            <!-- Countdown Timer -->
-            <div class="mb-12">
-                <p class="text-lg sm:text-xl text-indigo-300 font-semibold mb-4">Time left to join the exclusive waitlist:</p>
-                <div id="countdown" class="flex justify-center items-center gap-4 flex-wrap">
-                    <div class="countdown-segment p-4 flex flex-col items-center">
-                        <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-white" id="days">00</span>
-                        <span class="text-sm sm:text-base text-gray-400">Days</span>
+            <!-- Countdown Timer Placeholder (Limited Time Strategy Applied) -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-xl mb-10 border border-gray-700 animate-pulse-slow">
+                <p class="text-indigo-400 text-sm font-semibold uppercase tracking-wider mb-4">
+                    Early Access Opportunity Closes In:
+                </p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 md:space-x-8 text-white">
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-300" id="days">XX</span>
+                        <span class="text-sm md:text-base text-gray-400 uppercase">Days</span>
                     </div>
-                    <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-indigo-400">:</span>
-                    <div class="countdown-segment p-4 flex flex-col items-center">
-                        <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-white" id="hours">00</span>
-                        <span class="text-sm sm:text-base text-gray-400">Hours</span>
+                    <span class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-300 hidden sm:block">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-300" id="hours">XX</span>
+                        <span class="text-sm md:text-base text-gray-400 uppercase">Hours</span>
                     </div>
-                    <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-indigo-400">:</span>
-                    <div class="countdown-segment p-4 flex flex-col items-center">
-                        <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-white" id="minutes">00</span>
-                        <span class="text-sm sm:text-base text-gray-400">Minutes</span>
+                    <span class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-300 hidden sm:block">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-300" id="minutes">XX</span>
+                        <span class="text-sm md:text-base text-gray-400 uppercase">Minutes</span>
                     </div>
-                    <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-indigo-400">:</span>
-                    <div class="countdown-segment p-4 flex flex-col items-center">
-                        <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-white" id="seconds">00</span>
-                        <span class="text-sm sm:text-base text-gray-400">Seconds</span>
+                    <span class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-300 hidden sm:block">:</span>
+                    <div class="flex flex-col items-center">
+                        <span class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-300" id="seconds">XX</span>
+                        <span class="text-sm md:text-base text-gray-400 uppercase">Seconds</span>
                     </div>
                 </div>
+                <p class="text-xs text-gray-500 mt-4">
+                    <!-- Note: This countdown is a static placeholder. Dynamic functionality requires JavaScript. -->
+                    The exclusive launch window is closing fast! Don't delay your cognitive advantage.
+                </p>
             </div>
 
-            <form class="bg-gray-800 p-8 sm:p-10 rounded-2xl shadow-xl border border-gray-700 max-w-xl mx-auto space-y-6">
-                <div>
+            <!-- Waitlist Form -->
+            <form action="#" method="POST" class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 max-w-md mx-auto">
+                <div class="mb-6">
                     <label for="name" class="block text-left text-sm font-medium text-gray-300 mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" required
-                           class="w-full">
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-indigo-500 focus:border-indigo-500 transition-colors duration-200"
+                           required>
                 </div>
-                <div>
-                    <label for="email" class="block text-left text-sm font-medium text-gray-300 mb-2">Work Email</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@company.com" required
-                           class="w-full">
+                <div class="mb-6">
+                    <label for="email" class="block text-left text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                           class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-indigo-500 focus:border-indigo-500 transition-colors duration-200"
+                           required>
                 </div>
-                <div>
-                    <label for="company" class="block text-left text-sm font-medium text-gray-300 mb-2">Company (Optional)</label>
-                    <input type="text" id="company" name="company" placeholder="Acme Corp"
-                           class="w-full">
-                </div>
-                <button type="submit" class="btn-primary w-full text-xl mt-6">
-                    ⚡ Secure My Spot Now
+                <button type="submit"
+                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
+                    Join Waitlist Now
                 </button>
-                <p class="text-xs text-gray-500 mt-4">We respect your privacy. No spam, ever.</p>
+                <p class="mt-4 text-sm text-gray-400">
+                    We respect your privacy. Your email will only be used for launch updates and exclusive offers.
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 px-4 sm:px-6 lg:px-8 text-center text-gray-500 border-t border-gray-800">
-        <p>&copy; 2024 AEPM. All rights reserved.</p>
-        <p class="mt-2 text-sm">Empowering Your Defenses Against Tomorrow's Threats, Today.</p>
+    <footer class="bg-gray-950 py-8 px-4 text-center text-gray-500 text-sm">
+        <div class="container mx-auto max-w-screen-xl">
+            <p>&copy; 2023 Neuro-Focus Frontiers. All rights reserved.</p>
+            <p class="mt-2">Disclaimer: Insights derived from research are for informational purposes and not medical advice. Consult a professional for health concerns.</p>
+        </div>
     </footer>
 
-    <script>
-        // Countdown Timer Logic
-        const countdown = () => {
-            // Set the date we're counting down to (e.g., 7 days from now)
-            const countToDate = new Date();
-            countToDate.setDate(countToDate.getDate() + 7); // 7 days from now for a "Limited Time" offer
+    <!--
+        NOTE: The countdown timer requires JavaScript for dynamic functionality.
+        Since the request is to return ONLY raw HTML, the script below is commented out.
+        To activate, uncomment the script tag and its content, and ensure the `launchDate`
+        variable is set to your desired countdown target.
 
-            const updateCountdown = setInterval(() => {
+        <script>
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const launchDate = new Date();
+            launchDate.setDate(launchDate.getDate() + 7); // Example: Set to 7 days from page load
+
+            const countdownFunction = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = countToDate - now;
+                const distance = launchDate.getTime() - now;
+
+                if (distance < 0) {
+                    clearInterval(countdownFunction);
+                    document.getElementById("countdown").innerHTML = "<span class='text-xl text-indigo-400'>LAUNCHED!</span>";
+                    return;
+                }
 
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                document.getElementById('days').innerText = String(days).padStart(2, '0');
-                document.getElementById('hours').innerText = String(hours).padStart(2, '0');
-                document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
-                document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-                if (distance < 0) {
-                    clearInterval(updateCountdown);
-                    document.getElementById('countdown').innerHTML = `<p class="text-red-500 text-xl font-bold">Waitlist Closed!</p>`;
-                    // Optionally disable the form here
-                }
             }, 1000);
-        };
-
-        // Initialize countdown on page load
-        document.addEventListener('DOMContentLoaded', countdown);
-    </script>
+        </script>
+    -->
 </body>
 </html>
