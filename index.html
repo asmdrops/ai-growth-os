@@ -3,281 +3,320 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GTA VI Economic Impact & Investment Report - Premium Insights</title>
+    <title>AEPM: AI-Powered Autonomous Exploit Prediction & Mitigation</title>
+    <meta name="description" content="AEPM leverages AI to proactively identify zero-day vulnerabilities, predict adversarial AI weaponization, and generate mitigation strategies before exploits are deployed. Join the waitlist for the future of cybersecurity.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366F1'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z'/%3E%3C/svg%3E" type="image/svg+xml">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
+        /* Custom styles for dark mode and premium feel */
         body {
             font-family: 'Inter', sans-serif;
-            @apply bg-gray-900 text-gray-100;
+            background-color: #0A0A0A; /* Deep dark background */
+            color: #E0E0E0;
         }
         .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-image: url('https://source.unsplash.com/1600x900/?AI-Powered,tech');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.75); /* Darker overlay for text readability */
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #6366F1, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        .feature-card {
+            background-color: #1A1A1A;
+            border-radius: 12px;
+            border: 1px solid #2A2A2A;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: #6366F1;
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #6366F1, #8B5CF6);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+        }
+        input[type="text"], input[type="email"] {
+            background-color: #1A1A1A;
+            border: 1px solid #333333;
+            color: #E0E0E0;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        input[type="text"]:focus, input[type="email"]:focus {
+            border-color: #6366F1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+            outline: none;
         }
         .countdown-segment {
-            @apply flex flex-col items-center justify-center p-2 sm:p-4 bg-gray-800 bg-opacity-70 rounded-lg shadow-lg min-w-[70px] sm:min-w-[90px];
+            background-color: #1A1A1A;
+            border: 1px solid #333;
+            border-radius: 8px;
+            min-width: 60px; /* Ensure segments have a minimum width */
         }
-        .countdown-value {
-            @apply text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-400;
+        @media (min-width: 1024px) {
+            .hero-headline {
+                font-size: 5.5rem; /* Larger font size for 4K */
+                line-height: 1.1;
+            }
         }
-        .countdown-label {
-            @apply text-xs sm:text-sm md:text-base text-gray-400 uppercase tracking-wider mt-1;
+        /* Custom scrollbar for premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-
-        /* Basic animations for a premium feel */
-        @keyframes fadeInFromBottom {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        ::-webkit-scrollbar-track {
+            background: #1A1A1A;
         }
-        @keyframes bounceSlow {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
+        ::-webkit-scrollbar-thumb {
+            background: #444444;
+            border-radius: 4px;
         }
-
-        .animate-fade-in-bottom {
-            animation: fadeInFromBottom 0.8s ease-out forwards;
-            opacity: 0; /* Start hidden */
-        }
-        .animate-fade-in-bottom.delay-100 { animation-delay: 0.1s; }
-        .animate-fade-in-bottom.delay-200 { animation-delay: 0.2s; }
-        .animate-fade-in-bottom.delay-300 { animation-delay: 0.3s; }
-        .animate-fade-in-bottom.delay-400 { animation-delay: 0.4s; }
-        .animate-fade-in-bottom.delay-500 { animation-delay: 0.5s; }
-        .animate-fade-in-bottom.delay-600 { animation-delay: 0.6s; }
-
-        .animate-bounce-slow {
-            animation: bounceSlow 2s infinite ease-in-out;
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6366F1;
         }
     </style>
 </head>
-<body class="dark bg-gray-900 text-gray-100 antialiased">
+<body class="antialiased leading-relaxed text-gray-100">
 
     <!-- Hero Section -->
-    <header class="relative hero-background min-h-screen flex items-center justify-center text-center py-20 px-4 overflow-hidden">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark Overlay -->
-        <div class="relative z-10 max-w-5xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mb-6 animate-fade-in-bottom">
-                Unlock the <span class="text-blue-400">GTA VI Economic Tsunami</span>: Your Investment Edge
+    <section class="hero-background min-h-screen flex items-center justify-center text-center py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative z-10 max-w-7xl mx-auto space-y-8">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold hero-headline leading-tight text-balance">
+                <span class="gradient-text">STOP AI Cyberattacks</span><br class="hidden md:block"> BEFORE They Start.
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto animate-fade-in-bottom delay-100">
-                A premium, subscription-based report dissecting the financial seismic shifts from Grand Theft Auto VI. Gain <strong class="text-blue-300">actionable insights</strong> for Take-Two, gaming markets, console sales, and future tech trends.
+            <p class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light max-w-4xl mx-auto text-gray-300 leading-relaxed text-balance">
+                The Future of <span class="text-indigo-400 font-semibold">Autonomous Exploit Mitigation (AEPM)</span> is Here.
             </p>
-
-            <!-- Limited Time Countdown -->
-            <div class="bg-gray-800 bg-opacity-60 backdrop-filter backdrop-blur-sm rounded-xl p-6 sm:p-8 mb-12 shadow-2xl border border-blue-600 animate-fade-in-bottom delay-200">
-                <h2 class="text-xl sm:text-2xl font-bold text-red-400 mb-4 uppercase tracking-wide">
-                    Limited-Time Early Access Offer Ends In:
-                </h2>
-                <div id="countdown" class="flex justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 flex-wrap">
-                    <div class="countdown-segment">
-                        <span id="days" class="countdown-value">00</span>
-                        <span class="countdown-label">Days</span>
-                    </div>
-                    <div class="countdown-segment">
-                        <span id="hours" class="countdown-value">00</span>
-                        <span class="countdown-label">Hours</span>
-                    </div>
-                    <div class="countdown-segment">
-                        <span id="minutes" class="countdown-value">00</span>
-                        <span class="countdown-label">Minutes</span>
-                    </div>
-                    <div class="countdown-segment">
-                        <span id="seconds" class="countdown-value">00</span>
-                        <span class="countdown-label">Seconds</span>
-                    </div>
-                </div>
-                <button onclick="document.getElementById('waitlist-form-section').scrollIntoView({ behavior: 'smooth' });" class="mt-10 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xl rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 animate-bounce-slow">
-                    Join The Exclusive Waitlist Now!
-                </button>
-            </div>
-            <p class="text-sm text-gray-400 mt-4 italic animate-fade-in-bottom delay-300">
-                Don't miss the opportunity to shape your investment strategy before the wave hits.
+            <p class="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto text-gray-400 mt-4 leading-normal">
+                Leverage AEPM to predict zero-day vulnerabilities, simulate adversarial AI threats, and deploy proactive defenses in real-time. Don't just react – prevent.
             </p>
-        </div>
-    </header>
-
-    <!-- Why This Report Section -->
-    <section class="py-16 sm:py-20 bg-gray-950 px-4">
-        <div class="container mx-auto max-w-6xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4 animate-fade-in-bottom">
-                Why GTA VI is More Than Just a Game: It's a <span class="text-blue-400">Market Catalyst</span>
-            </h2>
-            <p class="text-md sm:text-lg text-gray-300 max-w-4xl mx-auto mb-12 animate-fade-in-bottom delay-100">
-                With a decade in the making and a rumored billion-dollar budget, Grand Theft Auto VI isn't just entertainment—it's a macroeconomic event. Its launch will reverberate through stock markets, redefine industry landscapes, and spark new tech trends. Are you prepared?
-            </p>
-            <div class="grid md:grid-cols-3 gap-8 text-left">
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-1 animate-fade-in-bottom delay-200">
-                    <h3 class="text-xl font-semibold text-white mb-3">📈 Unpredictable Market Shifts</h3>
-                    <p class="text-gray-300">The gaming market is volatile. GTA VI's scale will create unprecedented highs and lows. Your strategy needs precision.</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-1 animate-fade-in-bottom delay-300">
-                    <h3 class="text-xl font-semibold text-white mb-3">🤖 AI & Console Pricing Wars</h3>
-                    <p class="text-gray-300">Amidst AI-driven price hikes, understanding console market dynamics post-GTA VI is critical for hardware and software investors.</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 hover:border-blue-500 transition duration-300 transform hover:-translate-y-1 animate-fade-in-bottom delay-400">
-                    <h3 class="text-xl font-semibold text-white mb-3">🌐 Broader Tech & Streaming Impact</h3>
-                    <p class="text-gray-300">From streaming platforms to next-gen hardware, GTA VI's ripple effect will redefine tech investment opportunities.</p>
-                </div>
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a href="#waitlist" class="btn-primary text-lg sm:text-xl transform hover:scale-105">
+                    🚀 Join the Elite Waitlist
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="py-16 sm:py-20 bg-gray-800 px-4">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-12 animate-fade-in-bottom">
-                What Our Premium Report Delivers: <span class="text-blue-400">Your Actionable Blueprint</span>
+    <!-- Market Trend Section -->
+    <section class="py-20 md:py-28 bg-black">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-white leading-tight">
+                The Threat Is Real: <span class="gradient-text">Fully Automated AI Cyberattacks</span> Are Here.
             </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-700 animate-fade-in-bottom delay-100">
-                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
-                        <span class="mr-3 text-2xl">💰</span> Take-Two Interactive (TTWO) Deep Dive
-                    </h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li>🎯 Detailed pre and post-launch stock performance projections.</li>
-                        <li>📊 Revenue forecasts, monetization strategies, and long-term valuation impact.</li>
-                        <li>📉 Risk assessments and opportunities for savvy investors.</li>
-                    </ul>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-400 leading-relaxed max-w-4xl mx-auto mb-10">
+                <span class="font-bold text-indigo-300">"Google says Russian speakers pulled off first-ever fully automated AI cyberattack."</span> – POLITICO.eu
+            </p>
+            <p class="text-md sm:text-lg md:text-xl text-gray-500 leading-relaxed max-w-4xl mx-auto">
+                The recent confirmation by Google's Mandiant of the first fully automated AI cyberattack, originating from sophisticated threat actors, marks a critical turning point in cybersecurity. Traditional defenses are struggling against self-learning, self-optimizing attack agents that operate at machine speed.
+                <span class="block mt-4 text-white">AEPM is built for this new reality, providing a proactive shield against threats designed to bypass human response times and exploit vulnerabilities before they are even fully understood.</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 md:py-28 bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16 text-white leading-tight">
+                Unmatched <span class="gradient-text">AI-Driven Cybersecurity</span><br> for the Autonomous Threat Landscape
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="feature-card p-8 flex flex-col items-start text-left">
+                    <div class="text-indigo-400 text-5xl mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Autonomous Vulnerability Prediction</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        AEPM's advanced AI scans software patches and codebases to identify nascent zero-day vulnerabilities before they are public knowledge or even fully formed. Stay ahead of threats.
+                    </p>
                 </div>
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-700 animate-fade-in-bottom delay-200">
-                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
-                        <span class="mr-3 text-2xl">🎮</span> Broader Gaming & Streaming Market Analysis
-                    </h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li>📈 Impact on competitor titles and publisher ecosystems.</li>
-                        <li>🚀 Analysis of streaming platforms' viewership and ad revenue spikes.</li>
-                        <li>💼 Emerging investment zones within the expanded gaming universe.</li>
-                    </ul>
+
+                <div class="feature-card p-8 flex flex-col items-start text-left">
+                    <div class="text-indigo-400 text-5xl mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Adversarial AI Simulation Engine</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Our platform simulates how sophisticated adversarial AI agents might weaponize identified weaknesses, providing unparalleled foresight into potential attack vectors.
+                    </p>
                 </div>
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-700 animate-fade-in-bottom delay-300">
-                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
-                        <span class="mr-3 text-2xl">🕹️</span> Console Sales Amidst AI Price Hikes
-                    </h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li>💡 Predictions on console demand post-GTA VI launch.</li>
-                        <li>🤖 How AI-driven component costs affect hardware pricing strategies.</li>
-                        <li>🌐 Regional market dynamics and supply chain intelligence.</li>
-                    </ul>
+
+                <div class="feature-card p-8 flex flex-col items-start text-left">
+                    <div class="text-indigo-400 text-5xl mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002 12c0 2.755 1.157 5.26 3.016 7.037.336.31.686.602 1.047.876V21a1 1 0 001 1h10a1 1 0 001-1v-.087a12.001 12.001 0 003.968-7.907A11.955 11.955 0 0122 12c0-2.755-1.157-5.26-3.016-7.037z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Proactive Mitigation Strategy Generation</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        AEPM doesn't just predict; it automatically generates or recommends precise mitigation strategies, allowing you to patch and protect against threats that haven't been fully deployed yet.
+                    </p>
                 </div>
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-700 animate-fade-in-bottom delay-400">
-                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
-                        <span class="mr-3 text-2xl">🔬</span> Associated Tech Trends & Innovations
-                    </h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li>🔮 Metaverse integration potential and virtual economies.</li>
-                        <li>☁️ Cloud gaming acceleration and infrastructure investment.</li>
-                        <li>🛠️ Impact on GPU, CPU, and storage manufacturers.</li>
-                    </ul>
+
+                <div class="feature-card p-8 flex flex-col items-start text-left">
+                    <div class="text-indigo-400 text-5xl mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Real-time Threat Intelligence Integration</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Continuously updated with the latest global threat intelligence, AEPM ensures your defenses are always one step ahead of the most advanced cyber adversaries and emerging attack patterns.
+                    </p>
                 </div>
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-700 animate-fade-in-bottom delay-500">
-                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
-                        <span class="mr-3 text-2xl">📊</span> Data-Driven & Expert-Led Analysis
-                    </h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li>🔬 Exclusive access to proprietary data models and projections.</li>
-                        <li>🗣️ Insights from leading industry analysts and financial experts.</li>
-                        <li>📚 Comprehensive, easy-to-digest reports delivered monthly.</li>
-                    </ul>
+                
+                <div class="feature-card p-8 flex flex-col items-start text-left">
+                    <div class="text-indigo-400 text-5xl mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-4-1m5-16v4h4V3m6 8a2 2 0 11-4 0 2 2 0 014 0zM7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Scalable & Automated Deployment</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Designed for enterprises of all sizes, AEPM integrates seamlessly into existing infrastructure, automating security workflows and reducing human-error vulnerabilities at scale.
+                    </p>
                 </div>
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-700 animate-fade-in-bottom delay-600">
-                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
-                        <span class="mr-3 text-2xl">💼</span> Productivity & Actionable Investment Strategies
-                    </h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li>🔑 Identify key companies and sectors poised for growth or decline.</li>
-                        <li>📈 Translate complex market trends into clear, implementable actions.</li>
-                        <li>🛡️ Mitigate risks and capitalize on emerging opportunities.</li>
-                    </ul>
+
+                <div class="feature-card p-8 flex flex-col items-start text-left">
+                    <div class="text-indigo-400 text-5xl mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h.02M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Intuitive Control & Reporting</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Gain complete visibility and control through an intuitive dashboard. Receive detailed reports and actionable insights to strengthen your security posture continuously.
+                    </p>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist-form-section" class="py-16 sm:py-20 bg-gray-950 px-4">
-        <div class="container mx-auto max-w-2xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6 animate-fade-in-bottom">
-                Secure Your Spot: Don't Be Left Behind!
+    <section id="waitlist" class="py-20 md:py-28 bg-black text-center">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
+                Be Among the First to Defend Against <span class="gradient-text">Autonomous AI Cyber Threats</span>.
             </h2>
-            <p class="text-lg text-gray-300 mb-8 animate-fade-in-bottom delay-100">
-                Join our exclusive waitlist for early access and special introductory pricing for the GTA VI Economic Impact & Investment Report.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-400 leading-relaxed max-w-3xl mx-auto mb-12">
+                Access AEPM: The platform that protects you from the future of cyber warfare. <span class="font-bold text-red-500">Limited slots available.</span>
             </p>
-            <form action="#" method="POST" class="bg-gray-800 p-8 rounded-lg shadow-2xl border border-blue-600 animate-fade-in-bottom delay-200">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name:</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-700 border-gray-600 text-white placeholder-gray-400 transition duration-200"
-                           required>
+
+            <!-- Countdown Timer -->
+            <div class="mb-12">
+                <p class="text-lg sm:text-xl text-indigo-300 font-semibold mb-4">Time left to join the exclusive waitlist:</p>
+                <div id="countdown" class="flex justify-center items-center gap-4 flex-wrap">
+                    <div class="countdown-segment p-4 flex flex-col items-center">
+                        <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-white" id="days">00</span>
+                        <span class="text-sm sm:text-base text-gray-400">Days</span>
+                    </div>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-indigo-400">:</span>
+                    <div class="countdown-segment p-4 flex flex-col items-center">
+                        <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-white" id="hours">00</span>
+                        <span class="text-sm sm:text-base text-gray-400">Hours</span>
+                    </div>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-indigo-400">:</span>
+                    <div class="countdown-segment p-4 flex flex-col items-center">
+                        <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-white" id="minutes">00</span>
+                        <span class="text-sm sm:text-base text-gray-400">Minutes</span>
+                    </div>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-indigo-400">:</span>
+                    <div class="countdown-segment p-4 flex flex-col items-center">
+                        <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-white" id="seconds">00</span>
+                        <span class="text-sm sm:text-base text-gray-400">Seconds</span>
+                    </div>
                 </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address:</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com"
-                           class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-700 border-gray-600 text-white placeholder-gray-400 transition duration-200"
-                           required>
+            </div>
+
+            <form class="bg-gray-800 p-8 sm:p-10 rounded-2xl shadow-xl border border-gray-700 max-w-xl mx-auto space-y-6">
+                <div>
+                    <label for="name" class="block text-left text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required
+                           class="w-full">
                 </div>
-                <div class="mb-6 text-left">
-                    <label for="profession" class="block text-gray-300 text-sm font-bold mb-2">Industry/Profession (Optional):</label>
-                    <input type="text" id="profession" name="profession" placeholder="Investor, Analyst, Gaming Executive"
-                           class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-700 border-gray-600 text-white placeholder-gray-400 transition duration-200">
+                <div>
+                    <label for="email" class="block text-left text-sm font-medium text-gray-300 mb-2">Work Email</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@company.com" required
+                           class="w-full">
                 </div>
-                <button type="submit"
-                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-extrabold py-3 px-4 rounded-full focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300 ease-in-out transform hover:scale-105 text-lg">
-                    Join The Exclusive Waitlist
+                <div>
+                    <label for="company" class="block text-left text-sm font-medium text-gray-300 mb-2">Company (Optional)</label>
+                    <input type="text" id="company" name="company" placeholder="Acme Corp"
+                           class="w-full">
+                </div>
+                <button type="submit" class="btn-primary w-full text-xl mt-6">
+                    ⚡ Secure My Spot Now
                 </button>
-                <p class="text-xs text-gray-400 mt-4">
-                    By joining, you agree to receive updates about the report and relevant market insights. Your data is secure and will not be shared.
-                </p>
+                <p class="text-xs text-gray-500 mt-4">We respect your privacy. No spam, ever.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-8 px-4 text-center text-gray-400 text-sm">
-        <div class="container mx-auto max-w-6xl">
-            <p>&copy; 2024 Digital Education Authority. All rights reserved. | <a href="#" class="text-blue-400 hover:underline">Privacy Policy</a> | <a href="#" class="text-blue-400 hover:underline">Terms of Service</a></p>
-        </div>
+    <footer class="bg-gray-900 py-10 px-4 sm:px-6 lg:px-8 text-center text-gray-500 border-t border-gray-800">
+        <p>&copy; 2024 AEPM. All rights reserved.</p>
+        <p class="mt-2 text-sm">Empowering Your Defenses Against Tomorrow's Threats, Today.</p>
     </footer>
 
-    <!-- Countdown Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the date we're counting down to (e.g., 30 days from now)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 30); // 30 days from now
-            countDownDate.setHours(23, 59, 59, 999); // End of the day for consistency
+        // Countdown Timer Logic
+        const countdown = () => {
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const countToDate = new Date();
+            countToDate.setDate(countToDate.getDate() + 7); // 7 days from now for a "Limited Time" offer
 
-            const x = setInterval(function() {
+            const updateCountdown = setInterval(() => {
                 const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
-
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<div class='text-red-500 text-xl sm:text-2xl font-bold mt-4'>Offer Expired!</div>";
-                    // Optionally disable the waitlist button or change its text
-                    document.querySelector('button.animate-bounce-slow').disabled = true;
-                    document.querySelector('button.animate-bounce-slow').textContent = "Offer Ended";
-                    document.querySelector('button.animate-bounce-slow').classList.remove('bg-blue-600', 'hover:bg-blue-700', 'animate-bounce-slow');
-                    document.querySelector('button.animate-bounce-slow').classList.add('bg-gray-500', 'cursor-not-allowed');
-                    return;
-                }
+                const distance = countToDate - now;
 
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Update the elements, ensuring two digits
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+                document.getElementById('days').innerText = String(days).padStart(2, '0');
+                document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+                document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
 
+                if (distance < 0) {
+                    clearInterval(updateCountdown);
+                    document.getElementById('countdown').innerHTML = `<p class="text-red-500 text-xl font-bold">Waitlist Closed!</p>`;
+                    // Optionally disable the form here
+                }
             }, 1000);
-        });
+        };
+
+        // Initialize countdown on page load
+        document.addEventListener('DOMContentLoaded', countdown);
     </script>
 </body>
 </html>
