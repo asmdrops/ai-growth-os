@@ -1,201 +1,244 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CreatorGuard AI - Protect Your Content. Automatically.</title>
-    <meta name="description" content="CreatorGuard AI offers advanced, AI-powered detection of unauthorized reposts and AI-modified content on Instagram. Automate takedown notices, track infringements, and safeguard your creative work.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+    <title>The Apple Home Matter & Aqara Integration Blueprint</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* Custom dark mode base styles - Tailwind's dark class usually suffices, but good to ensure defaults */
-        body {
-            @apply bg-gray-900 text-gray-50;
-        }
-        /* Hero image background styles */
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+        /* Custom CSS for fine-tuning or specific elements if needed */
+        .hero-bg {
+            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            background-attachment: fixed; /* Provides a subtle parallax effect */
+        }
+        /* Custom gradient text for headlines */
+        .text-gradient-purple-pink {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #a78bfa, #ec4899); /* from-purple-400 to-pink-600 */
+        }
+        .text-gradient-cyan-emerald {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #22d3ee, #10b981); /* from-cyan-400 to-emerald-500 */
+        }
+        .text-gradient-orange-red {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #fb923c, #ef4444); /* from-orange-400 to-red-500 */
+        }
+        .text-gradient-blue-teal {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #60a5fa, #2dd4bf); /* from-blue-400 to-teal-500 */
         }
     </style>
 </head>
-<body class="font-sans antialiased text-gray-50 bg-gray-900">
+<body class="bg-gray-900 text-gray-100 antialiased font-sans">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center hero-background">
-        <!-- Overlay for text readability -->
-        <div class="absolute inset-0 bg-black opacity-70"></div> 
-
-        <div class="relative z-10 text-center max-w-4xl mx-auto p-6 md:p-8">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4">
-                <span class="bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">CreatorGuard AI:</span>
-                Your Content, Protected. <span class="block mt-2">Automatically.</span>
+    <header class="hero-bg relative min-h-screen flex items-center justify-center text-center py-20 px-4">
+        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-gradient-purple-pink">
+                Unlock Your Smart Home's Full Potential
             </h1>
-            <p class="text-lg sm:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-                Leverage cutting-edge AI to detect unauthorized reposts, AI-modified versions, and "joke-stealing" on Instagram. Automate takedown notices and reclaim your creative ownership.
+            <p class="text-xl sm:text-2xl lg:text-3xl text-gray-200 mb-8 font-light">
+                Master the Future: Seamless Apple Home, Matter & Aqara Integration Awaits.
             </p>
-            <a href="#waitlist" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900">
-                Join the Exclusive Waitlist
+            <p class="text-lg sm:text-xl lg:text-2xl text-yellow-300 font-semibold mb-6">
+                ✨ Limited Time Exclusive Access Offer ✨
+            </p>
+
+            <!-- Countdown Timer -->
+            <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 mb-10 text-white">
+                <div class="flex flex-col items-center">
+                    <span id="days" class="block text-3xl sm:text-4xl lg:text-5xl font-bold bg-gray-800 p-2 sm:p-3 rounded-lg shadow-md min-w-[50px] sm:min-w-[70px]">00</span>
+                    <span class="block text-xs sm:text-sm mt-1">Days</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span id="hours" class="block text-3xl sm:text-4xl lg:text-5xl font-bold bg-gray-800 p-2 sm:p-3 rounded-lg shadow-md min-w-[50px] sm:min-w-[70px]">00</span>
+                    <span class="block text-xs sm:text-sm mt-1">Hours</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span id="minutes" class="block text-3xl sm:text-4xl lg:text-5xl font-bold bg-gray-800 p-2 sm:p-3 rounded-lg shadow-md min-w-[50px] sm:min-w-[70px]">00</span>
+                    <span class="block text-xs sm:text-sm mt-1">Minutes</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span id="seconds" class="block text-3xl sm:text-4xl lg:text-5xl font-bold bg-gray-800 p-2 sm:p-3 rounded-lg shadow-md min-w-[50px] sm:min-w-[70px]">00</span>
+                    <span class="block text-xs sm:text-sm mt-1">Seconds</span>
+                </div>
+            </div>
+
+            <a href="#waitlist" class="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg transform transition duration-300 ease-in-out hover:scale-105">
+                Join the Exclusive Waitlist Now!
             </a>
-            <p class="mt-4 text-sm text-gray-400">Be among the first to safeguard your digital creations.</p>
+            <p class="mt-4 text-sm text-gray-400">Offer ends when the timer hits zero. Don't miss out!</p>
+        </div>
+    </header>
+
+    <!-- Problem/Solution Introduction -->
+    <section class="py-16 md:py-24 px-4 bg-gray-800">
+        <div class="container mx-auto max-w-3xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-gradient-cyan-emerald">
+                Are You Ready for Truly Smart Home Automation?
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                The smart home landscape is evolving rapidly, with Matter promising a unified future. But integrating new Aqara Matter devices with your existing Apple Home setup can be a maze of complex settings, connectivity quirks, and frustrating troubleshooting.
+            </p>
+            <p class="text-lg sm:text-xl text-gray-300">
+                You've seen the headlines – <span class="font-semibold text-purple-300">"Aqara Debuts Six Matter Smart Lights That Work With Apple Home"</span> – and you're excited. Our 'The Apple Home Matter & Aqara Integration Blueprint' is your definitive, interactive, step-by-step guide to cutting through the confusion and building a truly intelligent home.
+            </p>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 bg-gray-900">
-        <div class="max-w-6xl mx-auto px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white text-center mb-12 sm:mb-16">
-                Unmatched Protection for Your Creative Work
+    <section class="py-16 md:py-24 px-4 bg-gray-900">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gradient-orange-red">
+                What You'll Achieve with This Blueprint
             </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12">
-                <!-- Feature 1: AI-Powered Infringement Detection -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-                    <div class="text-purple-400 mb-4 text-4xl">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.276a1.125 1.125 0 011.079 0c.347.161.64.444.823.786.183.341.277.712.277 1.083l-.01 5.385A11.95 11.95 0 0112 21.188c-2.885-.487-5.485-1.928-7.391-4.072l-.008-5.385c0-.371.094-.742.277-1.083.183-.341.476-.625.823-.786a1.125 1.125 0 011.079 0l2.775 1.171a1.125 1.125 0 001.214-.075l3.213-2.617c.1-.082.251-.082.352 0l3.213 2.617c.099.08.25.08.35 0l2.775-1.17c.433-.183.823-.42 1.157-.704"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">AI-Powered Infringement Detection</h3>
-                    <p class="text-gray-300">Our cutting-edge AI constantly monitors Instagram for unauthorized reposts, subtle modifications, and even AI-generated versions of your original content.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: Effortless Setup & Integration -->
+                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-blue-500 flex flex-col items-center text-center">
+                    <div class="text-blue-400 text-5xl mb-4 leading-none">💡</div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Effortless Setup & Integration</h3>
+                    <p class="text-gray-300">Follow our interactive, step-by-step video guides to connect your Aqara Matter devices with Apple Home without the headaches. From unboxing to seamless control, we cover it all.</p>
                 </div>
-
-                <!-- Feature 2: Automated Takedown Notices -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-                    <div class="text-purple-400 mb-4 text-4xl">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Automated Takedown Notices</h3>
-                    <p class="text-gray-300">Stop manual chasing. CreatorGuard AI automatically generates and sends legally compliant takedown notices, saving you time and stress.</p>
+                <!-- Feature 2: Advanced Automation Secrets -->
+                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-green-500 flex flex-col items-center text-center">
+                    <div class="text-green-400 text-5xl mb-4 leading-none">🚀</div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Advanced Automation Secrets</h3>
+                    <p class="text-gray-300">Unlock the true power of your smart home. Learn to create sophisticated automations that respond to your life, saving energy and enhancing comfort automatically.</p>
                 </div>
-
-                <!-- Feature 3: Granular Infringement Analytics -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-                    <div class="text-purple-400 mb-4 text-4xl">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Granular Infringement Analytics</h3>
-                    <p class="text-gray-300">Understand the true impact of content theft. Get detailed reports on where your content is being misused and the reach of infringements.</p>
+                <!-- Feature 3: Expert Troubleshooting & Tips -->
+                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-yellow-500 flex flex-col items-center text-center">
+                    <div class="text-yellow-400 text-5xl mb-4 leading-none">🛠️</div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Expert Troubleshooting & Tips</h3>
+                    <p class="text-gray-300">Never get stuck again. Our comprehensive troubleshooting section helps you diagnose and fix common (and uncommon) integration issues quickly and efficiently.</p>
                 </div>
-
-                <!-- Feature 4: Seamless Instagram Integration -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-                    <div class="text-purple-400 mb-4 text-4xl">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2zM12 10a2 2 0 100-4 2 2 0 000 4z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21.21L5.3 14.51c-4.46-4.46-4.46-11.7 0-16.16 4.46-4.46 11.7-4.46 16.16 0 4.46 4.46 4.46 11.7 0 16.16L12 21.21z"/></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Seamless Instagram Integration</h3>
-                    <p class="text-gray-300">Designed from the ground up to integrate with Instagram's evolving creator ecosystem, ensuring full coverage once APIs are available or via clever monitoring.</p>
+                <!-- Feature 4: Security & Privacy Best Practices -->
+                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-purple-500 flex flex-col items-center text-center">
+                    <div class="text-purple-400 text-5xl mb-4 leading-none">🔒</div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Security & Privacy Best Practices</h3>
+                    <p class="text-gray-300">Ensure your smart home is not just convenient, but also secure. Learn how to protect your data and maintain privacy with your connected devices.</p>
                 </div>
-
-                <!-- Feature 5: Specialized Content Modules -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-                    <div class="text-purple-400 mb-4 text-4xl">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Specialized Content Modules</h3>
-                    <p class="text-gray-300">From 'joke-stealing' detection for comedians to unique pattern recognition for visual artists, we provide tailored protection for your niche content.</p>
+                <!-- Feature 5: Stay Ahead with Matter -->
+                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-red-500 flex flex-col items-center text-center">
+                    <div class="text-red-400 text-5xl mb-4 leading-none">📈</div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Stay Ahead with Matter</h3>
+                    <p class="text-gray-300">Understand the Matter standard and how it shapes the future of smart homes, ensuring your setup is future-proof and compatible with new devices.</p>
                 </div>
-
-                <!-- Feature 6: Future-Proof & Adaptable -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-                    <div class="text-purple-400 mb-4 text-4xl">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-3">Future-Proof & Adaptable</h3>
-                    <p class="text-gray-300">As Meta continues to innovate (e.g., launching new apps like 'Direct'), CreatorGuard AI is designed to adapt, ensuring continuous protection for your content.</p>
+                <!-- Feature 6: Designed for Apple Home Users -->
+                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-teal-500 flex flex-col items-center text-center">
+                    <div class="text-teal-400 text-5xl mb-4 leading-none">🎯</div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Designed for Apple Home Users</h3>
+                    <p class="text-gray-300">Tailored specifically for new and existing Apple Home users, maximizing your experience with a familiar and powerful ecosystem.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Section -->
-    <section id="waitlist" class="py-16 md:py-24 bg-gradient-to-br from-gray-900 to-slate-800">
-        <div class="max-w-xl mx-auto px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">
-                Don't Let Your Creativity Be Stolen.
+    <!-- Call to Action Section before Waitlist -->
+    <section class="py-16 px-4 bg-gray-800 text-center">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-gradient-purple-pink">
+                Stop Guessing, Start Automating.
             </h2>
-            <p class="text-lg text-gray-300 mb-8">
-                Join our waitlist for early access to CreatorGuard AI. Protect your unique voice and visuals on Instagram before anyone else.
+            <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                Don't let the complexity of modern smart home integration hold you back. The "Apple Home Matter & Aqara Integration Blueprint" gives you the knowledge and confidence to build the smart home you've always dreamed of.
             </p>
+            <a href="#waitlist" class="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg transform transition duration-300 ease-in-out hover:scale-105">
+                Secure Your Spot Today!
+            </a>
+        </div>
+    </section>
 
-            <!-- Limited Time Countdown -->
-            <div class="bg-purple-800 bg-opacity-30 border border-purple-700 rounded-lg p-6 mb-10 shadow-md">
-                <p class="text-xl font-bold text-white mb-3">Exclusive Waitlist Closes In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 text-white font-mono text-3xl md:text-4xl lg:text-5xl">
-                    <div class="flex flex-col items-center min-w-[50px] sm:min-w-[70px]">
-                        <span id="days" class="block">00</span>
-                        <span class="text-xs sm:text-sm text-gray-300">Days</span>
-                    </div>
-                    <span class="text-gray-400">:</span>
-                    <div class="flex flex-col items-center min-w-[50px] sm:min-w-[70px]">
-                        <span id="hours" class="block">00</span>
-                        <span class="text-xs sm:text-sm text-gray-300">Hours</span>
-                    </div>
-                    <span class="text-gray-400">:</span>
-                    <div class="flex flex-col items-center min-w-[50px] sm:min-w-[70px]">
-                        <span id="minutes" class="block">00</span>
-                        <span class="text-xs sm:text-sm text-gray-300">Minutes</span>
-                    </div>
-                    <span class="text-gray-400">:</span>
-                    <div class="flex flex-col items-center min-w-[50px] sm:min-w-[70px]">
-                        <span id="seconds" class="block">00</span>
-                        <span class="text-xs sm:text-sm text-gray-300">Seconds</span>
-                    </div>
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 md:py-24 px-4 bg-gray-900">
+        <div class="container mx-auto max-w-lg bg-gray-800 rounded-xl p-8 shadow-2xl border border-gray-700">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8 text-gradient-blue-teal">
+                Join the Exclusive Waitlist!
+            </h2>
+            <p class="text-center text-gray-300 mb-8">
+                Be among the first to access 'The Apple Home Matter & Aqara Integration Blueprint' at our special launch price. Limited spots available for early bird discounts!
+            </p>
+            <form class="space-y-6">
+                <div>
+                    <label for="name" class="block text-gray-300 text-lg font-medium mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white text-lg"
+                           required>
                 </div>
-            </div>
-
-            <form class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-200 text-sm font-bold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-white bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200" required>
+                <div>
+                    <label for="email" class="block text-gray-300 text-lg font-medium mb-2">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com"
+                           class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white text-lg"
+                           required>
                 </div>
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-white bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200" required>
+                <div class="flex items-center">
+                    <input type="checkbox" id="consent" name="consent" class="h-5 w-5 text-blue-500 rounded focus:ring-blue-400">
+                    <label for="consent" class="ml-2 text-gray-400 text-sm cursor-pointer">
+                        I agree to receive updates and promotional emails about this course.
+                    </label>
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="niche" class="block text-gray-200 text-sm font-bold mb-2">Content Niche (Optional)</label>
-                    <select id="niche" name="niche" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-white bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200">
-                        <option value="">Select your primary content type</option>
-                        <option value="Visual Artist">Visual Artist / Illustrator</option>
-                        <option value="Photographer">Photographer</option>
-                        <option value="Comedian">Comedian / Humorist</option>
-                        <option value="Writer">Writer / Poet</option>
-                        <option value="Musician">Musician</option>
-                        <option value="Educator">Educator / Teacher</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-                <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded-full text-lg shadow-lg transform transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900">
-                    Join the Waitlist Now
+                <button type="submit"
+                        class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-4 rounded-lg text-xl shadow-lg transform transition duration-300 ease-in-out hover:scale-105">
+                    Sign Up For Early Access
                 </button>
             </form>
+            <p class="text-center text-gray-500 text-sm mt-6">
+                We respect your privacy. Your information will not be shared.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm">
-        <p>&copy; 2023 CreatorGuard AI. All rights reserved. <a href="#" class="text-purple-400 hover:text-purple-300 transition-colors duration-200">Privacy Policy</a></p>
+    <footer class="bg-gray-800 py-8 px-4 text-center text-gray-400">
+        <div class="container mx-auto">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2 text-sm">
+                <a href="#" class="hover:text-gray-200 transition-colors duration-200">Privacy Policy</a> |
+                <a href="#" class="hover:text-gray-200 transition-colors duration-200">Terms of Service</a>
+            </p>
+        </div>
     </footer>
 
-    <!-- Countdown Timer Script -->
+    <!-- Countdown Timer JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 30 days from now)
+            // Set the date we're counting down to (e.g., 7 days from now)
             const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 30); // 30 days from today
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from today
+            countDownDate.setHours(23, 59, 59, 999); // Set to end of the 7th day
 
             const x = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = countDownDate - now;
+                const distance = countDownDate.getTime() - now;
 
                 if (distance < 0) {
                     clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<span class='text-red-400 text-xl md:text-2xl lg:text-3xl font-bold'>WAITLIST CLOSED!</span>";
-                    const submitButton = document.querySelector('#waitlist form button');
-                    if (submitButton) {
-                        submitButton.disabled = true;
-                        submitButton.classList.add('opacity-50', 'cursor-not-allowed');
+                    document.getElementById("countdown").innerHTML = "<p class='text-red-500 text-2xl sm:text-3xl font-bold'>Offer Expired!</p>";
+                    // Optional: Disable the CTA button if the offer has expired
+                    const ctaButton = document.querySelector('.hero-bg a');
+                    if (ctaButton) {
+                        ctaButton.classList.add('opacity-50', 'cursor-not-allowed');
+                        ctaButton.removeAttribute('href');
+                        ctaButton.innerText = 'Offer Expired';
+                        ctaButton.style.pointerEvents = 'none'; // Further disable clicks
+                    }
+                    const secondaryCtaButton = document.querySelector('section.bg-gray-800 a');
+                    if (secondaryCtaButton) {
+                        secondaryCtaButton.classList.add('opacity-50', 'cursor-not-allowed');
+                        secondaryCtaButton.removeAttribute('href');
+                        secondaryCtaButton.innerText = 'Offer Expired';
+                        secondaryCtaButton.style.pointerEvents = 'none';
                     }
                     return;
                 }
@@ -205,14 +248,13 @@
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Display the result in the element with id="countdown"
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
+                document.getElementById("days").innerText = String(days).padStart(2, '0');
+                document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
             }, 1000);
         });
     </script>
+
 </body>
 </html>
