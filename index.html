@@ -1,253 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neuro-Focus Frontiers: Master Your Focus, Amplify Productivity</title>
+    <title>CreatorGuard AI - Protect Your Content. Automatically.</title>
+    <meta name="description" content="CreatorGuard AI offers advanced, AI-powered detection of unauthorized reposts and AI-modified content on Instagram. Automate takedown notices, track infringements, and safeguard your creative work.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
+        /* Custom dark mode base styles - Tailwind's dark class usually suffices, but good to ensure defaults */
         body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            @apply bg-gray-900 text-gray-50;
         }
-        /* Custom scrollbar for premium dark mode */
-        body::-webkit-scrollbar {
-            width: 8px;
-        }
-        body::-webkit-scrollbar-track {
-            background: #111827; /* bg-gray-900 */
-        }
-        body::-webkit-scrollbar-thumb {
-            background-color: #4b5563; /* gray-600 */
-            border-radius: 4px;
-        }
-        body::-webkit-scrollbar-thumb:hover {
-            background-color: #6b7280; /* gray-500 */
-        }
-
         /* Hero image background styles */
         .hero-background {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Provides a subtle parallax effect */
-        }
-        /* Gradient overlay for optimal text readability on the hero image */
-        .hero-overlay {
-            background-image: linear-gradient(to top, rgba(17, 24, 39, 0.95) 0%, rgba(17, 24, 39, 0.8) 40%, rgba(17, 24, 39, 0.6) 100%);
-        }
-        @media (min-width: 1024px) {
-            .hero-overlay {
-                /* More subtle overlay for larger screens, allowing more of the image to show */
-                background-image: linear-gradient(to right, rgba(17, 24, 39, 0.95) 0%, rgba(17, 24, 39, 0.7) 50%, rgba(17, 24, 39, 0.4) 100%);
-            }
+            background-repeat: no-repeat;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
+<body class="font-sans antialiased text-gray-50 bg-gray-900">
 
     <!-- Hero Section -->
-    <header class="hero-background relative min-h-screen flex items-center justify-center p-4 overflow-hidden">
-        <div class="hero-overlay absolute inset-0"></div>
-        <div class="relative z-10 text-center max-w-5xl mx-auto py-16 px-6 lg:px-8">
-            <span class="inline-block bg-indigo-500 text-white text-sm font-semibold px-4 py-1 rounded-full uppercase tracking-wide mb-4 animate-pulse">
-                Launching Soon: The Future of Focus is Here
-            </span>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mb-6 drop-shadow-xl">
-                Unlock Peak Focus: Your Brain's Ultimate Productivity Upgrade
+    <section class="relative h-screen flex items-center justify-center hero-background">
+        <!-- Overlay for text readability -->
+        <div class="absolute inset-0 bg-black opacity-70"></div> 
+
+        <div class="relative z-10 text-center max-w-4xl mx-auto p-6 md:p-8">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                <span class="bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">CreatorGuard AI:</span>
+                Your Content, Protected. <span class="block mt-2">Automatically.</span>
             </h1>
-            <p class="text-lg sm:text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Dive deep into emerging brain-tech for unprecedented productivity and master practical neuro-optimization techniques. Inspired by groundbreaking innovations like <span class="font-bold text-indigo-300">Neurable One</span>, 'Neuro-Focus Frontiers' is your exclusive guide to sustained cognitive performance.
+            <p class="text-lg sm:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+                Leverage cutting-edge AI to detect unauthorized reposts, AI-modified versions, and "joke-stealing" on Instagram. Automate takedown notices and reclaim your creative ownership.
             </p>
-            <a href="#waitlist" class="inline-flex items-center justify-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-xl group">
-                Join the Exclusive Waitlist Today 
-                <svg class="ml-3 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            <a href="#waitlist" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900">
+                Join the Exclusive Waitlist
             </a>
-            <p class="mt-4 text-sm text-gray-400">Limited spots available for early access and founder benefits.</p>
+            <p class="mt-4 text-sm text-gray-400">Be among the first to safeguard your digital creations.</p>
         </div>
-    </header>
+    </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-20 bg-gray-950 px-4">
-        <div class="container mx-auto max-w-screen-xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-4">
-                What You'll Discover Inside Neuro-Focus Frontiers
+    <section id="features" class="py-16 md:py-24 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white text-center mb-12 sm:mb-16">
+                Unmatched Protection for Your Creative Work
             </h2>
-            <p class="text-lg text-center text-gray-300 mb-12 max-w-3xl mx-auto">
-                Move beyond distractions and amplify your cognitive abilities. Access exclusive market trends, research-backed techniques, and a supportive community to elevate your cognitive game.
-            </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-                <!-- Feature 1: Curated Brain-Tech Insights -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 group">
-                    <div class="text-indigo-400 text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🧠</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Curated Brain-Tech Insights</h3>
-                    <p class="text-gray-300">
-                        Stay ahead with expert-curated analysis of emerging neuro-technologies for productivity. We cut through the noise to bring you what truly matters in brain-computer interfaces, neurofeedback, and advanced cognitive tools.
-                    </p>
-                    <ul class="mt-4 space-y-2 text-gray-300">
-                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">✨</span> In-depth trend reports on the neuro-tech market</li>
-                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">🔬</span> Research breakdowns made simple for practical application</li>
-                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">🔮</span> Future-gazing and strategic implications of neuro-innovation</li>
-                    </ul>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12">
+                <!-- Feature 1: AI-Powered Infringement Detection -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
+                    <div class="text-purple-400 mb-4 text-4xl">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.276a1.125 1.125 0 011.079 0c.347.161.64.444.823.786.183.341.277.712.277 1.083l-.01 5.385A11.95 11.95 0 0112 21.188c-2.885-.487-5.485-1.928-7.391-4.072l-.008-5.385c0-.371.094-.742.277-1.083.183-.341.476-.625.823-.786a1.125 1.125 0 011.079 0l2.775 1.171a1.125 1.125 0 001.214-.075l3.213-2.617c.1-.082.251-.082.352 0l3.213 2.617c.099.08.25.08.35 0l2.775-1.17c.433-.183.823-.42 1.157-.704"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">AI-Powered Infringement Detection</h3>
+                    <p class="text-gray-300">Our cutting-edge AI constantly monitors Instagram for unauthorized reposts, subtle modifications, and even AI-generated versions of your original content.</p>
                 </div>
 
-                <!-- Feature 2: Practical Neuro-Optimization -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 group">
-                    <div class="text-indigo-400 text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🧘</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Practical Neuro-Optimization</h3>
-                    <p class="text-gray-300">
-                        Transform complex neuroscience into actionable results. Learn proven techniques and protocols to enhance your focus, memory, and cognitive resilience, derived from the latest research and applied principles.
-                    </p>
-                    <ul class="mt-4 space-y-2 text-gray-300">
-                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">✅</span> Step-by-step guides for achieving and sustaining peak states</li>
-                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">💡</span> Advanced biohacking strategies that deliver tangible results</li>
-                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">📈</span> Trackable progress methods to measure your cognitive gains</li>
-                    </ul>
+                <!-- Feature 2: Automated Takedown Notices -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
+                    <div class="text-purple-400 mb-4 text-4xl">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Automated Takedown Notices</h3>
+                    <p class="text-gray-300">Stop manual chasing. CreatorGuard AI automatically generates and sends legally compliant takedown notices, saving you time and stress.</p>
                 </div>
 
-                <!-- Feature 3: Exclusive Expert Interviews -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 group">
-                    <div class="text-indigo-400 text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎙️</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Exclusive Expert Interviews</h3>
-                    <p class="text-gray-300">
-                        Gain direct wisdom from the pioneers and thought leaders. Our deep-dive interviews with leading neuroscientists, tech innovators, and peak performance coaches give you unparalleled access to cutting-edge insights.
-                    </p>
-                    <ul class="mt-4 space-y-2 text-gray-300">
-                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">👤</span> Unfiltered insights from industry visionaries and researchers</li>
-                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">🚀</span> Actionable strategies directly from high-performers</li>
-                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">❓</span> Live Q&A sessions to get your pressing questions answered</li>
-                    </ul>
+                <!-- Feature 3: Granular Infringement Analytics -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
+                    <div class="text-purple-400 mb-4 text-4xl">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Granular Infringement Analytics</h3>
+                    <p class="text-gray-300">Understand the true impact of content theft. Get detailed reports on where your content is being misused and the reach of infringements.</p>
                 </div>
 
-                <!-- Feature 4: Focus Protocol Blueprints -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 group">
-                    <div class="text-indigo-400 text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🗺️</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Focus Protocol Blueprints</h3>
-                    <p class="text-gray-300">
-                        Eliminate guesswork with ready-to-implement, step-by-step blueprints tailored for different work styles and goals. Whether you're a creative, an analyst, or a leader, optimize your deep work sessions with precision.
-                    </p>
-                    <ul class="mt-4 space-y-2 text-gray-300">
-                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">🛠️</span> Customizable productivity plans for diverse professional needs</li>
-                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">🎯</span> Goal-specific focus strategies to achieve your objectives faster</li>
-                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">🔄</span> Adaptable workflows for seamless integration into your daily routine</li>
-                    </ul>
+                <!-- Feature 4: Seamless Instagram Integration -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
+                    <div class="text-purple-400 mb-4 text-4xl">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2zM12 10a2 2 0 100-4 2 2 0 000 4z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21.21L5.3 14.51c-4.46-4.46-4.46-11.7 0-16.16 4.46-4.46 11.7-4.46 16.16 0 4.46 4.46 4.46 11.7 0 16.16L12 21.21z"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Seamless Instagram Integration</h3>
+                    <p class="text-gray-300">Designed from the ground up to integrate with Instagram's evolving creator ecosystem, ensuring full coverage once APIs are available or via clever monitoring.</p>
                 </div>
 
-                <!-- Feature 5: Exclusive Member Community -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 group">
-                    <div class="text-indigo-400 text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🤝</div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Exclusive Member Community</h3>
-                    <p class="text-gray-300">
-                        Connect with a dedicated network of high-achievers and forward-thinkers. Share strategies, discuss breakthroughs, and celebrate results in a private, moderated community that fosters genuine engagement and collaborative growth.
-                    </p>
-                    <ul class="mt-4 space-y-2 text-gray-300">
-                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">💬</span> Engage directly with fellow innovators and thought leaders</li>
-                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">🌟</span> Share successes, overcome challenges, and get peer support</li>
-                        <li class="flex items-start"><span class="mr-2 text-indigo-400 mt-1">🌱</span> Nurture a collaborative environment for continuous learning and growth</li>
-                    </ul>
+                <!-- Feature 5: Specialized Content Modules -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
+                    <div class="text-purple-400 mb-4 text-4xl">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Specialized Content Modules</h3>
+                    <p class="text-gray-300">From 'joke-stealing' detection for comedians to unique pattern recognition for visual artists, we provide tailored protection for your niche content.</p>
+                </div>
+
+                <!-- Feature 6: Future-Proof & Adaptable -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
+                    <div class="text-purple-400 mb-4 text-4xl">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Future-Proof & Adaptable</h3>
+                    <p class="text-gray-300">As Meta continues to innovate (e.g., launching new apps like 'Direct'), CreatorGuard AI is designed to adapt, ensuring continuous protection for your content.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / CTA Section -->
-    <section id="waitlist" class="py-16 sm:py-20 bg-gray-900 px-4">
-        <div class="container mx-auto max-w-3xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Don't Miss Out: Secure Your Spot for Early Access
+    <!-- Waitlist Section -->
+    <section id="waitlist" class="py-16 md:py-24 bg-gradient-to-br from-gray-900 to-slate-800">
+        <div class="max-w-xl mx-auto px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">
+                Don't Let Your Creativity Be Stolen.
             </h2>
             <p class="text-lg text-gray-300 mb-8">
-                'Neuro-Focus Frontiers' is launching soon, and access will be limited for our initial cohort. Join the waitlist now to guarantee your spot, receive exclusive founder discounts, and get early content previews!
+                Join our waitlist for early access to CreatorGuard AI. Protect your unique voice and visuals on Instagram before anyone else.
             </p>
 
-            <!-- Countdown Timer Placeholder (Limited Time Strategy Applied) -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-xl mb-10 border border-gray-700 animate-pulse-slow">
-                <p class="text-indigo-400 text-sm font-semibold uppercase tracking-wider mb-4">
-                    Early Access Opportunity Closes In:
-                </p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 md:space-x-8 text-white">
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-300" id="days">XX</span>
-                        <span class="text-sm md:text-base text-gray-400 uppercase">Days</span>
+            <!-- Limited Time Countdown -->
+            <div class="bg-purple-800 bg-opacity-30 border border-purple-700 rounded-lg p-6 mb-10 shadow-md">
+                <p class="text-xl font-bold text-white mb-3">Exclusive Waitlist Closes In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 text-white font-mono text-3xl md:text-4xl lg:text-5xl">
+                    <div class="flex flex-col items-center min-w-[50px] sm:min-w-[70px]">
+                        <span id="days" class="block">00</span>
+                        <span class="text-xs sm:text-sm text-gray-300">Days</span>
                     </div>
-                    <span class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-300 hidden sm:block">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-300" id="hours">XX</span>
-                        <span class="text-sm md:text-base text-gray-400 uppercase">Hours</span>
+                    <span class="text-gray-400">:</span>
+                    <div class="flex flex-col items-center min-w-[50px] sm:min-w-[70px]">
+                        <span id="hours" class="block">00</span>
+                        <span class="text-xs sm:text-sm text-gray-300">Hours</span>
                     </div>
-                    <span class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-300 hidden sm:block">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-300" id="minutes">XX</span>
-                        <span class="text-sm md:text-base text-gray-400 uppercase">Minutes</span>
+                    <span class="text-gray-400">:</span>
+                    <div class="flex flex-col items-center min-w-[50px] sm:min-w-[70px]">
+                        <span id="minutes" class="block">00</span>
+                        <span class="text-xs sm:text-sm text-gray-300">Minutes</span>
                     </div>
-                    <span class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-300 hidden sm:block">:</span>
-                    <div class="flex flex-col items-center">
-                        <span class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-300" id="seconds">XX</span>
-                        <span class="text-sm md:text-base text-gray-400 uppercase">Seconds</span>
+                    <span class="text-gray-400">:</span>
+                    <div class="flex flex-col items-center min-w-[50px] sm:min-w-[70px]">
+                        <span id="seconds" class="block">00</span>
+                        <span class="text-xs sm:text-sm text-gray-300">Seconds</span>
                     </div>
                 </div>
-                <p class="text-xs text-gray-500 mt-4">
-                    <!-- Note: This countdown is a static placeholder. Dynamic functionality requires JavaScript. -->
-                    The exclusive launch window is closing fast! Don't delay your cognitive advantage.
-                </p>
             </div>
 
-            <!-- Waitlist Form -->
-            <form action="#" method="POST" class="bg-gray-800 p-8 rounded-xl shadow-xl border border-gray-700 max-w-md mx-auto">
-                <div class="mb-6">
-                    <label for="name" class="block text-left text-sm font-medium text-gray-300 mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-indigo-500 focus:border-indigo-500 transition-colors duration-200"
-                           required>
+            <form class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-200 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-white bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200" required>
                 </div>
-                <div class="mb-6">
-                    <label for="email" class="block text-left text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
-                           class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-indigo-500 focus:border-indigo-500 transition-colors duration-200"
-                           required>
+                <div class="mb-6 text-left">
+                    <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-white bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200" required>
                 </div>
-                <button type="submit"
-                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
-                    Join Waitlist Now
+                <div class="mb-8 text-left">
+                    <label for="niche" class="block text-gray-200 text-sm font-bold mb-2">Content Niche (Optional)</label>
+                    <select id="niche" name="niche" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 text-white bg-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200">
+                        <option value="">Select your primary content type</option>
+                        <option value="Visual Artist">Visual Artist / Illustrator</option>
+                        <option value="Photographer">Photographer</option>
+                        <option value="Comedian">Comedian / Humorist</option>
+                        <option value="Writer">Writer / Poet</option>
+                        <option value="Musician">Musician</option>
+                        <option value="Educator">Educator / Teacher</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded-full text-lg shadow-lg transform transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900">
+                    Join the Waitlist Now
                 </button>
-                <p class="mt-4 text-sm text-gray-400">
-                    We respect your privacy. Your email will only be used for launch updates and exclusive offers.
-                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 px-4 text-center text-gray-500 text-sm">
-        <div class="container mx-auto max-w-screen-xl">
-            <p>&copy; 2023 Neuro-Focus Frontiers. All rights reserved.</p>
-            <p class="mt-2">Disclaimer: Insights derived from research are for informational purposes and not medical advice. Consult a professional for health concerns.</p>
-        </div>
+    <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm">
+        <p>&copy; 2023 CreatorGuard AI. All rights reserved. <a href="#" class="text-purple-400 hover:text-purple-300 transition-colors duration-200">Privacy Policy</a></p>
     </footer>
 
-    <!--
-        NOTE: The countdown timer requires JavaScript for dynamic functionality.
-        Since the request is to return ONLY raw HTML, the script below is commented out.
-        To activate, uncomment the script tag and its content, and ensure the `launchDate`
-        variable is set to your desired countdown target.
+    <!-- Countdown Timer Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (e.g., 30 days from now)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 30); // 30 days from today
 
-        <script>
-            // Set the date we're counting down to (e.g., 7 days from now)
-            const launchDate = new Date();
-            launchDate.setDate(launchDate.getDate() + 7); // Example: Set to 7 days from page load
-
-            const countdownFunction = setInterval(function() {
+            const x = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = launchDate.getTime() - now;
+                const distance = countDownDate - now;
 
                 if (distance < 0) {
-                    clearInterval(countdownFunction);
-                    document.getElementById("countdown").innerHTML = "<span class='text-xl text-indigo-400'>LAUNCHED!</span>";
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<span class='text-red-400 text-xl md:text-2xl lg:text-3xl font-bold'>WAITLIST CLOSED!</span>";
+                    const submitButton = document.querySelector('#waitlist form button');
+                    if (submitButton) {
+                        submitButton.disabled = true;
+                        submitButton.classList.add('opacity-50', 'cursor-not-allowed');
+                    }
                     return;
                 }
 
@@ -256,13 +205,14 @@
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+                // Display the result in the element with id="countdown"
                 document.getElementById("days").innerHTML = String(days).padStart(2, '0');
                 document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
                 document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
                 document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
             }, 1000);
-        </script>
-    -->
+        });
+    </script>
 </body>
 </html>
