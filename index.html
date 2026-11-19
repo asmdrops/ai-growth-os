@@ -1,259 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Apple Home Matter & Aqara Integration Blueprint</title>
+    <title>Continuum Tasks - Your Future-Proof To Do Replacement</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom CSS for fine-tuning or specific elements if needed */
-        .hero-bg {
-            background-image: url('https://source.unsplash.com/1600x900/?An,tech');
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Custom scrollbar for a premium dark-mode look */
+        body::-webkit-scrollbar {
+            width: 10px;
+        }
+        body::-webkit-scrollbar-track {
+            background: #1a202c; /* bg-gray-900 */
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #4a5568; /* bg-gray-600 */
+            border-radius: 20px;
+            border: 2px solid #1a202c;
+        }
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?Develop,tech');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Provides a subtle parallax effect */
-        }
-        /* Custom gradient text for headlines */
-        .text-gradient-purple-pink {
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-image: linear-gradient(to right, #a78bfa, #ec4899); /* from-purple-400 to-pink-600 */
-        }
-        .text-gradient-cyan-emerald {
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-image: linear-gradient(to right, #22d3ee, #10b981); /* from-cyan-400 to-emerald-500 */
-        }
-        .text-gradient-orange-red {
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-image: linear-gradient(to right, #fb923c, #ef4444); /* from-orange-400 to-red-500 */
-        }
-        .text-gradient-blue-teal {
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-image: linear-gradient(to right, #60a5fa, #2dd4bf); /* from-blue-400 to-teal-500 */
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased font-sans">
+<body class="bg-gray-900 text-gray-50 antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-bg relative min-h-screen flex items-center justify-center text-center py-20 px-4">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
-        <div class="relative z-10 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-gradient-purple-pink">
-                Unlock Your Smart Home's Full Potential
+    <section class="relative h-screen flex items-center justify-center hero-background">
+        <div class="absolute inset-0 bg-gray-900 bg-opacity-70 backdrop-blur-sm"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500">
+                Your To Do Lists Deserve a Future.
             </h1>
-            <p class="text-xl sm:text-2xl lg:text-3xl text-gray-200 mb-8 font-light">
-                Master the Future: Seamless Apple Home, Matter & Aqara Integration Awaits.
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">
+                Microsoft To Do is sunsetting in 2027. Don't let your productivity fade.
+                <span class="font-semibold text-indigo-300">Continuum Tasks</span> offers a seamless, intuitive, and future-proof replacement.
             </p>
-            <p class="text-lg sm:text-xl lg:text-2xl text-yellow-300 font-semibold mb-6">
-                ✨ Limited Time Exclusive Access Offer ✨
-            </p>
-
-            <!-- Countdown Timer -->
-            <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 mb-10 text-white">
-                <div class="flex flex-col items-center">
-                    <span id="days" class="block text-3xl sm:text-4xl lg:text-5xl font-bold bg-gray-800 p-2 sm:p-3 rounded-lg shadow-md min-w-[50px] sm:min-w-[70px]">00</span>
-                    <span class="block text-xs sm:text-sm mt-1">Days</span>
-                </div>
-                <div class="flex flex-col items-center">
-                    <span id="hours" class="block text-3xl sm:text-4xl lg:text-5xl font-bold bg-gray-800 p-2 sm:p-3 rounded-lg shadow-md min-w-[50px] sm:min-w-[70px]">00</span>
-                    <span class="block text-xs sm:text-sm mt-1">Hours</span>
-                </div>
-                <div class="flex flex-col items-center">
-                    <span id="minutes" class="block text-3xl sm:text-4xl lg:text-5xl font-bold bg-gray-800 p-2 sm:p-3 rounded-lg shadow-md min-w-[50px] sm:min-w-[70px]">00</span>
-                    <span class="block text-xs sm:text-sm mt-1">Minutes</span>
-                </div>
-                <div class="flex flex-col items-center">
-                    <span id="seconds" class="block text-3xl sm:text-4xl lg:text-5xl font-bold bg-gray-800 p-2 sm:p-3 rounded-lg shadow-md min-w-[50px] sm:min-w-[70px]">00</span>
-                    <span class="block text-xs sm:text-sm mt-1">Seconds</span>
-                </div>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
+                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg sm:text-xl">
+                    Get Early Access Now
+                </a>
             </div>
-
-            <a href="#waitlist" class="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg transform transition duration-300 ease-in-out hover:scale-105">
-                Join the Exclusive Waitlist Now!
-            </a>
-            <p class="mt-4 text-sm text-gray-400">Offer ends when the timer hits zero. Don't miss out!</p>
-        </div>
-    </header>
-
-    <!-- Problem/Solution Introduction -->
-    <section class="py-16 md:py-24 px-4 bg-gray-800">
-        <div class="container mx-auto max-w-3xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-gradient-cyan-emerald">
-                Are You Ready for Truly Smart Home Automation?
-            </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8">
-                The smart home landscape is evolving rapidly, with Matter promising a unified future. But integrating new Aqara Matter devices with your existing Apple Home setup can be a maze of complex settings, connectivity quirks, and frustrating troubleshooting.
-            </p>
-            <p class="text-lg sm:text-xl text-gray-300">
-                You've seen the headlines – <span class="font-semibold text-purple-300">"Aqara Debuts Six Matter Smart Lights That Work With Apple Home"</span> – and you're excited. Our 'The Apple Home Matter & Aqara Integration Blueprint' is your definitive, interactive, step-by-step guide to cutting through the confusion and building a truly intelligent home.
-            </p>
+            
+            <!-- Limited Time Countdown (Crucial for conversion) -->
+            <div class="bg-gray-800 bg-opacity-70 p-4 rounded-lg shadow-md max-w-sm mx-auto border border-indigo-500">
+                <p class="text-sm sm:text-base text-indigo-300 font-semibold mb-2">Early Access Closes In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 text-3xl sm:text-4xl font-extrabold text-white">
+                    <div class="flex flex-col items-center">
+                        <span id="days">00</span>
+                        <span class="text-xs sm:text-sm font-normal text-gray-400">Days</span>
+                    </div>
+                    <span class="text-indigo-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours">00</span>
+                        <span class="text-xs sm:text-sm font-normal text-gray-400">Hours</span>
+                    </div>
+                    <span class="text-indigo-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes">00</span>
+                        <span class="text-xs sm:text-sm font-normal text-gray-400">Minutes</span>
+                    </div>
+                    <span class="text-indigo-400">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds">00</span>
+                        <span class="text-xs sm:text-sm font-normal text-gray-400">Seconds</span>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-400 mt-2">Limited spots available for founding members – act fast!</p>
+            </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 md:py-24 px-4 bg-gray-900">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gradient-orange-red">
-                What You'll Achieve with This Blueprint
+    <section id="features" class="py-16 sm:py-24 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
+                Designed for Continuity, Built for Productivity
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1: Effortless Setup & Integration -->
-                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-blue-500 flex flex-col items-center text-center">
-                    <div class="text-blue-400 text-5xl mb-4 leading-none">💡</div>
-                    <h3 class="text-xl font-semibold mb-3 text-white">Effortless Setup & Integration</h3>
-                    <p class="text-gray-300">Follow our interactive, step-by-step video guides to connect your Aqara Matter devices with Apple Home without the headaches. From unboxing to seamless control, we cover it all.</p>
+            <p class="text-center text-lg sm:text-xl text-gray-300 mb-16 max-w-3xl mx-auto">
+                Continuum Tasks brings you the familiar simplicity of To Do, elevated with powerful features and a future-proof foundation, specifically for personal users.
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Feature 1: One-Click To Do Import -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out group">
+                    <div class="text-indigo-400 mb-4 text-4xl group-hover:scale-110 transition-transform duration-300">🚀</div>
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-white">Effortless To Do Import</h3>
+                    <p class="text-gray-300">Migrate all your existing Microsoft To Do lists and tasks with a single click. Keep your productivity flowing without missing a beat.</p>
                 </div>
-                <!-- Feature 2: Advanced Automation Secrets -->
-                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-green-500 flex flex-col items-center text-center">
-                    <div class="text-green-400 text-5xl mb-4 leading-none">🚀</div>
-                    <h3 class="text-xl font-semibold mb-3 text-white">Advanced Automation Secrets</h3>
-                    <p class="text-gray-300">Unlock the true power of your smart home. Learn to create sophisticated automations that respond to your life, saving energy and enhancing comfort automatically.</p>
+
+                <!-- Feature 2: Intuitive UI/UX -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition duration-300 ease-in-out group">
+                    <div class="text-purple-400 mb-4 text-4xl group-hover:scale-110 transition-transform duration-300">✨</div>
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-white">Clean & Intuitive UI/UX</h3>
+                    <p class="text-gray-300">Experience a familiar, elegant interface reminiscent of Microsoft To Do, designed for ultimate clarity and ease of use.</p>
                 </div>
-                <!-- Feature 3: Expert Troubleshooting & Tips -->
-                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-yellow-500 flex flex-col items-center text-center">
-                    <div class="text-yellow-400 text-5xl mb-4 leading-none">🛠️</div>
-                    <h3 class="text-xl font-semibold mb-3 text-white">Expert Troubleshooting & Tips</h3>
-                    <p class="text-gray-300">Never get stuck again. Our comprehensive troubleshooting section helps you diagnose and fix common (and uncommon) integration issues quickly and efficiently.</p>
+
+                <!-- Feature 3: Outlook Calendar Integration -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-pink-500 transition duration-300 ease-in-out group">
+                    <div class="text-pink-400 mb-4 text-4xl group-hover:scale-110 transition-transform duration-300">🗓️</div>
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-white">Seamless Outlook Integration</h3>
+                    <p class="text-gray-300">Connect your tasks directly to your Outlook Calendar, ensuring nothing slips through the cracks of your personal schedule.</p>
                 </div>
-                <!-- Feature 4: Security & Privacy Best Practices -->
-                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-purple-500 flex flex-col items-center text-center">
-                    <div class="text-purple-400 text-5xl mb-4 leading-none">🔒</div>
-                    <h3 class="text-xl font-semibold mb-3 text-white">Security & Privacy Best Practices</h3>
-                    <p class="text-gray-300">Ensure your smart home is not just convenient, but also secure. Learn how to protect your data and maintain privacy with your connected devices.</p>
+
+                <!-- Feature 4: Robust Cross-Device Sync (Premium) -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-cyan-500 transition duration-300 ease-in-out group">
+                    <div class="text-cyan-400 mb-4 text-4xl group-hover:scale-110 transition-transform duration-300">📱</div>
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-white">Cross-Device Sync <span class="text-xs text-gray-500 italic">(Premium)</span></h3>
+                    <p class="text-gray-300">Access and manage your tasks from any device – desktop, tablet, or phone – always in sync and up-to-date.</p>
                 </div>
-                <!-- Feature 5: Stay Ahead with Matter -->
-                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-red-500 flex flex-col items-center text-center">
-                    <div class="text-red-400 text-5xl mb-4 leading-none">📈</div>
-                    <h3 class="text-xl font-semibold mb-3 text-white">Stay Ahead with Matter</h3>
-                    <p class="text-gray-300">Understand the Matter standard and how it shapes the future of smart homes, ensuring your setup is future-proof and compatible with new devices.</p>
+
+                <!-- Feature 5: Advanced Organization (Premium) -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-green-500 transition duration-300 ease-in-out group">
+                    <div class="text-green-400 mb-4 text-4xl group-hover:scale-110 transition-transform duration-300">🏷️</div>
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-white">Advanced Organization <span class="text-xs text-gray-500 italic">(Premium)</span></h3>
+                    <p class="text-gray-300">Take control with tags, priorities, sub-tasks, and custom views to perfectly organize your personal workload.</p>
                 </div>
-                <!-- Feature 6: Designed for Apple Home Users -->
-                <div class="bg-gray-800 rounded-lg p-6 shadow-xl border border-gray-700 transform transition duration-300 hover:scale-105 hover:border-teal-500 flex flex-col items-center text-center">
-                    <div class="text-teal-400 text-5xl mb-4 leading-none">🎯</div>
-                    <h3 class="text-xl font-semibold mb-3 text-white">Designed for Apple Home Users</h3>
-                    <p class="text-gray-300">Tailored specifically for new and existing Apple Home users, maximizing your experience with a familiar and powerful ecosystem.</p>
+
+                <!-- Feature 6: Collaboration Lite (Premium) -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-orange-500 transition duration-300 ease-in-out group">
+                    <div class="text-orange-400 mb-4 text-4xl group-hover:scale-110 transition-transform duration-300">🤝</div>
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-white">Collaboration Lite <span class="text-xs text-gray-500 italic">(Premium)</span></h3>
+                    <p class="text-gray-300">Share lists with family or friends for collaborative household tasks or small personal projects with ease.</p>
                 </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="#waitlist" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg sm:text-xl">
+                    Join the Waitlist & Explore Plans
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action Section before Waitlist -->
-    <section class="py-16 px-4 bg-gray-800 text-center">
-        <div class="container mx-auto max-w-4xl">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-gradient-purple-pink">
-                Stop Guessing, Start Automating.
-            </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-8">
-                Don't let the complexity of modern smart home integration hold you back. The "Apple Home Matter & Aqara Integration Blueprint" gives you the knowledge and confidence to build the smart home you've always dreamed of.
-            </p>
-            <a href="#waitlist" class="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg transform transition duration-300 ease-in-out hover:scale-105">
-                Secure Your Spot Today!
-            </a>
-        </div>
-    </section>
-
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 md:py-24 px-4 bg-gray-900">
-        <div class="container mx-auto max-w-lg bg-gray-800 rounded-xl p-8 shadow-2xl border border-gray-700">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8 text-gradient-blue-teal">
-                Join the Exclusive Waitlist!
+    <section id="waitlist" class="py-16 sm:py-24 bg-gray-800">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-purple-400">
+                Don't Get Left Behind. Secure Your Spot.
             </h2>
-            <p class="text-center text-gray-300 mb-8">
-                Be among the first to access 'The Apple Home Matter & Aqara Integration Blueprint' at our special launch price. Limited spots available for early bird discounts!
+            <p class="text-lg sm:text-xl text-gray-300 mb-10">
+                Join our exclusive waitlist to secure early access and be among the first to experience Continuum Tasks, your ideal To Do replacement.
             </p>
-            <form class="space-y-6">
-                <div>
-                    <label for="name" class="block text-gray-300 text-lg font-medium mb-2">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white text-lg"
-                           required>
+
+            <form action="#" method="POST" class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-300 text-sm font-medium mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" required
+                           class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 text-base"
+                           placeholder="John Doe">
                 </div>
-                <div>
-                    <label for="email" class="block text-gray-300 text-lg font-medium mb-2">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com"
-                           class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white text-lg"
-                           required>
-                </div>
-                <div class="flex items-center">
-                    <input type="checkbox" id="consent" name="consent" class="h-5 w-5 text-blue-500 rounded focus:ring-blue-400">
-                    <label for="consent" class="ml-2 text-gray-400 text-sm cursor-pointer">
-                        I agree to receive updates and promotional emails about this course.
-                    </label>
+                <div class="mb-8 text-left">
+                    <label for="email" class="block text-gray-300 text-sm font-medium mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" required
+                           class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 text-base"
+                           placeholder="your.email@example.com">
                 </div>
                 <button type="submit"
-                        class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-4 rounded-lg text-xl shadow-lg transform transition duration-300 ease-in-out hover:scale-105">
-                    Sign Up For Early Access
+                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg sm:text-xl">
+                    Join the Continuum Tasks Waitlist
                 </button>
+                <p class="text-xs text-gray-500 mt-4">We respect your privacy. Your email will only be used for product updates and early access notifications.</p>
             </form>
-            <p class="text-center text-gray-500 text-sm mt-6">
-                We respect your privacy. Your information will not be shared.
-            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-8 px-4 text-center text-gray-400">
-        <div class="container mx-auto">
-            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
-            <p class="mt-2 text-sm">
-                <a href="#" class="hover:text-gray-200 transition-colors duration-200">Privacy Policy</a> |
-                <a href="#" class="hover:text-gray-200 transition-colors duration-200">Terms of Service</a>
-            </p>
+    <footer class="bg-gray-900 py-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            <p>&copy; <span id="current-year"></span> Continuum Tasks. All rights reserved.</p>
+            <p class="mt-2">Continuum Tasks is an independent service and is not affiliated with Microsoft Corporation or Microsoft To Do.</p>
         </div>
     </footer>
 
-    <!-- Countdown Timer JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 7 days from now)
-            const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from today
-            countDownDate.setHours(23, 59, 59, 999); // Set to end of the 7th day
+        // Countdown Logic for "Limited Time" urgency
+        const countdownElement = document.getElementById('countdown');
+        const daysElement = document.getElementById('days');
+        const hoursElement = document.getElementById('hours');
+        const minutesElement = document.getElementById('minutes');
+        const secondsElement = document.getElementById('seconds');
 
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate.getTime() - now;
+        // Set the countdown target date (e.g., 30 days from now for early access)
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 30); // 30 days from today for early access window
 
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<p class='text-red-500 text-2xl sm:text-3xl font-bold'>Offer Expired!</p>";
-                    // Optional: Disable the CTA button if the offer has expired
-                    const ctaButton = document.querySelector('.hero-bg a');
-                    if (ctaButton) {
-                        ctaButton.classList.add('opacity-50', 'cursor-not-allowed');
-                        ctaButton.removeAttribute('href');
-                        ctaButton.innerText = 'Offer Expired';
-                        ctaButton.style.pointerEvents = 'none'; // Further disable clicks
-                    }
-                    const secondaryCtaButton = document.querySelector('section.bg-gray-800 a');
-                    if (secondaryCtaButton) {
-                        secondaryCtaButton.classList.add('opacity-50', 'cursor-not-allowed');
-                        secondaryCtaButton.removeAttribute('href');
-                        secondaryCtaButton.innerText = 'Offer Expired';
-                        secondaryCtaButton.style.pointerEvents = 'none';
-                    }
-                    return;
-                }
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
 
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                document.getElementById("days").innerText = String(days).padStart(2, '0');
-                document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
-            }, 1000);
-        });
+            // Display the result, ensuring two digits
+            daysElement.textContent = String(days).padStart(2, '0');
+            hoursElement.textContent = String(hours).padStart(2, '0');
+            minutesElement.textContent = String(minutes).padStart(2, '0');
+            secondsElement.textContent = String(seconds).padStart(2, '0');
+
+            // If the countdown is over
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                countdownElement.innerHTML = "<span class='text-xl text-red-400'>Early Access Closed! Stay tuned for public launch.</span>";
+            }
+        }
+
+        // Update the countdown every 1 second
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call to display immediately
+
+        // Set current year for the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 
 </body>
