@@ -1,230 +1,228 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Continuum Tasks - Your Future-Proof To Do Replacement</title>
+    <title>Premium Apple Black Friday Deals Navigator</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        /* Custom scrollbar for a premium dark-mode look */
-        body::-webkit-scrollbar {
-            width: 10px;
-        }
-        body::-webkit-scrollbar-track {
-            background: #1a202c; /* bg-gray-900 */
-        }
-        body::-webkit-scrollbar-thumb {
-            background-color: #4a5568; /* bg-gray-600 */
-            border-radius: 20px;
-            border: 2px solid #1a202c;
-        }
+        /* Custom styles for the hero background image and overlay */
         .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?Develop,tech');
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        /* Simple Tailwind-like animations for a modern feel */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0; /* Hidden by default */
+        }
+        .animate-fade-in-up.delay-100 { animation-delay: 0.1s; }
+        .animate-fade-in-up.delay-200 { animation-delay: 0.2s; }
+        .animate-fade-in-up.delay-300 { animation-delay: 0.3s; }
+        .animate-fade-in-up.delay-400 { animation-delay: 0.4s; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+        }
+        .animate-fade-in.delay-100 { animation-delay: 0.1s; }
+        .animate-fade-in.delay-200 { animation-delay: 0.2s; }
+
+        /* Smooth scroll for anchor links */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-50 antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center hero-background">
-        <div class="absolute inset-0 bg-gray-900 bg-opacity-70 backdrop-blur-sm"></div>
+    <header class="relative hero-background min-h-screen flex items-center justify-center py-16 md:py-24">
+        <div class="hero-overlay"></div>
         <div class="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500">
-                Your To Do Lists Deserve a Future.
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6 animate-fade-in-up">
+                Unlock Unbeatable Apple Black Friday Deals.
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">
-                Microsoft To Do is sunsetting in 2027. Don't let your productivity fade.
-                <span class="font-semibold text-indigo-300">Continuum Tasks</span> offers a seamless, intuitive, and future-proof replacement.
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-200 mb-8 animate-fade-in-up delay-100">
+                Your Premium Navigator for iPhone, iPad, Mac & More.
+                Stop guessing, start saving.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
-                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg sm:text-xl">
-                    Get Early Access Now
-                </a>
-            </div>
-            
-            <!-- Limited Time Countdown (Crucial for conversion) -->
-            <div class="bg-gray-800 bg-opacity-70 p-4 rounded-lg shadow-md max-w-sm mx-auto border border-indigo-500">
-                <p class="text-sm sm:text-base text-indigo-300 font-semibold mb-2">Early Access Closes In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-2 sm:space-x-4 text-3xl sm:text-4xl font-extrabold text-white">
+
+            <!-- Limited Time Countdown -->
+            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-6 rounded-lg shadow-xl inline-block mb-10 transform transition-transform duration-300 hover:scale-105 animate-fade-in-up delay-200">
+                <p class="text-sm uppercase tracking-wider mb-2 font-semibold">Exclusive Early Access Closes In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-3xl sm:text-4xl lg:text-5xl font-bold">
                     <div class="flex flex-col items-center">
                         <span id="days">00</span>
-                        <span class="text-xs sm:text-sm font-normal text-gray-400">Days</span>
+                        <span class="text-base font-normal">Days</span>
                     </div>
-                    <span class="text-indigo-400">:</span>
+                    <span>:</span>
                     <div class="flex flex-col items-center">
                         <span id="hours">00</span>
-                        <span class="text-xs sm:text-sm font-normal text-gray-400">Hours</span>
+                        <span class="text-base font-normal">Hours</span>
                     </div>
-                    <span class="text-indigo-400">:</span>
+                    <span>:</span>
                     <div class="flex flex-col items-center">
                         <span id="minutes">00</span>
-                        <span class="text-xs sm:text-sm font-normal text-gray-400">Minutes</span>
+                        <span class="text-base font-normal">Minutes</span>
                     </div>
-                    <span class="text-indigo-400">:</span>
+                    <span>:</span>
                     <div class="flex flex-col items-center">
                         <span id="seconds">00</span>
-                        <span class="text-xs sm:text-sm font-normal text-gray-400">Seconds</span>
+                        <span class="text-base font-normal">Seconds</span>
                     </div>
                 </div>
-                <p class="text-xs text-gray-400 mt-2">Limited spots available for founding members – act fast!</p>
+                <!-- Basic JavaScript for client-side countdown. For production, this would be server-rendered or more robust. -->
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const countdownElement = document.getElementById('countdown');
+                        if (!countdownElement) return;
+
+                        // Set target date to 7 days from now (for demo purposes)
+                        const targetDate = new Date();
+                        targetDate.setDate(targetDate.getDate() + 7);
+
+                        const updateCountdown = () => {
+                            const now = new Date().getTime();
+                            const distance = targetDate.getTime() - now;
+
+                            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                            document.getElementById('days').innerText = String(days).padStart(2, '0');
+                            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+                            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+                            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+
+                            if (distance < 0) {
+                                clearInterval(countdownInterval);
+                                countdownElement.innerHTML = '<span class="text-2xl">Access Expired!</span>';
+                            }
+                        };
+
+                        updateCountdown(); // Initial call
+                        const countdownInterval = setInterval(updateCountdown, 1000); // Update every second
+                    });
+                </script>
             </div>
+
+            <a href="#waitlist-form" class="inline-block bg-white text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50 font-bold py-3 px-8 rounded-full text-lg shadow-lg transform transition-transform duration-300 hover:scale-105 animate-fade-in-up delay-300">
+                Join the Waitlist Now!
+            </a>
+            <p class="text-sm text-gray-400 mt-4 animate-fade-in-up delay-400">Limited spots available for savvy early birds.</p>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 sm:py-24 bg-gray-900">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
-                Designed for Continuity, Built for Productivity
+    <section id="features" class="py-16 md:py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-white mb-12 animate-fade-in">
+                Why Our Apple Deals Navigator Is Essential This Black Friday
             </h2>
-            <p class="text-center text-lg sm:text-xl text-gray-300 mb-16 max-w-3xl mx-auto">
-                Continuum Tasks brings you the familiar simplicity of To Do, elevated with powerful features and a future-proof foundation, specifically for personal users.
+            <p class="text-lg text-gray-300 text-center max-w-3xl mx-auto mb-16 animate-fade-in delay-100">
+                Don't just chase deals, master them. We provide the intelligence savvy buyers need to make the best purchasing decisions.
             </p>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-                <!-- Feature 1: One-Click To Do Import -->
-                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition duration-300 ease-in-out group">
-                    <div class="text-indigo-400 mb-4 text-4xl group-hover:scale-110 transition-transform duration-300">🚀</div>
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-white">Effortless To Do Import</h3>
-                    <p class="text-gray-300">Migrate all your existing Microsoft To Do lists and tasks with a single click. Keep your productivity flowing without missing a beat.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in delay-200">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
+                    <div class="text-indigo-400 mb-4 text-4xl">🚀</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Highly Curated, Real-time Alerts</h3>
+                    <p class="text-gray-300">Receive instant notifications on the absolute best Apple deals across all major retailers, hand-picked by experts, not algorithms.</p>
                 </div>
-
-                <!-- Feature 2: Intuitive UI/UX -->
-                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition duration-300 ease-in-out group">
-                    <div class="text-purple-400 mb-4 text-4xl group-hover:scale-110 transition-transform duration-300">✨</div>
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-white">Clean & Intuitive UI/UX</h3>
-                    <p class="text-gray-300">Experience a familiar, elegant interface reminiscent of Microsoft To Do, designed for ultimate clarity and ease of use.</p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
+                    <div class="text-indigo-400 mb-4 text-4xl">📊</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Historical Price Analysis</h3>
+                    <p class="text-gray-300">See how current deals stack up against past pricing. Know if you're truly getting a record-low price or just another sale.</p>
                 </div>
-
-                <!-- Feature 3: Outlook Calendar Integration -->
-                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-pink-500 transition duration-300 ease-in-out group">
-                    <div class="text-pink-400 mb-4 text-4xl group-hover:scale-110 transition-transform duration-300">🗓️</div>
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-white">Seamless Outlook Integration</h3>
-                    <p class="text-gray-300">Connect your tasks directly to your Outlook Calendar, ensuring nothing slips through the cracks of your personal schedule.</p>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
+                    <div class="text-indigo-400 mb-4 text-4xl">⚖️</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Comparative Value Insights</h3>
+                    <p class="text-gray-300">We compare deals from different retailers, bundling options, and discount types to show you the true value of each offer.</p>
                 </div>
-
-                <!-- Feature 4: Robust Cross-Device Sync (Premium) -->
-                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-cyan-500 transition duration-300 ease-in-out group">
-                    <div class="text-cyan-400 mb-4 text-4xl group-hover:scale-110 transition-transform duration-300">📱</div>
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-white">Cross-Device Sync <span class="text-xs text-gray-500 italic">(Premium)</span></h3>
-                    <p class="text-gray-300">Access and manage your tasks from any device – desktop, tablet, or phone – always in sync and up-to-date.</p>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
+                    <div class="text-indigo-400 mb-4 text-4xl">🔗</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Direct Affiliate Links</h3>
+                    <p class="text-gray-300">Seamlessly navigate to the deals with direct links. We prioritize your convenience to help you secure the best offers quickly.</p>
                 </div>
-
-                <!-- Feature 5: Advanced Organization (Premium) -->
-                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-green-500 transition duration-300 ease-in-out group">
-                    <div class="text-green-400 mb-4 text-4xl group-hover:scale-110 transition-transform duration-300">🏷️</div>
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-white">Advanced Organization <span class="text-xs text-gray-500 italic">(Premium)</span></h3>
-                    <p class="text-gray-300">Take control with tags, priorities, sub-tasks, and custom views to perfectly organize your personal workload.</p>
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
+                    <div class="text-indigo-400 mb-4 text-4xl">⭐</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Exclusive Subscriber Benefits</h3>
+                    <p class="text-gray-300">Access early bird deals, members-only analysis, and bonus content that general shoppers won't see.</p>
                 </div>
-
-                <!-- Feature 6: Collaboration Lite (Premium) -->
-                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-orange-500 transition duration-300 ease-in-out group">
-                    <div class="text-orange-400 mb-4 text-4xl group-hover:scale-110 transition-transform duration-300">🤝</div>
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-white">Collaboration Lite <span class="text-xs text-gray-500 italic">(Premium)</span></h3>
-                    <p class="text-gray-300">Share lists with family or friends for collaborative household tasks or small personal projects with ease.</p>
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
+                    <div class="text-indigo-400 mb-4 text-4xl">📱</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Covering All Apple Products</h3>
+                    <p class="text-gray-300">From the latest iPhones and iPads to powerful Macs, Apple Watches, AirPods, and accessories – we've got you covered.</p>
                 </div>
-            </div>
-            
-            <div class="text-center mt-16">
-                <a href="#waitlist" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg sm:text-xl">
-                    Join the Waitlist & Explore Plans
-                </a>
             </div>
         </div>
     </section>
 
     <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 sm:py-24 bg-gray-800">
+    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-950">
         <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-purple-400">
-                Don't Get Left Behind. Secure Your Spot.
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-8 animate-fade-in">
+                Don't Miss Out! Secure Your Spot.
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10">
-                Join our exclusive waitlist to secure early access and be among the first to experience Continuum Tasks, your ideal To Do replacement.
+            <p class="text-lg text-gray-300 mb-12 animate-fade-in delay-100">
+                Black Friday deals disappear fast. Join our exclusive waitlist to be among the first to receive premium Apple deals alerts and insights.
             </p>
-
-            <form action="#" method="POST" class="bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700">
-                <div class="mb-6 text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-medium mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" required
-                           class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 text-base"
-                           placeholder="John Doe">
+            <form class="space-y-6 bg-gray-800 p-8 rounded-lg shadow-2xl border border-gray-700 animate-fade-in delay-200">
+                <div>
+                    <label for="name" class="sr-only">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required
+                           class="w-full px-5 py-3 border border-gray-600 rounded-md bg-gray-700 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors duration-300">
                 </div>
-                <div class="mb-8 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-medium mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" required
-                           class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-400 text-base"
-                           placeholder="your.email@example.com">
+                <div>
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
+                           class="w-full px-5 py-3 border border-gray-600 rounded-md bg-gray-700 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors duration-300">
                 </div>
                 <button type="submit"
-                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg sm:text-xl">
-                    Join the Continuum Tasks Waitlist
+                        class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-md shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
+                    Join the Exclusive Waitlist
                 </button>
-                <p class="text-xs text-gray-500 mt-4">We respect your privacy. Your email will only be used for product updates and early access notifications.</p>
+                <p class="text-sm text-gray-400 mt-4">
+                    We respect your privacy. Your information will not be shared.
+                </p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
-            <p>&copy; <span id="current-year"></span> Continuum Tasks. All rights reserved.</p>
-            <p class="mt-2">Continuum Tasks is an independent service and is not affiliated with Microsoft Corporation or Microsoft To Do.</p>
+    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p>&copy; 2023 Apple Deals Navigator. All rights reserved. Not affiliated with Apple Inc.</p>
         </div>
     </footer>
-
-    <script>
-        // Countdown Logic for "Limited Time" urgency
-        const countdownElement = document.getElementById('countdown');
-        const daysElement = document.getElementById('days');
-        const hoursElement = document.getElementById('hours');
-        const minutesElement = document.getElementById('minutes');
-        const secondsElement = document.getElementById('seconds');
-
-        // Set the countdown target date (e.g., 30 days from now for early access)
-        const countdownDate = new Date();
-        countdownDate.setDate(countdownDate.getDate() + 30); // 30 days from today for early access window
-
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
-
-            // Time calculations for days, hours, minutes and seconds
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the result, ensuring two digits
-            daysElement.textContent = String(days).padStart(2, '0');
-            hoursElement.textContent = String(hours).padStart(2, '0');
-            minutesElement.textContent = String(minutes).padStart(2, '0');
-            secondsElement.textContent = String(seconds).padStart(2, '0');
-
-            // If the countdown is over
-            if (distance < 0) {
-                clearInterval(countdownInterval);
-                countdownElement.innerHTML = "<span class='text-xl text-red-400'>Early Access Closed! Stay tuned for public launch.</span>";
-            }
-        }
-
-        // Update the countdown every 1 second
-        const countdownInterval = setInterval(updateCountdown, 1000);
-        updateCountdown(); // Initial call to display immediately
-
-        // Set current year for the footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
 
 </body>
 </html>
