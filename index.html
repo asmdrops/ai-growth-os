@@ -3,226 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Apple Black Friday Deals Navigator</title>
+    <title>CognitoFlow AI: Hyper-Personalized Productivity for Mac Creatives</title>
+    <meta name="description" content="Unlock hyper-personalized workflow automation with CognitoFlow AI, the Mac-native suite designed to empower creative professionals. Seamlessly integrates with Apple apps and extends future Apple AI.">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for the hero background image and overlay */
-        .hero-background {
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
         }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-        }
-
-        /* Simple Tailwind-like animations for a modern feel */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-            opacity: 0; /* Hidden by default */
-        }
-        .animate-fade-in-up.delay-100 { animation-delay: 0.1s; }
-        .animate-fade-in-up.delay-200 { animation-delay: 0.2s; }
-        .animate-fade-in-up.delay-300 { animation-delay: 0.3s; }
-        .animate-fade-in-up.delay-400 { animation-delay: 0.4s; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .animate-fade-in {
-            animation: fadeIn 1s ease-out forwards;
-            opacity: 0;
-        }
-        .animate-fade-in.delay-100 { animation-delay: 0.1s; }
-        .animate-fade-in.delay-200 { animation-delay: 0.2s; }
-
-        /* Smooth scroll for anchor links */
-        html {
-            scroll-behavior: smooth;
+        .gradient-text {
+            background: linear-gradient(90deg, #6366f1, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-gray-950 text-gray-100">
 
     <!-- Hero Section -->
-    <header class="relative hero-background min-h-screen flex items-center justify-center py-16 md:py-24">
-        <div class="hero-overlay"></div>
-        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6 animate-fade-in-up">
-                Unlock Unbeatable Apple Black Friday Deals.
+    <header class="relative hero-bg h-screen flex items-center justify-center p-4 md:p-8">
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto flex flex-col items-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6 gradient-text">
+                CognitoFlow AI: Your Mac, Hyper-Personalized.
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-200 mb-8 animate-fade-in-up delay-100">
-                Your Premium Navigator for iPhone, iPad, Mac & More.
-                Stop guessing, start saving.
+            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl">
+                Unleash unprecedented creative productivity with our Mac-native AI suite. We analyze your habits, automate workflows, and empower 'smart actions' – seamlessly enhancing and extending Apple's forthcoming AI with domain-specific intelligence for designers, editors, and innovators.
             </p>
-
-            <!-- Limited Time Countdown -->
-            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-6 rounded-lg shadow-xl inline-block mb-10 transform transition-transform duration-300 hover:scale-105 animate-fade-in-up delay-200">
-                <p class="text-sm uppercase tracking-wider mb-2 font-semibold">Exclusive Early Access Closes In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-3xl sm:text-4xl lg:text-5xl font-bold">
-                    <div class="flex flex-col items-center">
-                        <span id="days">00</span>
-                        <span class="text-base font-normal">Days</span>
-                    </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="hours">00</span>
-                        <span class="text-base font-normal">Hours</span>
-                    </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes">00</span>
-                        <span class="text-base font-normal">Minutes</span>
-                    </div>
-                    <span>:</span>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds">00</span>
-                        <span class="text-base font-normal">Seconds</span>
-                    </div>
-                </div>
-                <!-- Basic JavaScript for client-side countdown. For production, this would be server-rendered or more robust. -->
-                <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                        const countdownElement = document.getElementById('countdown');
-                        if (!countdownElement) return;
-
-                        // Set target date to 7 days from now (for demo purposes)
-                        const targetDate = new Date();
-                        targetDate.setDate(targetDate.getDate() + 7);
-
-                        const updateCountdown = () => {
-                            const now = new Date().getTime();
-                            const distance = targetDate.getTime() - now;
-
-                            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                            document.getElementById('days').innerText = String(days).padStart(2, '0');
-                            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
-                            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
-                            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
-
-                            if (distance < 0) {
-                                clearInterval(countdownInterval);
-                                countdownElement.innerHTML = '<span class="text-2xl">Access Expired!</span>';
-                            }
-                        };
-
-                        updateCountdown(); // Initial call
-                        const countdownInterval = setInterval(updateCountdown, 1000); // Update every second
-                    });
-                </script>
-            </div>
-
-            <a href="#waitlist-form" class="inline-block bg-white text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50 font-bold py-3 px-8 rounded-full text-lg shadow-lg transform transition-transform duration-300 hover:scale-105 animate-fade-in-up delay-300">
-                Join the Waitlist Now!
+            <p class="text-sm text-gray-400 mb-8">
+                *Designed to perfectly complement Apple's anticipated AI agent.
+            </p>
+            <a href="#waitlist" class="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform transition duration-300 hover:scale-105">
+                Get Early Access & Join the Waitlist
             </a>
-            <p class="text-sm text-gray-400 mt-4 animate-fade-in-up delay-400">Limited spots available for savvy early birds.</p>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-white mb-12 animate-fade-in">
-                Why Our Apple Deals Navigator Is Essential This Black Friday
+    <section id="features" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-16 leading-tight gradient-text">
+                Unlock Your Creative Superpowers
             </h2>
-            <p class="text-lg text-gray-300 text-center max-w-3xl mx-auto mb-16 animate-fade-in delay-100">
-                Don't just chase deals, master them. We provide the intelligence savvy buyers need to make the best purchasing decisions.
-            </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in delay-200">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-                    <div class="text-indigo-400 mb-4 text-4xl">🚀</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Highly Curated, Real-time Alerts</h3>
-                    <p class="text-gray-300">Receive instant notifications on the absolute best Apple deals across all major retailers, hand-picked by experts, not algorithms.</p>
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-800 transform hover:scale-105 transition duration-300">
+                    <div class="text-5xl mb-6 text-purple-400">⌘</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-50">Intelligent Workflow Automation</h3>
+                    <p class="text-gray-400 leading-relaxed">CognitoFlow AI observes your unique habits across Finder, Mail, Photos, Final Cut Pro, and other Apple apps. It then intelligently generates custom scripts and macros, automating repetitive tasks so you can focus on creativity, not drudgery.</p>
                 </div>
+
                 <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-                    <div class="text-indigo-400 mb-4 text-4xl">📊</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Historical Price Analysis</h3>
-                    <p class="text-gray-300">See how current deals stack up against past pricing. Know if you're truly getting a record-low price or just another sale.</p>
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-800 transform hover:scale-105 transition duration-300">
+                    <div class="text-5xl mb-6 text-indigo-400">✨</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-50">Smart Actions & API Integration</h3>
+                    <p class="text-gray-400 leading-relaxed">Beyond basic automation, our 'smart actions' predict your needs, suggesting next steps or executing complex multi-app operations. Seamlessly integrate third-party APIs for tools like Figma, Asana, Notion, or your custom dev environment, all from one central hub.</p>
                 </div>
+
                 <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-                    <div class="text-indigo-400 mb-4 text-4xl">⚖️</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Comparative Value Insights</h3>
-                    <p class="text-gray-300">We compare deals from different retailers, bundling options, and discount types to show you the true value of each offer.</p>
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-800 transform hover:scale-105 transition duration-300">
+                    <div class="text-5xl mb-6 text-green-400">🚀</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-50">Domain-Specific AI Enhancement</h3>
+                    <p class="text-gray-400 leading-relaxed">While Apple's general AI will be powerful, CognitoFlow AI provides the specialized intelligence creatives demand. Optimize render settings in Final Cut Pro, suggest design variations in Figma, or organize complex project assets with AI-driven precision. We're the expert layer your Mac needs.</p>
                 </div>
+
                 <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-                    <div class="text-indigo-400 mb-4 text-4xl">🔗</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Direct Affiliate Links</h3>
-                    <p class="text-gray-300">Seamlessly navigate to the deals with direct links. We prioritize your convenience to help you secure the best offers quickly.</p>
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-800 transform hover:scale-105 transition duration-300">
+                    <div class="text-5xl mb-6 text-yellow-400">⚙️</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-50">Hyper-Personalized Suggestions</h3>
+                    <p class="text-gray-400 leading-relaxed">Receive real-time, context-aware suggestions for optimizing your workflow. From file organization to email management or project planning, CognitoFlow AI learns from your patterns to provide actionable insights that truly save you time and boost efficiency.</p>
                 </div>
+
                 <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-                    <div class="text-indigo-400 mb-4 text-4xl">⭐</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Exclusive Subscriber Benefits</h3>
-                    <p class="text-gray-300">Access early bird deals, members-only analysis, and bonus content that general shoppers won't see.</p>
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-800 transform hover:scale-105 transition duration-300">
+                    <div class="text-5xl mb-6 text-red-400">🔗</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-50">Cross-App Cohesion</h3>
+                    <p class="text-gray-400 leading-relaxed">Break down silos between your favorite Apple apps. CognitoFlow AI acts as the connective tissue, allowing you to trigger actions in Mail based on Finder activity, generate project briefs from Photos metadata, or orchestrate complex tasks across your entire creative stack.</p>
                 </div>
+
                 <!-- Feature 6 -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-                    <div class="text-indigo-400 mb-4 text-4xl">📱</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Covering All Apple Products</h3>
-                    <p class="text-gray-300">From the latest iPhones and iPads to powerful Macs, Apple Watches, AirPods, and accessories – we've got you covered.</p>
+                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-800 transform hover:scale-105 transition duration-300">
+                    <div class="text-5xl mb-6 text-blue-400">🔒</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-50">Secure & Privacy-First</h3>
+                    <p class="text-gray-400 leading-relaxed">Built from the ground up with Apple's ecosystem in mind, CognitoFlow AI prioritizes your privacy and data security. All analysis and automation are designed to operate locally on your Mac, ensuring your creative process remains private and secure.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist-form" class="py-16 md:py-24 bg-gray-950">
-        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-8 animate-fade-in">
-                Don't Miss Out! Secure Your Spot.
+    <!-- Waitlist / Call to Action Section -->
+    <section id="waitlist" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-900 border-t border-gray-800">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-8 leading-tight gradient-text">
+                Ready to Supercharge Your Mac?
             </h2>
-            <p class="text-lg text-gray-300 mb-12 animate-fade-in delay-100">
-                Black Friday deals disappear fast. Join our exclusive waitlist to be among the first to receive premium Apple deals alerts and insights.
+            <p class="text-lg text-gray-300 mb-10">
+                Join our exclusive waitlist for early access. Limited spots are available for our inaugural release to ensure a personalized onboarding experience. Don't miss out!
             </p>
-            <form class="space-y-6 bg-gray-800 p-8 rounded-lg shadow-2xl border border-gray-700 animate-fade-in delay-200">
-                <div>
-                    <label for="name" class="sr-only">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required
-                           class="w-full px-5 py-3 border border-gray-600 rounded-md bg-gray-700 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors duration-300">
+
+            <!-- Countdown Timer -->
+            <div class="bg-gray-950 p-6 rounded-xl shadow-inner border border-gray-800 mb-10">
+                <p class="text-xl font-semibold text-purple-400 mb-4">Limited Early Access Spots Available!</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-white text-4xl sm:text-5xl lg:text-6xl font-extrabold">
+                    <div class="flex flex-col items-center">
+                        <span id="days" class="w-20 sm:w-24 lg:w-32 py-3 bg-gray-800 rounded-lg">00</span>
+                        <span class="text-sm sm:text-base text-gray-400 mt-2">Days</span>
+                    </div>
+                    <div class="text-gray-600">:</div>
+                    <div class="flex flex-col items-center">
+                        <span id="hours" class="w-20 sm:w-24 lg:w-32 py-3 bg-gray-800 rounded-lg">00</span>
+                        <span class="text-sm sm:text-base text-gray-400 mt-2">Hours</span>
+                    </div>
+                    <div class="text-gray-600">:</div>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes" class="w-20 sm:w-24 lg:w-32 py-3 bg-gray-800 rounded-lg">00</span>
+                        <span class="text-sm sm:text-base text-gray-400 mt-2">Minutes</span>
+                    </div>
+                    <div class="text-gray-600">:</div>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds" class="w-20 sm:w-24 lg:w-32 py-3 bg-gray-800 rounded-lg">00</span>
+                        <span class="text-sm sm:text-base text-gray-400 mt-2">Seconds</span>
+                    </div>
                 </div>
-                <div>
-                    <label for="email" class="sr-only">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
-                           class="w-full px-5 py-3 border border-gray-600 rounded-md bg-gray-700 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors duration-300">
-                </div>
-                <button type="submit"
-                        class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-md shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
-                    Join the Exclusive Waitlist
+            </div>
+            <!-- End Countdown Timer -->
+
+            <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                <input type="email" placeholder="Enter your email" class="flex-grow p-4 rounded-full bg-gray-800 border border-gray-700 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                <button type="submit" class="bg-gradient-to-r from-purple-600 to-indigo-500 hover:from-purple-700 hover:to-indigo-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105">
+                    Join the Waitlist
                 </button>
-                <p class="text-sm text-gray-400 mt-4">
-                    We respect your privacy. Your information will not be shared.
-                </p>
             </form>
+            <p class="text-xs text-gray-500 mt-4">We respect your privacy. No spam, ever.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p>&copy; 2023 Apple Deals Navigator. All rights reserved. Not affiliated with Apple Inc.</p>
-        </div>
+    <footer class="py-10 px-4 text-center text-gray-500 text-sm border-t border-gray-800">
+        <p>&copy; 2023 CognitoFlow AI. All rights reserved. Made for Mac creatives.</p>
     </footer>
 
+    <script>
+        // Set the date we're counting down to
+        // Example: December 31, 2023 23:59:59 UTC
+        // Adjust this date to reflect your actual "limited time" offer.
+        var countDownDate = new Date("Dec 31, 2024 23:59:59").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="countdown"
+            document.getElementById("days").innerHTML = (days < 10 ? "0" : "") + days;
+            document.getElementById("hours").innerHTML = (hours < 10 ? "0" : "") + hours;
+            document.getElementById("minutes").innerHTML = (minutes < 10 ? "0" : "") + minutes;
+            document.getElementById("seconds").innerHTML = (seconds < 10 ? "0" : "") + seconds;
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "<p class='text-xl text-red-500'>Early Access Ended!</p>";
+                // Optionally disable the form or show a different message
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
