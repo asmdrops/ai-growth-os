@@ -3,196 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nest & Google Assistant Migration Playbook - Secure Your Smart Home Future</title>
+    <title>The Essential Google Smart Home Migration Toolkit</title>
+    <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Optional: Add a modern font like Inter from Google Fonts if not using system defaults -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for the countdown timer digits */
-        .countdown-digit {
-            @apply text-5xl md:text-6xl font-extrabold text-white;
+        /* Custom styles for dark mode and responsiveness */
+        body {
+            font-family: 'Inter', sans-serif;
         }
-        .countdown-label {
-            @apply text-sm md:text-base text-gray-400 uppercase tracking-wider;
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?The,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-        /* Custom animation for gentle bounce */
+        /* Custom animations */
         @keyframes bounce-slow {
             0%, 100% {
-                transform: translateY(-5%);
-                animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+                transform: translateY(0);
             }
             50% {
-                transform: translateY(0);
-                animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+                transform: translateY(-5px);
             }
         }
         .animate-bounce-slow {
-            animation: bounce-slow 3s infinite;
+            animation: bounce-slow 4s infinite ease-in-out;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="relative bg-[url('https://source.unsplash.com/1600x900/?A,tech')] bg-cover bg-center min-h-screen flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8">
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-        <div class="relative z-10 text-center max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white mb-6 animate-pulse">
-                <span class="block">Google's Killing the Nest App.</span>
-                <span class="block text-indigo-400">Are You Ready?</span>
+    <header class="relative hero-background min-h-screen flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
+        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for readability -->
+        <div class="relative z-10 text-center max-w-4xl mx-auto space-y-8">
+            <p class="text-sm sm:text-base text-blue-300 font-semibold uppercase tracking-wide mb-4 animate-pulse">
+                🔥 MARKET TREND: Google is officially killing the Nest App! 🔥
+            </p>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6">
+                Don't Let Google Leave Your Smart Home in the Dark.
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Don't let the smart home transition leave you stranded. Get the definitive guide to migrate smoothly, securely, and smartly.
+            <h2 class="text-xl sm:text-2xl lg:text-3xl font-medium text-gray-200 mb-8">
+                Introducing: <span class="text-blue-400">The Essential Google Smart Home Migration Toolkit</span>
+            </h2>
+            <p class="text-base sm:text-lg lg:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                With Google discontinuing the Nest app, time is running out. Our premium digital toolkit provides comprehensive strategies, frameworks, and guides to confidently transition your devices to a new ecosystem, avoiding frustration, wasted time, and costly mistakes.
             </p>
 
-            <!-- Limited Time Countdown Timer -->
-            <div class="bg-gray-800 bg-opacity-75 rounded-lg p-6 mb-10 shadow-xl border border-indigo-500">
-                <h3 class="text-xl sm:text-2xl font-bold text-indigo-300 mb-4">Limited-Time Early Bird Discount!</h3>
-                <p class="text-md sm:text-lg text-gray-300 mb-6">Offer expires when the Nest App officially shuts down. Don't miss out!</p>
-                <div id="countdown" class="flex justify-center space-x-4 sm:space-x-8">
-                    <div class="text-center">
-                        <div id="days" class="countdown-digit">00</div>
-                        <div class="countdown-label">Days</div>
+            <!-- Limited Time Countdown & CTA -->
+            <div class="bg-blue-700 bg-opacity-90 p-6 rounded-lg shadow-xl inline-block mb-10 max-w-md w-full animate-bounce-slow">
+                <p class="text-sm sm:text-base font-semibold text-white uppercase tracking-wider mb-2">
+                    LIMITED TIME EARLY BIRD OFFER! Get 20% OFF!
+                </p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 text-white font-bold text-3xl sm:text-4xl lg:text-5xl">
+                    <div class="flex flex-col items-center">
+                        <span id="days">00</span>
+                        <span class="text-xs sm:text-sm font-normal uppercase mt-1">Days</span>
                     </div>
-                    <div class="text-center">
-                        <div id="hours" class="countdown-digit">00</div>
-                        <div class="countdown-label">Hours</div>
+                    <span>:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours">00</span>
+                        <span class="text-xs sm:text-sm font-normal uppercase mt-1">Hours</span>
                     </div>
-                    <div class="text-center">
-                        <div id="minutes" class="countdown-digit">00</div>
-                        <div class="countdown-label">Minutes</div>
+                    <span>:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes">00</span>
+                        <span class="text-xs sm:text-sm font-normal uppercase mt-1">Minutes</span>
                     </div>
-                    <div class="text-center">
-                        <div id="seconds" class="countdown-digit">00</div>
-                        <div class="countdown-label">Seconds</div>
+                    <span>:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds">00</span>
+                        <span class="text-xs sm:text-sm font-normal uppercase mt-1">Seconds</span>
                     </div>
                 </div>
             </div>
 
-            <a href="#early-access" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full text-lg sm:text-xl transition duration-300 transform hover:scale-105 shadow-lg animate-bounce-slow">
-                Secure Your Playbook Now & Save!
+            <a href="#waitlist" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-full shadow-lg text-white bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900">
+                Secure Your Early Access & Bonuses Now!
+                <svg class="ml-3 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 15.707a1 1 0 010-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
             </a>
+            <p class="mt-4 text-sm text-gray-400">Limited early bird spots available. Act fast to future-proof your smart home!</p>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-20 md:py-24 bg-gray-800 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white text-center mb-12">
-                Your <span class="text-indigo-400">Migration Playbook</span> Includes:
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1: Data Backup -->
-                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-5xl mb-4 text-center">💾</div>
-                    <h3 class="text-2xl font-bold text-white mb-3 text-center">Seamless Data Backup</h3>
-                    <p class="text-gray-300 text-center">Step-by-step instructions to ensure all your precious Nest data is safely backed up before the shutdown.</p>
+    <section class="py-16 sm:py-20 lg:py-24 bg-gray-900 px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto max-w-6xl">
+            <h3 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-white mb-12">
+                What's Inside Your Essential Migration Toolkit?
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+
+                <!-- Feature 1: Comprehensive eBook -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-500 mb-6 flex justify-center">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl sm:text-2xl font-semibold text-white text-center mb-4">
+                        Comprehensive Migration eBook
+                    </h4>
+                    <p class="text-gray-300 text-center">
+                        A detailed, step-by-step eBook covering migration strategies for ALL your various Nest device types. No device left behind!
+                    </p>
                 </div>
-                <!-- Feature 2: Device Compatibility -->
-                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-5xl mb-4 text-center">✅</div>
-                    <h3 class="text-2xl font-bold text-white mb-3 text-center">Device Compatibility Analysis</h3>
-                    <p class="text-gray-300 text-center">Understand what works and what doesn't. Our guide helps you assess your current devices for a smooth transition.</p>
+
+                <!-- Feature 2: Decision-Making Framework -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-500 mb-6 flex justify-center">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6a2 2 0 00-2-2H5a2 2 0 00-2 2v13m11 0V6a2 2 0 012-2h2a2 2 0 012 2v13m-17 0h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl sm:text-2xl font-semibold text-white text-center mb-4">
+                        In-depth Decision Framework
+                    </h4>
+                    <p class="text-gray-300 text-center">
+                        Confidently choose your new smart home ecosystem (Apple HomeKit, Amazon Alexa, Samsung SmartThings) with our easy-to-use framework.
+                    </p>
                 </div>
-                <!-- Feature 3: Alternative Ecosystems -->
-                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-5xl mb-4 text-center">🏠</div>
-                    <h3 class="text-2xl font-bold text-white mb-3 text-center">Top Alternative Ecosystems</h3>
-                    <p class="text-gray-300 text-center">Curated list of leading smart home platforms with detailed pros, cons, and migration pathways.</p>
+
+                <!-- Feature 3: Interactive Device Mapper -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-500 mb-6 flex justify-center">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-5m3 5v-5m3 5v-5M9 21h6a2 2 0 002-2V7a2 2 0 00-2-2H9a2 2 0 00-2 2v12a2 2 0 002 2zm12-7a2 2 0 01-2 2h-4a2 2 0 01-2-2V5a2 2 0 012-2h4a2 2 0 012 2v9z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl sm:text-2xl font-semibold text-white text-center mb-4">
+                        Interactive Device Mapper
+                    </h4>
+                    <p class="text-gray-300 text-center">
+                        An editable spreadsheet to effortlessly map your existing Nest devices to compatible alternatives. Never miss a single connection!
+                    </p>
                 </div>
-                <!-- Feature 4: Expert Troubleshooting -->
-                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-5xl mb-4 text-center">🛠️</div>
-                    <h3 class="text-2xl font-bold text-white mb-3 text-center">Expert Troubleshooting</h3>
-                    <p class="text-gray-300 text-center">Common issues and their fixes, so you spend less time frustrated and more time enjoying your smart home.</p>
+
+                <!-- Feature 4: Exclusive Video Tutorials -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-500 mb-6 flex justify-center">
+                        <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl sm:text-2xl font-semibold text-white text-center mb-4">
+                        Exclusive Video Tutorials
+                    </h4>
+                    <p class="text-gray-300 text-center">
+                        Overcome common setup challenges and discover advanced tips with our easy-to-follow, exclusive video guides.
+                    </p>
                 </div>
-                <!-- Feature 5: Exclusive Community -->
-                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-5xl mb-4 text-center">🤝</div>
-                    <h3 class="text-2xl font-bold text-white mb-3 text-center">Exclusive Community Access</h3>
-                    <p class="text-gray-300 text-center">Connect with other smart home owners, share tips, and get direct support in our private forum.</p>
-                </div>
-                <!-- Feature 6: Future Updates -->
-                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
-                    <div class="text-indigo-400 text-5xl mb-4 text-center">🔄</div>
-                    <h3 class="text-2xl font-bold text-white mb-3 text-center">Future-Proof Your Setup</h3>
-                    <p class="text-gray-300 text-center">Guidance on how to build a resilient smart home that adapts to future tech shifts and includes access to future updates.</p>
-                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Early Access & Discount Form Section -->
-    <section id="early-access" class="py-16 sm:py-20 md:py-24 bg-gray-900 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-2xl mx-auto bg-gray-800 rounded-lg p-8 sm:p-10 shadow-2xl border border-indigo-600">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white text-center mb-6">
-                Don't Get Left Behind.
-            </h2>
-            <p class="text-lg text-gray-300 text-center mb-8">
-                Be among the first to secure your copy of the <span class="font-bold text-indigo-400">'Nest & Google Assistant Migration Playbook'</span> with our exclusive early bird discount.
-                Join the priority list for immediate access and future updates.
+    <!-- Waitlist / CTA Form Section -->
+    <section id="waitlist" class="py-16 sm:py-20 lg:py-24 bg-gray-800 px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto max-w-2xl text-center">
+            <h3 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6">
+                Ready to Future-Proof Your Smart Home?
+            </h3>
+            <p class="text-lg sm:text-xl text-gray-300 mb-10">
+                Join our exclusive early access waitlist now to receive a special 20% launch discount and bonus content delivered straight to your inbox!
             </p>
-            <form class="space-y-6">
-                <div>
-                    <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+
+            <form action="#" method="POST" class="w-full max-w-lg mx-auto bg-gray-900 p-8 rounded-xl shadow-2xl border border-blue-600">
+                <div class="mb-6 text-left">
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
                     <input type="text" id="name" name="name" placeholder="John Doe"
-                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200" required>
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                           required>
                 </div>
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" required
-                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200">
+                <div class="mb-8 text-left">
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                           class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                           required>
                 </div>
                 <button type="submit"
-                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-lg text-xl transition duration-300 transform hover:scale-105 shadow-xl">
-                    Get Early Access & Discount
+                        class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-lg font-bold rounded-full shadow-md text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900">
+                    Yes, I Want Early Access & My Discount!
+                    <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
                 </button>
+                <p class="mt-4 text-sm text-gray-500">Your information is 100% secure and will not be shared.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto text-center text-gray-500 text-sm">
-            &copy; 2024 Digital Education Authority. All rights reserved. | <a href="#" class="hover:text-indigo-400">Privacy Policy</a>
+    <footer class="bg-gray-900 py-10 px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto max-w-6xl text-center text-gray-500 text-sm">
+            <p>&copy; 2023 [Your Company Name]. All rights reserved. | <a href="#" class="text-blue-500 hover:underline">Privacy Policy</a> | <a href="#" class="text-blue-500 hover:underline">Terms of Service</a></p>
         </div>
     </footer>
 
-    <!-- Countdown Timer JavaScript -->
+    <!-- JavaScript for Countdown Timer -->
     <script>
-        function setupCountdown() {
-            // IMPORTANT: Set the actual Nest app shutdown date or discount expiry date here.
-            // For demonstration, we'll use an arbitrary date in the near future.
-            const countDownDate = new Date("July 15, 2024 00:00:00 GMT-0400").getTime(); // Example: July 15, 2024, 12 AM EST
+        // Set the date we're counting down to (e.g., 7 days from now)
+        var countDownDate = new Date();
+        countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from the current date
+        countDownDate.setHours(23, 59, 59, 999); // Set to end of the 7th day for clarity
+        countDownDate = countDownDate.getTime();
 
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate - now;
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
 
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<p class='text-xl sm:text-2xl text-red-400 font-bold'>OFFER EXPIRED! The Nest App shutdown is imminent.</p>";
-                    const ctaButton = document.querySelector('.animate-bounce-slow');
-                    if (ctaButton) {
-                        ctaButton.classList.add('opacity-50', 'cursor-not-allowed', 'bg-gray-600', 'hover:bg-gray-600');
-                        ctaButton.classList.remove('animate-bounce-slow', 'bg-indigo-600', 'hover:bg-indigo-700', 'hover:scale-105');
-                        ctaButton.innerText = 'Offer Expired';
-                        ctaButton.href = '#'; // Make it non-functional
-                    }
-                    return;
+            // Output the result in elements with respective ids, padding with '0'
+            document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+            document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+            // If the count down is over, display expired message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "<p class='text-xl sm:text-2xl'>Offer Expired!</p>";
+                // Optionally disable the CTA button or change its text
+                const ctaButton = document.querySelector('a[href="#waitlist"]');
+                if (ctaButton) {
+                    ctaButton.innerText = "Join the Standard Waitlist";
+                    ctaButton.classList.remove('from-blue-600', 'to-indigo-700', 'hover:from-blue-700', 'hover:to-indigo-800');
+                    ctaButton.classList.add('bg-gray-600', 'hover:bg-gray-700');
+                    ctaButton.removeAttribute('href'); // Make it non-clickable or change target
                 }
-
-                document.getElementById("days").innerText = String(days).padStart(2, '0');
-                document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
-            }, 1000);
-        }
-
-        document.addEventListener('DOMContentLoaded', setupCountdown);
+                const formButton = document.querySelector('#waitlist button[type="submit"]');
+                if (formButton) {
+                    formButton.innerText = "Join the Standard Waitlist";
+                    formButton.classList.remove('from-blue-600', 'to-purple-600', 'hover:from-blue-700', 'hover:to-purple-700');
+                    formButton.classList.add('bg-gray-600', 'hover:bg-gray-700');
+                }
+            }
+        }, 1000);
     </script>
 
 </body>
