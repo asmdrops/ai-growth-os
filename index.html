@@ -3,190 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CognitoFlow AI: Hyper-Personalized Productivity for Mac Creatives</title>
-    <meta name="description" content="Unlock hyper-personalized workflow automation with CognitoFlow AI, the Mac-native suite designed to empower creative professionals. Seamlessly integrates with Apple apps and extends future Apple AI.">
+    <title>Nest & Google Assistant Migration Playbook - Secure Your Smart Home Future</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+        /* Custom styles for the countdown timer digits */
+        .countdown-digit {
+            @apply text-5xl md:text-6xl font-extrabold text-white;
         }
-        .hero-bg {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
+        .countdown-label {
+            @apply text-sm md:text-base text-gray-400 uppercase tracking-wider;
         }
-        .gradient-text {
-            background: linear-gradient(90deg, #6366f1, #a855f7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        /* Custom animation for gentle bounce */
+        @keyframes bounce-slow {
+            0%, 100% {
+                transform: translateY(-5%);
+                animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+            }
+            50% {
+                transform: translateY(0);
+                animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+            }
+        }
+        .animate-bounce-slow {
+            animation: bounce-slow 3s infinite;
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="relative hero-bg h-screen flex items-center justify-center p-4 md:p-8">
+    <header class="relative bg-[url('https://source.unsplash.com/1600x900/?A,tech')] bg-cover bg-center min-h-screen flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8">
         <div class="absolute inset-0 bg-black opacity-70"></div>
-        <div class="relative z-10 text-center max-w-4xl mx-auto flex flex-col items-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6 gradient-text">
-                CognitoFlow AI: Your Mac, Hyper-Personalized.
+        <div class="relative z-10 text-center max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white mb-6 animate-pulse">
+                <span class="block">Google's Killing the Nest App.</span>
+                <span class="block text-indigo-400">Are You Ready?</span>
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl">
-                Unleash unprecedented creative productivity with our Mac-native AI suite. We analyze your habits, automate workflows, and empower 'smart actions' – seamlessly enhancing and extending Apple's forthcoming AI with domain-specific intelligence for designers, editors, and innovators.
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Don't let the smart home transition leave you stranded. Get the definitive guide to migrate smoothly, securely, and smartly.
             </p>
-            <p class="text-sm text-gray-400 mb-8">
-                *Designed to perfectly complement Apple's anticipated AI agent.
-            </p>
-            <a href="#waitlist" class="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform transition duration-300 hover:scale-105">
-                Get Early Access & Join the Waitlist
+
+            <!-- Limited Time Countdown Timer -->
+            <div class="bg-gray-800 bg-opacity-75 rounded-lg p-6 mb-10 shadow-xl border border-indigo-500">
+                <h3 class="text-xl sm:text-2xl font-bold text-indigo-300 mb-4">Limited-Time Early Bird Discount!</h3>
+                <p class="text-md sm:text-lg text-gray-300 mb-6">Offer expires when the Nest App officially shuts down. Don't miss out!</p>
+                <div id="countdown" class="flex justify-center space-x-4 sm:space-x-8">
+                    <div class="text-center">
+                        <div id="days" class="countdown-digit">00</div>
+                        <div class="countdown-label">Days</div>
+                    </div>
+                    <div class="text-center">
+                        <div id="hours" class="countdown-digit">00</div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    <div class="text-center">
+                        <div id="minutes" class="countdown-digit">00</div>
+                        <div class="countdown-label">Minutes</div>
+                    </div>
+                    <div class="text-center">
+                        <div id="seconds" class="countdown-digit">00</div>
+                        <div class="countdown-label">Seconds</div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#early-access" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full text-lg sm:text-xl transition duration-300 transform hover:scale-105 shadow-lg animate-bounce-slow">
+                Secure Your Playbook Now & Save!
             </a>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+    <section class="py-16 sm:py-20 md:py-24 bg-gray-800 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center mb-16 leading-tight gradient-text">
-                Unlock Your Creative Superpowers
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white text-center mb-12">
+                Your <span class="text-indigo-400">Migration Playbook</span> Includes:
             </h2>
-
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-800 transform hover:scale-105 transition duration-300">
-                    <div class="text-5xl mb-6 text-purple-400">⌘</div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-50">Intelligent Workflow Automation</h3>
-                    <p class="text-gray-400 leading-relaxed">CognitoFlow AI observes your unique habits across Finder, Mail, Photos, Final Cut Pro, and other Apple apps. It then intelligently generates custom scripts and macros, automating repetitive tasks so you can focus on creativity, not drudgery.</p>
+                <!-- Feature 1: Data Backup -->
+                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-5xl mb-4 text-center">💾</div>
+                    <h3 class="text-2xl font-bold text-white mb-3 text-center">Seamless Data Backup</h3>
+                    <p class="text-gray-300 text-center">Step-by-step instructions to ensure all your precious Nest data is safely backed up before the shutdown.</p>
                 </div>
-
-                <!-- Feature 2 -->
-                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-800 transform hover:scale-105 transition duration-300">
-                    <div class="text-5xl mb-6 text-indigo-400">✨</div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-50">Smart Actions & API Integration</h3>
-                    <p class="text-gray-400 leading-relaxed">Beyond basic automation, our 'smart actions' predict your needs, suggesting next steps or executing complex multi-app operations. Seamlessly integrate third-party APIs for tools like Figma, Asana, Notion, or your custom dev environment, all from one central hub.</p>
+                <!-- Feature 2: Device Compatibility -->
+                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-5xl mb-4 text-center">✅</div>
+                    <h3 class="text-2xl font-bold text-white mb-3 text-center">Device Compatibility Analysis</h3>
+                    <p class="text-gray-300 text-center">Understand what works and what doesn't. Our guide helps you assess your current devices for a smooth transition.</p>
                 </div>
-
-                <!-- Feature 3 -->
-                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-800 transform hover:scale-105 transition duration-300">
-                    <div class="text-5xl mb-6 text-green-400">🚀</div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-50">Domain-Specific AI Enhancement</h3>
-                    <p class="text-gray-400 leading-relaxed">While Apple's general AI will be powerful, CognitoFlow AI provides the specialized intelligence creatives demand. Optimize render settings in Final Cut Pro, suggest design variations in Figma, or organize complex project assets with AI-driven precision. We're the expert layer your Mac needs.</p>
+                <!-- Feature 3: Alternative Ecosystems -->
+                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-5xl mb-4 text-center">🏠</div>
+                    <h3 class="text-2xl font-bold text-white mb-3 text-center">Top Alternative Ecosystems</h3>
+                    <p class="text-gray-300 text-center">Curated list of leading smart home platforms with detailed pros, cons, and migration pathways.</p>
                 </div>
-
-                <!-- Feature 4 -->
-                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-800 transform hover:scale-105 transition duration-300">
-                    <div class="text-5xl mb-6 text-yellow-400">⚙️</div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-50">Hyper-Personalized Suggestions</h3>
-                    <p class="text-gray-400 leading-relaxed">Receive real-time, context-aware suggestions for optimizing your workflow. From file organization to email management or project planning, CognitoFlow AI learns from your patterns to provide actionable insights that truly save you time and boost efficiency.</p>
+                <!-- Feature 4: Expert Troubleshooting -->
+                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-5xl mb-4 text-center">🛠️</div>
+                    <h3 class="text-2xl font-bold text-white mb-3 text-center">Expert Troubleshooting</h3>
+                    <p class="text-gray-300 text-center">Common issues and their fixes, so you spend less time frustrated and more time enjoying your smart home.</p>
                 </div>
-
-                <!-- Feature 5 -->
-                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-800 transform hover:scale-105 transition duration-300">
-                    <div class="text-5xl mb-6 text-red-400">🔗</div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-50">Cross-App Cohesion</h3>
-                    <p class="text-gray-400 leading-relaxed">Break down silos between your favorite Apple apps. CognitoFlow AI acts as the connective tissue, allowing you to trigger actions in Mail based on Finder activity, generate project briefs from Photos metadata, or orchestrate complex tasks across your entire creative stack.</p>
+                <!-- Feature 5: Exclusive Community -->
+                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-5xl mb-4 text-center">🤝</div>
+                    <h3 class="text-2xl font-bold text-white mb-3 text-center">Exclusive Community Access</h3>
+                    <p class="text-gray-300 text-center">Connect with other smart home owners, share tips, and get direct support in our private forum.</p>
                 </div>
-
-                <!-- Feature 6 -->
-                <div class="bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-800 transform hover:scale-105 transition duration-300">
-                    <div class="text-5xl mb-6 text-blue-400">🔒</div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-50">Secure & Privacy-First</h3>
-                    <p class="text-gray-400 leading-relaxed">Built from the ground up with Apple's ecosystem in mind, CognitoFlow AI prioritizes your privacy and data security. All analysis and automation are designed to operate locally on your Mac, ensuring your creative process remains private and secure.</p>
+                <!-- Feature 6: Future Updates -->
+                <div class="bg-gray-900 rounded-lg p-8 shadow-xl border border-gray-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-indigo-400 text-5xl mb-4 text-center">🔄</div>
+                    <h3 class="text-2xl font-bold text-white mb-3 text-center">Future-Proof Your Setup</h3>
+                    <p class="text-gray-300 text-center">Guidance on how to build a resilient smart home that adapts to future tech shifts and includes access to future updates.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist / Call to Action Section -->
-    <section id="waitlist" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-900 border-t border-gray-800">
-        <div class="max-w-2xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-8 leading-tight gradient-text">
-                Ready to Supercharge Your Mac?
+    <!-- Early Access & Discount Form Section -->
+    <section id="early-access" class="py-16 sm:py-20 md:py-24 bg-gray-900 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto bg-gray-800 rounded-lg p-8 sm:p-10 shadow-2xl border border-indigo-600">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white text-center mb-6">
+                Don't Get Left Behind.
             </h2>
-            <p class="text-lg text-gray-300 mb-10">
-                Join our exclusive waitlist for early access. Limited spots are available for our inaugural release to ensure a personalized onboarding experience. Don't miss out!
+            <p class="text-lg text-gray-300 text-center mb-8">
+                Be among the first to secure your copy of the <span class="font-bold text-indigo-400">'Nest & Google Assistant Migration Playbook'</span> with our exclusive early bird discount.
+                Join the priority list for immediate access and future updates.
             </p>
-
-            <!-- Countdown Timer -->
-            <div class="bg-gray-950 p-6 rounded-xl shadow-inner border border-gray-800 mb-10">
-                <p class="text-xl font-semibold text-purple-400 mb-4">Limited Early Access Spots Available!</p>
-                <div id="countdown" class="flex justify-center items-center space-x-4 text-white text-4xl sm:text-5xl lg:text-6xl font-extrabold">
-                    <div class="flex flex-col items-center">
-                        <span id="days" class="w-20 sm:w-24 lg:w-32 py-3 bg-gray-800 rounded-lg">00</span>
-                        <span class="text-sm sm:text-base text-gray-400 mt-2">Days</span>
-                    </div>
-                    <div class="text-gray-600">:</div>
-                    <div class="flex flex-col items-center">
-                        <span id="hours" class="w-20 sm:w-24 lg:w-32 py-3 bg-gray-800 rounded-lg">00</span>
-                        <span class="text-sm sm:text-base text-gray-400 mt-2">Hours</span>
-                    </div>
-                    <div class="text-gray-600">:</div>
-                    <div class="flex flex-col items-center">
-                        <span id="minutes" class="w-20 sm:w-24 lg:w-32 py-3 bg-gray-800 rounded-lg">00</span>
-                        <span class="text-sm sm:text-base text-gray-400 mt-2">Minutes</span>
-                    </div>
-                    <div class="text-gray-600">:</div>
-                    <div class="flex flex-col items-center">
-                        <span id="seconds" class="w-20 sm:w-24 lg:w-32 py-3 bg-gray-800 rounded-lg">00</span>
-                        <span class="text-sm sm:text-base text-gray-400 mt-2">Seconds</span>
-                    </div>
+            <form class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe"
+                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200" required>
                 </div>
-            </div>
-            <!-- End Countdown Timer -->
-
-            <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-                <input type="email" placeholder="Enter your email" class="flex-grow p-4 rounded-full bg-gray-800 border border-gray-700 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
-                <button type="submit" class="bg-gradient-to-r from-purple-600 to-indigo-500 hover:from-purple-700 hover:to-indigo-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105">
-                    Join the Waitlist
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required
+                           class="w-full px-5 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200">
+                </div>
+                <button type="submit"
+                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-lg text-xl transition duration-300 transform hover:scale-105 shadow-xl">
+                    Get Early Access & Discount
                 </button>
             </form>
-            <p class="text-xs text-gray-500 mt-4">We respect your privacy. No spam, ever.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 px-4 text-center text-gray-500 text-sm border-t border-gray-800">
-        <p>&copy; 2023 CognitoFlow AI. All rights reserved. Made for Mac creatives.</p>
+    <footer class="bg-gray-900 py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto text-center text-gray-500 text-sm">
+            &copy; 2024 Digital Education Authority. All rights reserved. | <a href="#" class="hover:text-indigo-400">Privacy Policy</a>
+        </div>
     </footer>
 
+    <!-- Countdown Timer JavaScript -->
     <script>
-        // Set the date we're counting down to
-        // Example: December 31, 2023 23:59:59 UTC
-        // Adjust this date to reflect your actual "limited time" offer.
-        var countDownDate = new Date("Dec 31, 2024 23:59:59").getTime();
+        function setupCountdown() {
+            // IMPORTANT: Set the actual Nest app shutdown date or discount expiry date here.
+            // For demonstration, we'll use an arbitrary date in the near future.
+            const countDownDate = new Date("July 15, 2024 00:00:00 GMT-0400").getTime(); // Example: July 15, 2024, 12 AM EST
 
-        // Update the count down every 1 second
-        var x = setInterval(function() {
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate - now;
 
-            // Get today's date and time
-            var now = new Date().getTime();
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Find the distance between now and the count down date
-            var distance = countDownDate - now;
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<p class='text-xl sm:text-2xl text-red-400 font-bold'>OFFER EXPIRED! The Nest App shutdown is imminent.</p>";
+                    const ctaButton = document.querySelector('.animate-bounce-slow');
+                    if (ctaButton) {
+                        ctaButton.classList.add('opacity-50', 'cursor-not-allowed', 'bg-gray-600', 'hover:bg-gray-600');
+                        ctaButton.classList.remove('animate-bounce-slow', 'bg-indigo-600', 'hover:bg-indigo-700', 'hover:scale-105');
+                        ctaButton.innerText = 'Offer Expired';
+                        ctaButton.href = '#'; // Make it non-functional
+                    }
+                    return;
+                }
 
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById("days").innerText = String(days).padStart(2, '0');
+                document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+            }, 1000);
+        }
 
-            // Display the result in the element with id="countdown"
-            document.getElementById("days").innerHTML = (days < 10 ? "0" : "") + days;
-            document.getElementById("hours").innerHTML = (hours < 10 ? "0" : "") + hours;
-            document.getElementById("minutes").innerHTML = (minutes < 10 ? "0" : "") + minutes;
-            document.getElementById("seconds").innerHTML = (seconds < 10 ? "0" : "") + seconds;
-
-            // If the count down is finished, write some text
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "<p class='text-xl text-red-500'>Early Access Ended!</p>";
-                // Optionally disable the form or show a different message
-            }
-        }, 1000);
+        document.addEventListener('DOMContentLoaded', setupCountdown);
     </script>
+
 </body>
 </html>
