@@ -3,255 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple Black Friday Deals Hub - Live & Dynamic! | Save on AirPods, Watches, MacBooks</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Mastering Google's Personalized AI Search - Unlock Productivity & Insights</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for the hero background image and overlay */
-        .hero-background {
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-900 text-gray-100;
+        }
+        .hero-bg {
             background-image: url('https://source.unsplash.com/1600x900/?A,tech');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
-        /* Gradient overlay for readability */
-        .hero-overlay {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.7) 100%);
-        }
-        /* Custom scrollbar for dark mode, subtle */
-        body {
-            scrollbar-width: thin; /* "auto" or "thin" */
-            scrollbar-color: #4a5568 #1a202c; /* thumb and track color */
-        }
-        body::-webkit-scrollbar {
-            width: 8px;
-        }
-        body::-webkit-scrollbar-track {
-            background: #1a202c; /* Tailwind bg-gray-900 */
-        }
-        body::-webkit-scrollbar-thumb {
-            background-color: #4a5568; /* Tailwind bg-gray-600 */
-            border-radius: 20px;
-            border: 2px solid #1a202c;
-        }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-50 font-sans antialiased">
+<body class="antialiased">
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center hero-background">
-        <div class="absolute inset-0 hero-overlay"></div>
-        <div class="relative z-10 text-center px-4 py-16 max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mb-6 animate-pulse">
-                Unlock Unbeatable <span class="text-blue-400">Apple Black Friday Deals</span> - Live & Dynamic!
+    <header class="hero-bg relative min-h-screen flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark Overlay for text readability -->
+        <div class="relative z-10 text-center max-w-4xl mx-auto space-y-6 md:space-y-8">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white drop-shadow-lg">
+                Mastering Google's Personalized AI Search
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-10 max-w-2xl mx-auto">
-                Your ultimate hub for real-time updates on AirPods, Apple Watches, MacBooks, and more.
-                Don't miss a single flash sale with our <span class="font-semibold text-white">Limited-Time Countdown Timers!</span>
+            <p class="text-xl md:text-2xl text-gray-200 font-medium max-w-2xl mx-auto">
+                Unlock <span class="text-indigo-400 font-bold">Advanced Productivity</span> & <span class="text-emerald-400 font-bold">Smart Financial Insights</span> with Drive, Wallet & Gemini Integration.
             </p>
-            <a href="#deals-showcase" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition duration-300 transform hover:scale-105 shadow-lg">
-                Explore Deals Now!
-            </a>
-            <p class="text-sm text-gray-400 mt-6 italic">
-                Trusted by thousands of Apple enthusiasts for the best deals.
-            </p>
-        </div>
-    </section>
 
-    <!-- Urgency/Flash Deal Showcase (integrating countdown strategy) -->
-    <section id="deals-showcase" class="py-16 md:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-10">
-                <span class="text-blue-400">⚡️ Flash Deal Alert!</span> Don't Miss Out!
-            </h2>
-            <div class="max-w-3xl mx-auto bg-gradient-to-r from-purple-700 to-blue-700 text-white p-6 sm:p-8 rounded-2xl shadow-2xl border-4 border-blue-500 transform hover:scale-105 transition duration-500 ease-in-out">
-                <h3 class="text-3xl sm:text-4xl font-extrabold mb-4 animate-bounce">Apple AirPods Pro (2nd Gen) - Save 25%!</h3>
-                <p class="text-xl sm:text-2xl mb-6">Original Price: <span class="line-through opacity-75">$249</span> &nbsp; <span class="font-bold text-yellow-300">Now: $186.75!</span></p>
-
-                <!-- Countdown Timer (HTML structure, requires JavaScript to function) -->
-                <div class="flex justify-center items-center space-x-3 sm:space-x-5 text-4xl sm:text-5xl font-mono countdown text-yellow-200" data-countdown-to="2023-12-01T10:00:00">
+            <!-- Limited Time Countdown -->
+            <div class="bg-gradient-to-r from-indigo-700 to-purple-700 p-6 rounded-lg shadow-xl inline-block mt-8 animate-pulse border border-purple-500">
+                <p class="text-lg md:text-xl font-semibold text-white mb-2">Exclusive Early Access Closes In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-3 md:space-x-4 text-white font-bold text-3xl md:text-5xl">
                     <div class="flex flex-col items-center">
-                        <span class="days block text-shadow-md">00</span>
-                        <p class="text-base sm:text-lg mt-1 text-white opacity-80">Days</p>
+                        <span id="days">00</span>
+                        <span class="text-sm md:text-base font-normal">Days</span>
                     </div>
-                    <span class="text-2xl sm:text-3xl">:</span>
+                    <span>:</span>
                     <div class="flex flex-col items-center">
-                        <span class="hours block text-shadow-md">00</span>
-                        <p class="text-base sm:text-lg mt-1 text-white opacity-80">Hours</p>
+                        <span id="hours">00</span>
+                        <span class="text-sm md:text-base font-normal">Hours</span>
                     </div>
-                    <span class="text-2xl sm:text-3xl">:</span>
+                    <span>:</span>
                     <div class="flex flex-col items-center">
-                        <span class="minutes block text-shadow-md">00</span>
-                        <p class="text-base sm:text-lg mt-1 text-white opacity-80">Mins</p>
+                        <span id="minutes">00</span>
+                        <span class="text-sm md:text-base font-normal">Minutes</span>
                     </div>
-                    <span class="text-2xl sm:text-3xl">:</span>
+                    <span>:</span>
                     <div class="flex flex-col items-center">
-                        <span class="seconds block text-shadow-md">00</span>
-                        <p class="text-base sm:text-lg mt-1 text-white opacity-80">Secs</p>
+                        <span id="seconds">00</span>
+                        <span class="text-sm md:text-base font-normal">Seconds</span>
                     </div>
                 </div>
-                <!-- Note: The actual countdown functionality requires JavaScript. 
-                     The 'data-countdown-to' attribute provides the target time.
-                     A simple JS script would update the 'days', 'hours', 'minutes', 'seconds' spans. -->
-
-                <p class="mt-8 text-lg sm:text-xl opacity-90">Deal ends soon - don't let this opportunity slip away!</p>
-                <a href="#link-to-airpods-deal" class="mt-8 inline-block bg-yellow-400 text-gray-900 font-bold py-4 px-12 rounded-full shadow-xl hover:bg-yellow-300 transition duration-300 text-lg sm:text-xl transform hover:scale-105">
-                    Grab This Deal Now!
-                </a>
             </div>
+
+            <a href="#waitlist-form" class="mt-8 md:mt-10 inline-block bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-4 px-10 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Secure Your Limited Spot Now!
+            </a>
+            <p class="text-sm text-gray-400 mt-2">Don't miss out on exclusive early bird bonuses.</p>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
     <section class="py-16 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-12">
-                Why Our Apple Deals Hub Is Your <span class="text-blue-400">Black Friday Essential</span>
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-center text-white mb-12 md:mb-16">
+                What You'll Achieve with This Comprehensive Guide
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
                 <!-- Feature 1 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-blue-500 mb-4">
-                        <svg class="h-12 w-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">🔥 Live-Updating Deals</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Never miss a price drop! Our system constantly scans thousands of retailers for the absolute hottest Apple Black Friday offers, in real-time.
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col items-start border border-gray-700">
+                    <span class="text-5xl mb-4 text-indigo-400">⚡</span>
+                    <h3 class="text-2xl font-bold text-white mb-3">Hyper-Personalized Productivity</h3>
+                    <p class="text-gray-300 text-lg">
+                        Automate daily tasks, organize projects, and streamline workflows by intelligently integrating Gemini's AI with Google Drive for unmatched efficiency.
                     </p>
                 </div>
                 <!-- Feature 2 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-blue-500 mb-4">
-                        <svg class="h-12 w-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">⏰ Limited-Time Flash Sales</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Exclusive countdown timers for lightning deals mean you're always ahead of the curve. Seize the moment before it's gone!
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col items-start border border-gray-700">
+                    <span class="text-5xl mb-4 text-emerald-400">💰</span>
+                    <h3 class="text-2xl font-bold text-white mb-3">Smart Financial Oversight</h3>
+                    <p class="text-gray-300 text-lg">
+                        Leverage AI to analyze your Google Wallet data, predict spending patterns, identify savings opportunities, and generate insightful financial summaries instantly.
                     </p>
                 </div>
                 <!-- Feature 3 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-blue-500 mb-4">
-                        <svg class="h-12 w-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">📊 Smart Comparison Tables</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Easily compare different Apple models and specs side-by-side. Make informed decisions and find the perfect product for your needs.
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col items-start border border-gray-700">
+                    <span class="text-5xl mb-4 text-purple-400">🔍</span>
+                    <h3 class="text-2xl font-bold text-white mb-3">Advanced Data Retrieval</h3>
+                    <p class="text-gray-300 text-lg">
+                        Master personalized AI search to quickly locate specific documents in Drive, pull relevant data points from emails, and get instant answers tailored to your needs.
                     </p>
                 </div>
                 <!-- Feature 4 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-blue-500 mb-4">
-                        <svg class="h-12 w-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                    </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">🚀 Direct Affiliate Links</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Seamlessly jump to trusted retailers and secure your deal instantly. No more searching, just direct access to savings!
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col items-start border border-gray-700">
+                    <span class="text-5xl mb-4 text-red-400">🚀</span>
+                    <h3 class="text-2xl font-bold text-white mb-3">Time-Saving Strategies</h3>
+                    <p class="text-gray-300 text-lg">
+                        Implement proven strategies to drastically reduce time spent on research, data organization, and routine information lookup, freeing up your valuable time.
                     </p>
                 </div>
                 <!-- Feature 5 -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-blue-500 mb-4">
-                        <svg class="h-12 w-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">📧 Early Access Opt-in</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Be the first to know! Sign up for tomorrow's hottest deals delivered straight to your inbox before they go live on the site.
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col items-start border border-gray-700">
+                    <span class="text-5xl mb-4 text-yellow-400">💡</span>
+                    <h3 class="text-2xl font-bold text-white mb-3">Actionable Tutorials & Guides</h3>
+                    <p class="text-gray-300 text-lg">
+                        Step-by-step guides and video tutorials show you exactly how to set up and utilize each AI mode feature, no technical expertise required, for immediate application.
                     </p>
                 </div>
-                <!-- Feature 6 (Placeholder for future expansion or another compelling feature) -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-blue-600 transition duration-300 transform hover:-translate-y-2">
-                    <div class="text-blue-500 mb-4">
-                        <svg class="h-12 w-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253"></path></svg>
-                    </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">💡 Expert Shopping Guides</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Navigate the Black Friday chaos with ease. Our guides help you understand specs, value, and make the best purchase for your budget.
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col items-start border border-gray-700">
+                    <span class="text-5xl mb-4 text-blue-400">🛡️</span>
+                    <h3 class="text-2xl font-bold text-white mb-3">Future-Proof Your Workflow</h3>
+                    <p class="text-gray-300 text-lg">
+                        Stay ahead of the curve by mastering the latest AI integrations within Google's ecosystem, ensuring you're always operating at peak efficiency and relevance.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist/Email Opt-in Form -->
-    <section class="py-16 md:py-24 bg-gray-800">
+    <!-- Waitlist Form Section -->
+    <section id="waitlist-form" class="py-16 md:py-24 bg-gradient-to-br from-gray-800 to-gray-900">
         <div class="container mx-auto px-4 max-w-2xl text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
-                <span class="text-blue-400">Don't Miss Out!</span> Get Early Access to Tomorrow's Hottest Deals
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-8">
+                Join the Exclusive Waitlist!
             </h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-10">
-                Be ahead of the rush. Sign up below to get exclusive notifications on upcoming flash sales and premium deals before anyone else.
+            <p class="text-lg md:text-xl text-gray-300 mb-10">
+                Be among the first to get access to 'Mastering Google's Personalized AI Search'. Limited spots are available for early access members, guaranteeing you exclusive bonuses and priority updates.
             </p>
-            <form action="#" method="POST" class="flex flex-col sm:flex-row gap-4 sm:gap-0 justify-center items-center max-w-xl mx-auto">
-                <input
-                    type="email"
-                    placeholder="Your best email address"
-                    aria-label="Your best email address"
-                    required
-                    class="w-full sm:flex-grow p-4 bg-gray-700 text-white border border-gray-600 rounded-lg sm:rounded-r-none focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400 text-lg"
-                >
-                <button
-                    type="submit"
-                    class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg sm:rounded-l-none transition duration-300 transform hover:scale-105 shadow-md text-lg"
-                >
-                    Get Early Access Now!
+            <form class="bg-gray-800 p-8 md:p-10 rounded-lg shadow-2xl space-y-6 border border-gray-700">
+                <div>
+                    <label for="name" class="sr-only">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required
+                           class="w-full px-5 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg border border-gray-600">
+                </div>
+                <div>
+                    <label for="email" class="sr-only">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
+                           class="w-full px-5 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg border border-gray-600">
+                </div>
+                <button type="submit"
+                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-md text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                    Get Early Access Now
                 </button>
+                <p class="text-sm text-gray-400 mt-4">We respect your privacy. No spam, ever.</p>
             </form>
-            <p class="text-sm text-gray-400 mt-6">
-                We respect your privacy. No spam, ever. Unsubscribe anytime.
-            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 border-t border-gray-700">
-        <div class="container mx-auto px-4 text-center text-gray-400">
-            <p class="mb-4 text-lg">Apple Black Friday Deals Hub</p>
-            <p class="text-sm">
-                &copy; 2023 All rights reserved. |
-                <a href="#" class="text-blue-400 hover:text-blue-300 transition duration-300">Privacy Policy</a> |
-                <a href="#" class="text-blue-400 hover:text-blue-300 transition duration-300">Terms of Service</a>
-            </p>
-            <p class="text-xs mt-4">
-                This site is an independent deals aggregator and is not affiliated with Apple Inc.
+    <footer class="bg-gray-900 py-10">
+        <div class="container mx-auto px-4 text-center text-gray-500">
+            <p>&copy; 2023 Digital Education Authority. All rights reserved.</p>
+            <p class="mt-2 text-sm">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a> |
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
             </p>
         </div>
     </footer>
 
-    <!-- Placeholder for JavaScript (will not be included in raw HTML output as per instructions, but noted for functionality) -->
-    <!--
+    <!-- Countdown JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const countdownElements = document.querySelectorAll('.countdown');
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the date we're counting down to (7 days from now for demonstration)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now
+            // For a specific date, uncomment and modify:
+            // const countDownDate = new Date("Dec 31, 2023 23:59:59").getTime();
 
-            countdownElements.forEach(countdownEl => {
-                const targetDate = new Date(countdownEl.dataset.countdownTo).getTime();
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate.getTime() - now;
 
-                const updateCountdown = () => {
-                    const now = new Date().getTime();
-                    const distance = targetDate - now;
-
-                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                    countdownEl.querySelector('.days').innerText = days.toString().padStart(2, '0');
-                    countdownEl.querySelector('.hours').innerText = hours.toString().padStart(2, '0');
-                    countdownEl.querySelector('.minutes').innerText = minutes.toString().padStart(2, '0');
-                    countdownEl.querySelector('.seconds').innerText = seconds.toString().padStart(2, '0');
-
-                    if (distance < 0) {
-                        clearInterval(interval);
-                        countdownEl.innerHTML = '<span class="text-red-500">DEAL EXPIRED!</span>';
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "<p class='text-red-500 text-xl md:text-3xl'>EARLY ACCESS CLOSED!</p>";
+                    const ctaButton = document.querySelector('a[href="#waitlist-form"]');
+                    if(ctaButton) {
+                        ctaButton.textContent = "Access Closed";
+                        ctaButton.classList.add('opacity-50', 'cursor-not-allowed');
+                        ctaButton.removeAttribute('href');
                     }
-                };
+                    const submitButton = document.querySelector('#waitlist-form button[type="submit"]');
+                    if (submitButton) {
+                        submitButton.textContent = "Early Access Closed";
+                        submitButton.classList.add('opacity-50', 'cursor-not-allowed');
+                        submitButton.disabled = true;
+                    }
+                    return;
+                }
 
-                const interval = setInterval(updateCountdown, 1000);
-                updateCountdown(); // Initial call to display immediately
-            });
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+            }, 1000);
         });
     </script>
-    -->
 </body>
 </html>
