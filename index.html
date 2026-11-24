@@ -3,261 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hyper-Personalized SEO & AI Search Strategy Masterclass | Master Google's New AI Mode</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>ClipCraft AI - Personalized Video Clips for Creators</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Favicon (simple emoji) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎥</text></svg>">
     <style>
-        /* Custom styles for hero image overlay and responsive countdown */
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
+        /* Custom scrollbar for dark mode, subtle */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
         }
-        .hero-overlay {
-            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* bg-gray-900 */
         }
-        /* Countdown styles (basic, enhanced with JS for functionality) */
-        .countdown-segment {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-width: 55px; /* Smaller base for phones */
-            padding: 0.5rem;
-            margin: 0 0.2rem;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 0.5rem;
-            color: white;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* a darker shade of gray */
+            border-radius: 4px;
         }
-        .countdown-value {
-            font-size: 1.75rem; /* 2.5xl */
-            font-weight: 700; /* bold */
-            line-height: 1;
-        }
-        .countdown-label {
-            font-size: 0.7rem; /* xs */
-            text-transform: uppercase;
-            letter-spacing: 0.05em; /* tracking-wide */
-            margin-top: 0.25rem;
-        }
-
-        /* Responsive adjustments for countdown */
-        @media (min-width: 640px) { /* sm breakpoint */
-            .countdown-segment {
-                min-width: 70px;
-                padding: 0.75rem;
-                margin: 0 0.35rem;
-            }
-            .countdown-value {
-                font-size: 2rem; /* 3xl */
-            }
-            .countdown-label {
-                font-size: 0.8rem; /* sm */
-            }
-        }
-
-        @media (min-width: 768px) { /* md breakpoint */
-            .countdown-segment {
-                min-width: 80px;
-                padding: 1rem;
-                margin: 0 0.5rem;
-            }
-            .countdown-value {
-                font-size: 2.25rem; /* 4xl */
-            }
-            .countdown-label {
-                font-size: 0.875rem; /* sm */
-            }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6a768e;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-gray-900 text-gray-100 font-sans antialiased overflow-x-hidden">
 
     <!-- Hero Section -->
-    <header class="hero-background min-h-screen flex items-center justify-center text-center relative p-4">
-        <div class="hero-overlay"></div>
-        <div class="relative z-10 w-full max-w-5xl mx-auto py-16 px-6 sm:px-8 lg:px-12">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6 animate-fade-in-up">
-                Unlock the Future of SEO: Master Google's AI-Driven Personalized Search
+    <header class="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+            <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for text readability -->
+        </div>
+
+        <div class="relative z-10 p-4 md:p-8 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+                Revolutionize Fan Engagement: AI-Powered Personalized Video Clips
             </h1>
-            <p class="text-lg sm:text-xl text-gray-200 mb-10 max-w-3xl mx-auto opacity-90 animate-fade-in delay-200">
-                The market has shifted. Google's AI now taps into Drive & Wallet data for hyper-personalized results. Our Masterclass & Consulting offers the advanced strategy you need to dominate this new era.
+            <p class="text-lg sm:text-xl md:text-2xl mb-10 text-gray-200 max-w-3xl mx-auto">
+                Empower your audience to star in unique, AI-generated adventures crafted in your signature style. The future of creator-fan connection is here.
             </p>
-
-            <!-- Limited Time Countdown Timer -->
-            <div id="countdown-section" class="mb-12">
-                <p class="text-xl sm:text-2xl font-semibold text-white mb-4 w-full">Limited Spots & Special Pricing! Offer Ends In:</p>
-                <div id="countdown" class="flex justify-center items-stretch flex-wrap gap-y-4">
-                    <!-- Countdown segments will be populated by JS -->
-                    <div class="countdown-segment">
-                        <span class="countdown-value" id="days">00</span>
-                        <span class="countdown-label">Days</span>
-                    </div>
-                    <div class="countdown-segment">
-                        <span class="countdown-value" id="hours">00</span>
-                        <span class="countdown-label">Hours</span>
-                    </div>
-                    <div class="countdown-segment">
-                        <span class="countdown-value" id="minutes">00</span>
-                        <span class="countdown-label">Minutes</span>
-                    </div>
-                    <div class="countdown-segment">
-                        <span class="countdown-value" id="seconds">00</span>
-                        <span class="countdown-label">Seconds</span>
-                    </div>
-                </div>
-            </div>
-
-            <a href="#waitlist" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-xl sm:text-2xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg animate-bounce-in">
-                Secure Your Agency's Future: Join the Waitlist!
+            <a href="#waitlist" class="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full text-lg sm:text-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Get Early Access Now!
             </a>
-            <p class="text-sm text-gray-400 mt-4">For Marketing Agencies & Forward-Thinking Businesses Leading the Charge</p>
+            <p class="mt-4 text-sm text-gray-400">Join the exclusive waitlist and be among the first to transform your community.</p>
         </div>
     </header>
 
-    <!-- Market Trends / Opportunity Section -->
-    <section class="py-16 bg-gray-800 text-center px-4">
-        <div class="container mx-auto max-w-4xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-8">Google's AI Revolution: The New Market Trend Your Competitors Aren't Ready For</h2>
-            <p class="text-lg text-gray-300 mb-6 leading-relaxed">
-                A recent TechCrunch report confirms: Google's AI Search Mode now integrates personal data from Drive and Wallet for hyper-personalized responses. This isn't a minor update; it's a foundational shift in how content is discovered.
-            </p>
-            <p class="text-lg text-gray-300 mb-6 leading-relaxed">
-                This game-changing integration means traditional SEO is no longer enough. Your clients' content must be structured and optimized to be favored by an AI that understands individual user context. Ignore this, and risk being invisible.
-            </p>
-            <p class="text-lg text-gray-300 leading-relaxed">
-                This pivotal market trend creates an unparalleled opportunity for agencies and businesses that grasp its implications. Be the expert your clients need, leveraging this advanced understanding to drive unmatched discoverability.
-            </p>
-        </div>
-    </section>
-
     <!-- Features Section -->
-    <section class="py-16 bg-gray-900 px-4">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">Your Path to AI Search Dominance: Masterclass & Premium Intelligence</h2>
+    <section id="features" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 text-gray-50">Unleash Unprecedented Interaction</h2>
+            <p class="text-lg text-center text-gray-300 max-w-3xl mx-auto mb-16">
+                Tired of generic fan interactions? Ready to offer an unparalleled, immersive experience that deepens loyalty and unlocks new monetization streams? Our AI Personalized Clip Generator makes it possible.
+            </p>
 
-            <div class="grid md:grid-cols-2 gap-10 lg:gap-16">
-                <!-- Masterclass Features -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-blue-600">
-                    <h3 class="text-2xl font-bold text-blue-400 mb-6">🚀 The Hyper-Personalized SEO & AI Search Masterclass</h3>
-                    <ul class="space-y-4 text-lg text-gray-200">
-                        <li>🎯 <span class="font-semibold">AI Search Content Audit:</span> Learn to conduct comprehensive audits identifying how Google's AI perceives your current content through a personalized lens.</li>
-                        <li>✍️ <span class="font-semibold">Contextual Content Structuring:</span> Master proprietary frameworks for crafting content that is inherently discoverable and algorithmically favored by AI.</li>
-                        <li>🔍 <span class="font-semibold">Drive/Wallet Data Optimization:</span> Understand the profound implications of personal data integration and how to optimize for these advanced signals.</li>
-                        <li>📈 <span class="font-semibold">Agile AI SEO Strategies:</span> Develop future-proof SEO approaches that adapt to continuous AI advancements and personalized search evolutions.</li>
-                        <li>💡 <span class="font-semibold">Implementation Blueprints:</span> Access step-by-step guides, checklists, and templates to immediately implement your new AI SEO strategy for clients.</li>
-                        <li>📊 <span class="font-semibold">New Measurement Paradigms:</span> Discover how to track, analyze, and refine performance in the dynamic AI search landscape.</li>
-                    </ul>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300">
+                    <div class="text-purple-400 text-4xl mb-4">✨</div>
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-gray-50">AI Character Integration</h3>
+                    <p class="text-gray-300 text-base sm:text-lg">Place your audience members directly into your narrative as heroes, villains, or allies, dynamically generated by advanced AI.</p>
                 </div>
 
-                <!-- Consulting/Newsletter Features -->
-                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-t-4 border-purple-600">
-                    <h3 class="text-2xl font-bold text-purple-400 mb-6">🔮 Premium Consulting & Intelligence Newsletter</h3>
-                    <ul class="space-y-4 text-lg text-gray-200">
-                        <li>✉️ <span class="font-semibold">Exclusive Intelligence Newsletter:</span> Receive critical, ongoing updates, breaking analyses, and expert insights on Google's evolving AI search.</li>
-                        <li>📚 <span class="font-semibold">Proprietary Case Studies:</span> Gain access to real-world examples and in-depth analyses of successful AI SEO adaptations from early adopters.</li>
-                        <li>🛠️ <span class="font-semibold">Actionable Tactics & Tools:</span> Get cutting-edge strategies, vetted tools, and actionable prompts to stay significantly ahead of competitors.</li>
-                        <li>💬 <span class="font-semibold">Priority Support & Consulting:</span> Opt for premium tiers to get personalized strategy reviews, direct Q&A, and dedicated guidance.</li>
-                        <li>🌐 <span class="font-semibold">Elite Professional Network:</span> Join a curated community of leading agencies and businesses navigating the personalized AI search frontier.</li>
-                        <li>🚀 <span class="font-semibold">Predictive Insights & Trends:</span> Leverage our foresight into upcoming AI search changes to proactively adjust client strategies and seize opportunities.</li>
-                    </ul>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300">
+                    <div class="text-purple-400 text-4xl mb-4">📖</div>
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-gray-50">Custom Narrative Templates</h3>
+                    <p class="text-gray-300 text-base sm:text-lg">Choose from a library of engaging story arcs or create your own, ensuring each personalized clip aligns perfectly with your content universe.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300">
+                    <div class="text-purple-400 text-4xl mb-4">🎨</div>
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-gray-50">Creator Style Mimicry</h3>
+                    <p class="text-gray-300 text-base sm:text-lg">Maintain your unique aesthetic and voice. Our AI learns your style to produce clips that feel authentically *yours*.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300">
+                    <div class="text-purple-400 text-4xl mb-4">🚀</div>
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-gray-50">Scalable & Automated</h3>
+                    <p class="text-gray-300 text-base sm:text-lg">Generate thousands of personalized clips without manual overhead, freeing you to focus on what you do best: creating.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300">
+                    <div class="text-purple-400 text-4xl mb-4">💸</div>
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-gray-50">New Monetization Streams</h3>
+                    <p class="text-gray-300 text-base sm:text-lg">Offer exclusive personalized clips as premium content, Patreon rewards, or unique merchandise, boosting your income significantly.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300">
+                    <div class="text-purple-400 text-4xl mb-4">📈</div>
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-gray-50">Boost Community & Loyalty</h3>
+                    <p class="text-gray-300 text-base sm:text-lg">Forge deeper connections with your fans by giving them an unforgettable, personalized experience that only you can offer.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form Section -->
-    <section id="waitlist" class="py-16 bg-gradient-to-br from-gray-900 to-gray-800 px-4">
-        <div class="container mx-auto max-w-3xl text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Don't Get Left Behind by the AI Revolution. Join Our Exclusive Waitlist!</h2>
-            <p class="text-lg text-gray-300 mb-8 leading-relaxed">
-                The window for early adoption is closing. Secure your agency's or business's position at the absolute forefront of AI-driven personalized search. Join our exclusive waitlist for early access, special launch pricing, and priority updates on course content & consulting services.
+    <!-- Waitlist Section with Countdown -->
+    <section id="waitlist" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gray-800 text-center">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gray-50">Join Our Exclusive Waitlist</h2>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                Be among the first content creators to access ClipCraft AI and transform your audience engagement. Space is limited, don't miss out on early bird access and special features!
             </p>
 
-            <form class="bg-gray-800 p-8 rounded-lg shadow-2xl border border-blue-600 max-w-xl mx-auto space-y-6">
-                <div class="text-left">
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-700 placeholder-gray-400" placeholder="John Doe" required>
+            <!-- Limited Time Countdown -->
+            <div class="bg-gradient-to-r from-purple-800 to-pink-800 p-6 rounded-lg shadow-xl mb-10 border border-purple-700">
+                <p class="text-xl sm:text-2xl font-bold mb-4 text-white">Early Access Application Closes In:</p>
+                <div id="countdown" class="flex justify-center items-center space-x-4 sm:space-x-6 text-white text-3xl sm:text-4xl md:text-5xl font-extrabold">
+                    <div><span id="days">00</span><br><span class="text-xs sm:text-sm font-medium text-gray-300">DAYS</span></div>
+                    <div>:</div>
+                    <div><span id="hours">00</span><br><span class="text-xs sm:text-sm font-medium text-gray-300">HOURS</span></div>
+                    <div>:</div>
+                    <div><span id="minutes">00</span><br><span class="text-xs sm:text-sm font-medium text-gray-300">MINS</span></div>
+                    <div>:</div>
+                    <div><span id="seconds">00</span><br><span class="text-xs sm:text-sm font-medium text-gray-300">SECS</span></div>
                 </div>
-                <div class="text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-700 placeholder-gray-400" placeholder="you@example.com" required>
+            </div>
+
+            <!-- Waitlist Form -->
+            <form class="space-y-6 text-left" onsubmit="alert('Thank you for joining the waitlist! We will be in touch soon.'); return false;">
+                <div>
+                    <label for="name" class="block text-gray-200 text-lg font-medium mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" required
+                           class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent text-gray-50 placeholder-gray-400 text-lg">
                 </div>
-                <div class="text-left">
-                    <label for="company" class="block text-gray-300 text-sm font-bold mb-2">Company / Agency Name (Optional)</label>
-                    <input type="text" id="company" name="company" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-700 placeholder-gray-400" placeholder="Your Company Inc.">
+                <div>
+                    <label for="email" class="block text-gray-200 text-lg font-medium mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" required
+                           class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent text-gray-50 placeholder-gray-400 text-lg">
                 </div>
-                <div class="text-left">
-                    <label for="role" class="block text-gray-300 text-sm font-bold mb-2">Your Role (Optional)</label>
-                    <input type="text" id="role" name="role" class="shadow appearance-none border border-gray-700 rounded w-full py-3 px-4 text-gray-100 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-700 placeholder-gray-400" placeholder="Marketing Director">
+                <div>
+                    <label for="platform" class="block text-gray-200 text-lg font-medium mb-2">Main Content Platform (e.g., YouTube, TikTok)</label>
+                    <input type="text" id="platform" name="platform"
+                           class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent text-gray-50 placeholder-gray-400 text-lg">
                 </div>
-                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-md w-full">
-                    Join the Waitlist Now!
+                <div>
+                    <label for="audience" class="block text-gray-200 text-lg font-medium mb-2">Approx. Audience Size</label>
+                    <select id="audience" name="audience"
+                            class="w-full p-3 bg-gray-700 border border-gray-600 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent text-gray-50 text-lg">
+                        <option value="">Select an option</option>
+                        <option value="1k-10k">1,000 - 10,000</option>
+                        <option value="10k-100k">10,000 - 100,000</option>
+                        <option value="100k-1m">100,000 - 1,000,000</option>
+                        <option value="1m+">1,000,000+</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-6 rounded-md text-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    Join Waitlist Now!
                 </button>
-                <p class="text-xs text-gray-400 mt-4">We respect your privacy. Your data will not be shared.</p>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 text-center text-gray-400 text-sm px-4">
-        <div class="container mx-auto">
-            <p>&copy; 2023 Personalized AI Search Strategies. All rights reserved.</p>
-            <p class="mt-2">
-                <a href="#" class="text-blue-500 hover:text-blue-400 mx-2">Privacy Policy</a> |
-                <a href="#" class="text-blue-500 hover:text-blue-400 mx-2">Terms of Service</a>
-            </p>
-        </div>
+    <footer class="bg-gray-900 py-8 px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm border-t border-gray-800">
+        <p>&copy; 2023 ClipCraft AI. All rights reserved. Powering the next generation of creator-fan engagement.</p>
+        <p class="mt-2">Inspired by the personalization trend and future of AI-generated content.</p>
     </footer>
 
     <!-- JavaScript for Countdown Timer -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set the date we're counting down to (e.g., 7 days from now for a limited-time offer)
-            const endDate = new Date();
-            endDate.setDate(endDate.getDate() + 7); // Sets the offer to expire 7 days from page load
-            // For a specific fixed date, you'd use: const endDate = new Date("Dec 31, 2023 23:59:59").getTime();
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set the date we're counting down to (e.g., 7 days from now)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now
+            countDownDate.setHours(23, 59, 59, 999); // End of the day
 
-            const countdownElement = document.getElementById("countdown");
-            const countdownSection = document.getElementById("countdown-section");
-
-            // Update the countdown every 1 second
             const x = setInterval(function() {
                 const now = new Date().getTime();
-                const distance = endDate.getTime() - now;
+                const distance = countDownDate.getTime() - now;
 
-                // Time calculations for days, hours, minutes and seconds
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                // Display the result in the elements
+                // Ensure two digits for display
                 document.getElementById("days").innerHTML = String(days).padStart(2, '0');
                 document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
                 document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
                 document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 
-                // If the countdown is over, hide the countdown and update CTA
                 if (distance < 0) {
                     clearInterval(x);
-                    countdownSection.innerHTML = "<div class='text-xl sm:text-2xl font-bold text-red-500'>Offer Has Expired!</div><p class='text-md text-gray-400 mt-2'>Join the waitlist to be notified of future opportunities.</p>";
-                    const ctaButton = document.querySelector('.hero-background a');
-                    if (ctaButton) {
-                        ctaButton.textContent = 'Join Waitlist for Next Session';
-                        ctaButton.classList.add('opacity-75', 'cursor-not-allowed'); // Make it look less prominent
-                        ctaButton.classList.remove('hover:scale-105', 'bg-blue-600', 'hover:bg-blue-700');
-                        ctaButton.classList.add('bg-gray-600', 'hover:bg-gray-700'); // Change color
-                        ctaButton.removeAttribute('href'); // Remove link to avoid confusion
+                    document.getElementById("countdown").innerHTML = "<span class='text-xl sm:text-2xl font-bold'>WAITLIST CLOSED!</span>";
+                    // Optional: You could also disable the form inputs/button here
+                    const formElements = document.querySelector('#waitlist form').elements;
+                    for (let i = 0; i < formElements.length; i++) {
+                        formElements[i].setAttribute('disabled', 'true');
+                        formElements[i].classList.add('opacity-50', 'cursor-not-allowed');
                     }
-                    // Optionally, you could redirect or disable the form as well
                 }
             }, 1000);
         });
