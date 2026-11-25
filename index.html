@@ -3,209 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI PC Control - Unleash Your Local AI Power</title>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>AppGenesis AI: Kill Traditional Desktop Apps. Unleash Claude-Powered Innovation.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom scrollbar for a premium feel */
+        /* Custom styles for background image with overlay */
+        .hero-background {
+            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .hero-background::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.75); /* Darker overlay for better contrast */
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        /* Custom scrollbar for dark mode aesthetics */
+        body {
+            scrollbar-width: thin;
+            scrollbar-color: #4a5568 #1a202c;
+        }
         body::-webkit-scrollbar {
             width: 8px;
         }
         body::-webkit-scrollbar-track {
-            background: #0a0a0a; /* Dark background */
+            background: #1a202c;
         }
         body::-webkit-scrollbar-thumb {
-            background-color: #4f46e5; /* Indigo */
-            border-radius: 20px;
-            border: 2px solid #0a0a0a;
-        }
-        /* Hero image specific styles */
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?Develop,tech');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-color: #4a5568;
+            border-radius: 4px;
+            border: 2px solid #1a202c;
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-50 font-sans antialiased">
+<body class="bg-gray-950 text-gray-100 font-sans antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-background relative min-h-screen flex items-center justify-center py-16 px-4">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark overlay for readability -->
-        <div class="relative z-10 text-center max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-                Unleash the Full Power of Your Local AI PC. Effortlessly.
+    <header class="hero-background min-h-screen flex items-center justify-center p-4">
+        <div class="hero-content text-center max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+                Kill Traditional Desktop Apps.<br>Unleash Claude-Powered Innovation.
             </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                From complex setups to seamless AI deployment. Discover the ultimate dashboard for your new Asus ProArt P16, RTX Spark, and other AI PCs.
-                <br><em class="text-sm sm:text-base text-gray-400 mt-4 block">"A glimpse of a future powered by local AI."</em>
+            <p class="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-200">
+                From concept to deployment in minutes. Curated, customizable Claude-generated app templates.
+                One-click for Mac & Windows.
             </p>
-            <div class="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center">
-                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg">
-                    Join the Exclusive Waitlist
+
+            <div class="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center items-center mb-8">
+                <a href="#waitlist" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                    Join the Future - Get Early Access!
                 </a>
-                <a href="#features" class="bg-gray-700 hover:bg-gray-600 text-gray-200 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg">
-                    Learn More
-                </a>
+            </div>
+
+            <!-- Limited Time Countdown -->
+            <div class="mt-10 p-6 bg-gray-800 bg-opacity-80 rounded-lg shadow-xl border border-indigo-500 max-w-md mx-auto">
+                <p class="text-indigo-300 text-lg font-semibold mb-3">Exclusive Early Access Perks Ending In:</p>
+                <div id="countdown" class="flex justify-center items-center text-white text-4xl sm:text-5xl font-bold space-x-3 sm:space-x-4">
+                    <div class="flex flex-col items-center">
+                        <span id="days">00</span>
+                        <span class="text-sm text-gray-400 font-normal">Days</span>
+                    </div>
+                    <span class="text-indigo-400 text-3xl sm:text-4xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="hours">00</span>
+                        <span class="text-sm text-gray-400 font-normal">Hours</span>
+                    </div>
+                    <span class="text-indigo-400 text-3xl sm:text-4xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="minutes">00</span>
+                        <span class="text-sm text-gray-400 font-normal">Minutes</span>
+                    </div>
+                    <span class="text-indigo-400 text-3xl sm:text-4xl">:</span>
+                    <div class="flex flex-col items-center">
+                        <span id="seconds">00</span>
+                        <span class="text-sm text-gray-400 font-normal">Seconds</span>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Problem/Solution Introduction -->
-    <section class="py-16 px-4 bg-gradient-to-b from-gray-950 to-gray-900">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-indigo-400">
-                The Local AI Revolution, Simplified.
-            </h2>
-            <p class="text-lg text-gray-300 leading-relaxed">
-                You've invested in powerful new local AI hardware. But deploying and managing open-source AI models like LLMs and image generators can be a complex, time-consuming challenge, often leading to underutilized potential and frustrating 'trade-offs'.
-            </p>
-            <p class="text-lg text-gray-300 leading-relaxed mt-4">
-                **AI PC Control** changes that. We provide the intuitive platform you need to unlock your machine's full capabilities without the hassle.
-            </p>
-        </div>
-    </section>
+    <main class="container mx-auto px-4 py-16 lg:py-24">
 
-    <!-- Features Section -->
-    <section id="features" class="py-16 px-4 bg-gray-900">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-indigo-400">
-                Key Features Designed for Your AI PC
-            </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-                <!-- Feature 1: Real-time Performance Monitoring -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center border border-gray-700">
-                    <div class="text-indigo-500 mb-4">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-100">Real-time Performance Monitoring</h3>
-                    <p class="text-gray-400">Keep a close eye on your GPU, CPU, and RAM utilization. Understand exactly how your AI models are impacting your hardware, ensuring optimal performance.</p>
+        <!-- Features Section -->
+        <section class="mb-20 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-gray-50">The Power of Claude, Engineered for Your Desktop.</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-5xl">💡</div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-3 text-gray-50">Curated Claude Templates</h3>
+                    <p class="text-gray-300">Access a growing library of production-ready, Claude-generated desktop app templates for various utilities, data tasks, and CRM needs.</p>
                 </div>
-
-                <!-- Feature 2: Intelligent Resource Allocation -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center border border-gray-700">
-                    <div class="text-indigo-500 mb-4">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-100">Intelligent Resource Allocation</h3>
-                    <p class="text-gray-400">Dynamically allocate compute resources to specific AI tasks or models. Prevent bottlenecks and maximize efficiency for concurrent operations.</p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-5xl">🚀</div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-3 text-gray-50">One-Click Deployment</h3>
+                    <p class="text-gray-300">Say goodbye to complex setups. Deploy your chosen app instantly to Mac and Windows with a single click. No coding required.</p>
                 </div>
-
-                <!-- Feature 3: Seamless Compatibility Checks -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center border border-gray-700">
-                    <div class="text-indigo-500 mb-4">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002.928 12c.045.71.144 1.407.287 2.091M15 17h5l-1.644-2.466m-4.21-.065L12 10l-2.44 2.44m-1.953 4.877c-.52-.16-.995-.426-1.42-.779M21 12a9 9 0 11-18 0"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-100">Seamless Compatibility Checks</h3>
-                    <p class="text-gray-400">Never worry about incompatible software again. Our platform automatically verifies your hardware and software stack for new AI model deployments.</p>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-5xl">✨</div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-3 text-gray-50">Effortless Customization</h3>
+                    <p class="text-gray-300">Tailor templates to your exact specifications. Modify features, integrate APIs, and brand your apps without deep technical knowledge.</p>
                 </div>
-
-                <!-- Feature 4: Curated AI Tools Marketplace -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center border border-gray-700">
-                    <div class="text-indigo-500 mb-4">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-100">Curated AI Tools Marketplace</h3>
-                    <p class="text-gray-400">Discover and deploy a growing collection of open-source LLMs, image generators, and other AI applications, all optimized for local processing.</p>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-5xl">🔄</div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-3 text-gray-50">Seamless Updates & Maintenance</h3>
+                    <p class="text-gray-300">Our platform handles app updates and critical maintenance, ensuring your applications are always secure, performant, and up-to-date.</p>
                 </div>
-
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-5xl">🤝</div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-3 text-gray-50">Premium Support & Integrations</h3>
+                    <p class="text-gray-300">Leverage our expert team for custom integrations, dedicated support, and advanced features tailored to your unique business needs.</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 hover:border-indigo-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="text-indigo-400 mb-4 text-5xl">📈</div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-3 text-gray-50">Scalable & Secure</h3>
+                    <p class="text-gray-300">Built on a robust infrastructure, our apps are designed for performance and security, scaling with your evolving requirements.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Waitlist / Call to Action Section with Countdown -->
-    <section id="waitlist" class="py-16 px-4 bg-gradient-to-b from-gray-900 to-gray-950 text-center">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-indigo-400">
-                Don't Miss Out! Secure Your Spot Now.
-            </h2>
-            <p class="text-lg text-gray-300 mb-8 leading-relaxed">
-                Be among the first to experience the future of local AI management. Join our exclusive waitlist for early access and special benefits.
+        <!-- Waitlist Form Section -->
+        <section id="waitlist" class="text-center bg-gray-900 p-8 md:p-12 rounded-lg shadow-2xl border border-indigo-700 max-w-2xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-gray-50">Don't Miss Out: Get Early Access!</h2>
+            <p class="text-lg text-gray-300 mb-8">
+                Join our exclusive waitlist to be among the first to deploy intelligent, Claude-powered desktop applications.
+                Limited slots available.
             </p>
-
-            <!-- Countdown Timer -->
-            <div id="countdown-timer-container" class="bg-gray-800 p-6 rounded-lg shadow-xl mb-8 border border-indigo-500 animate-pulse">
-                <p class="text-xl sm:text-2xl font-semibold text-indigo-300 mb-3">Limited Time Offer:</p>
-                <div id="countdown-timer-display" class="flex justify-center items-center space-x-4 sm:space-x-6 text-2xl sm:text-4xl font-extrabold text-white">
-                    <div>
-                        <span id="days" class="block">00</span>
-                        <span class="text-sm sm:text-base text-gray-400 font-normal">Days</span>
-                    </div>
-                    <span class="text-indigo-500">:</span>
-                    <div>
-                        <span id="hours" class="block">00</span>
-                        <span class="text-sm sm:text-base text-gray-400 font-normal">Hours</span>
-                    </div>
-                    <span class="text-indigo-500">:</span>
-                    <div>
-                        <span id="minutes" class="block">00</span>
-                        <span class="text-sm sm:text-base text-gray-400 font-normal">Minutes</span>
-                    </div>
-                    <span class="text-indigo-500">:</span>
-                    <div>
-                        <span id="seconds" class="block">00</span>
-                        <span class="text-sm sm:text-base text-gray-400 font-normal">Seconds</span>
-                    </div>
+            <form class="space-y-6" onsubmit="alert('Thank you for joining the waitlist!'); return false;">
+                <div>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required
+                           class="w-full p-4 rounded-lg bg-gray-800 border border-gray-700 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-gray-200 placeholder-gray-500 transition duration-200">
                 </div>
-                <p class="text-sm text-gray-500 mt-4">Spots are filling up fast!</p>
-            </div>
-
-            <form class="bg-gray-800 p-8 rounded-xl shadow-lg max-w-lg mx-auto border border-gray-700">
-                <div class="mb-6 text-left">
-                    <label for="email" class="block text-gray-300 text-sm font-semibold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" required
-                           class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-300">
+                <div>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
+                           class="w-full p-4 rounded-lg bg-gray-800 border border-gray-700 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-gray-200 placeholder-gray-500 transition duration-200">
                 </div>
                 <button type="submit"
-                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 text-lg">
-                    Join the Waitlist Now
+                        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900">
+                    Secure My Spot Now
                 </button>
-                <p class="text-xs text-gray-500 mt-4">We respect your privacy. No spam, ever.</p>
             </form>
-        </div>
-    </section>
+            <p class="text-sm text-gray-500 mt-6">We respect your privacy. No spam, ever.</p>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 py-8 px-4 text-center text-gray-500 text-sm border-t border-gray-800">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-            <p>&copy; 2024 AI PC Control. All rights reserved.</p>
-            <div class="space-x-4">
-                <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
-            </div>
-        </div>
+    <footer class="bg-gray-900 text-gray-400 text-center py-8 mt-16">
+        <p>&copy; 2023 AppGenesis AI. All rights reserved. <span class="text-indigo-400">Powered by Innovation.</span></p>
     </footer>
 
-    <!-- JavaScript for Countdown Timer -->
+    <!-- Countdown Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Set the date we're counting down to (e.g., 7 days from now)
             const countDownDate = new Date();
-            countDownDate.setDate(countDownDate.getDate() + 7); // Set to 7 days from now
-            countDownDate.setHours(countDownDate.getHours() + 12); // Add 12 hours
-            countDownDate.setMinutes(countDownDate.getMinutes() + 30); // Add 30 minutes
-            countDownDate.setSeconds(countDownDate.getSeconds() + 45); // Add 45 seconds
+            countDownDate.setDate(countDownDate.getDate() + 7); // 7 days from now
 
-            const x = setInterval(function () {
+            // Update the count down every 1 second
+            const x = setInterval(function() {
+
+                // Get today's date and time
                 const now = new Date().getTime();
+
+                // Find the distance between now and the count down date
                 const distance = countDownDate.getTime() - now;
 
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown-timer-container").innerHTML = '<p class="text-2xl font-bold text-red-500">Offer Expired!</p>';
-                    return;
-                }
-
+                // Time calculations for days, hours, minutes and seconds
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+                // Display the result in the element with id="countdown"
                 document.getElementById("days").innerHTML = String(days).padStart(2, '0');
                 document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
                 document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
                 document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+                // If the count down is finished, write some text
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "EXPIRED";
+                    // Optionally hide or change the countdown message
+                    const countdownContainer = document.querySelector('.p-6.bg-gray-800.bg-opacity-80');
+                    if (countdownContainer) {
+                        countdownContainer.innerHTML = '<p class="text-red-400 text-lg font-semibold">Early Access Perks Have Ended!</p><p class="text-gray-400 mt-2">Sign up below to still get updates.</p>';
+                    }
+                }
             }, 1000);
         });
     </script>
