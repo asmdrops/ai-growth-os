@@ -3,182 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPU Scarcity Navigator - Premium Subscription</title>
-    <!-- Tailwind CSS CDN -->
+    <title>GPU Scarcity Navigator: Never Miss a Drop Again</title>
+    <!-- Tailwind CSS CDN - v2.2.19 as specified for broader compatibility -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Favicon (optional, using a simple SVG emoji for demonstration) -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    <!-- Google Fonts for a premium look (optional, but enhances aesthetic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for the hero background image */
-        .hero-background {
-            background-image: url('https://source.unsplash.com/1600x900/?A,tech');
-            background-size: cover;
-            background-position: center;
+        body {
+            font-family: 'Inter', sans-serif;
         }
-        /* A subtle scroll-smooth for anchor links */
-        html {
-            scroll-behavior: smooth;
+        /* Custom styles for the overlay to ensure readability on hero image */
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.7) 100%);
+        }
+        /* Basic animation for the countdown message */
+        @keyframes pulse-once {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+        .animate-pulse-once {
+            animation: pulse-once 1.5s ease-in-out infinite;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased font-sans">
+<body class="bg-gray-900 text-gray-100 antialiased">
 
     <!-- Hero Section -->
-    <header class="hero-background relative min-h-screen flex items-center justify-center py-16 px-4">
-        <div class="absolute inset-0 bg-black opacity-70"></div> <!-- Dark Overlay for text readability -->
-        <div class="relative z-10 text-center max-w-4xl mx-auto">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white drop-shadow-lg">
-                GPU Scarcity Navigator: <span class="text-indigo-400">Never Miss a GPU Deal Again</span>
+    <header class="relative bg-cover bg-center h-screen flex items-center justify-center p-4"
+            style="background-image: url('https://source.unsplash.com/1600x900/?A,tech');">
+        <div class="absolute inset-0 hero-overlay"></div> <!-- Dark overlay for text readability -->
+        <div class="relative z-10 text-center max-w-5xl mx-auto px-4">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                GPU Scarcity Navigator: Your Edge in the Scarcity Wars ⚔️
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 font-light max-w-3xl mx-auto">
-                NVIDIA's supply cuts are real. <span class="font-semibold">Get ahead of the curve</span> and secure your next RTX 40-series card before prices inevitably soar.
+            <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto">
+                🚨 **URGENT MARKET ALERT:** NVIDIA Cuts RTX 50-Series Supply as RTX 60-Series Faces Possible Delay! The GPU market is tighter than ever. Don't get left behind.
             </p>
-
-            <!-- Countdown Timer -->
-            <div class="bg-gradient-to-r from-indigo-700 to-purple-800 p-6 rounded-lg shadow-2xl mb-10 mx-auto max-w-lg">
-                <p class="text-xl sm:text-2xl font-bold mb-3 text-white">Limited-Time Offer Ends In:</p>
-                <div id="countdown" class="flex justify-center items-center space-x-3 sm:space-x-4 text-white">
-                    <div>
-                        <span class="block text-4xl sm:text-5xl font-extrabold" id="days">00</span>
-                        <span class="block text-xs sm:text-sm uppercase tracking-wider opacity-80">Days</span>
-                    </div>
-                    <span class="text-4xl sm:text-5xl font-extrabold">:</span>
-                    <div>
-                        <span class="block text-4xl sm:text-5xl font-extrabold" id="hours">00</span>
-                        <span class="block text-xs sm:text-sm uppercase tracking-wider opacity-80">Hours</span>
-                    </div>
-                    <span class="text-4xl sm:text-5xl font-extrabold">:</span>
-                    <div>
-                        <span class="block text-4xl sm:text-5xl font-extrabold" id="minutes">00</span>
-                        <span class="block text-xs sm:text-sm uppercase tracking-wider opacity-80">Minutes</span>
-                    </div>
-                    <span class="text-4xl sm:text-5xl font-extrabold">:</span>
-                    <div>
-                        <span class="block text-4xl sm:text-5xl font-extrabold" id="seconds">00</span>
-                        <span class="block text-xs sm:text-sm uppercase tracking-wider opacity-80">Seconds</span>
-                    </div>
-                </div>
-            </div>
-            
-            <a href="#subscribe-form" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-10 rounded-full text-lg sm:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-xl">
-                Secure Your Subscription Now &rarr;
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-blue-300 font-semibold mb-10 max-w-4xl mx-auto">
+                Get real-time, verified stock alerts, in-depth market analysis, and exclusive access to the private community that helps you secure your next graphics card.
+            </p>
+            <a href="#waitlist" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 sm:py-4 px-8 sm:px-10 rounded-lg shadow-lg transform transition duration-300 ease-in-out hover:scale-105 text-lg sm:text-xl md:text-2xl uppercase tracking-wider">
+                Join the Exclusive Waitlist Now! 👇
             </a>
+            <p class="mt-5 text-base sm:text-lg text-red-400 font-semibold">Limited Founder Spots Available! The market won't wait. ⏰</p>
         </div>
     </header>
 
     <!-- Features Section -->
-    <section class="py-20 px-4 bg-gray-900">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">What You Get with GPU Scarcity Navigator</h2>
-            <p class="text-lg sm:text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-                Don't get left behind. Our premium subscription puts you miles ahead, ensuring you get the best deals on NVIDIA RTX cards.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Feature 1: Real-Time Stock Alerts -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-5xl mb-4">🚀</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Real-Time Stock Alerts</h3>
-                    <p class="text-gray-400">Get instant notifications for RTX 40-series and older cards across multiple top retailers. Never miss availability again!</p>
+    <section class="py-16 sm:py-20 bg-gray-900 border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-white mb-12 leading-tight">What You Get With GPU Scarcity Navigator ✨</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-blue-400 text-5xl mb-4 text-center">🔔</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 text-center">Real-Time Stock Alerts</h3>
+                    <p class="text-gray-300 text-center text-base sm:text-lg">Get instant, *verified* notifications for RTX 40/50-series & previous-gen GPUs across top retailers. Never miss a drop again! 🚀</p>
                 </div>
-                <!-- Feature 2: Exclusive Price Drop Notifications -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-5xl mb-4">📉</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Exclusive Price Drop Notifications</h3>
-                    <p class="text-gray-400">Be the first to know when prices fall, allowing you to snag a deal before it vanishes. Your wallet will thank you!</p>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-green-400 text-5xl mb-4 text-center">📈</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 text-center">In-Depth Price Analysis</h3>
+                    <p class="text-gray-300 text-center text-base sm:text-lg">Understand true market value with our expert price trend analysis. Buy smart, avoid reseller traps. 💡</p>
                 </div>
-                <!-- Feature 3: Expert Market Analysis & Predictions -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-5xl mb-4">🔮</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Expert Market Analysis & Predictions</h3>
-                    <p class="text-gray-400">Understand market trends, supply cuts, and future price predictions directly from industry experts. Make informed decisions.</p>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-yellow-400 text-5xl mb-4 text-center">💻</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 text-center">Curated Pre-Built PC Deals</h3>
+                    <p class="text-gray-300 text-center text-base sm:text-lg">Access exclusive recommendations for pre-built PCs offering incredible value, even during the shortage. Your shortcut to gaming! 🔥</p>
                 </div>
-                <!-- Feature 4: Limited-Time Flash Deal Opportunities -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <div class="text-5xl mb-4">✨</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Limited-Time Flash Deal Opportunities</h3>
-                    <p class="text-gray-400">Access private flash sales and limited-quantity deals only available to our premium subscribers. Exclusive savings await!</p>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-red-400 text-5xl mb-4 text-center">🛠️</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 text-center">Budget Build Guides</h3>
+                    <p class="text-gray-300 text-center text-base sm:text-lg">Stuck waiting? Our alternative APU system guides keep you gaming without breaking the bank. Don't pause your passion! 🎮</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-purple-400 text-5xl mb-4 text-center">🤝</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 text-center">Exclusive Private Community</h3>
+                    <p class="text-gray-300 text-center text-base sm:text-lg">Join our private Discord for peer support, shared findings, and expert tips. Leverage collective intelligence! 💬</p>
+                </div>
+                <!-- Feature 6 (Summary of Value) -->
+                <div class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-700">
+                    <div class="text-cyan-400 text-5xl mb-4 text-center">🏆</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 text-center">Unmatched Market Advantage</h3>
+                    <p class="text-gray-300 text-center text-base sm:text-lg">Stop relying on luck. Our verified data and community insights give you the definitive edge to conquer GPU scarcity. Be one step ahead! 🚀</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action / Subscription Form Section -->
-    <section id="subscribe-form" class="py-20 px-4 bg-gray-800">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">Don't Miss Out. Subscribe Today.</h2>
+    <!-- Waitlist Form Section -->
+    <section id="waitlist" class="py-16 sm:py-20 bg-gradient-to-br from-gray-900 to-zinc-900">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">Don't Miss Out! Join the Waitlist Now! 🚨</h2>
             <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                With NVIDIA's latest supply cuts and potential delays, getting a GPU is harder than ever. <span class="font-semibold text-indigo-300">Act now</span> to secure your access to exclusive insights and real-time alerts.
+                The NVIDIA supply cuts are intensifying the market. Secure your spot in the GPU Scarcity Navigator before subscriptions open to the public.
+                Limited foundational memberships available for early adopters!
             </p>
-            
-            <form class="bg-gray-700 p-8 rounded-xl shadow-2xl space-y-6 md:w-3/4 mx-auto">
-                <div>
-                    <label for="name" class="block text-left text-sm font-medium text-gray-300 mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" class="w-full p-4 rounded-lg bg-gray-800 border border-gray-600 text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition duration-200" required>
+
+            <!-- Limited Time Countdown Placeholder -->
+            <div class="bg-red-700 text-white py-4 px-6 rounded-lg mb-8 inline-block shadow-lg animate-pulse-once">
+                <p class="text-xl sm:text-2xl font-bold">Offer Ends Soon! 🔥 Limited Spots Remain!</p>
+                <p class="text-base sm:text-lg mt-2">Countdown: <span id="countdown" class="font-mono">XX days, XX hours, XX minutes, XX seconds</span></p>
+                <!-- A real implementation would use JavaScript for the countdown. -->
+                <!-- Example JavaScript (not included in raw HTML, but for context):
+                <script>
+                    const countdownElement = document.getElementById('countdown');
+                    const endDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000); // 7 days from now
+                    const updateCountdown = () => {
+                        const now = new Date().getTime();
+                        const distance = endDate - now;
+
+                        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                        countdownElement.innerHTML = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+
+                        if (distance < 0) {
+                            clearInterval(interval);
+                            countdownElement.innerHTML = "EXPIRED";
+                        }
+                    };
+                    updateCountdown();
+                    const interval = setInterval(updateCountdown, 1000);
+                </script>
+                -->
+            </div>
+
+            <form class="bg-gray-800 p-6 sm:p-8 rounded-xl shadow-2xl border border-gray-700">
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-200 text-lg sm:text-xl font-medium mb-3 text-left">Your Best Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="enter@your-email.com" required
+                           class="w-full p-4 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg sm:text-xl">
                 </div>
-                <div>
-                    <label for="email" class="block text-left text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" required class="w-full p-4 rounded-lg bg-gray-800 border border-gray-600 text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition duration-200">
-                </div>
-                <div>
-                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                        Subscribe & Get Instant Access
-                    </button>
-                </div>
-                <p class="text-sm text-gray-400">Your privacy is important to us. We will never share your information.</p>
+                <button type="submit"
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 sm:py-5 px-6 rounded-lg shadow-xl transform transition duration-300 ease-in-out hover:scale-105 text-xl sm:text-2xl uppercase tracking-wider">
+                    Get Early Access & Instant Alerts! 🚀
+                </button>
             </form>
+            <p class="text-sm text-gray-500 mt-6">Your privacy is important to us. We will never spam you. Unsubscribe anytime.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-10 px-4 text-center text-gray-500 text-sm">
-        <div class="max-w-6xl mx-auto">
-            <p>&copy; 2023 GPU Scarcity Navigator. All rights reserved.</p>
-            <div class="mt-4 space-x-4">
-                <a href="#" class="hover:text-gray-300 transition duration-200">Privacy Policy</a>
-                <a href="#" class="hover:text-gray-300 transition duration-200">Terms of Service</a>
-            </div>
+    <footer class="bg-gray-900 py-8 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm sm:text-base">
+            &copy; 2024 GPU Scarcity Navigator. All rights reserved.
         </div>
     </footer>
-
-    <!-- Countdown JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set the date we're counting down to (e.g., 24 hours from when the page loads)
-            const countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000); // 24 hours from now
-
-            const x = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countDownDate - now;
-
-                // Time calculations for days, hours, minutes and seconds
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                // Display the result in the elements
-                document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-
-                // If the count down is finished, display "EXPIRED"
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "<span class='text-2xl sm:text-3xl font-extrabold'>OFFER EXPIRED!</span>";
-                    // Optionally disable the CTA button or change its text
-                    const ctaButton = document.querySelector('a[href="#subscribe-form"]');
-                    if (ctaButton) {
-                        ctaButton.textContent = "Opportunity Missed. Join Waitlist?";
-                        ctaButton.classList.remove('bg-green-500', 'hover:bg-green-600', 'transform', 'hover:scale-105');
-                        ctaButton.classList.add('bg-gray-500', 'cursor-not-allowed');
-                        ctaButton.href = "#"; // Disable scrolling to form
-                    }
-                }
-            }, 1000);
-        });
-    </script>
 
 </body>
 </html>
